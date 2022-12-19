@@ -15,42 +15,69 @@
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Base</a>
+        </svg>Control Adquisicion</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
-            Accordion</a></li>
+            Ingreso de entradas</a></li>
         <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
-            Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
+            Actualizacion adquisicion</a></li>
+       <!-- <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li> Esto se mueve al quitalo--> 
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
-        </svg> Buttons</a>
+        </svg>Codificacion de Activo</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
-            Buttons</a></li>
-        <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
+            Asignacion de activo</a></li>
+        <!--<li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
             Buttons Group</a></li>
         <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"></span>
-            Dropdowns</a></li>
+            Dropdowns</a></li>Esto no se si quitarlo-->
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
-        </svg> Forms</a>
+        </svg>Inventario</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Form Control</a></li>
+      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+            Inventario General</a></li>
+      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+            Inventario Intangible</a></li>
+      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+            Inventario Tecnologico</a></li>
+      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+            Inventario Mobiliario</a></li>
+      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+            Inventario Transporte</a></li>
+      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+            Inventario Herramientas</a></li>
+        <!--<li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Form Control</a></li>
         <li class="nav-item"><a class="nav-link" href="forms/select.html"> Select</a></li>
-        <li class="nav-item"><a class="nav-link" href="forms/checks-radios.html"> Checks and radios</a></li>
+        <li class="nav-item"><a class="nav-link" href="forms/checks-radios.html"> Checks and radios</a></li>-->
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-        </svg> Notifications</a>
+        </svg>Control Mantenimiento</a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span>
+            Prestamo</a></li>
+        <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span>
+            Traslado Definitivo</a></li>
+        <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"></span>
+            Reparacion</a></li>
+        <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"></span>
+            Descargo</a></li>
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
+        </svg>Depreciacion</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span>
             Alerts</a></li>
@@ -63,7 +90,7 @@
     <li class="nav-item"><a class="nav-link" href="widgets.html">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calculator"></use>
-        </svg> Widgets</a></li>
+        </svg>Reportes y Consultas</a></li>
     <li class="nav-divider"></li>
     <li class="nav-title">ALMACÉN</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
