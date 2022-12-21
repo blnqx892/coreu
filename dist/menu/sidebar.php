@@ -96,44 +96,92 @@
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Base</a>
+        </svg>Suministros</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
-            Accordion</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+            Ingreso Suministros</a></li>
+       <!-- <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
             Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
+        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>-->
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Base</a>
+        </svg>Inventario de suministros</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
-            Accordion</a></li>
+        	Adicionar en el stock</a></li>
         <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
-            Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
+          Consultar disponibles</a></li>
       </ul>
     </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+        </svg>Kardex</a>
+      <ul class="nav-group-items">
+      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+         Consultar por fecha</a></li>
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg>Mobiliario y otros</a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        	Ingreso nuevos</a></li>
+        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+          Consultar disponibles </a></li>
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg>Requisición</a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+      Remitir requisición almacén</a></li>
+        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+      Historial requisiciones remitidas</a></li>
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg>Control unidades y restricciones </a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        Adicionar  unidades </a></li>
+        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        Consulta de unidades  </a></li>
+        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        Agregar restricciones</a></li>
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg>Reportes y Consultas</a>
+      <ul class="nav-group-items">     
+      </ul>
+    </li>
+    
     <li class="nav-title">UACI</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Base</a>
+        </svg>Control solicitudes de aprobación</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
-            Accordion</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
-            Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
+    Aprobación o desaprobación de solicitud</a></li>    
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Base</a>
+        </svg>Consultas y Reportes</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
             Accordion</a></li>
@@ -146,7 +194,7 @@
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Base</a>
+        </svg>Requisición para cada unidad</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
             Accordion</a></li>
@@ -158,7 +206,7 @@
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Base</a>
+        </svg>Consultar historial</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
             Accordion</a></li>
@@ -167,29 +215,47 @@
         <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
       </ul>
     </li>
+
     <li class="nav-title">SEGURIDAD</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Base</a>
+        </svg>Control de usuario al sistema</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
-            Accordion</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
-            Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
+        Actualización de usuario </a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Base</a>
+        </svg>Control respaldo</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
-            Accordion</a></li>
+        respaldo base de datos</a></li>
         <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
-            Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
+        restauración base de datos</a></li>
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg>Reportes y Consultas</a>
+      <ul class="nav-group-items">
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg>Ayuda del sistema</a>
+      <ul class="nav-group-items">
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg>Acerca de</a>
+      <ul class="nav-group-items">
       </ul>
     </li>
   </ul>
