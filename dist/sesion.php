@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v4.2.2
-* @link https://coreui.io
-* Copyright (c) 2022 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://coreui.io/license)
--->
 <html lang="en">
   <head>
     <base href="./">
@@ -15,7 +8,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
+    <title>INICIO DE SESIÓN</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
@@ -64,8 +57,8 @@
             <div class="card-group d-block d-md-flex row">
               <div class="card col-md-7 p-4 mb-0">
                 <div class="card-body">
-                  <h1>Login</h1>
-                  <p class="text-medium-emphasis">Sign In to your account</p>
+                  <h1>BIENVENIDO A SICAFI</h1>
+                  <p class="text-medium-emphasis">Iniciar Sesión</p>
                   <div class="input-group mb-3"><span class="input-group-text">
                       <svg class="icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
@@ -80,10 +73,10 @@
                   </div>
                   <div class="row">
                     <div class="col-6">
-                      <button class="btn btn-primary px-4" type="button">Login</button>
+                      <button class="btn btn-primary px-4" type="button">Iniciar</button>
                     </div>
                     <div class="col-6 text-end">
-                      <button class="btn btn-link px-0" type="button">Forgot password?</button>
+                      <button class="btn btn-link px-0" type="button">Recuperar contraseña</button>
                     </div>
                   </div>
                 </div>
