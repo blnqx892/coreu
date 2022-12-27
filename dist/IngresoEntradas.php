@@ -34,67 +34,74 @@
               <div class="card-header"><strong>Ingreso de Entradas</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form class="row g-3 needs-validation" novalidate="">
-                <div class="col-md-4">
-                  <label for="inputEmail4" class="form-label">Fecha de Adquisicion:</label>
-                  <input type="email" class="form-control" id="inputEmail4">
-                </div>
-                <div class="col-md-3">
-                  <label for="inputEmail4" class="form-label">N° de Factura:</label>
-                  <input type="email" class="form-control" id="inputEmail4">
-                </div>
-                <div class="col-md-3">
-                  <label for="inputPassword4" class="form-label">Garantia</label>
-                  <input type="password" class="form-control" id="inputPassword4">
-                </div>
-                
-
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-                  
-
-
-
-
-
-
-
-
-
-                  <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Submit form</button>
-                  </div>
-                </form>
+                <form class="g-3 needs-validation" novalidate=""><!--INICIO SECCION FECHA-->
+                <div class="row" >  
+                    <div class="col-md-4">
+                      <label for="inputEmail4" class="form-label">Fecha de Adquisición:</label>
+                      <input type="date" class="form-control" id="inputEmail4">
+                    </div> 
+                </div> <!--FIN SECCION FECHA-->
+              <div class="row  my-4">  <!--INICIO SECCION DOS-->
+                    <div class="col-md-4">
+                      <label for="inputEmail4" class="form-label">N° de Factura:</label>
+                      <input type="text" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputPassword4" class="form-label">Proveedor:</label>
+                      <input type="text" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputAddress2" class="form-label">Garantía:</label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="1 año">
+                    </div>
+                    </div><!--FIN SECCION DOS-->
+              <div class="row  my-4"><!--INICIO SECCION TRES-->
+                    <div class="col-md-4">
+                      <label for="inputCity" class="form-label">Costo Adquisició:</label>
+                      <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Cantidad:</label>
+                      <input type="number" class="form-control" id="inputZip">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Ubicación:</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+              </div><!--FIN SECCION TRES-->
+              <div class="row  my-4"><!--INICIO SECCION CUATRO-->
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Marca:</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Modelo:</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Color:</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+              </div><!--FIN SECCION CUATRO-->  
+              <div class="row  my-4"><!--INICIO SECCION CINCO-->
+                    <div class="col-md-4">
+                       <label class="form-label" for="validationCustom04">Tipo Ingreso</label>
+                       <select class="form-select" id="validationCustom04" required="">
+                          <option selected="" disabled="" value="">COMPRA</option>
+                          <option selected="" disabled="" value="">TRASLADO</option>
+                          <option selected="" disabled="" value="">DONACIÓN</option>
+                       </select>
+                       <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+              </div><!--FIN SECCION CUATRO--> 
+                     <div class="col-12">
+                       <button class="btn btn-primary" type="submit">Guardar</button>
+                    </div>
+              </form>
                 <!--/// FIN FORM ////////////////-->
               </div>
             </div>
           </div>
-        </div>
         <!-- /.row-->
       </div>
     </div>
