@@ -57,16 +57,16 @@
                     </div><!--FIN SECCION DOS-->
               <div class="row  my-4"><!--INICIO SECCION TRES-->
                     <div class="col-md-4">
-                      <label for="inputCity" class="form-label">Costo Adquisició:</label>
+                      <label for="inputCity" class="form-label">Nombre:</label>
                       <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Costo de Adquisición:</label>
+                      <input type="text" class="form-control" id="inputZip">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Cantidad:</label>
                       <input type="number" class="form-control" id="inputZip">
-                    </div>
-                    <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Ubicación:</label>
-                      <input type="text" class="form-control" id="inputZip">
                     </div>
               </div><!--FIN SECCION TRES-->
               <div class="row  my-4"><!--INICIO SECCION CUATRO-->
