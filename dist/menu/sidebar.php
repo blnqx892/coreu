@@ -9,19 +9,16 @@
   </div>
 
   <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
-
-
     <li class="nav-title">ACTIVO FIJO</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Control Adquisicion</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="IngresoEntradas.php"><span class="nav-icon"></span>
-            Ingreso de entradas</a></li>
+        <li class="nav-item"><a class="nav-link" href="IngresoEntradas.php"><span class="nav-icon"></span>Ingreso de
+            entradas</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Actualizacion adquisicion</a></li>
-        <!-- <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li> Esto se mueve al quitalo-->
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
