@@ -10,7 +10,7 @@
 
   <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
 
-    
+
     <li class="nav-title">ACTIVO FIJO</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
@@ -21,7 +21,7 @@
             Ingreso de entradas</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Actualizacion adquisicion</a></li>
-       <!-- <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li> Esto se mueve al quitalo--> 
+        <!-- <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li> Esto se mueve al quitalo-->
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -42,17 +42,17 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg>Inventario</a>
       <ul class="nav-group-items">
-      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario General</a></li>
-      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Intangible</a></li>
-      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Tecnologico</a></li>
-      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Mobiliario</a></li>
-      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Transporte</a></li>
-      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Herramientas</a></li>
         <!--<li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Form Control</a></li>
         <li class="nav-item"><a class="nav-link" href="forms/select.html"> Select</a></li>
@@ -100,7 +100,7 @@
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Ingreso Suministros</a></li>
-       <!-- <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <!-- <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
             Breadcrumb</a></li>
         <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>-->
       </ul>
@@ -111,9 +111,9 @@
         </svg>Inventario de suministros</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-        	Adicionar en el stock</a></li>
+            Adicionar en el stock</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-          Consultar disponibles</a></li>
+            Consultar disponibles</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -121,8 +121,8 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg>Kardex</a>
       <ul class="nav-group-items">
-      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-         Consultar por fecha</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+            Consultar por fecha</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -131,9 +131,9 @@
         </svg>Mobiliario y otros</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-        	Ingreso nuevos</a></li>
+            Ingreso nuevos</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-          Consultar disponibles </a></li>
+            Consultar disponibles </a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -142,9 +142,9 @@
         </svg>Requisición</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-      Remitir requisición almacén</a></li>
+            Remitir requisición almacén</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-      Historial requisiciones remitidas</a></li>
+            Historial requisiciones remitidas</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -153,21 +153,21 @@
         </svg>Control unidades y restricciones </a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-        Adicionar  unidades </a></li>
+            Adicionar unidades </a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-        Consulta de unidades  </a></li>
+            Consulta de unidades </a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-        Agregar restricciones</a></li>
+            Agregar restricciones</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Reportes y Consultas</a>
-      <ul class="nav-group-items">     
+      <ul class="nav-group-items">
       </ul>
     </li>
-    
+
     <li class="nav-title">UACI</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
@@ -175,7 +175,7 @@
         </svg>Control solicitudes de aprobación</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-    Aprobación o desaprobación de solicitud</a></li>    
+            Aprobación o desaprobación de solicitud</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -223,7 +223,7 @@
         </svg>Control de usuario al sistema</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-        Actualización de usuario </a></li>
+            Actualización de usuario </a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -232,9 +232,9 @@
         </svg>Control respaldo</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-        respaldo base de datos</a></li>
+            respaldo base de datos</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-        restauración base de datos</a></li>
+            restauración base de datos</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
