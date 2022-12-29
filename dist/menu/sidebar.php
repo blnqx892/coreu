@@ -17,9 +17,9 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Control Adquisicion</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="coreu/dist/IngresoEntradas.php"><span class="nav-icon"></span>
             Ingreso de entradas</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Actualizacion adquisicion</a></li>
        <!-- <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li> Esto se mueve al quitalo--> 
       </ul>
@@ -29,7 +29,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg>Codificacion de Activo</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="AsignaciondeActivo.php"><span class="nav-icon"></span>
             Asignacion de activo</a></li>
         <!--<li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
             Buttons Group</a></li>
@@ -42,17 +42,17 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg>Inventario</a>
       <ul class="nav-group-items">
-      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario General</a></li>
-      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Intangible</a></li>
-      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Tecnologico</a></li>
-      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Mobiliario</a></li>
-      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Transporte</a></li>
-      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario Herramientas</a></li>
         <!--<li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Form Control</a></li>
         <li class="nav-item"><a class="nav-link" href="forms/select.html"> Select</a></li>
@@ -64,13 +64,13 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg>Control Mantenimiento</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Prestamo</a></li>
-        <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Traslado Definitivo</a></li>
-        <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Reparacion</a></li>
-        <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Descargo</a></li>
       </ul>
     </li>
@@ -79,11 +79,11 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg>Depreciacion</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Alerts</a></li>
-        <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Badge</a></li>
-        <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Modals</a></li>
       </ul>
     </li>
@@ -98,7 +98,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Suministros</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Ingreso Suministros</a></li>
        <!-- <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
             Breadcrumb</a></li>
@@ -110,9 +110,9 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Inventario de suministros</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
         	Adicionar en el stock</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
           Consultar disponibles</a></li>
       </ul>
     </li>
@@ -121,7 +121,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg>Kardex</a>
       <ul class="nav-group-items">
-      <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
+      <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
          Consultar por fecha</a></li>
       </ul>
     </li>
@@ -130,9 +130,9 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Mobiliario y otros</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
         	Ingreso nuevos</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
           Consultar disponibles </a></li>
       </ul>
     </li>
@@ -141,9 +141,9 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Requisición</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
       Remitir requisición almacén</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
       Historial requisiciones remitidas</a></li>
       </ul>
     </li>
@@ -152,11 +152,11 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Control unidades y restricciones </a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
         Adicionar  unidades </a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
         Consulta de unidades  </a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
         Agregar restricciones</a></li>
       </ul>
     </li>
@@ -174,7 +174,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Control solicitudes de aprobación</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
     Aprobación o desaprobación de solicitud</a></li>    
       </ul>
     </li>
@@ -183,11 +183,11 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Consultas y Reportes</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Accordion</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Cards</a></li>
       </ul>
     </li>
     <li class="nav-title">REQUISICIÓN</li>
@@ -196,11 +196,11 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Requisición para cada unidad</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Accordion</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Cards</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -208,11 +208,11 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Consultar historial</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Accordion</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Cards</a></li>
       </ul>
     </li>
 
@@ -222,7 +222,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Control de usuario al sistema</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
         Actualización de usuario </a></li>
       </ul>
     </li>
@@ -231,9 +231,9 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Control respaldo</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
         respaldo base de datos</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
         restauración base de datos</a></li>
       </ul>
     </li>
