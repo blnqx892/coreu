@@ -17,7 +17,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Control Adquisicion</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="coreu/dist/IngresoEntradas.php"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="../../IngresoEntradas.php"><span class="nav-icon"></span>
             Ingreso de entradas</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Actualizacion adquisicion</a></li>
@@ -29,7 +29,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg>Codificacion de Activo</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="AsignaciondeActivo.php"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="../../AsignaciondeActivo.php"><span class="nav-icon"></span>
             Asignacion de activo</a></li>
         <!--<li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
             Buttons Group</a></li>
