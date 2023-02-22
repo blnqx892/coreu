@@ -75,9 +75,6 @@
                       <label class="form-label" for="validationCustom02">Color:</label>
                       <input class="form-control" id="validationCustom02" type="text" required="">
                     </div>
-                  </div>
-                  <!--FIN-->
-                  <div class="row  my-4">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Categoria: </label>
                       <select class="form-select" id="validationCustom04" required="">
@@ -85,6 +82,10 @@
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
+                  </div>
+                  <hr style="color: black; background-color: black; width:100%;" />
+                  <!--FIN-->
+                  <div class="row  my-4">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
                       <select class="form-select" id="validationCustom04" required="">
@@ -103,6 +104,7 @@
                       <input class="form-control" id="validationCustom02" type="text" required="">
                     </div>
                   </div>
+                  <hr style="color: black; background-color: black; width:100%;" />
                   <!--FIN-->
                   <div class="col-12">
                     <button class="btn btn-primary" type="submit">Guardar</button>
