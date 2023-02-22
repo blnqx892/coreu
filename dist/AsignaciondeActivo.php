@@ -18,7 +18,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><span>INICIO</span>
+              <!-- if breadcrumb is single--><span>Codificcacion de Activos</span>
             </li>
           </ol>
         </nav>
@@ -59,12 +59,12 @@
                     </div>
                 </div><!--FIN-->
                 <div class="row  my-4">
-                     <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Marca:</label>
+                <div class="col-md-4">
+                        <label class="form-label" for="validationCustom02">Nombre:</label>
                         <input class="form-control" id="validationCustom02" type="text"  required="">
                      </div>
                      <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Modelo:</label>
+                        <label class="form-label" for="validationCustom02">Marca:</label>
                         <input class="form-control" id="validationCustom02" type="text"  required="">
                      </div>
                      <div class="col-md-4">
@@ -74,9 +74,18 @@
                 </div><!--FIN-->
                 <div class="row  my-4">
                      <div class="col-md-4">
-                       <label class="form-label" for="validationCustom04">Grupo:</label>
+                       <label class="form-label" for="validationCustom04">Categoria: </label>
                        <select class="form-select" id="validationCustom04" required="">
                           <option selected="" disabled="" value="">Choose...</option>
+                       </select>
+                       <div class="invalid-feedback">Please select a valid state.</div>
+                     </div>
+                     <div class="col-md-4">
+                       <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
+                       <select class="form-select" id="validationCustom04" required="">
+                          <option selected="" disabled="" value="">Choose...</option>
+                          <option selected="" disabled="" value="">Nuevo</option>
+                          <option selected="" disabled="" value="">Donado</option>
                        </select>
                        <div class="invalid-feedback">Please select a valid state.</div>
                      </div>
