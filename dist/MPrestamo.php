@@ -42,6 +42,9 @@
                                                 Codigo:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
+                                        <div class="col-md-4">
+                                            <button class="btn btn-primary" type="submit">Buscar</button>
+                                        </div>
                                     </div>
                                     <div class="row my-4">
                                         <div>
@@ -49,14 +52,14 @@
                                         </div>
                                     </div>
                                     <!--FIN-->
-                                    <div class="row  my-4">
+                                    <div class="row my-4">
                                             <div class="col-md-2">
                                                 <label class="form-label" for="validationCustom01">Fecha:</label>
                                                 <input class="form-control" id="validationCustom01" type="date"
                                                     required="">
                                             </div>
                                         </div>
-                                    <div class="row  my-4">
+                                    <div class="row my-4">
                                         <div class="col-md-4">
                                             <label class="form-label" for="validationCustom02">Ubicación:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
