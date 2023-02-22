@@ -109,7 +109,7 @@
                   <hr style="color: black; background-color: black; width:100%;" />
                   <!--FIN-->
                   <div class="col-12" align="right">
-                  <button class="btn btn-grey" type="submit">Guardar</button>
+                  <button class="btn btn-grey" type="submit">Cancelar</button>
                     <button class="btn btn-primary" type="submit">Guardar</button>
                   </div>
                 </form>
