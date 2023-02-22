@@ -35,69 +35,74 @@
               <div class="card-body">
                 <!--INICIO FORM-->
                 <form class="g-3 needs-validation" novalidate="">
-                <div class="row" > <!--INICIO-->
-                     <div class="col-md-4">
-                        <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
-                        <input class="form-control" id="validationCustom01" type="date"  required="">
-                     </div>
-                </div><!--FIN-->
-                <div class="row  my-4">
-                     <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Ubicación:</label>
-                        <input class="form-control" id="validationCustom02" type="text"  required="">
-                     </div>
-                     <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Jefe Responsable:</label>
-                        <input class="form-control" id="validationCustom02" type="text"  required="">
-                     </div>
-                     <div class="col-md-4">
-                        <label class="form-label" for="validationCustom04">Modelo</label>
-                        <select class="form-select" id="validationCustom04" required="">
-                             <option selected="" disabled="" value="">Choose...</option>
-                        </select>
-                        <div class="invalid-feedback">Please select a valid state.</div>
+                  <div class="row">
+                    <!--INICIO-->
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
+                      <input class="form-control" id="validationCustom01" type="date" required="">
                     </div>
-                </div><!--FIN-->
-                <div class="row  my-4">
-                <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Nombre:</label>
-                        <input class="form-control" id="validationCustom02" type="text"  required="">
-                     </div>
-                     <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Marca:</label>
-                        <input class="form-control" id="validationCustom02" type="text"  required="">
-                     </div>
-                     <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Color:</label>
-                        <input class="form-control" id="validationCustom02" type="text"  required="">
-                     </div>
-                </div><!--FIN-->
-                <div class="row  my-4">
-                     <div class="col-md-4">
-                       <label class="form-label" for="validationCustom04">Categoria: </label>
-                       <select class="form-select" id="validationCustom04" required="">
-                          <option selected="" disabled="" value="">Choose...</option>
-                       </select>
-                       <div class="invalid-feedback">Please select a valid state.</div>
-                     </div>
-                     <div class="col-md-4">
-                       <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
-                       <select class="form-select" id="validationCustom04" required="">
-                          <option selected="" disabled="" value="">Choose...</option>
-                          <option selected="" disabled="" value="">Nuevo</option>
-                          <option selected="" disabled="" value="">Donado</option>
-                       </select>
-                       <div class="invalid-feedback">Please select a valid state.</div>
-                     </div>
-                     <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Codigo:</label>
-                        <input class="form-control" id="validationCustom02" type="text"  required="">
-                     </div>  
-                     <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Encargado del Bien:</label>
-                        <input class="form-control" id="validationCustom02" type="text"  required="">
-                     </div>
-                </div><!--FIN-->
+                  </div>
+                  <!--FIN-->
+                  <div class="row  my-4">
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom02">Ubicación:</label>
+                      <input class="form-control" id="validationCustom02" type="text" required="">
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom02">Jefe Responsable:</label>
+                      <input class="form-control" id="validationCustom02" type="text" required="">
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom04">Modelo</label>
+                      <select class="form-select" id="validationCustom04" required="">
+                        <option selected="" disabled="" value="">Choose...</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                  </div>
+                  <!--FIN-->
+                  <div class="row  my-4">
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom02">Nombre:</label>
+                      <input class="form-control" id="validationCustom02" type="text" required="">
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom02">Marca:</label>
+                      <input class="form-control" id="validationCustom02" type="text" required="">
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom02">Color:</label>
+                      <input class="form-control" id="validationCustom02" type="text" required="">
+                    </div>
+                  </div>
+                  <!--FIN-->
+                  <div class="row  my-4">
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom04">Categoria: </label>
+                      <select class="form-select" id="validationCustom04" required="">
+                        <option selected="" disabled="" value="">Choose...</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
+                      <select class="form-select" id="validationCustom04" required="">
+                        <option selected="" disabled="" value="">Choose...</option>
+                        <option selected="" disabled="" value="">Nuevo</option>
+                        <option selected="" disabled="" value="">Donado</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom02">Codigo:</label>
+                      <input class="form-control" id="validationCustom02" type="text" required="">
+                    </div><br>
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom02">Encargado del Bien:</label>
+                      <input class="form-control" id="validationCustom02" type="text" required="">
+                    </div>
+                  </div>
+                  <!--FIN-->
                   <div class="col-12">
                     <button class="btn btn-primary" type="submit">Guardar</button>
                   </div>
@@ -106,18 +111,18 @@
               </div>
             </div>
           </div>
-        <!-- /.row-->
+          <!-- /.row-->
+        </div>
       </div>
-    </div>
-    <!-- ///////FIN CONTENEDOR/////////////-->
+      <!-- ///////FIN CONTENEDOR/////////////-->
 
-    <!-- IMPORTAR ARCHIVO FOOTER-->
-    <?php include("foot/foot.php"); ?>
+      <!-- IMPORTAR ARCHIVO FOOTER-->
+      <?php include("foot/foot.php"); ?>
+      <!-- ////////////////////////-->
+    </div>
+    <!-- IMPORTAR ARCHIVO SCRIPT-->
+    <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-  </div>
-  <!-- IMPORTAR ARCHIVO SCRIPT-->
-  <?php include("foot/script.php"); ?>
-  <!-- ////////////////////////-->
 </body>
 
 </html>
