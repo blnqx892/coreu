@@ -108,6 +108,7 @@
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
                     <button class="btn btn-primary" type="submit">Guardar</button>
+                    <button class="btn btn-danger" type="submit">Cancelar</button>
                   </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
