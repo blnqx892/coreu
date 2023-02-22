@@ -46,7 +46,7 @@
                                         </div>
                                     </div>
                                     <div class="row my-4">
-                                        <div class="col-md-4">
+                                        <div class="col-md-2">
                                             <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
                                             <input class="form-control" id="validationCustom01" type="date" required="">
                                         </div>
