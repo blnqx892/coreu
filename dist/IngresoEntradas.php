@@ -85,11 +85,13 @@
               </div><!--FIN SECCION CUATRO-->  
               <div class="row  my-4"><!--INICIO SECCION CINCO-->
                     <div class="col-md-4">
-                       <label class="form-label" for="validationCustom04">Tipo Ingreso</label>
+                       <label class="form-label" for="validationCustom04">Categoria</label>
                        <select class="form-select" id="validationCustom04" required="">
-                          <option selected="" disabled="" value="">COMPRA</option>
-                          <option selected="" disabled="" value="">TRASLADO</option>
-                          <option selected="" disabled="" value="">DONACIÓN</option>
+                          <option selected="" disabled="" value="">Equipo Tecnologico</option>
+                          <option selected="" disabled="" value="">Equipo de Oficina</option>
+                          <option selected="" disabled="" value="">Equipo de Maquinaria y Transporte</option>
+                          <option selected="" disabled="" value="">Equipo de Herramientas</option>
+                          <option selected="" disabled="" value="">Equipo Intangible</option>
                        </select>
                        <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
