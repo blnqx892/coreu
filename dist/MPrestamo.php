@@ -41,9 +41,11 @@
                       <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
                       <input class="form-control" id="validationCustom02" type="text" required="">
                     </div>
+                    <div class="row  my-4">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom01">Fecha:</label>
                       <input class="form-control" id="validationCustom01" type="date" required="">
+                    </div>
                     </div>
                   </div>
                   <!--FIN-->
