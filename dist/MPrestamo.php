@@ -40,9 +40,10 @@
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
                       <input class="form-control" id="validationCustom02" type="text" required="">
-                      <button class="btn btn-primary" type="submit">Buscar</button>
                     </div>
-                    
+                    <div class="col-md-3">
+                    <button class="btn btn-primary" type="submit">Buscar</button>
+                    </div>
                     <div class="row  my-4">
                     <div class="col-md-2">
                       <label class="form-label" for="validationCustom01">Fecha:</label>
