@@ -34,14 +34,17 @@
               <div class="card-header"><strong>Ingreso de Entradas</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate=""><!--INICIO SECCION FECHA-->
-                <div class="row" >  
+                <form class="g-3 needs-validation" novalidate="">
+                  <!--INICIO SECCION FECHA-->
+                  <div class="row">
                     <div class="col-md-4">
                       <label for="inputEmail4" class="form-label">Fecha de Adquisición:</label>
                       <input type="date" class="form-control" id="inputEmail4">
-                    </div> 
-                </div> <!--FIN SECCION FECHA-->
-              <div class="row  my-4">  <!--INICIO SECCION DOS-->
+                    </div>
+                  </div>
+                  <!--FIN SECCION FECHA-->
+                  <div class="row  my-4">
+                    <!--INICIO SECCION DOS-->
                     <div class="col-md-4">
                       <label for="inputEmail4" class="form-label">N° de Factura:</label>
                       <input type="text" class="form-control" id="inputEmail4">
@@ -54,8 +57,10 @@
                       <label for="inputAddress2" class="form-label">Garantía:</label>
                       <input type="text" class="form-control" id="inputAddress2" placeholder="1 año">
                     </div>
-                    </div><!--FIN SECCION DOS-->
-              <div class="row  my-4"><!--INICIO SECCION TRES-->
+                  </div>
+                  <!--FIN SECCION DOS-->
+                  <div class="row  my-4">
+                    <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
                       <label for="inputCity" class="form-label">Nombre:</label>
                       <input type="text" class="form-control" id="inputCity">
@@ -68,8 +73,10 @@
                       <label for="inputZip" class="form-label">Cantidad:</label>
                       <input type="number" class="form-control" id="inputZip">
                     </div>
-              </div><!--FIN SECCION TRES-->
-              <div class="row  my-4"><!--INICIO SECCION CUATRO-->
+                  </div>
+                  <!--FIN SECCION TRES-->
+                  <div class="row  my-4">
+                    <!--INICIO SECCION CUATRO-->
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Marca:</label>
                       <input type="text" class="form-control" id="inputZip">
@@ -82,40 +89,43 @@
                       <label for="inputZip" class="form-label">Color:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-              </div><!--FIN SECCION CUATRO-->  
-              <div class="row  my-4"><!--INICIO SECCION CINCO-->
+                  </div>
+                  <!--FIN SECCION CUATRO-->
+                  <div class="row  my-4">
+                    <!--INICIO SECCION CINCO-->
                     <div class="col-md-4">
-                       <label class="form-label" for="validationCustom04">Categoria</label>
-                       <select class="form-select" id="validationCustom04" required="">
-                          <option selected="" disabled="" value="">Equipo Tecnologico</option>
-                          <option selected="" disabled="" value="">Equipo de Oficina</option>
-                          <option selected="" disabled="" value="">Equipo de Maquinaria y Transporte</option>
-                          <option selected="" disabled="" value="">Equipo de Herramientas</option>
-                          <option selected="" disabled="" value="">Equipo Intangible</option>
-                       </select>
-                       <div class="invalid-feedback">Please select a valid state.</div>
+                      <label class="form-label" for="validationCustom04">Categoria</label>
+                      <select class="form-select" id="validationCustom04" required="">
+                        <option selected="" disabled="" value="">Equipo Tecnologico</option>
+                        <option selected="" disabled="" value="">Equipo de Oficina</option>
+                        <option selected="" disabled="" value="">Equipo de Maquinaria y Transporte</option>
+                        <option selected="" disabled="" value="">Equipo de Herramientas</option>
+                        <option selected="" disabled="" value="">Equipo Intangible</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
-              </div><!--FIN SECCION CUATRO--> 
-                     <div class="col-15">
-                       <button class="btn btn-primary" type="submit">Guardar</button>
-                    </div>
-              </form>
+                  </div>
+                  <!--FIN SECCION CUATRO-->
+                  <div class="col-15" align="right">
+                    <button class="btn btn-primary" type="submit">Guardar</button>
+                  </div>
+                </form>
                 <!--/// FIN FORM ////////////////-->
               </div>
             </div>
           </div>
-        <!-- /.row-->
+          <!-- /.row-->
+        </div>
       </div>
-    </div>
-    <!-- ///////FIN CONTENEDOR/////////////-->
+      <!-- ///////FIN CONTENEDOR/////////////-->
 
-    <!-- IMPORTAR ARCHIVO FOOTER-->
-    <?php include("foot/foot.php"); ?>
+      <!-- IMPORTAR ARCHIVO FOOTER-->
+      <?php include("foot/foot.php"); ?>
+      <!-- ////////////////////////-->
+    </div>
+    <!-- IMPORTAR ARCHIVO SCRIPT-->
+    <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-  </div>
-  <!-- IMPORTAR ARCHIVO SCRIPT-->
-  <?php include("foot/script.php"); ?>
-  <!-- ////////////////////////-->
 </body>
 
 </html>
