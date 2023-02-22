@@ -36,15 +36,20 @@
                                 <!--INICIO FORM-->
                                 <form class="g-3 needs-validation" novalidate="">
                                     <div class="row my-4">
-                                    <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
+                                        <div class="col-md-4">
+                                            <label class="form-label" for="validationCustom02">Buscar por
+                                                Codigo:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
                                         <div class="col-md-4">
-                                        <button class="btn btn-primary" type="submit">Buscar</button>
+                                            <button class="btn btn-primary" type="submit">Buscar</button>
                                         </div>
                                     </div>
                                     <div class="row my-4">
+                                        <div class="col-md-4">
+                                            <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
+                                            <input class="form-control" id="validationCustom01" type="date" required="">
+                                        </div>
                                         <div class="col-md-4">
                                             <label class="form-label" for="validationCustom02">Ubicación:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
