@@ -47,23 +47,20 @@
                                     </div>
                                     <div class="row my-4">
                                         <div class="col-md-2">
-                                            <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
+                                            <label class="form-label" for="validationCustom01">Fecha:</label>
                                             <input class="form-control" id="validationCustom01" type="date" required="">
                                         </div>
                                         <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom02">Ubicación:</label>
+                                            <label class="form-label" for="validationCustom02">Procedencia:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
                                         <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom02">Jefe Responsable:</label>
+                                            <label class="form-label" for="validationCustom02">Destino:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
                                         <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom04">Modelo</label>
-                                            <select class="form-select" id="validationCustom04" required="">
-                                                <option selected="" disabled="" value="">Choose...</option>
-                                            </select>
-                                            <div class="invalid-feedback">Please select a valid state.</div>
+                                            <label class="form-label" for="validationCustom02">Destino:</label>
+                                            <input class="form-control" id="validationCustom02" type="textArea" required="">
                                         </div>
                                     </div>
                                     <hr style="color: black; background-color: black; width:100%;" />
