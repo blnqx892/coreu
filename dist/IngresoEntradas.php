@@ -96,7 +96,7 @@
                        <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
               </div><!--FIN SECCION CUATRO--> 
-                     <div class="col-12">
+                     <div class="col-15">
                        <button class="btn btn-primary" type="submit">Guardar</button>
                     </div>
               </form>
