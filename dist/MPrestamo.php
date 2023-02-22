@@ -60,7 +60,9 @@
                                             <label class="form-label" for="validationCustom02">Destino:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
-                                        <div class="col-md-5">
+                                    </div>
+                                    <div class="row my-4">
+                                        <div class="col-md-4">
                                             <label class="form-label" for="validationCustom02">Obervaciones:</label>
                                             <textarea class="form-control" id="validationCustom02" required="" row="3">
                                             </textarea>
