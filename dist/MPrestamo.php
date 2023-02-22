@@ -42,7 +42,7 @@
                                                 Codigo:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
-                                        <div>
+                                        <divfgdfg>
                                             <button class="btn btn-primary" type="submit">Buscar</button>
                                         </div>
                                         <div class="row  my-4">
