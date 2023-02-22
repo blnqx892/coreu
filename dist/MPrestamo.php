@@ -35,7 +35,7 @@
                             <div class="card-body">
                                 <!--INICIO FORM-->
                                 <form class="g-3 needs-validation" novalidate="">
-                                    <div class="row">
+                                    <div class="row my-4">
                                         <!--INICIO-->
                                         <div class="col-md-4">
                                             <label class="form-label" for="validationCustom02">Buscar por
@@ -43,7 +43,7 @@
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row my-4">
                                         <div>
                                             <button class="btn btn-primary" type="submit">Buscar</button>
                                         </div>
