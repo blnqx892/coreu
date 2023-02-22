@@ -60,7 +60,7 @@
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                   </div>
-                  <hr style="color: black; background-color: black; width:75%;" /> 
+                  <hr style="color: black; background-color: black; width:100%;" /> 
                   <!--FIN-->
                   <div class="row  my-4">
                     <div class="col-md-4">
