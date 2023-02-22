@@ -66,51 +66,10 @@
                                     </div>
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <!--FIN-->
-                                    <div class="row  my-4">
-                                        <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom02">Nombre:</label>
-                                            <input class="form-control" id="validationCustom02" type="text" required="">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom02">Marca:</label>
-                                            <input class="form-control" id="validationCustom02" type="text" required="">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom02">Color:</label>
-                                            <input class="form-control" id="validationCustom02" type="text" required="">
-                                        </div>
-                                        <div class="row  my-4">
-                                            <div class="col-md-4">
-                                                <label class="form-label" for="validationCustom04">Categoria: </label>
-                                                <select class="form-select" id="validationCustom04" required="">
-                                                    <option selected="" disabled="" value="">Choose...</option>
-                                                </select>
-                                                <div class="invalid-feedback">Please select a valid state.</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <!--FIN-->
-                                    <div class="row  my-4">
-                                        <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
-                                            <select class="form-select" id="validationCustom04" required="">
-                                                <option selected="" disabled="" value="">Choose...</option>
-                                                <option selected="" disabled="" value="">Nuevo</option>
-                                                <option selected="" disabled="" value="">Donado</option>
-                                            </select>
-                                            <div class="invalid-feedback">Please select a valid state.</div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom02">Codigo:</label>
-                                            <input class="form-control" id="validationCustom02" type="text" required="">
-                                        </div><br>
-                                        <div class="col-md-4">
-                                            <label class="form-label" for="validationCustom02">Encargado del
-                                                Bien:</label>
-                                            <input class="form-control" id="validationCustom02" type="text" required="">
-                                        </div>
-                                    </div>
+            
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <!--FIN-->
                                     <div class="col-12" align="right">
