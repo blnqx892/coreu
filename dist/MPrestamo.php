@@ -50,6 +50,8 @@
                                             <label class="form-label" for="validationCustom01">Fecha:</label>
                                             <input class="form-control" id="validationCustom01" type="date" required="">
                                         </div>
+                                    </div>
+                                    <div class="row my-4">
                                         <div class="col-md-3">
                                             <label class="form-label" for="validationCustom02">Procedencia:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
