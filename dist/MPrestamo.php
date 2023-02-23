@@ -92,7 +92,7 @@
                                     </div>
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <!--FIN-->
-                                    <h3>Caracteristicas</h3>
+                                    <h4>Caracteristicas</h4>
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <!--FIN-->
                                     <div class="col-12" align="right">
