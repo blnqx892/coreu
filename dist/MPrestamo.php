@@ -47,7 +47,7 @@
                                     </div>
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <div class="row my-4">
-                                    <div class="col-md-2">
+                                        <div class="col-md-2">
                                             <label class="form-label" for="validationCustom01">Fecha:</label>
                                             <input class="form-control" id="validationCustom01" type="date" required="">
                                         </div>
@@ -68,17 +68,31 @@
                                         </div>
                                     </div>
                                     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
-    Default radio
-  </label>
-</div>
-                                    
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Prestamo
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Traslado Definitivo
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Reparación
+                                        </label>
+                                    </div>
                                     <!--FIN-->
-                                    
+
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <!--FIN-->
-            
+
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <!--FIN-->
                                     <div class="col-12" align="right">
