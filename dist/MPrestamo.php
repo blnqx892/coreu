@@ -18,7 +18,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb my-0 ms-2">
                         <li class="breadcrumb-item">
-                            <!-- if breadcrumb is single--><span>Mantenimientos: Prestamo</span>
+                            <!-- if breadcrumb is single--><span>Movimiento de Bienes Muebles</span>
                         </li>
                     </ol>
                 </nav>
