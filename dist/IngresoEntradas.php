@@ -69,14 +69,15 @@
                       <label for="inputZip" class="form-label">Serie:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                  </div>
-                  <!--FIN SECCION TRES-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION CUATRO-->
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Marca:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
+                  </div>
+                  <!--FIN SECCION TRES-->
+                  <div class="row  my-4">
+                    <!--INICIO SECCION CUATRO-->
+                    
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Modelo:</label>
                       <input type="text" class="form-control" id="inputZip">
