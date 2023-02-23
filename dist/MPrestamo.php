@@ -95,16 +95,28 @@
                                     <h4>Caracteristicas</h4>
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <div class="row my-4">
-                                        <div class="col-md-2">
-                                            <label class="form-label" for="validationCustom01">Nombre:</label>
-                                            <input class="form-control" id="validationCustom01" type="date" required="">
+                                    <div class="col-md-3">
+                                            <label class="form-label" for="validationCustom02">Nombre:</label>
+                                            <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
                                         <div class="col-md-3">
                                             <label class="form-label" for="validationCustom02">Descripcion:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
                                         <div class="col-md-3">
-                                            <label class="form-label" for="validationCustom02">modelo:</label>
+                                            <label class="form-label" for="validationCustom02">Modelo:</label>
+                                            <input class="form-control" id="validationCustom02" type="text" required="">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label" for="validationCustom02">Serie:</label>
+                                            <input class="form-control" id="validationCustom02" type="text" required="">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label" for="validationCustom02">Marca:</label>
+                                            <input class="form-control" id="validationCustom02" type="text" required="">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label" for="validationCustom02">Codigo:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
                                     </div>
