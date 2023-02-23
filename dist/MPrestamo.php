@@ -67,7 +67,7 @@
                                             </textarea>
                                         </div>
                                     </div>
-                                    <div class="row my-4">
+                                    <div class="row my-2">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
                                             id="flexRadioDefault1">
