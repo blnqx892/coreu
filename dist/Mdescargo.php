@@ -55,10 +55,6 @@
                                             <label class="form-label" for="validationCustom02">Procedencia:</label>
                                             <input class="form-control" id="validationCustom02" type="text" required="">
                                         </div>
-                                        <div class="col-md-3">
-                                            <label class="form-label" for="validationCustom02">Destino:</label>
-                                            <input class="form-control" id="validationCustom02" type="text" required="">
-                                        </div>
                                     </div>
                                     <div class="row my-4">
                                         <div class="col-md-8">
@@ -72,21 +68,21 @@
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
                                                 id="flexRadioDefault1">
                                             <label class="form-check-label" for="flexRadioDefault1">
-                                                Prestamo
+                                                Inservible
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
                                                 id="flexRadioDefault1">
                                             <label class="form-check-label" for="flexRadioDefault1">
-                                                Traslado Definitivo
+                                                Robo y/o Hurto
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
                                                 id="flexRadioDefault1">
                                             <label class="form-check-label" for="flexRadioDefault1">
-                                                Reparación
+                                                Obsoleto
                                             </label>
                                         </div>
                                     </div>
