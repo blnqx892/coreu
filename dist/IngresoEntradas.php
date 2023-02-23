@@ -66,11 +66,6 @@
                       <input type="text" class="form-control" id="inputCity">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Descripción:</label>
-                      <textarea class="form-control" id="validationCustom02" required="" row="3">
-                                            </textarea>
-                    </div>
-                    <div class="col-md-4">
                       <label for="inputZip" class="form-label">Serie:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
@@ -104,6 +99,11 @@
                         <option selected="" disabled="" value="">Equipo Intangible</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Descripción:</label>
+                      <textarea class="form-control" id="validationCustom02" required="" row="3">
+                      </textarea>
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
