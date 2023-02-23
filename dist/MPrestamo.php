@@ -66,6 +66,8 @@
                                             <textarea class="form-control" id="validationCustom02" required="" row="3">
                                             </textarea>
                                         </div>
+                                    </div>
+                                    <div class="row my-2 ">
                                         <div class="form-check col-md-3">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
                                                 id="flexRadioDefault1">
@@ -87,9 +89,6 @@
                                                 Reparación
                                             </label>
                                         </div>
-                                    </div>
-                                    <div class="row my-2 ">
-                                        
                                     </div>
                                     <!--FIN-->
 
