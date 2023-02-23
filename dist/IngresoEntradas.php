@@ -54,7 +54,7 @@
                       <input type="text" class="form-control" id="inputPassword4">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">Garantía:</label>
+                      <label for="inputAddress2" class="form-label">Costo de Adquición:</label>
                       <input type="text" class="form-control" id="inputAddress2" placeholder="1 año">
                     </div>
                   </div>
@@ -66,12 +66,13 @@
                       <input type="text" class="form-control" id="inputCity">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Costo de Adquisición:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <label for="inputZip" class="form-label">Descripción:</label>
+                      <textarea class="form-control" id="validationCustom02" required="" row="3">
+                                            </textarea>
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Cantidad:</label>
-                      <input type="number" class="form-control" id="inputZip">
+                      <label for="inputZip" class="form-label">Serie:</label>
+                      <input type="text" class="form-control" id="inputZip">
                     </div>
                   </div>
                   <!--FIN SECCION TRES-->

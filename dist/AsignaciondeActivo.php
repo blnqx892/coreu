@@ -77,6 +77,10 @@
                     </div>
                     <div class="row  my-4">
                     <div class="col-md-4">
+                      <label class="form-label" for="validationCustom02">Serie:</label>
+                      <input class="form-control" id="validationCustom02" type="text" required="">
+                    </div>
+                    <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Categoria: </label>
                       <select class="form-select" id="validationCustom04" required="">
                         <option selected="" disabled="" value="">Choose...</option>
