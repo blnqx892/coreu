@@ -85,8 +85,7 @@
                       <label for="inputZip" class="form-label">Color:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                  </div>
-                  <div class="col-md-4">
+                    <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Categoria</label>
                       <select class="form-select" id="validationCustom04" required="">
                         <option selected="" disabled="" value="">Equipo Tecnologico</option>
@@ -97,8 +96,10 @@
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
+                  </div>
                   <!--FIN SECCION CUATRO-->
                   <div class="row  my-4">
+                    <!--INICIO SECCION CINCO-->
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Descripción:</label>
                       <textarea class="form-control" id="validationCustom02" required="" row="3">
