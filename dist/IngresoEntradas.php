@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Costo de Adquición:</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="1 año">
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="">
                     </div>
                   </div>
                   <!--FIN SECCION DOS-->

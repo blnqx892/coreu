@@ -62,12 +62,8 @@
         </svg>Control Mantenimiento</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="Mprestamo.php"><span class="nav-icon"></span>
-            Prestamo</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Traslado Definitivo</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Reparacion</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+            Mantenimiento</a></li>
+        <li class="nav-item"><a class="nav-link" href="Mdescargo.php"><span class="nav-icon"></span>
             Descargo</a></li>
       </ul>
     </li>
