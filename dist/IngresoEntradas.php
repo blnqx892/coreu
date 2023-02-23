@@ -100,7 +100,7 @@
                   <!--FIN SECCION CUATRO-->
                   <div class="row  my-4">
                     <!--INICIO SECCION CINCO-->
-                    <div class="col-md-4">
+                    <div class="col-md-7">
                       <label for="inputZip" class="form-label">Descripción:</label>
                       <textarea class="form-control" id="validationCustom02" required="" row="3">
                       </textarea>
