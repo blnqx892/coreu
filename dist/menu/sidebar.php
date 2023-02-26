@@ -91,22 +91,11 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Suministros</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="AIngresoSuministros.php"><span class="nav-icon"></span>
             Ingreso Suministros</a></li>
         <!-- <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
             Breadcrumb</a></li>
         <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>-->
-      </ul>
-    </li>
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-        <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg>Inventario de suministros</a>
-      <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Adicionar en el stock</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Consultar disponibles</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
