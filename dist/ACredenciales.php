@@ -46,21 +46,25 @@
                       <label for="inputZip" class="form-label">Jefe de Unidad:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">No. de Empleados:</label>
+                      <input type="number" class="form-control" id="inputZip">
+                    </div>
+                  <!--FIN SECCION TRES-->
+                  <div class="row  my-4">
+                    <!--INICIO SECCION CUATRO-->
+                    <div class="col-md-3">
                       <label for="inputCity" class="form-label">Usuario:</label>
                       <input type="number" class="form-control" id="inputCity">
                     </div>
                   </div>
-                  <!--FIN SECCION TRES-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION CUATRO-->
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Contraseña:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="password" class="form-control" id="inputZip">
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="password" class="form-control" id="inputZip">
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
