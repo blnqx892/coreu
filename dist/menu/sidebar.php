@@ -93,10 +93,8 @@
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="AIngresoSuministros.php"><span class="nav-icon"></span>
             Ingreso Suministros</a></li>
-        <!-- <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
-            Breadcrumb</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>-->
-      </ul>
+        <li class="nav-item"><a class="nav-link" href="AIngresoSuministros.php"><span class="nav-icon"></span>
+            Ingreso Suministros</a></li>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
