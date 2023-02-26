@@ -113,8 +113,8 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Mobiliario y otros</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Ingreso nuevos</a></li>
+        <li class="nav-item"><a class="nav-link" href="AMobiliarios.php"><span class="nav-icon"></span>
+            Ingreso de Mobiliarios</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Consultar disponibles </a></li>
       </ul>
