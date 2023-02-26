@@ -45,11 +45,11 @@
                   <!--FIN SECCION FECHA-->
                   <div class="row  my-4">
                     <!--INICIO SECCION DOS-->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputEmail4" class="form-label">Codigo:</label>
                       <input type="text" class="form-control" id="inputEmail4">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputPassword4" class="form-label">Tarjeta No.:</label>
                       <input type="text" class="form-control" id="inputPassword4">
                     </div>
@@ -62,14 +62,14 @@
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
-                      <label for="inputCity" class="form-label">Cantidad:</label>
-                      <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-md-4">
                       <label for="inputZip" class="form-label">Marca:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
+                      <label for="inputCity" class="form-label">Cantidad:</label>
+                      <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Precio:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
@@ -77,7 +77,7 @@
                   <!--FIN SECCION TRES-->
                   <div class="row  my-4">
                     <!--INICIO SECCION CUATRO-->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Unidad de Medida:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
