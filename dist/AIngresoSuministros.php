@@ -18,7 +18,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><span>Control de Adquición</span>
+              <!-- if breadcrumb is single--><span>Suministros</span>
             </li>
           </ol>
         </nav>
@@ -31,14 +31,14 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Ingreso de Entradas</strong></div>
+              <div class="card-header"><strong>Ingreso de Suministros</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
                 <form class="g-3 needs-validation" novalidate="">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-4">
-                      <label for="inputEmail4" class="form-label">Fecha de Adquisición:</label>
+                      <label for="inputEmail4" class="form-label">Fecha:</label>
                       <input type="date" class="form-control" id="inputEmail4">
                     </div>
                   </div>
@@ -46,15 +46,15 @@
                   <div class="row  my-4">
                     <!--INICIO SECCION DOS-->
                     <div class="col-md-4">
-                      <label for="inputEmail4" class="form-label">N° de Factura:</label>
+                      <label for="inputEmail4" class="form-label">Codigo:</label>
                       <input type="text" class="form-control" id="inputEmail4">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputPassword4" class="form-label">Proveedor:</label>
+                      <label for="inputPassword4" class="form-label">Tarjeta No.:</label>
                       <input type="text" class="form-control" id="inputPassword4">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">Costo de Adquición:</label>
+                      <label for="inputAddress2" class="form-label">Nombre de Suministro:</label>
                       <input type="text" class="form-control" id="inputAddress2" placeholder="">
                     </div>
                   </div>
@@ -62,15 +62,15 @@
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
-                      <label for="inputCity" class="form-label">Nombre:</label>
+                      <label for="inputCity" class="form-label">Cantidad:</label>
                       <input type="text" class="form-control" id="inputCity">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Serie:</label>
+                      <label for="inputZip" class="form-label">Marca:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Marca:</label>
+                      <label for="inputZip" class="form-label">Precio:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
                   </div>
@@ -78,23 +78,12 @@
                   <div class="row  my-4">
                     <!--INICIO SECCION CUATRO-->
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Modelo:</label>
+                      <label for="inputZip" class="form-label">Unidad de Medida:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Color:</label>
+                      <label for="inputZip" class="form-label">Ubicación:</label>
                       <input type="text" class="form-control" id="inputZip">
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom04">Categoria</label>
-                      <select class="form-select" id="validationCustom04" required="">
-                        <option selected="" disabled="" value="">Equipo Tecnologico</option>
-                        <option selected="" disabled="" value="">Equipo de Oficina</option>
-                        <option selected="" disabled="" value="">Equipo de Maquinaria y Transporte</option>
-                        <option selected="" disabled="" value="">Equipo de Herramientas</option>
-                        <option selected="" disabled="" value="">Equipo Intangible</option>
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
