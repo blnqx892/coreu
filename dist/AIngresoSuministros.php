@@ -52,8 +52,7 @@
                     <div class="col-md-3">
                       <label for="inputPassword4" class="form-label">Tarjeta No.:</label>
                       <input type="text" class="form-control" id="inputPassword4">
-                    </div
-                    
+                    </div>
                   </div>
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
@@ -91,11 +90,6 @@
                       <textarea class="form-control" id="validationCustom02" required="" row="3">
                       </textarea>
                     </div>
-                  </div>
-                  <!--FIN SECCION CUATRO-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION CINCO-->
-                    
                   </div>
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
