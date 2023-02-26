@@ -82,7 +82,7 @@
                       <label for="inputZip" class="form-label">Unidad de Medida:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Ubicación:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
