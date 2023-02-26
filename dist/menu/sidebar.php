@@ -133,14 +133,12 @@
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg>Control unidades y restricciones </a>
+        </svg>Unidades y Restricciones </a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Adicionar unidades </a></li>
+            Credenciales </a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Consulta de unidades </a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Agregar restricciones</a></li>
+            Restricciones </a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
