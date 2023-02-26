@@ -41,19 +41,6 @@
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Inventario General</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Inventario Intangible</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Inventario Tecnologico</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Inventario Mobiliario</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Inventario Transporte</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Inventario Herramientas</a></li>
-        <!--<li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Form Control</a></li>
-        <li class="nav-item"><a class="nav-link" href="forms/select.html"> Select</a></li>
-        <li class="nav-item"><a class="nav-link" href="forms/checks-radios.html"> Checks and radios</a></li>-->
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -135,7 +122,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Unidades y Restricciones </a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="ACredenciales"><span class="nav-icon"></span>
             Credenciales </a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Restricciones </a></li>
