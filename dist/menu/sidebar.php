@@ -122,7 +122,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Unidades y Restricciones </a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="ACredenciales"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="ACredenciales.php"><span class="nav-icon"></span>
             Credenciales </a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Restricciones </a></li>
