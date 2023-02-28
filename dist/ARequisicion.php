@@ -73,8 +73,10 @@
                                         <div class="col-md-1">
                                             <label for="inputCity" class="form-label">Agregar</label>
                                             <button class="btn btn-primary" type="submit">+</button>
-                                        </div><br><br>
-                                        <div>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-4">
+                                    <div>
                                             <table class="table">
                                                 <thead class="table-dark">
                                                     <tr>
