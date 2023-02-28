@@ -95,7 +95,7 @@
                                                         <th>CM</th>
                                                         <th>Lapiz facela</th>
                                                         <th>3</th>
-                                                        <th><button class="btn btn-green" type="submit">-</button></th>
+                                                        <th><button class="btn btn-danger" type="submit">-</button></th>
                                                     </tr>
                                                 </tbody>
                                             </table>
