@@ -77,10 +77,22 @@
                                         <div>
                                             <table class="table">
                                                 <thead class="table-dark">
-                                                    ...
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Codigo</th>
+                                                        <th>U/Medida</th>
+                                                        <th>Descripción de Suministro</th>
+                                                        <th>Cantidad</th>
+                                                    </tr>
                                                 </thead>
                                                 <tbody>
-                                                    ...
+                                                <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
