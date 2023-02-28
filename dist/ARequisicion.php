@@ -95,7 +95,7 @@
                                                         <th>CM</th>
                                                         <th>Lapiz facela</th>
                                                         <th>3</th>
-                                                        <th><i class="cis-trash-x"><button type="button" class="btn btn-danger rounded-pill">E</button></i></th>
+                                                        <th><button type="button" class="btn btn-danger rounded-pill"><i class="cil-trash"></i> Eliminar</button></th>
                                                     </tr>
                                                 </tbody>
                                             </table>
