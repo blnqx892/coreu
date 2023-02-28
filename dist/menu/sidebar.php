@@ -159,10 +159,10 @@
       </ul>
     </li>
     <li class="nav-title">REQUISICIÓN</li>
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="ARequisicion.php">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg>Requisición para cada unidad</a>
+        </svg>Requisición</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Accordion</a></li>
