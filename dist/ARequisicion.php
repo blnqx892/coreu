@@ -95,7 +95,7 @@
                                                         <th>CM</th>
                                                         <th>Lapiz facela</th>
                                                         <th>3</th>
-                                                        <th><button class="btn btn-danger" type="submit"><span class="cil-basura"></span></button></th>
+                                                        <th><button class="btn btn-danger" type="submit"><span class="cil-basura btn-icon mr-2"></span>Eliminar</button></th>
                                                     </tr>
                                                 </tbody>
                                             </table>
