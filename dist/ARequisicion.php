@@ -71,7 +71,7 @@
                       <input type="number" class="form-control" id="inputCity">
                     </div>
                     <div class="col-md-1">
-                    <label for="inputCity" class="form-label"></label>
+                    <label for="inputCity" class="form-label"> </label>
                     <button class="btn btn-primary" type="submit">+</button>
                     </div>
                   </div>
