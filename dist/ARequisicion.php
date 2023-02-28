@@ -70,6 +70,7 @@
                       <label for="inputCity" class="form-label">Cantidad:</label>
                       <input type="number" class="form-control" id="inputCity">
                     </div>
+                    <button class="btn btn-primary" type="submit">Agregar</button>
                   </div>
                   <!--FIN SECCION TRES-->
                   <!--FIN SECCION CUATRO-->
