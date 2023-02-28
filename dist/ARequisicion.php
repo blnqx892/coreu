@@ -37,9 +37,13 @@
                 <form class="g-3 needs-validation" novalidate="">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                       <label for="inputEmail4" class="form-label">Fecha:</label>
                       <input type="date" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputAddress2" class="form-label">Unidad Solicitada:</label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="">
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
