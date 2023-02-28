@@ -66,16 +66,12 @@
                       <label for="inputZip" class="form-label">Descripción de Suministro:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                  </div>
-                  <!--FIN SECCION TRES-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION CUATRO-->
-                    <div class="col-md-6">
-                      <label for="inputZip" class="form-label">Descripción:</label>
-                      <textarea class="form-control" id="validationCustom02" required="" row="3">
-                      </textarea>
+                    <div class="col-md-1">
+                      <label for="inputCity" class="form-label">Cantidad:</label>
+                      <input type="number" class="form-control" id="inputCity">
                     </div>
                   </div>
+                  <!--FIN SECCION TRES-->
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
                     <button class="btn btn-primary" type="submit">Guardar</button>
