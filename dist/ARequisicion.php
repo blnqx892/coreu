@@ -89,11 +89,11 @@
                                                 </thead>
                                                 <tbody>
                                                 <tr>
-                                                        <th></th>
-                                                        <th></th>
-                                                        <th></th>
-                                                        <th></th>
-                                                        <th></th>
+                                                        <th>1</th>
+                                                        <th>0003</th>
+                                                        <th>CM</th>
+                                                        <th>Lapiz facela</th>
+                                                        <th>3</th>
                                                     </tr>
                                                 </tbody>
                                             </table>
