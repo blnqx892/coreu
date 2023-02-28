@@ -106,8 +106,8 @@
                                     <!--FIN SECCION TRES-->
                                     <!--FIN SECCION CUATRO-->
                                     <div class="col-15" align="right">
-                                        <button class="btn btn-primary" type="submit">Guardar</button>
-                                        <button class="btn btn-danger" type="submit">Cancelar</button>
+                                        <button class="btn btn-success" type="submit">Enviar</button>
+                                        <button class="btn btn-warning" type="submit">Cancelar</button>
                                     </div>
                                 </form>
                                 <!--/// FIN FORM ////////////////-->
