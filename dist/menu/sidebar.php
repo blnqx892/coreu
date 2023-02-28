@@ -159,13 +159,13 @@
       </ul>
     </li>
     <li class="nav-title">REQUISICIÓN</li>
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="ARequisicion.php">
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Requisición</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
-            Accordion</a></li>
+        <li class="nav-item"><a class="nav-link" href="ARequisicion.php"><span class="nav-icon"></span>
+            Requisición</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Breadcrumb</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Cards</a></li>
