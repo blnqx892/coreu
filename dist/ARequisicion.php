@@ -50,20 +50,20 @@
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
-                    <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">Nombre Mobiliario:</label>
+                    <div class="col-md-1">
+                      <label for="inputAddress2" class="form-label">No.:</label>
                       <input type="text" class="form-control" id="inputAddress2" placeholder="">
                     </div>
-                    <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Marca:</label>
+                    <div class="col-md-2">
+                      <label for="inputZip" class="form-label">Codigo:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
                     <div class="col-md-2">
-                      <label for="inputCity" class="form-label">Cantidad:</label>
+                      <label for="inputCity" class="form-label">Unidad de Medida:</label>
                       <input type="number" class="form-control" id="inputCity">
                     </div>
-                    <div class="col-md-2">
-                      <label for="inputZip" class="form-label">Precio:</label>
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Descripción de Suministro:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
                   </div>
