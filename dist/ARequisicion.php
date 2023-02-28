@@ -85,6 +85,7 @@
                                                         <th>U/Medida</th>
                                                         <th>Descripción de Suministro</th>
                                                         <th>Cantidad</th>
+                                                        <th>Acción</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -94,6 +95,7 @@
                                                         <th>CM</th>
                                                         <th>Lapiz facela</th>
                                                         <th>3</th>
+                                                        <th><button class="btn btn-green" type="submit">-</button></th>
                                                     </tr>
                                                 </tbody>
                                             </table>
