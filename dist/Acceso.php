@@ -80,7 +80,7 @@
                   </div>
                   <div class="row">
                     <div class="col-6">
-                      <button class="btn btn-primary px-4" type="button">Acceder</button>
+                      <button class="btn btn-primary px-4" type="button" href="inicio.php">Acceder</button>
                     </div>
                     <div class="col-6 text-end">
                       <button class="btn btn-link px-0" type="button">¿Olvido contraseña?</button>
