@@ -39,22 +39,22 @@
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">Nombre de Unidad:</label>
+                      <label for="inputAddress2" class="form-label">Nombre:</label>
                       <input type="text" class="form-control" id="inputAddress2" placeholder="">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Jefe de Unidad:</label>
+                      <label for="inputZip" class="form-label">Apellido:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
                     <div class="col-md-2">
-                      <label for="inputZip" class="form-label">No. de Empleados:</label>
+                      <label for="inputZip" class="form-label">Usuario:</label>
                       <input type="number" class="form-control" id="inputZip">
                     </div>
                   <!--FIN SECCION TRES-->
                   <div class="row  my-4">
                     <!--INICIO SECCION CUATRO-->
                     <div class="col-md-3">
-                      <label for="inputCity" class="form-label">Usuario:</label>
+                      <label for="inputCity" class="form-label">Email:</label>
                       <input type="number" class="form-control" id="inputCity">
                     </div>
                     <div class="col-md-3">
