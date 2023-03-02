@@ -62,10 +62,10 @@
         <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
           <svg class="icon me-2">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
-          </svg> Lock Account</a><a class="dropdown-item" href="#">
+          </svg> Bloquear</a><a class="dropdown-item" href="#">
           <svg class="icon me-2">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
-          </svg> Logout</a>
+          </svg> Cerrar Sesión</a><a class="dropdown-item" href="Acceso.php">
       </div>
     </li>
   </ul>
