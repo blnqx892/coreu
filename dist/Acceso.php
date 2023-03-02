@@ -64,7 +64,7 @@
             <div class="card-group d-block d-md-flex row">
               <div class="card col-md-7 p-4 mb-0">
                 <div class="card-body">
-                  <h1>BIENVENID@ A SICAFI</h1>
+                <center><h1>BIENVENID@ A SICAFI</h1></center>
                   <p class="text-medium-emphasis">Inicie Sesión</p>
                   <div class="input-group mb-3"><span class="input-group-text">
                       <svg class="icon">
