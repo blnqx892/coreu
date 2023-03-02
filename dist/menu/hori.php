@@ -59,10 +59,12 @@
           <svg class="icon me-2">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-file"></use>
           </svg> Projects<span class="badge badge-sm bg-primary ms-2">42</span></a>
-        <div class="dropdown-divider"></div><a class="dropdown-item" href="Acceso.php">
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="">
           <svg class="icon me-2">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
-          </svg> Bloquear</a><a class="dropdown-item" href="#">
+          </svg> Bloquear</a>
+          <a class="dropdown-item" href="Acceso.php">
           <svg class="icon me-2">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
           </svg> Cerrar Sesión</a>
