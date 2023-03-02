@@ -64,8 +64,8 @@
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
           </svg> Bloquear</a><a class="dropdown-item" href="#">
           <svg class="icon me-2">
-            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
-          </svg> Cerrar Sesión</a><a class="dropdown-item" href="Acceso.php">
+            <use xlink:href="Acceso.php"></use>
+          </svg> Cerrar Sesión</a>
       </div>
     </li>
   </ul>
