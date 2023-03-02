@@ -62,7 +62,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="card-group d-block d-md-flex row">
-              <div class="card col-md-7 p-4 mb-0">
+              <div class="card col-md- p-4 mb-0">
                 <div class="card-body">
                 <center><h1>BIENVENID@ A SICAFI</h1></center>
                   <p class="text-medium-emphasis">Inicie Sesión</p>
