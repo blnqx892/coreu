@@ -10,7 +10,8 @@
 
   <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
     <li class="nav-title">ACTIVO FIJO</li>
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+    <li class="nav-group">
+      <a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Control Adquisicion</a>
@@ -28,10 +29,6 @@
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="AsignaciondeActivo.php"><span class="nav-icon"></span>
             Asignacion de activo</a></li>
-        <!--<li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
-            Buttons Group</a></li>
-        <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"></span>
-            Dropdowns</a></li>Esto no se si quitarlo-->
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
