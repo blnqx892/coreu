@@ -105,6 +105,11 @@
                       <textarea class="form-control" id="validationCustom02" required="" row="3">
                       </textarea>
                     </div>
+
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                      <label class="form-check-label" for="flexSwitchCheckChecked">Vehiculo</label>
+                    </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
