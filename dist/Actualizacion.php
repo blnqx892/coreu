@@ -55,7 +55,8 @@
                                                         <th>CM</th>
                                                         <th>Lapiz facela</th>
                                                         <th>3</th>
-                                                        <th><button type="button"
+                                                        <th>
+                                                            <button type="button"
                                                                 class="btn btn-danger rounded-pill"><svg
                                                                     class="icon me-2">
                                                                     <use
@@ -77,10 +78,7 @@
                                     </div>
                                     <!--FIN SECCION TRES-->
                                     <!--FIN SECCION CUATRO-->
-                                    <div class="col-15" align="right">
-                                        <button class="btn btn-success" type="submit">Enviar</button>
-                                        <button class="btn btn-light" type="submit">Cancelar</button>
-                                    </div>
+                                    
                                 </form>
                                 <!--/// FIN FORM ////////////////-->
                             </div>
