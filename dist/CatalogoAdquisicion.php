@@ -63,12 +63,11 @@
                                                                     </use>
                                                                 </svg> Eliminar</button>
                                                                 <button type="button"
-                                                                class="btn btn-danger rounded-pill"><svg
-                                                                    class="icon me-2">
-                                                                    <use
-                                                                        xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
-                                                                    </use>
-                                                                </svg> Ver</button>
+                                                                class="btn btn-danger rounded-pill"><i
+class=
+"fi fi-rr-eye"
+></i>
+ Ver</button>
                                                         </th>
                                                     </tr>
                                                 </tbody>
