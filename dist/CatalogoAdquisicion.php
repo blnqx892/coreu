@@ -41,7 +41,7 @@
                                                 <thead class="table-dark">
                                                     <tr>
                                                         <th>Fecha</th>
-                                                        <th>Nq. Factura</th>
+                                                        <th>No. Factura</th>
                                                         <th>Proveedor</th>
                                                         <th>Nombre</th>
                                                         <th>Modelo</th>
