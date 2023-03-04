@@ -61,7 +61,15 @@
                                                                     <use
                                                                         xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
                                                                     </use>
-                                                                </svg> Eliminar</button></th>
+                                                                </svg> Eliminar</button>
+                                                                <button type="button"
+                                                                class="btn btn-danger rounded-pill"><svg
+                                                                    class="icon me-2">
+                                                                    <use
+                                                                        xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
+                                                                    </use>
+                                                                </svg> Ver</button>
+                                                        </th>
                                                     </tr>
                                                 </tbody>
                                             </table>
