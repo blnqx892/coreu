@@ -40,11 +40,11 @@
                                             <table class="table">
                                                 <thead class="table-dark">
                                                     <tr>
-                                                        <th>No.</th>
-                                                        <th>Codigo</th>
-                                                        <th>U/Medida</th>
-                                                        <th>Descripción de Suministro</th>
-                                                        <th>Cantidad</th>
+                                                        <th>Fecha</th>
+                                                        <th>Nq. Factura</th>
+                                                        <th>Proveedor</th>
+                                                        <th>Nombre</th>
+                                                        <th>Modelo</th>
                                                         <th>Acción</th>
                                                     </tr>
                                                 </thead>
