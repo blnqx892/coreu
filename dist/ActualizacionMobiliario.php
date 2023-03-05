@@ -44,6 +44,7 @@
                                                         <th>Nombre</th>
                                                         <th>Marca</th>
                                                         <th>Cantidad</th>
+                                                        <th>Descripción</th>
                                                          <th>Acción</th>
                                                     </tr>
                                                 </thead>
@@ -53,7 +54,7 @@
                                                         <th>0003</th>
                                                         <th>CM</th>
                                                         <th>Lapiz facela</th>
-                                                        <th>2</th>
+                                                        <th>3</th>
                                                         <th>
                                                             <button type="button"
                                                                 class="btn btn-danger rounded-pill"><svg
