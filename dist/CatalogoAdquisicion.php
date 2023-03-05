@@ -77,11 +77,7 @@
                                     </div>
                                     <!--FIN SECCION TRES-->
                                     <!--FIN SECCION CUATRO-->
-                                    <div class="col-15" align="right">
-                                        <button class="btn btn-success" type="submit">Enviar</button>
-                                        <button class="btn btn-light" type="submit">Cancelar</button>
-                                    </div>
-                                </form>
+                                  </form>
                                 <!--/// FIN FORM ////////////////-->
                             </div>
                         </div>
