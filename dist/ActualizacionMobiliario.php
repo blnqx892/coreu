@@ -44,16 +44,16 @@
                                                         <th>Nombre</th>
                                                         <th>Marca</th>
                                                         <th>Cantidad</th>
-                                                        <th>Acción</th>
+                                                         <th>Acción</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <th>04/03/2023</th>
-                                                        <th>Escritorio</th>
-                                                        <th>pajarito</th>
+                                                        <th>1</th>
+                                                        <th>0003</th>
+                                                        <th>CM</th>
+                                                        <th>Lapiz facela</th>
                                                         <th>2</th>
-                                                        <th>3</th>
                                                         <th>
                                                             <button type="button"
                                                                 class="btn btn-danger rounded-pill"><svg
