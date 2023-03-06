@@ -53,16 +53,6 @@
             <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span> Pagina 2</a></li>
           </ul>
         </li>
-        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-            </svg> Control Adquisición</a>
-          <ul class="nav-group-items">
-            <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Ingreso de Entradas</a></li>
-            <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Actualización de adquisición</a></li>
-          </ul>
-        </li>
-      </ul>
 
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
         <li class="nav-title">ALMACÉN</li>
