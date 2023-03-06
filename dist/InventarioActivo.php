@@ -6,7 +6,7 @@
 
 <body>
     <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
-    <?php include("menu/sidebar.php"); ?>
+    <?php include("menu/verti.php"); ?>
     <!-- ////////////////////////-->
     <div class="wrapper d-flex flex-column min-vh-100 bg-light">
         <header class="header header-sticky mb-4">
