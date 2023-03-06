@@ -80,7 +80,7 @@
                   </div>
                   <div class="row">
                     <div class="col-6">
-                      <a href="sidebar.php"><button class="btn btn-primary px-4" type="button" submit="">Acceder</button></a>
+                      <a href="index.php"><button class="btn btn-primary px-4" type="button" submit="">Acceder</button></a>
                     </div>
                     <div class="col-6 text-end">
                       <button class="btn btn-link px-0" type="button">¿Olvido contraseña?</button>
