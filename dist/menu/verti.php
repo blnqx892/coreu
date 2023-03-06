@@ -138,6 +138,23 @@
         <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Pagina 1</a></li>
       </ul>
     </li>
+    <li class="nav-title">AUCI</li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg> Control de Aprobación</a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Aprobaciones</a></li>
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+        </svg> Historial</a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Pagina 1</a></li>
+      </ul>
+    </li>
   </ul>
   <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>
