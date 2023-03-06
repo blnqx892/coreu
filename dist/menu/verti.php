@@ -115,6 +115,7 @@
             <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
           </ul>
         </li>
+        </ul>
       </ul>
       <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>
