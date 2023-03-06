@@ -40,7 +40,7 @@
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
             </svg> Control Mantenimiento</a>
           <ul class="nav-group-items">
-            <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"> Movimientos<span class="badge badge-sm bg-success ms-auto">Free</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"> Movimientos</a></li>
             <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-brand.html"> Descargo</a></li>
           </ul>
         </li>
