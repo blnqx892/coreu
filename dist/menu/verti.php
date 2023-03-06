@@ -15,9 +15,9 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg> Control Adquisición</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Ingreso de
+        <li class="nav-item"><a class="nav-link" href="IngresoEntradas.php"><span class="nav-icon"></span> Ingreso de
             Entradas</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="CatalogoAdquisicion.php"><span class="nav-icon"></span>
             Actualización de adquisición</a></li>
       </ul>
     </li>
@@ -26,9 +26,9 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Codificación de Activo</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Asignación
+        <li class="nav-item"><a class="nav-link" href="AsignaciondeActivo.php"><span class="nav-icon"></span> Asignación
             de activo</a></li>
-        <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="Actualizacion.php"><span class="nav-icon"></span>
             Actualización</a></li>
       </ul>
     </li>
@@ -37,7 +37,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg> Inventario</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Inventario General</a></li>
+        <li class="nav-item"><a class="nav-link" href=""> Inventario General</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -45,8 +45,8 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
         </svg> Control Mantenimiento</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"> Movimientos</a></li>
-        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-brand.html"> Descargo</a></li>
+        <li class="nav-item"><a class="nav-link" href="Mprestamo.php"> Movimientos</a></li>
+        <li class="nav-item"><a class="nav-link" href="Mdescargo.php"> Descargo</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -54,9 +54,9 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg> Depreciación</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span> Pagina
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina
             1</a></li>
-        <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span> Pagina
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina
             2</a></li>
       </ul>
     </li>
@@ -65,7 +65,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg> Reportes y Consultas</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href=""> Pagina 1</a></li>
       </ul>
     </li>
     <!--separador-->
@@ -75,9 +75,9 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg> Suministros</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Ingreso de
+        <li class="nav-item"><a class="nav-link" href="AIngresoSuministros.php"><span class="nav-icon"></span> Ingreso de
             Suministros</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
             Catalogo de Suministros</a></li>
       </ul>
     </li>
@@ -86,7 +86,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Kardex</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Consultar</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Consultar</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -94,7 +94,8 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg> Mobiliario y Otros</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Ingreso de Mobiliario</a></li>
+        <li class="nav-item"><a class="nav-link" href="AMobiliario.php"> Ingreso de Mobiliario</a></li>
+        <li class="nav-item"><a class="nav-link" href="ActualizacionMobiliario.php"> Catalogo</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -102,8 +103,8 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
         </svg> Requisición</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"> Remitir Requisición</a></li>
-        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-brand.html"> Historial</a></li>
+        <li class="nav-item"><a class="nav-link" href=""> Remitir Requisición</a></li>
+        <li class="nav-item"><a class="nav-link" href=""> Historial</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -111,8 +112,8 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg> Unidad y Restricción</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span> Credenciales</a></li>
-        <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span> Restricciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="ACredenciales.php"><span class="nav-icon"></span> Credenciales</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Restricciones</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -120,7 +121,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg> Reportes y Consultas</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href=""> Pagina 1</a></li>
       </ul>
     </li>
     <!--separador-->
@@ -130,7 +131,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg> Requisición</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Solicitud</a></li>
+        <li class="nav-item"><a class="nav-link" href="ARequisicion.php"><span class="nav-icon"></span> Solicitud</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -138,7 +139,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Historial</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 1</a></li>
       </ul>
     </li>
     <!--separador-->
@@ -148,7 +149,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg> Control de Aprobación</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Aprobaciones</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Aprobaciones</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -156,7 +157,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Historial</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 1</a></li>
       </ul>
     </li>
     <!--separador-->
@@ -166,8 +167,8 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg> Control de Usuarios</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Pagina 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Pagina 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="Usuarios.php"><span class="nav-icon"></span> Usuarios</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 2</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -175,7 +176,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Control de Relpaldo</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 1</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -183,7 +184,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg> Bitacora</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href=""> Pagina 1</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -191,8 +192,8 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
         </svg> Ayuda del Sistema</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"> Pagina 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-brand.html"> Pagina 2</a></li>
+        <li class="nav-item"><a class="nav-link" href=""> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href=""> Pagina 2</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -200,7 +201,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg> Acerca de</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 1</a></li>
       </ul>
     </li>
   </ul>
