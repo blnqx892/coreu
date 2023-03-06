@@ -53,6 +53,14 @@
             <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span> Pagina 2</a></li>
           </ul>
         </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+            </svg> Reportes y Consultas</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
+          </ul>
+        </li>
 
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
         <li class="nav-title">ALMACÉN</li>
@@ -97,6 +105,14 @@
           <ul class="nav-group-items">
             <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span> Credenciales</a></li>
             <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span> Restricciones</a></li>
+          </ul>
+        </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+            </svg> Reportes y Consultas</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
           </ul>
         </li>
       </ul>
