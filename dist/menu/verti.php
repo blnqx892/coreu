@@ -18,7 +18,7 @@
         <li class="nav-item"><a class="nav-link" href="IngresoEntradas.php"><span class="nav-icon"></span> Ingreso de
             Entradas</a></li>
         <li class="nav-item"><a class="nav-link" href="CatalogoAdquisicion.php"><span class="nav-icon"></span>
-            Actualización de adquisición</a></li>
+            Actualización de Adquisición</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
