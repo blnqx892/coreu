@@ -63,5 +63,62 @@
           </ul>
         </li>
       </ul>
+
+      <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+        <li class="nav-title">ACTIVO FIJO</li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+            </svg> Control Adquisición</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Ingreso de Entradas</a></li>
+            <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Actualización de adquisición</a></li>
+          </ul>
+        </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+            </svg> Codificación de Activo</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Asignación de activo</a></li>
+            <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span> Actualización</a></li>
+          </ul>
+        </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+            </svg> Inventario</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Inventario General</a></li>
+          </ul>
+        </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
+            </svg> Control Mantenimiento</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"> Movimientos</a></li>
+            <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-brand.html"> Descargo</a></li>
+          </ul>
+        </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
+            </svg> Depreciación</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span> Pagina 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span> Pagina 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+            </svg> Control Adquisición</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Ingreso de Entradas</a></li>
+            <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Actualización de adquisición</a></li>
+          </ul>
+        </li>
+      </ul>
       <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>
