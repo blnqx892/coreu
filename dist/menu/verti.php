@@ -67,55 +67,50 @@
         <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
       </ul>
     </li>
-    <li class="nav-title">ACTIVO FIJO</li>
+    <li class="nav-title">ALMACÉN</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg> Control Adquisición</a>
+        </svg> Suministros</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Ingreso de
-            Entradas</a></li>
+            Suministros</a></li>
         <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
-            Actualización de adquisición</a></li>
+            Catalogo de Suministros</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
-        </svg> Codificación de Activo</a>
+        </svg> Kardex</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Asignación
-            de activo</a></li>
-        <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
-            Actualización</a></li>
+        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Consultar</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
-        </svg> Inventario</a>
+        </svg> Mobiliario y Otros</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Inventario General</a></li>
+        <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Ingreso de Mobiliario</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
-        </svg> Control Mantenimiento</a>
+        </svg> Requisición</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"> Movimientos</a></li>
-        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-brand.html"> Descargo</a></li>
+        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"> Remitir Requisición</a></li>
+        <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-brand.html"> Historial</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-        </svg> Depreciación</a>
+        </svg> Unidad y Restricción</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span> Pagina
-            1</a></li>
-        <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span> Pagina
-            2</a></li>
+        <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span> Credenciales</a></li>
+        <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span> Restricciones</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
