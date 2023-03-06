@@ -106,6 +106,12 @@
                       </textarea>
                     </div>
                   </div>
+                  <div class="row  my-4">
+                  <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                      <label class="form-check-label" for="flexSwitchCheckChecked">Vehiculo</label>
+                    </div>
+                  </div>
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
                     <button class="btn btn-primary" type="submit">Guardar</button>

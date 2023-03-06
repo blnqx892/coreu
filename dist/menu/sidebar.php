@@ -10,14 +10,15 @@
 
   <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
     <li class="nav-title">ACTIVO FIJO</li>
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+    <li class="nav-group">
+      <a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Control Adquisicion</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="IngresoEntradas.php"><span class="nav-icon"></span>Ingreso de
             entradas</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="CatalogoAdquisicion.php"><span class="nav-icon"></span>
             Actualizacion adquisicion</a></li>
       </ul>
     </li>
@@ -28,10 +29,10 @@
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="AsignaciondeActivo.php"><span class="nav-icon"></span>
             Asignacion de activo</a></li>
-        <!--<li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
-            Buttons Group</a></li>
-        <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"></span>
-            Dropdowns</a></li>Esto no se si quitarlo-->
+      </ul>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="Actualizacion.php"><span class="nav-icon"></span>
+            Actualización</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -102,7 +103,7 @@
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="AMobiliario.php"><span class="nav-icon"></span>
             Ingreso de Mobiliarios</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="ActualizacionMobiliario.php"><span class="nav-icon"></span>
             Consultar disponibles </a></li>
       </ul>
     </li>
@@ -188,7 +189,7 @@
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-        </svg>Control de usuario al sistema</a>
+        </svg>Usuario del sistema</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="Usuarios.php"><span class="nav-icon"></span>
             Actualización de usuario </a></li>
