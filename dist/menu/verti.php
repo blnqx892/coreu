@@ -121,6 +121,23 @@
         <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
       </ul>
     </li>
+    <li class="nav-title">REQUISICIÓN</li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg> Requisición</a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Solicitud</a></li>
+      </ul>
+    </li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+        </svg> Historial</a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Consultar</a></li>
+      </ul>
+    </li>
   </ul>
   <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>
