@@ -34,7 +34,7 @@
           <div class="card mb-4">
             <div class="card-body"><br><br>
               <center>
-                <h3>BIENVENIDO/AS</h3>
+                <h3>BIENVENIDOS</h3>
               </center>
               <br><br><br>
               <!--CODIGO DE FECHA Y HORA-->
