@@ -61,7 +61,7 @@
             <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
           </ul>
         </li>
-
+</ul>
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
         <li class="nav-title">ALMACÉN</li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -115,5 +115,6 @@
             <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Pagina 1</a></li>
           </ul>
         </li>
+        </ul>
       <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
-    </div>
+</div>
