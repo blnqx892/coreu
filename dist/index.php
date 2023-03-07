@@ -42,7 +42,7 @@
                 <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" align="center" />
               <h1>S I C A F I</h1></center>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4"><br>
                   <div style="text-align:center;padding:1em 0;">
                     <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/country/sv"><span
                           style="color:gray;">Hora actual en</span><br />El Salvador</a></h3> <iframe
