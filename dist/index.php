@@ -38,11 +38,11 @@
                 <h3>BIENVENIDO</h3>
               </center>
                 <!--INICIO SECCION DOS-->
-                <div class="col-md-6">
+                <div class="col-md-8">
                 <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" align="center" />
               <h1>S I C A F I</h1></center>
                 </div>
-                <div class="col-md-2"><br><br>
+                <div class="col-md-4"><br><br>
                   <div style="text-align:center;padding:1em 0;">
                     <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/country/sv"><span
                           style="color:gray;">Hora actual en</span><br />El Salvador</a></h3> <iframe
