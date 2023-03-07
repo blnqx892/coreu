@@ -32,7 +32,7 @@
         <!-- row-->
         <div class="row">
           <div class="card mb-4">
-            <div class="card-body"><br><br>
+            <div class="card-body">
               <div class="row  my-4">
               <center>
                 <h3>BIENVENID@S</h3><br>
