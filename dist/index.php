@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
@@ -36,6 +36,9 @@
               <center>
                 <h3>BIENVENID@S</h3>
               </center>
+              <div>
+              <img src="img/cuboo2.png">
+              </div>
               <br><br><br>
               <!--CODIGO DE FECHA Y HORA-->
               <div style="text-align:center;padding:1em 0;">
@@ -60,4 +63,5 @@
   <?php include("foot/script.php"); ?>
   <!-- ////////////////////////-->
 </body>
+
 </html>
