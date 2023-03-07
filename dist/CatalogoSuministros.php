@@ -55,7 +55,7 @@
                                                         <th>CM</th>
                                                         <th>10</th>
                                                         <th>2.50</th>
-                                                        <th>3</th>
+                                                        <th>4</th>
                                                         <th>
                                                             <button type="button"
                                                                 class="btn btn-danger rounded-pill"><svg
