@@ -33,18 +33,27 @@
         <div class="row">
           <div class="card mb-4">
             <div class="card-body"><br><br>
-              <center>
-                <h3>BIENVENID@S</h3><br>
-                <img src="img/cuboo2.png" alt="SICAFI" 
+            <div class="row  my-4">
+                    <!--INICIO SECCION DOS-->
+                    <div class="col-md-4">
+                    <img src="img/cuboo2.png" alt="SICAFI" 
               width="250" height="250" align="center"/>
-              </center>
-              <!--CODIGO DE FECHA Y HORA-->
-              <div style="text-align:center;padding:1em 0;">
+                    </div>
+                    <div class="col-md-4">
+                    <div style="text-align:center;padding:1em 0;">
                 <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/country/sv"><span
                       style="color:gray;">Hora actual en</span><br />El Salvador</a></h3> <iframe
                   src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=medium&timezone=America%2FEl_Salvador"
                   width="100%" height="115" frameborder="0" seamless></iframe>
               </div>
+                    </div>
+                  </div>
+              <center>
+                <h3>BIENVENID@S</h3><br>
+                
+              </center>
+              <!--CODIGO DE FECHA Y HORA-->
+              
               <!-- ////////////////////////-->
             </div>
           </div>
