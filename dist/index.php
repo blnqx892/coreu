@@ -39,7 +39,8 @@
               </center>
                 <!--INICIO SECCION DOS-->
                 <div class="col-md-6">
-                <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" align="center" /></center>
+                <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" align="center" />
+              <h1>S I C A F I</h1></center>
                 </div>
                 <div class="col-md-4">
                   <div style="text-align:center;padding:1em 0;">
