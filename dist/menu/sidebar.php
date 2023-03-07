@@ -83,7 +83,7 @@
             Ingreso Suministros</a></li>
       </ul>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="CatalogoSuministros.php"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="catalogoSuministros.php"><span class="nav-icon"></span>
             Catalogo Suministros</a></li>
       </ul>
     </li>
