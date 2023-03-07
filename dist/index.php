@@ -34,9 +34,9 @@
           <div class="card mb-4">
             <div class="card-body"><br><br>
               <center>
-                <h3>BIENVENID@S</h3>
+                <h3>BIENVENID@S</h3><br>
                 <img src="img/cuboo2.png" alt="SICAFI" 
-              width="150" height="150" align="center"/>
+              width="250" height="250" align="center"/>
               </center>
               <br><br><br>
               <!--CODIGO DE FECHA Y HORA-->
