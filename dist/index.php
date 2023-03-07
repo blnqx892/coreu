@@ -38,7 +38,6 @@
                 <img src="img/cuboo2.png" alt="SICAFI" 
               width="250" height="250" align="center"/>
               </center>
-              <br>
               <!--CODIGO DE FECHA Y HORA-->
               <div style="text-align:center;padding:1em 0;">
                 <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/country/sv"><span
