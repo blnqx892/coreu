@@ -1,6 +1,6 @@
 <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
   <div class="sidebar-brand d-none d-md-flex">
-  <img src="img/cuboicon.png" alt="SICAFI" width="250" height="250" align="center" />
+  <img src="img/icon.png" alt="SICAFI" align="center" />
   </div>
   <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
     <!--separador-->
