@@ -37,7 +37,8 @@
                 <h3>BIENVENID@S</h3>
               </center>
               <div>
-              <img src="img/cuboo2.png">
+              <img src="img/cuboo2.png" alt="SICAFI" 
+              width="150" height="150" align="center"/>
               </div>
               <br><br><br>
               <!--CODIGO DE FECHA Y HORA-->
