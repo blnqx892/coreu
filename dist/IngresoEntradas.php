@@ -111,10 +111,11 @@
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
                           checked>
                       </div>
-                    </div>
-                    <div class="col-md-2">
                       <label for="inputZip" class="form-label">No. Motor:</label>
                       <input type="text" class="form-control" id="inputZip">
+                    </div>
+                    <div class="col-md-2">
+                     
                     </div>
                   </div>
                   <div class="row  my-4">
