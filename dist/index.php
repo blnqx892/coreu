@@ -35,7 +35,7 @@
             <div class="card-body">
               <div class="row  my-4">
               <center>
-                <h3>BIENVENIDO</h3>
+                
               </center>
                 <!--INICIO SECCION DOS-->
                 <div class="col-md-8">
