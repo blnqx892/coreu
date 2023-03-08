@@ -91,7 +91,6 @@
                                         </div>
                                         </div>
                                     </div>
-                                    <hr style="color: black; background-color: black; width:100%;" />
                                     <!--FIN-->
                                     <h4>Caracteristicas</h4>
                                     <hr style="color: black; background-color: black; width:100%;" />
