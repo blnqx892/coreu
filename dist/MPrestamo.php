@@ -84,7 +84,7 @@
                     </div>
                       <div class="col-md-6">
                         <label class="form-label" for="validationCustom02">Obervaciones:</label>
-                        <textarea class="form-control" id="validationCustom02" required="" row="3">
+                        <textarea class="form-control" id="validationCustom02" required="" row="4">
                                             </textarea>
                       </div>
                   </div>
