@@ -91,9 +91,6 @@
                                         </div>
                                         </div>
                                     </div>
-                                    <div class="row my-2 ">
-                                        
-                                    </div>
                                     <hr style="color: black; background-color: black; width:100%;" />
                                     <!--FIN-->
                                     <h4>Caracteristicas</h4>
