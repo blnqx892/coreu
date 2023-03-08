@@ -52,10 +52,12 @@
         <li class="nav-item"><a class="nav-link" href="Mprestamo.php"><span class="nav-icon"></span>
             Mantenimiento</a></li>
         <li class="nav-item"><a class="nav-link" href="Mdescargo.php"><span class="nav-icon"></span>
-            Descargo</a></li>
-        <li class="nav-item"><a class="nav-link" href="TablaMovi.php.php"><span class="nav-icon"></span>
-            Actualización</a></li>
+            Descargo</a></li>  
       </ul>
+      <ul class="nav-group-items">
+    <li class="nav-item"><a class="nav-link" href="TablaMovi.php.php"><span class="nav-icon"></span>
+            Actualización</a></li>
+       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
