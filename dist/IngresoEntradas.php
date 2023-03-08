@@ -106,11 +106,10 @@
                       </textarea>
                     </div><br>
                     <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Activar si:</label>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                       <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
                           checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Vehiculo</label>
                       </div>
                     </div>
                   </div>
