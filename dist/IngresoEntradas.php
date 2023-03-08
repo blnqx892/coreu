@@ -104,7 +104,7 @@
                       <label for="inputZip" class="form-label">Descripción:</label>
                       <textarea class="form-control" id="validationCustom02" required="" row="3">
                       </textarea>
-                    </div>
+                    </div><br>
                     <div class="col-md-2">
                       <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
