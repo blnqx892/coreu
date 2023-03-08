@@ -67,6 +67,7 @@
                                             </textarea>
                                         </div>
                                         <div class="col-md-6">
+                                        <label class="form-label" for="validationCustom02">Tipo de Movimiento:</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
                                                 id="flexRadioDefault1">
