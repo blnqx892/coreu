@@ -106,8 +106,8 @@
                       </textarea>
                     </div><br>
                     <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Activar si:</label>
                       <div class="form-check form-switch">
-                      <label for="inputZip" class="form-label">Activar si:</label>
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
                           checked>
                         <label class="form-check-label" for="flexSwitchCheckChecked">Vehiculo</label>
