@@ -60,7 +60,8 @@
                       <input class="form-control" id="validationCustom02" type="text" required="">
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="row my-4">
+                    <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Tipo de Movimiento:</label>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -81,11 +82,12 @@
                         </label>
                       </div>
                     </div>
-                  <div class="row my-6">
-                    <div class="col-md-6">
-                      <label class="form-label" for="validationCustom02">Obervaciones:</label>
-                      <textarea class="form-control" id="validationCustom02" required="" row="3">
+                    <div class="row my-6">
+                      <div class="col-md-6">
+                        <label class="form-label" for="validationCustom02">Obervaciones:</label>
+                        <textarea class="form-control" id="validationCustom02" required="" row="3">
                                             </textarea>
+                      </div>
                     </div>
                   </div>
                   <!--FIN-->
