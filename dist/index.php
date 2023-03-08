@@ -40,7 +40,7 @@
                 <!--INICIO SECCION DOS-->
                 <div class="col-md-8">
                 <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" align="center" />
-              <h1 style = "font-family:Copperplate,fantasy;">S I C A F I</h1></center>
+              <h1 style = "font-family:copperplate;">S I C A F I</h1></center>
                 </div>
                 <div class="col-md-4"><br><br>
                   <div style="text-align:center;padding:1em 0;">
