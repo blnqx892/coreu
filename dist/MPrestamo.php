@@ -60,7 +60,7 @@
                       <input class="form-control" id="validationCustom02" type="text" required="">
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Tipo de Movimiento:</label>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
