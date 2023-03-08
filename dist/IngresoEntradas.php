@@ -103,13 +103,6 @@
                         <label for="inputZip" class="form-label">Descripción:</label>
                         <textarea class="form-control" id="validationCustom02" required="" row="3">
                       </textarea></div>
-                      <div class="col-md-2">
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
-                        <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                            checked>
-                        </div>
-                      </div>
                     </div>
                     <div class="row  my-8">
                       <div class="col-md-2">
