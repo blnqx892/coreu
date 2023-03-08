@@ -106,23 +106,9 @@
                       </textarea>
                     </div>
                   </div>
-                  <div>
-                  <table class="table">
-                                                <thead class="table-dark">
-                                                    <tr>
-                                                        <th>Numero</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>1</th>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                  </div>
                   <div class="row  my-4">
-                  <div class="col-md-2">
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
+                    <div class="col-md-2">
+                      <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                       <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
                           checked>
