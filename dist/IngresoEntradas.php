@@ -102,7 +102,7 @@
                       <div class="col-md-7">
                         <label for="inputZip" class="form-label">Descripción:</label>
                         <textarea class="form-control" id="validationCustom02" required="" row="3">
-                      </textarea></div><br><br>
+                      </textarea></div><br>
                     </div>
                     <div class="row  my-4">
                       <div class="col-md-2">
