@@ -123,6 +123,16 @@
                       <input type="text" class="form-control" id="inputZip">
                     </div>
                   </div>
+                  <div class="col-md-2">
+                      <label for="inputZip" class="form-label">No. Chasis:</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                      <label for="inputZip" class="form-label">Capacidad:</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+                  </div>
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
                     <button class="btn btn-primary" type="submit">Guardar</button>
