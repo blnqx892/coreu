@@ -98,7 +98,7 @@
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
-                  <div class="row  my-4">
+                  <div class="row  my-3">
                     <!--INICIO SECCION CINCO-->
                     <div class="col-md-5">
                       <label for="inputZip" class="form-label">Descripción:</label>
