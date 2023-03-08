@@ -18,7 +18,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb my-0 ms-2">
                         <li class="breadcrumb-item">
-                            <!-- if breadcrumb is single--><span>Adquisiciones</span>
+                            <!-- if breadcrumb is single--><span>Asignación</span>
                         </li>
                     </ol>
                 </nav>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card mb-4">
-                            <div class="card-header"><strong>Suminstros</strong></div>
+                            <div class="card-header"><strong>Actualización Movimientos</strong></div>
                             <div class="card-body">
                                 <!--INICIO FORM-->
                                 <form class="g-3 needs-validation" novalidate="">
@@ -42,9 +42,12 @@
                                                     <tr>
                                                         <th>Numero</th>
                                                         <th>Codigo</th>
+                                                        <th>Fecha</th>
                                                         <th>Nombre</th>
-                                                        <th>Cantidad</th>
-                                                        <th>Precio</th>
+                                                        <th>Descripción</th>
+                                                        <th>Modelo</th>
+                                                        <th>Marca</th>
+                                                        <th>Tipo Movimiento</th>
                                                         <th>Acción</th>
                                                     </tr>
                                                 </thead>
@@ -52,10 +55,12 @@
                                                     <tr>
                                                         <th>1</th>
                                                         <th>0003</th>
-                                                        <th>CM</th>
-                                                        <th>10</th>
-                                                        <th>2.50</th>
-                                                       
+                                                        <th>08/03/2023</th>
+                                                        <th>Silla</th>
+                                                        <th>color negro</th>
+                                                        <th>sh02</th>
+                                                        <th>xs</th>
+                                                        <th>Prestamo</th>
                                                         <th>
                                                             <button type="button"
                                                                 class="btn btn-danger rounded-pill"><svg
