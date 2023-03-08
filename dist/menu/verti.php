@@ -1,6 +1,7 @@
 <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
   <div class="sidebar-brand d-none d-md-flex">
-  <img src="img/icon.png" alt="SICAFI" align="center" />
+    <a href="index.php"><img src="img/icon.png" alt="SICAFI" align="center" /></a>
+  
   </div>
   <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
     <!--separador-->
