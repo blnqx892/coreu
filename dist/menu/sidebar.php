@@ -52,8 +52,12 @@
         <li class="nav-item"><a class="nav-link" href="Mprestamo.php"><span class="nav-icon"></span>
             Mantenimiento</a></li>
         <li class="nav-item"><a class="nav-link" href="Mdescargo.php"><span class="nav-icon"></span>
-            Descargo</a></li>
+            Descargo</a></li>  
       </ul>
+      <ul class="nav-group-items">
+    <li class="nav-item"><a class="nav-link" href="TablaMovi.php"><span class="nav-icon"></span>
+            Actualización</a></li>
+       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
@@ -83,7 +87,7 @@
             Ingreso Suministros</a></li>
       </ul>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="AIngresoSuministros.php"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="TablaSumi.php"><span class="nav-icon"></span>
             Catalogo Suministros</a></li>
       </ul>
     </li>
