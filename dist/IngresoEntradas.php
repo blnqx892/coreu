@@ -107,7 +107,7 @@
                     </div>
                   </div>
                   <div class="row  my-4">
-                  <div class="col-md-2">
+                    <div class="col-md-2">
                       <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                       <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
@@ -122,39 +122,39 @@
                       <label for="inputZip" class="form-label">No. Placa:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                  </div>
-                  <div class="col-md-2">
+                    <div class="col-md-2">
                       <label for="inputZip" class="form-label">No. Chasis:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                  </div>
-                  <div class="col-md-2">
+                    <div class="col-md-2">
                       <label for="inputZip" class="form-label">Capacidad:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
                   </div>
-                  <!--FIN SECCION CUATRO-->
-                  <div class="col-15" align="right">
-                    <button class="btn btn-primary" type="submit">Guardar</button>
-                    <button class="btn btn-danger" type="submit">Cancelar</button>
-                  </div>
-                </form>
-                <!--/// FIN FORM ////////////////-->
               </div>
             </div>
+            <!--FIN SECCION CUATRO-->
+            <div class="col-15" align="right">
+              <button class="btn btn-primary" type="submit">Guardar</button>
+              <button class="btn btn-danger" type="submit">Cancelar</button>
+            </div>
+            </form>
+            <!--/// FIN FORM ////////////////-->
           </div>
-          <!-- /.row-->
         </div>
       </div>
-      <!-- ///////FIN CONTENEDOR/////////////-->
-
-      <!-- IMPORTAR ARCHIVO FOOTER-->
-      <?php include("foot/foot.php"); ?>
-      <!-- ////////////////////////-->
+      <!-- /.row-->
     </div>
-    <!-- IMPORTAR ARCHIVO SCRIPT-->
-    <?php include("foot/script.php"); ?>
-    <!-- ////////////////////////-->
+  </div>
+  <!-- ///////FIN CONTENEDOR/////////////-->
+
+  <!-- IMPORTAR ARCHIVO FOOTER-->
+  <?php include("foot/foot.php"); ?>
+  <!-- ////////////////////////-->
+  </div>
+  <!-- IMPORTAR ARCHIVO SCRIPT-->
+  <?php include("foot/script.php"); ?>
+  <!-- ////////////////////////-->
 </body>
 
 </html>
