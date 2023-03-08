@@ -105,8 +105,8 @@
                       </textarea>
                       </div>
                     </div>
-                    <hr style="color: black; background-color: black; width:100%;" /> 
                     <div class="row  my-4">
+                    <hr style="color: black; background-color: black; width:100%;" /> 
                       <div class="col-md-2">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
