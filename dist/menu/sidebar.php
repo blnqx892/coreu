@@ -55,7 +55,7 @@
             Descargo</a></li>  
       </ul>
       <ul class="nav-group-items">
-    <li class="nav-item"><a class="nav-link" href="TablaMovi.php.php"><span class="nav-icon"></span>
+    <li class="nav-item"><a class="nav-link" href="TablaMovi.php"><span class="nav-icon"></span>
             Actualización</a></li>
        </ul>
     </li>
