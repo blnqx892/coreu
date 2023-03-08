@@ -107,9 +107,18 @@
                     </div>
                   </div>
                   <div>
-                    <th>
-                      <tr>hola</tr>
-                    </th>
+                  <table class="table">
+                                                <thead class="table-dark">
+                                                    <tr>
+                                                        <th>Numero</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>1</th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                   </div>
                   <div class="row  my-4">
                   <div class="col-md-2">
