@@ -42,11 +42,11 @@
                             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-people"></use>
                           </svg>
                         </th>
-                        <th>User</th>
+                        <th>Usuario</th>
                         <th class="text-center">Country</th>
-                        <th>Usage</th>
+                        <th>Requisición</th>
                         <th class="text-center">Payment Method</th>
-                        <th>Activity</th>
+                        <th>Acción</th>
                         <th></th>
                       </tr>
                     </thead>
