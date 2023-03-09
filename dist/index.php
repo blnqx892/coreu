@@ -41,7 +41,7 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="fs-6 fw-semibold text-primary">$1.999,50</div>
+                      <div class="fs-6 fw-semibold text-primary">9</div>
                       <div class="text-medium-emphasis text-uppercase fw-semibold small">Requisiciones Al</div>
                     </div>
                   </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div>
                       <div class="fs-6 fw-semibold text-info">$1.999,50</div>
-                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Requisiciones Ua</div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">3</div>
                     </div>
                   </div>
                 </div>
@@ -73,7 +73,7 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="fs-6 fw-semibold text-warning">$1.999,50</div>
+                      <div class="fs-6 fw-semibold text-warning">Suministros al minimo</div>
                       <div class="text-medium-emphasis text-uppercase fw-semibold small">Stock </div>
                     </div>
                   </div>
