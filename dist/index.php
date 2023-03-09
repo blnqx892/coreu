@@ -30,7 +30,7 @@
       <div>
         <!-- WIGET-->
         <div class="tab-content rounded-bottom">
-          <div class="tab-pane p-2 active preview" role="tabpanel" id="preview-1179">
+          <div class="tab-pane p-2 active" role="tabpanel" id="preview-1179">
             <div class="row">
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
