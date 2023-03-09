@@ -100,7 +100,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
         </svg> Requisición</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""> Remitir Requisición</a></li>
+        <li class="nav-item"><a class="nav-link" href="ADespachar.php"> Remitir Requisición</a></li>
         <li class="nav-item"><a class="nav-link" href=""> Historial</a></li>
       </ul>
     </li>
