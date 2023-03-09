@@ -34,53 +34,50 @@
               <div class="card-header"><strong>Credenciales Unidades</strong></div>
               <div class="card-body">
                 <div class="row  my-4">
-                  <div>
-                    <center>
-                      <table class="table">
-                        <thead class="table-dark">
-                          <tr>
-                            <th>Jefe Unidad</th>
-                            <th>Unidad</th>
-                            <th>Usuario</th>
-                            <th>Acción</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th>1</th>
-                            <th>0003</th>
-                            <th>08/03/2023</th>
-                            <th>
-                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
-                                  </use>
-                                </svg> Eliminar</button>
-                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
-                                  </use>
-                                </svg> Ver</button>
-                            </th>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </center>
-                  </div>
+                  <table class="table">
+                    <thead class="table-dark">
+                      <tr>
+                        <th>Jefe Unidad</th>
+                        <th>Unidad</th>
+                        <th>Usuario</th>
+                        <th>Acción</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>1</th>
+                        <th>0003</th>
+                        <th>08/03/2023</th>
+                        <th>
+                          <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
+                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
+                              </use>
+                            </svg> Eliminar</button>
+                          <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
+                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
+                              </use>
+                            </svg> Ver</button>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
-          <!-- /.row-->
         </div>
+        <!-- /.row-->
       </div>
-      <!-- ///////FIN CONTENEDOR/////////////-->
-
-      <!-- IMPORTAR ARCHIVO FOOTER-->
-      <?php include("foot/foot.php"); ?>
-      <!-- ////////////////////////-->
     </div>
-    <!-- IMPORTAR ARCHIVO SCRIPT-->
-    <?php include("foot/script.php"); ?>
+    <!-- ///////FIN CONTENEDOR/////////////-->
+
+    <!-- IMPORTAR ARCHIVO FOOTER-->
+    <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
+  </div>
+  <!-- IMPORTAR ARCHIVO SCRIPT-->
+  <?php include("foot/script.php"); ?>
+  <!-- ////////////////////////-->
   </div>
 </body>
 
