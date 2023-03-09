@@ -86,7 +86,6 @@
                           <div class="small text-medium-emphasis">Last login</div>
                           <div class="fw-semibold">Last month</div>
                         </td>
-                        <td>
                       </tr>
                     </tbody>
                   </table>
