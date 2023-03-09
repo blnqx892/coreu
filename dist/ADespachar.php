@@ -85,12 +85,10 @@
           <!-- /.row-->
         </div>
       </div>
-      <!-- ///////FIN CONTENEDOR/////////////-->
-
-      <!-- IMPORTAR ARCHIVO FOOTER-->
-      <?php include("foot/foot.php"); ?>
-      <!-- ////////////////////////-->
     </div>
+    <!-- ///////FIN CONTENEDOR/////////////-->
+    <!-- IMPORTAR ARCHIVO FOOTER-->
+    <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
