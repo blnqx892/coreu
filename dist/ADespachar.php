@@ -43,8 +43,10 @@
                           </svg>
                         </th>
                         <th>Usuario</th>
+                        <th class="text-center">Country</th>
                         <th>Requisición</th>
-                        <th>Acción</th>
+                        <th class="text-center">Payment Method</th>
+                        <th>Activity</th>
                         <th></th>
                       </tr>
                     </thead>
@@ -80,6 +82,10 @@
                           <svg class="icon icon-xl">
                             <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-cc-paypal"></use>
                           </svg>
+                        </td>
+                        <td>
+                          <div class="small text-medium-emphasis">Last login</div>
+                          <div class="fw-semibold">Last month</div>
                         </td>
                         <td>
                           <div class="dropdown">
@@ -128,6 +134,10 @@
                           </svg>
                         </td>
                         <td>
+                          <div class="small text-medium-emphasis">Last login</div>
+                          <div class="fw-semibold">Last week</div>
+                        </td>
+                        <td>
                           <div class="dropdown dropup">
                             <button class="btn btn-transparent p-0" type="button" data-coreui-toggle="dropdown"
                               aria-haspopup="true" aria-expanded="false">
@@ -172,6 +182,10 @@
                           <svg class="icon icon-xl">
                             <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-cc-amex"></use>
                           </svg>
+                        </td>
+                        <td>
+                          <div class="small text-medium-emphasis">Last login</div>
+                          <div class="fw-semibold">Yesterday</div>
                         </td>
                         <td>
                           <div class="dropdown dropup">
