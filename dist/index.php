@@ -82,7 +82,7 @@
               <!-- /.col-->
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
-                  <div class="card-body p-0 d-flex align-items-center">
+                  <div class="card-body p-0 d-flex align-items-center"><br>
                     <div>
                       <!-- clock widget start -->
                       <script type="text/javascript">
