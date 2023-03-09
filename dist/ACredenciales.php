@@ -33,10 +33,11 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Credenciales Unidades</strong></div>
               <div class="card-body">
-              <div class="col-md-14" align="right">
-                      <label for="inputCity" class="form-label">Nueva Credencial</label>
-                      <button class="btn btn-primary" type="submit">Ir</button>
-                    </div>
+                <div class="col-md-14" align="right">
+                  <label for="inputCity" class="form-label">Nueva Credencial</label>
+                  <button class="btn btn-primary" type="submit" data_toggle="modal"
+                    data-target="#exampleModal">Ir</button>
+                </div>
                 <div class="row  my-4">
                   <table class="table">
                     <thead class="table-dark">
@@ -74,6 +75,10 @@
       </div>
     </div>
     <!-- ///////FIN CONTENEDOR/////////////-->
+    <!-- Scrollable modal -->
+    <div class="modal-dialog modal-dialog-scrollable" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      ...
+    </div>
 
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
