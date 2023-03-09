@@ -35,7 +35,7 @@
               <div class="card-body">
                 <div class="col-md-14" align="right">
                   <label for="inputCity" class="form-label">Nueva Credencial</label>
-                  <button type="button" class="btn btn-primary" data-coreui-toggle="modal" data-coreui-target="#exampleModal" data-coreui-whatever="@mdo">Open modal for @mdo</button>
+                  <button type="button" class="btn btn-primary" data-coreui-toggle="modal" data-coreui-target="#exampleModal" data-coreui-whatever="@mdo">Ir</button>
                 </div>
                 <div class="row  my-4">
                   <table class="table">
