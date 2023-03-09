@@ -35,8 +35,8 @@
             <div class="card-body">
               <div class="row  my-4">
                 <!--INICIO SECCION DOS-->
-                <div class="col-md-8">
-                  <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" align="center" />
+                <div class="">
+                  <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250"/>
                     <h1 style="font-family:copperplate,monospace,cursiva; font-size:20px;text-decoration:none">
                       <b>S I C A F I</b></h1>
                   </center>
