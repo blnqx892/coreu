@@ -90,7 +90,7 @@
               <div class="card-body">
               <div class="row  my-4">
                                         <div>
-                                            <table class="table">
+                                            <table class="table responsive">
                                                 <thead class="table-dark">
                                                     <tr>
                                                         <th>Numero</th>
