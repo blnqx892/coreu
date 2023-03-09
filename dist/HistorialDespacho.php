@@ -54,7 +54,7 @@
                                                                 class="btn btn-danger rounded-pill"><svg
                                                                     class="icon me-2">
                                                                     <use
-                                                                        xlink:href="vendors/@coreui/icons/svg/free.svg#view-eye">
+                                                                        xlink:href="vendors/@coreui/icons/svg/free.svg#cil-description">
                                                                     </use>
                                                                 </svg>Ver</button>
                                                         </th>
