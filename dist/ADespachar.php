@@ -43,7 +43,7 @@
                           </svg>
                         </th>
                         <th>Usuario</th>
-                        <th>Requisició</th>
+                        <th>Requisición</th>
                         <th>Acción</th>
                       </tr>
                     </thead>
