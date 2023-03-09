@@ -28,45 +28,45 @@
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-4">
       <div class="container-lg">
-      <div class="example">
-                <div class="tab-content rounded-bottom">
-                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1179">
-                    <div class="row">
-                      <div class="col-6 col-lg-3">
-                        <div class="card overflow-hidden">
-                          <div class="card-body p-0 d-flex align-items-center">
-                            <div class="bg-info text-white p-4 me-3">
-                              <svg class="icon icon-xl">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-laptop"></use>
-                              </svg>
-                            </div>
-                            <div>
-                              <div class="fs-6 fw-semibold text-info">$1.999,50</div>
-                              <div class="text-medium-emphasis text-uppercase fw-semibold small">Widget title</div>
-                            </div>
-                          </div>
-                        </div>
+        <!-- WIGET-->
+          <div class="tab-content rounded-bottom">
+            <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1179">
+              <div class="row">
+                <div class="col-6 col-lg-3">
+                  <div class="card overflow-hidden">
+                    <div class="card-body p-0 d-flex align-items-center">
+                      <div class="bg-info text-white p-4 me-3">
+                        <svg class="icon icon-xl">
+                          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-laptop"></use>
+                        </svg>
                       </div>
-                      <!-- /.col-->
-                      <div class="col-6 col-lg-3">
-                        <div class="card overflow-hidden">
-                          <div class="card-body p-0 d-flex align-items-center">
-                            <div class="bg-warning text-white p-4 me-3">
-                              <svg class="icon icon-xl">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-moon"></use>
-                              </svg>
-                            </div>
-                            <div>
-                              <div class="fs-6 fw-semibold text-warning">$1.999,50</div>
-                              <div class="text-medium-emphasis text-uppercase fw-semibold small">Widget title</div>
-                            </div>
-                          </div>
-                        </div>
+                      <div>
+                        <div class="fs-6 fw-semibold text-info">$1.999,50</div>
+                        <div class="text-medium-emphasis text-uppercase fw-semibold small">Widget title</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.col-->
+                <div class="col-6 col-lg-3">
+                  <div class="card overflow-hidden">
+                    <div class="card-body p-0 d-flex align-items-center">
+                      <div class="bg-warning text-white p-4 me-3">
+                        <svg class="icon icon-xl">
+                          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-moon"></use>
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="fs-6 fw-semibold text-warning">$1.999,50</div>
+                        <div class="text-medium-emphasis text-uppercase fw-semibold small">Widget title</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        <!-- /WIGET-->
         <!-- row-->
         <div class="row">
           <div class="card mb-4">
