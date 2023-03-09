@@ -83,7 +83,6 @@
               <div class="col-6 col-lg-2">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
-                    <div>
                       <!-- clock widget start -->
                       <script type="text/javascript">
                         var css_file = document.createElement("link");
@@ -125,7 +124,6 @@
 
                       </script>
                       <!-- clock widget end -->
-                    </div>
                   </div>
                 </div>
               </div>
