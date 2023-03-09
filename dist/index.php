@@ -88,6 +88,7 @@
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-clock"></use>
                       </svg>
                     </div>
+                    <div>
                       <!-- clock widget start -->
                       <script type="text/javascript">
                         var css_file = document.createElement("link");
@@ -129,6 +130,7 @@
 
                       </script>
                       <!-- clock widget end -->
+                      </div>
                   </div>
                 </div>
               </div>
