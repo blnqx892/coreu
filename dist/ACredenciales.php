@@ -90,7 +90,7 @@
               <div class="card-body">
                 <div class="row  my-4">
                   <div>
-                    <table class="table">
+                    <center><table class="table">
                       <thead class="table-dark">
                         <tr>
                           <th>Jefe Unidad</th>
@@ -116,7 +116,7 @@
                           </th>
                         </tr>
                       </tbody>
-                    </table>
+                    </table></center>
                   </div>
                 </div>
               </div>
