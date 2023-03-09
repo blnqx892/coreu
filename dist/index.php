@@ -42,7 +42,7 @@
                     </div>
                     <div>
                       <div class="fs-6 fw-semibold text-primary">$1.999,50</div>
-                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Widget title</div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Requisiciones Al</div>
                     </div>
                   </div>
                 </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div>
                       <div class="fs-6 fw-semibold text-info">$1.999,50</div>
-                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Widget title</div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Requisiciones Ua</div>
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@
                     </div>
                     <div>
                       <div class="fs-6 fw-semibold text-warning">$1.999,50</div>
-                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Widget title</div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Stock </div>
                     </div>
                   </div>
                 </div>
