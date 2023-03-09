@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card mb-4">
-                            <div class="card-header"><strong>Salidas de Suministros</strong></div>
+                            <div class="card-header"><strong>Salida de Suministros</strong></div>
                             <div class="card-body">
                                 <!--INICIO FORM-->
                                 <form class="g-3 needs-validation" novalidate="">
