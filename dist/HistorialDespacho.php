@@ -41,20 +41,20 @@
                                                 <thead class="table-dark">
                                                     <tr>
                                                         <th>Usuario</th>
-                                                        <th>Descripción</th>
+                                                        <th>Hora y Fecha</th>
                                                         <th>Acción</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <th>Juan Perez</th>
-                                                        <th>Resma de papel</th>
+                                                        <th>10:20am || 9/03/2023</th>
                                                         <th>
                                                                 <button type="button"
                                                                 class="btn btn-danger rounded-pill"><svg
                                                                     class="icon me-2">
                                                                     <use
-                                                                        xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
+                                                                        xlink:href="vendors/@coreui/icons/svg/free.svg#view-eye">
                                                                     </use>
                                                                 </svg>Ver</button>
                                                         </th>
