@@ -30,6 +30,17 @@
     <div class="body flex-grow-1 px-4">
       <div class="container-lg">
         <!-- row-->
+        <div class="card-body p-0 d-flex align-items-center">
+                            <div class="bg-info text-white p-4 me-3">
+                              <svg class="icon icon-xl">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-laptop"></use>
+                              </svg>
+                            </div>
+                            <div>
+                              <div class="fs-6 fw-semibold text-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$1.999,50</font></font></div>
+                              <div class="text-medium-emphasis text-uppercase fw-semibold small"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Título del widget</font></font></div>
+                            </div>
+                          </div>
         <div class="row">
           <div class="card mb-4">
             <div class="card-body">
