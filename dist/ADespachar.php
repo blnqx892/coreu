@@ -72,7 +72,7 @@
                         </td>
                         <td>
                           <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
+                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-truck">
                               </use>
                             </svg>Despacho</button>
                         </td>
