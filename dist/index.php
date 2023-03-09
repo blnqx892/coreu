@@ -80,7 +80,7 @@
                 </div>
               </div>
               <!-- /.col-->
-              <div class="col-6 col-lg-4">
+              <div class="col-6 col-lg-2">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center"><br>
                     <div>
