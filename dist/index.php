@@ -30,7 +30,6 @@
       <div class="container-lg">
         <div class="">
           <!-- WIGET-->
-          <div class="tab-content rounded-bottom">
             <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1179">
               <div class="row">
                 <div class="col-6 col-lg-3">
@@ -140,7 +139,6 @@
               </div>
             </div>
           </div>
-        </div>
         <!-- /WIGET-->
         <!-- row-->
         <div class="row">
