@@ -43,13 +43,7 @@
               <h1 style = "font-family:copperplate,monospace,cursiva; font-size:20px;text-decoration:none">
               <b>S I C A F I</b></h1></center>
                 </div>
-                <div class="col-md-4"><br><br>
-                  <div style="text-align:center;padding:1em 0;">
-                    <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/country/sv"><span
-                          style="color:gray;">Hora actual en</span><br />El Salvador</a></h3> <iframe
-                      src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=medium&timezone=America%2FEl_Salvador"
-                      width="100%" height="115" frameborder="0" seamless></iframe>
-                  </div>
+                <div class="col-md-4">
                 </div>
               </div>
               
