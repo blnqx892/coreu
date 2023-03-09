@@ -42,7 +42,7 @@
                       <input class="form-control" id="validationCustom02" type="text" required="">
                     </div>
                     <div class="col-md-4">
-                    <label for="inputCity" class="form-label">Buscar</label>
+                      <label for="inputCity" class="form-label">Buscar</label>
                       <button class="btn btn-primary" type="submit">Ir</button>
                     </div>
                   </div>
