@@ -88,7 +88,53 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Ingreso de Datos</strong></div>
               <div class="card-body">
-                zc
+              <div class="row  my-4">
+                                        <div>
+                                            <table class="table">
+                                                <thead class="table-dark">
+                                                    <tr>
+                                                        <th>Numero</th>
+                                                        <th>Codigo</th>
+                                                        <th>Fecha</th>
+                                                        <th>Nombre</th>
+                                                        <th>Descripción</th>
+                                                        <th>Modelo</th>
+                                                        <th>Marca</th>
+                                                        <th>Tipo Movimiento</th>
+                                                        <th>Acción</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>1</th>
+                                                        <th>0003</th>
+                                                        <th>08/03/2023</th>
+                                                        <th>Silla</th>
+                                                        <th>color negro</th>
+                                                        <th>sh02</th>
+                                                        <th>xs</th>
+                                                        <th>Prestamo</th>
+                                                        <th>
+                                                            <button type="button"
+                                                                class="btn btn-danger rounded-pill"><svg
+                                                                    class="icon me-2">
+                                                                    <use
+                                                                        xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
+                                                                    </use>
+                                                                </svg> Eliminar</button>
+                                                                <button type="button"
+                                                                class="btn btn-danger rounded-pill"><svg
+                                                                    class="icon me-2">
+                                                                    <use
+                                                                        xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
+                                                                    </use>
+                                                                </svg> Ver</button>
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
               </div>
             </div>
           </div>
