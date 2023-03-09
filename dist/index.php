@@ -27,7 +27,6 @@
     </header>
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-4">
-      <div>
         <!-- WIGET-->
         <div class="tab-content rounded-bottom">
           <div class="tab-pane p-2 active" role="tabpanel" id="preview-1179">
@@ -140,7 +139,6 @@
           </div>
         </div>
         <!-- /WIGET-->
-      </div>
       <div class="container-lg">
         <!-- row-->
         <div class="row">
