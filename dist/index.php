@@ -42,7 +42,7 @@
                     </div>
                     <div>
                       <div class="fs-6 fw-semibold text-primary">9</div>
-                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Requisiciones Al</div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Requisiciones por Despachar</div>
                     </div>
                   </div>
                 </div>
@@ -57,8 +57,8 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="fs-6 fw-semibold text-info">$1.999,50</div>
-                      <div class="text-medium-emphasis text-uppercase fw-semibold small">3</div>
+                      <div class="fs-6 fw-semibold text-info">3</div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Solicitudes por Aprobar</div>
                     </div>
                   </div>
                 </div>
