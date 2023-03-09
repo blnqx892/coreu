@@ -31,92 +31,39 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Ingreso de Datos</strong></div>
-              <div class="card-body">
-                <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate="">
-                  <!--FIN SECCION DOS-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION TRES-->
-                    <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">Nombre de Unidad:</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="">
-                    </div>
-                    <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Jefe de Unidad:</label>
-                      <input type="text" class="form-control" id="inputZip">
-                    </div>
-                    <div class="col-md-2">
-                      <label for="inputZip" class="form-label">No. de Empleados:</label>
-                      <input type="number" class="form-control" id="inputZip">
-                    </div>
-                    <!--FIN SECCION TRES-->
-                    <div class="row  my-4">
-                      <!--INICIO SECCION CUATRO-->
-                      <div class="col-md-3">
-                        <label for="inputCity" class="form-label">Usuario:</label>
-                        <input type="number" class="form-control" id="inputCity">
-                      </div>
-                      <div class="col-md-3">
-                        <label for="inputZip" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control" id="inputZip">
-                      </div>
-                      <div class="col-md-3">
-                        <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                        <input type="password" class="form-control" id="inputZip">
-                      </div>
-                    </div>
-                    <!--FIN SECCION CUATRO-->
-                    <div class="col-15" align="right">
-                      <hr style="color: black; background-color: black; width:100%;" />
-                      <button class="btn btn-primary" type="submit">Guardar</button>
-                      <button class="btn btn-danger" type="submit">Cancelar</button>
-                    </div>
-                </form>
-                <!--/// FIN FORM ////////////////-->
-              </div>
-            </div>
-          </div>
-          <!-- /.row-->
-        </div>
-      </div>
-
-      <div class="container-lg">
-        <!-- row-->
-        <div class="row">
-          <div class="col-12">
-            <div class="card mb-4">
               <div class="card-header"><strong>Credenciales Unidades</strong></div>
               <div class="card-body">
                 <div class="row  my-4">
                   <div>
-                    <center><table class="table">
-                      <thead class="table-dark">
-                        <tr>
-                          <th>Jefe Unidad</th>
-                          <th>Unidad</th>
-                          <th>Usuario</th>
-                          <th>Acción</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>1</th>
-                          <th>0003</th>
-                          <th>08/03/2023</th>
-                          <th>
-                            <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
-                                </use>
-                              </svg> Eliminar</button>
-                            <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
-                                </use>
-                              </svg> Ver</button>
-                          </th>
-                        </tr>
-                      </tbody>
-                    </table></center>
+                    <center>
+                      <table class="table">
+                        <thead class="table-dark">
+                          <tr>
+                            <th>Jefe Unidad</th>
+                            <th>Unidad</th>
+                            <th>Usuario</th>
+                            <th>Acción</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>1</th>
+                            <th>0003</th>
+                            <th>08/03/2023</th>
+                            <th>
+                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
+                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
+                                  </use>
+                                </svg> Eliminar</button>
+                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
+                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
+                                  </use>
+                                </svg> Ver</button>
+                            </th>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </center>
                   </div>
                 </div>
               </div>
@@ -134,6 +81,7 @@
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+  </div>
 </body>
 
 </html>
