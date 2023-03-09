@@ -29,12 +29,6 @@
     <div class="body flex-grow-1 px-4">
       <div class="container-lg">
       <div class="example">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1179" role="tab">
-                      <svg class="icon me-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-media-play"></use>
-                      </svg>Preview</a></li>
-                </ul>
                 <div class="tab-content rounded-bottom">
                   <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1179">
                     <div class="row">
