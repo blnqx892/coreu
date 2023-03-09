@@ -86,7 +86,7 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Ingreso de Datos</strong></div>
+              <div class="card-header"><strong>Credenciales Unidades</strong></div>
               <div class="card-body">
                 <div class="row  my-4">
                   <div>
