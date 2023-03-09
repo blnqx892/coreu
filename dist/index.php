@@ -83,7 +83,7 @@
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
-                    <div class="bg-white text-white p-4 me-3">
+                    <div class="bg-white text-black p-4 me-3">
                       <svg class="icon icon-xl">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-clock"></use>
                       </svg>
