@@ -83,12 +83,7 @@
         <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <!-- row-->
-        <div class="row">
-          <div class="col-12">
-            <div class="card mb-4">
-              <div class="card-header"><strong>Ingreso de Datos</strong></div>
-              <div class="card-body">
+      <div class="card-body">
                 <!--INICIO FORM-->
                 <form class="g-3 needs-validation" novalidate="">
                   <!--FIN SECCION DOS-->
@@ -131,10 +126,6 @@
                 </form>
                 <!--/// FIN FORM ////////////////-->
               </div>
-            </div>
-          </div>
-          <!-- /.row-->
-        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Close</button>
