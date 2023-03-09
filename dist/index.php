@@ -15,7 +15,6 @@
       <!-- ////////////////////////-->
       <div class="header-divider"></div>
       <!--separador-->
-
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
@@ -29,25 +28,59 @@
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-4">
       <div class="container-lg">
-        <!-- row-->
-        <div class="card-body p-0 d-flex align-items-center">
+      <div class="example">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1179" role="tab">
+                      <svg class="icon me-2">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-media-play"></use>
+                      </svg>Preview</a></li>
+                </ul>
+                <div class="tab-content rounded-bottom">
+                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1179">
+                    <div class="row">
+                      <div class="col-6 col-lg-3">
+                        <div class="card overflow-hidden">
+                          <div class="card-body p-0 d-flex align-items-center">
                             <div class="bg-info text-white p-4 me-3">
                               <svg class="icon icon-xl">
                                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-laptop"></use>
                               </svg>
                             </div>
                             <div>
-                              <div class="fs-6 fw-semibold text-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$1.999,50</font></font></div>
-                              <div class="text-medium-emphasis text-uppercase fw-semibold small"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Título del widget</font></font></div>
+                              <div class="fs-6 fw-semibold text-info">$1.999,50</div>
+                              <div class="text-medium-emphasis text-uppercase fw-semibold small">Widget title</div>
                             </div>
                           </div>
+                        </div>
+                      </div>
+                      <!-- /.col-->
+                      <div class="col-6 col-lg-3">
+                        <div class="card overflow-hidden">
+                          <div class="card-body p-0 d-flex align-items-center">
+                            <div class="bg-warning text-white p-4 me-3">
+                              <svg class="icon icon-xl">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-moon"></use>
+                              </svg>
+                            </div>
+                            <div>
+                              <div class="fs-6 fw-semibold text-warning">$1.999,50</div>
+                              <div class="text-medium-emphasis text-uppercase fw-semibold small">Widget title</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <!-- row-->
         <div class="row">
           <div class="card mb-4">
             <div class="card-body">
               <div class="row  my-4">
                 <!--INICIO SECCION DOS-->
                 <div class="">
-                  <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250"/>
+                  <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" />
                     <h1 style="font-family:copperplate,monospace,cursiva; font-size:20px;text-decoration:none">
                       <b>S I C A F I</b></h1>
                   </center>
