@@ -79,11 +79,7 @@
           </div>
           <!-- /.row-->
         </div>
-        <div class="row">
-                    <div class="col-12">
-                        <div class="card mb-4">
-                            <div class="card-header"><strong>Actualización Movimientos</strong></div>
-                            <div class="card-body">
+        <div class="card-body">
                                 <!--INICIO FORM-->
                                 <form class="g-3 needs-validation" novalidate="">
                                     <div class="row  my-4">
@@ -139,10 +135,6 @@
                                 </form>
                                 <!--/// FIN FORM ////////////////-->
                             </div>
-                        </div>
-                    </div>
-                    <!-- /.row-->
-                </div>
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
 
