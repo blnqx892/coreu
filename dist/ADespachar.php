@@ -47,7 +47,6 @@
                         <th>Requisic</th>
                         <th class="text-center">Payment Method</th>
                         <th>Activity</th>
-                        <th></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -88,18 +87,6 @@
                           <div class="fw-semibold">Last month</div>
                         </td>
                         <td>
-                          <div class="dropdown">
-                            <button class="btn btn-transparent p-0" type="button" data-coreui-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                              <svg class="icon">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-options"></use>
-                              </svg>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">Info</a><a
-                                class="dropdown-item" href="#">Edit</a><a class="dropdown-item text-danger"
-                                href="#">Delete</a></div>
-                          </div>
-                        </td>
                       </tr>
                     </tbody>
                   </table>
