@@ -33,7 +33,7 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Credenciales Unidades</strong></div>
               <div class="card-body">
-              <div class="col-md-10" align="right">
+              <div class="col-md-14" align="right">
                       <label for="inputCity" class="form-label">Nueva Credencial</label>
                       <button class="btn btn-primary" type="submit">Ir</button>
                     </div>
