@@ -28,7 +28,6 @@
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-4">
       <div class="container-lg">
-        <div class="">
           <!-- WIGET-->
             <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1179">
               <div class="row">
@@ -138,7 +137,6 @@
                 <!-- /.col-->
               </div>
             </div>
-          </div>
         <!-- /WIGET-->
         <!-- row-->
         <div class="row">
