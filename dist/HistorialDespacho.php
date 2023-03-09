@@ -40,16 +40,15 @@
                                             <table class="table">
                                                 <thead class="table-dark">
                                                     <tr>
-                                                        <th>Numero</th>
-                                                        <th>Codigo</th>
-                                                        <th>Fecha</th>to</th>
+                                                        <th>Usuario</th>
+                                                        <th>Descripción</th>
                                                         <th>Acción</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <th>1</th>
-                                                        <th>0003</th>
+                                                        <th>Juan Perez</th>
+                                                        <th>Resma de papel</th>
                                                         <th>
                                                                 <button type="button"
                                                                 class="btn btn-danger rounded-pill"><svg
