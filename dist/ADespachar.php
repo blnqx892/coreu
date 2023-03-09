@@ -82,10 +82,6 @@
                           </svg>
                         </td>
                         <td>
-                          <div class="small text-medium-emphasis">Last login</div>
-                          <div class="fw-semibold">Last month</div>
-                        </td>
-                        <td>
                           <div class="dropdown">
                             <button class="btn btn-transparent p-0" type="button" data-coreui-toggle="dropdown"
                               aria-haspopup="true" aria-expanded="false">
@@ -132,10 +128,6 @@
                           </svg>
                         </td>
                         <td>
-                          <div class="small text-medium-emphasis">Last login</div>
-                          <div class="fw-semibold">Last week</div>
-                        </td>
-                        <td>
                           <div class="dropdown dropup">
                             <button class="btn btn-transparent p-0" type="button" data-coreui-toggle="dropdown"
                               aria-haspopup="true" aria-expanded="false">
@@ -180,10 +172,6 @@
                           <svg class="icon icon-xl">
                             <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-cc-amex"></use>
                           </svg>
-                        </td>
-                        <td>
-                          <div class="small text-medium-emphasis">Last login</div>
-                          <div class="fw-semibold">Yesterday</div>
                         </td>
                         <td>
                           <div class="dropdown dropup">
