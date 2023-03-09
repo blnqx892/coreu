@@ -101,7 +101,7 @@
         </svg> Requisición</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="ADespachar.php"> Remitir Requisición</a></li>
-        <li class="nav-item"><a class="nav-link" href=""> Historial</a></li>
+        <li class="nav-item"><a class="nav-link" href="HistorialDespacho.php"> Historial</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
