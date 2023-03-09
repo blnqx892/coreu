@@ -18,7 +18,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><span>Suministros</span>
+              <!-- if breadcrumb is single--><span>Bandeja de Entrada</span>
             </li>
           </ol>
         </nav>
