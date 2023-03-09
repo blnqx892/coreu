@@ -33,7 +33,10 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Credenciales Unidades</strong></div>
               <div class="card-body">
-                dfsd
+              <div class="col-md-1">
+                      <label for="inputCity" class="form-label">Nueva Credencial</label>
+                      <button class="btn btn-primary" type="submit">Ir</button>
+                    </div>
                 <div class="row  my-4">
                   <table class="table">
                     <thead class="table-dark">
