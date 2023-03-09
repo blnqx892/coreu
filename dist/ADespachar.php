@@ -43,7 +43,8 @@
                           </svg>
                         </th>
                         <th>Usuario</th>
-                        <th>Requisición</th>
+                        <th class="text-center">Country</th>
+                        <th>Requisic</th>
                         <th class="text-center">Payment Method</th>
                         <th>Activity</th>
                         <th></th>
@@ -58,6 +59,11 @@
                         <td>
                           <div>Enéas Kwadwo</div>
                           <div class="small text-medium-emphasis"><span>New</span> | Registered: Jan 1, 2020</div>
+                        </td>
+                        <td class="text-center">
+                          <svg class="icon icon-xl">
+                            <use xlink:href="vendors/@coreui/icons/svg/flag.svg#cif-fr"></use>
+                          </svg>
                         </td>
                         <td>
                           <div class="clearfix">
@@ -103,6 +109,11 @@
                         <td>
                           <div>Agapetus Tadeáš</div>
                           <div class="small text-medium-emphasis"><span>New</span> | Registered: Jan 1, 2020</div>
+                        </td>
+                        <td class="text-center">
+                          <svg class="icon icon-xl">
+                            <use xlink:href="vendors/@coreui/icons/svg/flag.svg#cif-es"></use>
+                          </svg>
                         </td>
                         <td>
                           <div class="clearfix">
