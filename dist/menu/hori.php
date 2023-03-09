@@ -8,6 +8,7 @@
     <svg width="118" height="46" alt="CoreUI Logo">
       <use xlink:href="assets/brand/coreui.svg#full"></use>
     </svg></a>
+    <div>hopla</div>
   <ul class="header-nav ms-auto">
     <li class="nav-item"><a class="nav-link" href="#">
         <svg class="icon icon-lg">
