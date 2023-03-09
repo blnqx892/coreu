@@ -43,9 +43,7 @@
                           </svg>
                         </th>
                         <th>Usuario</th>
-                        <th class="text-center">Country</th>
                         <th>Requisición</th>
-                        <th class="text-center">Payment Method</th>
                         <th>Acción</th>
                         <th></th>
                       </tr>
