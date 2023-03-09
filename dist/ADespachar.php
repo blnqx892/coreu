@@ -43,9 +43,7 @@
                           </svg>
                         </th>
                         <th>Usuario</th>
-                        <th class="text-center">Country</th>
                         <th>Requisic</th>
-                        <th class="text-center">Payment Method</th>
                         <th>Activity</th>
                       </tr>
                     </thead>
@@ -59,11 +57,6 @@
                           <div>Enéas Kwadwo</div>
                           <div class="small text-medium-emphasis"><span>New</span> | Registered: Jan 1, 2020</div>
                         </td>
-                        <td class="text-center">
-                          <svg class="icon icon-xl">
-                            <use xlink:href="vendors/@coreui/icons/svg/flag.svg#cif-fr"></use>
-                          </svg>
-                        </td>
                         <td>
                           <div class="clearfix">
                             <div class="float-start">
@@ -76,11 +69,6 @@
                             <div class="progress-bar bg-danger" role="progressbar" style="width: 98%" aria-valuenow="98"
                               aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
-                        </td>
-                        <td class="text-center">
-                          <svg class="icon icon-xl">
-                            <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-cc-paypal"></use>
-                          </svg>
                         </td>
                         <td>
                           <div class="small text-medium-emphasis">Last login</div>
