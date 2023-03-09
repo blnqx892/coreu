@@ -34,19 +34,15 @@
           <div class="card mb-4">
             <div class="card-body">
               <div class="row  my-4">
-              <center>
-                
-              </center>
                 <!--INICIO SECCION DOS-->
                 <div class="col-md-8">
-                <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" align="center" />
-              <h1 style = "font-family:copperplate,monospace,cursiva; font-size:20px;text-decoration:none">
-              <b>S I C A F I</b></h1></center>
-                </div>
-                <div class="col-md-4">
+                  <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" align="center" />
+                    <h1 style="font-family:copperplate,monospace,cursiva; font-size:20px;text-decoration:none">
+                      <b>S I C A F I</b></h1>
+                  </center>
                 </div>
               </div>
-              
+
               <!--CODIGO DE FECHA Y HORA-->
 
               <!-- ////////////////////////-->
