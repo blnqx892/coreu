@@ -33,7 +33,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg> Inventario</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""> Inventario General</a></li>
+        <li class="nav-item"><a class="nav-link" href="InventarioG.php"> Inventario General</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
