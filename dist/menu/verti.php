@@ -202,5 +202,5 @@
       </ul>
     </li>
   </ul>
-  <button class="sidebar"  ></button>
+  <button class="sidebar-toggler" type="button" ></button>
 </div>
