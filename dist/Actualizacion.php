@@ -27,7 +27,7 @@
               <span>Codificcacion de Activos</span>
             </li>
             <li class="breadcrumb-item item">
-              <span>Adquisiciones</span>
+              <span>Activos</span>
             </li>
           </ol>
         </nav>
