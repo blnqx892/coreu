@@ -105,34 +105,36 @@
                       </textarea></div>
                     </div>
                     <div class="row  my-4">
-                    <div class="col-md-2">
+                      <div class="col-md-2">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
                           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                            checked>
+                            checked name="activarFormulario" onclick="mostrarFormulario()">
                         </div>
                       </div>
-                    <hr style="color: black; background-color: black; width:100%;" /> 
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">No. Motor:</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">No. Placa:</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">No. Chasis:</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Capacidad:</label>
-                        <input type="text" class="form-control" id="inputZip">
+                      <hr style="color: black; background-color: black; width:100%;" />
+                      <div id="formulario" style="display:none;">
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">No. Motor:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">No. Placa:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">No. Chasis:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">Capacidad:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
                       </div>
                     </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
-                    <hr style="color: black; background-color: black; width:100%;" /> 
+                      <hr style="color: black; background-color: black; width:100%;" />
                       <button class="btn btn-primary" type="submit">Guardar</button>
                       <button class="btn btn-danger" type="submit">Cancelar</button>
                     </div>
@@ -145,7 +147,17 @@
         </div>
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
+      <script>
+        function mostrarFormulario() {
+          var formulario = document.getElementById("formulario");
+          if (formulario.style.display === "none") {
+            formulario.style.display = "block";
+          } else {
+            formulario.style.display = "none";
+          }
+        }
 
+      </script>
       <!-- IMPORTAR ARCHIVO FOOTER-->
       <?php include("foot/foot.php"); ?>
       <!-- ////////////////////////-->
