@@ -163,6 +163,9 @@
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
+    <!-- IMPORTAR ARCHIVO SCRIPT-->
+    <?php include("foot/script.php"); ?>
+    <!-- ////////////////////////-->
     <script>
       function mostrarFormulario() {
         var formulario = document.getElementById("formulario");
