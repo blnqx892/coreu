@@ -18,8 +18,14 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">
+                <!-- if breadcrumb is single--><a href="#">Inicio</a>
+              </li>
+            <li class="breadcrumb-item">
               <!-- if breadcrumb is single--><span>Control de Adquición</span>
             </li>
+            <li class="breadcrumb-item active">
+                <!-- if breadcrumb is single--><a href="#">Ingreso de Entradas</a>
+              </li>
           </ol>
         </nav>
       </div>
