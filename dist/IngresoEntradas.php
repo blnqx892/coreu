@@ -114,7 +114,7 @@
                       </div>
                       <hr style="color: black; background-color: black; width:100%;" />
                     </div>
-                    <div class="row  my-4">
+                    <div class="row my-2">
                       <div class="col-md-2">
                         <label for="inputZip" class="form-label">No. Motor:</label>
                         <input type="text" class="form-control" id="inputZip">
