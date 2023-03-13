@@ -18,14 +18,17 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">
-                <!-- if breadcrumb is single--><a href="index.php">Inicio</a>
-              </li>
+              <!-- if breadcrumb is single--><a href="index.php"><svg class="icon me-2">
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
+                  </use>
+                </svg>Inicio</a>
+            </li>
             <li class="breadcrumb-item">
               <!-- if breadcrumb is single--><span>Control de Adquición</span>
             </li>
             <li class="breadcrumb-item active">
-                <!-- if breadcrumb is single--><span>Ingreso de Entradas</span>
-              </li>
+              <!-- if breadcrumb is single--><span>Ingreso de Entradas</span>
+            </li>
           </ol>
         </nav>
       </div>
@@ -120,25 +123,25 @@
                       </div>
                     </div>
                     <div id="formulario" style="display:none;">
-                    <hr style="color: black; background-color: black; width:100%;" />
-                    <div class="row my-1">
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">No. Motor:</label>
-                        <input type="text" class="form-control" id="inputZip">
+                      <hr style="color: black; background-color: black; width:100%;" />
+                      <div class="row my-1">
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">No. Motor:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">No. Placa:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">No. Chasis:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">Capacidad:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
                       </div>
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">No. Placa:</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">No. Chasis:</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Capacidad:</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-                    </div>
                     </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
