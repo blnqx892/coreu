@@ -48,7 +48,7 @@
                                                         <th>Modelo</th>
                                                         <th>Marca</th>
                                                         <th>Cantidad</th>
-                                                        <th>Acción</th>
+                                                        <th style="text-align: center;">Acción</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
