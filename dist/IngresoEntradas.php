@@ -97,7 +97,7 @@
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                     <!--FIN SECCION CUATRO-->
-                    <div class="row  my-8">
+                    <div class="row my-4">
                       <!--INICIO SECCION CINCO-->
                       <div class="col-md-7">
                         <label for="inputZip" class="form-label">Descripción:</label>
