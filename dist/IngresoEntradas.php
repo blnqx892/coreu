@@ -150,7 +150,7 @@
       <script>
         function mostrarFormulario() {
           var formulario = document.getElementById("formulario");
-          if (formulario.style.display === "none") {
+          if (formulario.style.display === "block") {
             formulario.style.display = "block";
           } else {
             formulario.style.display = "none";
