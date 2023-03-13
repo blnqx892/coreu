@@ -21,10 +21,10 @@
                 <!-- if breadcrumb is single--><a href="#">Inicio</a>
               </li>
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><span>Control de Adquición</span>
+              <!-- if breadcrumb is single--><a href="#">Control de Adquición</a>
             </li>
             <li class="breadcrumb-item active">
-                <!-- if breadcrumb is single--><a href="#">Ingreso de Entradas</a>
+                <!-- if breadcrumb is single--><span>Ingreso de Entradas</span>
               </li>
           </ol>
         </nav>
