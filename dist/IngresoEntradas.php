@@ -20,8 +20,7 @@
             <li class="breadcrumb-item">
               <!-- if breadcrumb is single--><a href="index.php"><svg class="icon me-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
-                  </use>
-                </svg>Inicio</a>
+                  </use></svg></a>
             </li>
             <li class="breadcrumb-item">
               <!-- if breadcrumb is single--><span>Control de Adquición</span>
