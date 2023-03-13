@@ -90,12 +90,13 @@
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-          <!-- IMPORTAR ARCHIVO FOOTER-->
-          <?php include("foot/foot.php"); ?>
-      <!-- ////////////////////////-->
+    <!-- IMPORTAR ARCHIVO FOOTER-->
+    <?php include("foot/foot.php"); ?>
+    <!-- ////////////////////////-->
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
-    <!-- ////////////////////////-->
+    <!-- ////////////////////////-->}
+  </div>
 </body>
 
 </html>
