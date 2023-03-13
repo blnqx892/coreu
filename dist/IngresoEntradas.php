@@ -113,7 +113,7 @@
                         </div>
                       </div>
                       <hr style="color: black; background-color: black; width:100%;" />
-                      <div id="formulario" style="display:block;">
+                      <div id="formulario" style="display:none;">
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">No. Motor:</label>
                           <input type="text" class="form-control" id="inputZip">
@@ -150,7 +150,7 @@
       <script>
         function mostrarFormulario() {
           var formulario = document.getElementById("formulario");
-          if (formulario.style.display === "block") {
+          if (formulario.style.display === "none") {
             formulario.style.display = "block";
           } else {
             formulario.style.display = "none";
