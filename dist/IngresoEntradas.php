@@ -108,7 +108,7 @@
                       <div class="col-md-1">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
-                          <input class="form-check-input" value="0" disabled type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                          <input class="form-check-input" value="0" type="checkbox" role="switch" id="flexSwitchCheckChecked"
                             checked>
                         </div>
                       </div>
