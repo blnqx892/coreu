@@ -112,8 +112,8 @@
                             id="flexSwitchCheckChecked" checked name="activarFormulario" onclick="mostrarFormulario()">
                         </div>
                       </div>
-                      <hr style="color: black; background-color: black; width:100%;" />
                     </div>
+                    <hr style="color: black; background-color: black; width:100%;" />
                     <div id="formulario" style="display:none;">
                     <div class="row my-1">
                       <div class="col-md-2">
