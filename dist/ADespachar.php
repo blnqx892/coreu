@@ -94,6 +94,7 @@
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+  </div>
 </body>
 
 </html>
