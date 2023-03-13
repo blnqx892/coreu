@@ -113,8 +113,8 @@
                         </div>
                       </div>
                     </div>
-                    <hr style="color: black; background-color: black; width:100%;" />
                     <div id="formulario" style="display:none;">
+                    <hr style="color: black; background-color: black; width:100%;" />
                     <div class="row my-1">
                       <div class="col-md-2">
                         <label for="inputZip" class="form-label">No. Motor:</label>
