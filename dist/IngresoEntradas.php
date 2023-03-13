@@ -114,7 +114,8 @@
                       </div>
                       <hr style="color: black; background-color: black; width:100%;" />
                     </div>
-                    <div class="row my-1" id="formulario" style="display:none;">
+                    <div id="formulario" style="display:none;">
+                    <div class="row my-1">
                       <div class="col-md-2">
                         <label for="inputZip" class="form-label">No. Motor:</label>
                         <input type="text" class="form-control" id="inputZip">
@@ -131,6 +132,7 @@
                         <label for="inputZip" class="form-label">Capacidad:</label>
                         <input type="text" class="form-control" id="inputZip">
                       </div>
+                    </div>
                     </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
