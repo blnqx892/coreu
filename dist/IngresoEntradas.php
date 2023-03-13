@@ -104,7 +104,7 @@
                         <textarea class="form-control" id="validationCustom02" required="" row="3">
                       </textarea></div>
                     </div>
-                    <div class="row  my-1">
+                    <div class="row  my-2">
                       <div class="col-md-1">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
@@ -114,7 +114,7 @@
                       </div>
                       <hr style="color: black; background-color: black; width:100%;" />
                     </div>
-                    <div class="row my-2">
+                    <div class="row my-1">
                       <div class="col-md-2">
                         <label for="inputZip" class="form-label">No. Motor:</label>
                         <input type="text" class="form-control" id="inputZip">
