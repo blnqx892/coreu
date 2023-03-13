@@ -40,6 +40,7 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
+            <div class="card-header"><strong>Bandeja de Entrada</strong></div>
               <div class="card-body">
                 <!-- /.tabla--><br>
                 <div class="table-responsive">
