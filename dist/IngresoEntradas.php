@@ -159,9 +159,6 @@
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-    <!-- IMPORTAR ARCHIVO FOOTER-->
-    <?php include("foot/foot.php"); ?>
-    <!-- ////////////////////////-->
 
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
