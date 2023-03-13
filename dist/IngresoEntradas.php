@@ -109,7 +109,7 @@
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
                           <input class="form-check-input" value="0" type="checkbox" role="switch"
-                            id="flexSwitchCheckChecked" checked>
+                            id="flexSwitchCheckChecked" checked name="activarFormulario" onclick="mostrarFormulario()">
                         </div>
                       </div>
                       <hr style="color: black; background-color: black; width:100%;" />
@@ -150,7 +150,9 @@
 
       <!-- IMPORTAR ARCHIVO FOOTER-->
       <?php include("foot/foot.php"); ?>
-      <script>
+      <!-- ////////////////////////-->
+    </div>
+    <script>
       function mostrarFormulario() {
         var formulario = document.getElementById("formulario");
         if (formulario.style.display === "none") {
@@ -161,8 +163,6 @@
       }
 
     </script>
-      <!-- ////////////////////////-->
-    </div>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
