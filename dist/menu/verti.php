@@ -181,7 +181,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg> Bitacora</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="bitacora.php"> Bitacora</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
