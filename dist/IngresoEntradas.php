@@ -158,10 +158,10 @@
         </div>
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
-      <!-- IMPORTAR ARCHIVO FOOTER-->
-      <?php include("foot/foot.php"); ?>
-      <!-- ////////////////////////-->
     </div>
+    <!-- IMPORTAR ARCHIVO FOOTER-->
+    <?php include("foot/foot.php"); ?>
+      <!-- ////////////////////////-->
     <script>
       function mostrarFormulario() {
         var formulario = document.getElementById("formulario");
