@@ -27,7 +27,7 @@
             <li class="breadcrumb-item">
               <span>Control Mantenimiento</span>
             </li>
-            <li class="breadcrumb-item item">
+            <li class="breadcrumb-item active">
               <span>Movimientos</span>
             </li>
           </ol>
