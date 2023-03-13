@@ -17,8 +17,17 @@
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
+          <li class="breadcrumb-item">
+              <a href="index.php"><svg class="icon me-2">
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
+                  </use>
+                </svg></a>
+            </li>
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><span>Adquisiciones</span>
+              <span>Codificcacion de Activos</span>
+            </li>
+            <li class="breadcrumb-item item">
+              <span>Adquisiciones</span>
             </li>
           </ol>
         </nav>
