@@ -18,10 +18,10 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">
-                <!-- if breadcrumb is single--><a href="#">Inicio</a>
+                <!-- if breadcrumb is single--><a href="index.php">Inicio</a>
               </li>
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><a href="#">Control de Adquición</a>
+              <!-- if breadcrumb is single--><span>Control de Adquición</span>
             </li>
             <li class="breadcrumb-item active">
                 <!-- if breadcrumb is single--><span>Ingreso de Entradas</span>
