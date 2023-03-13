@@ -165,7 +165,7 @@
         </svg> Control de Usuarios</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="Usuarios.php"><span class="nav-icon"></span> Usuarios</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="TablaUsu.php"><span class="nav-icon"></span>Actualizacion</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
