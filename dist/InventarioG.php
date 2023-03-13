@@ -61,7 +61,7 @@
                                                         <th>sh02</th>
                                                         <th>xs</th>
                                                         <th>100</th>
-                                                        <th>
+                                                        <th style="text-align: center;">
                                                             <button type="button"
                                                                 class="btn btn-danger rounded-pill"><svg
                                                                     class="icon me-2">
