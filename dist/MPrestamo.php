@@ -18,7 +18,17 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><span>Movimiento de Bienes Muebles</span>
+            <li class="breadcrumb-item">
+              <a href="index.php"><svg class="icon me-2">
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
+                  </use>
+                </svg></a>
+            </li>
+            <li class="breadcrumb-item">
+              <span>Control Mantenimiento</span>
+            </li>
+            <li class="breadcrumb-item item">
+              <span>Movimientos</span>
             </li>
           </ol>
         </nav>
