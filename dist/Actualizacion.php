@@ -26,7 +26,7 @@
             <li class="breadcrumb-item">
               <span>Codificcacion de Activos</span>
             </li>
-            <li class="breadcrumb-item item">
+            <li class="breadcrumb-item active">
               <span>Activos</span>
             </li>
           </ol>

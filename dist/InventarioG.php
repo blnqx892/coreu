@@ -26,7 +26,7 @@
             <li class="breadcrumb-item">
               <span>Inventario General</span>
             </li>
-            <li class="breadcrumb-item">
+            <li class="breadcrumb-item active">
               <span>Inventario</span>
             </li>
           </ol>

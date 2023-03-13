@@ -17,8 +17,17 @@
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
+          <li class="breadcrumb-item">
+              <a href="index.php"><svg class="icon me-2">
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
+                  </use>
+                </svg></a>
+            </li>
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><span>Bandeja de Entrada</span>
+              <span>Requisición</span>
+            </li>
+            <li class="breadcrumb-item active">
+              <span>Remitir Requisición</span>
             </li>
           </ol>
         </nav>
@@ -31,6 +40,7 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
+            <div class="card-header"><strong>Bandeja de Entrada</strong></div>
               <div class="card-body">
                 <!-- /.tabla--><br>
                 <div class="table-responsive">
