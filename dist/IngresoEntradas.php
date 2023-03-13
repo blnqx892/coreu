@@ -108,13 +108,13 @@
                       <div class="col-md-1">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
-                          <input class="form-check-input" value="0" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                            checked>
+                          <input class="form-check-input" value="0" type="checkbox" role="switch"
+                            id="flexSwitchCheckChecked" checked>
                         </div>
                       </div>
                       <hr style="color: black; background-color: black; width:100%;" />
                     </div>
-                    <div class="row my-1">
+                    <div class="row my-1" id="formulario" style="display:none;">
                       <div class="col-md-2">
                         <label for="inputZip" class="form-label">No. Motor:</label>
                         <input type="text" class="form-control" id="inputZip">
@@ -152,6 +152,17 @@
       <?php include("foot/foot.php"); ?>
       <!-- ////////////////////////-->
     </div>
+    <script>
+      function mostrarFormulario() {
+        var formulario = document.getElementById("formulario");
+        if (formulario.style.display === "none") {
+          formulario.style.display = "block";
+        } else {
+          formulario.style.display = "none";
+        }
+      }
+
+    </script>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
