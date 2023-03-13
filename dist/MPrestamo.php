@@ -83,11 +83,11 @@
                         </label>
                       </div>
                     </div>
-                      <div class="col-md-6">
-                        <label class="form-label" for="validationCustom02">Obervaciones:</label>
-                        <textarea class="form-control" id="validationCustom02" required="" row="4">
+                    <div class="col-md-6">
+                      <label class="form-label" for="validationCustom02">Obervaciones:</label>
+                      <textarea class="form-control" id="validationCustom02" required="" row="4">
                                             </textarea>
-                      </div>
+                    </div>
                   </div>
                   <!--FIN-->
                   <h4>Caracteristicas</h4>
@@ -133,14 +133,13 @@
         </div>
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
-
-      <!-- IMPORTAR ARCHIVO FOOTER-->
-      <?php include("foot/foot.php"); ?>
-      <!-- ////////////////////////-->
     </div>
+    <!-- IMPORTAR ARCHIVO FOOTER-->
+    <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+  </div>
 </body>
 
 </html>
