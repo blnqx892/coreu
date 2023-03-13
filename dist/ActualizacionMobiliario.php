@@ -27,7 +27,7 @@
               <span>Mobiliario y Otros</span>
             </li>
             <li class="breadcrumb-item active">
-              <span>Adquisiciones</span>
+              <span>Catálogo</span>
             </li>
           </ol>
         </nav>
