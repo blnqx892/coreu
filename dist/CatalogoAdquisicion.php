@@ -42,7 +42,7 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Tabla de Adquisiciones</strong></div>
               <div class="card-body">
-                <!--INICIO FORM-->
+                <!--INICIO FORM  -->
                 <form class="g-3 needs-validation" novalidate="">
                   <div class="row  my-4">
                     <div>
