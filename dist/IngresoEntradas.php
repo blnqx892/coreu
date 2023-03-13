@@ -18,15 +18,16 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><a href="index.php"><svg class="icon me-2">
+              <a href="index.php"><svg class="icon me-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
-                  </use></svg></a>
+                  </use>
+                </svg></a>
             </li>
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><span>Control de Adquición</span>
+              <span>Control de Adquición</span>
             </li>
             <li class="breadcrumb-item active">
-              <!-- if breadcrumb is single--><span>Ingreso de Entradas</span>
+              <span>Ingreso de Entradas</span>
             </li>
           </ol>
         </nav>
