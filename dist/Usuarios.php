@@ -17,8 +17,17 @@
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
+          <li class="breadcrumb-item">
+              <a href="index.php"><svg class="icon me-2">
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
+                  </use>
+                </svg></a>
+            </li>
             <li class="breadcrumb-item">
-              <!-- if breadcrumb is single--><span>Usuarios del Sistema</span>
+              <span>Control de Usuarios</span>
+            </li>
+            <li class="breadcrumb-item active">
+              <span>Usuarios del Sistema</span>
             </li>
           </ol>
         </nav>
@@ -50,28 +59,28 @@
                       <label for="inputZip" class="form-label">Usuario:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                  <!--FIN SECCION TRES-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION CUATRO-->
-                    <div class="col-md-3">
-                      <label for="inputCity" class="form-label">Email:</label>
-                      <input type="e-mail" class="form-control" id="inputCity">
+                    <!--FIN SECCION TRES-->
+                    <div class="row  my-4">
+                      <!--INICIO SECCION CUATRO-->
+                      <div class="col-md-3">
+                        <label for="inputCity" class="form-label">Email:</label>
+                        <input type="e-mail" class="form-control" id="inputCity">
+                      </div>
+                      <div class="col-md-3">
+                        <label for="inputZip" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="inputZip">
+                      </div>
+                      <div class="col-md-3">
+                        <label for="inputZip" class="form-label">Repetir Contraseña:</label>
+                        <input type="password" class="form-control" id="inputZip">
+                      </div>
                     </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Contraseña:</label>
-                      <input type="password" class="form-control" id="inputZip">
+                    <!--FIN SECCION CUATRO-->
+                    <div class="col-15" align="right">
+                      <hr style="color: black; background-color: black; width:100%;" />
+                      <button class="btn btn-primary" type="submit">Guardar</button>
+                      <button class="btn btn-danger" type="submit">Cancelar</button>
                     </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                      <input type="password" class="form-control" id="inputZip">
-                    </div>
-                  </div>
-                  <!--FIN SECCION CUATRO-->
-                  <div class="col-15" align="right">
-                  <hr style="color: black; background-color: black; width:100%;" />
-                    <button class="btn btn-primary" type="submit">Guardar</button>
-                    <button class="btn btn-danger" type="submit">Cancelar</button>
-                  </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
               </div>
@@ -81,11 +90,10 @@
         </div>
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
-
-      <!-- IMPORTAR ARCHIVO FOOTER-->
-      <?php include("foot/foot.php"); ?>
-      <!-- ////////////////////////-->
     </div>
+    <!-- IMPORTAR ARCHIVO FOOTER-->
+    <?php include("foot/foot.php"); ?>
+    <!-- ////////////////////////-->
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
