@@ -22,7 +22,7 @@
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
                   </use>
                 </svg></a>
-            </li>
+          </li>
             <li class="breadcrumb-item">
               <span>Inventario General</span>
             </li>

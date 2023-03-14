@@ -81,6 +81,7 @@
                       <button class="btn btn-primary" type="submit">Guardar</button>
                       <button class="btn btn-danger" type="submit">Cancelar</button>
                     </div>
+                  </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
               </div>
