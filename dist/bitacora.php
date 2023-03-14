@@ -26,7 +26,7 @@
             <li class="breadcrumb-item">
               <span>Control de Usuarios</span>
             </li>
-            <li class="breadcrumb-item">
+            <li class="breadcrumb-item active">
               <span>Bitacora</span>
             </li>
           </ol>
