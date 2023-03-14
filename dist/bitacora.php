@@ -91,7 +91,7 @@
     </div>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
-    <!-- ////////////////////////-->ORTAR ARCHIVO SCRIPT-->
+    <!-- ////////////////////////-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
   </div>
