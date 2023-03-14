@@ -17,7 +17,7 @@
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
-          <li class="breadcrumb-item">
+            <li class="breadcrumb-item">
               <a href="index.php"><svg class="icon me-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
                   </use>
