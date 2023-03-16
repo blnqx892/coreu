@@ -59,9 +59,9 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <th>1</th>
-                        <th>0003</th>
-                        <th>08/03/2023</th>
+                        <th>Carolina Ramos</th>
+                        <th>Registro Familiar</th>
+                        <th>CarolinaRF23</th>
                         <th>
                           <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
                               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
