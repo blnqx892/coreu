@@ -94,7 +94,7 @@
           </div>
           <div class="modal-body">
           <form>
-          <div class="mb-3">
+          <div class="mb-2">
             <label for="recipient-name" class="col-form-label">Recipient:</label>
             <input type="text" class="form-control" id="recipient-name">
           </div>
