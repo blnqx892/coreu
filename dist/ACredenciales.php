@@ -97,42 +97,7 @@
               <!--INICIO FORM-->
               <form class="g-3 needs-validation" novalidate="">
                 <!--FIN SECCION DOS-->
-                <div class="row  my-4">
-                  <!--INICIO SECCION TRES-->
-                  <div class="col-md-4">
-                    <label for="inputAddress2" class="form-label">Nombre de Unidad:</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="">
-                  </div>
-                  <div class="col-md-4">
-                    <label for="inputZip" class="form-label">Jefe de Unidad:</label>
-                    <input type="text" class="form-control" id="inputZip">
-                  </div>
-                  <div class="col-md-2">
-                    <label for="inputZip" class="form-label">No. de Empleados:</label>
-                    <input type="number" class="form-control" id="inputZip">
-                  </div>
-                  <!--FIN SECCION TRES-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION CUATRO-->
-                    <div class="col-md-3">
-                      <label for="inputCity" class="form-label">Usuario:</label>
-                      <input type="number" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Contraseña:</label>
-                      <input type="password" class="form-control" id="inputZip">
-                    </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                      <input type="password" class="form-control" id="inputZip">
-                    </div>
-                  </div>
-                  <!--FIN SECCION CUATRO-->
-                  <div class="col-15" align="right">
-                    <hr style="color: black; background-color: black; width:100%;" />
-                    <button class="btn btn-primary" type="submit">Guardar</button>
-                    <button class="btn btn-danger" type="submit">Cancelar</button>
-                  </div>
+                
               </form>
               <!--/// FIN FORM ////////////////-->
             </div>
