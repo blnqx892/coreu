@@ -178,12 +178,10 @@
               <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <div class="row  my-4">
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">Nombre:</label>
                   <input type="text" class="form-control" id="inputCity">
                 </div>
-              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Close</button>
