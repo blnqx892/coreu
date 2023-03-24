@@ -48,8 +48,7 @@
                     <div>
                       <table class="table">
                         <thead class="table-dark">
-                          <tr>
-
+                          <tr  align="center">
                             <th>Usuario</th>
                             <th>Hora</th>
                             <th>Fecha</th>
@@ -57,7 +56,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr  align="center">
                             <th>Blanca</th>
                             <th>16:49</th>
                             <th>13/03/2023</th>
