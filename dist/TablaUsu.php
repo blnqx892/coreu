@@ -48,31 +48,23 @@
                     <div>
                       <table class="table">
                         <thead class="table-dark">
-                          <tr>
-                            <th>Numero</th>
+                          <tr align="center">
+                            <th>N°.</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
-                            <th>Email</th>
                             <th>Usuario</th>
                             <th>Acción</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr align="center">
                             <th>1</th>
                             <th>Blanca</th>
                             <th>Melara</th>
-                            <th>BlancaM19@gmail.com</th>
                             <th>Melara01</th>
                             <th>
-                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
-                                  </use>
-                                </svg> Eliminar</button>
-                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
-                                  </use>
-                                </svg> Ver</button>
+                            <button type="button" class="btn btn-danger rounded-pill">Eliminar <i class='far fa-trash-alt'></i></button>
+                                <button type="button" class="btn btn-info rounded-pill">Ver <i class='far fa-eye'></i></button>
                             </th>
                           </tr>
                         </tbody>
