@@ -63,10 +63,6 @@
                             <th>13/03/2023</th>
                             <th>
                               <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
-                                  </use>
-                                </svg> Eliminar</button>
-                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
                                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
                                   </use>
                                 </svg> Ver</button>
