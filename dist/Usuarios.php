@@ -63,6 +63,14 @@
                     <div class="row  my-4">
                       <!--INICIO SECCION CUATRO-->
                       <div class="col-md-3">
+                      <label class="form-label" for="validationCustom04">Rol</label>
+                      <select class="form-select" id="validationCustom04" required="">
+                        <option selected="" disabled="" value="">AAlmacen</option>
+                        <option selected="" disabled="" value="">AAFijo</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                      <div class="col-md-3">
                         <label for="inputCity" class="form-label">Email:</label>
                         <input type="e-mail" class="form-control" id="inputCity">
                       </div>
