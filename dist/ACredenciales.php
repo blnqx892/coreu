@@ -94,21 +94,21 @@
           </div>
           <div class="modal-body">
             <form>
-            <div class="row my-1">
+            <div class="row my-4">
                         <div class="col-md-2">
-                          <label for="inputZip" class="form-label">No. Motor:</label>
+                          <label for="inputZip" class="form-label">Jefe de Unidad:</label>
                           <input type="text" class="form-control" id="inputZip">
                         </div>
                         <div class="col-md-2">
-                          <label for="inputZip" class="form-label">No. Placa:</label>
+                          <label for="inputZip" class="form-label">Unidad:</label>
                           <input type="text" class="form-control" id="inputZip">
                         </div>
                         <div class="col-md-2">
-                          <label for="inputZip" class="form-label">No. Chasis:</label>
+                          <label for="inputZip" class="form-label">Correo:</label>
                           <input type="text" class="form-control" id="inputZip">
                         </div>
                         <div class="col-md-2">
-                          <label for="inputZip" class="form-label">Capacidad:</label>
+                          <label for="inputZip" class="form-label">Usuario:</label>
                           <input type="text" class="form-control" id="inputZip">
                         </div>
                       </div>
