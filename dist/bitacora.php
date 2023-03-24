@@ -61,10 +61,7 @@
                             <th>16:49</th>
                             <th>13/03/2023</th>
                             <th>
-                              <button type="button" class="btn btn-info rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cis-eye">
-                                  </use>
-                                </svg> Ver</button>
+                              <button type="button" class="btn btn-info rounded-pill"><i class="fal fa-eye"></i>Ver</button>
                             </th>
                           </tr>
                         </tbody>
