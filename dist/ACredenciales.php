@@ -94,24 +94,24 @@
           </div>
           <div class="modal-body">
             <form>
-            <div class="row my-4">
-                        <div class="col-md-2">
-                          <label for="inputZip" class="form-label">Jefe de Unidad:</label>
-                          <input type="text" class="form-control" id="inputZip">
-                        </div>
-                        <div class="col-md-2">
-                          <label for="inputZip" class="form-label">Unidad:</label>
-                          <input type="text" class="form-control" id="inputZip">
-                        </div>
-                        <div class="col-md-2">
-                          <label for="inputZip" class="form-label">Correo:</label>
-                          <input type="text" class="form-control" id="inputZip">
-                        </div>
-                        <div class="col-md-2">
-                          <label for="inputZip" class="form-label">Usuario:</label>
-                          <input type="text" class="form-control" id="inputZip">
-                        </div>
-                      </div>
+              <div class="row my-4">
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Jefe de Unidad:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Unidad:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Correo:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Usuario:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+              </div>
             </form>
           </div>
           <div class="modal-footer">
