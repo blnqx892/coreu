@@ -49,6 +49,7 @@
                       <table class="table">
                         <thead class="table-dark">
                           <tr  align="center">
+                            <th>N°.</th>
                             <th>Usuario</th>
                             <th>Hora/Fecha</th>
                             <th>Descripción</th>
@@ -57,6 +58,7 @@
                         </thead>
                         <tbody>
                           <tr  align="center">
+                            <th>1</th>
                             <th>Blanca</th>
                             <th>16:49 - 13/03/2023</th>
                             <th>Inicio sesión</th>
