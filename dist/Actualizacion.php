@@ -65,14 +65,10 @@
                             <th>Lapiz facela</th>
                             <th>3</th>
                             <th>
-                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
-                                  </use>
-                                </svg> Eliminar</button>
-                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
-                                  </use>
-                                </svg> Ver</button>
+                            <button type="button" class="btn btn-info rounded-pill">Ver <i
+                                  class='far fa-eye'></i></button>
+                              <button type="button" class="btn btn-warning rounded-pill">Eliminar <i
+                                  class='far fa-trash-alt'></i></button>
                             </th>
                           </tr>
                         </tbody>
