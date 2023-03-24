@@ -107,9 +107,17 @@
                   <label for="inputZip" class="form-label">Correo:</label>
                   <input type="text" class="form-control" id="inputZip">
                 </div>
-                <div class="col-md-4">
+              </div>
+              <div class="row my-4">
+              <div class="col-md-4">
                   <label for="inputZip" class="form-label">Usuario:</label>
                   <input type="text" class="form-control" id="inputZip">
+                </div><div class="col-md-4">
+                  <label for="inputZip" class="form-label">Contraseña:</label>
+                  <input type="password" class="form-control" id="inputZip">
+                </div><div class="col-md-4">
+                  <label for="inputZip" class="form-label">Repetir Contraseña:</label>
+                  <input type="password" class="form-control" id="inputZip">
                 </div>
               </div>
             </form>
