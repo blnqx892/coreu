@@ -63,8 +63,8 @@
                             <th>Melara</th>
                             <th>Melara01</th>
                             <th>
+                            <button type="button" class="btn btn-info rounded-pill">Ver <i class='far fa-eye'></i></button>
                             <button type="button" class="btn btn-warning rounded-pill">Eliminar <i class='far fa-trash-alt'></i></button>
-                                <button type="button" class="btn btn-info rounded-pill">Ver <i class='far fa-eye'></i></button>
                             </th>
                           </tr>
                         </tbody>
