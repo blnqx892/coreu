@@ -78,20 +78,20 @@
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Marca:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
+                      <input class="form-control" id="validationCustom02" type="text" required="" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Color:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
+                      <input class="form-control" id="validationCustom02" type="text" required="" disabled>
                     </div>
                     <div class="row  my-4">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Serie:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
+                      <input class="form-control" id="validationCustom02" type="text" required="" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Categoria: </label>
-                      <select class="form-select" id="validationCustom04" required="">
+                      <select class="form-select" id="validationCustom04" required="" disabled>
                         <option selected="" disabled="" value="">Choose...</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
