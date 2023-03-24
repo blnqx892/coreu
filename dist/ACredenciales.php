@@ -93,16 +93,26 @@
             <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-          <form>
-          <div class="mb-2">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-2">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
+            <form>
+            <div class="row my-1">
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">No. Motor:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">No. Placa:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">No. Chasis:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">Capacidad:</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                      </div>
+            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Close</button>
