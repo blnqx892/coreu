@@ -113,8 +113,8 @@
                         <textarea class="form-control" id="validationCustom02" required="" row="3">
                       </textarea>
                       </div>
-                      <div class="col-md-6" align="right">
-                        <label for="inputCity" class="form-label">New Categoria:</label>
+                      <div class="col-md-5" align="right">
+                        <label for="inputCity" class="form-label">NuevaCategoria:</label>
                         <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
                           data-coreui-target="#exampleModal" data-coreui-whatever="@mdo">+</button>
                       </div>
