@@ -74,7 +74,7 @@
                   <div class="row  my-4">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Nombre:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
+                      <input class="form-control" id="validationCustom02" type="text" required="" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Marca:</label>
