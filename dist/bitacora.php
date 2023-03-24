@@ -61,7 +61,7 @@
                             <th>16:49</th>
                             <th>13/03/2023</th>
                             <th>
-                              <i class="fal fa-eye"><button type="button" class="btn btn-info rounded-pill">Ver</button></i>
+                              <button type="button" class="btn btn-info rounded-pill"><i class='far fa-eye'></i> Ver</button>
                             </th>
                           </tr>
                         </tbody>
