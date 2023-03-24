@@ -50,16 +50,16 @@
                         <thead class="table-dark">
                           <tr  align="center">
                             <th>Usuario</th>
-                            <th>Hora</th>
-                            <th>Fecha</th>
+                            <th>Hora/Fecha</th>
+                            <th>Descripción</th>
                             <th>Acción</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr  align="center">
                             <th>Blanca</th>
-                            <th>16:49</th>
-                            <th>13/03/2023</th>
+                            <th>16:49 - 13/03/2023</th>
+                            <th>Inicio sesión</th>
                             <th>
                               <button type="button" class="btn btn-info rounded-pill">Ver <i class='far fa-eye'></i></button>
                             </th>
