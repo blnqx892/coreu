@@ -114,7 +114,7 @@
                       </textarea>
                       </div>
                       <div class="col-md-6" align="right">
-                        <label for="inputCity" class="form-label">Nueva Categoria:</label>
+                        <label for="inputCity" class="form-label">New Categoria:</label>
                         <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
                           data-coreui-target="#exampleModal" data-coreui-whatever="@mdo">+</button>
                       </div>
