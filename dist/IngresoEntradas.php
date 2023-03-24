@@ -111,13 +111,14 @@
                       <div class="col-md-7">
                         <label for="inputZip" class="form-label">Descripción:</label>
                         <textarea class="form-control" id="validationCustom02" required="" row="3">
-                      </textarea></div>
+                      </textarea>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="inputCity" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="inputCity">
+                      </div>
                     </div>
-                    <div class="col-md-14" align="right">
-                  <label for="inputCity" class="form-label">Nueva Credencial</label>
-                  <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
-                    data-coreui-target="#exampleModal" data-coreui-whatever="@mdo">Ir</button>
-                </div>
+
                     <div class="row  my-2">
                       <div class="col-md-1">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
