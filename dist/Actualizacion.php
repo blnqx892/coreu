@@ -48,7 +48,7 @@
                     <div>
                       <table class="table">
                         <thead class="table-dark">
-                          <tr>
+                          <tr align="center">
                             <th>Fecha</th>
                             <th>Codigó</th>
                             <th>Nombre</th>
@@ -58,7 +58,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr align="center">
                             <th>1</th>
                             <th>0003</th>
                             <th>CM</th>
