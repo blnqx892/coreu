@@ -49,21 +49,22 @@
                       <table class="table">
                         <thead class="table-dark">
                           <tr>
+                            <th>N°.</th>
                             <th>Fecha</th>
                             <th>No. Factura</th>
                             <th>Proveedor</th>
                             <th>Nombre</th>
-                            <th>Modelo</th>
                             <th>Acción</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <th>1</th>
+                            <th>3/02/2022</th>
                             <th>0003</th>
                             <th>CM</th>
                             <th>Lapiz facela</th>
-                            <th>3</th>
+                            
                             <th><button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
                                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
                                   </use>
