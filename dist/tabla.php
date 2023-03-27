@@ -3,7 +3,14 @@
 <!-- IMPORTAR ARCHIVO CABECERA-->
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
-
+<script>
+  // This file is required by the index.html file and will
+// be executed in the renderer process for that window.
+// All of the Node.js APIs are available in this process.
+window.$ = window.jquery = require('./node_modules/jquery');
+window.dt = require('./node_modules/datatables.net')();
+window.$('#table_id').DataTable();
+</script>
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
   <?php include("menu/verti.php"); ?>
@@ -29,9 +36,9 @@
       <div class="container-lg">
         <!-- row-->
         <div class="card mb-4">
-            <div class="card-header"><strong>Tables</strong></div>
-            <div class="card-body">
-            <table id="myTable" class="display">
+          <div class="card-header"><strong>Tables</strong></div>
+          <div class="card-body">
+          <table id="table_id" class="display">
     <thead>
         <tr>
             <th>Column 1</th>
@@ -49,8 +56,8 @@
         </tr>
     </tbody>
 </table>
-            </div>
           </div>
+        </div>
         <!-- /.row-->
       </div>
     </div>
