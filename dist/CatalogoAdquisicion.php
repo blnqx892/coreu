@@ -46,7 +46,7 @@
                 <table id="example" class="display" style="width:100%" >
                   <thead>
                     <tr style="text-align:center;">
-                      <th>Nombre</th>
+                      <th align="center">Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
                       <th>Categoria</th>
