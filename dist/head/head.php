@@ -48,8 +48,8 @@
 
   </script>
   <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
-  
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<script src="https://kit.fontawesome.com/be2284e4f3.js" crossorigin="anonymous"></script>
   <!-- dataTable-->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 </head>
