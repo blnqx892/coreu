@@ -63,8 +63,7 @@
                       <td>2011-04-25</td>
                       <td><button type="button" class="btn btn-info rounded-pill">Ver <i
                                   class='far fa-eye'></i></button>
-                              <button type="button" class="btn btn-warning rounded-pill">Codificar <i
-                                  class='far fa-trash-alt'></i></button></td>
+                              <button type="button" class="btn btn-warning rounded-pill">Codificar <i class="fad fa-barcode-read"></i></button></td>
                     </tr>
                     <tr>
                       <td>Garrett Winters</td>
@@ -74,8 +73,7 @@
                       <td>2011-07-25</td>
                       <td><button type="button" class="btn btn-info rounded-pill">Ver <i
                                   class='far fa-eye'></i></button>
-                              <button type="button" class="btn btn-warning rounded-pill">Codificar <i
-                                  class='far fa-trash-alt'></i></button></td>
+                              <button type="button" class="btn btn-warning rounded-pill">Codificar <i class="fad fa-barcode-read"></i></button></td>
                     </tr>
                   </tbody>
                   <tfoot>
