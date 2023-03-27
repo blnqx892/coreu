@@ -55,7 +55,7 @@
                   <tbody style="text-align:center;">
                     <tr>
                       <td>Tiger Nixon</td>
-                      <td>12:00 / 2011-04-25</td>
+                      <td>Perz</td>
                       <td>Edinburgh</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
@@ -65,7 +65,7 @@
                     </tr>
                     <tr>
                       <td>Garrett Winters</td>
-                      <td>16:20 / 2011-07-25</td>
+                      <td>Calderón</td>
                       <td>Accountant</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
