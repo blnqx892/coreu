@@ -45,7 +45,7 @@
                 <!-- dataTable-->
                 <table id="example" class="display" style="width:100%" >
                   <thead>
-                    <tr>
+                    <tr style="text-align: center">
                       <th>Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
