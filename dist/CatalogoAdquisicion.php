@@ -45,17 +45,17 @@
                 <!-- dataTable-->
                 <table id="example" class="display" style="width:100%" >
                   <thead>
-                    <tr align="center">
+                    <tr>
                       <th>Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
                       <th>Categoria</th>
                       <th>Fecha</th>
-                      <th align="center">Acción</th>
+                      <th>Acción</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr align="center">
+                    <tr>
                       <td>Tiger Nixon</td>
                       <td>System Architect</td>
                       <td>Edinburgh</td>
@@ -63,10 +63,10 @@
                       <td>2011-04-25</td>
                       <td><button type="button" class="btn btn-info rounded-pill">Ver <i
                                   class='far fa-eye'></i></button>
-                              <button type="button" class="btn btn-warning rounded-pill">Eliminar <i
+                              <button type="button" class="btn btn-warning rounded-pill">Codificar <i
                                   class='far fa-trash-alt'></i></button></td>
                     </tr>
-                    <tr align="center">
+                    <tr>
                       <td>Garrett Winters</td>
                       <td>Accountant</td>
                       <td>Tokyo</td>
@@ -74,12 +74,12 @@
                       <td>2011-07-25</td>
                       <td><button type="button" class="btn btn-info rounded-pill">Ver <i
                                   class='far fa-eye'></i></button>
-                              <button type="button" class="btn btn-warning rounded-pill">Eliminar <i
+                              <button type="button" class="btn btn-warning rounded-pill">Codificar <i
                                   class='far fa-trash-alt'></i></button></td>
                     </tr>
                   </tbody>
                   <tfoot>
-                    <tr align="center">
+                    <tr>
                       <th>Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
