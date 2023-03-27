@@ -42,39 +42,38 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Bitacora</strong></div>
               <div class="card-body">
-                <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate="">
-                  <div class="row  my-4">
-                    <div>
-                      <table class="table">
-                        <thead class="table-dark">
-                          <tr  align="center">
-                            <th>N°.</th>
-                            <th>Usuario</th>
-                            <th>Hora/Fecha</th>
-                            <th>Descripción</th>
-                            <th>Acción</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr  align="center">
-                            <th>1</th>
-                            <th>Blanca</th>
-                            <th>16:49 - 13/03/2023</th>
-                            <th>Inicio sesión</th>
-                            <th>
-                              <button type="button" class="btn btn-info rounded-pill">Ver <i class='far fa-eye'></i></button>
-                            </th>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <!--FIN SECCION TRES-->
-                  <!--FIN SECCION CUATRO-->
-
-                </form>
-                <!--/// FIN FORM ////////////////-->
+                <!-- dataTable-->
+                <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center;">Usuario</th>
+                      <th style="text-align:center;">Hora/Fecha</th>
+                      <th style="text-align:center;">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody style="text-align:center;">
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>2011-04-25</td>
+                      <td>Edinburgh</td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>2011-07-25</td>
+                      <td>Accountant</td>
+                      
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th style="text-align:center;">Usuario</th>
+                      <th style="text-align:center;">Hora/Fecha</th>
+                      <th style="text-align:center;">Descripción</th>
+                    </tr>
+                  </tfoot>
+                </table>
+                <!-- //dataTable-->
               </div>
             </div>
           </div>
