@@ -86,7 +86,7 @@
                   </div>
                   <div class="row  my-4">
                     <div>
-                      <table class="table">
+                      <table class="table" style="text-align:center;">
                         <thead class="table-dark">
                           <tr>
                             <th>No.</th>
