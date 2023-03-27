@@ -73,8 +73,7 @@
                       <td>2011-07-25</td>
                       <td><button type="button" class="btn btn-info rounded-pill">Ver <i
                                   class='far fa-eye'></i></button>
-                              <button type="button" class="btn btn-warning rounded-pill">Codificar <i
-                                  class='far fa-trash-alt'></i></button></td>
+                              <button type="button" class="btn btn-warning rounded-pill">Codificar </button></td>
                     </tr>
                   </tbody>
                   <tfoot>
