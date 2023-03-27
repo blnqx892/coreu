@@ -42,44 +42,52 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Tabla de Codificación de Activos</strong></div>
               <div class="card-body">
-                <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate="">
-                  <div class="row  my-4">
-                    <div>
-                      <table class="table">
-                        <thead class="table-dark">
-                          <tr align="center">
-                            <th>Fecha</th>
-                            <th>Codigó</th>
-                            <th>Nombre</th>
-                            <th>Categoria</th>
-                            <th>Tipo Cargo</th>
-                            <th>Acción</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr align="center">
-                            <th>1</th>
-                            <th>0003</th>
-                            <th>CM</th>
-                            <th>Lapiz facela</th>
-                            <th>3</th>
-                            <th>
-                              <button type="button" class="btn btn-info rounded-pill">Ver <i
-                                  class='far fa-eye'></i></button>
-                              <button type="button" class="btn btn-warning rounded-pill">Eliminar <i
-                                  class='far fa-trash-alt'></i></button>
-                            </th>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <!--FIN SECCION TRES-->
-                  <!--FIN SECCION CUATRO-->
-
-                </form>
-                <!--/// FIN FORM ////////////////-->
+                <!-- dataTable-->
+                <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">N° Factura</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody style="text-align:center;">
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011-04-25</td>
+                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
+                            class='far fa-eye'></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>63</td>
+                      <td>2011-07-25</td>
+                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
+                            class='far fa-eye'></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">N° Factura</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Acción</th>
+                    </tr>
+                  </tfoot>
+                </table>
+                <!-- //dataTable-->
               </div>
             </div>
           </div>
