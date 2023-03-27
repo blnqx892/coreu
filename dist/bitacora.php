@@ -54,13 +54,13 @@
                   <tbody style="text-align:center;">
                     <tr>
                       <td>Tiger Nixon</td>
-                      <td>2011-04-25</td>
+                      <td>12:00 / 2011-04-25</td>
                       <td>Edinburgh</td>
                       
                     </tr>
                     <tr>
                       <td>Garrett Winters</td>
-                      <td>2011-07-25</td>
+                      <td>16:20 / 2011-07-25</td>
                       <td>Accountant</td>
                       
                     </tr>
