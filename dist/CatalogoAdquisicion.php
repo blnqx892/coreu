@@ -44,7 +44,7 @@
               <div class="card-body">
                 <!-- dataTable-->
                 <table id="example" class="display" style="width:100%">
-                  <thead>
+                  <thead align="center">
                     <tr>
                       <th>Nombre</th>
                       <th>N° Factura</th>
@@ -54,14 +54,17 @@
                       <th>Acción</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody align="center">
                     <tr>
                       <td>Tiger Nixon</td>
                       <td>System Architect</td>
                       <td>Edinburgh</td>
                       <td>61</td>
                       <td>2011-04-25</td>
-                      <td>$320,800</td>
+                      <td><button type="button" class="btn btn-info rounded-pill">Ver <i
+                                  class='far fa-eye'></i></button>
+                              <button type="button" class="btn btn-warning rounded-pill">Eliminar <i
+                                  class='far fa-trash-alt'></i></button></td>
                     </tr>
                     <tr>
                       <td>Garrett Winters</td>
@@ -69,7 +72,10 @@
                       <td>Tokyo</td>
                       <td>63</td>
                       <td>2011-07-25</td>
-                      <td>$170,750</td>
+                      <td><button type="button" class="btn btn-info rounded-pill">Ver <i
+                                  class='far fa-eye'></i></button>
+                              <button type="button" class="btn btn-warning rounded-pill">Eliminar <i
+                                  class='far fa-trash-alt'></i></button></td>
                     </tr>
                   </tbody>
                   <tfoot>
