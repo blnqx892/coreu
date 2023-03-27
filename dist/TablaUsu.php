@@ -59,8 +59,8 @@
                       <td>Edinburgh</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
-                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
-                            class="	fas fa-barcode"></i></button></td>
+                            <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
+                          </td>
                       
                     </tr>
                     <tr>
@@ -69,7 +69,8 @@
                       <td>Accountant</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
-                        <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button></td>
+                        <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
+                      </td>
                       
                     </tr>
                   </tbody>
