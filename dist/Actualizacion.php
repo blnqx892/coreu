@@ -54,7 +54,7 @@
                             <th>Nombre</th>
                             <th>Categoria</th>
                             <th>Tipo Cargo</th>
-                            <th>Acción</th>
+                            <th align="center">Acción</th>
                           </tr>
                         </thead>
                         <tbody>
