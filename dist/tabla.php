@@ -4,26 +4,28 @@
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
 <script>
-$(document).ready(function () {
+  $(document).ready(function () {
     var eventFired = function (type) {
-        var n = $('#demo_info')[0];
-        n.innerHTML += '<div>' + type + ' event - ' + new Date().getTime() + '</div>';
-        n.scrollTop = n.scrollHeight;
+      var n = $('#demo_info')[0];
+      n.innerHTML += '<div>' + type + ' event - ' + new Date().getTime() + '</div>';
+      n.scrollTop = n.scrollHeight;
     };
- 
+
     $('#example')
-        .on('order.dt', function () {
-            eventFired('Order');
-        })
-        .on('search.dt', function () {
-            eventFired('Search');
-        })
-        .on('page.dt', function () {
-            eventFired('Page');
-        })
-        .DataTable();
-});
+      .on('order.dt', function () {
+        eventFired('Order');
+      })
+      .on('search.dt', function () {
+        eventFired('Search');
+      })
+      .on('page.dt', function () {
+        eventFired('Page');
+      })
+      .DataTable();
+  });
+
 </script>
+
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
   <?php include("menu/verti.php"); ?>
@@ -51,47 +53,49 @@ $(document).ready(function () {
         <div class="card mb-4">
           <div class="card-header"><strong>Tables</strong></div>
           <div class="card-body">
-          <div id="demo_info" class="box"></div>
-    <table id="example" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011-04-25</td>
-                <td>$320,800</td>
-            </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011-07-25</td>
-                <td>$170,750</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </tfoot>
-    </table>
+            <div id="demo_info" class="box"></div>
+            <!-- dataTable-->
+            <table id="example" class="display" style="width:100%">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tiger Nixon</td>
+                  <td>System Architect</td>
+                  <td>Edinburgh</td>
+                  <td>61</td>
+                  <td>2011-04-25</td>
+                  <td>$320,800</td>
+                </tr>
+                <tr>
+                  <td>Garrett Winters</td>
+                  <td>Accountant</td>
+                  <td>Tokyo</td>
+                  <td>63</td>
+                  <td>2011-07-25</td>
+                  <td>$170,750</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+                </tr>
+              </tfoot>
+            </table>
+            <!-- //dataTable-->
           </div>
         </div>
         <!-- /.row-->
