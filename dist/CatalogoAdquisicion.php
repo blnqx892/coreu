@@ -43,15 +43,15 @@
               <div class="card-header"><strong>Tabla de Adquisiciones</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="example" class="display" style="width:100%;text-align:center;" >
+                <table id="example" class="display" style="width:100%" >
                   <thead>
                     <tr>
                       <th style="text-align:center;">Nombre</th>
-                      <th>N° Factura</th>
-                      <th>Marca</th>
-                      <th>Categoria</th>
-                      <th>Fecha</th>
-                      <th>Acción</th>
+                      <th style="text-align:center;">N° Factura</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
@@ -78,12 +78,12 @@
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th>Nombre</th>
-                      <th>N° Factura</th>
-                      <th>Marca</th>
-                      <th>Categoria</th>
-                      <th>Fecha</th>
-                      <th>Acción</th>
+                    <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">N° Factura</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
                 </table>
