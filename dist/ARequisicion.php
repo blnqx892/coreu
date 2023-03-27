@@ -113,7 +113,7 @@
                   <!--FIN SECCION TRES-->
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
-                    <button class="btn btn-success" type="submit">Enviar<i class="far fa-share-square"></i></button>
+                    <button class="btn btn-success" type="submit">Enviar <i class="far fa-share-square"></i></button>
                     <button class="btn btn-light" type="submit">Cancelar</button>
                   </div>
                 </form>
