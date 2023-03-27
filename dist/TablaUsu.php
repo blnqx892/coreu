@@ -49,7 +49,7 @@
                       <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Apellido</th>
                       <th style="text-align:center;">Usuario</th>
-                      <th style="text-align:center;">Acción></th>
+                      <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
@@ -79,7 +79,7 @@
                     <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Apellido</th>
                       <th style="text-align:center;">Usuario</th>
-                      <th style="text-align:center;">Acción></th>
+                      <th style="text-align:center;">Accións</th>
                     </tr>
                   </tfoot>
                 </table>
