@@ -48,33 +48,9 @@
                     data-coreui-target="#exampleModal" data-coreui-whatever="@mdo">Ir</button>
                 </div>
                 <div class="row  my-4">
-                  <table class="table">
-                    <thead class="table-dark">
-                      <tr>
-                        <th>Jefe Unidad</th>
-                        <th>Unidad</th>
-                        <th>Usuario</th>
-                        <th>Acción</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th>Carolina Ramos</th>
-                        <th>Registro Familiar</th>
-                        <th>CarolinaRF23</th>
-                        <th>
-                          <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
-                              </use>
-                            </svg> Eliminar</button>
-                          <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
-                              </use>
-                            </svg> Ver</button>
-                        </th>
-                      </tr>
-                    </tbody>
-                  </table>
+                <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">Hora/Fecha</th>
+                      <th style="text-align:center;">Acción</th>
                 </div>
               </div>
             </div>
