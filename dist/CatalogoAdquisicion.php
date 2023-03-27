@@ -43,7 +43,7 @@
               <div class="card-header"><strong>Tabla de Adquisiciones</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="example" class="display" style="width:100%" >
+                <table id="example" class="display" style="width:100%;text-align:center;" >
                   <thead>
                     <tr>
                       <th style="text-align:center;">Nombre</th>
@@ -76,7 +76,7 @@
                               <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i class="	fas fa-barcode"></i></button></td>
                     </tr>
                   </tbody>
-                  <tfoot style="text-align:center;">
+                  <tfoot>
                     <tr>
                       <th>Nombre</th>
                       <th>N° Factura</th>
