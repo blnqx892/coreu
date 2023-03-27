@@ -77,7 +77,7 @@
                     </tr>
                   </tbody>
                   <tfoot style="text-align:center;">
-                    <tr style="text-align:center;">
+                    <tr>
                       <th>Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
