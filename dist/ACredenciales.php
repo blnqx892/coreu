@@ -48,9 +48,56 @@
                     data-coreui-target="#exampleModal" data-coreui-whatever="@mdo">Ir</button>
                 </div>
                 <div class="row  my-4">
-                <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">Hora/Fecha</th>
+                  <!-- dataTable-->
+                <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">N° Factura</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Fecha</th>
                       <th style="text-align:center;">Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody style="text-align:center;">
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011-04-25</td>
+                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
+                            class='far fa-eye'></i></button>
+                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
+                            class="	fas fa-barcode"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>63</td>
+                      <td>2011-07-25</td>
+                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
+                            class='far fa-eye'></i></button>
+                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
+                            class="	fas fa-barcode"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">N° Factura</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Acción</th>
+                    </tr>
+                  </tfoot>
+                </table>
+                <!-- //dataTable-->
                 </div>
               </div>
             </div>
