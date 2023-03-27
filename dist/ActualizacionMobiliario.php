@@ -42,48 +42,56 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Tabla de Mobiliario y Otros</strong></div>
               <div class="card-body">
-                <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate="">
-                  <div class="row  my-4">
-                    <div>
-                      <table class="table">
-                        <thead class="table-dark">
-                          <tr>
-                            <th>Fecha</th>
-                            <th>Nombre</th>
-                            <th>Marca</th>
-                            <th>Cantidad</th>
-                            <th>Descripción</th>
-                            <th>Acción</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th>1</th>
-                            <th>0003</th>
-                            <th>CM</th>
-                            <th>Lapiz facela</th>
-                            <th>3</th>
-                            <th>
-                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash">
-                                  </use>
-                                </svg> Eliminar</button>
-                              <button type="button" class="btn btn-danger rounded-pill"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#fi fi-rr-eye">
-                                  </use>
-                                </svg> Ver</button>
-                            </th>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <!--FIN SECCION TRES-->
-                  <!--FIN SECCION CUATRO-->
-
-                </form>
-                <!--/// FIN FORM ////////////////-->
+                <!-- dataTable-->
+                <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">N° Factura</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody style="text-align:center;">
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011-04-25</td>
+                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
+                            class='far fa-eye'></i></button>
+                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
+                            class="	fas fa-barcode"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>63</td>
+                      <td>2011-07-25</td>
+                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
+                            class='far fa-eye'></i></button>
+                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
+                            class="	fas fa-barcode"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">N° Factura</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Acción</th>
+                    </tr>
+                  </tfoot>
+                </table>
+                <!-- //dataTable-->
               </div>
             </div>
           </div>
