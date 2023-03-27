@@ -44,7 +44,7 @@
               <div class="card-body">
                 <!-- dataTable-->
                 <table id="example" class="display" style="width:100%" >
-                  <thead align="center">
+                  <thead>
                     <tr align="center">
                       <th>Nombre</th>
                       <th>N° Factura</th>
@@ -54,7 +54,7 @@
                       <th>Acción</th>
                     </tr>
                   </thead>
-                  <tbody align="center">
+                  <tbody>
                     <tr align="center">
                       <td>Tiger Nixon</td>
                       <td>System Architect</td>
