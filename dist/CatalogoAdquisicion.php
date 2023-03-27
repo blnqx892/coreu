@@ -51,7 +51,7 @@
                       <th>Marca</th>
                       <th>Categoria</th>
                       <th>Fecha</th>
-                      <th>Acción</th>
+                      <th align="center">Acción</th>
                     </tr>
                   </thead>
                   <tbody>
