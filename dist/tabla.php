@@ -4,9 +4,25 @@
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
 <script>
-$(document).ready( function () {
-    $('#myTable').DataTable();
-} );
+$(document).ready(function () {
+    var eventFired = function (type) {
+        var n = $('#demo_info')[0];
+        n.innerHTML += '<div>' + type + ' event - ' + new Date().getTime() + '</div>';
+        n.scrollTop = n.scrollHeight;
+    };
+ 
+    $('#example')
+        .on('order.dt', function () {
+            eventFired('Order');
+        })
+        .on('search.dt', function () {
+            eventFired('Search');
+        })
+        .on('page.dt', function () {
+            eventFired('Page');
+        })
+        .DataTable();
+});
 </script>
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
@@ -35,24 +51,47 @@ $(document).ready( function () {
         <div class="card mb-4">
           <div class="card-header"><strong>Tables</strong></div>
           <div class="card-body">
-          <table id="table_id" class="display">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row 2 Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
-    </tbody>
-</table>
+          <div id="demo_info" class="box"></div>
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011-07-25</td>
+                <td>$170,750</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
           </div>
         </div>
         <!-- /.row-->
