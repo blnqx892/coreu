@@ -43,9 +43,9 @@
               <div class="card-header"><strong>Tabla de Adquisiciones</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="example" class="display" style="width:100%" align="center">
+                <table id="example" class="display" style="width:100%" >
                   <thead align="center">
-                    <tr>
+                    <tr align="center">
                       <th>Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
@@ -55,7 +55,7 @@
                     </tr>
                   </thead>
                   <tbody align="center">
-                    <tr>
+                    <tr align="center">
                       <td>Tiger Nixon</td>
                       <td>System Architect</td>
                       <td>Edinburgh</td>
@@ -66,7 +66,7 @@
                               <button type="button" class="btn btn-warning rounded-pill">Eliminar <i
                                   class='far fa-trash-alt'></i></button></td>
                     </tr>
-                    <tr>
+                    <tr align="center">
                       <td>Garrett Winters</td>
                       <td>Accountant</td>
                       <td>Tokyo</td>
@@ -79,7 +79,7 @@
                     </tr>
                   </tbody>
                   <tfoot>
-                    <tr>
+                    <tr align="center">
                       <th>Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
