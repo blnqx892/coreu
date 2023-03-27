@@ -46,7 +46,7 @@
                 <table id="example" class="display" style="width:100%" >
                   <thead>
                     <tr style="text-align:center;">
-                      <th align="center">Nombre</th>
+                      <th style="text-align:center;">Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
                       <th>Categoria</th>
@@ -76,8 +76,8 @@
                               <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i class="	fas fa-barcode"></i></button></td>
                     </tr>
                   </tbody>
-                  <tfoot>
-                    <tr align="center">
+                  <tfoot style="text-align:center;">
+                    <tr style="text-align:center;">
                       <th>Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
