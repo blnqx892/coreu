@@ -43,9 +43,9 @@
               <div class="card-header"><strong>Tabla de Adquisiciones</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="example" class="display" style="width:100%" style="text-align:center;">
+                <table id="example" class="display" style="width:100%" >
                   <thead>
-                    <tr align="center">
+                    <tr style="text-align:center;">
                       <th>Nombre</th>
                       <th>N° Factura</th>
                       <th>Marca</th>
