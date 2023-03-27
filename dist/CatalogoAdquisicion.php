@@ -43,7 +43,7 @@
               <div class="card-header"><strong>Tabla de Adquisiciones</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="example" class="display" style="width:100%">
+                <table id="example" class="display" style="width:100%" align="center">
                   <thead align="center">
                     <tr>
                       <th>Nombre</th>
