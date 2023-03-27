@@ -104,9 +104,7 @@
                             <th>CM</th>
                             <th>Lapiz facela</th>
                             <th>3</th>
-                            <th><button type="button" class="btn btn-danger rounded-pill" title="Eliminar"><svg class="icon me-2">
-                                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash"></use>
-                                </svg></button></th>
+                            <th><button type="button" class="btn btn-danger rounded-pill" title="Eliminar"><i class="far fa-trash-alt"></i></button></th>
                           </tr>
                         </tbody>
                       </table>
