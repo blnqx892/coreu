@@ -46,31 +46,31 @@
                 <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
-                      <th style="text-align:center;">Categoria</th>
                       <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Ubicación</th>
+                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Codigo</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011-04-25</td>
+                      <td>28/3/2023</td>
+                      <td>Unidad de Medio Ambiente</td>
+                      <td>Laptop</td>
+                      <td>Equipo Técnologico</td>
+                      <td>0076-4561-0089-0012</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                       </td>
                     </tr>
                     <tr>
-                      <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
-                      <td>2011-07-25</td>
+                      <td>12/2/2023</td>
+                      <td>Unidad de RRHH</td>
+                      <td>Escritorio</td>
+                      <td>Equipo de Oficina</td>
+                      <td>0076-4561-0045-0009</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                       </td>
@@ -78,11 +78,11 @@
                   </tbody>
                   <tfoot>
                     <tr>
+                    <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
                       <th style="text-align:center;">Categoria</th>
-                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Codigo</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
