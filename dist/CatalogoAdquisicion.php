@@ -56,10 +56,10 @@
                   </thead>
                   <tbody style="text-align:center;">
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
+                      <td>UPS</td>
+                      <td>009890</td>
+                      <td>Forza</td>
+                      <td>Equipo Técnologico</td>
                       <td>2011-04-25</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
@@ -68,10 +68,10 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
+                      <td>Impresora</td>
+                      <td>009890</td>
+                      <td>Epson</td>
+                      <td>Equipo Técnologico</td>
                       <td>2011-07-25</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
