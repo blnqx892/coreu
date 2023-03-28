@@ -78,7 +78,7 @@
                   </tbody>
                   <tfoot>
                     <tr>
-                    <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Fecha</th>
                       <th style="text-align:center;">Categoria</th>
                       <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Marca</th>
