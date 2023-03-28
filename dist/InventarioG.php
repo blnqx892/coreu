@@ -46,31 +46,31 @@
                 <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
-                      <th style="text-align:center;">Categoria</th>
                       <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011-04-25</td>
+                      <td>12-11-2022</td>
+                      <td>Equipo de Oficina</td>
+                      <td>Estante Metalico</td>
+                      <td>Dexion</td>
+                      <td>Unidad de Estado Familiar</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                       </td>
                     </tr>
                     <tr>
-                      <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
-                      <td>2011-07-25</td>
+                      <td>9-1-2023</td>
+                      <td>Equipo Intangible</td>
+                      <td>Software Oficce</td>
+                      <td>Microsoft</td>
+                      <td>Unidad de UACI</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                       </td>
@@ -78,11 +78,11 @@
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
+                    <th style="text-align:center;">Fecha</th>
                       <th style="text-align:center;">Categoria</th>
-                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
