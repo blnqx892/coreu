@@ -105,6 +105,13 @@
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
+                    <div class="col-md-2">
+                        <label for="inputCity" class="form-label">Nueva Categoria:</label>
+                        <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
+                          data-coreui-target="#exampleModal">
+                          <i class='fas fa-plus'></i>
+                        </button>
+                      </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
                       <!--INICIO SECCION CINCO-->
@@ -113,15 +120,7 @@
                         <textarea class="form-control" id="validationCustom02" required="" row="3">
                       </textarea>
                       </div>
-                      <div class="col-md-5" align="right">
-                        <label for="inputCity" class="form-label">Nueva Categoria:</label>
-                        <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
-                          data-coreui-target="#exampleModal">
-                          <i class='fas fa-plus'></i>
-                        </button>
-                      </div>
                     </div>
-
                     <div class="row  my-2">
                       <div class="col-md-1">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
