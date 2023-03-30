@@ -128,7 +128,6 @@
                       <input class="form-control" id="validationCustom02" type="text" required="">
                     </div>
                   </div>
-                  <hr style="color: black; background-color: black; width:100%;" />
                   <!--FIN-->
                   <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />
