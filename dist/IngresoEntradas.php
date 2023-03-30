@@ -106,7 +106,7 @@
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                     <div class="col-md-2" align="right">
-                        <label for="inputCity" class="form-label">Nueva Categoria:</label>
+                        <label for="inputCity" class="form-label">:</label>
                         <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
                           data-coreui-target="#exampleModal">
                           <i class='fas fa-plus'></i>
