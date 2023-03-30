@@ -82,10 +82,10 @@
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
-                      <th style="text-align:center;">Categoria</th>
+                    <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Tipo de Movimiento</th>
+                      <th style="text-align:center;">Procedencia</th>
+                      <th style="text-align:center;">Observación</th>
                       <th style="text-align:center;">Fecha</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
