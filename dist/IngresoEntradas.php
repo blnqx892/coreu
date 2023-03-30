@@ -90,7 +90,7 @@
                       <label for="inputZip" class="form-label">Modelo:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Color:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
