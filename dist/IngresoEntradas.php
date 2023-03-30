@@ -94,7 +94,7 @@
                       <label for="inputZip" class="form-label">Color:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                       <label class="form-label" for="validationCustom04">Categoria</label>
                       <select class="form-select" id="validationCustom04" required="">
                         <option selected="" disabled="" value="">Equipo Tecnologico</option>
