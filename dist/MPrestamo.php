@@ -130,10 +130,11 @@
                   </div>
                   <hr style="color: black; background-color: black; width:100%;" />
                   <!--FIN-->
-                  <div class="col-12" align="right">
-                    <button class="btn btn-primary" type="submit">Guardar</button>
-                    <button class="btn btn-danger" type="submit">Cancelar</button>
-                  </div>
+                  <div class="col-15" align="right">
+                      <hr style="color: black; background-color: black; width:100%;" />
+                      <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
+                      <button class="btn btn-secondary" type="submit">Cancelar <i class='far fa-times-circle'></i></button>
+                    </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
               </div>
