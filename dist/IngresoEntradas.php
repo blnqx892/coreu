@@ -90,10 +90,21 @@
                       <label for="inputZip" class="form-label">Modelo:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <label for="inputZip" class="form-label">Color:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
+                      <select class="form-select" id="validationCustom04" required="">
+                        <option selected="" disabled="" value="">Choose...</option>
+                        <option selected="" disabled="" value="">Nuevo</option>
+                        <option selected="" disabled="" value="">Donado</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                    <!--FIN SECCION CUATRO-->
+                    <div class="row my-4">
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Categoria</label>
                       <select class="form-select" id="validationCustom04" required="">
@@ -112,17 +123,6 @@
                           <i class='fas fa-plus'></i>
                         </button>
                       </div>
-                    <!--FIN SECCION CUATRO-->
-                    <div class="row my-4">
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
-                      <select class="form-select" id="validationCustom04" required="">
-                        <option selected="" disabled="" value="">Choose...</option>
-                        <option selected="" disabled="" value="">Nuevo</option>
-                        <option selected="" disabled="" value="">Donado</option>
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
-                    </div>
                       <!--INICIO SECCION CINCO-->
                       <div class="col-md-7">
                         <label for="inputZip" class="form-label">Descripción:</label>
