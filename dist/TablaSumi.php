@@ -68,11 +68,11 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
-                      <td>2011-07-25</td>
+                      <td>B0N00123</td>
+                      <td>12</td>
+                      <td>Resma papel bond</td>
+                      <td>$ 6.25</td>
+                      <td>Estante A2</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                             <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
