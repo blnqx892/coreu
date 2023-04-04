@@ -46,21 +46,21 @@
                 <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
-                      <th style="text-align:center;">Categoria</th>
-                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Codigo</th>
+                      <th style="text-align:center;">Trajeta N°</th>
+                      <th style="text-align:center;">Nombre de Suministro</th>
+                      <th style="text-align:center;">Precio</th>
+                      <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011-04-25</td>
+                      <td>FA00789</td>
+                      <td>23</td>
+                      <td>Lapiz Facela</td>
+                      <td>$ 4.75</td>
+                      <td>Estante A3</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                         <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
@@ -82,11 +82,11 @@
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
-                      <th style="text-align:center;">Categoria</th>
-                      <th style="text-align:center;">Fecha</th>
+                    <th style="text-align:center;">Codigo</th>
+                      <th style="text-align:center;">Trajeta N°</th>
+                      <th style="text-align:center;">Nombre de Suministro</th>
+                      <th style="text-align:center;">Precio $</th>
+                      <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
