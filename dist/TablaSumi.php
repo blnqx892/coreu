@@ -62,7 +62,7 @@
                       <td>$ 4.75</td>
                       <td>Estante A3</td>
                       <td>
-                            <button type="button" class="btn btn-info rounded-pill" title="Ver"><iclass='far fa-eye'></i></button>
+                            <button type="button" class="btn btn-info rounded-pill" title="Ver"><i class='far fa-eye'></i></button>
                             <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
                             <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
                             <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
@@ -75,7 +75,7 @@
                       <td>$ 6.25</td>
                       <td>Estante A2</td>
                       <td>
-                            <button type="button" class="btn btn-info rounded-pill" title="Ver"><iclass='far fa-eye'></i></button>
+                            <button type="button" class="btn btn-info rounded-pill" title="Ver"><i class='far fa-eye'></i></button>
                             <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
                             <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
                             <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
