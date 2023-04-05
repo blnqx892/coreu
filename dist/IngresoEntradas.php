@@ -126,7 +126,7 @@
                       <!--INICIO SECCION CINCO-->
                       <div class="col-md-7">
                         <label for="inputZip" class="form-label">Descripción:</label>
-                        <textarea class="form-control" id="validationCustom02" required="" row="4">
+                        <textarea class="form-control" id="validationCustom02" required="" row="6">
                       </textarea>
                       </div>
                     </div>
