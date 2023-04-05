@@ -81,10 +81,10 @@
                           </div>
                         </td>
                         <td>
-                          <button type="button" class="btn btn-info rounded-pill"><svg class="icon me-2">
+                          <button type="button" class="btn btn-info rounded-pill" title="Despachar"><svg class="icon me-2">
                               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-truck">
                               </use>
-                            </svg>Despacho</button>
+                            </svg></button>
                         </td>
                       </tr>
                     </tbody>
