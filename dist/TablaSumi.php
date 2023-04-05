@@ -75,7 +75,7 @@
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                             <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-regular fa-arrow-up"></i></button>
+                            <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
                             <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-angle-down"></i></i></button>
                       </td>
                     </tr>
