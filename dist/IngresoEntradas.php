@@ -105,7 +105,7 @@
                     </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Categoria</label>
                       <select class="form-select" id="validationCustom04" required="">
                         <option selected="" disabled="" value="">Equipo Tecnologico</option>
