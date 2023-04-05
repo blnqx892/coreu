@@ -52,21 +52,19 @@
                 <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
-                      <th style="text-align:center;">Categoria</th>
-                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Jefe Unidad</th>
+                      <th style="text-align:center;">Unidad</th>
+                      <th style="text-align:center;">Usuario</th>
+                      <th style="text-align:center;">Correo</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
                     <tr>
                       <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011-04-25</td>
+                      <td>RRHH</td>
+                      <td>ramirez</td>
+                      <td>ram@gmail.com</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                         <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
@@ -74,11 +72,10 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
-                      <td>2011-07-25</td>
+                      <td>Pedro Vargas</td>
+                      <td>Medio Ambiente</td>
+                      <td>vargas</td>
+                      <td>vargs@gmail.com</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                         <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
@@ -88,11 +85,10 @@
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
-                      <th style="text-align:center;">Categoria</th>
-                      <th style="text-align:center;">Fecha</th>
+                    <th style="text-align:center;">Jefe Unidad</th>
+                      <th style="text-align:center;">Unidad</th>
+                      <th style="text-align:center;">Usuario</th>
+                      <th style="text-align:center;">Correo</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
