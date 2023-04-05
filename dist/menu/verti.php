@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Consultar</a></li>
       </ul>
     </li>
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+    <!--<li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg> Mobiliario y Otros</a>
@@ -94,7 +94,7 @@
         <li class="nav-item"><a class="nav-link" href="AMobiliario.php"> Ingreso de Mobiliario</a></li>
         <li class="nav-item"><a class="nav-link" href="ActualizacionMobiliario.php"> Catalogo</a></li>
       </ul>
-    </li>
+    </li>-->
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
