@@ -65,10 +65,11 @@
                       <td>RRHH</td>
                       <td>ramirez</td>
                       <td>ram@gmail.com</td>
-                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></button>
-                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
-                            class="	fas fa-barcode"></i></button>
+                      <td>
+                      <button type="button" class="btn btn-info rounded-pill" title="Ver"><i class='far fa-eye'></i></button>
+                            <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
+                            <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
+                            <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -76,10 +77,11 @@
                       <td>Medio Ambiente</td>
                       <td>vargas</td>
                       <td>vargs@gmail.com</td>
-                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></button>
-                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
-                            class="	fas fa-barcode"></i></button>
+                      <td>
+                      <button type="button" class="btn btn-info rounded-pill" title="Ver"><i class='far fa-eye'></i></button>
+                            <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
+                            <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
+                            <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
                       </td>
                     </tr>
                   </tbody>
