@@ -101,7 +101,7 @@
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
-                  <div class="col-15" align="right">
+                    <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />
                       <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
                       <button class="btn btn-secondary" type="submit">Cancelar <i class='far fa-times-circle'></i></button>
