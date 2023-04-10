@@ -53,7 +53,7 @@
                        $fecha_actual = date("Y-m-d"); // Obtener la fecha actual en el formato "AAAA-MM-DD"
                       ?>
                       <label for="inputEmail4" class="form-label">Fecha de Adquisición:</label>
-                      <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>" id="" name="fechaC">
+                      <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>" min="<?php echo $fecha_actual; ?>" id="" name="fechaC">
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
