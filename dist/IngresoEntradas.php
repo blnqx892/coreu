@@ -43,12 +43,17 @@
               <div class="card-header"><strong>Ingreso de Entradas</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate="">
+                <form class="g-3 needs-validation" novalidate="" action="Controlador/IngresoEntradasC.php" method="POST"
+                  autocomplete="off">
+                  <input type="hidden" value="GuardarIngresoEntradas" name="bandera">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-4">
+                      <?php
+                       $fecha_actual = date("Y-m-d"); // Obtener la fecha actual en el formato "AAAA-MM-DD"
+                      ?>
                       <label for="inputEmail4" class="form-label">Fecha de Adquisición:</label>
-                      <input type="date" class="form-control" id="inputEmail4">
+                      <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>" id="" name="fechaC">
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
@@ -56,15 +61,15 @@
                     <!--INICIO SECCION DOS-->
                     <div class="col-md-4">
                       <label for="inputEmail4" class="form-label">N° de Factura:</label>
-                      <input type="text" class="form-control" id="inputEmail4">
+                      <input type="text" class="form-control" id="" name="facturaC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputPassword4" class="form-label">Proveedor:</label>
-                      <input type="text" class="form-control" id="inputPassword4">
+                      <input type="text" class="form-control" id="" name="proveedorC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Costo de Adquición:</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                      <input type="text" class="form-control" placeholder="" id="" name="costoC">
                     </div>
                   </div>
                   <!--FIN SECCION DOS-->
@@ -72,15 +77,15 @@
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
                       <label for="inputCity" class="form-label">Nombre:</label>
-                      <input type="text" class="form-control" id="inputCity">
+                      <input type="text" class="form-control" id="" name="nombreC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Serie:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" class="form-control" id="" name="serieC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Marca:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" class="form-control" id="" name="marcaC">
                     </div>
                   </div>
                   <!--FIN SECCION TRES-->
@@ -88,15 +93,15 @@
                     <!--INICIO SECCION CUATRO-->
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Modelo:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" class="form-control" id="" name="modeloC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Color:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" class="form-control" id="" name="colorC">
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
-                      <select class="form-select" id="validationCustom04" required="">
+                      <select class="form-select" required="" id="" name="tipoC">
                         <option selected="" disabled="" value="">Choose...</option>
                         <option selected="" disabled="" value="">Nuevo</option>
                         <option selected="" disabled="" value="">Donado</option>
@@ -105,18 +110,18 @@
                     </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom04">Categoria</label>
-                      <select class="form-select" id="validationCustom04" required="">
-                        <option selected="" disabled="" value="">Equipo Tecnologico</option>
-                        <option selected="" disabled="" value="">Equipo de Oficina</option>
-                        <option selected="" disabled="" value="">Equipo de Maquinaria y Transporte</option>
-                        <option selected="" disabled="" value="">Equipo de Herramientas</option>
-                        <option selected="" disabled="" value="">Equipo Intangible</option>
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
-                    </div>
-                    <div class="col-md-1">
+                      <div class="col-md-4">
+                        <label class="form-label" for="validationCustom04">Categoria</label>
+                        <select class="form-select" required="" id="" name="cateC">
+                          <option selected="" disabled="" value="">Equipo Tecnologico</option>
+                          <option selected="" disabled="" value="">Equipo de Oficina</option>
+                          <option selected="" disabled="" value="">Equipo de Maquinaria y Transporte</option>
+                          <option selected="" disabled="" value="">Equipo de Herramientas</option>
+                          <option selected="" disabled="" value="">Equipo Intangible</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a valid state.</div>
+                      </div>
+                      <div class="col-md-1">
                         <label for="inputCity" class="form-label">Nueva Categoria:</label>
                         <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
                           data-coreui-target="#exampleModal">
@@ -126,7 +131,7 @@
                       <!--INICIO SECCION CINCO-->
                       <div class="col-md-7">
                         <label for="inputZip" class="form-label">Descripción:</label>
-                        <textarea class="form-control" id="validationCustom02" required="" row="6">
+                        <textarea class="form-control" required="" row="6" id="" name="descriC">
                       </textarea>
                       </div>
                     </div>
@@ -144,19 +149,19 @@
                       <div class="row my-1">
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">No. Motor:</label>
-                          <input type="text" class="form-control" id="inputZip">
+                          <input type="text" class="form-control" id="" name="motorC">
                         </div>
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">No. Placa:</label>
-                          <input type="text" class="form-control" id="inputZip">
+                          <input type="text" class="form-control" id="" name="placaC">
                         </div>
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">No. Chasis:</label>
-                          <input type="text" class="form-control" id="inputZip">
+                          <input type="text" class="form-control" id="" name="chasisC">
                         </div>
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">Capacidad:</label>
-                          <input type="text" class="form-control" id="inputZip">
+                          <input type="text" class="form-control" id="" name="capacidadC">
                         </div>
                       </div>
                     </div>
@@ -164,7 +169,8 @@
                     <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />
                       <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
-                      <button class="btn btn-secondary" type="submit">Cancelar <i class='far fa-times-circle'></i></button>
+                      <button class="btn btn-secondary" type="reset">Cancelar <i
+                          class='far fa-times-circle'></i></button>
                     </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
@@ -186,10 +192,10 @@
               <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="col-md-6">
-                  <label for="inputCity" class="form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="inputCity">
-                </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
