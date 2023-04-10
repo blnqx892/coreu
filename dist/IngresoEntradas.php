@@ -50,7 +50,7 @@
                   <div class="row">
                     <div class="col-md-4">
                       <?php
-                       $fecha_actual = date("Y-m-d"); // Obtener la fecha actual en el formato "AAAA-MM-DD"
+                       $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
                       ?>
                       <label for="inputEmail4" class="form-label">Fecha de Adquisición:</label>
                       <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>" min="<?php echo $fecha_actual; ?>" id="" name="fechaC">
