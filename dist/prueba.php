@@ -6,7 +6,7 @@
 <tr>
 <td>21</td>
 <td>
-   <table>
+   <table border="1">
    <tr><td>22a</td></tr>
    <tr><td>22b</td></tr>
    </table>
