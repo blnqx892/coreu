@@ -10,15 +10,15 @@
   <TABLE BORDER="1">
     <TR>
       <TH COLSPAN="2">
-        Celda de dos columnas
+      Existencias
       </TH>
     </TR>
     <TR>
       <TD ROWSPAN="2">
-        Celda de dos filas
+        Maximo
       </TD>
       <TD>
-        Fila2,Columna2
+        Minimo
       </TD>
     </TR>
   </TABLE>

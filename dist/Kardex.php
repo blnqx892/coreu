@@ -46,14 +46,6 @@
                 <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                      <td ROWSPAN="2">
-                        Celda de dos filas
-</td>
-                      <td>
-                        Fila2,Columna2
-</td>
-</tr>
-                    <tr>
                       <th style="text-align:center;">Codigo</th>
                       <th style="text-align:center;">Nombre Suministro</th>
                       <th style="text-align:center;">Tarjeta N°</th>
