@@ -45,7 +45,7 @@
                 <!-- dataTable-->
                 <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
-                    <<TR>
+                    <TR>
       <TD ROWSPAN="2">
         Celda de dos filas
       </TD>
