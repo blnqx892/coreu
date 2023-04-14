@@ -21,11 +21,6 @@
         Fila2,Columna2
       </TD>
     </TR>
-    <TR>
-      <TD>
-        Fila3,Columna2
-      </TD>
-    </TR>
   </TABLE>
 </body>
 
