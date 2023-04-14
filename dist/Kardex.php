@@ -81,7 +81,7 @@
                       <th style="text-align:center;">Codigo</th>
                       <th style="text-align:center;">Nombre Suministro</th>
                       <th style="text-align:center;">Tarjeta N°</th>
-                      <th style="text-align:center;">Existencias Max/Min <td>hh</td></th>
+                      <th style="text-align:center;">Existencias Max/Min <th>hh</th></th>
                       <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
