@@ -1,15 +1,21 @@
-<table border="1">
-<tr>
-<td>11</td>
-<td>12</td>
-</tr>
-<tr>
-<td>21</td>
-<td>
-   <table border="1">
-   <tr><td>22a</td></tr>
-   <tr><td>22b</td></tr>
-   </table>
-</td>
-</tr>
-</table> 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo del uso de tablas - aprenderaprogramar.com</title>
+    </head>
+    <body>
+        <table border="2px"> <!-- Lo cambiaremos por CSS -->
+           <tr>
+              <td>Celda 1</td>
+              <td>Celda 2</td>
+              <td>Celda 3</td>
+          </tr>
+          <tr>
+              <td>Celda 4</td>
+              <td>Celda 5</td>
+              <td>Celda 6</td>
+          </tr>
+        </table>
+    </body>
+</html>
