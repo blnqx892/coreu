@@ -17,12 +17,12 @@
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
-          <li class="breadcrumb-item">
+            <li class="breadcrumb-item">
               <a href="index.php"><svg class="icon me-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
                   </use>
                 </svg></a>
-          </li>
+            </li>
             <li class="breadcrumb-item">
               <span>Kardex</span>
             </li>
@@ -45,14 +45,14 @@
                 <!-- dataTable-->
                 <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
-                    <TR>
-      <TD ROWSPAN="2">
-        Celda de dos filas
-      </TD>
-      <TD>
-        Fila2,Columna2
-      </TD>
-    </TR>
+                    <tr>
+                      <td ROWSPAN="2">
+                        Celda de dos filas
+</td>
+                      <td>
+                        Fila2,Columna2
+</td>
+</tr>
                     <tr>
                       <th style="text-align:center;">Codigo</th>
                       <th style="text-align:center;">Nombre Suministro</th>
