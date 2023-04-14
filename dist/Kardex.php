@@ -82,7 +82,14 @@
                       <th style="text-align:center;">Nombre Suministro</th>
                       <th style="text-align:center;">Tarjeta N°</th>
                       <th style="text-align:center;">Existencias Max/Min </th>
-                      <td>hh</td>
+                      <TR>
+      <TD ROWSPAN="2">
+        Celda de dos filas
+      </TD>
+      <TD>
+        Fila2,Columna2
+      </TD>
+    </TR>
                       <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
