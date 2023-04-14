@@ -47,8 +47,11 @@
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-3">
+                    <?php
+                       $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
+                      ?>
                       <label for="inputEmail4" class="form-label">Fecha:</label>
-                      <input type="date" class="form-control" id="inputEmail4">
+                      <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>" min="<?php echo $fecha_actual; ?>" id="" >
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
