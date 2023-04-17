@@ -56,21 +56,21 @@
                   </thead>
                   <tbody style="text-align:center;">
                     <tr>
-                      <td>12-11-2022</td>
-                      <td>Equipo de Oficina</td>
-                      <td>Estante Metalico</td>
-                      <td>Dexion</td>
-                      <td>Unidad de Estado Familiar</td>
+                      <td>09873</td>
+                      <td>Resma Papel Bond</td>
+                      <td>13</td>
+                      <td>38/6</td>
+                      <td>Estante B</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                       </td>
                     </tr>
                     <tr>
-                      <td>9-1-2023</td>
-                      <td>Equipo Intangible</td>
-                      <td>Software Oficce</td>
-                      <td>Microsoft</td>
-                      <td>Unidad de UACI</td>
+                      <td>00098</td>
+                      <td>Lapiceros Facela</td>
+                      <td>19</td>
+                      <td>38/6</td>
+                      <td>Estante B</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                       </td>
