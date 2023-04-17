@@ -35,7 +35,7 @@
       <td>Max: 80 &nbsp;&nbsp; Min:10</td>
     </tr> -->
     <tr>
-      <th>Fecha</th>
+      <th rowspan="2">Fecha</th>
       <th>Concepto</th>
       <th>Fondos Procedencia</th>
       <th colspan="2">Entradas</th>
