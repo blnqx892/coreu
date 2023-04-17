@@ -71,14 +71,15 @@
                       <td>19</td>
                       <td>38/6</td>
                       <td>Estante B</td>
-                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
+                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver" data-coreui-toggle="modal"
+                          data-coreui-target="#exampleModal" data-coreui-whatever="@mdo"><i
                             class='far fa-eye'></i></button>
                       </td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr>
-                    <th style="text-align:center;">Codigo</th>
+                      <th style="text-align:center;">Codigo</th>
                       <th style="text-align:center;">Nombre Suministro</th>
                       <th style="text-align:center;">Tarjeta N°</th>
                       <th style="text-align:center;">Existencias Max/Min</th>
@@ -95,6 +96,89 @@
         </div>
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
+
+      <!-- Scrollable modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Control Existencias de Suministro</h5>
+              <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="demo_info" class="box"></div>
+              <table id="example" class="display" style="width:100%">
+                <tr style="text-align:left;">
+                  <th>Codigo:</th>
+                  <td>0 km </td>
+                  <td rowspan="3" style="text-align:center;">Control de Existenciasde Suministros</td>
+                  <th>Nombre:</th>
+                  <td>8 km</td>
+                </tr>
+                <tr style="text-align:left;">
+                  <th>Presentación:</th>
+                  <td>23 km</td>
+                  <th>Unidad de Medida:</th>
+                  <td>19 km</td>
+                </tr>
+                <tr style="text-align:left;">
+                  <th>Tarjeta N°:</th>
+                  <td>23 km</td>
+                  <th>Almacen:</th>
+                  <td>19 km</td>
+                </tr>
+                <tr style="text-align:left;">
+                  <td colspan="2"></td>
+                  <th colspan="1">Estante: 1A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entrepaño: C
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Casilla: 4</th>
+                  <th>Existencias:</th>
+                  <td>Max: 80 &nbsp;&nbsp; Min:10</td>
+                </tr>
+              </table><br>
+              <!-- dataTable-->
+              <table id="example" class="display" style="width:100%">
+                <thead>
+                <tr>
+      <th>Fecha</th>
+      <th>Concepto</th>
+      <th>Fondos Procedencia</th>
+      <th colspan="2">Entradas</th>
+      <th colspan="2">Salidas</th>
+      <th>Saldos Articulos</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tiger Nixon</td>
+        <td>System Architect</td>
+        <td>Edinburgh</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>sumin</td>
+      </tr>
+      <tr>
+        <td>Garrett Winters</td>
+        <td>Accountant</td>
+        <td>Tokyo</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>sumin</td>
+      </tr>
+                </tbody>
+              </table>
+              <!-- //dataTable-->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>

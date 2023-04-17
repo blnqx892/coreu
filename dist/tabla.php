@@ -56,44 +56,19 @@
             <div id="demo_info" class="box"></div>
             <!-- dataTable-->
             <table id="example" class="display" style="width:100%">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>Edinburgh</td>
-                  <td>61</td>
-                  <td>2011-04-25</td>
-                  <td>$320,800</td>
-                </tr>
-                <tr>
-                  <td>Garrett Winters</td>
-                  <td>Accountant</td>
-                  <td>Tokyo</td>
-                  <td>63</td>
-                  <td>2011-07-25</td>
-                  <td>$170,750</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
-                </tr>
-              </tfoot>
+              <tr>
+                <th>Mike (lastimado)</th>
+                <td colspan="2">0 km </td>
+                <td>4 km</td>
+                <td>8 km</td>
+                <td>5 km</td>
+              </tr>
+              <tr>
+                <th>Susan</th>
+                <td>23 km</td>
+                <td>18 km</td>
+                <td>19 km</td>
+              </tr>
             </table>
             <!-- //dataTable-->
           </div>
