@@ -43,7 +43,7 @@
               <div class="card-header"><strong>Ingreso de Entradas</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate="" action="Controlador/IngresoEntradasC.php" method="POST"
+                <form class="g-3 needs-validation" action="Controlador/IngresoEntradasC.php" method="POST"
                   autocomplete="off">
                   <input type="hidden" value="GuardarIngresoEntradas" name="bandera">
                   <!--INICIO SECCION FECHA-->
