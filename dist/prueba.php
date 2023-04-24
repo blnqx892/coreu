@@ -35,7 +35,7 @@
       <td>Max: 80 &nbsp;&nbsp; Min:10</td>
     </tr> -->
     <tr>
-      <th rowspan="2">Fecha</th>
+      <th>Fecha</th>
       <th>Concepto</th>
       <th>Fondos Procedencia</th>
       <th colspan="2">Entradas</th>
@@ -48,8 +48,8 @@
         <td>Tiger Nixon</td>
         <td>System Architect</td>
         <td>Edinburgh</td>
-        <td>1</td>
-        <td>2</td>
+        <td rowspan="2">Entradas</td>
+        <td rowspan="2">Salidas</td>
         <td>3</td>
         <td>4</td>
         <td>sumin</td>
