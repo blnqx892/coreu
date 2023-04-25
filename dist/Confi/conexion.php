@@ -1,12 +1,16 @@
 <?php 
 function conectarMysql(){
-    $server = "localhost";
-    $user = "root";
-    $pass = "";
-    $db = "sicafi";
-
-    $con = mysqli_connect($server,$user,$pass) or die ("Error a Conectar en la BD".mysqli_connect_error());
-    mysqli_select_db($con, $db) or die ("Error a Conectar en la BD".mysqli_connect_error());
-    return $con;
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "sicafi";
+    
+    // Crear una conexión
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    
+    // Comprobar la conexión
+    if (!$conn) {
+        die("La conexión ha fallado: " . mysqli_connect_error());
+    }
 }
 ?>

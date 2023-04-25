@@ -45,7 +45,7 @@
                 <!--INICIO FORM-->
                 <form class="g-3 needs-validation" action="Controlador/IngresoEntradasC.php" method="POST"
                   autocomplete="off">
-                  <input type="hidden" value="GuardarIngresoEntradas" name="bandera">
+                  <input type="hidden" value="GuardarIngreso" name="bandera">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-4">
@@ -69,7 +69,7 @@
                     </div>
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Costo de Adquición:</label>
-                      <input type="text" class="form-control" placeholder="" id="" name="costoC">
+                      <input type="number" class="form-control" placeholder="" id="" name="costoC">
                     </div>
                   </div>
                   <!--FIN SECCION DOS-->
