@@ -51,7 +51,7 @@
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Nombre:</label>
-                      <input type="text" class="form-control" id="" placeholder="" name="nombreC">
+                      <input type="text" class="form-control" id="" placeholder="" name="nombreC" >
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Apellido:</label>
@@ -78,11 +78,13 @@
                       </div>
                       <div class="col-md-3">
                         <label for="inputZip" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control" id="" name="contraC">
+                        <input type="password" class="form-control" id="contraC" name="contraC">
+                        <div id="error1"></div>
                       </div>
                       <div class="col-md-3">
                         <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                        <input type="password" class="form-control" id="" name="contraC1">
+                        <input type="password" class="form-control" id="contraC1" name="contraC1">
+                        <div id="error2"></div>
                       </div>
                     </div>
                     <!--FIN SECCION CUATRO-->
@@ -108,6 +110,19 @@
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
   </div>
+  
+  <!-- SCRIPT QUE VALIDA SI LAS CONTRASEÑAS SON IGUALES-->
+  <script>
+      $(document).ready(function(){
+            $("#contraC1").on("keyup",function(){
+                if($("#contraC1").val() == $("#contraC").val()){
+                    $("#contraC1").addClass("border border-success").removeClass("border border-danger");
+                }else{
+                    $("#contraC1").addClass("border border-danger").removeClass("border border-success");
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
