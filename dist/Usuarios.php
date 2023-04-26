@@ -43,44 +43,46 @@
               <div class="card-header"><strong>Ingreso de Datos</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate="">
+                <form class="g-3 needs-validation" novalidate=""action="Controlador/UsuarioC.php" method="POST"
+                  autocomplete="off">
+                  <input type="hidden" value="Guardar" name="bandera">
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Nombre:</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                      <input type="text" class="form-control" id="" placeholder="" name="nombreC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Apellido:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" class="form-control" id="" name="apellidoC">
                     </div>
                     <div class="col-md-2">
                       <label for="inputZip" class="form-label">Usuario:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" class="form-control" id="" name="usuarioC">
                     </div>
                     <!--FIN SECCION TRES-->
                     <div class="row  my-4">
                       <!--INICIO SECCION CUATRO-->
                       <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Rol</label>
-                      <select class="form-select" id="validationCustom04" required="">
-                        <option selected="" disabled="" value="">AAlmacen</option>
-                        <option selected="" disabled="" value="">AAFijo</option>
+                      <select class="form-select" id="" name="rolC" data-placeholder="Seleccione Producto">
+                        <option  value="">AAlmacen</option>
+                        <option  value="">AAFijo</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                       <div class="col-md-3">
                         <label for="inputCity" class="form-label">Email:</label>
-                        <input type="e-mail" class="form-control" id="inputCity">
+                        <input type="e-mail" class="form-control" id="" name="emailC">
                       </div>
                       <div class="col-md-3">
                         <label for="inputZip" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control" id="inputZip">
+                        <input type="password" class="form-control" id="" name="contraC">
                       </div>
                       <div class="col-md-3">
                         <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                        <input type="password" class="form-control" id="inputZip">
+                        <input type="password" class="form-control" id="" name="contraC1">
                       </div>
                     </div>
                     <!--FIN SECCION CUATRO-->

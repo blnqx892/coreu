@@ -3,10 +3,10 @@ include("../Confi/conexion.php");
 $conexion = con();
 
 $bandera = $_POST["bandera"];
-if ($bandera=="Guardar") {
-    $fecha = $_POST["fechaC"];
-    $costo = $_POST["costoC"];
-    $sql = "INSERT INTO ingreso_entradas (fecha_adquisicion,costo_adquisicion) VALUES ('$fecha', '$costo')";
+if ($bandera=="GuardarIngreso") {
+    $fecha = $_POST["nombre"];
+    $costo = $_POST["edad"];
+    $sql = "INSERT INTO usuario (nombre,edad) VALUES ('$fecha', '$costo')";
   
     // Ejecutar la consulta SQL
 if (mysqli_query($conexion, $sql)) {

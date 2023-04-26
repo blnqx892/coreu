@@ -45,7 +45,7 @@
                 <!--INICIO FORM-->
                 <form class="g-3 needs-validation" action="Controlador/IngresoEntradasC.php" method="POST"
                   autocomplete="off">
-                  <input type="hidden" value="GuardarIngreso" name="bandera">
+                  <input type="hidden" value="Guardar" name="bandera">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-4">
