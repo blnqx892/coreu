@@ -49,7 +49,9 @@
   </script>
   <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
 
-<script src="https://kit.fontawesome.com/be2284e4f3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/be2284e4f3.js" crossorigin="anonymous"></script>
   <!-- dataTable-->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
+
 </head>

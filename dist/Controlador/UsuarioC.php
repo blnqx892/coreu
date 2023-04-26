@@ -1,4 +1,5 @@
 <?php 
+
 include("../Confi/conexion.php");
 $conexion = con();
 
@@ -14,7 +15,10 @@ if ($bandera=="Guardar") {
   
     // Ejecutar la consulta SQL
 if (mysqli_query($conexion, $sql)) {
-    echo "Los datos se han insertado correctamente";
+    // Mensaje de alerta
+    echo "<script>alert('Registra con Exitó');</script>";
+// Redirigir a otra página
+    header("location: /coreu/dist/Usuarios.php");
 } else {
     echo "Error al insertar los datos: ". mysqli_error($conexion);
 }
