@@ -43,7 +43,7 @@
               <div class="card-header"><strong>Ingreso de Datos</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate=""action="Controlador/UsuarioC.php" method="POST"
+                <form class="g-3 needs-validation" role="form" action="Usuarios.php" method="POST"
                   autocomplete="off">
                   <input type="hidden" value="Guardar" name="bandera">
                   <!--FIN SECCION DOS-->
@@ -51,30 +51,30 @@
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Nombre:</label>
-                      <input type="text" class="form-control" id="" placeholder="" name="nombreC" >
+                      <input type="text" class="form-control" id="nombreC" placeholder="" name="nombreC" >
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Apellido:</label>
-                      <input type="text" class="form-control" id="" name="apellidoC">
+                      <input type="text" class="form-control" id="apellidoC" name="apellidoC">
                     </div>
                     <div class="col-md-2">
                       <label for="inputZip" class="form-label">Usuario:</label>
-                      <input type="text" class="form-control" id="" name="usuarioC">
+                      <input type="text" class="form-control" id="usuarioC" name="usuarioC">
                     </div>
                     <!--FIN SECCION TRES-->
                     <div class="row  my-4">
                       <!--INICIO SECCION CUATRO-->
                       <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Rol</label>
-                      <select class="form-select" id="" name="rolC" data-placeholder="Seleccione Producto">
-                        <option  value="">AAlmacen</option>
-                        <option  value="">AAFijo</option>
+                      <select class="form-select" id="rolC" name="rolC" data-placeholder="Seleccione Producto">
+                        <option  value="Almacen">AAlmacen</option>
+                        <option  value="Activo Fijo">AAFijo</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                       <div class="col-md-3">
                         <label for="inputCity" class="form-label">Email:</label>
-                        <input type="e-mail" class="form-control" id="" name="emailC">
+                        <input type="e-mail" class="form-control" id="emailC" name="emailC">
                       </div>
                       <div class="col-md-3">
                         <label for="inputZip" class="form-label">Contraseña:</label>
@@ -90,7 +90,7 @@
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />
-                      <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
+                      <button class="btn btn-success" type="submit" id="btnGuardar" name="btnGuardar">Guardar <i class='far fa-check-square'></i></button>
                       <button class="btn btn-secondary" type="submit">Cancelar <i class='far fa-times-circle'></i></button>
                     </div>
                   </div>
@@ -110,7 +110,46 @@
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
   </div>
-  
+<?php
+if (isset($_REQUEST['btnGuardar'])) {
+  include_once '../dist/Confi/conexion.php';
+
+  $nombre = $_REQUEST['nombreC'];
+  $apellido = $_REQUEST['apellidoC'];
+  $usuario = $_REQUEST['usuarioC'];
+  $rol = $_REQUEST['rolC'];
+  $correo = $_REQUEST['emailC'];
+  $pass1 = $_REQUEST['contraC'];
+  $pass2 = $_REQUEST['contraC1'];
+
+  Conexion::abrir_conexion();
+    $conexionx = Conexion::obtener_conexion();
+    $sql = "INSERT INTO usuarios(nombre, apellido, usuario, email, contrasena, rol) VALUES('$nombre','$apellido','$usuario','$correo','$pass1','$rol')";
+
+    try {
+      $sentencia = $conexionx->prepare($sql);
+      $usuario_insertado = $sentencia->execute();
+      if($usuario_insertado){
+        echo '<script>swal({
+            title: "Registro",
+            text: "Guardado!",
+            type: "success",
+            confirmButtonText: "Aceptar",
+            closeOnConfirm: false
+            },
+            function() {
+                location.href = "Usuarios.php";
+            });</script>';
+    } else {
+        echo "No se pudo insertar el usuario";
+    }
+  } catch (Exception $e) {
+      echo "Error al insertar el usuario: " . $e->getMessage();
+  }
+
+
+}
+?>
   <!-- SCRIPT QUE VALIDA SI LAS CONTRASEÑAS SON IGUALES-->
   <script>
       $(document).ready(function(){
