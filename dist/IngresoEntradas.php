@@ -63,14 +63,26 @@
                       <label for="inputEmail4" class="form-label">N° de Factura:</label>
                       <input type="text" class="form-control" id="" name="facturaC">
                     </div>
-                    <div class="col-md-4">
-                      <label for="inputPassword4" class="form-label">Proveedor:</label>
-                      <input type="text" class="form-control" id="" name="proveedorC">
-                    </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputAddress2" class="form-label">Costo de Adquición:</label>
                       <input type="number" class="form-control" placeholder="" id="" name="costoC">
                     </div>
+                    <div class="col-md-3">
+                    <label class="form-label" for="validationCustom04">Proveedor: </label>
+                      <select class="form-select" required="" id="" name="proveC">
+                        <option selected="" disabled="" value="">Choose...</option>
+                        <option selected=""  value="">1</option>
+                        <option selected=""  value="">2</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                    <div class="col-md-1">
+                        <label for="inputCity" class="form-label">Nuevo:</label>
+                        <button type="button" title="Nuevo Proveedor" class="btn btn-primary" data-coreui-toggle="modal"
+                          data-coreui-target="#modalCate">
+                          <i class='fas fa-plus'></i>
+                        </button>
+                      </div>
                   </div>
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
@@ -95,18 +107,22 @@
                       <label for="inputZip" class="form-label">Modelo:</label>
                       <input type="text" class="form-control" id="" name="modeloC">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Color:</label>
                       <input type="text" class="form-control" id="" name="colorC">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
-                      <select class="form-select" required="" id="" name="tipoC">
+                      <select class="form-select" required="" id="" name="cargoC">
                         <option selected="" disabled="" value="">Choose...</option>
                         <option selected="" disabled="" value="">Nuevo</option>
                         <option selected="" disabled="" value="">Donado</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="inputZip" class="form-label">Vida Util:</label>
+                      <input type="number" class="form-control" id="" name="vidaC">
                     </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
@@ -139,12 +155,12 @@
                       <div class="col-md-1">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
-                          <input class="form-check-input" value="0" type="checkbox" role="switch"
+                          <input class="form-check-input" value="1" type="checkbox" role="switch"
                             id="flexSwitchCheckChecked" checked name="activarFormulario" onclick="mostrarFormulario()">
                         </div>
                       </div>
                     </div>
-                    <div id="formulario" style="display:none;">
+                    <div id="formulario" style="display:block;">
                       <hr style="color: black; background-color: black; width:100%;" />
                       <div class="row my-1">
                         <div class="col-md-2">
@@ -184,7 +200,7 @@
       <!--MODAL CATEGORIA-->
       <!-- Button trigger modal -->
       <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="modalCate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -216,13 +232,12 @@
     <script>
       function mostrarFormulario() {
         var formulario = document.getElementById("formulario");
-        if (formulario.style.display === "none") {
-          formulario.style.display = "block";
-        } else {
+        if (formulario.style.display === "block") {
           formulario.style.display = "none";
+        } else {
+          formulario.style.display = "block";
         }
       }
-
     </script>
 
   </div>
