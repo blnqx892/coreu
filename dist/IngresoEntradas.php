@@ -77,7 +77,7 @@
                       ?>
                       <label class="form-label" for="validationCustom04">Proveedor: </label>
                       <select class="form-select" required id="" name="proveC">
-                        <option value="">Elegir Proveedor</option>
+                        <option selected="" disabled="" value="">Elegir Proveedor</option>
                         <?php
                             While($prove=mysqli_fetch_array($provee)){
                             echo '<option value="'.$prove['id'].'">'.$prove['proveedor'].'</option>';
