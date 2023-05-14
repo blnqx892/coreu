@@ -69,11 +69,20 @@
                       <input type="number" class="form-control" placeholder="" id="" name="costoC">
                     </div>
                     <div class="col-md-3">
+                      <!-- CARGANDO DESDE BD AL PROVEEDOR -->
+                      <?php
+                       $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+                       $sql="SELECT * from proveedores order by proveedor ASC";
+                       $provee = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); 
+                      ?>
                       <label class="form-label" for="validationCustom04">Proveedor: </label>
-                      <select class="form-select" required="" id="" name="proveC">
-                        <option selected="" disabled="" value="">Choose...</option>
-                        <option selected="" value="">1</option>
-                        <option selected="" value="">2</option>
+                      <select class="form-select" required id="" name="proveC">
+                        <option value="">Elegir Proveedor</option>
+                        <?php
+                            While($prove=mysqli_fetch_array($provee)){
+                            echo '<option value="'.$prove['id'].'">'.$prove['proveedor'].'</option>';
+                             }
+                        ?>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
@@ -128,13 +137,19 @@
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
                       <div class="col-md-4">
+                      <?php
+                       $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+                       $sql="SELECT * from categorias order by categoria ASC";
+                       $categ = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); 
+                      ?>
                         <label class="form-label" for="validationCustom04">Categoria</label>
                         <select class="form-select" required="" id="" name="cateC">
-                          <option selected="" disabled="" value="">Equipo Tecnologico</option>
-                          <option selected="" disabled="" value="">Equipo de Oficina</option>
-                          <option selected="" disabled="" value="">Equipo de Maquinaria y Transporte</option>
-                          <option selected="" disabled="" value="">Equipo de Herramientas</option>
-                          <option selected="" disabled="" value="">Equipo Intangible</option>
+                          <option selected="" disabled="" value="">Elegir Categoria</option>
+                          <?php
+                            While($cat=mysqli_fetch_array($categ)){
+                            echo '<option value="'.$cat['id'].'">'.$cat['categoria'].'</option>';
+                             }
+                        ?>
                         </select>
                         <div class="invalid-feedback">Please select a valid state.</div>
                       </div>
