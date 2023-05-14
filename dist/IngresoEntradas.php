@@ -53,7 +53,8 @@
                        $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
                       ?>
                       <label for="inputEmail4" class="form-label">Fecha de Adquisición:</label>
-                      <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>" min="<?php echo $fecha_actual; ?>" id="" name="fechaC">
+                      <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>"
+                        min="<?php echo $fecha_actual; ?>" id="" name="fechaC">
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
@@ -68,21 +69,21 @@
                       <input type="number" class="form-control" placeholder="" id="" name="costoC">
                     </div>
                     <div class="col-md-3">
-                    <label class="form-label" for="validationCustom04">Proveedor: </label>
+                      <label class="form-label" for="validationCustom04">Proveedor: </label>
                       <select class="form-select" required="" id="" name="proveC">
                         <option selected="" disabled="" value="">Choose...</option>
-                        <option selected=""  value="">1</option>
-                        <option selected=""  value="">2</option>
+                        <option selected="" value="">1</option>
+                        <option selected="" value="">2</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                     <div class="col-md-1">
-                        <label for="inputCity" class="form-label">Nuevo:</label>
-                        <button type="button" title="Nuevo Proveedor" class="btn btn-primary" data-coreui-toggle="modal"
-                          data-coreui-target="#modalCate">
-                          <i class='fas fa-plus'></i>
-                        </button>
-                      </div>
+                      <label for="inputCity" class="form-label">Nuevo</label>
+                      <button type="button" title="Nuevo Proveedor" class="btn btn-primary" data-coreui-toggle="modal"
+                        data-coreui-target="#modalProv">
+                        <i class='fas fa-plus'></i>
+                      </button>
+                    </div>
                   </div>
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
@@ -138,9 +139,9 @@
                         <div class="invalid-feedback">Please select a valid state.</div>
                       </div>
                       <div class="col-md-1">
-                        <label for="inputCity" class="form-label">Nueva Categoria:</label>
+                        <label for="inputCity" class="form-label">Nuevo</label>
                         <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
-                          data-coreui-target="#exampleModal">
+                          data-coreui-target="#modalCate" title="Nueva Categoria">
                           <i class='fas fa-plus'></i>
                         </button>
                       </div>
@@ -197,27 +198,55 @@
         </div>
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
+      <!--MODAL PROVEEDOR -->
+      <!-- Modal -->
+      <div class="modal fade" id="modalProv" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form class="g-3 needs-validation" action="Controlador/NuevoC.php" method="POST" autocomplete="off">
+            <input type="hidden" value="Guardar1" name="bandera">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Nuevo Proveedor</h5>
+                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Nombre:</label>
+                  <input type="text" class="form-control" id="" name="nombreProv">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="reset" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--////////////////////////////////////////-->
       <!--MODAL CATEGORIA-->
-      <!-- Button trigger modal -->
       <!-- Modal -->
       <div class="modal fade" id="modalCate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Agregar Nueva Categoria</h5>
-              <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="col-md-6">
-                <label for="inputCity" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="inputCity">
+          <form class="g-3 needs-validation" action="Controlador/NuevoC.php" method="POST" autocomplete="off">
+            <input type="hidden" value="Guardar2" name="bandera">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Nueva Categoria</h5>
+                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Nombre:</label>
+                  <input type="text" class="form-control" id="" name="nombreCate">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="reset" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
       <!--////////////////////////////////////////-->
@@ -238,6 +267,7 @@
           formulario.style.display = "block";
         }
       }
+
     </script>
 
   </div>
