@@ -72,11 +72,12 @@
             Modals</a></li>
       </ul>
     </li>
+    <!--
     <li class="nav-item"><a class="nav-link" href="widgets.html">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calculator"></use>
         </svg>Reportes y Consultas</a></li>
-    <li class="nav-divider"></li>
+    <li class="nav-divider"></li>-->
     <li class="nav-title">ALMACÉN</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
@@ -133,13 +134,14 @@
             Restricciones </a></li>
       </ul>
     </li>
+    <!--
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg>Reportes y Consultas</a>
       <ul class="nav-group-items">
       </ul>
-    </li>
+    </li>-->
 
     <li class="nav-title">UACI</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
