@@ -24,7 +24,7 @@
                 </svg></a>
             </li>
             <li class="breadcrumb-item">
-              <span>Codificcacion de Activos</span>
+              <span>Control Adquisición</span>
             </li>
             <li class="breadcrumb-item active">
               <span>Asignación de Activo</span>

@@ -17,7 +17,7 @@
             Actualización de Adquisición</a></li>
       </ul>
     </li>
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+    <!--<li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Codificación de Activo</a>
@@ -26,7 +26,7 @@
             de activo</a></li>
         <li class="nav-item"><a class="nav-link" href="Actualizacion.php"><span class="nav-icon"></span>
             Actualización</a></li>
-      </ul>
+      </ul> -->
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">

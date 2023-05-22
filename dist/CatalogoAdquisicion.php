@@ -82,11 +82,60 @@
                                           echo $fechaCom ?>
                       </td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></button>
-                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
+                            class='far fa-eye' data-coreui-toggle="modal"
+                          data-coreui-target="#modalVer"></i></button>
+                        <button type="button" onclick="window.location.href='../dist/AsignaciondeActivo.php'" class="btn btn-warning rounded-pill" title="Codificar"><i
                             class="	fas fa-barcode"></i></button>
                       </td>
                     </tr>
+
+                    <!--MODAL PROVEEDOR -->
+      <!-- Modal -->
+      <div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Información de Adquisición</h5>
+            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row my-4">
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Jefe de Unidad:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Unidad:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Correo:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+              </div>
+              <div class="row my-4">
+              <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Usuario:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div><div class="col-md-4">
+                  <label for="inputZip" class="form-label">Contraseña:</label>
+                  <input type="password" class="form-control" id="inputZip">
+                </div><div class="col-md-4">
+                  <label for="inputZip" class="form-label">Repetir Contraseña:</label>
+                  <input type="password" class="form-control" id="inputZip">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!--////////////////////////////////////////-->
                   <?php } }?>
                   </tbody>
                   <tfoot>
