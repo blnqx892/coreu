@@ -23,7 +23,8 @@ if ($bandera=="Guardar") {
   
     // Ejecutar la consulta SQL
 if (mysqli_query($conexion, $sql)) {
-    echo "Los datos se han insertado correctamente";
+    //echo "Los datos se han insertado correctamente";
+    header("location: /Coreu/dist/IngresoEntradas.php");
 } else {
     echo "Error al insertar los datos: ". mysqli_error($conexion);
 }

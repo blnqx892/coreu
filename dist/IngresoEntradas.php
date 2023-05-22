@@ -62,7 +62,7 @@
                     <!--INICIO SECCION DOS-->
                     <div class="col-md-4">
                       <label for="inputEmail4" class="form-label">N° de Factura:</label>
-                      <input type="text" class="form-control" id="" name="facturaC">
+                      <input type="text" class="form-control" id="" name="facturaC" required="">
                     </div>
                     <div class="col-md-3">
                       <label for="inputAddress2" class="form-label">Costo de Adquición:</label>

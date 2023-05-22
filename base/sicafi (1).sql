@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-04-2023 a las 15:55:37
+-- Tiempo de generación: 14-05-2023 a las 21:15:21
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.0.25
 
@@ -227,8 +227,8 @@ CREATE TABLE `usuarios` (
 --
 ALTER TABLE `asignacion_activo`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `asignacion_activo_ingreso_entradas_id_fk` (`fk_ingreso_entradas`),
-  ADD KEY `asignacion_activo_usuarios_id_fk` (`fk_usuarios`);
+  ADD KEY `asignacion_activo_usuarios_id_fk` (`fk_usuarios`),
+  ADD KEY `asignacion_activo_ingreso_entradas_id_fk` (`fk_ingreso_entradas`);
 
 --
 -- Indices de la tabla `bitacora`
@@ -268,8 +268,8 @@ ALTER TABLE `kardex`
 --
 ALTER TABLE `mantenimiento_activos`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `mantenimiento_activos_ingreso_entradas_id_fk` (`fk_ingreso_entradas`),
-  ADD KEY `mantenimiento_activos_unidades_id_fk` (`fk_unidades`);
+  ADD KEY `mantenimiento_activos_unidades_id_fk` (`fk_unidades`),
+  ADD KEY `mantenimiento_activos_ingreso_entradas_id_fk` (`fk_ingreso_entradas`);
 
 --
 -- Indices de la tabla `proveedores`
@@ -320,6 +320,12 @@ ALTER TABLE `bitacora`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `ingreso_entradas`
+--
+ALTER TABLE `ingreso_entradas`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --

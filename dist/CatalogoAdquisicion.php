@@ -5,6 +5,11 @@
 <!-- ////////////////////////-->
 
 <body>
+<?php
+    $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+    $sql="SELECT * from ingreso_entradas order by nombre_adquisicion ASC";
+    $nombre = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); 
+?>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
   <?php include("menu/verti.php"); ?>
   <!-- ////////////////////////-->
@@ -58,30 +63,31 @@
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
+                  <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
+                                    <?php if($mostrar['id'] != 28){ ?>
                     <tr>
-                      <td>UPS</td>
-                      <td>009890</td>
-                      <td>Forza</td>
-                      <td>Equipo Técnologico</td>
-                      <td>2011-04-25</td>
+                      <td><?php echo $mostrar['nombre_adquisicion'] ?></td>
+                      <td><?php echo $mostrar['numero_factura'] ?></td>
+                      <td><?php echo $mostrar['marca'] ?></td>
+                      <td><?php 
+                              $aux = $mostrar['fk_categoria'];
+                              $sql1 = "SELECT categoria FROM categorias where id = '$aux'";
+                              $cate = mysqli_query($conexion, $sql1) or die("No se puedo ejecutar la consulta");
+                              $cate = mysqli_fetch_array($cate);
+                              echo $cate['categoria']; 
+                          ?>
+                      </td>
+                      <td><?php $fechaCom = explode("-",$mostrar['fecha_adquisicion']);
+                                $fechaCom = $fechaCom[2].'/'.$fechaCom[1].'/'.$fechaCom[0];
+                                          echo $fechaCom ?>
+                      </td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
                         <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
                             class="	fas fa-barcode"></i></button>
                       </td>
                     </tr>
-                    <tr>
-                      <td>Impresora</td>
-                      <td>009890</td>
-                      <td>Epson</td>
-                      <td>Equipo Técnologico</td>
-                      <td>2011-07-25</td>
-                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></button>
-                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
-                            class="	fas fa-barcode"></i></button>
-                      </td>
-                    </tr>
+                  <?php } }?>
                   </tbody>
                   <tfoot>
                     <tr>
