@@ -43,7 +43,7 @@
               <div class="card-header"><strong>Actualizacion Usuarios</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
                       <th style="text-align:center;">Nombre</th>

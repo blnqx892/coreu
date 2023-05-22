@@ -51,7 +51,7 @@
                 <button type="button" class="btn btn-secondary rounded-pill" title="PDF">Reporte <i class="far fa-file-pdf"></i></button>
                 </div><br>
                 <!-- dataTable-->
-                <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
                       <th style="text-align:center;">Nombre</th>
