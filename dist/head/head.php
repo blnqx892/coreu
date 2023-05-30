@@ -66,4 +66,6 @@
     });
 });
   </script>
+
+<link rel="" href="BarcodeGenerator.php">
 </head>
