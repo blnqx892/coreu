@@ -1,10 +1,12 @@
-var texto = "123456789";
-
-// Selecciona el elemento HTML donde se mostrará el código de barras
-var contenedorCodigoBarras = document.getElementById("barcode");
-
-// Genera el código de barras utilizando la biblioteca JsBarcode
-JsBarcode(contenedorCodigoBarras, texto, {
-  format: "EAN13",
-  displayValue: true
+$(document).on('click', '#generar', function (evento) {
+    evento.preventDefault(); 
+    console.log("bien");
+    let tabla=document.getElementById("miTabla");
+    let fila = $(this).closest("tr");
+      let data = tabla.row(fila).data();
+      console.log(data);
+    JsBarcode("#contenedorCodigoBarras", "Hi world!",{
+        displayValue: false,
+      });
 });
+

@@ -3,7 +3,7 @@
 <!-- IMPORTAR ARCHIVO CABECERA-->
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
-
+<script src="js/JsBarcode.all.min.js"></script>
 <body>
 <?php
     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
@@ -46,7 +46,7 @@
           <div class="col-12">
             <div class="card mb-4">
               <div class="card-header"><strong>Suminstros</strong></div>
-              <canvas id="barcode"></canvas>
+              <canvas id="contenedorCodigoBarras"></canvas>
               <div class="card-body">
                 <!-- dataTable-->
                 <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
@@ -74,7 +74,7 @@
                             <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
                             <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
                             <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
-                            <button type="button" class="btn btn-outline-dark rounded-pill" title="Generar Código"><i class="fas fa-barcode"></i></button>
+                            <button id="generar" type="button" class="btn btn-outline-dark rounded-pill" title="Generar Código"><i class="fas fa-barcode"></i></button>
                       </td>
                     </tr>
                     <?php } }?>
@@ -99,13 +99,17 @@
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
+
+  
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
       <!-- ////////////////////////-->
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+    <script src="js/utils.js"></script>
+
+    
 </body>
-<script src="js/JsBarcode.all.min.js"></script>
-<script src="js/utils.js"></script>
+
 </html>

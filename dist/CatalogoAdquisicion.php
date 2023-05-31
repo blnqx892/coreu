@@ -7,7 +7,7 @@
 <body>
 <?php
     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
-    $sql="SELECT * from ingreso_ingreso suministros order by nombre_suministro ASC";
+    $sql="SELECT * from ingreso_entradas order by nombre_adquisicion ASC";
     $nombre = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); 
 ?>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
