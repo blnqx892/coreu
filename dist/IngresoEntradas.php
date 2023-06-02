@@ -68,6 +68,7 @@
                       <label for="inputAddress2" class="form-label">Costo de Adquición:</label>
                       <input type="number" class="form-control" placeholder="" id="" name="costoC">
                     </div>
+
                     <div class="col-md-3">
 
                       <label class="form-label" for="validationCustom04">Proveedor: </label>
@@ -120,6 +121,7 @@
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
+
                     <div class="col-md-2">
                       <label for="inputZip" class="form-label">Vida Util:</label>
                       <input type="number" class="form-control" id="" name="vidaC">
@@ -127,29 +129,19 @@
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
                       <div class="col-md-4">
-                        <!-- CARGANDO CATEGORIAS DESDE BD -->
-                      <?php
-                       $conexion=mysqli_connect('localhost','root', '', 'sicafi');
-                       $sql="SELECT * from categorias order by categoria ASC";
-                       $categ = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
-                      ?>
                         <label class="form-label" for="validationCustom04">Categoria</label>
-                        <select class="form-select" required="" id="" name="cateC">
-                          <option selected="" disabled="" value="">Elegir Categoria</option>
-                          <?php
-                            While($cat=mysqli_fetch_array($categ)){
-                            echo '<option value="'.$cat['id'].'">'.$cat['categoria'].'</option>';
-                             }
-                        ?>
+                        <select class="form-select" required id="categoria_id" name="cateC">
+
                         </select>
                         <div class="invalid-feedback">Please select a valid state.</div>
                       </div>
                       <div class="col-md-1">
                         <label for="inputCity" class="form-label">Nuevo</label>
-                        <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
-                          data-coreui-target="#modalCate" title="Nueva Categoria">
+                        <button type="button" title="Nueva Categoria" class="btn btn-primary" data-coreui-toggle="modal"
+                          data-coreui-target="#modalCate">
                           <i class='fas fa-plus'></i>
                         </button>
+                      </div>
                       </div>
                       <!--INICIO SECCION CINCO-->
                       <div class="col-md-7">
@@ -234,7 +226,7 @@
       <!-- Modal -->
       <div class="modal fade" id="modalCate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <form class="g-3 needs-validation" action="Controlador/NuevoC.php" method="POST" autocomplete="off">
+          <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
             <input type="hidden" value="Guardar2" name="bandera">
             <div class="modal-content">
               <div class="modal-header">
@@ -244,11 +236,11 @@
               <div class="modal-body">
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="" name="nombreCate">
+                  <input type="text" class="form-control" id="nombreCate" name="nombreCate">
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" id="GuardaCategoria" class="btn btn-primary">Guardar</button>
                 <button type="reset" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
               </div>
             </div>
@@ -258,6 +250,7 @@
       <!--////////////////////////////////////////-->
     </div>
     <script src="./Controlador/Proveedores/proveedor.js"></script>
+    <script src="./Controlador/Categorias/categoria.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
