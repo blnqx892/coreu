@@ -69,20 +69,10 @@
                       <input type="number" class="form-control" placeholder="" id="" name="costoC">
                     </div>
                     <div class="col-md-3">
-                      <!-- CARGANDO DESDE BD AL PROVEEDOR -->
-                      <?php
-                       $conexion=mysqli_connect('localhost','root', '', 'sicafi');
-                       $sql="SELECT * from proveedores order by proveedor ASC";
-                       $provee = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); 
-                      ?>
+
                       <label class="form-label" for="validationCustom04">Proveedor: </label>
-                      <select class="form-select" required id="" name="proveC">
-                        <option selected="" disabled="" value="">Elegir Proveedor</option>
-                        <?php
-                            While($prove=mysqli_fetch_array($provee)){
-                            echo '<option value="'.$prove['id'].'">'.$prove['proveedor'].'</option>';
-                             }
-                        ?>
+                      <select class="form-select" required id="proveedor_id" name="proveC">
+
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
@@ -141,7 +131,7 @@
                       <?php
                        $conexion=mysqli_connect('localhost','root', '', 'sicafi');
                        $sql="SELECT * from categorias order by categoria ASC";
-                       $categ = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); 
+                       $categ = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
                       ?>
                         <label class="form-label" for="validationCustom04">Categoria</label>
                         <select class="form-select" required="" id="" name="cateC">
@@ -218,7 +208,7 @@
       <!-- Modal -->
       <div class="modal fade" id="modalProv" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <form class="g-3 needs-validation" action="Controlador/NuevoC.php" method="POST" autocomplete="off">
+          <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
             <input type="hidden" value="Guardar1" name="bandera">
             <div class="modal-content">
               <div class="modal-header">
@@ -228,11 +218,11 @@
               <div class="modal-body">
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="" name="nombreProv">
+                  <input type="text" class="form-control" id="nombreProv" name="nombreProv">
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" id="GuardaProveedor" class="btn btn-primary">Guardar</button>
                 <button type="reset" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
               </div>
             </div>
@@ -267,7 +257,7 @@
       </div>
       <!--////////////////////////////////////////-->
     </div>
-
+    <script src="./Controlador/Proveedores/proveedor.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
