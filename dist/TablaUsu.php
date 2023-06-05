@@ -43,9 +43,10 @@
               <div class="card-header"><strong>Actualizacion Usuarios</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                <table id="miTablaUsuarios" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
+                    <th style="text-align:center;">N°</th>
                       <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Apellido</th>
                       <th style="text-align:center;">Usuario</th>
@@ -53,33 +54,11 @@
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>Perz</td>
-                      <td>Edinburgh</td>
-                      <td>
-                      <button type="button" class="btn btn-info rounded-pill" title="Ver"><i class='far fa-eye'></i></button>
-                            <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
-                            <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
-                      </td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Garrett Winters</td>
-                      <td>Calderón</td>
-                      <td>Accountant</td>
-                      <td>
-                      <button type="button" class="btn btn-info rounded-pill" title="Ver"><i class='far fa-eye'></i></button>
-                            <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
-                            <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
-                      </td>
-                      
-                    </tr>
+                    
                   </tbody>
                   <tfoot>
                     <tr>
+                    <th style="text-align:center;">N°</th>
                     <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Apellido</th>
                       <th style="text-align:center;">Usuario</th>
@@ -96,6 +75,7 @@
         <!-- ///////FIN CONTENEDOR/////////////-->
       </div>
     </div>
+    <script src="./Controlador/Usuarios/mostrarusu.js"></script>
       <!-- IMPORTAR ARCHIVO FOOTER-->
       <?php include("foot/foot.php"); ?>
       <!-- ////////////////////////-->

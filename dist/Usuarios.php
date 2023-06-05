@@ -43,7 +43,7 @@
               <div class="card-header"><strong>Ingreso de Datos</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form class="g-3 needs-validation" role="form" action="Usuarios.php" method="POST"
+                <form id="form" class="g-3 needs-validation" role="form" action="" method="POST"
                   autocomplete="off">
                   <input type="hidden" value="Guardar" name="bandera">
                   <!--FIN SECCION DOS-->
@@ -90,7 +90,7 @@
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />
-                      <button class="btn btn-success" type="submit" id="btnGuardar" name="btnGuardar">Guardar <i class='far fa-check-square'></i></button>
+                      <button class="btn btn-success" type="submit" id="GuardaUsuarios" name="btnGuardar">Guardar <i class='far fa-check-square'></i></button>
                       <button class="btn btn-secondary" type="submit">Cancelar <i class='far fa-times-circle'></i></button>
                     </div>
                   </div>
@@ -104,52 +104,14 @@
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
+    <script src="./Controlador/Usuarios/usuario.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
   </div>
-<?php
-if (isset($_REQUEST['btnGuardar'])) {
-  include_once '../dist/Confi/conexion.php';
 
-  $nombre = $_REQUEST['nombreC'];
-  $apellido = $_REQUEST['apellidoC'];
-  $usuario = $_REQUEST['usuarioC'];
-  $rol = $_REQUEST['rolC'];
-  $correo = $_REQUEST['emailC'];
-  $pass1 = $_REQUEST['contraC'];
-  $pass2 = $_REQUEST['contraC1'];
-
-  Conexion::abrir_conexion();
-    $conexionx = Conexion::obtener_conexion();
-    $sql = "INSERT INTO usuarios(nombre, apellido, usuario, email, contrasena, rol) VALUES('$nombre','$apellido','$usuario','$correo','$pass1','$rol')";
-
-    try {
-      $sentencia = $conexionx->prepare($sql);
-      $usuario_insertado = $sentencia->execute();
-      if($usuario_insertado){
-        echo '<script>swal({
-            title: "Registro",
-            text: "Guardado!",
-            type: "success",
-            confirmButtonText: "Aceptar",
-            closeOnConfirm: false
-            },
-            function() {
-                location.href = "Usuarios.php";
-            });</script>';
-    } else {
-        echo "No se pudo insertar el usuario";
-    }
-  } catch (Exception $e) {
-      echo "Error al insertar el usuario: " . $e->getMessage();
-  }
-
-
-}
-?>
   <!-- SCRIPT QUE VALIDA SI LAS CONTRASEÑAS SON IGUALES-->
   <script>
       $(document).ready(function(){
