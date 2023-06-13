@@ -71,38 +71,38 @@
               <div class="row my-4">
                 <div class="col-md-4">
                   <label for="inputZip" class="form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <input type="text" class="form-control" id="nombrev">
                 </div>
                 <div class="col-md-4">
                   <label for="inputZip" class="form-label">Apellido:</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <input type="text" class="form-control" id="apellidov">
                 </div>
                 <div class="col-md-4">
                   <label for="inputZip" class="form-label">Usuario:</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <input type="text" class="form-control" id="usuariov">
                 </div>
               </div>
               <div class="row my-4">
               <div class="col-md-4">
                   <label for="inputZip" class="form-label">Rol:</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <input type="text" class="form-control" id="rolv">
                 </div>
               <div class="col-md-4">
                   <label for="inputZip" class="form-label">Email:</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <input type="text" class="form-control" id="emailv">
                 </div><div class="col-md-4">
                   <label for="inputZip" class="form-label">Contraseña:</label>
-                  <input type="password" class="form-control" id="inputZip">
+                  <input type="password" class="form-control" id="conv">
                 </div><div class="col-md-4">
                   <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                  <input type="password" class="form-control" id="inputZip">
+                  <input type="password" class="form-control" id="con1v">
                 </div>
               </div>
-            </form>
-          </div>
-          <div class="modal-footer">
+              <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
           </div>
+            </form>
+          </div>   
         </div>
       </div>
     </div>
