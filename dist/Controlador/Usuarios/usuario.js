@@ -32,7 +32,7 @@ $(document).ready(function () {
         formData.append("ape",apellidoC);
         formData.append("usu",usuario);
         formData.append("rol",rolC);
-        formData.append("email",emailC)
+        formData.append("email",emailC);
         formData.append("contra",contraC)
   
         $.ajax({
@@ -64,8 +64,8 @@ $(document).ready(function () {
       }
     });
     //*************************** */
-  
-  
+
+ 
   
   
   });

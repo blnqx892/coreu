@@ -2,19 +2,15 @@
 include("../../Confi/conexion.php");
 $conexion = con();
 
-    $nombre = $_POST["nombreC"];
-    $apellido = $_POST["ape"];
-    $usuario = $_POST["usu"];
-    $rol = $_POST["rol"];
-    $email = $_POST["email"];
-    $contra= $_POST["contra"];
-
+    $id    = $_POST["id"];
     
 
-    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,rol,estado) VALUES ('$nombre', '$apellido','$usuario','$email','$contra','$rol')";
 
+    $sql= " UPDATE usuarios SET estado='Inactivo' WHERE id = '$id'";
+      //var_dump($sql); /*para que proves porq el error */
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
+  
     //echo "Los datos se han insertado correctamente";
     $json = array();
             if ($resultado) {

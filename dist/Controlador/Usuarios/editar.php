@@ -8,13 +8,16 @@ $conexion = con();
     $rol = $_POST["rol"];
     $email = $_POST["email"];
     $contra= $_POST["contra"];
-
+    $id    = $_POST["_id"];
     
 
-    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,rol,estado) VALUES ('$nombre', '$apellido','$usuario','$email','$contra','$rol')";
 
+    $sql= " UPDATE usuarios SET nombre='$nombre',apellido='$apellido',usuario='$usuario',rol='$rol',email='$email',
+    contrasena='$contra' WHERE id = '$id'";
+      //var_dump($sql); /*para que proves porq el error */
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
+  
     //echo "Los datos se han insertado correctamente";
     $json = array();
             if ($resultado) {

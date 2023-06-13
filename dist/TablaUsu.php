@@ -50,11 +50,123 @@
                       <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Apellido</th>
                       <th style="text-align:center;">Usuario</th>
+                      <th style="text-align:center;">Estado</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
                     
+
+              <!--MODAL VER USUARIO -->
+      <!-- Modal -->
+      <div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Información de Usuario</h5>
+            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row my-4">
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Nombre:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Apellido:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Usuario:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+              </div>
+              <div class="row my-4">
+              <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Rol:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+              <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Email:</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div><div class="col-md-4">
+                  <label for="inputZip" class="form-label">Contraseña:</label>
+                  <input type="password" class="form-control" id="inputZip">
+                </div><div class="col-md-4">
+                  <label for="inputZip" class="form-label">Repetir Contraseña:</label>
+                  <input type="password" class="form-control" id="inputZip">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!--////////////////////////////////////////-->
+
+      <!--MODAL EDITAR USUARIO -->
+      <!-- Modal -->
+      <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modificar Datos de Usuario</h5>
+            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <form id="form" class="g-3 needs-validation" role="form" action="" method="POST"
+                  autocomplete="off">
+              <div class="row my-4">
+                <div class="col-md-4">
+                <input type="hidden" class="form-control" id="_id">
+                  <label for="inputZip" class="form-label">Nombre:</label>
+                  <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Apellido:</label>
+                  <input type="text" class="form-control" id="apellido">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Usuario:</label>
+                  <input type="text" class="form-control" id="usuario">
+                </div>
+              </div>
+              <div class="row my-4">
+              <div class="col-md-4">
+                      <label class="form-label" for="validationCustom04">Rol</label>
+                      <select class="form-select" id="rolC" name="rolC" data-placeholder="Seleccione Producto">
+                        <option  value="Almacen">AAlmacen</option>
+                        <option  value="Activo Fijo">AAFijo</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+              <div class="col-md-4">
+                  <label for="inputZip" class="form-label">Email:</label>
+                  <input type="text" class="form-control" id="email">
+                </div><div class="col-md-4">
+                  <label for="inputZip" class="form-label">Contraseña:</label>
+                  <input type="password" class="form-control" id="con">
+                </div><div class="col-md-4">
+                  <label for="inputZip" class="form-label">Repetir Contraseña:</label>
+                  <input type="password" class="form-control" id="contra1">
+                </div>
+              </div>
+              <div class="modal-footer"> 
+              <button class="btn btn-success" type="submit" id="edit" name="btnGuardar" >Guardar</button>
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+      <!--////////////////////////////////////////-->
+
                   </tbody>
                   <tfoot>
                     <tr>
@@ -62,6 +174,7 @@
                     <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Apellido</th>
                       <th style="text-align:center;">Usuario</th>
+                      <th style="text-align:center;">Estado</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
@@ -76,6 +189,7 @@
       </div>
     </div>
     <script src="./Controlador/Usuarios/mostrarusu.js"></script>
+    <script src="./Controlador/Usuarios/usuario.js"></script>
       <!-- IMPORTAR ARCHIVO FOOTER-->
       <?php include("foot/foot.php"); ?>
       <!-- ////////////////////////-->

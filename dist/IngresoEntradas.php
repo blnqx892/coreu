@@ -43,7 +43,7 @@
               <div class="card-header"><strong>Ingreso de Entradas</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form class="g-3 needs-validation" action="Controlador/IngresoEntradasC.php" method="POST"
+                <form id="formE" class="g-3 needs-validation" action="" method="POST"
                   autocomplete="off">
                   <input type="hidden" value="Guardar" name="bandera">
                   <!--INICIO SECCION FECHA-->
@@ -54,7 +54,7 @@
                       ?>
                       <label for="inputEmail4" class="form-label">Fecha de Adquisición:</label>
                       <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>"
-                        min="<?php echo $fecha_actual; ?>" id="" name="fechaC">
+                        min="<?php echo $fecha_actual; ?>" id="fechaC" name="fechaC">
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
@@ -62,11 +62,11 @@
                     <!--INICIO SECCION DOS-->
                     <div class="col-md-4">
                       <label for="inputEmail4" class="form-label">N° de Factura:</label>
-                      <input type="text" class="form-control" id="" name="facturaC" required="">
+                      <input type="text" class="form-control" id="facturaC" name="facturaC" required="">
                     </div>
                     <div class="col-md-3">
                       <label for="inputAddress2" class="form-label">Costo de Adquición:</label>
-                      <input type="number" class="form-control" placeholder="" id="" name="costoC">
+                      <input type="number" class="form-control" placeholder="" id="costoC" name="costoC">
                     </div>
 
                     <div class="col-md-3">
@@ -90,15 +90,15 @@
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
                       <label for="inputCity" class="form-label">Nombre:</label>
-                      <input type="text" class="form-control" id="" name="nombreC">
+                      <input type="text" class="form-control" id="nombreC" name="nombreC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Serie:</label>
-                      <input type="text" class="form-control" id="" name="serieC">
+                      <input type="text" class="form-control" id="serieC" name="serieC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Marca:</label>
-                      <input type="text" class="form-control" id="" name="marcaC">
+                      <input type="text" class="form-control" id="marcaC" name="marcaC">
                     </div>
                   </div>
                   <!--FIN SECCION TRES-->
@@ -106,15 +106,15 @@
                     <!--INICIO SECCION CUATRO-->
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Modelo:</label>
-                      <input type="text" class="form-control" id="" name="modeloC">
+                      <input type="text" class="form-control" id="modeloC" name="modeloC">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Color:</label>
-                      <input type="text" class="form-control" id="" name="colorC">
+                      <input type="text" class="form-control" id="colorC" name="colorC">
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
-                      <select class="form-select" required="" id="" name="cargoC">
+                      <select class="form-select" required="" id="cargoC" name="cargoC">
                         <option selected="" disabled="" value="">Elegir Tipo</option>
                         <option value="Nuevo">Nuevo</option>
                         <option value="Donado">Donado</option>
@@ -124,7 +124,7 @@
 
                     <div class="col-md-2">
                       <label for="inputZip" class="form-label">Vida Util:</label>
-                      <input type="number" class="form-control" id="" name="vidaC">
+                      <input type="number" class="form-control" id="vidaC" name="vidaC">
                     </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
@@ -146,7 +146,7 @@
                       <!--INICIO SECCION CINCO-->
                       <div class="col-md-7">
                         <label for="inputZip" class="form-label">Descripción:</label>
-                        <textarea class="form-control" required="" row="6" id="" name="descriC">
+                        <textarea class="form-control" required="" row="6" id="descriC" name="descriC">
                       </textarea>
                       </div>
                     </div>
@@ -154,7 +154,7 @@
                       <div class="col-md-1">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
-                          <input class="form-check-input" value="1" type="checkbox" role="switch" name="trans"
+                          <input class="form-check-input" type="checkbox" role="switch" name="trans"
                             id="flexSwitchCheckChecked" checked name="activarFormulario" onclick="mostrarFormulario()">
                         </div>
                       </div>
@@ -164,26 +164,26 @@
                       <div class="row my-1">
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">No. Motor:</label>
-                          <input type="text" class="form-control" id="" name="motorC">
+                          <input type="text" class="form-control" id="motorC" name="motorC">
                         </div>
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">No. Placa:</label>
-                          <input type="text" class="form-control" id="" name="placaC">
+                          <input type="text" class="form-control" id="placaC" name="placaC">
                         </div>
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">No. Chasis:</label>
-                          <input type="text" class="form-control" id="" name="chasisC">
+                          <input type="text" class="form-control" id="chasisC" name="chasisC">
                         </div>
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">Capacidad:</label>
-                          <input type="text" class="form-control" id="" name="capacidadC">
+                          <input type="text" class="form-control" id="capacidadC" name="capacidadC">
                         </div>
                       </div>
                     </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />
-                      <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
+                      <button class="btn btn-success" type="submit" id="GuardaEntradas" name="btnGuardar">Guardar <i class='far fa-check-square'></i></button>
                       <button class="btn btn-secondary" type="reset">Cancelar <i
                           class='far fa-times-circle'></i></button>
                     </div>
@@ -249,6 +249,7 @@
       </div>
       <!--////////////////////////////////////////-->
     </div>
+    <script src="./Controlador/Entradas/entradas.js"></script>
     <script src="./Controlador/Proveedores/proveedor.js"></script>
     <script src="./Controlador/Categorias/categoria.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
@@ -262,8 +263,12 @@
         var formulario = document.getElementById("formulario");
         if (formulario.style.display === "block") {
           formulario.style.display = "none";
+          $("#flexSwitchCheckChecked").val("");
+          $("#flexSwitchCheckChecked").val("off");
         } else {
           formulario.style.display = "block";
+          $("#flexSwitchCheckChecked").val("");
+          $("#flexSwitchCheckChecked").val("on");
         }
       }
 
