@@ -105,6 +105,55 @@ $(document).ready(function () {
   });
       //------------------------- fin edit mostrar
 
+    //----------------------------- mostrar------------------------
+      
+    $("#miTablaUsuarios").on("click", ".ver-item", function () {
+      let id = $(this).attr("id-item-ver");
+      $("#_id").val(id);
+     
+       $("#modalVer").modal("show");
+      var formData = new FormData();
+  
+      formData.append("id", id);
+    
+      //otro ajax
+       $.ajax({
+        url: "Controlador/Usuarios/mostrar_modal.php",
+        type: "post",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+          console.log(JSON.parse(response));
+          data = JSON.parse(response);
+          //console.log(data);
+          $("#_id").val(data.id);
+          $("#nombrev").val(data.nom);
+          $("#rolv").val(data.rol);
+          $("#apellidov").val(data.ape);
+          $("#usuariov").val(data.usu);
+          $("#emailv").val(data.email);
+          $("#conv").val(data.contra);
+          $("#con1v").val(data.contra);
+         
+  
+          edit = true;
+        },
+      });
+    });
+        //------------------------- fin edit mostrar
+
+
+
+
+
+
+
+
+
+
+
+
       //*lo movi para aqui para poder acceder al metodo que recarga la tabla
 
       $("#edit").on("click", function () {
