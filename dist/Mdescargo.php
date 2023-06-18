@@ -3,6 +3,9 @@
 <!-- IMPORTAR ARCHIVO CABECERA-->
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
@@ -45,13 +48,20 @@
                 <!--INICIO FORM-->
                 <form class="g-3 needs-validation" novalidate="">
                   <div class="row my-4">
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Buscar por
-                        Codigo:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
+                  <div class="col-md-3">
+                      <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
+                      <select class="form-control js-example-basic-single">
+                        <option value=""></option>
+                      </select>
+                      <script>
+                        jQuery(document).ready(function ($) {
+                          $(".js-example-basic-single").select2();
+                        });
+                      </script>
                     </div>
-                    <div class="col-md-4">
-                      <button class="btn btn-primary" type="submit">Buscar</button>
+                    <div class="col-md-1">
+                      <label for="inputCity" class="form-label">Buscar</label>
+                      <button class="btn btn-primary" type="submit">Ir</button>
                     </div>
                   </div>
                   <hr style="color: black; background-color: black; width:100%;" />

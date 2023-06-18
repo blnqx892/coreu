@@ -3,6 +3,9 @@
 <!-- IMPORTAR ARCHIVO CABECERA-->
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
@@ -47,9 +50,15 @@
                 <form class="g-3 needs-validation" novalidate="">
                   <div class="row my-4">
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Buscar por
-                        Codigo:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
+                      <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
+                      <select class="form-control js-example-basic-single">
+                        <option value=""></option>
+                      </select>
+                      <script>
+                        jQuery(document).ready(function ($) {
+                          $(".js-example-basic-single").select2();
+                        });
+                      </script>
                     </div>
                     <div class="col-md-1">
                       <label for="inputCity" class="form-label">Buscar</label>
@@ -94,9 +103,8 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <label class="form-label" for="validationCustom02">Obervaciones:</label>
-                      <textarea class="form-control" id="validationCustom02" required="" row="4">
-                                            </textarea>
+                      <label class="form-label" for="validationCustom02">Observaciones:</label>
+                      <textarea class="form-control" id="validationCustom02" required="" rows="4"></textarea>
                     </div>
                   </div>
                   <!--FIN-->
@@ -130,10 +138,11 @@
                   </div>
                   <!--FIN-->
                   <div class="col-15" align="right">
-                      <hr style="color: black; background-color: black; width:100%;" />
-                      <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
-                      <button class="btn btn-secondary" type="submit">Cancelar <i class='far fa-times-circle'></i></button>
-                    </div>
+                    <hr style="color: black; background-color: black; width:100%;" />
+                    <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
+                    <button class="btn btn-secondary" type="submit">Cancelar <i
+                        class='far fa-times-circle'></i></button>
+                  </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
               </div>
