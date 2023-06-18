@@ -22,7 +22,8 @@ $conexion = con();
     $x       =$_POST["bandera"];
    
    $sql = "INSERT INTO ingreso_entradas (fecha_adquisicion,numero_factura,costo_adquisicion,nombre_adquisicion,
-    serie_adquisicion,marca,modelo,color,descripcion_adquisicion,cargo,vida_util,fk_categoria,fk_proveedores,numero_motor,numero_chasis,numero_placa,capacidad,boolean_transporte) VALUES 
+    serie_adquisicion,marca,modelo,color,descripcion_adquisicion,cargo,vida_util,fk_categoria,fk_proveedores,numero_motor,
+    numero_chasis,numero_placa,capacidad,boolean_transporte) VALUES 
     ('$fecha','$factura', '$costo','$nombre','$serie','$marca','$modelo','$color','$descrip','$cargo',
     '$vida','$cate','$prov','$numerom','$numerocha','$numerop','$capaci','$x')";
   

@@ -64,16 +64,13 @@
                       <label for="inputEmail4" class="form-label">N° de Factura:</label>
                       <input type="text" class="form-control" id="facturaC" name="facturaC" required="">
                     </div>
-                    <div class="col-md-3">
-                      <label for="inputAddress2" class="form-label">Costo de Adquición:</label>
+                    <div class="col-md-4">
+                      <label for="inputAddress2" class="form-label">Costo de Adquisición:</label>
                       <input type="number" class="form-control" placeholder="" id="costoC" name="costoC">
                     </div>
-
                     <div class="col-md-3">
-
                       <label class="form-label" for="validationCustom04">Proveedor: </label>
                       <select class="form-select" required id="proveedor_id" name="proveC">
-
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
@@ -96,7 +93,7 @@
                       <label for="inputZip" class="form-label">Serie:</label>
                       <input type="text" class="form-control" id="serieC" name="serieC">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Marca:</label>
                       <input type="text" class="form-control" id="marcaC" name="marcaC">
                     </div>
@@ -108,7 +105,7 @@
                       <label for="inputZip" class="form-label">Modelo:</label>
                       <input type="text" class="form-control" id="modeloC" name="modeloC">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <label for="inputZip" class="form-label">Color:</label>
                       <input type="text" class="form-control" id="colorC" name="colorC">
                     </div>
@@ -116,18 +113,17 @@
                       <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
                       <select class="form-select" required="" id="cargoC" name="cargoC">
                         <option selected="" disabled="" value="">Elegir Tipo</option>
-                        <option value="Nuevo">Nuevo</option>
+                        <option value="Comprado">Comprado</option>
                         <option value="Donado">Donado</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
-                    </div>
-
-                    <div class="col-md-2">
+                    </div>                 
+                    <!--FIN SECCION CUATRO-->
+                    <div class="row my-4">
+                    <div class="col-md-4">
                       <label for="inputZip" class="form-label">Vida Util:</label>
                       <input type="number" class="form-control" id="vidaC" name="vidaC">
                     </div>
-                    <!--FIN SECCION CUATRO-->
-                    <div class="row my-4">
                       <div class="col-md-4">
                         <label class="form-label" for="validationCustom04">Categoria</label>
                         <select class="form-select" required id="categoria_id" name="cateC">

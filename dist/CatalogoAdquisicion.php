@@ -5,166 +5,258 @@
 <!-- ////////////////////////-->
 
 <body>
-<?php
-    $conexion=mysqli_connect('localhost','root', '', 'sicafi');
-    $sql="SELECT * from ingreso_entradas order by nombre_adquisicion ASC";
-    $nombre = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); 
-?>
-  <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
-  <?php include("menu/verti.php"); ?>
-  <!-- ////////////////////////-->
-  <div class="wrapper d-flex flex-column min-vh-100 bg-light">
-    <header class="header header-sticky mb-4">
-      <!-- IMPORTAR ARCHIVO MENU HORIZONTAL-->
-      <?php include("menu/hori.php");?>
-      <!-- ////////////////////////-->
-      <div class="header-divider"></div>
-      <div class="container-fluid">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-              <a href="index.php"><svg class="icon me-2">
-                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
-                  </use>
-                </svg></a>
-            </li>
-            <li class="breadcrumb-item">
-              <span>Control de Adquición</span>
-            </li>
-            <li class="breadcrumb-item active">
-              <span>Adquisiciones</span>
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </header>
-    <!-- CONTENEDOR-->
-    <div class="body flex-grow-1 px-3">
-      <div class="container-lg">
-        <!-- row-->
-        <div class="row">
-          <div class="col-12">
-            <div class="card mb-4">
-              <div class="card-header"><strong>Tabla de Adquisiciones</strong></div>
-              <div class="card-body">
-                <div align="right">
-                <button type="button" class="btn btn-secondary rounded-pill" title="PDF">Reporte <i class="far fa-file-pdf"></i></button>
-                </div><br>
-                <!-- dataTable-->
-                <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
-                      <th style="text-align:center;">Categoria</th>
-                      <th style="text-align:center;">Fecha</th>
-                      <th style="text-align:center;">Acción</th>
-                    </tr>
-                  </thead>
-                  <tbody style="text-align:center;">
-                  <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
-                                    <?php if($mostrar['id'] != 28){ ?>
-                    <tr>
-                      <td><?php echo $mostrar['nombre_adquisicion'] ?></td>
-                      <td><?php echo $mostrar['numero_factura'] ?></td>
-                      <td><?php echo $mostrar['marca'] ?></td>
-                      <td><?php 
-                              $aux = $mostrar['fk_categoria'];
-                              $sql1 = "SELECT categoria FROM categorias where id = '$aux'";
-                              $cate = mysqli_query($conexion, $sql1) or die("No se puedo ejecutar la consulta");
-                              $cate = mysqli_fetch_array($cate);
-                              echo $cate['categoria']; 
-                          ?>
-                      </td>
-                      <td><?php $fechaCom = explode("-",$mostrar['fecha_adquisicion']);
-                                $fechaCom = $fechaCom[2].'/'.$fechaCom[1].'/'.$fechaCom[0];
-                                          echo $fechaCom ?>
-                      </td>
-                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye' data-coreui-toggle="modal"
-                          data-coreui-target="#modalVer"></i></button>
-                        <button type="button" onclick="window.location.href='../dist/AsignaciondeActivo.php'" class="btn btn-warning rounded-pill" title="Codificar"><i
-                            class="	fas fa-barcode"></i></button>
-                      </td>
-                    </tr>
-
-                    <!--MODAL PROVEEDOR -->
-      <!-- Modal -->
-      <div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Información de Adquisición</h5>
-            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="row my-4">
-                <div class="col-md-4">
-                  <label for="inputZip" class="form-label">Jefe de Unidad:</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div>
-                <div class="col-md-4">
-                  <label for="inputZip" class="form-label">Unidad:</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div>
-                <div class="col-md-4">
-                  <label for="inputZip" class="form-label">Correo:</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div>
-              </div>
-              <div class="row my-4">
-              <div class="col-md-4">
-                  <label for="inputZip" class="form-label">Usuario:</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div><div class="col-md-4">
-                  <label for="inputZip" class="form-label">Contraseña:</label>
-                  <input type="password" class="form-control" id="inputZip">
-                </div><div class="col-md-4">
-                  <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                  <input type="password" class="form-control" id="inputZip">
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-      <!--////////////////////////////////////////-->
-                  <?php } }?>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">N° Factura</th>
-                      <th style="text-align:center;">Marca</th>
-                      <th style="text-align:center;">Categoria</th>
-                      <th style="text-align:center;">Fecha</th>
-                      <th style="text-align:center;">Acción</th>
-                    </tr>
-                  </tfoot>
-                </table>
-                <!-- //dataTable-->
-              </div>
+    <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
+    <?php include("menu/verti.php"); ?>
+    <!-- ////////////////////////-->
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+        <header class="header header-sticky mb-4">
+            <!-- IMPORTAR ARCHIVO MENU HORIZONTAL-->
+            <?php include("menu/hori.php");?>
+            <!-- ////////////////////////-->
+            <div class="header-divider"></div>
+            <div class="container-fluid">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb my-0 ms-2">
+                        <li class="breadcrumb-item">
+                            <a href="index.php"><svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
+                                    </use>
+                                </svg></a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span>Control de Usuarios</span>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <span>Actualización</span>
+                        </li>
+                    </ol>
+                </nav>
             </div>
-          </div>
-          <!-- /.row-->
+        </header>
+        <!-- CONTENEDOR-->
+        <div class="body flex-grow-1 px-3">
+            <div class="container-lg">
+                <!-- row-->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Actualizacion Usuarios</strong></div>
+                            <div class="card-body">
+
+                                <!-- dataTable-->
+                                <table id="entra" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align:center;">N°</th>
+                                            <th style="text-align:center;">Fecha</th>
+                                            <th style="text-align:center;">N° Factura</th>
+                                            <th style="text-align:center;">Nombre</th>
+                                            <th style="text-align:center;">Marca</th>
+                                            <th style="text-align:center;">Categoria</th>
+                                            <th style="text-align:center;">Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="text-align:center;">
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th style="text-align:center;">N°</th>
+                                            <th style="text-align:center;">Fecha</th>
+                                            <th style="text-align:center;">N° Factura</th>
+                                            <th style="text-align:center;">Nombre</th>
+                                            <th style="text-align:center;">Marca</th>
+                                            <th style="text-align:center;">Categoria</th>
+                                            <th style="text-align:center;">Acción</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                               
+                                <!-- //dataTable-->
+                                <!--MODAL VER USUARIO -->
+                                <!-- Modal no se porq este modl esta aqui-->
+                                <div class="modal fade" id="modalVer"  tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
+                                                    INGRESO DE ACTIVOS</h5>
+                                                <button type="button" class="btn-close" data-coreui-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="row my-4">
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Fecha:</label>
+                                                            <input type="text" class="form-control" id="fechae"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">N° Fatura:</label>
+                                                            <input type="text" class="form-control" id="factu"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Costo Adquisición:</label>
+                                                            <input type="text" class="form-control" id="cos"  disabled>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-4">
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Proveedor:</label>
+                                                            <input type="text" class="form-control" id="id_proveedor"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Nombre:</label>
+                                                            <input type="text" class="form-control" id="nombre"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Serie:</label>
+                                                            <input type="text" class="form-control" id="serie"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Marca:</label>
+                                                            <input type="text" class="form-control" id="marca"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Modelo:</label>
+                                                            <input type="text" class="form-control" id="modelo"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Color:</label>
+                                                            <input type="text" class="form-control" id="color"  disabled>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-4">
+                                                    <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Tipo Cargo:</label>
+                                                            <input type="text" class="form-control" id="cargo"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Vida Util:</label>
+                                                            <input type="text" class="form-control" id="vida"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Categoria:</label>
+                                                            <input type="text" class="form-control" id="id_categoria"  disabled>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label for="inputZip" class="form-label">Descripción:</label>
+                                                            <input type="text" class="form-control" id="descrip"  disabled>
+                                                        </div>
+                                                        </div>
+                                                    <div class="row my-4">  
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">No. Motor:</label>
+                                                            <input type="text" class="form-control" id="motor"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">No. Placa:</label>
+                                                            <input type="text" class="form-control" id="placa"  disabled>
+                                                        </div> 
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">No. Chasis:</label>
+                                                            <input type="text" class="form-control" id="chasis"  disabled>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Capacidad:</label>
+                                                            <input type="text" class="form-control" id="capa"  disabled>
+                                                        </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-coreui-dismiss="modal">Cerrar</button>     
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--////////////////////////////////////////-->
+
+                                <!--MODAL EDITAR USUARIO -->
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalEditar" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Modificar Datos
+                                                    de Usuario</h5>
+                                                <button type="button" class="btn-close" data-coreui-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form id="form" class="g-3 needs-validation" role="form" action=""
+                                                    method="POST" autocomplete="off">
+                                                    <div class="row my-4">
+                                                        <div class="col-md-4">
+                                                            <input type="hidden" class="form-control" id="_id">
+                                                            <label for="inputZip" class="form-label">Nombre:</label>
+                                                            <input type="text" class="form-control" id="nombre">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Apellido:</label>
+                                                            <input type="text" class="form-control" id="apellido">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Usuario:</label>
+                                                            <input type="text" class="form-control" id="usuario">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-4">
+                                                        <div class="col-md-4">
+                                                            <label class="form-label"
+                                                                for="validationCustom04">Rol</label>
+                                                            <select class="form-select" id="rolC" name="rolC"
+                                                                data-placeholder="Seleccione Producto">
+                                                                <option value="Almacen">AAlmacen</option>
+                                                                <option value="Activo Fijo">AAFijo</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">Please select a valid
+                                                                state.</div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Email:</label>
+                                                            <input type="text" class="form-control" id="email">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Contraseña:</label>
+                                                            <input type="password" class="form-control" id="con">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Repetir
+                                                                Contraseña:</label>
+                                                            <input type="password" class="form-control" id="contra1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-success" type="submit" id="edit"
+                                                            name="btnGuardar">Guardar</button>
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-coreui-dismiss="modal">Cancelar</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--////////////////////////////////////////-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row-->
+                </div>
+                <!-- ///////FIN CONTENEDOR/////////////-->
+            </div>
         </div>
-      </div>
-      <!-- ///////FIN CONTENEDOR/////////////-->
+        <script src="./Controlador/Entradas/entradas.js"></script>
+        <script src="./Controlador/Entradas/mostrarentra.js"></script>
+        <!-- IMPORTAR ARCHIVO FOOTER-->
+        <?php include("foot/foot.php"); ?>
+        <!-- ////////////////////////-->
+        <!-- IMPORTAR ARCHIVO SCRIPT-->
+        <?php include("foot/script.php"); ?>
+        <!-- ////////////////////////-->
     </div>
-    <!-- IMPORTAR ARCHIVO FOOTER-->
-    <?php include("foot/foot.php"); ?>
-    <!-- ////////////////////////-->
-    <!-- IMPORTAR ARCHIVO SCRIPT-->
-    <?php include("foot/script.php"); ?>
-    <!-- ////////////////////////-->
-  </div>
 </body>
 
 </html>
