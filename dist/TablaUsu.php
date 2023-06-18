@@ -42,6 +42,7 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Actualizacion Usuarios</strong></div>
               <div class="card-body">
+                
                 <!-- dataTable-->
                 <table id="miTablaUsuarios" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
@@ -63,7 +64,7 @@
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Información de Usuario</h5>
+            <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN DE USUARIOS</h5>
             <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -71,31 +72,32 @@
               <div class="row my-4">
                 <div class="col-md-4">
                   <label for="inputZip" class="form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="nombrev">
+                  <input type="text" class="form-control" id="nombrev" disabled>
                 </div>
                 <div class="col-md-4">
                   <label for="inputZip" class="form-label">Apellido:</label>
-                  <input type="text" class="form-control" id="apellidov">
+                  <input type="text" class="form-control" id="apellidov" disabled>
                 </div>
                 <div class="col-md-4">
                   <label for="inputZip" class="form-label">Usuario:</label>
-                  <input type="text" class="form-control" id="usuariov">
+                  <input type="text" class="form-control" id="usuariov" disabled>
                 </div>
               </div>
               <div class="row my-4">
               <div class="col-md-4">
                   <label for="inputZip" class="form-label">Rol:</label>
-                  <input type="text" class="form-control" id="rolv">
+                  <input type="text" class="form-control" id="rolv" disabled>
                 </div>
               <div class="col-md-4">
                   <label for="inputZip" class="form-label">Email:</label>
-                  <input type="text" class="form-control" id="emailv">
+                  <input type="text" class="form-control" id="emailv" disabled>
                 </div><div class="col-md-4">
                   <label for="inputZip" class="form-label">Contraseña:</label>
-                  <input type="password" class="form-control" id="conv">
-                </div><div class="col-md-4">
+                  <input type="password" class="form-control" id="conv" disabled>
+                </div>
+                <div class="col-md-4">
                   <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                  <input type="password" class="form-control" id="con1v">
+                  <input type="password" class="form-control" id="con1v" disabled>
                 </div>
               </div>
               <div class="modal-footer">
