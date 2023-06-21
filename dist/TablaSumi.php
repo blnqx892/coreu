@@ -4,12 +4,12 @@
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
 <script src="js/JsBarcode.all.min.js"></script>
-<body>
 <?php
     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
     $sql="SELECT * from ingreso_suministros order by nombre_suministro ASC";
     $nombre = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); 
 ?>
+<body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
   <?php include("menu/verti.php"); ?>
   <!-- ////////////////////////-->
@@ -45,8 +45,7 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Suminstros</strong></div>
-              <canvas id="contenedorCodigoBarras"></canvas>
+              <div class="card-header"><strong>Suministros</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
                 <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
@@ -61,8 +60,8 @@
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
-                  <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
-                                    <?php if($mostrar['id'] != 28){ ?>
+                    <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
+                    <?php if($mostrar['id'] != 28){ ?>
                     <tr>
                       <td><?php echo $mostrar['codigo'] ?></td>
                       <td><?php echo $mostrar['numero_tarjeta'] ?></td>
@@ -70,18 +69,21 @@
                       <td><?php echo $mostrar['precio'] ?></td>
                       <td><?php echo $mostrar['ubicacion'] ?></td>
                       <td>
-                            <button type="button" class="btn btn-info rounded-pill" title="Ver"><i class='far fa-eye'></i></button>
-                            <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
-                            <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
-                            <button id="generar" type="button" class="btn btn-outline-dark rounded-pill" title="Generar Código"><i class="fas fa-barcode"></i></button>
+                        <button type="button" class="btn btn-info rounded-pill" title="Ver"><i
+                            class='far fa-eye'></i></button>
+                        <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i
+                            class="far fa-edit"></i></button>
+                        <button type="button" class="btn btn-success rounded-pill" title="Alta"><i
+                            class="fa-solid fa-arrow-up-long"></i></button>
+                        <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i
+                            class="fa-solid fa-arrow-down-long"></i></i></button>
                       </td>
                     </tr>
                     <?php } }?>
                   </tbody>
                   <tfoot>
                     <tr>
-                    <th style="text-align:center;">Código</th>
+                      <th style="text-align:center;">Código</th>
                       <th style="text-align:center;">Trajeta N°</th>
                       <th style="text-align:center;">Nombre de Suministro</th>
                       <th style="text-align:center;">Precio </th>
@@ -100,16 +102,16 @@
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
 
-  
+
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
-      <!-- ////////////////////////-->
+    <!-- ////////////////////////-->
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
     <script src="js/utils.js"></script>
 
-    
+
 </body>
 
 </html>

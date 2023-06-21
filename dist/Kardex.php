@@ -63,6 +63,10 @@
                       <td>Estante B</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
+                            <button type="button" class="btn btn-danger rounded-pill" title="Cargar Stock" data-coreui-toggle="modal"
+                          data-coreui-target="" data-coreui-whatever="@mdo"><i class="fa-solid fa-plus"></i></button>
+                          <button type="button" class="btn btn-outline-dark rounded-pill" title="Generar codigo" data-coreui-toggle="modal"
+                          data-coreui-target="" data-coreui-whatever="@mdo"><i class="fas fa-barcode"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -74,6 +78,10 @@
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver" data-coreui-toggle="modal"
                           data-coreui-target="#exampleModal" data-coreui-whatever="@mdo"><i
                             class='far fa-eye'></i></button>
+                            <button type="button" class="btn btn-danger rounded-pill" title="Cargar Stock" data-coreui-toggle="modal"
+                          data-coreui-target="" data-coreui-whatever="@mdo"><i class="fa-solid fa-plus"></i></button>
+                          <button type="button" class="btn btn-outline-dark rounded-pill" title="Generar código" data-coreui-toggle="modal"
+                          data-coreui-target="" data-coreui-whatever="@mdo"><i class="fas fa-barcode"></i></button>
                       </td>
                     </tr>
                   </tbody>
@@ -99,7 +107,7 @@
 
       <!-- Scrollable modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-xl" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Control Existencias de Suministro</h5>
@@ -129,25 +137,36 @@
                 </tr>
                 <tr style="text-align:left;">
                   <td colspan="2"></td>
-                  <th colspan="1">Estante: 1A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entrepaño: C
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Casilla: 4</th>
+                  <th colspan="1">Estante: 1A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entrepaño: C
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Casilla: 4</th>
                   <th>Existencias:</th>
-                  <td>Max: 80 &nbsp;&nbsp; Min:10</td>
+                  <td>Max: 80 &nbsp; Min:10</td>
                 </tr>
-              </table><br>
+              </table><br><br><br>
               <!-- dataTable-->
-              <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
-                <thead>
+              <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0" style="text-align:center;">
+                <thead style="text-align:center;">
                   <tr>
                     <th>Fecha</th>
                     <th>Concepto</th>
                     <th>Fondos Procedencia</th>
                     <th colspan="2">Entradas</th>
                     <th colspan="2">Salidas</th>
-                    <th>Saldos Articulos</th>
+                    <th>Saldo Articulos</th>
                   </tr>
                 </thead>
-                <tbody>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody style="text-align:center;">
                   <tr>
                     <td>12/03/2023</td>
                     <td>Compra de Lapices facela</td>
@@ -156,17 +175,7 @@
                     <td>45</td>
                     <td>12</td>
                     <td>4</td>
-                    <td>sumin</td>
-                  </tr>
-                  <tr>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>sumin</td>
+                    <td>$34.6</td>
                   </tr>
                 </tbody>
               </table>

@@ -105,7 +105,7 @@
                       <input type="text" class="form-control" id="" name="unidad">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Ubicación:</label>
+                      <label for="inputZip" class="form-label">Presentación:</label>
                       <input type="text" class="form-control" id="" name="ubicacion">
                     </div>
                     <div class="col-md-6">
