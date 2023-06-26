@@ -49,19 +49,7 @@
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-3">
-                      <?php
-                       $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
-                      ?>
-                      <label for="inputEmail4" class="form-label">Fecha:</label>
-                      <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>"
-                        min="<?php echo $fecha_actual; ?>" id="" name="fecha">
-                    </div>
-                  </div>
-                  <!--FIN SECCION FECHA-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION DOS-->
-                    <div class="col-md-3">
-                      <label for="inputEmail4" class="form-label">Codigo:</label>
+                      <label for="inputEmail4" class="form-label">Codigo (ID):</label>
                       <input type="text" class="form-control" id="" name="codigo">
                     </div>
                     <div class="col-md-3">
@@ -72,34 +60,18 @@
                       <label for="inputPassword4" class="form-label">Tarjeta No.:</label>
                       <input type="number" class="form-control" id="" name="tarjeta">
                     </div>
-                    <div class="col-md-2">
-                      <label for="inputPassword4" class="form-label">Stock:</label>
-                      <input type="number" class="form-control" id="" name="stock">
-                    </div>
                   </div>
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputAddress2" class="form-label">Nombre de Suministro:</label>
                       <input type="text" class="form-control" id="" name="nombre" placeholder="">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Marca:</label>
                       <input type="text" class="form-control" id="" name="marca">
                     </div>
-                    <div class="col-md-2">
-                      <label for="inputCity" class="form-label">Cantidad:</label>
-                      <input type="number" class="form-control" id="" name="cantidad">
-                    </div>
-                    <div class="col-md-2">
-                      <label for="inputZip" class="form-label">Precio:</label>
-                      <input type="text" class="form-control" id="" name="precio">
-                    </div>
-                  </div>
-                  <!--FIN SECCION TRES-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION CUATRO-->
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Unidad de Medida:</label>
                       <input type="text" class="form-control" id="" name="unidad">
@@ -108,16 +80,80 @@
                       <label for="inputZip" class="form-label">Presentación:</label>
                       <input type="text" class="form-control" id="" name="ubicacion">
                     </div>
+                  </div>
+                  <!--FIN SECCION TRES-->
+                  <div class="row  my-4">
+                    <!--INICIO SECCION CUATRO-->
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">Almacén:</label>
+                      <input type="text" class="form-control" id="" name="ubicacion">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">Entrepaño:</label>
+                      <input type="text" class="form-control" id="" name="ubicacion">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">Casilla:</label>
+                      <input type="text" class="form-control" id="" name="ubicacion">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">Existencia Maxima:</label>
+                      <input type="text" class="form-control" id="" name="ubicacion">
+                    </div>
+                  </div>
+                  <div class="row  my-4">
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">Existencia Minima:</label>
+                      <input type="text" class="form-control" id="" name="ubicacion">
+                    </div>
                     <div class="col-md-6">
                       <label for="inputZip" class="form-label">Descripción:</label>
                       <textarea class="form-control" id="" required="" row="3" name="descrip">
                       </textarea>
                     </div>
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label"></label><br><br>
+                      <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
+                    </div>
+                  </div>
+                  <div class="row  my-4">
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label"></label>
+                      <button class="btn btn-success" type="button" data-coreui-toggle="modal"
+                        data-coreui-target="#modalAgg">Agregar <i class='far fa-check-square'></i></button>
+                    </div>
+                  </div>
+                  <div class="row  my-4">
+                    <div>
+                      <table class="table" style="text-align:center;">
+                        <thead class="table-dark">
+                          <tr>
+                            <th>Fecha</th>
+                            <th>Concepto</th>
+                            <th>Fondo Procedencia</th>
+                            <th>Tipo de Movimiento</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Saldo</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>1</th>
+                            <th>0003</th>
+                            <th>CM</th>
+                            <th>Lapiz facela</th>
+                            <th>3</th>
+                            <th>3</th>
+                            <th>3</th>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
                     <hr style="color: black; background-color: black; width:100%;" />
-                    <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
                     <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i></button>
                   </div>
                 </form>
@@ -127,6 +163,69 @@
           </div>
           <!-- /.row-->
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modalAgg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
+              <input type="hidden" value="Guardar1" name="bandera">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Agregar Insumos</h5>
+                  <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row my-4">
+                    <div class="col-md-4">
+                      <?php
+                       $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
+                      ?>
+                      <label for="inputEmail4" class="form-label">Fecha:</label>
+                      <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>"
+                        min="<?php echo $fecha_actual; ?>" id="fechaC" name="fechaC">
+                    </div>
+                  </div>
+                  <div class="row my-4">
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Concepto:</label>
+                      <input type="text" class="form-control" id="nombreProv" name="nombreProv">
+                    </div>
+                    <div class="col-md-5">
+                      <label class="form-label" for="validationCustom04">Fondo Procedencia: </label>
+                      <select class="form-select" required="" id="cargoC" name="cargoC">
+                        <option selected="" disabled="" value="">Elegir Fondo</option>
+                        <option value=""></option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                  </div>
+                  <div class="row my-4">
+                  <div class="col-md-5">
+                      <label class="form-label" for="validationCustom04">Tipo de movimiento:</label>
+                      <select class="form-select" required="" id="cargoC" name="cargoC">
+                        <option selected="" disabled="" value="">Elegir Movimiento</option>
+                        <option value=""></option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputCity" class="form-label">Cantidad:</label>
+                      <input type="text" class="form-control" id="nombreProv" name="nombreProv">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputCity" class="form-label">Precio:</label>
+                      <input type="text" class="form-control" id="nombreProv" name="nombreProv">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" id="GuardaProveedor" class="btn btn-primary">Guardar</button>
+                  <button type="reset" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--////////////////////////////////////////-->
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
 
