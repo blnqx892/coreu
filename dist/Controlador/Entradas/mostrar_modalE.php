@@ -40,6 +40,7 @@ $id = $_POST['id'];
       'numerochasis'=> $row['numero_chasis'],
       'numeropla'=> $row['numero_placa'],
       'capa'=> $row['capacidad'],
+      'mostrar_campos'=>$row['boolean_transporte'],
     );
   }
   $jsonstring = json_encode($json[0]);

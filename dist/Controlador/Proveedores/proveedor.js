@@ -56,7 +56,7 @@ $(document).ready(function () {
               title: data.title,
               text: data.mensaje,
             });
-             combo();
+
              $('#nombreProv').val('');
             //$('#modalProv').hide();
 

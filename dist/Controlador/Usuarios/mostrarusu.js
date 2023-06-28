@@ -129,12 +129,6 @@ $(document).ready(function () {
           //console.log(data);
           $("#_id").val(data.id);
           $("#nombrev").val(data.nom);
-          $("#rolv").val(data.rol);
-          $("#apellidov").val(data.ape);
-          $("#usuariov").val(data.usu);
-          $("#emailv").val(data.email);
-          $("#conv").val(data.contra);
-          $("#con1v").val(data.contra);
          
   
           edit = true;
@@ -145,12 +139,9 @@ $(document).ready(function () {
 
 
 
-      //*lo movi para aqui para poder acceder al metodo que recarga la tabla
+  //*lo movi para aqui para poder acceder al metodo que recarga la tabla
 
     $("#edit").on("click", function () {
-        //ya vistes el error? eso es
-        //si ese es el modal editar o no
-        //si
         
        var nombreC = $("#nombre").val(); //capturar los datos
        var apellidoC = $("#apellido").val();
@@ -224,7 +215,7 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
     $("#modalEditar").modal("show");
   var formData = new FormData();
 
-  formData.append("id", id);
+   formData.append("id", id);
 
   //otro ajax
     $.ajax({
@@ -374,6 +365,7 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
 
           
 //*lo movi para aqui para poder acceder al metodo que recarga la tabla
+
 $("#edit").on("click", function () {
                  
   var nombreC = $("#nombre").val(); //capturar los datos

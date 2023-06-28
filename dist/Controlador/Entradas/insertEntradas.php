@@ -19,7 +19,7 @@ $conexion = con();
     $numerocha = $_POST["numerochasis"];
     $numerop = $_POST["numeropla"];
     $capaci = $_POST["capa"];
-    $x       =$_POST["bandera"];
+    $x       =$_POST["bandera"]; //fk_ingreso_entrada 1
    
    $sql = "INSERT INTO ingreso_entradas (fecha_adquisicion,numero_factura,costo_adquisicion,nombre_adquisicion,
     serie_adquisicion,marca,modelo,color,descripcion_adquisicion,cargo,vida_util,fk_categoria,fk_proveedores,numero_motor,

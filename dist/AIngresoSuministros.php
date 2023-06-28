@@ -49,35 +49,39 @@
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-3">
-                      <label for="inputEmail4" class="form-label">Codigo (ID):</label>
+                      <label for="inputZip" class="form-label">Codigo (ID):</label>
                       <input type="text" class="form-control" id="" name="codigo">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputEmail4" class="form-label">Codigo de Barra:</label>
+                      <label for="inputZip" class="form-label">Codigo de Barra:</label>
                       <input type="text" class="form-control" id="" name="codigob">
                     </div>
-                    <div class="col-md-2">
-                      <label for="inputPassword4" class="form-label">Tarjeta No.:</label>
-                      <input type="number" class="form-control" id="" name="tarjeta">
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">Nombre del Artículo:</label>
+                      <input type="text" class="form-control" id="" name="tarjeta">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">Presentación:</label>
+                      <input type="text" class="form-control" id="" name="ubicacion">
                     </div>
                   </div>
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-3">
-                      <label for="inputAddress2" class="form-label">Nombre de Suministro:</label>
+                      <label for="inputZip" class="form-label">Unidad de Medida:</label>
                       <input type="text" class="form-control" id="" name="nombre" placeholder="">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Marca:</label>
+                      <label for="inputZip" class="form-label">Existencia Mínima:</label>
                       <input type="text" class="form-control" id="" name="marca">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Unidad de Medida:</label>
+                      <label for="inputZip" class="form-label">Existencia Máxima:</label>
                       <input type="text" class="form-control" id="" name="unidad">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Presentación:</label>
+                      <label for="inputZip" class="form-label">Almacén:</label>
                       <input type="text" class="form-control" id="" name="ubicacion">
                     </div>
                   </div>
@@ -85,7 +89,7 @@
                   <div class="row  my-4">
                     <!--INICIO SECCION CUATRO-->
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Almacén:</label>
+                      <label for="inputZip" class="form-label">Estante:</label>
                       <input type="text" class="form-control" id="" name="ubicacion">
                     </div>
                     <div class="col-md-3">
@@ -95,21 +99,6 @@
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Casilla:</label>
                       <input type="text" class="form-control" id="" name="ubicacion">
-                    </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Existencia Maxima:</label>
-                      <input type="text" class="form-control" id="" name="ubicacion">
-                    </div>
-                  </div>
-                  <div class="row  my-4">
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Existencia Minima:</label>
-                      <input type="text" class="form-control" id="" name="ubicacion">
-                    </div>
-                    <div class="col-md-6">
-                      <label for="inputZip" class="form-label">Descripción:</label>
-                      <textarea class="form-control" id="" required="" row="3" name="descrip">
-                      </textarea>
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label"></label><br><br>

@@ -6,8 +6,6 @@ $(document).ready(function () {
   
     $("#GuardaEntradas").on("click", function () {
 
-     
-
       var fecha = $("#fechaC").val();
       var factura = $("#facturaC").val();
       var costo = $("#costoC").val();
