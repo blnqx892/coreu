@@ -60,10 +60,10 @@ $(document).ready(function () {
       }
     
       function refrescarTable() {//para editar o otras acciones
-        tabla.ajax.url("Controlador/Entradas/mostarE.php").load();
+        tabla.ajax.url("Controlador/Entradas/mostrarE.php").load();
       }
 
- //------------------------edit mostrar--------------------------------
+ //------------------------edit mostrar-----------------------------------------------
       
   $("#entra").on("click", ".edite-item", function () {
     let id = $(this).attr("id-item-e");
@@ -98,7 +98,7 @@ $(document).ready(function () {
         $("#fechaee").val(data.fechaC);
         $("#fact").val(data.facturaC);
         $("#cost").val(data.costo);
-        $("#id_proveedore").val(data.prove);
+        $("#proveedor_id").val(data.proved);
         $("#nombree").val(data.nombreC);
         $("#seriee").val(data.serie);
         $("#marcae").val(data.marca);
@@ -106,7 +106,7 @@ $(document).ready(function () {
         $("#colore").val(data.color);
         $("#cargoe").val(data.cargo);
         $("#vidae").val(data.vida);
-        $("#id_categoriae").val(data.cate);
+        $("#categoria_id").val(data.cated);
         $("#descripe").val(data.descri);
         $("#motore").val(data.numeromo);
         $("#placae").val(data.numeropla);
@@ -124,13 +124,13 @@ $(document).ready(function () {
       },
     });
   });
-//------------------------- fin edit mostrar---------------------------------
+//------------------------- fin edit mostrar------------------------------------------
 
-//----------------------------- mostrar---------------------------------------
+//----------------------------- mostrar-----------------------------------------------
       
     $("#entra").on("click", ".vere-item", function () {
       let id = $(this).attr("id-item-vere");
-      $("#_id").val('');
+     // $("#_id").val('');
       $("#_id").val(id);
     
        $("#modalVer").modal("show");
@@ -155,7 +155,7 @@ $(document).ready(function () {
           $("#fechae").val(data.fechaC);
           $("#factu").val(data.facturaC);
           $("#cos").val(data.costo);
-          $("#id_proveedor").val(data.prove);
+          $("#id_proveedor").val(data.proved);
           $("#nombre").val(data.nombreC);
           $("#serie").val(data.serie);
           $("#marca").val(data.marca);
@@ -163,7 +163,7 @@ $(document).ready(function () {
           $("#color").val(data.color);
           $("#cargo").val(data.cargo);
           $("#vida").val(data.vida);
-          $("#id_categoria").val(data.cate);
+          $("#id_categoria").val(data.cated);
           $("#descrip").val(data.descri);
           $("#motor").val(data.numeromo);
           $("#placa").val(data.numeropla);
@@ -174,7 +174,7 @@ $(document).ready(function () {
         },
       });
     });
- //------------------------- fin mostrar----------------------------
+ //------------------------- fin mostrar----------------------------------------------------
 
 
 
@@ -185,7 +185,7 @@ $(document).ready(function () {
        var fecha = $("#fechaee").val(); //capturar los datos
        var factura = $("#fact").val();
        var costo = $("#cost").val();
-       var prov = $("#id_proveedore").val();
+       var proved = $("#proveedor_id").val();
        var nombre = $("#nombree").val();
        var serie = $("#seriee").val();
        var marca = $("#marcae").val();
@@ -193,11 +193,11 @@ $(document).ready(function () {
        var color =  $("#colore").val();
        var cargo = $("#cargoe").val();
        var vida =  $("#vidae").val();
-       var cate =  $("#id_categoriae").val();
+       var cated =  $("#categoria_id").val();
        var descrip = $("#descripe").val();
        var numerom = $("#motore").val();
+       var numerop = $("#placae").val();
        var numerocha = $("#chasise").val();
-       var numerop = $("placae").val();
        var capaci = $("#capae").val();
        var id      = $("#_id").val(); //aqui capturas
         
@@ -218,7 +218,7 @@ $(document).ready(function () {
       formData.append("fechaC", fecha);//anadir la data al objeto para seer enviadad
       formData.append("facturaC",factura);
       formData.append("costo",costo);
-      formData.append("prove",prov);
+      formData.append("prove",proved);
       formData.append("nombreC",nombre)
       formData.append("serie",serie)
       formData.append("marca",marca);
@@ -226,7 +226,7 @@ $(document).ready(function () {
       formData.append("color",color)
       formData.append("cargo",cargo)
       formData.append("vida",vida);
-      formData.append("cate",cate)
+      formData.append("cate",cated)
       formData.append("descri",descrip)
       formData.append("numeromo",numerom)
       formData.append("numerochasis",numerocha)
@@ -254,7 +254,7 @@ $(document).ready(function () {
                       });
                        
                      
-                      $("#form")[0].reset();
+                      //$("#form")[0].reset();
                       $("#modale").modal("hide");
                       refrescarTable();//recarga la tabla en el momento
                        
@@ -344,11 +344,11 @@ $("#edite").on("click", function () {
   var descrip = $("#descripe").val();
   var numerom = $("#motore").val();
   var numerocha = $("#chasise").val();
-  var numerop = $("placae").val();
+  var numerop = $("#placae").val();
   var capaci = $("#capae").val();
   var id      = $("#_id").val(); //aqui capturas
         
-  if ( $("#fechae").val() == "" || $("#fact").val() == "" || $("#cost").val() == "" ||
+  if ( $("#fechaee").val() == "" || $("#fact").val() == "" || $("#cost").val() == "" ||
   $("#id_proveedore").val() == "" ||  $("#nombree").val() == "" || $("#marcae").val() == "" ||
   $("#colore").val() == "" ||  $("#cargoe").val() == "" || $("#id_categoriae").val() == "" ||
   $("#descripe").val() == "") {
@@ -362,7 +362,8 @@ $("#edite").on("click", function () {
 
 var formData = new FormData(); //permite recoger la data para enviarla al controlador
       
-formData.append("fechaC", fecha);//anadir la data al objeto para seer enviadad
+      formData.append("_id",id ); 
+      formData.append("fechaC", fecha);//anadir la data al objeto para seer enviadad
       formData.append("facturaC",factura);
       formData.append("costo",costo);
       formData.append("prove",prov);
@@ -379,7 +380,7 @@ formData.append("fechaC", fecha);//anadir la data al objeto para seer enviadad
       formData.append("numerochasis",numerocha)
       formData.append("numeropla",numerop);
       formData.append("capa",capaci)
-      formData.append("_id",id ); 
+      
   //para que no te perdas lo deje comentado
         
               $.ajax({
@@ -399,7 +400,7 @@ formData.append("fechaC", fecha);//anadir la data al objeto para seer enviadad
                     });
                     
                   
-                    $("#form")[0].reset();
+                   // $("#form")[0].reset();
                     $("#modale").modal("hide");
                     refrescarTable();//recarga la tabla en el momento
                     //proba

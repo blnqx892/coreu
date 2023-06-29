@@ -11,7 +11,7 @@ $id = $_POST['id'];
  INNER JOIN categorias on categorias.id = ingreso_entradas.fk_categoria
  INNER JOIN proveedores on proveedores.id = ingreso_entradas.fk_proveedores WHERE ingreso_entradas.id='$id'";
 
-//var_dump($sql);//ver consulta
+  //var_dump($sql);//ver consulta
   $result = mysqli_query($conexion, $sql);
 
 
@@ -27,6 +27,7 @@ $id = $_POST['id'];
       'facturaC'=> $row['numero_factura'],
       'costo'=> $row['costo_adquisicion'],
       'prove'=> $row['proveedor'],
+      'proved'=> $row['fk_proveedores'],
       'nombreC'=> $row['nombre_adquisicion'],
       'serie'=> $row['serie_adquisicion'],
       'marca'=> $row['marca'],
@@ -35,6 +36,7 @@ $id = $_POST['id'];
       'cargo'=> $row['cargo'],
       'vida'=> $row['vida_util'],
       'cate'=> $row['categoria'],
+      'cated'=> $row['fk_categoria'],
       'descri'=> $row['descripcion_adquisicion'],
       'numeromo'=> $row['numero_motor'],
       'numerochasis'=> $row['numero_chasis'],

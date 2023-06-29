@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card mb-4">
-                            <div class="card-header"><strong>Actualizacion Usuarios</strong></div>
+                            <div class="card-header"><strong>Actualizacion Entradas</strong></div>
                             <div class="card-body">
 
                                 <!-- dataTable-->
@@ -70,176 +70,224 @@
                                         </tr>
                                     </tfoot>
                                 </table>
-                               
-                                <!-- //dataTable-->
-                                <!--MODAL VER USUARIO -->
-                                <!-- Modal no se porq este modl esta aqui-->
-                                <div class="modal fade" id="modalVer"  tabindex="-1" aria-labelledby="exampleModalLabel"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
-                                                    INGRESO DE ACTIVOS</h5>
-                                                <button type="button" class="btn-close" data-coreui-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form>
-                                                    <div class="row my-4">
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Fecha:</label>
-                                                            <input type="text" class="form-control" id="fechae"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">N° Fatura:</label>
-                                                            <input type="text" class="form-control" id="factu"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Costo Adquisición:</label>
-                                                            <input type="text" class="form-control" id="cos"  disabled>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row my-4">
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Proveedor:</label>
-                                                            <input type="text" class="form-control" id="id_proveedor"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Nombre:</label>
-                                                            <input type="text" class="form-control" id="nombre"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Serie:</label>
-                                                            <input type="text" class="form-control" id="serie"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Marca:</label>
-                                                            <input type="text" class="form-control" id="marca"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Modelo:</label>
-                                                            <input type="text" class="form-control" id="modelo"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Color:</label>
-                                                            <input type="text" class="form-control" id="color"  disabled>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row my-4">
-                                                    <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Tipo Cargo:</label>
-                                                            <input type="text" class="form-control" id="cargo"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Vida Util:</label>
-                                                            <input type="text" class="form-control" id="vida"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Categoria:</label>
-                                                            <input type="text" class="form-control" id="id_categoria"  disabled>
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <label for="inputZip" class="form-label">Descripción:</label>
-                                                            <input type="text" class="form-control" id="descrip"  disabled>
-                                                        </div>
-                                                        </div>
-                                                    <div class="row my-4">  
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">No. Motor:</label>
-                                                            <input type="text" class="form-control" id="motor"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">No. Placa:</label>
-                                                            <input type="text" class="form-control" id="placa"  disabled>
-                                                        </div> 
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">No. Chasis:</label>
-                                                            <input type="text" class="form-control" id="chasis"  disabled>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Capacidad:</label>
-                                                            <input type="text" class="form-control" id="capa"  disabled>
-                                                        </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-coreui-dismiss="modal">Cerrar</button>     
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--////////////////////////////////////////-->
+ <!--------------------------- //dataTable-------------------------------------------------------------------->
+ <!--MODAL VER USUARIO -->
+<div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
+                    INGRESO DE ACTIVOS</h5>
+                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row my-4">
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Fecha:</label>
+                            <input type="text" class="form-control" id="fechae" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">N° Fatura:</label>
+                            <input type="text" class="form-control" id="factu" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Costo
+                                Adquisición:</label>
+                            <input type="text" class="form-control" id="cos" disabled>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Proveedor:</label>
+                            <input type="text" class="form-control" id="id_proveedor" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Serie:</label>
+                            <input type="text" class="form-control" id="serie" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Marca:</label>
+                            <input type="text" class="form-control" id="marca" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Modelo:</label>
+                            <input type="text" class="form-control" id="modelo" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Color:</label>
+                            <input type="text" class="form-control" id="color" disabled>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Tipo Cargo:</label>
+                            <input type="text" class="form-control" id="cargo" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Vida Util:</label>
+                            <input type="text" class="form-control" id="vida" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Categoria:</label>
+                            <input type="text" class="form-control" id="id_categoria" disabled>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputZip" class="form-label">Descripción:</label>
+                            <input type="text" class="form-control" id="descrip" disabled>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">No. Motor:</label>
+                            <input type="text" class="form-control" id="motor" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">No. Placa:</label>
+                            <input type="text" class="form-control" id="placa" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">No. Chasis:</label>
+                            <input type="text" class="form-control" id="chasis" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Capacidad:</label>
+                            <input type="text" class="form-control" id="capa" disabled>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
 
-                                <!--MODAL EDITAR USUARIO -->
-                                <!-- Modal -->
-                                <div class="modal fade" id="modalEditar" tabindex="-1"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Modificar Datos
-                                                    de Usuario</h5>
-                                                <button type="button" class="btn-close" data-coreui-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form id="form" class="g-3 needs-validation" role="form" action=""
-                                                    method="POST" autocomplete="off">
-                                                    <div class="row my-4">
-                                                        <div class="col-md-4">
-                                                            <input type="hidden" class="form-control" id="_id">
-                                                            <label for="inputZip" class="form-label">Nombre:</label>
-                                                            <input type="text" class="form-control" id="nombre">
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Apellido:</label>
-                                                            <input type="text" class="form-control" id="apellido">
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Usuario:</label>
-                                                            <input type="text" class="form-control" id="usuario">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row my-4">
-                                                        <div class="col-md-4">
-                                                            <label class="form-label"
-                                                                for="validationCustom04">Rol</label>
-                                                            <select class="form-select" id="rolC" name="rolC"
-                                                                data-placeholder="Seleccione Producto">
-                                                                <option value="Almacen">AAlmacen</option>
-                                                                <option value="Activo Fijo">AAFijo</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">Please select a valid
-                                                                state.</div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Email:</label>
-                                                            <input type="text" class="form-control" id="email">
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Contraseña:</label>
-                                                            <input type="password" class="form-control" id="con">
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Repetir
-                                                                Contraseña:</label>
-                                                            <input type="password" class="form-control" id="contra1">
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button class="btn btn-success" type="submit" id="edit"
-                                                            name="btnGuardar">Guardar</button>
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-coreui-dismiss="modal">Cancelar</button>
-                                                    </div>
-                                                </form>
-                                            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--///////////////TERMINA MODAL VER ///////////////////////////////////////////////////////////////-->
 
-                                        </div>
-                                    </div>
+<!-------------------MODAL EDITAR ENTRADAS ----------------------------------------------------------->
+<!-- Modal -->
+<div class="modal fade" id="modale" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
+                    INGRESO DE ACTIVOS</h5>
+                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row my-4">
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Fecha:</label>
+                            <input type="text" class="form-control" id="fechaee">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">N° Fatura:</label>
+                            <input type="text" class="form-control" id="fact">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Costo Adquisición:</label>
+                            <input type="text" class="form-control" id="cost">
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-4">
+                        <label class="form-label" for="validationCustom04">Proveedor: </label>
+                        <select class="form-select" required id="proveedor_id" name="proveC">
+                         </select>
+                         <div class="invalid-feedback">Please select a valid state.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="hidden" class="form-control" id="_id">
+                            <label for="inputZip" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombree">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Serie:</label>
+                            <input type="text" class="form-control" id="seriee">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Marca:</label>
+                            <input type="text" class="form-control" id="marcae">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Modelo:</label>
+                            <input type="text" class="form-control" id="modeloe">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Color:</label>
+                            <input type="text" class="form-control" id="colore">
+                        </div>
+                    </div>
+             <!--este es el div de lo de vehiculo?-->
+                <div class="row my-4">
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
+                      <select class="form-select" required="" id="cargoe" name="cargoC">
+                        <option selected="" disabled="" value="">Elegir Tipo</option>
+                        <option value="Comprado">Comprado</option>
+                        <option value="Donado">Donado</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Vida Util:</label>
+                            <input type="text" class="form-control" id="vidae">
+                        </div>
+                        <div class="col-md-4">
+                        <label class="form-label" for="validationCustom04">Categoria</label>
+                        <select class="form-select" required id="categoria_id" name="cateC">
+                        </select>
+                        <div class="invalid-feedback">Please select a valid state.</div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputZip" class="form-label">Descripción:</label>
+                            <input type="text" class="form-control" id="descripe">
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                         <div class="row my-4" id="ocultar" style="display:none" >
+                                <div class="col-md-4">
+                                    <label for="inputZip" class="form-label">No. Motor:</label>
+                                    <input type="text" class="form-control" id="motore">
                                 </div>
-                                <!--////////////////////////////////////////-->
+
+                                <div class="col-md-4">
+                                    <label for="inputZip" class="form-label">No. Placa:</label>
+                                    <input type="text" class="form-control" id="placae">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="inputZip" class="form-label">No. Chasis:</label>
+                                    <input type="text" class="form-control" id="chasise">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="inputZip" class="form-label">Capacidad:</label>
+                                    <input type="text" class="form-control" id="capae">
+                                </div>
+                         </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-success" type="submit" id="edite" name="btnGuardar">Guardar</button>
+                            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--//////////////////TERMINA MODAL EDITAR//////////////////////////////////////////////////////////////////////////////-->
+
+ <!-- -------------------------apate------------------------------------------- -->
                             </div>
                         </div>
                     </div>
@@ -250,6 +298,8 @@
         </div>
         <script src="./Controlador/Entradas/entradas.js"></script>
         <script src="./Controlador/Entradas/mostrarentra.js"></script>
+        <script src="./Controlador/Proveedores/proveedor.js"></script>
+        <script src="./Controlador/Categorias/categoria.js"></script>
         <!-- IMPORTAR ARCHIVO FOOTER-->
         <?php include("foot/foot.php"); ?>
         <!-- ////////////////////////-->
@@ -258,5 +308,4 @@
         <!-- ////////////////////////-->
     </div>
 </body>
-
 </html>
