@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script src="Controlador/Suministros/suministro.js"></script>
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
 
@@ -50,15 +52,15 @@
                   <div class="row">
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Codigo (ID):</label>
-                      <input type="text" class="form-control" id="" name="codigo">
+                      <input type="text" class="form-control" id="id" name="codigo" disabled placeholder="Se genera automáticamente">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Codigo de Barra:</label>
-                      <input type="text" class="form-control" id="" name="codigob">
+                      <input type="text" class="form-control" id="codigo_barra" name="codigob">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Nombre del Artículo:</label>
-                      <input type="text" class="form-control" id="" name="tarjeta">
+                      <input type="text" class="form-control" id="nombre_suministro" name="tarjeta">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Presentación:</label>
@@ -101,8 +103,7 @@
                       <input type="text" class="form-control" id="" name="ubicacion">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label"></label><br><br>
-                      <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
+                      <button class="btn btn-success mt-3" type="button" id="save_record">Guardar <i class='far fa-check-square'></i></button>
                     </div>
                   </div>
                   <div class="row  my-4">
@@ -176,13 +177,13 @@
                   <div class="row my-4">
                     <div class="col-md-6">
                       <label for="inputCity" class="form-label">Concepto:</label>
-                      <input type="text" class="form-control" id="nombreProv" name="nombreProv">
+                      <input type="text" class="form-control" id="concepto" name="nombreProv">
                     </div>
                     <div class="col-md-5">
                       <label class="form-label" for="validationCustom04">Fondo Procedencia: </label>
-                      <select class="form-select" required="" id="cargoC" name="cargoC">
+                      <select class="form-select" required="" id="fondo_procedencia" name="cargoC">
                         <option selected="" disabled="" value="">Elegir Fondo</option>
-                        <option value=""></option>
+                        <option value="0">Fondo de prueba</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
@@ -190,24 +191,25 @@
                   <div class="row my-4">
                   <div class="col-md-5">
                       <label class="form-label" for="validationCustom04">Tipo de movimiento:</label>
-                      <select class="form-select" required="" id="cargoC" name="cargoC">
+                      <select class="form-select" required="" id="tipo_movimiento" name="cargoC">
                         <option selected="" disabled="" value="">Elegir Movimiento</option>
-                        <option value=""></option>
+                        <option value="entrada">Entrada</option>
+                        <option value="salida">Salida</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                     <div class="col-md-3">
                       <label for="inputCity" class="form-label">Cantidad:</label>
-                      <input type="text" class="form-control" id="nombreProv" name="nombreProv">
+                      <input type="text" class="form-control" id="cantidad" name="nombreProv">
                     </div>
                     <div class="col-md-3">
                       <label for="inputCity" class="form-label">Precio:</label>
-                      <input type="text" class="form-control" id="nombreProv" name="nombreProv">
+                      <input type="text" class="form-control" id="precio" name="nombreProv">
                     </div>
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="submit" id="GuardaProveedor" class="btn btn-primary">Guardar</button>
+                  <button type="button" id="save_item" class="btn btn-primary">Guardar</button>
                   <button type="reset" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
                 </div>
               </div>
@@ -225,6 +227,19 @@
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+
+    <div class="toast-container position-fixed end-0 p-3">
+      <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <div class="rounded me-2"></div>
+          <strong class="me-auto">Acción exitosa</strong>
+          <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Registro guardado
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>
