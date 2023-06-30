@@ -127,7 +127,6 @@
                       <div class="col-md-4">
                         <label class="form-label" for="validationCustom04">Categoria</label>
                         <select class="form-select" required id="categoria_id" name="cateC">
-
                         </select>
                         <div class="invalid-feedback">Please select a valid state.</div>
                       </div>
