@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   // Ocultar elementos por defecto (nuevo)
   $("#kardex_tabla").hide();
-  save_item.hide();
+  $("#add_kardex").hide();
 
   // Obtener variable local para ver si anteriormente habiamos guardado un registro
   const is_save = localStorage.getItem('is_save');

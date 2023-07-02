@@ -111,7 +111,7 @@
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label"></label>
                       <button class="btn btn-success" type="button" data-coreui-toggle="modal"
-                        data-coreui-target="#modalAgg">Agregar <i class='far fa-check-square'></i></button>
+                        data-coreui-target="#modalAgg" id="add_kardex">Agregar <i class='far fa-check-square'></i></button>
                     </div>
                   </div>
                   <div class="row  my-4">
