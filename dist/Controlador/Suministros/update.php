@@ -8,7 +8,15 @@ $id = $_GET["id"];
 
 $query = "update ingreso_suministros set
                                codigo_barra = '".$body->codigo_barra."',
-                               nombre_suministro = '".$body->nombre_suministro."'
+                               nombre_suministro = '".$body->nombre_suministro."',
+                               presentacion = '".$body->presentacion."',
+                               unidad_medida = '".$body->unidad_medida."',
+                               existencia_minima = ".$body->existencia_minima.",
+                               existencia_maxima = ".$body->existencia_maxima.",
+                               almacen = '".$body->almacen."',
+                               estante = '".$body->estante."',
+                               entrepaño = '".$body->entrepano."',
+                               casilla = '".$body->casilla."'
  where id = ".$id;
 
 $response["statusCode"] = 500;

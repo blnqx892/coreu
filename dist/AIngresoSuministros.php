@@ -2,6 +2,8 @@
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="Controlador/Suministros/suministro.js"></script>
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
@@ -47,7 +49,6 @@
                 <!--INICIO FORM-->
                 <form class="g-3 needs-validation" action="Controlador/IngresoSuministrosC.php" method="POST"
                   autocomplete="off">
-                  <input type="hidden" value="Guardar" name="bandera">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-3">
@@ -56,15 +57,15 @@
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Codigo de Barra:</label>
-                      <input type="text" class="form-control" id="codigo_barra" name="codigob">
+                      <input type="text" class="form-control v-required-1" id="codigo_barra" name="codigob">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Nombre del Artículo:</label>
-                      <input type="text" class="form-control" id="nombre_suministro" name="tarjeta">
+                      <input type="text" class="form-control v-required-1" id="nombre_suministro" name="tarjeta">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Presentación:</label>
-                      <input type="text" class="form-control" id="" name="ubicacion">
+                      <input type="text" class="form-control v-required-1" id="presentacion">
                     </div>
                   </div>
                   <!--FIN SECCION DOS-->
@@ -72,19 +73,19 @@
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Unidad de Medida:</label>
-                      <input type="text" class="form-control" id="" name="nombre" placeholder="">
+                      <input type="text" class="form-control v-required-1" id="unidad_medida" placeholder="">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Existencia Mínima:</label>
-                      <input type="text" class="form-control" id="" name="marca">
+                      <input type="number" min="0" step="1" class="form-control v-required-1 v-min-1" id="existencia_minima" data-min="0">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Existencia Máxima:</label>
-                      <input type="text" class="form-control" id="" name="unidad">
+                      <input type="number" min="0" step="1" class="form-control v-required-1 v-min-1" id="existencia_maxima" data-min="0" data-minthan="existencia_minima">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Almacén:</label>
-                      <input type="text" class="form-control" id="" name="ubicacion">
+                      <input type="text" class="form-control v-required-1" id="almacen">
                     </div>
                   </div>
                   <!--FIN SECCION TRES-->
@@ -92,15 +93,15 @@
                     <!--INICIO SECCION CUATRO-->
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Estante:</label>
-                      <input type="text" class="form-control" id="" name="ubicacion">
+                      <input type="text" class="form-control v-required-1" id="estante">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Entrepaño:</label>
-                      <input type="text" class="form-control" id="" name="ubicacion">
+                      <input type="text" class="form-control v-required-1" id="entrepano">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Casilla:</label>
-                      <input type="text" class="form-control" id="" name="ubicacion">
+                      <input type="text" class="form-control v-required-1" id="casilla">
                     </div>
                     <div class="col-md-3">
                       <button class="btn btn-success mt-3" type="button" id="save_record">Guardar <i class='far fa-check-square'></i></button>
@@ -115,7 +116,7 @@
                   </div>
                   <div class="row  my-4">
                     <div>
-                      <table class="table" style="text-align:center;">
+                      <table class="table" style="text-align:center;" id="kardex_tabla">
                         <thead class="table-dark">
                           <tr>
                             <th>Fecha</th>
@@ -127,7 +128,7 @@
                             <th>Saldo</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="kardex_body">
                           <tr>
                             <th>1</th>
                             <th>0003</th>
@@ -170,41 +171,39 @@
                        $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
                       ?>
                       <label for="inputEmail4" class="form-label">Fecha:</label>
-                      <input type="date" class="form-control" value="<?php echo $fecha_actual; ?>"
+                      <input type="date" class="form-control v-required-2" value="<?php echo $fecha_actual; ?>"
                         min="<?php echo $fecha_actual; ?>" id="fechaC" name="fechaC">
                     </div>
                   </div>
                   <div class="row my-4">
                     <div class="col-md-6">
                       <label for="inputCity" class="form-label">Concepto:</label>
-                      <input type="text" class="form-control" id="concepto" name="nombreProv">
+                      <input type="text" class="form-control v-required-2" id="concepto" name="nombreProv">
                     </div>
                     <div class="col-md-5">
                       <label class="form-label" for="validationCustom04">Fondo Procedencia: </label>
-                      <select class="form-select" required="" id="fondo_procedencia" name="cargoC">
-                        <option selected="" disabled="" value="">Elegir Fondo</option>
+                      <select class="form-select v-required-2" required="" id="fondo_procedencia" name="cargoC">
+                        <option selected="" disabled="" value="-1">Elegir Fondo</option>
                         <option value="0">Fondo de prueba</option>
                       </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                   </div>
                   <div class="row my-4">
                   <div class="col-md-5">
                       <label class="form-label" for="validationCustom04">Tipo de movimiento:</label>
-                      <select class="form-select" required="" id="tipo_movimiento" name="cargoC">
-                        <option selected="" disabled="" value="">Elegir Movimiento</option>
+                      <select class="form-select v-required-2" required="" id="tipo_movimiento" name="cargoC">
+                        <option selected="" disabled="" value="-1">Elegir Movimiento</option>
                         <option value="entrada">Entrada</option>
                         <option value="salida">Salida</option>
                       </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                     <div class="col-md-3">
                       <label for="inputCity" class="form-label">Cantidad:</label>
-                      <input type="text" class="form-control" id="cantidad" name="nombreProv">
+                      <input type="number" min="1" step="1"  class="form-control v-required-2 v-min-2" id="cantidad" name="nombreProv" data-min="1">
                     </div>
                     <div class="col-md-3">
                       <label for="inputCity" class="form-label">Precio:</label>
-                      <input type="text" class="form-control" id="precio" name="nombreProv">
+                      <input type="number" min="0" step="1"  class="form-control v-required-2 v-min-2" id="precio" name="nombreProv" data-min="0">
                     </div>
                   </div>
                 </div>
@@ -232,10 +231,10 @@
       <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
           <div class="rounded me-2"></div>
-          <strong class="me-auto">Acción exitosa</strong>
+          <strong class="me-auto" id="toast_title">Acción exitosa</strong>
           <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
         </div>
-        <div class="toast-body">
+        <div class="toast-body" id="toast_body">
           Registro guardado
         </div>
       </div>
