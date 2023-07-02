@@ -196,7 +196,7 @@ $(document).ready(function() {
             html += '<td>' + moment(v.fecha).format('DD/MM/YYYY') +'</td>';
             html += '<td>' + v.concepto +'</td>';
             html += '<td>' + v.fondos_procedencia +'</td>';
-            html += '<td>' + v.tipo_movimiento +'</td>';
+            html += '<td>' + (v.tipo_movimiento === 'entrada' ? '<span class="badge bg-success col-12">Entrada</span>' : '<span class="badge bg-danger col-12">Salida</span>') +'</td>';
             html += '<td>' + v.cantidad +'</td>';
             html += '<td>' + v.precio +'</td>';
             html += '<td>' + saldo +'</td>';
