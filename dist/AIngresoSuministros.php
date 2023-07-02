@@ -145,7 +145,7 @@
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
                     <hr style="color: black; background-color: black; width:100%;" />
-                    <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i></button>
+                    <a class="btn btn-secondary" href="TablaSumi.php">Cancelar <i class='far fa-times-circle'></i></a>
                   </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->

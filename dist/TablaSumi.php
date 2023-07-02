@@ -7,7 +7,7 @@
 <?php
     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
     $sql="SELECT * from ingreso_suministros order by nombre_suministro ASC";
-    $nombre = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); 
+    $nombre = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
 ?>
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
@@ -45,52 +45,55 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Suministros</strong></div>
+              <div class="card-header">
+                <div class="d-flex justify-content-between">
+                  <div class="my-auto">
+                    <strong>Suministros</strong>
+                  </div>
+                  <div>
+                    <a class="btn btn-primary" href="AIngresoSuministros.php">Nuevo <i class='far fa-plus'></i></a>
+                  </div>
+                </div>
+              </div>
               <div class="card-body">
                 <!-- dataTable-->
                 <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                      <th style="text-align:center;">Codigo</th>
-                      <th style="text-align:center;">Trajeta N°</th>
+                      <th>#</th>
+                      <th style="text-align:center;">Codigo de barra</th>
                       <th style="text-align:center;">Nombre de Suministro</th>
-                      <th style="text-align:center;">Precio</th>
+                      <th style="text-align:center;">Presentación</th>
+                      <th style="text-align:center;">Unidad de medida</th>
                       <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
+                  <?php $correlativo = 1?>
                     <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
                     <?php if($mostrar['id'] != 28){ ?>
                     <tr>
-                      <td><?php echo $mostrar['codigo'] ?></td>
-                      <td><?php echo $mostrar['numero_tarjeta'] ?></td>
+                      <td><?php echo $correlativo?></td>
+                      <td><?php echo $mostrar['codigo_barra'] ?></td>
                       <td><?php echo $mostrar['nombre_suministro'] ?></td>
-                      <td><?php echo $mostrar['precio'] ?></td>
-                      <td><?php echo $mostrar['ubicacion'] ?></td>
+                      <td><?php echo $mostrar['presentacion'] ?></td>
+                      <td><?php echo $mostrar['unidad_medida'] ?></td>
+                      <td><?php echo $mostrar['estante'].'-'.$mostrar['entrepaño'].'-'.$mostrar['casilla'] ?></td>
                       <td>
-                        <button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></button>
-                        <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i
-                            class="far fa-edit"></i></button>
+                        <a href="<?php echo 'ShowSuministro.php?id='.$mostrar['id']?>" class="btn btn-info rounded-pill" title="Ver"><i
+                            class='far fa-eye'></i></a>
+                        <a href="<?php echo 'AIngresoSuministros.php?id='.$mostrar['id']?>" class="btn btn-warning rounded-pill" title="Editar"><i
+                            class="far fa-edit"></i></a>
                         <button type="button" class="btn btn-success rounded-pill" title="Alta"><i
                             class="fa-solid fa-arrow-up-long"></i></button>
                         <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i
                             class="fa-solid fa-arrow-down-long"></i></i></button>
                       </td>
                     </tr>
+                        <?php $correlativo++?>
                     <?php } }?>
                   </tbody>
-                  <tfoot>
-                    <tr>
-                      <th style="text-align:center;">Código</th>
-                      <th style="text-align:center;">Trajeta N°</th>
-                      <th style="text-align:center;">Nombre de Suministro</th>
-                      <th style="text-align:center;">Precio </th>
-                      <th style="text-align:center;">Ubicación</th>
-                      <th style="text-align:center;">Acción</th>
-                    </tr>
-                  </tfoot>
                 </table>
                 <!-- //dataTable-->
               </div>
