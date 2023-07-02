@@ -50,7 +50,7 @@ $(document).ready(function() {
           $("#save_record").html("Editar <i class=\'far fa-check-square\'>");
 
           $("#kardex_tabla").show();
-          save_item.show();
+          $("#add_kardex").show();
 
           load_kardex();
         } else {
