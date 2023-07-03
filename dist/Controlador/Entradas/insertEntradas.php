@@ -41,7 +41,7 @@ $conexion = con();
             } else {
                 $json[] = array(
                     'title' => "Error",
-                    'mensaje'=>"Surgió un error!"
+                    'mensaje'=>"Algo salió mal, no se pudo guardar!"
                   );
             }
            $jsonstring = json_encode($json[0]);
