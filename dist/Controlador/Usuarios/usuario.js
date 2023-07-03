@@ -1,6 +1,6 @@
 $(document).ready(function () {
   
-  
+
     //**************************************guardar  */
   
     $("#GuardaUsuarios").on("click", function () {
@@ -11,12 +11,13 @@ $(document).ready(function () {
       var apellidoC = $("#apellidoC").val();
       var usuario = $("#usuarioC").val();
       var rolC = $("#rolC").val();
+      var uni= $("#unidad_id").val();
       var emailC = $("#emailC").val();
       var contraC = $("#contraC").val();
     
   
       if ( $("#nombreC").val() == "" || $("#apellidoC").val() == "" || $("#usuario").val() == "" ||
-        $("#rolC").val() == "" ||
+        $("#rolC").val() == "" ||$("#unidad_id").val() == "" ||
         $("#emailC").val() == "" ||
         $("#contraC").val() == "" ) {
 
@@ -32,6 +33,7 @@ $(document).ready(function () {
         formData.append("ape",apellidoC);
         formData.append("usu",usuario);
         formData.append("rol",rolC);
+        formData.append("unid",uni);
         formData.append("email",emailC);
         formData.append("contra",contraC)
   

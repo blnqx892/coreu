@@ -61,10 +61,11 @@ $(document).ready(function () {
         tabla.ajax.url("Controlador/Usuarios/mostarU.php").load();
       }
 
- //------------------------edit mostrar
+ //------------------------edit mostrar-----------------------------------------------
       
   $("#miTablaUsuarios").on("click", ".edit-item", function () {
     let id = $(this).attr("id-item");
+   // $("#_id").val('');
     $("#_id").val(id);
    
      $("#modalEditar").modal("show");
@@ -86,11 +87,10 @@ $(document).ready(function () {
         $("#_id").val(data.id);
         $("#nombre").val(data.nom);
         $("#rolC").val(data.rol);
+        $("#unidad_id").val(data.unidd);    
         $("#apellido").val(data.ape);
         $("#usuario").val(data.usu);
         $("#email").val(data.email);
-        $("#con").val(data.contra);
-        $("#contra1").val(data.contra);
        
         
         Swal.fire({
@@ -103,9 +103,9 @@ $(document).ready(function () {
       },
     });
   });
-      //------------------------- fin edit mostrar
+      //------------------------- fin edit mostrar-------------------------------------
 
-    //----------------------------- mostrar------------------------
+    //----------------------------- mostrar------------------------------------------
       
     $("#miTablaUsuarios").on("click", ".ver-item", function () {
       let id = $(this).attr("id-item-ver");
@@ -129,13 +129,18 @@ $(document).ready(function () {
           //console.log(data);
           $("#_id").val(data.id);
           $("#nombrev").val(data.nom);
+          $("#apellidov").val(data.ape);
+          $("#unidadd_id").val(data.unid);
+          $("#rolv").val(data.rol);
+          $("#usuariov").val(data.usu);
+          $("#emailv").val(data.email);
          
   
           edit = true;
         },
       });
     });
-        //------------------------- fin  mostrar-------------------------------
+        //------------------------- fin  mostrar--------------------------------------------
 
 
 
@@ -146,13 +151,14 @@ $(document).ready(function () {
        var nombreC = $("#nombre").val(); //capturar los datos
        var apellidoC = $("#apellido").val();
        var usuario = $("#usuario").val();
-       var rolC = $("#rolC").val();
+       var rolC = $("#rolC").val();    
+       var unidd = $("#unidad_id").val();    
        var emailC = $("#email").val();
        var contraC = $("#con").val();
        var id      = $("#_id").val(); //aqui capturas
         
       if ( $("#nombreC").val() == "" || $("#apellidoC").val() == "" || $("#usuario").val() == "" ||
-           $("#rolC").val() == "" || $("#emailC").val() == "" || $("#contraC").val() == "" ) {
+           $("#rolC").val() == "" || $("#unidad_id").val() == "" || $("#emailC").val() == "") {
         
                 Swal.fire({
                   icon: "error",
@@ -167,6 +173,7 @@ $(document).ready(function () {
           formData.append("ape",apellidoC);
           formData.append("usu",usuario);
           formData.append("rol",rolC);
+          formData.append("unid",unidd);
           formData.append("email",emailC);
           formData.append("contra",contraC);
           formData.append("contra",contraC);
@@ -190,7 +197,7 @@ $(document).ready(function () {
                       });
                        
                      
-                      $("#form")[0].reset();
+                     // $("#form")[0].reset();
                       $("#modalEditar").modal("hide");
                       refrescarTable();//recarga la tabla en el momento
                        
@@ -230,7 +237,8 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
       //console.log(data);
       $("#_id").val(data.id);
       $("#nombre").val(data.nom);
-      $("#rolC").val(data.rol);
+      $("#rolC").val(data.rol); 
+      $("#unidadd_id").val(data.unid);
       $("#apellido").val(data.ape);
       $("#usuario").val(data.usu);
       $("#email").val(data.email);
@@ -372,6 +380,7 @@ $("#edit").on("click", function () {
   var apellidoC = $("#apellido").val();
   var usuario = $("#usuario").val();
   var rolC = $("#rolC").val();
+  var uni = $("#unidadd_id").val();
   var emailC = $("#email").val();
   var contraC = $("#con").val();
   var id      = $("#_id").val(); //aqui capturas
@@ -380,7 +389,7 @@ $("#edit").on("click", function () {
                       
                                 
     if ( $("#nombreC").val() == "" || $("#apellidoC").val() == "" || $("#usuario").val() == "" ||
-      $("#rolC").val() == "" ||  $("#emailC").val() == "" ||   $("#contraC").val() == "" ) {
+      $("#rolC").val() == ""  ||$("#unidadd_id").val() == ""  ||  $("#emailC").val() == "" ||   $("#contraC").val() == "" ) {
                               
               Swal.fire({
                 icon: "error",
@@ -394,6 +403,7 @@ $("#edit").on("click", function () {
       formData.append("ape",apellidoC);
       formData.append("usu",usuario);
       formData.append("rol",rolC);
+      formData.append("unid",uni);
       formData.append("email",emailC);
       formData.append("contra",contraC);
       formData.append("contra",contraC);
@@ -417,7 +427,7 @@ $("#edit").on("click", function () {
                     });
                     
                   
-                    $("#form")[0].reset();
+                    //$("#form")[0].reset();
                     $("#modalEditar").modal("hide");
                     refrescarTable();//recarga la tabla en el momento
                     //proba

@@ -6,6 +6,7 @@ $conexion = con();
     $apellido = $_POST["ape"];
     $usuario = $_POST["usu"];
     $rol = $_POST["rol"];
+    $uni  = $_POST["unid"];
     $email = $_POST["email"];
     $contra= $_POST["contra"];
     $id    = $_POST["_id"];
@@ -13,7 +14,7 @@ $conexion = con();
 
 
     $sql= " UPDATE usuarios SET nombre='$nombre',apellido='$apellido',usuario='$usuario',rol='$rol',email='$email',
-    contrasena='$contra' WHERE id = '$id'";
+    contrasena='$contra',fk_unidades='$uni' WHERE id = '$id'";
       //var_dump($sql); /*para que proves porq el error */
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
@@ -32,7 +33,7 @@ $conexion = con();
                     'title' => "Error",
                     'mensaje'=>"Surgió un error!"
                   );
-            }
-           $jsonstring = json_encode($json[0]);
-           echo $jsonstring;
+}
+ $jsonstring = json_encode($json[0]);
+echo $jsonstring;
 ?>

@@ -6,6 +6,7 @@ $con = con();
 
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
  $sql="SELECT * from usuarios order by nombre ASC";
+ //$sql="SELECT *, usuarios.id AS idup FROM usuarios order by nombre ASC";
 
 
   $result = mysqli_query($conexion, $sql);
@@ -37,5 +38,4 @@ $con = con();
   }
   $jsonstring = json_encode($json);
   echo $jsonstring;
-  //excelente asi era solo ese te falto el id
 ?>

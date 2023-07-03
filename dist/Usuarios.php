@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Unidad:</label>
-                      <select class="form-select" id="uniC" name="rolCU" data-placeholder="Seleccione la Unidad">
+                      <select class="form-select" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div> 
@@ -114,6 +114,7 @@
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
     <script src="./Controlador/Usuarios/usuario.js"></script>
+    <script src="./Controlador/CredencialesA/credenciales.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
