@@ -33,99 +33,104 @@
         </nav>
       </div>
     </header>
-    <!-- CONTENEDOR-->
+    <!-- CONTENEDOR---------------------------------------------------->
     <div class="body flex-grow-1 px-3">
-      <div class="container-lg">
+    <div class="container-lg">
         <!-- row-->
         <div class="row">
-          <div class="col-12">
-            <div class="card mb-4">
-              <div class="card-header"><strong>Asignación de Activo</strong></div>
-              <div class="card-body">
-                <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate="">
-                  <div class="row">
-                    <!--INICIO-->
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
-                      <input class="form-control" id="validationCustom01" type="date" required="">
+            <div class="col-12">
+                <div class="card mb-4">
+                    <div class="card-header"><strong>Asignación de Activo</strong></div>
+                    <div class="card-body">
+                        <!--INICIO FORM-->
+                        <form class="g-3 needs-validation" novalidate="">
+                            <!--INICIO------------------------------->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
+                                    <input class="form-control" id="fechaA" type="date" required="">
+                                </div>
+                            </div>
+                            <!--FIN-->
+                            <div class="row  my-4">
+                                <div class="col-md-4">
+                                    <label class="form-label" for="validationCustom02">Nombre:</label>
+                                    <input class="form-control" id="nombreA" type="text" required="" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="validationCustom02">Marca:</label>
+                                    <input type="text" class="form-control" id="marcaA" name="marcaC" required=""
+                                        disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="validationCustom02">Color:</label>
+                                    <input type="text" class="form-control" id="colorA" name="colorC" required=""
+                                        disabled>
+                                </div>
+                            </div>
+                                <div class="row  my-4">
+                                    <div class="col-md-4">
+                                        <label class="form-label" for="validationCustom02">Serie:</label>
+                                        <input type="text" class="form-control" id="serieA" name="serieC" required=""
+                                            disabled>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label" for="validationCustom04">Categoria: </label>
+                                        <select class="form-select" required="" id="id_actegoria" name="cargoC" required=""
+                                            disabled>
+                                            <option selected="" disabled="" value="">Choose...</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a valid state.</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label" for="validationCustom04">Modelo</label>
+                                        <input class="form-control" id="modeloA" type="text" required="" disabled>
+                                    </div>
+                                </div>
+                            <hr style="color: black; background-color: black; width:100%;" />
+                            <!--FIN----------------------------------------------------------------------->
+                            <div class="row  my-4">
+                                <div class="col-md-4">
+                                    <input class="form-control" value="<?php echo $_GET['a']?>"
+                                        id="fk_ingresos_entradas" type="hidden">
+                                    <label class="form-label" for="validationCustom02">Ubicación:</label>
+                                    <input class="form-control" id="ubicacionA" type="text" required="">
+                                </div>
+                                <div class="col-md-4">
+                                    <!--combo qque vas a ir a guardar en fk_usuarios de ahi solo vas a guardar los campos que estas complentando-->
+                                    <label class="form-label" for="validationCustom02">Jefe Responsable:</label>
+                                    <input class="form-control" id="validationCustom02" type="text" required="">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="validationCustom02">Codigo:</label>
+                                    <input class="form-control" id="codigoA" type="text" required="">
+                                </div><br>
+                                <div class="row  my-4">
+                                <div class="col-md-4">
+                                    <label class="form-label" for="validationCustom02">Encargado del Bien:</label>
+                                    <input class="form-control" id="encargadoA" type="text" required="">
+                                </div>
+                            </div>
+                            </div>
+                            <hr style="color: black; background-color: black; width:100%;" />
+                            <!--FIN-->
+                            <div class="col-12" align="right">
+                                <button class="btn btn-success" type="submit">Guardar <i
+                                        class='far fa-check-square'></i></button>
+                                <button class="btn btn-secondary" type="submit">Cancelar <i
+                                        class='far fa-times-circle'></i></button>
+                            </div>
+                        </form>
+                        <!--/// FIN FORM ////////////////-->
                     </div>
-                  </div>
-                  <!--FIN-->
-                  <div class="row  my-4">
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Ubicación:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Jefe Responsable:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom04">Modelo</label>
-                      <select class="form-select" id="validationCustom04" required="">
-                        <option selected="" disabled="" value="">Choose...</option>
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
-                    </div>
-                  </div>
-                  <hr style="color: black; background-color: black; width:100%;" /> 
-                  <!--FIN-->
-                  <div class="row  my-4">
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Nombre:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="" disabled>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Marca:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="" disabled>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Color:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="" disabled>
-                    </div>
-                    <div class="row  my-4">
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Serie:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="" disabled>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom04">Categoria: </label>
-                      <select class="form-select" id="validationCustom04" required="" disabled>
-                        <option selected="" disabled="" value="">Choose...</option>
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
-                    </div>
-                    </div>
-                  </div>
-                  <hr style="color: black; background-color: black; width:100%;" />
-                  <!--FIN-->
-                  <div class="row  my-4">
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Codigo:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div><br>
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Encargado del Bien:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                  </div>
-                  <hr style="color: black; background-color: black; width:100%;" />
-                  <!--FIN-->
-                  <div class="col-12" align="right">
-                  <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
-                      <button class="btn btn-secondary" type="submit">Cancelar <i class='far fa-times-circle'></i></button>
-                  </div>
-                </form>
-                <!--/// FIN FORM ////////////////-->
-              </div>
+                </div>
             </div>
-          </div>
-          <!-- /.row-->
+            <!-- /.row------------------------------------------>
         </div>
-      </div>
-      <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
+    <!-- ///////FIN CONTENEDOR/////////////-->
+</div>
+    <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->

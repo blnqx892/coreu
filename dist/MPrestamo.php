@@ -46,7 +46,7 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Movimiento de Bienes Muebles</strong></div>
               <div class="card-body">
-                <!--INICIO FORM-->
+<!--------------------------INICIO FORM--------------------------------------------------->
                 <form class="g-3 needs-validation" novalidate="">
                   <div class="row my-4">
                     <div class="col-md-3">
@@ -66,77 +66,89 @@
                     </div>
                   </div>
                   <hr style="color: black; background-color: black; width:100%;" />
-                  <div class="row my-4">
-                    <div class="col-md-2">
-                      <label class="form-label" for="validationCustom01">Fecha:</label>
-                      <input class="form-control" id="validationCustom01" type="date" required="">
-                    </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Procedencia:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Destino:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                  </div>
-                  <div class="row my-4">
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Tipo de Movimiento:</label>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Prestamo
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Traslado Definitivo
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Reparación
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label" for="validationCustom02">Observaciones:</label>
-                      <textarea class="form-control" id="validationCustom02" required="" rows="4"></textarea>
-                    </div>
-                  </div>
-                  <!--FIN-->
-                  <h4>Caracteristicas</h4>
-                  <hr style="color: black; background-color: black; width:100%;" />
-                  <div class="row my-4">
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Nombre:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Descripcion:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Modelo:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Serie:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Marca:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Codigo:</label>
-                      <input class="form-control" id="validationCustom02" type="text" required="">
-                    </div>
-                  </div>
-                  <!--FIN-->
+ <!--FIN BUSCADOR------------------------------------------------------------------------------> 
+<h4>Caracteristicas</h4>
+<hr style="color: black; background-color: black; width:100%;" />
+<div class="row my-4">
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom02">Nombre:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="" disabled>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom02">Costo adquisición:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="" disabled>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom02">Vida Util:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="" disabled>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom02">Color:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="" disabled>
+    </div>
+</div>
+<div class="row my-4">                 
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom02">Modelo:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="" disabled>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom02">Serie:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="" disabled>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom02">Marca:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="" disabled>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom02">Codigo:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="" disabled>
+    </div>
+</div>
+<!--FIN------------------------------------------------------------------------------------------->
+<hr style="color: black; background-color: black; width:100%;" />
+ <div class="row my-4">
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom01">Fecha:</label>
+        <input class="form-control" id="validationCustom01" type="date" required="">
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" for="validationCustom02">Procedencia:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="">
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" for="validationCustom02">Destino:</label>
+        <input class="form-control" id="validationCustom02" type="text" required="">
+    </div>
+</div>
+<div class="row my-4">
+    <div class="col-md-3">
+        <label class="form-label" for="validationCustom02">Tipo de Movimiento:</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Prestamo
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Traslado Definitivo
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Reparación
+            </label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label" for="validationCustom02">Observaciones:</label>
+        <textarea class="form-control" id="validationCustom02" required="" rows="4"></textarea>
+    </div>
+</div>
+<!--FIN------------------------------------------------------------------------------------------->
                   <div class="col-15" align="right">
                     <hr style="color: black; background-color: black; width:100%;" />
                     <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
@@ -144,14 +156,14 @@
                         class='far fa-times-circle'></i></button>
                   </div>
                 </form>
-                <!--/// FIN FORM ////////////////-->
+<!--/// FIN FORM ////////////////-->
               </div>
             </div>
           </div>
-          <!-- /.row-->
+<!------------------------- /.row-->
         </div>
       </div>
-      <!-- ///////FIN CONTENEDOR/////////////-->
+<!-- ///////FIN CONTENEDOR/////////////-->
     </div>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
@@ -160,5 +172,4 @@
     <!-- ////////////////////////-->
   </div>
 </body>
-
 </html>
