@@ -45,57 +45,30 @@
                 <div class="col-md-14" align="right">
                   <label for="inputCity" class="form-label">Nueva Credencial</label>
                   <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
-                    data-coreui-target="#exampleModal" data-coreui-whatever="@mdo">Ir</button>
+                    data-coreui-target="#modalUni" data-coreui-whatever="@mdo">Ir</button>
                 </div>
                 <div class="row  my-4">
                   <!-- dataTable-->
-                <table id="example" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                <table id="unidades" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                      <th style="text-align:center;">Jefe Unidad</th>
+                      <th style="text-align:center;">N°</th>
                       <th style="text-align:center;">Unidad</th>
-                      <th style="text-align:center;">Usuario</th>
-                      <th style="text-align:center;">Correo</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>RRHH</td>
-                      <td>ramirez</td>
-                      <td>ram@gmail.com</td>
-                      <td>
-                      <button type="button" class="btn btn-info rounded-pill" title="Ver"><i class='far fa-eye'></i></button>
-                            <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
-                            <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Pedro Vargas</td>
-                      <td>Medio Ambiente</td>
-                      <td>vargas</td>
-                      <td>vargs@gmail.com</td>
-                      <td>
-                            <button type="button" class="btn btn-info rounded-pill" title="Ver"><i class='far fa-eye'></i></button>
-                            <button type="button" class="btn btn-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-success rounded-pill" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
-                            <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
-                      </td>
-                    </tr>
                   </tbody>
                   <tfoot>
                     <tr>
-                    <th style="text-align:center;">Jefe Unidad</th>
+                       <th style="text-align:center;">N°</th>
                       <th style="text-align:center;">Unidad</th>
-                      <th style="text-align:center;">Usuario</th>
-                      <th style="text-align:center;">Correo</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
                 </table>
                 <!-- //dataTable-->
+                <!-- aparte sección ----->
                 </div>
               </div>
             </div>
@@ -106,51 +79,92 @@
     </div>
     <!-- ///////FIN CONTENEDOR/////////////-->
     <!-- Scrollable modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade" id="modalUni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
+            <input type="hidden" value="Guardar1" name="bandera">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Registro de Unidad</h5>
             <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form>
-              <div class="row my-4">
-                <div class="col-md-4">
-                  <label for="inputZip" class="form-label">Jefe de Unidad:</label>
-                  <input type="text" class="form-control" id="inputZip">
+                <div class="col-md-6">
+                  <label for="inputZip" class="form-label">Nombre Unidad:</label>
+                  <input type="text" class="form-control" id="nombreUnid">
                 </div>
-                <div class="col-md-4">
-                  <label for="inputZip" class="form-label">Unidad:</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div>
-                <div class="col-md-4">
-                  <label for="inputZip" class="form-label">Correo:</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div>
-              </div>
-              <div class="row my-4">
-              <div class="col-md-4">
-                  <label for="inputZip" class="form-label">Usuario:</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div><div class="col-md-4">
-                  <label for="inputZip" class="form-label">Contraseña:</label>
-                  <input type="password" class="form-control" id="inputZip">
-                </div><div class="col-md-4">
-                  <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                  <input type="password" class="form-control" id="inputZip">
-                </div>
-              </div>
-            </form>
-          </div>
+          </div>               
           <div class="modal-footer">
+           <button type="submit" id="GuardaUnidades" class="btn btn-primary">Guardar</button>
             <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary">Guardar</button>
+            
           </div>
         </div>
+      </form>
       </div>
     </div>
+<!--////////////////////////////////////////-->
+
+   <!-- ///////MODAL VER UNIDADES/////////////-->
+    <!-- Scrollable modal -->
+    <div class="modal fade" id="modalVerU" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
+            <input type="hidden" value="Guardar1" name="bandera">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
+                    DE UNIDADES</h5>
+            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+                <div class="col-md-6">
+                  <label for="inputZip" class="form-label">Nombre Unidad:</label>
+                  <input type="text" class="form-control" id="nombreveruni" disabled>
+                </div>
+          </div>               
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+            
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+<!--///////////////////FIN MODAL VER UNIDADES/////////////////////-->
+
+ <!-- ///////MODAL EDITAR UNIDADES/////////////-->
+    <!-- Scrollable modal -->
+    <div class="modal fade" id="modalEditarUni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
+            <input type="hidden" value="Guardar1" name="bandera">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
+                    DE UNIDADES</h5>
+            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+                <div class="col-md-6">
+                  <input type="hidden" class="form-control" id="_id">
+                  <label for="inputZip" class="form-label">Nombre Unidad:</label>
+                  <input type="text" class="form-control" id="nombreediuni" >
+                </div>
+          </div>               
+          <div class="modal-footer">
+          <button class="btn btn-success" type="submit" id="editunid" name="btnGuardar" >Guardar</button>
+            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+            
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+<!--///////////////////FIN MODAL EDITAR UNIDADES/////////////////////-->
   </div>
+  <script src="./Controlador/CredencialesA/mostrarUni.js"></script>
+  <script src="./Controlador/CredencialesA/credenciales.js"></script>
   <!-- IMPORTAR ARCHIVO FOOTER-->
   <?php include("foot/foot.php"); ?>
   <!-- ////////////////////////-->
