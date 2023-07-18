@@ -4,6 +4,7 @@
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
 <script src="Controlador/Suministros/suministro.js"></script>
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
@@ -103,6 +104,11 @@
                       <label for="inputZip" class="form-label">Casilla:</label>
                       <input type="text" class="form-control v-required-1" id="casilla">
                     </div>
+                    <div class="col-md-3">
+                      <svg id="barcode" width="100%"></svg>
+                    </div>
+                  </div>
+                  <div class="row my-4">
                     <div class="col-md-3">
                       <button class="btn btn-success mt-3" type="button" id="save_record">Guardar <i class='far fa-check-square'></i></button>
                     </div>

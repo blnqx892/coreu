@@ -3,6 +3,19 @@ $(document).ready(function() {
   const params = new URLSearchParams(document.location.search);
   const id = params.get('id');
 
+  $("#codigo_barra").on('keyup', function (e) {
+    let valor = $(this).val();
+    // Prueba del codigo de barras
+    valor = valor === '' ? 'vacio' : valor;
+    valor = valor.match(/^[a-zA-Z0-9 ]+$/gu);
+    valor = valor === null ? 'Caracter incorrecto' : valor;
+    JsBarcode("#barcode", valor, {
+      width: 1,
+      height: 50,
+      fontSize: 12
+    });
+  });
+
   // Variables globales
   const host = window.location.origin;    // Dirección url actual
   let nuevo = true;                       // Indica si el registro es nuevo o edición
