@@ -66,6 +66,12 @@ $(document).ready(function() {
           $("#add_kardex").show();
 
           load_kardex();
+
+          JsBarcode("#barcode", response.codigo_barra, {
+            width: 1,
+            height: 50,
+            fontSize: 12
+          });
         } else {
           nuevo = true;
         }
@@ -209,9 +215,10 @@ $(document).ready(function() {
             html += '<td>' + moment(v.fecha).format('DD/MM/YYYY') +'</td>';
             html += '<td>' + v.concepto +'</td>';
             html += '<td>' + v.fondos_procedencia +'</td>';
-            html += '<td>' + (v.tipo_movimiento === 'entrada' ? '<span class="badge bg-success col-12">Entrada</span>' : '<span class="badge bg-danger col-12">Salida</span>') +'</td>';
-            html += '<td>' + v.cantidad +'</td>';
-            html += '<td>' + v.precio +'</td>';
+            html += '<td>' + v.cantidad_entrada +'</td>';
+            html += '<td>' + v.cantidad_salida +'</td>';
+            html += '<td>' + v.precio_entrada +'</td>';
+            html += '<td>' + v.precio_salida +'</td>';
             html += '<td>' + saldo +'</td>';
             html += '</tr>';
           });

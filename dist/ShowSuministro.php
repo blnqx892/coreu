@@ -88,6 +88,7 @@
                       <div class="col-12">
                         <span class="fw-bold">
                           <?php echo $mostrar['codigo_barra'] ?>
+                          <input type="hidden" id="ibarcode" value="<?php echo $mostrar['codigo_barra'] ?>">
                         </span>
                       </div>
                     </div>
@@ -230,6 +231,10 @@
                         </span>
                         </div>
                       </div>
+                    </div>
+
+                    <div class="col-3">
+                      <svg id="barcode" width="100%"></svg>
                     </div>
 
                   </div>

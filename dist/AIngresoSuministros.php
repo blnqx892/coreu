@@ -128,18 +128,20 @@
                             <th>Fecha</th>
                             <th>Concepto</th>
                             <th>Fondo Procedencia</th>
-                            <th>Tipo de Movimiento</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
+                            <th>Cantidad entrada</th>
+                            <th>Cantidad salida</th>
+                            <th>Precio entrada</th>
+                            <th>Precio salida</th>
                             <th>Saldo</th>
                           </tr>
                         </thead>
                         <tbody id="kardex_body">
                           <tr>
-                            <th>1</th>
                             <th>0003</th>
                             <th>CM</th>
                             <th>Lapiz facela</th>
+                            <th>3</th>
+                            <th>3</th>
                             <th>3</th>
                             <th>3</th>
                             <th>3</th>

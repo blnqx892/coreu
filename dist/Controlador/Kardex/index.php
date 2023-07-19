@@ -17,7 +17,10 @@ while ($item = mysqli_fetch_array($result)) {
     "concepto" => $item["concepto"],
     "tipo_movimiento" => $item["cantidad_entrada"] != 0 ? "entrada" : "salida",
     "cantidad" => $item["cantidad_entrada"] != 0 ? $item["cantidad_entrada"] : $item["cantidad_salida"],
-    "precio" => $item["cantidad_entrada"] != 0 ? $item["precio_entrada"] : $item["precio_salida"],
+    "cantidad_entrada" => $item["cantidad_entrada"],
+    "cantidad_salida" => $item["cantidad_salida"],
+    "precio_entrada" => $item["precio_entrada"],
+    "precio_salida" => $item["precio_salida"],
     "fondos_procedencia" => $item["fondos_procedencia"],
     "fk_ingreso_suministro" => $item["fk_ingreso_suministros"]
   );
