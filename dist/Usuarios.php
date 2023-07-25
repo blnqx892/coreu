@@ -71,32 +71,40 @@
                       <!--INICIO SECCION CUATRO-->
                       <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Rol</label>
-                      <select class="form-select" id="rolC" name="rolC" data-placeholder="Seleccione Producto">
-                        <option  value="Almacen">Almacen</option>
-                        <option  value="Activo Fijo">ActivoFijo</option>
-                        <option  value="Activo Fijo">UACI</option>
-                        <option  value="Activo Fijo">Admin</option>
-                        <option  value="Activo Fijo">Jefe</option>
+                      <select class="form-select" id="rolC" name="rolC" data-placeholder="Seleccione el Rol">
+                        <option  value="Administrador">Administrador</option>
+                        <option  value="Jefe">Jefe</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
-                    </div>
+                     </div>
+                     <div class="col-md-3">
+                      <label class="form-label" for="validationCustom04">Permisos</label>
+                      <select class="form-select" id="perC" name="perC" data-placeholder="Seleccione Producto">
+                        <option  value="Almacen">Almacen</option>
+                        <option  value="Activo Fijo">Activo Fijo</option>
+                        <option  value="UACI">UACI</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Unidad:</label>
                       <select class="form-select" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
-                    </div> 
+                     </div> 
                    <div class="col-md-3">
                         <label for="inputZip" class="form-label">Contraseña:</label>
                         <input type="password" class="form-control" id="contraC" name="contraC">
                         <div id="error1"></div>
                       </div>
-                      <div class="col-md-3">
+                    </div>
+                    <div class="row my-3">
+                    <div class="col-md-3">
                         <label for="inputZip" class="form-label">Repetir Contraseña:</label>
                         <input type="password" class="form-control" id="contraC1" name="contraC1">
                         <div id="error2"></div>
                       </div>
-                    </div>
+                    </div>      
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />

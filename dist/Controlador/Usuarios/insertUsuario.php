@@ -6,13 +6,14 @@ $conexion = con();
     $apellido = $_POST["ape"];
     $usuario = $_POST["usu"];
     $rol = $_POST["rol"];
+    $per = $_POST["per"];
     $uni = $_POST["unid"];
     $email = $_POST["email"];
     $contra= $_POST["contra"];
 
     
 
-    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,rol,fk_unidades) VALUES ('$nombre', '$apellido','$usuario','$email',md5('$contra'),'$rol','$uni')";
+    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,rol,permisos,fk_unidades) VALUES ('$nombre', '$apellido','$usuario','$email',md5('$contra'),'$rol','$per','$uni')";
 
     // Ejecutar la consulta SQL
     

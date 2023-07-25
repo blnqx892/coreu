@@ -87,6 +87,7 @@ $(document).ready(function () {
         $("#_id").val(data.id);
         $("#nombre").val(data.nom);
         $("#rolC").val(data.rol);
+        $("#perC").val(data.per);
         $("#unidad_id").val(data.unidd);    
         $("#apellido").val(data.ape);
         $("#usuario").val(data.usu);
@@ -132,6 +133,7 @@ $(document).ready(function () {
           $("#apellidov").val(data.ape);
           $("#unidadd_id").val(data.unid);
           $("#rolv").val(data.rol);
+          $("#perv").val(data.per);
           $("#usuariov").val(data.usu);
           $("#emailv").val(data.email);
          
@@ -151,7 +153,8 @@ $(document).ready(function () {
        var nombreC = $("#nombre").val(); //capturar los datos
        var apellidoC = $("#apellido").val();
        var usuario = $("#usuario").val();
-       var rolC = $("#rolC").val();    
+       var rolC = $("#rolC").val();  
+       var perC = $("#PerC").val();      
        var unidd = $("#unidad_id").val();    
        var emailC = $("#email").val();
        var contraC = $("#con").val();
@@ -173,6 +176,7 @@ $(document).ready(function () {
           formData.append("ape",apellidoC);
           formData.append("usu",usuario);
           formData.append("rol",rolC);
+          formData.append("per",perC);
           formData.append("unid",unidd);
           formData.append("email",emailC);
           formData.append("contra",contraC);
@@ -238,6 +242,7 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
       $("#_id").val(data.id);
       $("#nombre").val(data.nom);
       $("#rolC").val(data.rol); 
+      $("#perC").val(data.per); 
       $("#unidadd_id").val(data.unid);
       $("#apellido").val(data.ape);
       $("#usuario").val(data.usu);
@@ -380,6 +385,7 @@ $("#edit").on("click", function () {
   var apellidoC = $("#apellido").val();
   var usuario = $("#usuario").val();
   var rolC = $("#rolC").val();
+  var perC = $("#perC").val();
   var uni = $("#unidadd_id").val();
   var emailC = $("#email").val();
   var contraC = $("#con").val();
@@ -403,6 +409,7 @@ $("#edit").on("click", function () {
       formData.append("ape",apellidoC);
       formData.append("usu",usuario);
       formData.append("rol",rolC);
+      formData.append("per",perC);
       formData.append("unid",uni);
       formData.append("email",emailC);
       formData.append("contra",contraC);

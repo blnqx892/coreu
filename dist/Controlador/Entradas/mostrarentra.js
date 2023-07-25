@@ -47,8 +47,8 @@ $(document).ready(function () {
           },
           columns: [
             { data: "i" },
-            { data: "fechaC" },//segui segui
-            { data: "facturaC" },//ya no tendras problema con eso dake egui
+            { data: "fechaC" },
+            { data: "facturaC" },
             { data: "nombreC" },
             { data: "marca" },
             { data: "cate" },
@@ -130,14 +130,14 @@ $(document).ready(function () {
       
     $("#entra").on("click", ".vere-item", function () {
       let id = $(this).attr("id-item-vere");
-     // $("#_id").val('');
+      $("#_id").val('');
       $("#_id").val(id);
     
        $("#modalVer").modal("show");
       var formData = new FormData();
   
       formData.append("id", id);
-    
+     
       //otro ajax
        $.ajax({
         url: "Controlador/Entradas/mostrar_modalE.php",
@@ -147,15 +147,20 @@ $(document).ready(function () {
         processData: false,
         success: function (response) {
           console.log(JSON.parse(response));
+
           data = JSON.parse(response);
-          //console.log(data);
-          //aqui es jaja
-         
+          if(data.mostrar_campos ==1){
+            $("#ocultarver").show();
+        }else{
+          $("#ocultarver").hide();
+  
+        }  
+         //console.log(data);
           $("#_id").val(data.id);
           $("#fechae").val(data.fechaC);
           $("#factu").val(data.facturaC);
           $("#cos").val(data.costo);
-          $("#id_proveedor").val(data.proved);
+          $("#id_proveedor").val(data.prove);
           $("#nombre").val(data.nombreC);
           $("#serie").val(data.serie);
           $("#marca").val(data.marca);
@@ -163,7 +168,7 @@ $(document).ready(function () {
           $("#color").val(data.color);
           $("#cargo").val(data.cargo);
           $("#vida").val(data.vida);
-          $("#id_categoria").val(data.cated);
+          $("#id_categoria").val(data.cate);
           $("#descrip").val(data.descri);
           $("#motor").val(data.numeromo);
           $("#placa").val(data.numeropla);

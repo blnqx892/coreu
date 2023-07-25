@@ -33,6 +33,7 @@ $sql="SELECT *, usuarios.id as id_usuario FROM usuarios INNER JOIN unidades on u
       'usu'=> $row['usuario'],
       'email'=> $row['email'],
       'rol'=> $row['rol'],
+      'per'=> $row['permisos'],
       'unid'=> $row['nombre_unidad'],
       'unidd'=> $row['fk_unidades'],
       

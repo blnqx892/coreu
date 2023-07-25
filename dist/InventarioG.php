@@ -43,59 +43,146 @@
               <div class="card-header"><strong>Inventario General</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                <table id="inven" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
+                      <th style="text-align:center;">N°</th>
                       <th style="text-align:center;">Fecha</th>
-                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Codigo</th>
                       <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>      
                       <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
-                    <tr>
-                      <td>12-11-2022</td>
-                      <td>Equipo de Oficina</td>
-                      <td>Estante Metalico</td>
-                      <td>Dexion</td>
-                      <td>Unidad de Estado Familiar</td>
-                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>9-1-2023</td>
-                      <td>Equipo Intangible</td>
-                      <td>Software Oficce</td>
-                      <td>Microsoft</td>
-                      <td>Unidad de UACI</td>
-                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></button>
-                      </td>
-                    </tr>
                   </tbody>
                   <tfoot>
                     <tr>
+                      <th style="text-align:center;">N°</th>
                       <th style="text-align:center;">Fecha</th>
-                      <th style="text-align:center;">Categoria</th>
+                      <th style="text-align:center;">Codigo</th>
                       <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">Marca</th>
+                      <th style="text-align:center;">Categoria</th>      
                       <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
                 </table>
-                <!-- //dataTable-->
+ <!--------------------------- //dataTable-------------------------------------------------------------------->
+ <!--MODAL VER USUARIO -->
+ <div class="modal fade" id="modalVera" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
+          DE ACTIVOS</h5>
+        <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row my-4">
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Fecha:</label>
+              <input type="text" class="form-control" id="fechaa" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Código:</label>
+              <input type="text" class="form-control" id="codigoa" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">N° Fatura:</label>
+              <input type="text" class="form-control" id="factua" disabled>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Costo Adquisición:</label>
+              <input type="text" class="form-control" id="costa" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Proveedor:</label>
+              <input type="text" class="form-control" id="id_proveedor" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="nombrea" disabled>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Modelo:</label>
+              <input type="text" class="form-control" id="modeloa" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Ubicación:</label>
+              <input type="text" class="form-control" id="ubicaciona" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Marca:</label>
+              <input type="text" class="form-control" id="marcaa" disabled>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Tipo Cargo:</label>
+              <input type="text" class="form-control" id="cargoa" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Vida Util:</label>
+              <input type="text" class="form-control" id="vidaa" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Categoria:</label>
+              <input type="text" class="form-control" id="id_categoria" disabled>
+            </div>
+          </div>
+<!----------------------------------este es el div de lo de vehiculo  ----------------------------------------->
+         <div class="row my-4" id="ocultarverdatos" style="display:none">
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">No. Motor:</label>
+              <input type="text" class="form-control" id="motora" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">No. Placa:</label>
+              <input type="text" class="form-control" id="placaa" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">No. Chasis:</label>
+              <input type="text" class="form-control" id="chasisa" disabled>
+            </div>
+            <div class="col-md-4">
+                <label for="inputZip" class="form-label">Capacidad:</label>
+                <input type="text" class="form-control" id="capaa" disabled>
+            </div>
+          </div>
+          <div class="row my-4">
+              <div class="col-md-8">
+                <label for="inputZip" class="form-label">Descripción:</label>
+                <input type="text" class="form-control" id="descrip" disabled>
+              </div>
+          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--///////////////TERMINA MODAL VER ///////////////////////////////////////////////////////////////-->
               </div>
             </div>
           </div>
           <!-- /.row-->
         </div>
-      </div>
+      
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
+    </div>
+    <script src="./Controlador/InventarioAF/mostrartablain.js"></script>
+    <script src="./Controlador/Proveedores/proveedor.js"></script>
+    <script src="./Controlador/Categorias/categoria.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->

@@ -10,7 +10,7 @@ $(document).ready(function () {
       success: function (response) {
         //console.log(JSON.parse(response));
         const item = JSON.parse(response);
-        let template = '<option selected="" disabled="" value="">Elegir Unidad </option>';
+        let template = '<option value="">Elegir Unidad </option>';
         item.forEach((item) => {
           template += `
           <option value="${item.id}">${item.name}</option>

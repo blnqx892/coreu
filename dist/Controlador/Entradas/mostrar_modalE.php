@@ -4,7 +4,7 @@
 include("../../Confi/conexion.php");
 $con = con();
 
-$id = $_POST['id'];
+$id = $_POST['id'] ?? NULL;
 
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
  $sql="SELECT *, ingreso_entradas.id as id_entradas  FROM ingreso_entradas
@@ -13,9 +13,7 @@ $id = $_POST['id'];
 
   //var_dump($sql);//ver consulta
   $result = mysqli_query($conexion, $sql);
-
-
-
+  
   $json = array();
   $i=0;
 

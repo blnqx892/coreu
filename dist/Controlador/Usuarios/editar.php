@@ -6,6 +6,7 @@ $conexion = con();
     $apellido = $_POST["ape"];
     $usuario = $_POST["usu"];
     $rol = $_POST["rol"];
+    $per = $_POST["per"];
     $uni  = $_POST["unid"];
     $email = $_POST["email"];
     $contra= $_POST["contra"];
@@ -13,7 +14,7 @@ $conexion = con();
     
 
 
-    $sql= " UPDATE usuarios SET nombre='$nombre',apellido='$apellido',usuario='$usuario',rol='$rol',email='$email',
+    $sql= " UPDATE usuarios SET nombre='$nombre',apellido='$apellido',usuario='$usuario',rol='$rol',permisos='$per',email='$email',
     contrasena='$contra',fk_unidades='$uni' WHERE id = '$id'";
       //var_dump($sql); /*para que proves porq el error */
     // Ejecutar la consulta SQL

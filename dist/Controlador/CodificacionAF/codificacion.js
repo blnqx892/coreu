@@ -3,24 +3,20 @@ $(document).ready(function () {
 
     //**************************************guardar  */
   
-    $("#GuardaUsuarios").on("click", function () {
+    $("#GuardaCodificacion").on("click", function () {
 
      
 
-      var nombreC = $("#nombreC").val(); //capturar los datos
-      var apellidoC = $("#apellidoC").val();
-      var usuario = $("#usuarioC").val();
-      var rolC = $("#rolC").val();
-      var perC = $("#perC").val();
-      var uni= $("#unidad_id").val();
-      var emailC = $("#emailC").val();
-      var contraC = $("#contraC").val();
-    
+      var fechaA = $("#fechaA").val(); //capturar los datos que tiene el input
+      var codigoA = $("#codigoA").val();
+      var encargadoA = $("#encargadoA").val();
+      var ingresosA = $("#_id").val();
+      var usuariosA = $("#nombreC").val();
+
+      
   
-      if ( $("#nombreC").val() == "" || $("#apellidoC").val() == "" || $("#usuario").val() == "" ||
-        $("#rolC").val() == "" ||$("#unidad_id").val() == "" ||
-        $("#emailC").val() == "" ||
-        $("#contraC").val() == "" ) {
+      if ( $("#fechaA").val() == "" || $("#codigoA").val() == "" || $("#encargadoA").val() == "" 
+      || $("#_id").val() == ""|| $("#nombreC").val() == "") {
 
         Swal.fire({
           icon: "error",
@@ -30,17 +26,15 @@ $(document).ready(function () {
       } else {
         var formData = new FormData(); //permite recoger la data para enviarla al controlador
 
-        formData.append("nombreC", nombreC);//anadir la data al objeto para seer enviadad
-        formData.append("ape",apellidoC);
-        formData.append("usu",usuario);
-        formData.append("rol",rolC);
-        formData.append("per",perC);
-        formData.append("unid",uni);
-        formData.append("email",emailC);
-        formData.append("contra",contraC)
+        formData.append("fechaA", fechaA);//anadir la data al objeto para seer enviadad
+        formData.append("cod",codigoA);
+        formData.append("encar",encargadoA);
+        formData.append("_id",ingresosA);
+        formData.append("nombreC",usuariosA);
+
   
         $.ajax({
-          url: "Controlador/Usuarios/insertUsuario.php",
+          url: "Controlador/CodificacionAF/insertCOA.php",
           type: "post",
           data: formData,
           contentType: false,

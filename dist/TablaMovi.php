@@ -50,7 +50,6 @@
                       <th style="text-align:center;">Tipo de Movimiento</th>
                       <th style="text-align:center;">Procedencia</th>
                       <th style="text-align:center;">Observación</th>
-                      <th style="text-align:center;">Fecha</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
@@ -60,11 +59,8 @@
                       <td>System Architect</td>
                       <td>Edinburgh</td>
                       <td>61</td>
-                      <td>2011-04-25</td>
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
-                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
-                            class="	fas fa-barcode"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -72,11 +68,9 @@
                       <td>Accountant</td>
                       <td>Tokyo</td>
                       <td>63</td>
-                      <td>2011-07-25</td>
+                     
                       <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></button>
-                        <button type="button" class="btn btn-warning rounded-pill" title="Codificar"><i
-                            class="	fas fa-barcode"></i></button>
                       </td>
                     </tr>
                   </tbody>
@@ -86,7 +80,6 @@
                       <th style="text-align:center;">Tipo de Movimiento</th>
                       <th style="text-align:center;">Procedencia</th>
                       <th style="text-align:center;">Observación</th>
-                      <th style="text-align:center;">Fecha</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
