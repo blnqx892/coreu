@@ -115,7 +115,7 @@ $(document).ready(function() {
           .then(response => {
             if (response.statusCode === 200) {
               localStorage.setItem('is_save', true);
-              window.location.href = window.location.origin + '/' + window.location.pathname + '?id=' + response.data;
+              window.location.href = window.location.origin + window.location.pathname + '?id=' + response.data;
             }
           });
       } else {
