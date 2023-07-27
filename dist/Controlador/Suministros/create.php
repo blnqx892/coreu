@@ -19,7 +19,8 @@ into ingreso_suministros (
                           almacen,
                           estante,
                           entrepaño,
-                          casilla
+                          casilla,
+                          categoria_id
 ) values (
           ".$timestamp.",
           '".$body->codigo_barra."',
@@ -31,7 +32,8 @@ into ingreso_suministros (
           '".$body->almacen."',
           '".$body->estante."',
           '".$body->entrepano."',
-          '".$body->casilla."'
+          '".$body->casilla."',
+          '.$body->categoria_id.'
 )";
 
 $response["statusCode"] = 500;

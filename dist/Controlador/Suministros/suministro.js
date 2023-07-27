@@ -60,6 +60,7 @@ $(document).ready(function() {
           $("#estante").val(response.estante);
           $("#entrepano").val(response.entrepano);
           $("#casilla").val(response.casilla);
+          $("#categorias").val(response.categoria_id);
           $("#save_record").html("Editar <i class=\'far fa-check-square\'>");
 
           $("#kardex_tabla").show();
@@ -94,6 +95,7 @@ $(document).ready(function() {
       estante: $("#estante").val(),
       entrepano: $("#entrepano").val(),
       casilla: $("#casilla").val(),
+      categoria_id: $("#categorias").val()
     };
 
     // Validaciones

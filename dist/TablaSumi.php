@@ -4,10 +4,28 @@
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
 <script src="js/JsBarcode.all.min.js"></script>
+<script src="Controlador/Suministros/suministro_index.js"></script>
 <?php
+    $categoria = '';
+    // Identificar si se ha seteado la variable get categoria
+    if (isset($_GET["categoria"])) {
+      // Identificar si la variable get categoria lleva un valor o va nula
+      if (!empty($_GET["categoria"])) {
+        $categoria = $_GET["categoria"];
+      }
+    }
     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
-    $sql="SELECT * from ingreso_suministros order by nombre_suministro ASC";
+
+    $has_categoria = intval($categoria) != 0;
+
+    $sql= $has_categoria ?
+      "SELECT i_s.*, c.categoria from ingreso_suministros as i_s left join categorias as c on i_s.categoria_id = c.id where categoria_id = ".$categoria." order by nombre_suministro ASC" :
+      "SELECT i_s.*, c.categoria from ingreso_suministros as i_s left join categorias as c on i_s.categoria_id = c.id order by nombre_suministro ASC";
+
     $nombre = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
+
+    $sql_categorias = "select * from categorias order by categoria";
+    $categorias = mysqli_query($conexion, $sql_categorias);
 ?>
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
@@ -56,6 +74,25 @@
                 </div>
               </div>
               <div class="card-body">
+                <div class="row">
+                  <div class="d-flex w-100 justify-content-center">
+                    <label for="cats" class="me-2">Categorias</label>
+                    <div class="input-group mb-3">
+                      <select name="cats" id="cats_s" class="form-select-sm">
+                        <option value="">Todas</option>
+                        <?php while($cat = mysqli_fetch_assoc($categorias)) {?>
+                          <?php if ($cat["id"] == $categoria):?>
+                            <option value="<?php echo $cat["id"]?>" selected="selected"><?php echo $cat["categoria"]?></option>
+                          <?php else:?>
+                            <option value="<?php echo $cat["id"]?>"><?php echo $cat["categoria"]?></option>
+                          <?php endif;?>
+                        <?php }?>
+                      </select>
+                      <button type="button" class="btn btn-sm btn-primary" id="cats_b">Filtrar</button>
+                    </div>
+
+                  </div>
+                </div>
                 <!-- dataTable-->
                 <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
@@ -66,6 +103,7 @@
                       <th style="text-align:center;">Presentación</th>
                       <th style="text-align:center;">Unidad de medida</th>
                       <th style="text-align:center;">Ubicación</th>
+                      <th style="text-align:center;">Categoría</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
@@ -80,6 +118,7 @@
                       <td><?php echo $mostrar['presentacion'] ?></td>
                       <td><?php echo $mostrar['unidad_medida'] ?></td>
                       <td><?php echo $mostrar['estante'].'-'.$mostrar['entrepaño'].'-'.$mostrar['casilla'] ?></td>
+                      <td><?php echo $mostrar['categoria'] ?></td>
                       <td>
                         <a href="<?php echo 'ShowSuministro.php?id='.$mostrar['id']?>" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></a>

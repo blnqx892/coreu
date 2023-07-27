@@ -23,6 +23,7 @@ while ($item = mysqli_fetch_array($result)) {
     "estante" => $item["estante"],
     "entrepano" => $item["entrepaño"],
     "casilla" => $item["casilla"],
+    "categoria_id" => $item["categoria_id"]
   );
 }
 

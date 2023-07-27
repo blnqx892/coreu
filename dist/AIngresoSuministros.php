@@ -41,6 +41,12 @@
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
+        <?php
+        $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+
+        $sql_categorias = "select * from categorias order by categoria";
+        $categorias = mysqli_query($conexion, $sql_categorias);
+        ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -104,6 +110,16 @@
                       <label for="inputZip" class="form-label">Casilla:</label>
                       <input type="text" class="form-control v-required-1" id="casilla">
                     </div>
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">Casilla:</label>
+                      <select name="cats" id="categorias" class="form-select">
+                        <?php while($cat = mysqli_fetch_assoc($categorias)) {?>
+                          <option value="<?php echo $cat["id"]?>"><?php echo $cat["categoria"]?></option>
+                        <?php }?>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
                     <div class="col-md-3">
                       <svg id="barcode" width="100%"></svg>
                     </div>

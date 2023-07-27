@@ -16,7 +16,8 @@ $query = "update ingreso_suministros set
                                almacen = '".$body->almacen."',
                                estante = '".$body->estante."',
                                entrepaño = '".$body->entrepano."',
-                               casilla = '".$body->casilla."'
+                               casilla = '".$body->casilla."',
+                               categoria_id = '".$body->categoria_id."'
  where id = ".$id;
 
 $response["statusCode"] = 500;
