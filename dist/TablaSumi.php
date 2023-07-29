@@ -4,7 +4,7 @@
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
 <script src="js/JsBarcode.all.min.js"></script>
-<script src="Controlador/Suministros/suministro_index.js"></script>
+
 <?php
     $categoria = '';
     // Identificar si se ha seteado la variable get categoria
@@ -124,9 +124,7 @@
                             class='far fa-eye'></i></a>
                         <a href="<?php echo 'AIngresoSuministros.php?id='.$mostrar['id']?>" class="btn btn-warning rounded-pill" title="Editar"><i
                             class="far fa-edit"></i></a>
-                        <button type="button" class="btn btn-success rounded-pill" title="Alta"><i
-                            class="fa-solid fa-arrow-up-long"></i></button>
-                        <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i
+                        <button type="button" class="btn btn-danger rounded-pill" onclick="remove(<?php echo $mostrar['id'] ?>)" title="Baja"><i
                             class="fa-solid fa-arrow-down-long"></i></i></button>
                       </td>
                     </tr>
@@ -144,6 +142,18 @@
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
 
+    <div class="toast-container position-fixed end-0 p-3">
+      <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <div class="rounded me-2"></div>
+          <strong class="me-auto" id="toast_title">Acción exitosa</strong>
+          <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast_body">
+          Registro guardado
+        </div>
+      </div>
+    </div>
 
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
@@ -152,6 +162,8 @@
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
     <script src="js/utils.js"></script>
+    <script src="Controlador/Suministros/suministro_index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 </body>
