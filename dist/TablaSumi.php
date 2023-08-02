@@ -4,7 +4,7 @@
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
 <script src="js/JsBarcode.all.min.js"></script>
-<script src="Controlador/Suministros/suministro_index.js"></script>
+
 <?php
     $categoria = '';
     // Identificar si se ha seteado la variable get categoria
@@ -19,12 +19,12 @@
     $has_categoria = intval($categoria) != 0;
 
     $sql= $has_categoria ?
-      "SELECT i_s.*, c.categoria from ingreso_suministros as i_s left join categorias as c on i_s.categoria_id = c.id where categoria_id = ".$categoria." order by nombre_suministro ASC" :
-      "SELECT i_s.*, c.categoria from ingreso_suministros as i_s left join categorias as c on i_s.categoria_id = c.id order by nombre_suministro ASC";
+      "SELECT i_s.*, c.nomb_categoria from ingreso_suministros as i_s left join categorias_suministros as c on i_s.categoria_id = c.categoria_id where c.categoria_id = ".$categoria." order by nombre_suministro ASC" :
+      "SELECT i_s.*, c.nomb_categoria from ingreso_suministros as i_s left join categorias_suministros as c on i_s.categoria_id = c.categoria_id order by nombre_suministro ASC";
 
     $nombre = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
 
-    $sql_categorias = "select * from categorias order by categoria";
+    $sql_categorias = "select * from categorias_suministros order by nomb_categoria";
     $categorias = mysqli_query($conexion, $sql_categorias);
 ?>
 <body>
@@ -81,10 +81,10 @@
                       <select name="cats" id="cats_s" class="form-select-sm">
                         <option value="">Todas</option>
                         <?php while($cat = mysqli_fetch_assoc($categorias)) {?>
-                          <?php if ($cat["id"] == $categoria):?>
-                            <option value="<?php echo $cat["id"]?>" selected="selected"><?php echo $cat["categoria"]?></option>
+                          <?php if ($cat["categoria_id"] == $categoria):?>
+                            <option value="<?php echo $cat["categoria_id"]?>" selected="selected"><?php echo $cat["nomb_categoria"]?></option>
                           <?php else:?>
-                            <option value="<?php echo $cat["id"]?>"><?php echo $cat["categoria"]?></option>
+                            <option value="<?php echo $cat["categoria_id"]?>"><?php echo $cat["nomb_categoria"]?></option>
                           <?php endif;?>
                         <?php }?>
                       </select>
@@ -118,15 +118,13 @@
                       <td><?php echo $mostrar['presentacion'] ?></td>
                       <td><?php echo $mostrar['unidad_medida'] ?></td>
                       <td><?php echo $mostrar['estante'].'-'.$mostrar['entrepaño'].'-'.$mostrar['casilla'] ?></td>
-                      <td><?php echo $mostrar['categoria'] ?></td>
+                      <td><?php echo $mostrar['nomb_categoria'] ?></td>
                       <td>
                         <a href="<?php echo 'ShowSuministro.php?id='.$mostrar['id']?>" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></a>
                         <a href="<?php echo 'AIngresoSuministros.php?id='.$mostrar['id']?>" class="btn btn-warning rounded-pill" title="Editar"><i
                             class="far fa-edit"></i></a>
-                        <button type="button" class="btn btn-success rounded-pill" title="Alta"><i
-                            class="fa-solid fa-arrow-up-long"></i></button>
-                        <button type="button" class="btn btn-danger rounded-pill" title="Baja"><i
+                        <button type="button" class="btn btn-danger rounded-pill" onclick="remove(<?php echo $mostrar['id'] ?>)" title="Baja"><i
                             class="fa-solid fa-arrow-down-long"></i></i></button>
                       </td>
                     </tr>
@@ -144,6 +142,18 @@
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
 
+    <div class="toast-container position-fixed end-0 p-3">
+      <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <div class="rounded me-2"></div>
+          <strong class="me-auto" id="toast_title">Acción exitosa</strong>
+          <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast_body">
+          Registro guardado
+        </div>
+      </div>
+    </div>
 
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
@@ -152,6 +162,8 @@
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
     <script src="js/utils.js"></script>
+    <script src="Controlador/Suministros/suministro_index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 </body>

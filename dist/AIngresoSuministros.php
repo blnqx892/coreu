@@ -44,7 +44,7 @@
         <?php
         $conexion=mysqli_connect('localhost','root', '', 'sicafi');
 
-        $sql_categorias = "select * from categorias order by categoria";
+        $sql_categorias = "select * from categorias_suministros order by nomb_categoria";
         $categorias = mysqli_query($conexion, $sql_categorias);
         ?>
         <!-- row-->
@@ -114,7 +114,7 @@
                       <label for="inputZip" class="form-label">Casilla:</label>
                       <select name="cats" id="categorias" class="form-select">
                         <?php while($cat = mysqli_fetch_assoc($categorias)) {?>
-                          <option value="<?php echo $cat["id"]?>"><?php echo $cat["categoria"]?></option>
+                          <option value="<?php echo $cat["categoria_id"]?>"><?php echo $cat["nomb_categoria"]?></option>
                         <?php }?>
                       </select>
                     </div>
