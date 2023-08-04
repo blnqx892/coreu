@@ -101,24 +101,58 @@
                       <th style="text-align:center;">Codigo de barra</th>
                       <th style="text-align:center;">Nombre de Suministro</th>
                       <th style="text-align:center;">Presentación</th>
-                      <th style="text-align:center;">Unidad de medida</th>
                       <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Categoría</th>
+                      <th style="text-align:center;">Stock</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
                   <?php $correlativo = 1?>
                     <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
+
+                      <?php
+                        $sql_kardex = "select * from kardex where fk_ingreso_suministros = ".$mostrar["id"];
+                        $kardex = mysqli_query($conexion, $sql_kardex);
+
+                        $stock = 0;
+
+                        while ($item = mysqli_fetch_array($kardex)) {
+                          $stock += $item["cantidad_entrada"] != 0 ? $item["cantidad_entrada"] : ($item["cantidad_salida"] * -1);
+                        }
+                      ?>
                     <?php if($mostrar['id'] != 28){ ?>
                     <tr>
                       <td><?php echo $correlativo?></td>
                       <td><?php echo $mostrar['codigo_barra'] ?></td>
                       <td><?php echo $mostrar['nombre_suministro'] ?></td>
                       <td><?php echo $mostrar['presentacion'] ?></td>
-                      <td><?php echo $mostrar['unidad_medida'] ?></td>
                       <td><?php echo $mostrar['estante'].'-'.$mostrar['entrepaño'].'-'.$mostrar['casilla'] ?></td>
                       <td><?php echo $mostrar['nomb_categoria'] ?></td>
+                      <td>
+                        <?php if($mostrar["existencia_maxima"] < $stock):?>
+                          <span class="badge bg-warning text-dark">
+                            <?php echo $stock ?>
+                            <svg class="icon icon-sm">
+                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-arrow-top"></use>
+                            </svg>
+                          </span>
+                        <?php elseif ($mostrar["existencia_minima"] > $stock):?>
+                          <span class="badge bg-danger">
+                            <?php echo $stock ?>
+                            <svg class="icon icon-sm">
+                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-arrow-bottom"></use>
+                            </svg>
+                          </span>
+                        <?php else:?>
+                          <span class="badge bg-success">
+                            <?php echo $stock ?>
+                            <svg class="icon icon-sm">
+                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-check-alt"></use>
+                            </svg>
+                          </span>
+                        <?php endif;?>
+                      </td>
                       <td>
                         <a href="<?php echo 'ShowSuministro.php?id='.$mostrar['id']?>" class="btn btn-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></a>

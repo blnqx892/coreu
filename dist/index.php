@@ -64,6 +64,38 @@
                 </div>
               </div>
               <!-- /.col-->
+              <!-- Lógica para Stock bajo -->
+              <?php
+                $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+                $sql_suministros = "select * from ingreso_suministros";
+                $suministros = mysqli_query($conexion, $sql_suministros);
+
+                $out_stock = array();
+
+                while($suministro = mysqli_fetch_array($suministros)) {
+                  $sql_kardex = "select * from kardex where fk_ingreso_suministros = ".$suministro["id"];
+
+                  $kardex = mysqli_query($conexion, $sql_kardex);
+                  $stock = 0;
+
+                  while ($item = mysqli_fetch_array($kardex)) {
+                    $stock += $item["cantidad_entrada"] != 0 ? $item["cantidad_entrada"] : ($item["cantidad_salida"] * -1);
+                  }
+
+                  $out_stock_item = null;
+                  // Evaluar cantidad mínima
+                  if ($stock < $suministro["existencia_minima"]) {
+                    $out_stock_item["id"] = $suministro["id"];
+                    $out_stock_item["nombre"] = $suministro["nombre_suministro"];
+                    $out_stock_item["actual"] = $stock;
+                    $out_stock_item["ideal"] = $suministro["existencia_minima"];
+                    $out_stock_item["tipo"] = "bajo";
+                    $out_stock[] = $out_stock_item;
+                  }
+                }
+
+                $total_stock = count($out_stock);
+              ?>
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -73,8 +105,12 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="fs-6 fw-semibold text-warning">Suministros al minimo</div>
-                      <div class="text-medium-emphasis text-uppercase fw-semibold small">Stock </div>
+                      <div class="fs-6 fw-semibold text-warning">
+                        <?php echo $total_stock;?>
+                      </div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">
+                        Suministros al minimo
+                      </div>
                     </div>
                   </div>
                 </div>
