@@ -55,19 +55,19 @@
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputAddress2" class="form-label">Nombre Mobiliario:</label>
                       <input type="text" class="form-control" id="inputAddress2" placeholder="">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Marca:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <label for="inputCity" class="form-label">Cantidad:</label>
                       <input type="number" class="form-control" id="inputCity">
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Precio:</label>
                       <input type="text" class="form-control" id="inputZip">
                     </div>

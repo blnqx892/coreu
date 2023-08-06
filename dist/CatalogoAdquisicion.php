@@ -103,7 +103,7 @@
                             <input type="text" class="form-control" id="id_proveedor" disabled>
                         </div>
                         <div class="col-md-4">
-                            <label for="inputZip" class="form-label">Nombre:</label>
+                            <label for="inputZip" class="form-label">Descripción:</label>
                             <input type="text" class="form-control" id="nombre" disabled>
                         </div>
                         <div class="col-md-4">
@@ -136,10 +136,7 @@
                             <label for="inputZip" class="form-label">Categoria:</label>
                             <input type="text" class="form-control" id="id_categoria" disabled>
                         </div>
-                        <div class="col-md-12">
-                            <label for="inputZip" class="form-label">Descripción:</label>
-                            <input type="text" class="form-control" id="descrip" disabled>
-                        </div>
+                       
                     </div>
                     <div class="row my-4" id="ocultarver" style="display:none">
                         <div class="col-md-4">
@@ -206,7 +203,7 @@
               </div>
               <div class="col-md-4">
                  <input type="hidden" class="form-control" id="_id">
-                 <label for="inputZip" class="form-label">Nombre:</label>
+                 <label for="inputZip" class="form-label">Descripción:</label>
                  <input type="text" class="form-control" id="nombree">
               </div>
              <div class="col-md-4">
@@ -249,12 +246,6 @@
                   </select>
                   <div class="invalid-feedback">Please select a valid state.</div>
               </div>
-          </div>
-          <div class="row my-4">
-                <div class="col-md-12">
-                    <label for="inputZip" class="form-label">Descripción:</label>
-                    <input type="text" class="form-control" id="descripe">
-                </div>
           </div>
             <!----------------------------------------------------------->
 

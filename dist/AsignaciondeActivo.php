@@ -56,7 +56,7 @@
                             <div class="row  my-4">
                                 <div class="col-md-4">
                                     <input type="hidden" class="form-control" id="_id" value="<?php echo $_GET['a'];?>">
-                                    <label class="form-label" for="validationCustom02">Nombre:</label>
+                                    <label class="form-label" for="validationCustom02">Descripción:</label>
                                     <input class="form-control" id="nombreA" type="text" required=""  disabled>
                                 </div>
                                 <div class="col-md-4">

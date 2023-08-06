@@ -47,7 +47,7 @@ $(document).ready(function () {
       $("#colorA").val(data.color);
       $("#serieA").val(data.serie);
       $("#modeloA").val(data.modelo);
-      $("#categoria_id").val(data.cated);
+      $("#id_categoria").val(data.cate);
 
     },
   });//fin ajax

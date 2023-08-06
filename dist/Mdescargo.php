@@ -3,7 +3,6 @@
 <!-- IMPORTAR ARCHIVO CABECERA-->
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
-
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
   <?php include("menu/verti.php"); ?>
@@ -42,8 +41,9 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Descargo de Bienes Muebles</strong></div>
               <div class="card-body">
-                <!--INICIO FORM--------------------------------------------->
-                <form class="g-3 needs-validation" novalidate="">
+<!--INICIO FORM--------------------------------------------->
+<form class="g-3 needs-validation" novalidate="">
+<h4>Generalidades</h4>
                   <div class="row my-4">
                   <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
@@ -55,14 +55,31 @@
                       <label class="form-label" for="validationCustom01">Fecha:</label>
                       <input class="form-control" id="fecha_a" type="date" required="">
                    </div>
-                  </div>
-                  
-
-                  
+                   <div class="col-md-3">
+                     <label class="form-label" for="validationCustom02">Procedencia:</label>
+                     <input class="form-control" id="nombre_unidad" type="text" required="">
+                   </div>
+                   <div class="col-md-3">
+                   <label class="form-label" for="validationCustom04">Tipo Movimiento</label>
+                   <select class="form-select" id="descargoM" name="descargoM" data-placeholder="Seleccione tipo de Moviemiento">
+                   <option  value="Inservible">Inservible</option>
+                   <option  value="Robo y/o Hurto">Robo y/o Hurto</option>
+                   <option  value="Obsoleto">Obsoleto</option>
+                   </select>
+                   <div class="invalid-feedback">Please select a valid state.</div>
+                   </div>
+                  </div>                 
 <!-----------------------------------INICIO SECCION ----------------------------------------->
 <hr style="color: black; background-color: black; width:100%;" />
+<div class="row my-4">
+    <div class="col-md-6">
+        <label class="form-label" for="validationCustom02">Observaciones:</label>
+        <textarea class="form-control" id="validationCustom02" required="" rows="2"></textarea>      
+    </div>   
+</div>
+<!------------------------------------FIN----------------------------------------------------->
+<hr style="color: black; background-color: black; width:100%;" />
 <h4>Caracteristicas</h4>
-
 <div class="row my-4">
     <div class="col-md-3">
         <label class="form-label" for="validationCustom02">Nombre:</label>
@@ -99,30 +116,7 @@
         <input class="form-control" id="codigo_institucional" type="text" required="" disabled>
     </div>
 </div>                
-<!------------------------------------FIN----------------------------------------------------->
-<hr style="color: black; background-color: black; width:100%;" />
-<div class="row my-4">
-    <div class="col-md-3">
-        <label class="form-label" for="validationCustom02">Procedencia:</label>
-        <input class="form-control" id="nombre_unidad" type="text" required="">
-    </div>
-    <div class="col-md-3">
-        <label class="form-label" for="validationCustom04">Tipo Movimiento</label>
-        <select class="form-select" id="descargoM" name="descargoM" data-placeholder="Seleccione tipo de Moviemiento">
-          <option  value="Inservible">Inservible</option>
-          <option  value="Robo y/o Hurto">Robo y/o Hurto</option>
-          <option  value="Obsoleto">Obsoleto</option>
-        </select>
-    <div class="invalid-feedback">Please select a valid state.</div>
-    </div>
-    
-</div>
-<div class="row my-4">
-    <div class="col-md-6">
-        <label class="form-label" for="validationCustom02">Observaciones:</label>
-        <textarea class="form-control" id="validationCustom02" required="" rows="4"></textarea>      
-    </div>   
-</div>
+
  <!--------------------------------------------FIN-------------------------------------------------------------------->
                   <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />

@@ -46,6 +46,7 @@
         <li class="nav-item"><a class="nav-link" href="TablaMovi.php">Actualización</a></li>
       </ul>
     </li>
+    
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
@@ -79,6 +80,7 @@
             Catalogo de Suministros</a></li>
       </ul>
     </li>
+    <!--
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
@@ -86,7 +88,7 @@
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="Kardex.php"><span class="nav-icon"></span> Consultar</a></li>
       </ul>
-    </li>
+    </li>-->
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
