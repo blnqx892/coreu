@@ -5,8 +5,11 @@ include("../../Confi/conexion.php");
 $con = con();
 
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
- $sql="SELECT *, ingreso_entradas.id AS principal FROM ingreso_entradas
- INNER join categorias on categorias.id = ingreso_entradas.fk_categoria order by nombre_adquisicion ASC";
+ $sql="SELECT *, ingreso_entradas.id AS principal
+ FROM ingreso_entradas
+ INNER JOIN categorias on categorias.id = ingreso_entradas.fk_categoria
+ where ingreso_entradas.id not in (select aa.fk_ingreso_entradas from asignacion_activo aa)
+ ORDER BY nombre_adquisicion ASC";
 
 
   $result = mysqli_query($conexion, $sql);//
