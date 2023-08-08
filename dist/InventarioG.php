@@ -42,6 +42,17 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Inventario General</strong></div>
               <div class="card-body">
+                <center>
+                    <div class="col-md-3">
+                      <select class="form-select" required="" id="cargoC" name="cargoC">
+                        <option selected="" disabled="" value="">Elegir Categoría de Inventario</option>
+                        <option value="Comprado">Mobiliraio de Oficina</option>
+                        <option value="Donado">Equipo Tecnológico</option>
+                        <option value="Donado">Mayor a 600</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                </center>
                 <!-- dataTable-->
                 <table id="inven" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-07-2023 a las 23:31:14
+-- Tiempo de generación: 06-08-2023 a las 23:26:12
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.0.25
 
@@ -85,6 +85,17 @@ INSERT INTO `categorias` (`id`, `categoria`, `fecha_creacion`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `categorias_suministros`
+--
+
+CREATE TABLE `categorias_suministros` (
+  `categoria_id` int(11) NOT NULL,
+  `nomb_categoria` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `ingreso_entradas`
 --
 
@@ -147,6 +158,7 @@ CREATE TABLE `ingreso_suministros` (
   `codigo` int(11) NOT NULL,
   `stock_suministros` int(11) NOT NULL,
   `ubicacion` varchar(225) DEFAULT NULL,
+  `categoria_id` int(11) NOT NULL,
   `codigo_barra` varchar(225) NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -155,15 +167,15 @@ CREATE TABLE `ingreso_suministros` (
 -- Volcado de datos para la tabla `ingreso_suministros`
 --
 
-INSERT INTO `ingreso_suministros` (`id`, `fecha_suministro`, `nombre_suministro`, `marca`, `cantidad`, `precio`, `descripcion`, `presentacion`, `unidad_medida`, `existencia_minima`, `existencia_maxima`, `almacen`, `estante`, `entrepaño`, `casilla`, `numero_tarjeta`, `codigo`, `stock_suministros`, `ubicacion`, `codigo_barra`, `fecha_creacion`) VALUES
-(1, '0000-00-00', '', '', 0, 0, '                      ', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, '', '', '2023-06-27 22:56:39'),
-(2, '0000-00-00', '', '', 0, 0, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, '', '', '2023-06-28 00:48:56'),
-(1688304446, '0000-00-00', 'borrador ', '', 0, 0, NULL, 'caja', 'ddd', 3, 10, 'dddd', 'ddd', 'ddd', 'd', 0, 0, 0, NULL, '0125879992', '2023-07-02 13:27:26'),
-(1688307390, '0000-00-00', 'lapiceros', '', 0, 0, NULL, 'caja', 'caja', 2, 20, 'al', 'a', 'no se', 'no se', 0, 0, 0, NULL, '054979797979797', '2023-07-02 14:16:30'),
-(1688308015, '0000-00-00', 'clics', '', 0, 0, NULL, 'caja', 'caja', 10, 50, 'principal', 'b', 'no se', 'no se', 0, 0, 0, NULL, '25252525', '2023-07-02 14:26:55'),
-(1689628422, '0000-00-00', 'papel higienico', '', 0, 0, NULL, 'fardo', 'nos ', 10, 20, 'nose', 'nosr', 'nose', '10', 0, 0, 0, NULL, '55125655225', '2023-07-17 21:13:42'),
-(1689782653, '0000-00-00', 'asistin', '', 0, 0, NULL, 'bote', 'litro', 20, 30, 'uno', 'uno', 'uno', 'uno', 0, 0, 0, NULL, '252544884445665', '2023-07-19 16:04:13'),
-(1690467905, '0000-00-00', 'dfghjhj', '', 0, 0, NULL, 'ghjk', 'fghjk', 10, 20, 'fghjkl', 'hjk', 'ghjk', 'fgh', 0, 0, 0, NULL, '555555555888', '2023-07-27 14:25:05');
+INSERT INTO `ingreso_suministros` (`id`, `fecha_suministro`, `nombre_suministro`, `marca`, `cantidad`, `precio`, `descripcion`, `presentacion`, `unidad_medida`, `existencia_minima`, `existencia_maxima`, `almacen`, `estante`, `entrepaño`, `casilla`, `numero_tarjeta`, `codigo`, `stock_suministros`, `ubicacion`, `categoria_id`, `codigo_barra`, `fecha_creacion`) VALUES
+(1, '0000-00-00', '', '', 0, 0, '                      ', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, '', 0, '', '2023-06-27 22:56:39'),
+(2, '0000-00-00', '', '', 0, 0, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, '', 0, '', '2023-06-28 00:48:56'),
+(1688304446, '0000-00-00', 'borrador ', '', 0, 0, NULL, 'caja', 'ddd', 3, 10, 'dddd', 'ddd', 'ddd', 'd', 0, 0, 0, NULL, 0, '0125879992', '2023-07-02 13:27:26'),
+(1688307390, '0000-00-00', 'lapiceros', '', 0, 0, NULL, 'caja', 'caja', 2, 20, 'al', 'a', 'no se', 'no se', 0, 0, 0, NULL, 0, '054979797979797', '2023-07-02 14:16:30'),
+(1688308015, '0000-00-00', 'clics', '', 0, 0, NULL, 'caja', 'caja', 10, 50, 'principal', 'b', 'no se', 'no se', 0, 0, 0, NULL, 0, '25252525', '2023-07-02 14:26:55'),
+(1689628422, '0000-00-00', 'papel higienico', '', 0, 0, NULL, 'fardo', 'nos ', 10, 20, 'nose', 'nosr', 'nose', '10', 0, 0, 0, NULL, 0, '55125655225', '2023-07-17 21:13:42'),
+(1689782653, '0000-00-00', 'asistin', '', 0, 0, NULL, 'bote', 'litro', 20, 30, 'uno', 'uno', 'uno', 'uno', 0, 0, 0, NULL, 0, '252544884445665', '2023-07-19 16:04:13'),
+(1690467905, '0000-00-00', 'dfghjhj', '', 0, 0, NULL, 'ghjk', 'fghjk', 10, 20, 'fghjkl', 'hjk', 'ghjk', 'fgh', 0, 0, 0, NULL, 0, '555555555888', '2023-07-27 14:25:05');
 
 -- --------------------------------------------------------
 
@@ -331,6 +343,12 @@ ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `categorias_suministros`
+--
+ALTER TABLE `categorias_suministros`
+  ADD PRIMARY KEY (`categoria_id`);
+
+--
 -- Indices de la tabla `ingreso_entradas`
 --
 ALTER TABLE `ingreso_entradas`
@@ -409,6 +427,12 @@ ALTER TABLE `bitacora`
 --
 ALTER TABLE `categorias`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `categorias_suministros`
+--
+ALTER TABLE `categorias_suministros`
+  MODIFY `categoria_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `ingreso_entradas`
