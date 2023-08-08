@@ -86,7 +86,7 @@
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
-                      <label for="inputCity" class="form-label">Nombre:</label>
+                      <label for="inputCity" class="form-label">Descripción:</label>
                       <input type="text" class="form-control" id="nombreC" name="nombreC">
                     </div>
                     <div class="col-md-4">
@@ -132,17 +132,13 @@
                       </div>
                       <div class="col-md-1">
                         <label for="inputCity" class="form-label">Nuevo</label>
-                        <button type="button" title="Nueva Categoria" class="btn btn-primary">
-                          <i class='fas fa-plus'></i>
+                        <button type="button" title="Nueva Categoria" class="btn btn-primary" data-coreui-toggle="modal"
+                        data-coreui-target="#modalCate">
+                        <i class='fas fa-plus'></i>
                         </button>
                       </div>
                       </div>
                       <!--INICIO SECCION CINCO-->
-                      <div class="col-md-7">
-                        <label for="inputZip" class="form-label">Descripción:</label>
-                        <textarea class="form-control" required="" row="6" id="descriC" name="descriC">
-                      </textarea>
-                      </div>
                     </div>
                     <div class="row  my-2">
                       <div class="col-md-1">
@@ -156,21 +152,21 @@
                     <div id="formulario" style="display:block;">
                       <hr style="color: black; background-color: black; width:100%;" />
                       <div class="row my-1">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                           <label for="inputZip" class="form-label">No. Motor:</label>
                           <input type="text" class="form-control" id="motorC" name="motorC">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                           <label for="inputZip" class="form-label">No. Placa:</label>
                           <input type="text" class="form-control" id="placaC" name="placaC">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                           <label for="inputZip" class="form-label">No. Chasis:</label>
                           <input type="text" class="form-control" id="chasisC" name="chasisC">
                         </div>
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label">Capacidad:</label>
-                          <input type="text" class="form-control" id="capacidadC" name="capacidadC">
+                          <input type="number" class="form-control" id="capacidadC" name="capacidadC">
                         </div>
                       </div>
                     </div>

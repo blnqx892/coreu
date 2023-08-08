@@ -35,6 +35,8 @@ $con = con();
       'botones'=>'<td>
             <button type="button" id="ver" class="btn btn-info rounded-pill vera-item" id-item-vera="'.$row['id_asignacion'].'  " title="Ver"><i 
             class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVera"></i></button>
+            <button type="button" id="edit" class="btn btn-warning rounded-pill edite-item" id-item-e="'.$row['id_asignacion'].'" title="Editar">
+            <i class="far fa-edit"></i></button>
       </td>',
       'i'=>$i
     );
