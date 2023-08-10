@@ -46,7 +46,7 @@
         <li class="nav-item"><a class="nav-link" href="TablaMovi.php">Actualización</a></li>
       </ul>
     </li>
-    
+     
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>

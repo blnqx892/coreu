@@ -31,6 +31,7 @@ $conexion = con();
             'success'=>1,
             'title' => 'Exito',
             'mensaje'=>'Registro Guardado con exito!'
+
           );
          // echo 1;
     } else {
@@ -42,3 +43,4 @@ $conexion = con();
     $jsonstring = json_encode($json[0]);
     echo $jsonstring;
 ?>
+
