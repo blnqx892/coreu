@@ -36,6 +36,7 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <!-- Global site tag (gtag.js) - Google Analytics-->
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -47,6 +48,7 @@
     gtag('config', 'UA-118965717-3');
     // Bootstrap ID
     gtag('config', 'UA-118965717-5');
+
   </script>
   <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
 
@@ -67,7 +69,13 @@
         }
       });
     });
+
   </script>
 
   <link rel="" href="BarcodeGenerator.php">
+
+  <!-- As A jQuery Plugin -->
+  <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.js'></script>
+  <script type='text/javascript' src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
 </head>

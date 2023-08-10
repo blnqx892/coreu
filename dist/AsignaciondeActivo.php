@@ -17,7 +17,7 @@
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
-          <li class="breadcrumb-item">
+            <li class="breadcrumb-item">
               <a href="index.php"><svg class="icon me-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
                   </use>
@@ -35,7 +35,7 @@
     </header>
     <!-- CONTENEDOR---------------------------------------------------->
     <div class="body flex-grow-1 px-3">
-    <div class="container-lg">
+      <div class="container-lg">
         <!-- row-->
         <div class="row">
             <div class="col-12">
@@ -56,7 +56,7 @@
                             <div class="row  my-4">
                                 <div class="col-md-4">
                                     <input type="hidden" class="form-control" id="_id" value="<?php echo $_GET['a'];?>">
-                                    <label class="form-label" for="validationCustom02">Descripción del bien:</label>
+                                    <label class="form-label" for="validationCustom02">Descripción:</label>
                                     <input class="form-control" id="nombreA" type="text" required=""  disabled>
                                 </div>
                                 <div class="col-md-4">
@@ -129,16 +129,39 @@
             </div>
             <!-- /.row------------------------------------------>
         </div>
+      </div>
+      <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-    <!-- ///////FIN CONTENEDOR/////////////-->
-</div>
     <script src="./Controlador/codificacionAF/codificacion.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js" type="text/javascript"></script>
     <script src="./Controlador/Categorias/categoria.js" type="text/javascript"></script>
     <script type="text/javascript">
-        var id = $("#_id").val();
+      var id = $("#_id").val();
+
     </script>
     <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(":input").inputmask();
+
+        $("#codigoA").inputmask({
+          mask: '99-99-99-99-99',
+          placeholder: ' ',
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+          onBeforePaste: function (pastedValue, opts) {
+            var processedValue = pastedValue;
+
+            //do something with it
+
+            return processedValue;
+          }
+        });
+      });
+
+    </script>
+
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
