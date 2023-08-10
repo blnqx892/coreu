@@ -108,7 +108,7 @@
           </div>
           <div class="row my-4">
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Costo Adquisición:</label>
+              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
               <input type="text" class="form-control" id="costa" disabled>
             </div>
             <div class="col-md-4">
@@ -116,7 +116,7 @@
               <input type="text" class="form-control" id="id_proveedor" disabled>
             </div>
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Nombre:</label>
+              <label for="inputZip" class="form-label">Decripción del bien:</label>
               <input type="text" class="form-control" id="nombrea" disabled>
             </div>
           </div>
@@ -166,12 +166,6 @@
                 <label for="inputZip" class="form-label">Capacidad:</label>
                 <input type="text" class="form-control" id="capaa" disabled>
             </div>
-          </div>
-          <div class="row my-4">
-              <div class="col-md-8">
-                <label for="inputZip" class="form-label">Descripción:</label>
-                <input type="text" class="form-control" id="descrip" disabled>
-              </div>
           </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>

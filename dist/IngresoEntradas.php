@@ -65,7 +65,7 @@
                       <input type="text" class="form-control" id="facturaC" name="facturaC" required="">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">Costo de Adquisición:</label>
+                      <label for="inputAddress2" class="form-label">Valor de Adquisición:</label>
                       <input type="number" class="form-control" placeholder="" id="costoC" name="costoC">
                     </div>
                     <div class="col-md-3">
@@ -86,7 +86,7 @@
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
-                      <label for="inputCity" class="form-label">Descripción:</label>
+                      <label for="inputCity" class="form-label">Descripción del bien:</label>
                       <input type="text" class="form-control" id="nombreC" name="nombreC">
                     </div>
                     <div class="col-md-4">

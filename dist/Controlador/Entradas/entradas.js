@@ -30,8 +30,8 @@ $(document).ready(function () {
       }
 
       if ( $("#fechaC").val() == "" || $("#facturaC").val() == "" || $("#costoC").val() == "" ||
-        $("#proveedor_id").val() == "" ||  $("#nombreC").val() == "" || $("#marcaC").val() == "" ||
-        $("#colorC").val() == "" ||  $("#cargoC").val() == "" || $("#categoria_id").val() == "" ||
+        $("#proveedor_id").val() == "" ||  $("#nombreC").val() == "" || $("#colorC").val() == "" || 
+        $("#cargoC").val() == "" || $("#categoria_id").val() == "" ||
         $("#descriC").val() == "") {
           Swal.fire({
             icon: "error",

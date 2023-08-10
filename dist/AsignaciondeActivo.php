@@ -56,7 +56,7 @@
                             <div class="row  my-4">
                                 <div class="col-md-4">
                                     <input type="hidden" class="form-control" id="_id" value="<?php echo $_GET['a'];?>">
-                                    <label class="form-label" for="validationCustom02">Descripción:</label>
+                                    <label class="form-label" for="validationCustom02">Descripción del bien:</label>
                                     <input class="form-control" id="nombreA" type="text" required=""  disabled>
                                 </div>
                                 <div class="col-md-4">
@@ -135,6 +135,7 @@
     <script src="./Controlador/codificacionAF/codificacion.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js" type="text/javascript"></script>
     <script src="./Controlador/Categorias/categoria.js" type="text/javascript"></script>
+   
     <script type="text/javascript">
       var id = $("#_id").val();
 
@@ -143,21 +144,9 @@
 
     <script>
       $(document).ready(function () {
-        $(":input").inputmask();
+       // $(":input").inputmask();
 
-        $("#codigoA").inputmask({
-          mask: '99-99-99-99-99',
-          placeholder: ' ',
-          showMaskOnHover: false,
-          showMaskOnFocus: false,
-          onBeforePaste: function (pastedValue, opts) {
-            var processedValue = pastedValue;
-
-            //do something with it
-
-            return processedValue;
-          }
-        });
+        $("#codigoA").mask('00-000-00-00-000');
       });
 
     </script>

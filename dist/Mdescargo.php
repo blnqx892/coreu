@@ -82,11 +82,11 @@
 <h4>Caracteristicas</h4>
 <div class="row my-4">
     <div class="col-md-3">
-        <label class="form-label" for="validationCustom02">Nombre:</label>
+        <label class="form-label" for="validationCustom02">Descripción del bien:</label>
         <input class="form-control" id="nombre_adquisicion" type="text" required="" disabled>
     </div>
     <div class="col-md-3">
-        <label class="form-label" for="validationCustom02">Costo adquisición:</label>
+        <label class="form-label" for="validationCustom02">Valor de adquisición:</label>
         <input class="form-control" id="costo_adquisicion" type="text" required="" disabled>
     </div>
     <div class="col-md-3">
