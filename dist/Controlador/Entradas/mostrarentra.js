@@ -63,7 +63,7 @@ $(document).ready(function () {
         tabla.ajax.url("Controlador/Entradas/mostrarE.php").load();
       }
 
- //------------------------edit mostrar-----------------------------------------------
+ //------------------------edit mostrar--------------------------------------------------
       
   $("#entra").on("click", ".edite-item", function () {
     let id = $(this).attr("id-item-e");

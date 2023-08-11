@@ -13,7 +13,8 @@ $conexion = con();
 
     
 
-    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,rol,permisos,fk_unidades) VALUES ('$nombre', '$apellido','$usuario','$email',md5('$contra'),'$rol','$per','$uni')";
+    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,rol,permisos,fk_unidades) VALUES
+     ('$nombre', '$apellido','$usuario','$email',md5('$contra'),'$rol','$per','$uni')";
 
     // Ejecutar la consulta SQL
     
