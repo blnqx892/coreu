@@ -47,7 +47,7 @@
                 <table id="miTablaUsuarios" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                    <th style="text-align:center;">N°</th>
+                      <th style="text-align:center;">N°</th>
                       <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Apellido</th>
                       <th style="text-align:center;">Usuario</th>

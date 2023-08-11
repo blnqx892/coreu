@@ -45,7 +45,7 @@
                         <!--INICIO FORM-->
                         <form id="form" class="g-3 needs-validation" role="form" action="" method="POST"
                         autocomplete="off">
-                            <!--INICIO------------------------------------------------------------------------------->
+<!----------------------------------------------INICIO----------------------------------------------------------->
                             <div class="row">
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
@@ -102,6 +102,17 @@
                                 <div class="col-md-4">                                    
                                     <label class="form-label" id="ubicacion">Ubicación:</label>
                                     <input for="#ubicacion" id="ubicacion_value" name="ubicacion_value" class="form-control" disabled></input>                                    
+                                </div>
+                                <div class="col-md-4 ">
+                                <label class="form-label" id="ubicacion">Ubicación:</label>
+                                <div class="border border-1 row">
+                                  <div class="col-3">
+                                    <input type="text" name="" id="" >
+                                  </div>
+                                  <div class="col-6 text-align-middle">                  
+                                    <label for="" class="col-10"><?php  echo '889-9898';?></label>
+                                  </div>
+                                </div>
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom02">Codigo:</label>

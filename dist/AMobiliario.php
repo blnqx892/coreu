@@ -43,50 +43,48 @@
               <div class="card-header"><strong>Ingreso de Mobiliarios</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form class="g-3 needs-validation" novalidate="">
+                <form id="formm" class="g-3 needs-validation" role="form" action="" method="POST" autocomplete="off">
+                  <input type="hidden" value="Guardar" name="bandera">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-3">
                       <label for="inputEmail4" class="form-label">Fecha:</label>
-                      <input type="date" class="form-control" id="inputEmail4">
+                      <input type="date" class="form-control" id="fecham">
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
-                  <!--FIN SECCION DOS-->
+                  <!--SECCION DOS-->
                   <div class="row  my-4">
-                    <!--INICIO SECCION TRES-->
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Nombre Mobiliario:</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                      <input type="text" class="form-control" id="nomm" placeholder="">
                     </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Marca:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Modelo:</label>
+                      <input type="text" class="form-control" id="modelom">
                     </div>
-                    <div class="col-md-3">
-                      <label for="inputCity" class="form-label">Cantidad:</label>
-                      <input type="number" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Precio:</label>
-                      <input type="text" class="form-control" id="inputZip">
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+                      <input type="text" class="form-control" id="valorm">
                     </div>
                   </div>
-                  <!--FIN SECCION TRES-->
+                  <!--FIN SECCION DOS-->
                   <div class="row  my-4">
-                    <!--INICIO SECCION CUATRO-->
                     <div class="col-md-6">
                       <label for="inputZip" class="form-label">Descripción:</label>
-                      <textarea class="form-control" id="validationCustom02" required="" row="3">
+                      <textarea class="form-control" id="descrim" required="" row="3">
                       </textarea>
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
-                      <hr style="color: black; background-color: black; width:100%;" />
-                      <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
-                      <button class="btn btn-secondary" type="submit">Cancelar <i class='far fa-times-circle'></i></button>
-                    </div>
+                    <hr style="color: black; background-color: black; width:100%;" />
+                    <button class="btn btn-success" type="submit" id="GuardaMobiliario" name="btnGuardar">Guardar <i
+                        class='far fa-check-square'></i>
+                    </button>
+                    <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i>
+                    </button>
+                  </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
               </div>
@@ -97,6 +95,7 @@
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
+    <script src="./Controlador/Mobiliarioyotros/mobiliario.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
