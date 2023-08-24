@@ -39,7 +39,7 @@
   <div class="body flex-grow-1 px-3">
     <?php
     $conexion = mysqli_connect('localhost', 'root', '', 'sicafi');
-    $sql_requision = "select r.*, e.nombre_estado, e.codigo, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id";
+    $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id";
     $requisiciones = mysqli_query($conexion, $sql_requision) or die("No se puede ejecutar la consulta");
     ?>
     <div class="container-lg">
@@ -53,7 +53,7 @@
                 </div>
                 <div>
                   <button class="btn btn-primary" type="button" id="new_req" data-coreui-toggle="modal"
-                          data-coreui-target="#modalAgg">Nuevo <i class='far fa-plus'></i></button>
+                          data-coreui-target="#modalAgg" onclick="create_n()">Nuevo <i class='far fa-plus'></i></button>
                 </div>
               </div>
             </div>
@@ -82,6 +82,18 @@
                     <button class="btn btn-sm btn-primary" type="button">
                       <i class="far fa-eye"></i>
                     </button>
+                    <?php if($requisicion['codigo_estado'] == 'pendiente.aprobacion'):?>
+                      <button class="btn btn-sm btn-warning" type="button" data-coreui-toggle="modal"
+                              data-coreui-target="#modalAgg" onclick="approve_n(<?php echo $requisicion['id']?>)">
+                        <i class="fas fa-check"></i>
+                      </button>
+                    <?php endif;?>
+                    <?php if($requisicion['codigo_estado'] == 'pendiente.despacho'):?>
+                      <button class="btn btn-sm btn-success text-light" type="button" data-coreui-toggle="modal"
+                              data-coreui-target="#modalAgg" onclick="service_n(<?php echo $requisicion['id']?>)">
+                        <i class="fas fa-check"></i>
+                      </button>
+                    <?php endif;?>
                     <button class="btn btn-sm btn-danger text-light" type="button">
                       <i class="fas fa-times"></i>
                     </button>
@@ -138,22 +150,90 @@
             </div>
             <hr class="my2">
             <div class="row">
-              <div class="col-12" id="body_req">
+              <div class="col-12" id="req" style="display: none">
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-6 text-center">
                     <strong>Suministro</strong>
                   </div>
-                  <div class="col-2">
+                  <div class="col-2 text-center">
                     <strong>Cantidad</strong>
                   </div>
-                  <div class="col-2">
+                  <div class="col-2 text-center">
                     <strong>Disponibilidad</strong>
                   </div>
-                  <div class="col-2">
+                  <div class="col-2 text-center">
                     <strong>Acciones</strong>
                   </div>
                 </div>
                 <hr class="my-2">
+                <div id="body_req"></div>
+              </div>
+              <div class="col-12" id="req_approve" style="display: none">
+                <div class="row">
+                  <div class="col-6 text-center">
+                    <strong>Suministro</strong>
+                  </div>
+                  <div class="col-4">
+                    <div class="row">
+                      <div class="col-12 text-center">
+                        <strong>Cantidad</strong>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 text-center">
+                        <strong>
+                          Solicitada
+                        </strong>
+                      </div>
+                      <div class="col-6 text-center">
+                        <strong>
+                          Aprobada
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <strong>Disponibilidad</strong>
+                  </div>
+                </div>
+                <hr class="my-2">
+                <div id="body_req_approve"></div>
+              </div>
+              <div class="col-12" id="req_service" style="display: none">
+                <div class="row">
+                  <div class="col-5 text-center">
+                    <strong>Suministro</strong>
+                  </div>
+                  <div class="col-5">
+                    <div class="row">
+                      <div class="col-12 text-center">
+                        <strong>Cantidad</strong>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4 text-center">
+                        <strong>
+                          Solicitada
+                        </strong>
+                      </div>
+                      <div class="col-4 text-center">
+                        <strong>
+                          Aprobada
+                        </strong>
+                      </div>
+                      <div class="col-4 text-center">
+                        <strong>
+                          Despachada
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <strong>Disponibilidad</strong>
+                  </div>
+                </div>
+                <hr class="my-2">
+                <div id="body_req_service"></div>
               </div>
             </div>
           </div>

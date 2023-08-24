@@ -1,11 +1,13 @@
 // Variables globales document
+const host = window.location.origin;
 let listado_suministros = null;
 let all_items_ok = [];
+let kind_save = null;
+let identify = null;
 validate();
 
 $(document).ready(function() {
   // Variables globales ready
-  const host = window.location.origin;
   let items = 0;
 
   // Ejecutar funciones init
@@ -55,7 +57,7 @@ $(document).ready(function() {
     });
     all_items_ok.push({
       id: null,
-      index: items,
+      index: items.toString(),
       allOk: false
     });
     items++;
@@ -65,38 +67,12 @@ $(document).ready(function() {
   $("#save_req").click(function (e) {
     e.preventDefault();
 
-    // Construir la estructura para guardar
-    data = {
-      fechaPedido: $("#fechaP").val(),
-      unidad: $("#unidad").val(),
-      suministros: []
-    };
-
-    // Agregar los suministros
-    all_items_ok.forEach((item) => {
-      const row = $('#r' + item.index);
-      data.suministros.push({
-        suministroId: row.find('select').val(),
-        cantidad: row.find('input').val()
-      });
-    });
-
-    // Almacenar la información
-    const url = host + '/Coreu/dist/Controlador/Requisiciones/create.php';
-
-    fetch(url, {
-      method: 'POST',
-      body: JSON.stringify(data)
-    }).then(
-      res => res.json()
-    )
-      .catch(error => console.error('Error:', error))
-      .then(response => {
-        if (response.statusCode === 200) {
-          localStorage.setItem('is_save', true);
-          window.location.href = window.location.origin + window.location.pathname + '?id=' + response.data;
-        }
-      });
+    switch (kind_save) {
+      case 'create': save_f(); break;
+      case 'approve': approve_f(); break;
+      case 'service': service_f(); break;
+      default: break;
+    }
   });
 
   $("#unidad").change(function() {
@@ -129,17 +105,111 @@ $(document).ready(function() {
     $("#toast_body").html(body);
     toast.show();
   }
+
+  function save_f() {
+    // Construir la estructura para guardar
+    data = {
+      fechaPedido: $("#fechaP").val(),
+      unidad: $("#unidad").val(),
+      suministros: []
+    };
+
+    // Agregar los suministros
+    all_items_ok.forEach((item) => {
+      const row = $('#r' + item.index);
+      data.suministros.push({
+        suministroId: row.find('select').val(),
+        cantidad: row.find('input').val()
+      });
+    });
+
+    // Almacenar la información
+    const url = host + '/Coreu/dist/Controlador/Requisiciones/create.php';
+
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    }).then(
+      res => res.json()
+    )
+      .catch(error => console.error('Error:', error))
+      .then(response => {
+        if (response.statusCode === 200) {
+          localStorage.setItem('is_save', true);
+          window.location.href = window.location.origin + window.location.pathname + '?id=' + response.data;
+        }
+      });
+  }
+
+  function approve_f() {
+    const data = [];
+    // Agregar los suministros
+    all_items_ok.forEach((item) => {
+      const row = $('#r' + item.index);
+      data.push({
+        detalle_id: item.index,
+        cantidad: row.find('input').val()
+      });
+    });
+
+    // Almacenar la información
+    const url = host + '/Coreu/dist/Controlador/Requisiciones/approve.php?id=' + identify;
+
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    }).then(
+      res => res.json()
+    )
+      .catch(error => console.error('Error:', error))
+      .then(response => {
+        if (response.statusCode === 200) {
+          localStorage.setItem('is_save', true);
+          window.location.href = window.location.origin + window.location.pathname + '?id=' + response.data;
+        }
+      });
+  }
+
+  function service_f() {
+    const data = [];
+    // Agregar los suministros
+    all_items_ok.forEach((item) => {
+      const row = $('#r' + item.index);
+      data.push({
+        detalle_id: item.index,
+        suministro_id: item.id,
+        cantidad: row.find('input').val()
+      });
+    });
+
+    // Almacenar la información
+    const url = host + '/Coreu/dist/Controlador/Requisiciones/service.php?id=' + identify;
+
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    }).then(
+      res => res.json()
+    )
+      .catch(error => console.error('Error:', error))
+      .then(response => {
+        if (response.statusCode === 200) {
+          localStorage.setItem('is_save', true);
+          window.location.href = window.location.origin + window.location.pathname + '?id=' + response.data;
+        }
+      });
+  }
 });
 
-function disponibilidad(index) {
+function disponibilidad(index, suministro_id = null, existencia = null) {
   const row = $('#r' + index);
   const badge = row.find('.bdg-amount');
-  const item = row.find('select').val()
+  const item = suministro_id == null ? row.find('select').val() : suministro_id;
   const cantidad = row.find('input').val();
-  const it = all_items_ok.find(e => e.index === index);
+  const it = all_items_ok.find(e => e.index === index.toString(10));
   it.id = item;
 
-  const stock = listado_suministros.find(e => e.id === item)?.stock;
+  const stock = existencia == null ? listado_suministros.find(e => e.id === item)?.stock : existencia;
   const exist = all_items_ok.filter(e => e.id === item);
 
   const iFirst = exist.findIndex(e => e.index === index);
@@ -179,7 +249,7 @@ function disponibilidad(index) {
 
 function remove_item(index) {
   $("#r" + index).remove();
-  const indice = all_items_ok.findIndex(e => e.index === index);
+  const indice = all_items_ok.findIndex(e => e.index === index.toString(10));
   if (indice > -1) {
     all_items_ok.splice(indice, 1);
   }
@@ -196,4 +266,134 @@ function validate() {
   } else {
     $("#save_req").removeAttr('disabled');
   }
+}
+
+function create_n() {
+  kind_save = 'create';
+  all_items_ok = [];
+  $("#fechaP").removeAttr('disabled');
+  $("#unidad").removeAttr('disabled');
+  $("#add_sumi").show();
+  $("#req").show();
+  $("#req_approve").hide();
+  $("#req_service").hide();
+
+  document.getElementById('fechaP').valueAsDate = new Date();
+  $("#unidad").val('-1');
+
+  validate();
+}
+
+function approve_n(id) {
+  identify = id;
+  kind_save = 'approve';
+  all_items_ok = [];
+  $("#fechaP").attr('disabled', 'disabled');
+  $("#unidad").attr('disabled', 'disabled');
+  $("#add_sumi").hide();
+  $("#req").hide();
+  $("#req_service").hide();
+  $("#body_req_approve").empty();
+  $("#req_approve").show();
+
+  const url = host + '/Coreu/dist/Controlador/Requisiciones/find.php?id=' + id;
+
+  fetch(url).then(
+    res => res.json()
+  )
+    .catch(error => console.error('Error:', error))
+    .then(response => {
+      if (response != null) {
+        document.getElementById('fechaP').valueAsDate = new Date(response.fecha_requisicion);
+        $("#unidad").val(response.unidad_id);
+        response.suministros.forEach((detalle) => {
+          let html = '<div class="row" id="r' + detalle.id + '">';
+          // Suministros
+          html += '<div class="col-6 mb-4">'
+          html += '<span>' + detalle.nombre_suministro + '</span>';
+          html += '</div>';
+          // Cantidad solicitada
+          html += '<div class="col-2">'
+          html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_solicitada + '</span>';
+          html += '</div>';
+          // Cantidad aprobada
+          html += '<div class="col-2">'
+          html += '<input type="number" min="0" placeholder="Cantidad" step="1" name="cantidades_aprobadas" class="form-control form-control-sm" oninput="disponibilidad(' + detalle.id + ', ' + detalle.suministro_id + ',' + detalle.stock +')" value="' + detalle.cantidad_solicitada + '">';
+          html += '</div>'
+          // Disponibilidad
+          html += '<div class="col-2">'
+          html += '<span class="badge border border-secondary text-secondary bdg-amount py-2 col-12">Sin selección</span>'
+          html += '</div>';
+          html += '</div>';
+          $("#body_req_approve").append(html);
+          all_items_ok.push({
+            id: detalle.suministro_id,
+            index: detalle.id,
+            allOk: true
+          });
+          disponibilidad(detalle.id, detalle.suministro_id, detalle.stock);
+        });
+      }
+    });
+}
+
+function service_n(id) {
+  identify = id;
+  kind_save = 'service';
+  all_items_ok = [];
+  $("#fechaP").attr('disabled', 'disabled');
+  $("#unidad").attr('disabled', 'disabled');
+  $("#add_sumi").hide();
+  $("#req").hide();
+  $("#req_approve").hide();
+  $("#body_req_service").empty();
+  $("#req_service").show();
+
+  const url = host + '/Coreu/dist/Controlador/Requisiciones/find.php?id=' + id;
+
+  fetch(url).then(
+    res => res.json()
+  )
+    .catch(error => console.error('Error:', error))
+    .then(response => {
+      if (response != null) {
+        document.getElementById('fechaP').valueAsDate = new Date(response.fecha_requisicion);
+        $("#unidad").val(response.unidad_id);
+        response.suministros.forEach((detalle) => {
+          let html = '<div class="row" id="r' + detalle.id + '">';
+          // Suministros
+          html += '<div class="col-5 mb-4">'
+          html += '<span>' + detalle.nombre_suministro + '</span>';
+          html += '</div>';
+          // Cantidad solicitada
+          html += '<div class="col-5">';
+          html += '<div class="row">';
+          html += '<div class="col-4">'
+          html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_solicitada + '</span>';
+          html += '</div>';
+          // Cantidad aprobada
+          html += '<div class="col-4">'
+          html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_aprobada + '</span>';
+          html += '</div>'
+          // Cantidad despachada
+          html += '<div class="col-4">'
+          html += '<input type="number" min="0" placeholder="Cantidad" step="1" name="cantidades_despachadas" class="form-control form-control-sm" oninput="disponibilidad(' + detalle.id + ', ' + detalle.suministro_id + ',' + detalle.stock +')" value="' + detalle.cantidad_aprobada + '">';
+          html += '</div>';
+          html += '</div>';
+          html += '</div>';
+          // Disponibilidad
+          html += '<div class="col-2">'
+          html += '<span class="badge border border-secondary text-secondary bdg-amount py-2 col-12">Sin selección</span>'
+          html += '</div>';
+          html += '</div>';
+          $("#body_req_service").append(html);
+          all_items_ok.push({
+            id: detalle.suministro_id,
+            index: detalle.id,
+            allOk: true
+          });
+          disponibilidad(detalle.id, detalle.suministro_id, detalle.stock);
+        });
+      }
+    });
 }
