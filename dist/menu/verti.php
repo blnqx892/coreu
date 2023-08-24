@@ -1,7 +1,7 @@
 <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
   <div class="sidebar-brand d-none d-md-flex">
     <a href="index.php"><img src="img/icon.png" alt="SICAFI" align="center" /></a>
-  
+
   </div>
   <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
     <!--separador-->
@@ -46,7 +46,7 @@
         <li class="nav-item"><a class="nav-link" href="TablaMovi.php">Actualización</a></li>
       </ul>
     </li>
-     
+
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
@@ -132,7 +132,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg> Requisición</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="ARequisicion.php"><span class="nav-icon"></span> Solicitud</a></li>
+        <li class="nav-item"><a class="nav-link" href="RequisicionSuministro.php"><span class="nav-icon"></span> Solicitud</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
