@@ -115,7 +115,6 @@
                         <option selected="" disabled="" value="">Elegir Tipo</option>
                         <option value="Comprado">Comprado</option>
                         <option value="Donado">Donado</option>
-                        <option value="Donado">Nuevo</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>                 
