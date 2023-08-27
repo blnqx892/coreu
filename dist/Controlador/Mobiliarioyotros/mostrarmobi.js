@@ -50,7 +50,8 @@ $(document).ready(function () {
               { data: "fecha" },
               { data: "nombre" },
               { data: "modelo" },
-              { data: "valor" },
+              { data: "valor" }, 
+              { data: "estado" }, 
               { data: "botones" }
              
       
@@ -61,21 +62,23 @@ $(document).ready(function () {
         function refrescarTable() {//para editar o otras acciones
           tabla.ajax.url("Controlador/Mobiliarioyotros/mostrar_mobiliario.php").load();
         }
-  
-  //----------------------------- mostrar-------------------------------------------------
+
+        
+ //------------------------edit mostrar-----------------------------------------------
       
-  $("#inven").on("click", ".vera-item", function () {
-    let id = $(this).attr("id-item-vera");
+  $("#mobiliario").on("click", ".editmo-item", function () {
+    let id = $(this).attr("id-item-mo");
+   // $("#_id").val('');
     $("#_id").val(id);
    
-     $("#modalVera").modal("show");
+     $("#modalEditarmo").modal("show");
     var formData = new FormData();
 
     formData.append("id", id);
   
     //otro ajax
      $.ajax({
-      url: "Controlador/InventarioAF/mostrar_modalinventa.php",
+      url: "Controlador/Mobiliarioyotros/mostrarmodal_mobiliario.php",
       type: "post",
       data: formData,
       contentType: false,
@@ -83,31 +86,58 @@ $(document).ready(function () {
       success: function (response) {
         console.log(JSON.parse(response));
         data = JSON.parse(response);
-        if(data.mostrar_campos ==1){
-          $("#ocultarverdatos").show();
-      }else{
-        $("#ocultarverdatos").hide();
-
-      }  
         //console.log(data);
         $("#_id").val(data.id);
-        $("#fechaa").val(data.fechaC);
-        $("#codigoa").val(data.codigo_insti);
-        $("#factua").val(data.facturaC);
-        $("#costa").val(data.costo);
-        $("#id_proveedor").val(data.prove);
-        $("#nombrea").val(data.nombreaC);
-        $("#marcaa").val(data.marca);
-        $("#modeloa").val(data.modelo);
-        $("#ubicaciona").val(data.nombre_unidad);
-        $("#cargoa").val(data.cargo);
-        $("#vidaa").val(data.vida_util);
-        $("#id_categoria").val(data.cate);
-        $("#descrip").val(data.descri);
-        $("#motora").val(data.numeromo);
-        $("#placaa").val(data.numeropla);
-        $("#chasisa").val(data.numerochasis);
-        $("#capaa").val(data.capa);
+        $("#fechame").val(data.fecha);
+        $("#nombreme").val(data.nombre);
+        $("#modelome").val(data.modelo);
+        $("#valorme").val(data.valor);
+        $("#descrime").val(data.descrim);
+        edit = true;
+       
+        
+        Swal.fire({
+          icon: "info",
+          title: "Datos Cargados Correctamente!",
+          text: "Información lista para ser modificada",
+        });
+
+        edit = true;
+      },
+    });
+  });
+  //------------------------- fin edit mostrar-------------------------------------
+
+  
+  //----------------------------- mostrar-------------------------------------------------
+      
+  $("#mobiliario").on("click", ".vermo-item", function () {
+    let id = $(this).attr("id-item-vermo");
+    $("#_id").val(id);
+   
+     $("#modalVermo").modal("show");
+    var formData = new FormData();
+
+    formData.append("id", id);
+  
+    //otro ajax
+     $.ajax({
+      url: "Controlador/Mobiliarioyotros/mostrarmodal_mobiliario.php",
+      type: "post",
+      data: formData,
+      contentType: false,
+      processData: false,
+      success: function (response) {
+        console.log(JSON.parse(response));
+        data = JSON.parse(response);
+
+        //console.log(data);
+        $("#_id").val(data.id);
+        $("#fecham").val(data.fecha);
+        $("#nombrem").val(data.nombre);
+        $("#modelom").val(data.modelo);
+        $("#valorm").val(data.valor);
+        $("#descrim").val(data.descrim);
         edit = true;
       },
     });

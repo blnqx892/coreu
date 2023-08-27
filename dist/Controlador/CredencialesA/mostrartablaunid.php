@@ -15,9 +15,9 @@ while ($row = mysqli_fetch_array($result)) {
         'id' => $row['idpr'],
         'nomb' => $row['nombre_unidad'],
         'botones' => '<td>
-            <button type="button" id="ver" class="btn btn-info rounded-pill verun-item" id-item-verun="'.$row['idpr'].'" title="Ver">
+            <button type="button" id="ver" class="btn btn-info  verun-item" id-item-verun="'.$row['idpr'].'" title="Ver">
             <i class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVerU"></i></button>
-            <button type="button" id="edit" class="btn btn-warning rounded-pill editu-item" id-item-u="'.$row['idpr'].'" title="Editar">
+            <button type="button" id="edit" class="btn btn-warning  editu-item" id-item-u="'.$row['idpr'].'" title="Editar">
             <i class="far fa-edit"></i>
             </button>
         </td>',

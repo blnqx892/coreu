@@ -8,15 +8,15 @@ $(document).ready(function () {
      
 
       var fechaA = $("#fechaA").val(); //capturar los datos que tiene el input
-      var codigoA = $("#codigoA").val();
+      var codigoA = ($("#codigoB-1").val() ?? '')+($("#codigoB-2").val() ?? '')+($("#codigoB-3").val() ?? '');
       var encargadoA = $("#encargadoA").val();
       var ingresosA = $("#_id").val();
       var usuariosA = $("#nombreC").val();
 
       
   
-      if ( $("#fechaA").val() == "" || $("#codigoA").val() == "" || $("#encargadoA").val() == "" 
-      || $("#_id").val() == ""|| $("#nombreC").val() == "") {
+      if ( fechaA == "" || codigoA == "" || encargadoA == "" 
+      || ingresosA == ""|| usuariosA == "") {
 
         Swal.fire({
           icon: "error",

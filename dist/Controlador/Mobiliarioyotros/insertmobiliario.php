@@ -7,9 +7,10 @@ $conexion = con();
     $modeloM=$_POST["modelo"];
     $valorM=$_POST["valor"];
     $descriM=$_POST["descripcion"];
+    
 
     $sql = "INSERT INTO mobiliario_otros (fecha,nombre,modelo,valor,descripcion) VALUES 
-    (' $fechaM','$nombreM','$modeloM','$valorM','$descriM')";
+    ('$fechaM''$nombreM','$modeloM','$valorM','$descriM')";
 
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);

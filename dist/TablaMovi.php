@@ -46,41 +46,24 @@
                 <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
+                      <th style="text-align:center;">N°</th>
                       <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Descripción del bien</th>
                       <th style="text-align:center;">Tipo de Movimiento</th>
-                      <th style="text-align:center;">Procedencia</th>
-                      <th style="text-align:center;">Observación</th>
+                      <th style="text-align:center;">Procedencia</th>                 
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
-                     
-                      <td><button type="button" class="btn btn-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></button>
-                      </td>
-                    </tr>
                   </tbody>
                   <tfoot>
                     <tr>
+                    <th style="text-align:center;">N°</th>
                     <th style="text-align:center;">Fecha</th>
-                      <th style="text-align:center;">Tipo de Movimiento</th>
-                      <th style="text-align:center;">Procedencia</th>
-                      <th style="text-align:center;">Observación</th>
-                      <th style="text-align:center;">Acción</th>
+                    <th style="text-align:center;">Descripción del bien</th>
+                    <th style="text-align:center;">Tipo de Movimiento</th>
+                    <th style="text-align:center;">Procedencia</th>
+                    <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
                 </table>

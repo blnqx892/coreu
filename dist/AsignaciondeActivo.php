@@ -14,6 +14,7 @@
       <?php include("menu/hori.php");?>
       <!-- ////////////////////////-->
       <div class="header-divider"></div>
+      
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
@@ -54,7 +55,8 @@
                   <!--FIN-->
                   <div class="row  my-4">
                     <div class="col-md-4">
-                      <input type="hidden" class="form-control" id="_id" value="<?php echo $_GET['a'];?>">
+                    <input type="hidden" value="<?php echo $_GET['codigo'] ?? ''; ?>" id="codigo_institucional">
+                     <input type="hidden" class="form-control" id="_id" value="<?php echo $_GET['a'];?>">
                       <label class="form-label" for="validationCustom02">Descripción del bien:</label>
                       <input class="form-control" id="nombreA" type="text" required="" disabled>
                     </div>
@@ -102,15 +104,11 @@
                       <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Codigo:</label>
                         <div class="input-group mb-2">
-                          <input type="text" class="form-control" placeholder="00" aria-label="Username">
-                          <input type="text" class="form-control" placeholder="-000-00-00-" aria-label="Username">
-                          <input type="text" class="form-control" placeholder="00" aria-label="Server">
+                          <input id="codigoB-1" type="text" class="form-control" placeholder="00" aria-label="Username">
+                          <input id="codigoB-2" type="text" class="form-control" placeholder="-000-00-00-" aria-label="Username">
+                          <input id="codigoB-3" type="text" class="form-control" placeholder="00" aria-label="Server">
                         </div>
                       </div>
-                    <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Codigo:</label>
-                      <input type="" class="form-control" id="codigoA" type="text" required="">
-                    </div><br>
                     <div class="row  my-4">
                       <div class="col-md-4">
                         <label class="form-label" for="validationCustom02">Encargado del Bien:</label>
@@ -138,19 +136,26 @@
     <script src="./Controlador/codificacionAF/codificacion.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js" type="text/javascript"></script>
     <script src="./Controlador/Categorias/categoria.js" type="text/javascript"></script>
-
     <script type="text/javascript">
       var id = $("#_id").val();
-
-    </script>
-    <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
-
+      </script>
     <script>
       $(document).ready(function () {
         // $(":input").inputmask();
-
+        const codigo = $("#codigo_institucional").val()
         $("#codigoA").mask('00-000-00-00-000');
+        $("#codigoB-1").mask('00');
+        $("#codigoB-2").mask('-000-00-00-');
+        $("#codigoB-3").mask('000');
+        
+        if((codigo ?? false) && codigo.trim()!==''){
+          $("#codigoB-1").mask('00').val(codigo[0]+codigo[1]);
+          $("#codigoB-2").mask('-000-00-00-').val('-'+codigo[2]+codigo[3]+codigo[4]+'-'+codigo[5]+codigo[6]+'-'+codigo[7]+codigo[8]+'-');
+          $("#codigoB-3").mask('000').val(codigo[9]+codigo[10]+codigo[11]);
+        }
+
       });
+      <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
 
     </script>
 

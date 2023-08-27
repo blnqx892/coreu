@@ -76,7 +76,7 @@
     <div class="col-md-3">
       <label class="form-label" for="validationCustom04">Tipo de Movimiento:</label>
       <select class="form-select" id="perC" name="perC" data-placeholder="Seleccione un Movimiento">
-        <option  value=" Prestamo"> Prestamo</option>
+        <option  value="Prestamo"> Prestamo</option>
         <option  value="Traslado Definitivo">Traslado Definitivo</option>
         <option  value="Reparación">Reparación</option>
       </select>
@@ -125,7 +125,7 @@
     </div>
     <div class="col-md-3">
         <label class="form-label" for="validationCustom02">Codigo:</label>
-        <input class="form-control" id="codigo_institucional" type="text" required="">
+        <input class="form-control" id="codigo_institucional" type="text" required="" disabled>
     </div>
 </div>
 

@@ -23,14 +23,20 @@ $(document).ready(function () {
   } 
 
  
+  $("#perC").on('change', function() {
+    movimiento()
+  });
 
-  $("#codigo_id").on('change', function() {
-   
-    var buscar=$("#codigo_id").find('option:selected').val();//el id seleccionado
+  $("#codigo_id").on('change', function() {   
+    cargarDatos()   
+  });
+
+  function cargarDatos(){
+    var buscar=$("#codigo_id :selected").val();//el id seleccionado
     var formData = new FormData();
 
     formData.append("codigo",buscar);
- 
+    movimiento()
     $.ajax({
       url: "Controlador/MantenimientoAF/mostrarCampos.php",
      type: "post",
@@ -49,14 +55,28 @@ $(document).ready(function () {
        $("#marca").val(data.marca);
        $("#codigo_institucional").val(data.codigo_institucional);
        $("#nombre_unidad").val(data.nombre_unidad);
-     
- 
      },
    });//fin ajax
+  }
 
-  });
+  function movimiento (){
+    let _id = $("#codigo_id :selected").val();
+    let _codigo = $("#codigo_id :selected").text();
+    let _traslado = $("#perC").val();
+   
+    if(!(_codigo ?? false) ||!(_id ?? false) || !(_traslado ?? false) || _traslado !=='Traslado Definitivo')
+    {
+      console.log('Error en :codigo o traslado o id')
+      return;
+    }
 
+    _codigo = _codigo.replaceAll('-', '');
+    //Abrir nuevo tab
+    var win = window.open('/coreu/dist/AsignaciondeActivo.php?a='+_id+'&codigo='+_codigo+'&traslado='+_traslado, '_blank');
+   //Cambiar el foco al nuevo tab (punto opcional)
+    win.focus();
 
+  }
 
 
   //fin de mostrar en el combo

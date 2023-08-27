@@ -238,9 +238,6 @@ $(document).ready(function () {
       formData.append("numeropla",numerop);
       formData.append("capa",capaci)
       formData.append("_id",id ); 
-      //el campo booleano? eso era mi duda que te dije que si tenia que ir aunque no se editara o se iba a editar elestdo
-      //pera error mio
-        //para que no te perdas lo deje comentado
           
                 $.ajax({
                   url: "Controlador/Entradas/editarE.php",

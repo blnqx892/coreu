@@ -7,16 +7,17 @@ $(document).ready(function () {
 
      
 
-      var fecham = $("#fecham").val(); //capturar los datos
-      var nomm = $("#nomm").val();
-      var modelom = $("#modelom").val();
-      var valorm = $("#valorm").val();
-      var descrim = $("#descrim").val();
+      var fechaM = $("#fecham").val(); //capturar los datos
+      var nombreM = $("#nomm").val();
+      var modeloM = $("#modelm").val();
+      var valorM = $("#valom").val();
+      var descriM = $("#descrim").val();
+      var fechaM = $("#fecham").val();
       
     
   
-      if ( $("#fecham").val() == "" || $("#nomm").val() == "" || $("#modelom").val() == "" ||
-        $("#valorm").val() == "" ||$("#descrim").val() == "") {
+      if ( $("#fecham").val() == "" || $("#nomm").val() == "" || $("#modelm").val() == "" ||
+        $("#valom").val() == "" ||$("#descrim").val() == "") {
 
         Swal.fire({
           icon: "error",
@@ -26,11 +27,12 @@ $(document).ready(function () {
       } else {
         var formData = new FormData(); //permite recoger la data para enviarla al controlador
 
-        formData.append("fecha", fecham);//anadir la data al objeto para seer enviadad
-        formData.append("nombre",nomm);
-        formData.append("modelo",modelom);
-        formData.append("valor",valorm);
-        formData.append("descripcion",descrim)
+        //anadir la data al objeto para seer enviadad
+        formData.append("nombre",nombreM);
+        formData.append("modelo",modeloM);
+        formData.append("valor",valorM);
+        formData.append("descripcion",descriM)
+        formData.append("fecha", fechaM);
   
         $.ajax({
           url: "Controlador/Mobiliarioyotros/insertmobiliario.php",

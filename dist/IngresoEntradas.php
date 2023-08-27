@@ -68,7 +68,7 @@
                       <label for="inputAddress2" class="form-label">Valor de Adquisición:</label>
                       <input type="number" class="form-control" placeholder="" id="costoC" name="costoC">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Proveedor: </label>
                       <select class="form-select" required id="proveedor_id" name="proveC">
                       </select>

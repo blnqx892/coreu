@@ -48,24 +48,24 @@
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-3">
-                      <label for="inputEmail4" class="form-label">Fecha:</label>
-                      <input type="date" class="form-control" id="fecham">
+                      <label class="form-label" for="validationCustom01">Fecha:</label>
+                      <input class="form-control"  id="fecham" type="date" required="">
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
                   <!--SECCION DOS-->
                   <div class="row  my-4">
                     <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">Nombre Mobiliario:</label>
+                      <label for="inputAddress2" class="form-label">Nombre del Bien:</label>
                       <input type="text" class="form-control" id="nomm" placeholder="">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Modelo:</label>
-                      <input type="text" class="form-control" id="modelom">
+                      <input type="text" class="form-control" id="modelm" placeholder="">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Valor de Adquisición:</label>
-                      <input type="text" class="form-control" id="valorm">
+                      <input type="number" class="form-control" id="valom">
                     </div>
                   </div>
                   <!--FIN SECCION DOS-->
@@ -93,7 +93,8 @@
           <!-- /.row-->
         </div>
       </div>
-      <!-- ///////FIN CONTENEDOR/////////////-->
+<!------------------------------------- ///////FIN CONTENEDOR/////////////-->
+
     </div>
     <script src="./Controlador/Mobiliarioyotros/mobiliario.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->

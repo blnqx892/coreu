@@ -51,6 +51,7 @@
                       <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Modelo</th>
                       <th style="text-align:center;">Valor </th>
+                      <th style="text-align:center;">Estado</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
@@ -63,6 +64,7 @@
                       <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Modelo</th>
                       <th style="text-align:center;">Valor </th>
+                      <th style="text-align:center;">Estado</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>  
@@ -74,6 +76,101 @@
           <!-- /.row-->
         </div>
       </div>
+ <!--MODAL VER USUARIO ------------------------------------------------------------------------>
+ <!-- Modal -->
+<div class="modal fade" id="modalVermo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN DE USUARIOS</h5>
+        <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row my-4">
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Fecha Adquisición:</label>
+              <input type="text" class="form-control" id="fecham" disabled>
+            </div>
+            <div class="col-md-4">
+         
+              <label for="inputZip" class="form-label">Nombre del Bien:</label>
+              <input type="text" class="form-control" id="nombrem" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Modelo:</label>
+              <input type="text" class="form-control" id="modelom" disabled>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+              <input type="text" class="form-control" id="valorm" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Descripción:</label>
+              <input type="text" class="form-control" id="descrim" disabled>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+   <!--//////////////FIN VER  USUARIO //////////////////////////-->
+
+<!--//////////////EDITAR USUARIO //////////////////////////////////////////////////////////////////////////////////-->
+<div class="modal fade" id="modalEditarmo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modificar Datos de Mobiliario</h5>
+        <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row my-4">
+          <div class="col-md-4">
+              <label for="inputZip" class="form-label">Fecha Adquisición:</label>
+              <input type="date" class="form-control" id="fechame" >
+            </div>
+            <div class="col-md-4">
+              <input type="hidden" class="form-control" id="_id">
+              <label for="inputZip" class="form-label">Nombre del Bien:</label>
+              <input type="text" class="form-control" id="nombreme" >
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Modelo:</label>
+              <input type="text" class="form-control" id="modelome" >
+            </div>
+          </div>
+          <div class="row my-4">
+          <div class="col-md-4">
+              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+              <input type="text" class="form-control" id="valorme" >
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Descripción:</label>
+              <input type="text" class="form-control" id="descrime" >
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="modal-footer">
+              <button class="btn btn-success" type="submit" id="editmobi" name="btnGuardar">Guardar</button>
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+      
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
     <script src="./Controlador/Mobiliarioyotros/mostrarmobi.js"></script>

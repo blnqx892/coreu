@@ -42,17 +42,6 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Inventario General</strong></div>
               <div class="card-body">
-                <center>
-                    <div class="col-md-3">
-                      <select class="form-select" required="" id="cargoC" name="cargoC">
-                        <option selected="" disabled="" value="">Elegir Categoría de Inventario</option>
-                        <option value="Comprado">Mobiliraio de Oficina</option>
-                        <option value="Donado">Equipo Tecnológico</option>
-                        <option value="Donado">Mayor a 600</option>
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
-                    </div>
-                </center>
                 <!-- dataTable-->
                 <table id="inven" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
@@ -82,7 +71,7 @@
                 </table>
  <!--------------------------- //dataTable-------------------------------------------------------------------->
  <!--MODAL VER USUARIO -->
- <div class="modal fade" id="modalVera" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="modalVerainven" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -94,54 +83,54 @@
         <form>
           <div class="row my-4">
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Fecha:</label>
-              <input type="text" class="form-control" id="fechaa" disabled>
+              <label for="inputZip" class="form-label">Decripción del bien:</label>
+              <input type="text" class="form-control" id="descridbien" disabled>
             </div>
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Código:</label>
-              <input type="text" class="form-control" id="codigoa" disabled>
+              <label for="inputZip" class="form-label">Modelo:</label>
+              <input type="text" class="form-control" id="modeloin" disabled>
             </div>
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">N° Fatura:</label>
-              <input type="text" class="form-control" id="factua" disabled>
+              <label for="inputZip" class="form-label">serie:</label>
+              <input type="text" class="form-control" id="seriein" disabled>
             </div>
           </div>
           <div class="row my-4">
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
-              <input type="text" class="form-control" id="costa" disabled>
+              <label for="inputZip" class="form-label">Marca:</label>
+              <input type="text" class="form-control" id="marcain" disabled>
             </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Fecha Adquisición:</label>
+              <input type="text" class="form-control" id="fechain" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+              <input type="text" class="form-control" id="valorin" disabled>
+            </div>
+          </div>
+          <div class="row my-4">
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Proveedor:</label>
               <input type="text" class="form-control" id="id_proveedor" disabled>
             </div>
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Decripción del bien:</label>
-              <input type="text" class="form-control" id="nombrea" disabled>
-            </div>
+              <label for="inputZip" class="form-label">Código:</label>
+              <input type="text" class="form-control" id="codigoin" disabled>
+            </div>   
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Estado del Bien:</label>
+              <input type="text" class="form-control" id="estadoin" disabled>
+            </div>  
           </div>
           <div class="row my-4">
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Modelo:</label>
-              <input type="text" class="form-control" id="modeloa" disabled>
-            </div>
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Ubicación:</label>
-              <input type="text" class="form-control" id="ubicaciona" disabled>
-            </div>
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Marca:</label>
-              <input type="text" class="form-control" id="marcaa" disabled>
-            </div>
-          </div>
-          <div class="row my-4">
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Tipo Cargo:</label>
-              <input type="text" class="form-control" id="cargoa" disabled>
-            </div>
+              <input type="text" class="form-control" id="ubicacioni" disabled>
+            </div> 
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Vida Util:</label>
-              <input type="text" class="form-control" id="vidaa" disabled>
+              <input type="text" class="form-control" id="vidai" disabled>
             </div>
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Categoria:</label>
@@ -149,22 +138,22 @@
             </div>
           </div>
 <!----------------------------------este es el div de lo de vehiculo  ----------------------------------------->
-         <div class="row my-4" id="ocultarverdatos" style="display:none">
+         <div class="row my-4" id="ocultarverdatosi" style="display:none">
             <div class="col-md-4">
               <label for="inputZip" class="form-label">No. Motor:</label>
-              <input type="text" class="form-control" id="motora" disabled>
+              <input type="text" class="form-control" id="motori" disabled>
             </div>
             <div class="col-md-4">
               <label for="inputZip" class="form-label">No. Placa:</label>
-              <input type="text" class="form-control" id="placaa" disabled>
+              <input type="text" class="form-control" id="placai" disabled>
             </div>
             <div class="col-md-4">
               <label for="inputZip" class="form-label">No. Chasis:</label>
-              <input type="text" class="form-control" id="chasisa" disabled>
+              <input type="text" class="form-control" id="chasisi" disabled>
             </div>
             <div class="col-md-4">
                 <label for="inputZip" class="form-label">Capacidad:</label>
-                <input type="text" class="form-control" id="capaa" disabled>
+                <input type="text" class="form-control" id="capai" disabled>
             </div>
           </div>
             <div class="modal-footer">
@@ -176,6 +165,113 @@
   </div>
 </div>
 <!--///////////////TERMINA MODAL VER ///////////////////////////////////////////////////////////////-->
+<!-------------------MODAL EDITAR ENTRADAS ----------------------------------------------------------->
+<!-- Modal -->
+
+<div class="modal fade" id="modaleinven" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
+         DE ACTIVOS</h5>
+        <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="row my-4">
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Decripción del bien:</label>
+              <input type="text" class="form-control" id="descridbiene" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Modelo:</label>
+              <input type="text" class="form-control" id="modeloine" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">serie:</label>
+              <input type="text" class="form-control" id="serieine" disabled>
+            </div>
+          </div>
+          <div class="row my-4">
+           <div class="col-md-4">
+              <label for="inputZip" class="form-label">Marca:</label>
+              <input type="text" class="form-control" id="marcaine" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Fecha Adquisición:</label>
+              <input type="text" class="form-control" id="fechaine" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+              <input type="text" class="form-control" id="valorine" disabled>
+            </div>
+          </div>
+          <div class="row my-4">
+          <div class="col-md-4">
+              <label for="inputZip" class="form-label">Proveedor:</label>
+              <input type="text" class="form-control" id="id_proveedor" disabled>
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Código:</label>
+              <input type="text" class="form-control" id="codigoine" disabled>
+            </div>   
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">Estado del Bien:</label>
+              <input type="text" class="form-control" id="estadoine" disabled>
+            </div>  
+          </div>
+<!----------------------------este es el div de lo de vehiculo  --------------------------------->
+          <div class="row my-4">
+              <div class="col-md-4">
+               <label for="inputZip" class="form-label">Ubicación:</label>
+               <input type="text" class="form-control" id="ubicacionie" disabled>
+              </div> 
+              <div class="col-md-4">
+               <label for="inputZip" class="form-label">Vida Util:</label>
+               <input type="text" class="form-control" id="vidaie" disabled>
+             </div>
+             <div class="col-md-4">
+              <label for="inputZip" class="form-label">Categoria:</label>
+              <input type="text" class="form-control" id="id_categoria" disabled>
+            </div>
+          </div>
+            <!----------------------------------------------------------->
+
+            <div class="row my-4" id="ocultarii" style="display:none">
+              <div class="col-md-4">
+                <label for="inputZip" class="form-label">No. Motor:</label>
+                <input type="text" class="form-control" id="motorein">
+              </div>
+
+              <div class="col-md-4">
+                <label for="inputZip" class="form-label">No. Placa:</label>
+                <input type="text" class="form-control" id="placaein">
+              </div>
+
+              <div class="col-md-4">
+                <label for="inputZip" class="form-label">No. Chasis:</label>
+                <input type="text" class="form-control" id="chasisein">
+              </div>
+
+              <div class="col-md-4">
+                <label for="inputZip" class="form-label">Capacidad:</label>
+                <input type="text" class="form-control" id="capaein">
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="modal-footer">
+                <button class="btn btn-success" type="submit" id="editein" name="btnGuardar">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--//////////////////TERMINA MODAL EDITAR///////////////////////////////////////////////-->
+<!--//////////////////APARTE////////////////////////////////////////////////////////////-->
               </div>
             </div>
           </div>

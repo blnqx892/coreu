@@ -18,7 +18,7 @@ $con = con();
   while($row = mysqli_fetch_array($result)) {
     $i++;
     $json[] = array(
-      'id'    => $row['codigo_institucional'],
+      'id'    => $row['id'],
       'name' => $row['codigo_institucional'],
          
     );

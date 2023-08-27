@@ -169,7 +169,7 @@
 
 <!-------------------MODAL EDITAR ENTRADAS ----------------------------------------------------------->
 <!-- Modal -->
-<
+
 <div class="modal fade" id="modale" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">

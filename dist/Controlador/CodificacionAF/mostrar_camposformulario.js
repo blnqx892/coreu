@@ -27,15 +27,13 @@ $(document).ready(function () {
     $('#ubicacion_value').val(jefes.find(item => parseInt(item.id) == parseInt(value)).unidad);
   });
 
-  
-
   var formData = new FormData();
 
-   formData.append("id", id);
+  formData.append("id", id);
 
    $.ajax({
     url: "Controlador/Entradas/mostrar_modalE.php",
-    type: "post",
+    type: "POST",
     data: formData,
     contentType: false,
     processData: false,
@@ -47,7 +45,7 @@ $(document).ready(function () {
       $("#colorA").val(data.color);
       $("#serieA").val(data.serie);
       $("#modeloA").val(data.modelo);
-      $("#id_categoria").val(data.cate);
+      $("#categoria_id").val(data.cated);
 
     },
   });//fin ajax
