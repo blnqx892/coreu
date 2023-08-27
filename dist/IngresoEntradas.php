@@ -132,8 +132,9 @@
                       </div>
                       <div class="col-md-1">
                         <label for="inputCity" class="form-label">Nuevo</label>
-                        <button type="button" title="Nueva Categoria" class="btn btn-primary">
-                          <i class='fas fa-plus'></i>
+                        <button type="button" title="Nueva Categoria" class="btn btn-primary" data-coreui-toggle="modal"
+                        data-coreui-target="#modalCate">
+                        <i class='fas fa-plus'></i>
                         </button>
                       </div>
                       </div>
