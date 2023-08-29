@@ -144,5 +144,176 @@ $(document).ready(function () {
   });
 //------------------------- fin  mostrar---------------------------------------------------
 
+//*lo movi para aqui para poder acceder al metodo que recarga la tabla
+  
+$("#editmobi").on("click", function () {
+      
+ //capturar los datos
+  var id      = $("#_id").val(); //aqui capturas
+  var fechaM   =$("#fechame").val();
+  var nombreM  =$("#nombreme").val();
+  var modeloM  =$("#modelome").val();
+  var valorM   =$("#valorme").val();
+  var descriM =$("#descrime").val();
+   
+  if ( $("#fechame").val() == "" || $("#nombreme").val() == "" || $("#modelom").val() == "" ||
+  $("#valorme").val() == "" ||$("#descrime").val() == "") {
+   
+           Swal.fire({
+             icon: "error",
+             title: "error",
+             text: "Campos Vacios",
+           });
+         } else {
+           
+ var formData = new FormData(); //permite recoger la data para enviarla al controlador
+    
+     formData.append("fecham", fechaM);//anadir la data al objeto para seer enviadad
+     formData.append("nombrem", nombreM);
+     formData.append("modelom", modeloM);
+     formData.append("valorm", valorM);
+     formData.append("descrim", descriM);
+     formData.append("_id",id ); 
+
+//para que no te perdas lo deje comentado
+            
+$.ajax({
+  url: "Controlador/Mobiliarioyotros/editarmobiliario.php",
+  type: "post",
+  data: formData,
+  contentType: false,
+  processData: false,
+  success: function (response) {
+    console.log(JSON.parse(response));
+    data = JSON.parse(response);
+    if (data.success == 1) {
+      Swal.fire({
+        icon: "success",
+        title: data.title,
+        text: data.mensaje,
+      });
+       
+     
+     // $("#form")[0].reset();
+      $("#modalEditarmo").modal("hide");
+      refrescarTable();//recarga la tabla en el momento
+       
+      
+
+    } else {
+
+    }
+  },
+});
+return false;
+}
+});
+//*********************************************************** */
+//-------------------------------EDITARRRRR
+$("#mobiliario").on("click", ".editmo-item", function () {
+  let id = $(this).attr("id-item-mo");
+  $("#_id").val(id);
+
+    $("#modalEditarmo").modal("show");
+    var formData = new FormData();
+
+    formData.append("id", id);
+
+  //otro ajax
+    $.ajax({
+    url: "Controlador/Mobiliarioyotros/mostrarmodal_mobiliario.php",
+    type: "post",
+    data: formData,
+    contentType: false,
+    processData: false,
+    success: function (response) {
+      console.log(JSON.parse(response));
+      data = JSON.parse(response);
+      //console.log(data);
+      $("#_id").val(data.id);
+      $("#fechame").val(data.fecha);
+      $("#nombreme").val(data.nombre);
+      $("#modelome").val(data.modelo);
+      $("#valorme").val(data.valor);
+      $("#descrime").val(data.descrim);
+    
+      Swal.fire({
+        icon: "info",
+        title: "Datos Cargados Correctamente!",
+        text: "Información lista para ser modificada",
+      });
+
+      edit = true;
+    },
+  });
+});
+//------------------------- fin edit mostrar
+          
+//*lo movi para aqui para poder acceder al metodo que recarga la tabla
+  
+$("#editmobi").on("click", function () {
+               
+   var id      = $("#_id").val(); 
+  var fechaM   =$("#fechame").val();
+  var nombreM  =$("#nombreme").val();
+  var modeloM  =$("#modelome").val();
+  var valorM   =$("#valorme").val();
+  var descriM =$("#descrime").val(); //aqui capturas
+                
+                     
+                    
+                              
+if ( $("#fechame").val() == "" || $("#nombreme").val() == "" || $("#modelome").val() == "" ||
+$("#valorme").val() == "" ||$("#descrime").val() == "") {
+                            
+            Swal.fire({
+              icon: "error",
+              title: "error",
+              text: "Campos Vacios",
+            });
+          } else {
+    var formData = new FormData(); //permite recoger la data para enviarla al controlador
+    
+    formData.append("fecham", fechaM);//anadir la data al objeto para seer enviadad
+    formData.append("nombrem", nombreM);
+    formData.append("modelom", modeloM);
+    formData.append("valorm", valorM);
+    formData.append("descrim", descriM);
+    formData.append("_id",id ); //anadir la data al objeto para seer enviadad
+  
+      
+            $.ajax({
+              url: "Controlador/Mobiliarioyotros/editarmobiliario.php",
+              type: "post",
+              data: formData,
+              contentType: false,
+              processData: false,
+              success: function (response) {
+                console.log(JSON.parse(response));
+                data = JSON.parse(response);
+                if (data.success == 1) {
+                  Swal.fire({
+                    icon: "success",
+                    title: data.title,
+                    text: data.mensaje,
+                  });
+                  
+                
+                  //$("#modalEditarUni")[0].reset();
+                  $("#modalEditarmo").modal("hide");
+                  refrescarTable();//recarga la tabla en el momento
+                  //proba
+                  
+      
+                } else {
+                  //alert("Formato de imagen incorrecto.");
+                }
+              },
+            });
+            return false;
+          }
+                    });
+//*************************** */  
+  
 
 });

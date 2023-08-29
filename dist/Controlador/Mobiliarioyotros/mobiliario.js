@@ -12,7 +12,7 @@ $(document).ready(function () {
       var modeloM = $("#modelm").val();
       var valorM = $("#valom").val();
       var descriM = $("#descrim").val();
-      var fechaM = $("#fecham").val();
+     
       
     
   
@@ -51,7 +51,7 @@ $(document).ready(function () {
               });
                
              
-               $("#formm")[0].reset();
+               $("#formmo")[0].reset();
               
   
             } else {

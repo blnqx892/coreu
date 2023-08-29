@@ -22,11 +22,7 @@ $(document).ready(function () {
   } 
   //fin de mostrar en el combo
 
-
-
-
-
-    //**************************************guardar  */
+ //**************************************guardar  */
   
     $("#GuardaUnidades").on("click", function () {
         var formData = new FormData();
@@ -58,7 +54,9 @@ $(document).ready(function () {
                   text: data.mensaje,
                 });
 
-                $("#modalUni")[0].reset();
+                //$("#modalUni")[0].reset();
+                //$("#modalUni").modal("hide");
+                $('#nombreUnid').val('');
     
               } else {
                 //alert("Formato de imagen incorrecto.");

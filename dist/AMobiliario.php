@@ -43,7 +43,7 @@
               <div class="card-header"><strong>Ingreso de Mobiliarios</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form id="formm" class="g-3 needs-validation" role="form" action="" method="POST" autocomplete="off">
+                <form id="formmo" class="g-3 needs-validation" role="form" action="" method="POST" autocomplete="off">
                   <input type="hidden" value="Guardar" name="bandera">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">

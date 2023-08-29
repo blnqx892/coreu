@@ -24,7 +24,7 @@ $(document).ready(function () {
 
 
 
-  //**************************************guardar adenda */
+  //**************************************guardar  */
 
   $("#GuardaProveedor").on("click", function () {
     var formData = new FormData();
@@ -56,7 +56,7 @@ $(document).ready(function () {
               title: data.title,
               text: data.mensaje,
             });
-
+            combo();
              $('#nombreProv').val('');
             //$('#modalProv').hide();
 

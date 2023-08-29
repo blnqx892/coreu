@@ -166,8 +166,8 @@ $(document).ready(function () {
                          
                        
                        // $("#form")[0].reset();
-                        $("#modalEditarUni").modal("hide");
-                        refrescarTable();//recarga la tabla en el momento
+                      $("#modalEditarUni").modal("hide");
+                      refrescarTable();//recarga la tabla en el momento
                          
                         
             
@@ -182,7 +182,7 @@ $(document).ready(function () {
               //*************************** */
   
   
-  //-------------------------------EDITARRRRR
+  //-------------------------------EDITARRRRR------------------------------------
   $("#unidades").on("click", ".editu-item", function () {
     let id = $(this).attr("id-item-u");
     $("#_id").val(id);

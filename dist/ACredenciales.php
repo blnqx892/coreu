@@ -43,9 +43,10 @@
               <div class="card-header"><strong>Credenciales Unidades</strong></div>
               <div class="card-body">
                 <div class="col-md-14" align="right">
-                  <label for="inputCity" class="form-label">Nueva Credencial</label>
-                  <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
-                    data-coreui-target="#modalUni" data-coreui-whatever="@mdo">Ir</button>
+                  <label for="inputCity" class="form-label">Nueva Unidad</label>
+                  <button type="button" title="Nueva Unidad" class="btn btn-primary" data-coreui-toggle="modal"
+                    data-coreui-target="#modalUni" data-coreui-whatever="@mdo">Ir
+                  </button>
                 </div>
                 <div class="row  my-4">
                   <!-- dataTable-->
@@ -78,7 +79,7 @@
       </div>
     </div>
     <!-- ///////FIN CONTENEDOR/////////////-->
-    <!-- Scrollable modal -->
+<!-- MODAL AGREGAR UNIDAD Scrollable modal -->
     <div class="modal fade" id="modalUni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
@@ -103,7 +104,7 @@
       </form>
       </div>
     </div>
-<!--////////////////////////////////////////-->
+<!--///////////////////////////////////////////////////////////////////////////////////////////-->
 
    <!-- ///////MODAL VER UNIDADES/////////////-->
     <!-- Scrollable modal -->

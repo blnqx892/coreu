@@ -31,8 +31,6 @@ $con = con();
             <button type="button" id="edit" class="btn btn-warning  editmo-item" id-item-mo="'.$row['id'].'" title="Editar">
             <i class="far fa-edit"></i>
             </button>
-            <button type="button" class="btn btn-success  alta-item" id-item-alta="'.$row['id'].'" title="Alta"><i class="fa-solid fa-arrow-up-long"></i></button>
-            <button type="button" class="btn btn-danger  baja-item" id-item-baja="'.$row['id'].'" title="Baja"><i class="fa-solid fa-arrow-down-long"></i></i></button>
       </td>',
       'i'=>$i
     );
