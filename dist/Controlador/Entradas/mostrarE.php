@@ -11,19 +11,22 @@ $con = con();
  where ingreso_entradas.id not in (select aa.fk_ingreso_entradas from asignacion_activo aa)
  ORDER BY nombre_adquisicion ASC";
 
-
   $result = mysqli_query($conexion, $sql);//
  // var_dump(mysqli_query($conexion, $sql));
-
 
   $json = array();
   $i=0;
 
   while($row = mysqli_fetch_array($result)) {
     $i++;
+// Convierte la fecha de MySQL en "dd-mm-aaaa"
+    $fechaMySQL = $row['fecha_adquisicion'];
+    $timestamp = strtotime($fechaMySQL);
+    $fechaFormateada = date("d-m-Y", $timestamp);
+
     $json[] = array(
-      'id'    => $row['principal'],
-      'fechaC' => $row['fecha_adquisicion'],//ojo que no se t olovide qe si no te miesttra esto tenes malo
+      'id'    => $row['principal'],//ojo que no se t olovide qe si no te miesttra esto tenes malo
+      'fechaC' => $fechaFormateada, // Ahora es en formato "dd-mm-aaaa"
       'facturaC'=> $row['numero_factura'],
       'nombreC'=> $row['nombre_adquisicion'],
       'marca'=> $row['marca'],
