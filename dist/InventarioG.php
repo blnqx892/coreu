@@ -52,6 +52,7 @@
                       <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Categoria</th>      
                       <th style="text-align:center;">Ubicación</th>
+                      <th style="text-align:center;">Estado Bien</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
@@ -65,78 +66,84 @@
                       <th style="text-align:center;">Nombre</th>
                       <th style="text-align:center;">Categoria</th>      
                       <th style="text-align:center;">Ubicación</th>
+                      <th style="text-align:center;">Estado Bien</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
                 </table>
  <!--------------------------- //dataTable-------------------------------------------------------------------->
- <!--MODAL VER USUARIO -->
+ <!--MODAL VER  -->
  <div class="modal fade" id="modalVerainven" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
-          DE ACTIVOS</h5>
+        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN DE ACTIVOS</h5>
         <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
-          <div class="row my-4">
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Decripción del bien:</label>
-              <input type="text" class="form-control" id="descridbien" disabled>
-            </div>
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Modelo:</label>
-              <input type="text" class="form-control" id="modeloin" disabled>
-            </div>
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">serie:</label>
-              <input type="text" class="form-control" id="seriein" disabled>
-            </div>
-          </div>
-          <div class="row my-4">
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Marca:</label>
-              <input type="text" class="form-control" id="marcain" disabled>
-            </div>
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Fecha Adquisición:</label>
-              <input type="text" class="form-control" id="fechain" disabled>
-            </div>
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
-              <input type="text" class="form-control" id="valorin" disabled>
-            </div>
-          </div>
-          <div class="row my-4">
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Proveedor:</label>
-              <input type="text" class="form-control" id="id_proveedor" disabled>
-            </div>
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Código:</label>
-              <input type="text" class="form-control" id="codigoin" disabled>
-            </div>   
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Estado del Bien:</label>
-              <input type="text" class="form-control" id="estadoin" disabled>
-            </div>  
-          </div>
-          <div class="row my-4">
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Ubicación:</label>
-              <input type="text" class="form-control" id="ubicacioni" disabled>
-            </div> 
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Vida Util:</label>
-              <input type="text" class="form-control" id="vidai" disabled>
-            </div>
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Categoria:</label>
-              <input type="text" class="form-control" id="id_categoria" disabled>
-            </div>
-          </div>
+        <div class="row my-4">
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Decripción del bien:</label>
+        <input type="text" class="form-control" id="descridbien" disabled>
+    </div>
+    <div class="col-md-4">
+              <label for="inputZip" class="form-label">color:</label>
+              <input type="text" class="form-control" id="colorver" disabled>
+    </div>
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Modelo:</label>
+        <input type="text" class="form-control" id="modeloin" disabled>
+    </div>   
+</div>
+<div class="row my-4">
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">serie:</label>
+        <input type="text" class="form-control" id="seriein" disabled>
+    </div>
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Marca:</label>
+        <input type="text" class="form-control" id="marcain" disabled>
+    </div>
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Fecha Adquisición:</label>
+        <input type="text" class="form-control" id="fechain" disabled>
+    </div>   
+</div>
+<div class="row my-4">
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+        <input type="text" class="form-control" id="valorin" disabled>
+    </div>
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Proveedor:</label>
+        <input type="text" class="form-control" id="id_proveedor" disabled>
+    </div>
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Código:</label>
+        <input type="text" class="form-control" id="codigoin" disabled>
+    </div>    
+</div>
+<div class="row my-4">
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Estado del Bien:</label>
+        <input type="text" class="form-control" id="estadoin" disabled>
+    </div>
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Jefe Responsable:</label>
+        <input type="text" class="form-control" id="jefeinven" disabled>
+    </div>
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Ubicación:</label>
+        <input type="text" class="form-control" id="ubicacioni" disabled>
+    </div>   
+</div> 
+<div class="row my-4">
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">Categoria:</label>
+        <input type="text" class="form-control" id="id_categoria" disabled>
+    </div>
+</div>                            
 <!----------------------------------este es el div de lo de vehiculo  ----------------------------------------->
          <div class="row my-4" id="ocultarverdatosi" style="display:none">
             <div class="col-md-4">
@@ -167,7 +174,6 @@
 <!--///////////////TERMINA MODAL VER ///////////////////////////////////////////////////////////////-->
 <!-------------------MODAL EDITAR ENTRADAS ----------------------------------------------------------->
 <!-- Modal -->
-
 <div class="modal fade" id="modaleinven" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -178,62 +184,70 @@
       </div>
       <div class="modal-body">
         <form>
-        <div class="row my-4">
+          <div class="row my-4">
             <div class="col-md-4">
+              <input type="hidden" class="form-control" id="_id_inventario">
               <label for="inputZip" class="form-label">Decripción del bien:</label>
-              <input type="text" class="form-control" id="descridbiene" disabled>
+              <input type="text" class="form-control" id="descridbiene" >
+            </div>
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">color:</label>
+              <input type="text" class="form-control" id="coloried" >
             </div>
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Modelo:</label>
-              <input type="text" class="form-control" id="modeloine" disabled>
-            </div>
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">serie:</label>
-              <input type="text" class="form-control" id="serieine" disabled>
+              <input type="text" class="form-control" id="modeloine" >
             </div>
           </div>
+
           <div class="row my-4">
-           <div class="col-md-4">
+            <div class="col-md-4">
+              <label for="inputZip" class="form-label">serie:</label>
+              <input type="text" class="form-control" id="serieine" >
+            </div>
+            <div class="col-md-4">
               <label for="inputZip" class="form-label">Marca:</label>
-              <input type="text" class="form-control" id="marcaine" disabled>
+              <input type="text" class="form-control" id="marcaine" >
             </div>
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Fecha Adquisición:</label>
               <input type="text" class="form-control" id="fechaine" disabled>
             </div>
+          </div>
+
+          <div class="row my-4">
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Valor de Adquisición:</label>
               <input type="text" class="form-control" id="valorine" disabled>
             </div>
-          </div>
-          <div class="row my-4">
-          <div class="col-md-4">
-              <label for="inputZip" class="form-label">Proveedor:</label>
-              <input type="text" class="form-control" id="id_proveedor" disabled>
-            </div>
+              <div class="col-md-4">
+                 <label class="form-label" for="validationCustom04">Proveedor: </label>
+                 <select class="form-select" required id="proveedor_id" name="proveC">
+                 </select>
+                 <div class="invalid-feedback">Please select a valid state.</div>
+              </div>
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Código:</label>
               <input type="text" class="form-control" id="codigoine" disabled>
             </div>   
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Estado del Bien:</label>
-              <input type="text" class="form-control" id="estadoine" disabled>
-            </div>  
           </div>
+
 <!----------------------------este es el div de lo de vehiculo  --------------------------------->
           <div class="row my-4">
-              <div class="col-md-4">
-               <label for="inputZip" class="form-label">Ubicación:</label>
-               <input type="text" class="form-control" id="ubicacionie" disabled>
-              </div> 
-              <div class="col-md-4">
+             <div class="col-md-4">
                <label for="inputZip" class="form-label">Vida Util:</label>
                <input type="text" class="form-control" id="vidaie" disabled>
              </div>
-             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Categoria:</label>
-              <input type="text" class="form-control" id="id_categoria" disabled>
-            </div>
+              <div class="col-md-4">
+               <label for="inputZip" class="form-label">Ubicación:</label>
+               <input type="text" class="form-control" id="ubicacionie" disabled>
+              </div>     
+              <div class="col-md-4">
+                  <label class="form-label" for="validationCustom04">Categoria</label>
+                  <select class="form-select" required id="categoria_id" name="cateC" disabled>
+                  </select>
+                  <div class="invalid-feedback">Please select a valid state.</div>
+              </div>
           </div>
             <!----------------------------------------------------------->
 

@@ -6,12 +6,25 @@ $con = con();
 
 $codigo = $_POST['codigo'];
 
-$sql="SELECT ingreso_entradas.nombre_adquisicion, ingreso_entradas.costo_adquisicion,ingreso_entradas.vida_util,
-ingreso_entradas.color, ingreso_entradas.modelo,ingreso_entradas.serie_adquisicion,ingreso_entradas.marca,
-asignacion_activo.codigo_institucional,unidades.nombre_unidad FROM asignacion_activo INNER JOIN ingreso_entradas 
-on ingreso_entradas.id = asignacion_activo.fk_ingreso_entradas INNER JOIN usuarios ON usuarios.id = asignacion_activo.fk_usuarios 
-INNER JOIN unidades ON unidades.id = usuarios.fk_unidades 
-WHERE asignacion_activo.id='$codigo'";
+$sql="SELECT ingreso_entradas.nombre_adquisicion,
+  ingreso_entradas.costo_adquisicion,
+  ingreso_entradas.vida_util,
+  ingreso_entradas.color,
+  ingreso_entradas.modelo,
+  ingreso_entradas.serie_adquisicion,
+  ingreso_entradas.marca,
+  asignacion_activo.codigo_institucional,
+  unidades.nombre_unidad,
+  asignacion_activo.id,
+  categorias.categoria,
+  asignacion_activo.encargado_bien as encargado,
+  usuarios.id as id_jefe
+FROM asignacion_activo
+  INNER JOIN ingreso_entradas ON ingreso_entradas.id = asignacion_activo.fk_ingreso_entradas
+  INNER JOIN usuarios ON usuarios.id = asignacion_activo.fk_usuarios
+  INNER JOIN unidades ON unidades.id = usuarios.fk_unidades
+  LEFT JOIN  categorias ON ingreso_entradas.fk_categoria = categorias.id
+WHERE asignacion_activo.id ='$codigo'";
 
  
   $result = mysqli_query($conexion, $sql);
@@ -34,7 +47,9 @@ WHERE asignacion_activo.id='$codigo'";
       'marca' => $row['marca'],
       'codigo_institucional' => $row['codigo_institucional'],
       'nombre_unidad' => $row['nombre_unidad'],
-      
+      'categoria' => $row['categoria'],
+      'encargado' => $row['encargado'],
+      'id_jefe' => $row['id_jefe'],
     );
   }
   $jsonstring = json_encode($json[0]);

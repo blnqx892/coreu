@@ -51,6 +51,7 @@ $(document).ready(function () {
             { data: "nomb" },
             { data: "cate" },
             { data: "ubi" },
+            { data: "estbien"},
             { data: "botones" }
           ],
         });
@@ -63,9 +64,8 @@ $(document).ready(function () {
       
  $("#inven").on("click", ".editein-item", function () {
   let id = $(this).attr("id-item-ei");
-   $("#_id").val('');
-   $("#_id").val(id);
- 
+   //$("#_id_inventario").val(id);
+   console.log('Primary key: '+id)
    $("#modaleinven").modal("show");
     var formData = new FormData();
 
@@ -90,22 +90,19 @@ $(document).ready(function () {
       }
      
       //console.log(data);
-      $("#_id").val(data.id);
       $("#fechaine").val(data.fechaC);
-      //$("#facti").val(data.facturaC);
       $("#valorine").val(data.costo);
       $("#proveedor_id").val(data.proved);
-      $("#descridbiene").val(data.nombreC);
+      $("#descridbiene").val(data.nombreaC);
       $("#serieine").val(data.serie);
       $("#marcaine").val(data.marca);
       $("#modeloine").val(data.modelo);
-      $("#colorei").val(data.color);
-     //$("#cargoei").val(data.cargo);
+      $("#coloried").val(data.color);
       $("#vidaie").val(data.vida_util);
       $("#ubicacionie").val(data.nombre_unidad);
       $("#categoria_id").val(data.cated);
-      $("#codigoine").val(data.descri);
-      $("#estadoine").val(data.descri);   
+      $("#codigoine").val(data.codigo_insti);
+      $("#estadoine").val(data.estadoi);   
       $("#motorein").val(data.numeromo);
       $("#placaein").val(data.numeropla);
       $("#chasisein").val(data.numerochasis);
@@ -126,9 +123,9 @@ $(document).ready(function () {
 
 //----------------------------- mostrar-------------------------------------------------
       
-    $("#inven").on("click", ".verain-item", function () {
-      let id = $(this).attr("id-item-verain");
-      $("#_id").val(id);
+    $("#inven").on("click", ".verai-item", function () {
+      let id = $(this).attr("id-item-verai");
+      $("#_id_inventario").val(id);
      
        $("#modalVerainven").modal("show");
       var formData = new FormData();
@@ -152,18 +149,20 @@ $(document).ready(function () {
   
         }  
           //console.log(data);
-          $("#_id").val(data.id);
+          
           $("#fechain").val(data.fechaC);
           $("#codigoin").val(data.codigo_insti);
-          $("#seriein").val(data.facturaC);
+          $("#seriein").val(data.serie);
           $("#valorin").val(data.costo);
+          $("#colorver").val(data.color);
           $("#id_proveedor").val(data.prove);
           $("#descridbien").val(data.nombreaC);
           $("#marcain").val(data.marca);
           $("#modeloin").val(data.modelo);
-          $("#estadoin").val(data.modelo);   
+          $("#estadoin").val(data.estado);   
           $("#ubicacioni").val(data.nombre_unidad);
-          //$("#cargoi").val(data.cargo);
+          $("#jefeinven").val(data.jefe);
+          $("#estadoin").val(data.estadoi);
           $("#vidai").val(data.vida_util);
           $("#id_categoria").val(data.cate);
           $("#motori").val(data.numeromo);
@@ -177,31 +176,25 @@ $(document).ready(function () {
 //------------------------- fin  mostrar---------------------------------------------------
 //*lo movi para aqui para poder acceder al metodo que recarga la tabla
 
+
 $("#editein").on("click", function () {
           
-  var fecha = $("#fechaee").val(); //capturar los datos
-  var factura = $("#fact").val();
-  var costo = $("#cost").val();
-  var proved = $("#proveedor_id").val();
-  var nombre = $("#nombree").val();
-  var serie = $("#seriee").val();
-  var marca = $("#marcae").val();
-  var modelo = $("#modeloe").val();
-  var color =  $("#colore").val();
-  var cargo = $("#cargoe").val();
-  var vida =  $("#vidae").val();
-  var cated =  $("#categoria_id").val();
-  var descrip = $("#descripe").val();
-  var numerom = $("#motore").val();
-  var numerop = $("#placae").val();
-  var numerocha = $("#chasise").val();
-  var capaci = $("#capae").val();
-  var id      = $("#_id").val(); //aqui capturas
+   //capturar los datos
+  var prov = $("#proveedor_id").val();
+  var nombre = $("#descridbiene").val();
+  var color =  $("#coloried").val();
+  var serie = $("#serieine").val();
+  var marca = $("#marcaine").val();
+  var modelo = $("#modeloine").val();
+  var numerom = $("#motorein").val();
+  var numerop = $("#placaein").val();
+  var numerocha = $("#chasisein").val();
+  var capaci= $("#capaein").val();
+  var id  = $("#_id_inventario").val(); //aqui capturas
    
- if ( $("#fechaee").val() == "" || $("#fact").val() == "" || $("#cost").val() == "" ||
-      $("#id_proveedore").val() == "" ||  $("#nombree").val() == "" || $("#marcae").val() == "" ||
-      $("#colore").val() == "" ||  $("#cargoe").val() == "" || $("#id_categoriae").val() == "" ||
-      $("#descripe").val() == "") {
+ if ( $("#proveedor_id").val() == "" || $("#descridbiene").val() == "" || $("#coloried").val() == "" ||
+      $("#serieine").val() == "" || $("#marcaine").val() == "" || $("#modeloine").val() == "" 
+   ) {
    
            Swal.fire({
              icon: "error",
@@ -212,30 +205,24 @@ $("#editein").on("click", function () {
            
  var formData = new FormData(); //permite recoger la data para enviarla al controlador
    
- formData.append("fechaC", fecha);//anadir la data al objeto para seer enviadad
- formData.append("facturaC",factura);
- formData.append("costo",costo);
- formData.append("prove",proved);
+//anadir la data al objeto para seer enviadad
+ formData.append("prove",prov);
  formData.append("nombreC",nombre)
  formData.append("serie",serie)
  formData.append("marca",marca);
  formData.append("modelo",modelo);
- formData.append("color",color)
- formData.append("cargo",cargo)
- formData.append("vida",vida);
- formData.append("cate",cated)
- formData.append("descri",descrip)
- formData.append("numeromo",numerom)
- formData.append("numerochasis",numerocha)
+ formData.append("color",color);
+ formData.append("numeromo",numerom);
+ formData.append("numerochasis",numerocha);
  formData.append("numeropla",numerop);
  formData.append("capa",capaci)
- formData.append("_id",id ); 
+ formData.append("_id_inventario",id ); 
  //el campo booleano? eso era mi duda que te dije que si tenia que ir aunque no se editara o se iba a editar elestdo
  //pera error mio
    //para que no te perdas lo deje comentado
      
            $.ajax({
-             url: "Controlador/Entradas/editarE.php",
+             url: "Controlador/InventarioAF/editarI.php",
              type: "post",
              data: formData,
              contentType: false,
@@ -252,7 +239,7 @@ $("#editein").on("click", function () {
                   
                 
                  //$("#form")[0].reset();
-                 $("#modale").modal("hide");
+                 $("#modaleinven").modal("hide");
                  refrescarTable();//recarga la tabla en el momento
                   
                  
@@ -266,19 +253,19 @@ $("#editein").on("click", function () {
          }
        });
        //*************************** */
-//-------------------------------EDITARRRRR
-$("#entra").on("click", ".edite-item", function () {
-  let id = $(this).attr("id-item-e");
-  $("#_id").val(id);
+//-------------------------------EDITARRRRR---------------------------------------------------------
+$("#inven").on("click", ".editein-item", function () {
+  let id = $(this).attr("id-item-ei");
+  $("#_id_inventario").val(id);
 
-    $("#modale").modal("show");
+    $("#modaleinven").modal("show");
   var formData = new FormData();
 
   formData.append("id", id);
 
   //otro ajax
     $.ajax({
-    url: "Controlador/Entradas/mostrar_modalE.php",
+    url: "Controlador/InventarioAF/mostrar_modalinventa.php",
     type: "post",
     data: formData,
     contentType: false,
@@ -287,27 +274,18 @@ $("#entra").on("click", ".edite-item", function () {
       console.log(JSON.parse(response));
       data = JSON.parse(response);
       //console.log(data);
-      $("#_id").val(data.id);
-      $("#fechaee").val(data.fechaC);
-      $("#fact").val(data.facturaC);
-      $("#cost").val(data.costo);
-      $("#id_proveedore").val(data.prove);
-      $("#nombree").val(data.nombreC);
-      $("#seriee").val(data.serie);
-      $("#marcae").val(data.marca);
-      $("#modeloe").val(data.modelo);
-      $("#colore").val(data.color);
-      $("#cargoe").val(data.cargo);
-      $("#vidae").val(data.vida);
-      $("#id_categoriae").val(data.cate);
-      $("#descripe").val(data.descri);
-      $("#motore").val(data.numeromo);
-      $("#chasise").val(data.numerochasis);
-      $("#placae").val(data.numeropla);
-      $("#capae").val(data.capa);
-      
-      
-      
+      //$("#_id_inventario").val(data.id);
+      $("#proveedor_id").val(data.proved);
+      $("#descridbiene").val(data.nombreaC);
+      $("#serieine").val(data.serie);
+      $("#marcaine").val(data.marca);
+      $("#modeloine").val(data.modelo);
+      $("#coloried").val(data.color); 
+      $("#motorein").val(data.numeromo);
+      $("#placaein").val(data.numeropla);
+      $("#chasisein").val(data.numerochasis);
+      $("#capaein").val(data.capa);
+  
       Swal.fire({
         icon: "info",
         title: "Datos Cargados Correctamente!",
@@ -318,35 +296,31 @@ $("#entra").on("click", ".edite-item", function () {
     },
   });
 });
-//------------------------- fin edit mostrar
+//------------------------- fin edit mostrar--------------------------------------------
 
           
 //*lo movi para aqui para poder acceder al metodo que recarga la tabla
-$("#edite").on("click", function () {
+$("#editein").on("click", function () {
                  
-  var fecha = $("#fechaee").val(); //capturar los datos
-  var factura = $("#fact").val();
-  var costo = $("#cost").val();
-  var prov = $("#id_proveedore").val();
-  var nombre = $("#nombree").val();
-  var serie = $("#seriee").val();
-  var marca = $("#marcae").val();
-  var modelo = $("#modeloe").val();
-  var color =  $("#colore").val();
-  var cargo = $("#cargoe").val();
-  var vida =  $("#vidae").val();
-  var cate =  $("#id_categoriae").val();
-  var descrip = $("#descripe").val();
-  var numerom = $("#motore").val();
-  var numerocha = $("#chasise").val();
-  var numerop = $("#placae").val();
-  var capaci = $("#capae").val();
-  var id      = $("#_id").val(); //aqui capturas
-        
-  if ( $("#fechaee").val() == "" || $("#fact").val() == "" || $("#cost").val() == "" ||
-  $("#id_proveedore").val() == "" ||  $("#nombree").val() == "" || $("#marcae").val() == "" ||
-  $("#colore").val() == "" ||  $("#cargoe").val() == "" || $("#id_categoriae").val() == "" ||
-  $("#descripe").val() == "") {
+ 
+
+//capturar los datos
+  var prov = $("#proveedor_id").val();
+  var nombre = $("#descridbiene").val();
+  var serie = $("#serieine").val();
+  var marca = $("#marcaine").val();
+  var modelo = $("#modeloine").val();
+  var color =  $("#coloried").val();
+  var numerom = $("#motorein").val();
+  var numerop = $("#placaein").val();
+  var numerocha = $("#chasisein").val();
+  var capaci = $("#capaein").val();
+  var id      = $("#_id_inventario").val(); //aqui capturas
+   
+  if ( $("#proveedor_id").val() == "" || $("#descridbiene").val() == "" || $("#coloried").val() == "" ||
+  $("#serieine").val() == "" || $("#marcaine").val() == "" || $("#modeloine").val() == "" 
+  
+) {
 
        Swal.fire({
          icon: "error",
@@ -357,29 +331,23 @@ $("#edite").on("click", function () {
 
 var formData = new FormData(); //permite recoger la data para enviarla al controlador
       
-      formData.append("_id",id ); 
-      formData.append("fechaC", fecha);//anadir la data al objeto para seer enviadad
-      formData.append("facturaC",factura);
-      formData.append("costo",costo);
-      formData.append("prove",prov);
-      formData.append("nombreC",nombre)
-      formData.append("serie",serie)
-      formData.append("marca",marca);
-      formData.append("modelo",modelo);
-      formData.append("color",color)
-      formData.append("cargo",cargo)
-      formData.append("vida",vida);
-      formData.append("cate",cate)
-      formData.append("descri",descrip)
-      formData.append("numeromo",numerom)
-      formData.append("numerochasis",numerocha)
-      formData.append("numeropla",numerop);
-      formData.append("capa",capaci)
+//anadir la data al objeto para seer enviadad
+formData.append("prove",prov);
+ formData.append("nombreC",nombre)
+ formData.append("serie",serie)
+ formData.append("marca",marca);
+ formData.append("modelo",modelo);
+ formData.append("color",color);
+ formData.append("numeromo",numerom);
+ formData.append("numerochasis",numerocha);
+ formData.append("numeropla",numerop);
+ formData.append("capa",capaci)
+ formData.append("_id_inventario",id ); 
       
   //para que no te perdas lo deje comentado
         
               $.ajax({
-                url: "Controlador/Entradas/editarE.php",
+                url: "Controlador/InventarioAF/editarI.php",
                 type: "post",
                 data: formData,
                 contentType: false,
@@ -396,7 +364,7 @@ var formData = new FormData(); //permite recoger la data para enviarla al contro
                     
                   
                    // $("#form")[0].reset();
-                    $("#modale").modal("hide");
+                    $("#modaleinven").modal("hide");
                     refrescarTable();//recarga la tabla en el momento
                     //proba
                     

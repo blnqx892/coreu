@@ -247,7 +247,7 @@ $("#mobiliario").on("click", ".editmo-item", function () {
     },
   });
 });
-//------------------------- fin edit mostrar
+//------------------------- fin edit mostrar--------------------------------------------
           
 //*lo movi para aqui para poder acceder al metodo que recarga la tabla
   

@@ -123,7 +123,60 @@ $(document).ready(function () {
       });
 //------------------------- fin  mostrar---------------------------------------------------
   
-  
+  //guaradr---------------------------------------
+
+  $("#GuardaUnidades").on("click", function () {
+    var formData = new FormData();
+    var nombreUnid = $("#nombreUnid").val();
+
+    if (
+      $("#nombreUnid").val() == "") {
+      Swal.fire({
+        icon: "error",
+        title: "error",
+        text: "Campos Vacios",
+      });
+    } else {
+      formData.append("nombreUnid", nombreUnid);
+
+      $.ajax({
+        url: "Controlador/CredencialesA/insertCredenciales.php",
+        type: "post",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+          console.log(JSON.parse(response));
+          data = JSON.parse(response);
+          if (data.success == 1) {
+            Swal.fire({
+              icon: "success",
+              title: data.title,
+              text: data.mensaje,
+            });
+
+            //$("#modalUni")[0].reset();
+            //$("#modalUni").modal("hide");
+            
+            $('#nombreUnid').val('');
+            refrescarTable();
+
+          } else {
+            //alert("Formato de imagen incorrecto.");
+          }
+        },
+      });
+      return false;
+    }
+  });
+  //*************************** */
+
+
+
+
+
+
+
   
     //*lo movi para aqui para poder acceder al metodo que recarga la tabla
   

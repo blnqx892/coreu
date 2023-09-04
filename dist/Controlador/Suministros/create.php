@@ -13,26 +13,16 @@ into ingreso_suministros (
                           codigo_barra,
                           nombre_suministro,
                           presentacion,
-                          unidad_medida,
                           existencia_minima,
                           existencia_maxima,
-                          almacen,
-                          estante,
-                          entrepaño,
-                          casilla,
                           categoria_id
 ) values (
           ".$timestamp.",
           '".$body->codigo_barra."',
           '".$body->nombre_suministro."',
           '".$body->presentacion."',
-          '".$body->unidad_medida."',
           ".$body->existencia_minima.",
           ".$body->existencia_maxima.",
-          '".$body->almacen."',
-          '".$body->estante."',
-          '".$body->entrepano."',
-          '".$body->casilla."',
           '.$body->categoria_id.'
 )";
 

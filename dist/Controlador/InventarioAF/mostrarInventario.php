@@ -6,7 +6,7 @@ $con = con();
 
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
  $sql="SELECT asignacion_activo.id AS id_asignacion,ingreso_entradas.nombre_adquisicion,categorias.categoria,
-  asignacion_activo.fecha_asignacion,asignacion_activo.codigo_institucional,unidades.nombre_unidad 
+  asignacion_activo.fecha_asignacion,asignacion_activo.codigo_institucional,asignacion_activo.estado_bien,unidades.nombre_unidad
   FROM asignacion_activo 
   INNER JOIN ingreso_entradas on ingreso_entradas.id = asignacion_activo.fk_ingreso_entradas 
   INNER JOIN usuarios ON usuarios.id = asignacion_activo.fk_usuarios 
@@ -32,6 +32,7 @@ $con = con();
       'nomb'=> $row['nombre_adquisicion'],
       'cate'=> $row['categoria'],
       'ubi'=> $row['nombre_unidad'],
+      'estbien'=> $row['estado_bien'],
       'botones'=>'<td>
             <button type="button" id="ver" class="btn btn-info  verai-item" id-item-verai="'.$row['id_asignacion'].'  " title="Ver"><i 
             class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVerainven"></i></button>

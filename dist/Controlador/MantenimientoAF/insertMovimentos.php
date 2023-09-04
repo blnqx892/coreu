@@ -2,16 +2,29 @@
 include("../../Confi/conexion.php");
 $conexion = con();
 
-   $fechaM = $_POST["fechaA"];
-   $codigoM = $_POST["cod"];
-   $observacionM = $_POST["encar"];
-   $tipoM = $_POST["_id"];
-   $ingresosM = $_POST["_id"]; 
-   $unidadesM = $_POST["nombreC"];
+   $fechaM               = $_POST["fechaMovimiento"];
+   $observacionM         = $_POST["observa"];
+   $tipoM                = $_POST["tipomovi"];
+   $tipoR                = $_POST["tiporegis"];
+   $fk_asignacion_activo = $_POST["_id_asigna"];
+   $fk_unidades          = $_POST["nombre_u"];
+
 
    
-   $sql = "INSERT INTO mantenimiento_activos (fecha_movimiento,tipo_movimiento,observaciones,tipo_registro,fk_ingreso_entradas,
-   fk_unidades) VALUES  ('$fechaM','$observacionM',$tipoM',$ingresosM','$unidadesM')";
+   $sql = "INSERT INTO mantenimiento_activos (
+    fechaMovimiento,
+    observa,
+    tipomovi,
+    tiporegis,
+    fk_asignacion_activo,
+    fk_unidades) VALUES  (
+    '$fechaM',
+    '$observacionM',
+    '$tipoM',
+    '$tipoR',
+    '$fk_asignacion_activo',
+    '$fk_unidades'
+    )";
   
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);

@@ -13,10 +13,12 @@ $(document).ready(function () {
       jefes = JSON.parse(response);
       let template = '<option selected>Elegir Jefe</option>';
       jefes.forEach(item => {
-        template += `<option value="${item.id}">${item.nombre+' '+item.apellido}</option>`;
+        template += `<option value="${item.id}" ${parseInt(item.id)===parseInt($("#jefe_id").val()) && "selected"}>${item.nombre+' '+item.apellido}</option>`;
       });
 
       $("#nombreC").html(template);
+      $("#nombreC").trigger('change')
+
     },
   });}
 
@@ -46,6 +48,7 @@ $(document).ready(function () {
       $("#serieA").val(data.serie);
       $("#modeloA").val(data.modelo);
       $("#categoria_id").val(data.cated);
+      $("#categoriaC").val(data.cate);
 
     },
   });//fin ajax

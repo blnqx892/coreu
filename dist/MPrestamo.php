@@ -42,11 +42,14 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Traslado de Bienes Muebles</strong></div>
+              <input type="hidden" id="categoria" name="categoria" type="text">
+              <input type="hidden" id="encargado" name="encargado" type="text">
+              <input type="hidden" id="id_jefe" name="id_jefe" type="text">
+            <div class="card-header"><strong>Traslado de Bienes Muebles</strong></div>
               <div class="card-body">
 <!--------------------------INICIO FORM--------------------------------------------------->
-<form class="g-3 needs-validation" novalidate="">
-<h4>Generalidades</h4>
+                <form class="g-3 needs-validation" novalidate="">
+                <h4>Generalidades</h4>
                   <div class="row my-4">
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
@@ -56,15 +59,15 @@
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom01">Fecha:</label>
-                      <input class="form-control" id="fecha_movimiento" type="date" required="">
+                      <input class="form-control" id="fecha_movimiento" type="date" required="" disabled>
                    </div>
                    <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Procedencia:</label>
-                      <input class="form-control" id="nombre_unidad" type="text" required="">
+                      <input class="form-control" id="nombre_unidad" type="text" required="" disabled>
                    </div>
                    <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Destino:</label>
-                      <select class="form-select" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad"> </select>
+                      <select class="form-select" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad" disabled> </select>
                       <div class="invalid-feedback">Please select a valid state.
                    </div>
                   </div>
@@ -75,7 +78,7 @@
    
     <div class="col-md-3">
       <label class="form-label" for="validationCustom04">Tipo de Movimiento:</label>
-      <select class="form-select" id="perC" name="perC" data-placeholder="Seleccione un Movimiento">
+      <select class="form-select" id="perC" name="perC" data-placeholder="Seleccione un Movimiento" disabled>
         <option  value="Prestamo"> Prestamo</option>
         <option  value="Traslado Definitivo">Traslado Definitivo</option>
         <option  value="Reparación">Reparación</option>
@@ -84,7 +87,7 @@
     </div>
     <div class="col-md-6">
         <label class="form-label" for="validationCustom02">Observaciones:</label>
-        <textarea class="form-control" id="observacion" required="" rows="2"></textarea>
+        <textarea class="form-control" id="observacion" required="" rows="2" disabled></textarea>
     </div>
 </div>
 <!--FIN------------------------------------------------------------------------------------------->
