@@ -79,10 +79,6 @@
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Unidad de Medida:</label>
-                      <input type="text" class="form-control v-required-1" id="unidad_medida" placeholder="">
-                    </div>
-                    <div class="col-md-3">
                       <label for="inputZip" class="form-label">Existencia Mínima:</label>
                       <input type="number" min="0" step="1" class="form-control v-required-1 v-min-1" id="existencia_minima" data-min="0">
                     </div>
@@ -91,27 +87,7 @@
                       <input type="number" min="0" step="1" class="form-control v-required-1 v-min-1" id="existencia_maxima" data-min="0" data-minthan="existencia_minima">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Almacén:</label>
-                      <input type="text" class="form-control v-required-1" id="almacen">
-                    </div>
-                  </div>
-                  <!--FIN SECCION TRES-->
-                  <div class="row  my-4">
-                    <!--INICIO SECCION CUATRO-->
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Estante:</label>
-                      <input type="text" class="form-control v-required-1" id="estante">
-                    </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Entrepaño:</label>
-                      <input type="text" class="form-control v-required-1" id="entrepano">
-                    </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Casilla:</label>
-                      <input type="text" class="form-control v-required-1" id="casilla">
-                    </div>
-                    <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Casilla:</label>
+                      <label for="inputZip" class="form-label">Categoria:</label>
                       <select name="cats" id="categorias" class="form-select">
                         <?php while($cat = mysqli_fetch_assoc($categorias)) {?>
                           <option value="<?php echo $cat["categoria_id"]?>"><?php echo $cat["nomb_categoria"]?></option>
@@ -119,20 +95,17 @@
                       </select>
                     </div>
                   </div>
+   <!--FIN ----------------->
                   <div class="row">
                     <div class="col-md-3">
                       <svg id="barcode" width="100%"></svg>
                     </div>
                   </div>
-                  <div class="row my-4">
-                    <div class="col-md-3">
-                      <button class="btn btn-success mt-3" type="button" id="save_record">Guardar <i class='far fa-check-square'></i></button>
-                    </div>
-                  </div>
+                 
                   <div class="row  my-4">
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label"></label>
-                      <button class="btn btn-success" type="button" data-coreui-toggle="modal"
+                      <button class="btn btn-success mt-3" type="button" data-coreui-toggle="modal"
                         data-coreui-target="#modalAgg" id="add_kardex">Agregar <i class='far fa-check-square'></i></button>
                     </div>
                   </div>
@@ -167,9 +140,11 @@
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
+                  
                   <div class="col-15" align="right">
                     <hr style="color: black; background-color: black; width:100%;" />
                     <a class="btn btn-secondary" href="TablaSumi.php">Cancelar <i class='far fa-times-circle'></i></a>
+                    <button class="btn btn-success " type="button" id="save_record">Guardar <i class='far fa-check-square'></i></button>            
                   </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->

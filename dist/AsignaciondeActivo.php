@@ -41,6 +41,7 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
+                <input type="hidden" id="jefe_id" name="jefe_id" value="<?php echo $_GET['id_jefe'] ?? ''; ?>" >
               <div class="card-header"><strong>Asignación de Activo</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
@@ -49,7 +50,7 @@
                   <div class="row">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
-                      <input class="form-control" id="fechaA" type="date" required="">
+                      <input class="form-control" id="fechaA" type="date" required="" >
                     </div>
                   </div>
                   <!--FIN-->
@@ -58,32 +59,30 @@
                     <input type="hidden" value="<?php echo $_GET['codigo'] ?? ''; ?>" id="codigo_institucional">
                      <input type="hidden" class="form-control" id="_id" value="<?php echo $_GET['a'];?>">
                       <label class="form-label" for="validationCustom02">Descripción del bien:</label>
-                      <input class="form-control" id="nombreA" type="text" required="" disabled>
+                      <input class="form-control" id="nombreA" type="text" required=""  value="<?php echo $_GET['descripcion'] ?? '';?>"  disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Marca:</label>
-                      <input type="text" class="form-control" id="marcaA" name="marcaC" required="" disabled>
+                      <input type="text" class="form-control" id="marcaA" value="<?php echo $_GET['marca'] ?? '';?>" name="marcaC" required="" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Color:</label>
-                      <input type="text" class="form-control" id="colorA" name="colorC" required="" disabled>
+                      <input type="text" class="form-control" id="colorA" value="<?php echo $_GET['color'] ?? '';?>" name="colorC" required="" disabled>
                     </div>
                   </div>
                   <div class="row  my-4">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Serie:</label>
-                      <input type="text" class="form-control" id="serieA" name="serieC" required="" disabled>
+                      <input type="text" class="form-control" id="serieA" name="serieC" required="" value="<?php echo $_GET['serie'] ?? '';?>" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Categoria: </label>
-                      <select class="form-select" required="" id="categoria_id" name="categoria_id" disabled>
-                        <option selected value="">Choose...</option>
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
+                      <input type="text" class="form-control" id="categoriaC" name="categoriaC" required="" value="<?php echo $_GET['categoria'] ?? '';?>" disabled>
                     </div>
                     <div class="col-md-4">
-                      <label class="form-label" for="validationCustom04">Modelo</label>
-                      <input class="form-control" id="modeloA" type="text" required="" disabled>
+                      <label class="form-label" for="validationCustom05">Modelo</label>
+                      <input class="form-control" id="modeloA" name="modeloA" type="text" required="" value="<?php echo $_GET['modelo'] ?? '';?>" disabled>
+                      
                     </div>
                   </div>
                   <hr style="color: black; background-color: black; width:100%;" />
@@ -104,7 +103,7 @@
                       <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Codigo:</label>
                         <div class="input-group mb-2">
-                          <input id="codigoB-1" type="text" class="form-control" placeholder="00" aria-label="Username">
+                          <input id="codigoB-1" type="text text-right" class="form-control" placeholder="00" aria-label="Username">
                           <input id="codigoB-2" type="text" class="form-control" placeholder="-000-00-00-" aria-label="Username">
                           <input id="codigoB-3" type="text" class="form-control" placeholder="00" aria-label="Server">
                         </div>
@@ -112,7 +111,7 @@
                     <div class="row  my-4">
                       <div class="col-md-4">
                         <label class="form-label" for="validationCustom02">Encargado del Bien:</label>
-                        <input class="form-control" id="encargadoA" type="text" required="">
+                        <input class="form-control" id="encargadoA" type="text" required=""  value="<?php echo $_GET['encargado'] ?? '';?>" >
                       </div>
                     </div>
                   </div>
@@ -136,12 +135,16 @@
     <script src="./Controlador/codificacionAF/codificacion.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js" type="text/javascript"></script>
     <script src="./Controlador/Categorias/categoria.js" type="text/javascript"></script>
+    <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
+
     <script type="text/javascript">
-      var id = $("#_id").val();
+       var id = $("#_id").val();
       </script>
     <script>
       $(document).ready(function () {
         // $(":input").inputmask();
+        
+        
         const codigo = $("#codigo_institucional").val()
         $("#codigoA").mask('00-000-00-00-000');
         $("#codigoB-1").mask('00');
@@ -153,10 +156,9 @@
           $("#codigoB-2").mask('-000-00-00-').val('-'+codigo[2]+codigo[3]+codigo[4]+'-'+codigo[5]+codigo[6]+'-'+codigo[7]+codigo[8]+'-');
           $("#codigoB-3").mask('000').val(codigo[9]+codigo[10]+codigo[11]);
         }
-
+      
       });
-      <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
-
+   
     </script>
 
     <!-- IMPORTAR ARCHIVO FOOTER-->
