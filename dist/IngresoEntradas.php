@@ -117,7 +117,7 @@
                         <option value="Donado">Donado</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
-                    </div>                 
+                    </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
                     <div class="col-md-4">
@@ -227,6 +227,10 @@
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">Nombre:</label>
                   <input type="text" class="form-control" id="nombreCate" name="nombreCate">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Vida Util:</label>
+                  <input type="number" class="form-control" id="vidaUtil" name="vidaUtil">
                 </div>
               </div>
               <div class="modal-footer">

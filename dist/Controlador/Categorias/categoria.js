@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
     combo();
-  
-  
-  
+    
     function combo() {
       $.ajax({
         url: "Controlador/Categorias/mostrarCa.php",
@@ -21,18 +19,16 @@ $(document).ready(function () {
         },
       });
     } //fin de mostrar en el combo
-  
-  
-  
+
+
+
     //**************************************guardar  */
-  
+
     $("#GuardaCategoria").on("click", function () {
       var formData = new FormData();
       var nombreCate = $("#nombreCate").val();
-  
-      if (
-        $("#nombreCate").val() == ""
-      ) {
+      var vidaUtil = $("#vidaUtil").val();
+      if ($("#nombreCate").val() == "" && $("#vidaUtil").val() == "") {
         Swal.fire({
           icon: "error",
           title: "error",
@@ -40,7 +36,7 @@ $(document).ready(function () {
         });
       } else {
         formData.append("nombreCate", nombreCate);
-  
+        formData.append("vidaUtil", vidaUtil);
         $.ajax({
           url: "Controlador/categorias/insertCategoria.php",
           type: "post",
@@ -48,8 +44,10 @@ $(document).ready(function () {
           contentType: false,
           processData: false,
           success: function (response) {
+
             console.log(JSON.parse(response));
             data = JSON.parse(response);
+            console.log('data',data);
             if (data.success == 1) {
               Swal.fire({
                 icon: "success",
@@ -58,8 +56,9 @@ $(document).ready(function () {
               });
                combo();
                $('#nombreCate').val('');
+               $('#vidaUtil').val('');
               //$('#modalCate').hide();
-  
+
             } else {
               //alert("Formato de imagen incorrecto.");
             }
@@ -71,4 +70,3 @@ $(document).ready(function () {
     //*************************** */
 
   });
-  
