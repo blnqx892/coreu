@@ -19,7 +19,8 @@ $con = con();
     $i++;
     $json[] = array(
       'id'    => $row['id'],
-      'name' => $row['categoria']
+      'name' => $row['categoria'],
+      'util' => $row['vida_util']
     );
   }
   $jsonstring = json_encode($json);

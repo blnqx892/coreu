@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     combo();
-    
+
     function combo() {
       $.ajax({
         url: "Controlador/Categorias/mostrarCa.php",
@@ -11,11 +11,15 @@ $(document).ready(function () {
           const item = JSON.parse(response);
           let template = '<option selected="" disabled="" value="">Elegir Categoria</option>';
           item.forEach((item) => {
-            template += `
-            <option value="${item.id}">${item.name}</option>
-                    `;
+            template += `<option value="${item.id}" data-vida-util="${item.util}">${item.name}</option>`;
           });
           $("#categoria_id").html(template);
+
+          // Agrega un evento change al select después de cargar las opciones
+          $("#categoria_id").change(function () {
+            const selectedVidaUtil = $("#categoria_id option:selected").data("vida-util");
+            $("#vidaAnio").val(selectedVidaUtil);
+          });
         },
       });
     } //fin de mostrar en el combo
