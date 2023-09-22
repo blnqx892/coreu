@@ -52,7 +52,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg> Depreciación</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina
+        <li class="nav-item"><a class="nav-link" href="DepreciacionActivo.php"><span class="nav-icon"></span> Pagina
             1</a></li>
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina
             2</a></li>

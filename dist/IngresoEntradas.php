@@ -124,8 +124,7 @@
                                         <div class="row my-4">
                                             <div class="col-md-4">
                                                 <label for="inputZip" class="form-label">Valor Rescate:</label>
-                                                <input type="number" class="form-control" id="vidaC" name="vidaC"
-                                                    disabled>
+                                                <input type="number" class="form-control" id="vidaC" name="vidaC">
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="form-label" for="validationCustom04">Categoria</label>
