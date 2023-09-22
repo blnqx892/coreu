@@ -176,7 +176,10 @@
                                                             <input type="text" class="form-control" id="vrescate" disabled>
                                                         </div>
                                                     </div>
+                                                    <div class="row my-4">
+                                                    <canvas id="depreciacionChart"></canvas>
 
+                                                    </div>
 
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
