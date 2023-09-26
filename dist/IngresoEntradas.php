@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Valor de Adquisición:</label>
-                      <input type="number" class="form-control" placeholder="" id="costoC" name="costoC">
+                      <input type="number" class="form-control mi-validate-1" placeholder="" id="costoC" name="costoC">
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Proveedor: </label>
@@ -145,11 +145,11 @@
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
                           <input class="form-check-input" type="checkbox" role="switch" name="trans"
-                            id="flexSwitchCheckChecked" checked name="activarFormulario" onclick="mostrarFormulario()">
+                            id="flexSwitchCheckChecked" name="activarFormulario" onclick="mostrarFormulario()">
                         </div>
                       </div>
                     </div>
-                    <div id="formulario" style="display:block;">
+                    <div id="formulario" style="display:none;">
                       <hr style="color: black; background-color: black; width:100%;" />
                       <div class="row my-1">
                         <div class="col-md-3">
@@ -200,7 +200,7 @@
               <div class="modal-body">
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="nombreProv" name="nombreProv">
+                  <input type="text" class="form-control mi-validate-2" id="nombreProv" name="nombreProv">
                 </div>
               </div>
               <div class="modal-footer">
@@ -248,17 +248,45 @@
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+    <!-- para que muestre la alerta -->
+    <div class="toast-container position-fixed end-0 p-3">
+      <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <div class="rounded me-2"></div>
+          <strong class="me-auto" id="toast_title">Acción exitosa</strong>
+          <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast_body">
+          Registro guardado
+        </div>
+      </div>
+    </div>
+    <!-- fin de que muestre la alerta -->
     <script>
       function mostrarFormulario() {
         var formulario = document.getElementById("formulario");
-        if (formulario.style.display === "block") {
-          formulario.style.display = "none";
-          $("#flexSwitchCheckChecked").val("");
-          $("#flexSwitchCheckChecked").val("off");
-        } else {
+
+        //alert(formulario.style.display);
+
+        if (formulario.style.display === "none") {
+
           formulario.style.display = "block";
           $("#flexSwitchCheckChecked").val("");
           $("#flexSwitchCheckChecked").val("on");
+          $("#motorC").addClass('mi-validate-1');
+          $("#chasisC").addClass('mi-validate-1');
+          $("#placaC").addClass('mi-validate-1');
+          $("#capacidadC").addClass('mi-validate-1');
+
+        } else {
+          formulario.style.display = "none";
+          $("#flexSwitchCheckChecked").val("");
+          $("#flexSwitchCheckChecked").val("off");
+          $("#motorC").removeClass('mi-validate-1');
+          $("#chasisC").removeClass('mi-validate-1');
+          $("#placaC").removeClass('mi-validate-1');
+          $("#capacidadC").removeClass('mi-validate-1');
+         
         }
       }
 

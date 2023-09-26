@@ -1,7 +1,7 @@
 <?php
 include("../../Confi/conexion.php");
 $conexion = con();
-
+    
     $fechaM=$_POST["fecha"];
     $nombreM=$_POST["nombre"];
     $modeloM=$_POST["modelo"];

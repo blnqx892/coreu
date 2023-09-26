@@ -6,7 +6,9 @@ $con = con();
 
 $codigo = $_POST['codigo'];
 
-$sql="SELECT ingreso_entradas.nombre_adquisicion,
+$sql="
+  SELECT ingreso_entradas.nombre_adquisicion,
+  ingreso_entradas.id as ingreso_entrada_id,
   ingreso_entradas.costo_adquisicion,
   ingreso_entradas.vida_util,
   ingreso_entradas.color,
@@ -39,6 +41,7 @@ WHERE asignacion_activo.id ='$codigo'";
     $i++;
     $json[] = array(
       'nombre_adquisicion' => $row['nombre_adquisicion'],
+      'ingreso_entrada_id' => $row['ingreso_entrada_id'],
       'costo_adquisicion' => $row['costo_adquisicion'],
       'vida_util' => $row['vida_util'],
       'color' => $row['color'],

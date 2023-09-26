@@ -7,11 +7,12 @@ $(document).ready(function () {
 
      
 
-      var fechaA = $("#fechaA").val(); //capturar los datos que tiene el input
-      var codigoA = ($("#codigoB-1").val() ?? '')+($("#codigoB-2").val() ?? '')+($("#codigoB-3").val() ?? '');
-      var encargadoA = $("#encargadoA").val();
-      var ingresosA = $("#_id").val();
-      var usuariosA = $("#nombreC").val();
+      let fechaA = $("#fechaA").val(); //capturar los datos que tiene el input
+      let codigoA = ($("#codigoB-1").val() ?? '')+($("#codigoB-2").val() ?? '')+($("#codigoB-3").val() ?? '');
+      let encargadoA = $("#encargadoA").val();
+      let ingresosA = $("#_id").val();
+      let id_asignacion = $("#id_asignacion").val();
+      let usuariosA = $("#nombreC").val();
 
       
   
@@ -30,6 +31,7 @@ $(document).ready(function () {
         formData.append("cod",codigoA);
         formData.append("encar",encargadoA);
         formData.append("_id",ingresosA);
+        formData.append("id_asignacion",id_asignacion);
         formData.append("nombreC",usuariosA);
 
   

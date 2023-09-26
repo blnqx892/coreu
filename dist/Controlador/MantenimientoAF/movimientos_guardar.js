@@ -4,34 +4,15 @@ $(document).ready(function () {
   
     //********************guardar  */
   
-    $("#GuardaEntradas").on("click", function () {
+    $("#GuardaMovimientos").on("click", function () {
 
-      var fecha = $("#fechaC").val();
-      var factura = $("#facturaC").val();
-      var costo = $("#costoC").val();
-      var prov = $("#proveedor_id").val();
-      var nombre = $("#nombreC").val();
-      var serie = $("#serieC").val();
-      var marca = $("#marcaC").val();
-      var modelo = $("#modeloC").val();
-      var color = $("#colorC").val();
-      var cargo = $("#cargoC").val();
-      var vida= $("#vidaC").val();
-      var cate = $("#categoria_id").val();
-      var descrip = $("#descriC").val();
-      var numerom = $("#motorC").val();
-      var numerocha = $("#chasisC").val();
-      var numerop = $("#placaC").val();
-      var capaci = $("#capacidadC").val();
-      if($("#flexSwitchCheckChecked").val()=="on"){
-        var bandera=1;
-      }else{
-        var bandera=0;
-      }
+      let fechaMovimiento = $("#fecha_movimiento").val();
+      let nombre_u        = $("#unidad_id").val();
+      let tipomovi        = $("#perC").val();
+      let observa         = $("#observacion").val();
+      let _id_asigna      = $("#codigo_id :selected").val();
 
-      if ( $("#fechaC").val() == "" || $("#facturaC").val() == "" || $("#costoC").val() == "" ||
-        $("#proveedor_id").val() == "" ||  $("#nombreC").val() == "" || $("#colorC").val() == "" || 
-        $("#cargoC").val() == "" || $("#categoria_id").val() == "" ||
+      if ( 
         $("#descriC").val() == "") {
           Swal.fire({
             icon: "error",
@@ -39,8 +20,11 @@ $(document).ready(function () {
             text: "Campos Vacios",
           });
       
-        }else if($("#flexSwitchCheckChecked").val()=="on" &&($("#motorC").val() == "" || 
-        $("#chasisC").val() == "" || $("#placaC").val() == "" ||  $("#capacidadC").val() == "")){
+        }else if(
+          $("#flexSwitchCheckChecked").val()=="on" &&
+          ($("#motorC").val() == "" || $("#chasisC").val() == "" || $("#placaC").val() == "" ||  
+          $("#capacidadC").val() == "")
+        ){
       
         Swal.fire({
           icon: "error",
@@ -51,51 +35,22 @@ $(document).ready(function () {
 
 
         var formData = new FormData(); //permite recoger la data para enviarla al controlador
-
-        formData.append("fecha", fecha);//anadir la data al objeto para seer enviadad
-        formData.append("factura",factura);
-        formData.append("costo",costo);
-        formData.append("prove",prov);
-        formData.append("nombre",nombre)
-        formData.append("serie",serie)
-        formData.append("marca",marca);
-        formData.append("modelo",modelo);
-        formData.append("color",color)
-        formData.append("cargo",cargo)
-        formData.append("vida",vida);
-        formData.append("cate",cate)
-        formData.append("descri",descrip)
-        formData.append("numeromo",numerom)
-        formData.append("numerochasis",numerocha)
-        formData.append("numeropla",numerop);
-        formData.append("capa",capaci)
-        formData.append("bandera",bandera)
-        
-        
+       
+        formData.append("fechaMovimiento", fechaMovimiento);//anadir la data al objeto para seer enviadad
+        formData.append("observa",observa);
+        formData.append("tipomovi",tipomovi);
+        formData.append("_id_asigna",_id_asigna)       
+        formData.append("nombre_u",nombre_u)
   
         $.ajax({
-          url: "Controlador/Entradas/insertEntradas.php",
+          url: "Controlador/MantenimientoAF/insertMovimientos.php",
           type: "post",
           data: formData,
           contentType: false,
           processData: false,
           success: function (response) {
-          console.log(JSON.parse(response));
-            data = JSON.parse(response);
-            if (data.success == 1) {
-              Swal.fire({
-                icon: "success",
-                title: data.title,
-                text: data.mensaje,
-              });
-               
-             
-               $("#formE")[0].reset();
-              
-  
-            } else {
-              //alert("Formato de imagen incorrecto.");
-            }
+            $("#codigo_id").select2().text();
+            $('#formM').get(0).reset();
           },
         });
        

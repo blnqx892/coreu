@@ -45,10 +45,13 @@
               <input type="hidden" id="categoria" name="categoria" type="text">
               <input type="hidden" id="encargado" name="encargado" type="text">
               <input type="hidden" id="id_jefe" name="id_jefe" type="text">
+              <input type="hidden" id="ingreso_entrada_id" name="ingreso_entrada_id" type="text">
             <div class="card-header"><strong>Traslado de Bienes Muebles</strong></div>
               <div class="card-body">
 <!--------------------------INICIO FORM--------------------------------------------------->
-                <form class="g-3 needs-validation" novalidate="">
+                <form id="formM" class="g-3 needs-validation" action="" method="POST"
+                  autocomplete="off">
+                  <input type="hidden" value="Guardar" name="bandera">
                 <h4>Generalidades</h4>
                   <div class="row my-4">
                     <div class="col-md-3">
@@ -135,9 +138,9 @@
 <!--FIN------------------------------------------------------------------------------------------->
                   <div class="col-15" align="right">
                     <hr style="color: black; background-color: black; width:100%;" />
-                    <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
-                    <button class="btn btn-secondary" type="submit">Cancelar <i
-                        class='far fa-times-circle'></i></button>
+                    <button class="btn btn-success"  type="button" id="GuardaMovimientos" name="btnGuardar">Guardar <i class='far fa-check-square'></i></button>
+                      <button class="btn btn-secondary" type="reset">Cancelar <i
+                          class='far fa-times-circle'></i></button>
                   </div>
                 </form>
 <!--/// FIN FORM ////////////////-->
@@ -151,6 +154,7 @@
     </div>
    
     <script src="./Controlador/MantenimientoAF/mostrar_camposprestamo.js"></script>
+    <script src="./Controlador/MantenimientoAF/movimientos_guardar.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js"></script>
    
     <!-- IMPORTAR ARCHIVO FOOTER-->

@@ -48,12 +48,6 @@ $(document).ready(function () {
       let _codigo = $("#codigo_id :selected").text();
       let _traslado = $("#perC").val();
 
-      if(!(_codigo ?? false) ||!(_id ?? false) || !(_traslado ?? false) || _traslado !=='Traslado Definitivo')
-      {
-        console.log('Error en :codigo o traslado o id')
-        return;
-      }
-
       let _data = new FormData();
 
       _data.append("codigo",_id);
@@ -79,16 +73,22 @@ $(document).ready(function () {
           $("#categoria").val(data.categoria);
           $("#encargado").val(data.encargado);
           $("#id_jefe").val(data.id_jefe);
+          $("#ingreso_entrada_id").val(data.ingreso_entrada_id);
         },
       });//fin ajax
     
-      
+      if(!(_codigo ?? false) ||!(_id ?? false) || !(_traslado ?? false) || _traslado !=='Traslado Definitivo')
+      {
+        console.log('Error en :codigo o traslado o id')
+        return;
+      }
 
       _codigo = _codigo.replaceAll('-', '');
       //Abrir nuevo tab
 
       const datos = '/coreu/dist/AsignaciondeActivo.php?'
-      +'a='+_id
+      +'a='+($("#ingreso_entrada_id").val()?? ' ')
+      +'&id_asignacion_activos='+_id
       +'&codigo='+_codigo
       +'&traslado='+_traslado
       +'&descripcion='+($("#nombre_adquisicion").val()?? ' ')
@@ -100,7 +100,7 @@ $(document).ready(function () {
       +'&encargado='+($("#encargado").val()?? ' ')
       +'&id_jefe='+($("#id_jefe").val()?? ' ');
 
-      const win = window.open(datos , '_blank');
+      const win = window.open(datos);
     //Cambiar el foco al nuevo tab (punto opcional)
       win.focus();
     } catch (error) {

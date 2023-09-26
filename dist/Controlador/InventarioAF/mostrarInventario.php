@@ -25,9 +25,16 @@ $con = con();
 
   while($row = mysqli_fetch_array($result)) {
     $i++;
+// Convierte la fecha de MySQL en "dd-mm-aaaa"
+$fechaMySQL = $row['fecha_asignacion'];
+$timestamp = strtotime($fechaMySQL);
+$fechaFormateada = date("d-m-Y", $timestamp);
+
+
+
     $json[] = array(
       'id'    => $row['id_asignacion'],
-      'fech' => $row['fecha_asignacion'],
+      'fech' => $fechaFormateada,
       'codi'=> $row['codigo_institucional'],
       'nomb'=> $row['nombre_adquisicion'],
       'cate'=> $row['categoria'],

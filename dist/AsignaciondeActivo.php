@@ -57,7 +57,8 @@
                   <div class="row  my-4">
                     <div class="col-md-4">
                     <input type="hidden" value="<?php echo $_GET['codigo'] ?? ''; ?>" id="codigo_institucional">
-                     <input type="hidden" class="form-control" id="_id" value="<?php echo $_GET['a'];?>">
+                     <input type="hidden" class="form-control" id="_id" value="<?php echo $_GET['a']??'';?>">
+                     <input type="hidden" class="form-control" id="id_asignacion" value="<?php echo $_GET['id_asignacion_activos']??'';?>">
                       <label class="form-label" for="validationCustom02">Descripción del bien:</label>
                       <input class="form-control" id="nombreA" type="text" required=""  value="<?php echo $_GET['descripcion'] ?? '';?>"  disabled>
                     </div>
@@ -104,7 +105,7 @@
                       <label class="form-label" for="validationCustom02">Codigo:</label>
                         <div class="input-group mb-2">
                           <input id="codigoB-1" type="text text-right" class="form-control" placeholder="00" aria-label="Username">
-                          <input id="codigoB-2" type="text" class="form-control" placeholder="-000-00-00-" aria-label="Username">
+                          <input id="codigoB-2" type="text" class="form-control" placeholder="-000-00-00-" <?php echo (!($_GET['a'] ?? false) && 'disabled');?> aria-label="Username">
                           <input id="codigoB-3" type="text" class="form-control" placeholder="00" aria-label="Server">
                         </div>
                       </div>
@@ -118,7 +119,7 @@
                   <hr style="color: black; background-color: black; width:100%;" />
                   <!--FIN-->
                   <div class="col-12" align="right">
-                    <button class="btn btn-success" type="submit" id="GuardaCodificacion" name="btnGuardar">Guardar <i
+                    <button class="btn btn-success" type="button" id="GuardaCodificacion" name="btnGuardar">Guardar <i
                         class='far fa-check-square'></i></button>
                     <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i></button>
                   </div>
