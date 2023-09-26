@@ -120,9 +120,9 @@
                     </div>                 
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
-                    <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Vida Util:</label>
-                      <input type="number" class="form-control" id="vidaC" name="vidaC">
+                       <div class="col-md-4">
+                        <label for="inputZip" class="form-label">Valor Rescate:</label>
+                        <input type="number" class="form-control" id="vidaC" name="vidaC">
                     </div>
                       <div class="col-md-4">
                         <label class="form-label" for="validationCustom04">Categoria</label>
@@ -137,6 +137,11 @@
                         <i class='fas fa-plus'></i>
                         </button>
                       </div>
+                      <div class="col-md-3">
+                        <label for="inputZip" class="form-label">Vida Util: (en años)</label>
+                        <input type="number" class="form-control" id="vidaAnio" name="vidaAnio"
+                        disabled>
+                        </div>
                       </div>
                       <!--INICIO SECCION CINCO-->
                     </div>
@@ -144,8 +149,9 @@
                       <div class="col-md-1">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" role="switch" name="trans"
-                            id="flexSwitchCheckChecked" name="activarFormulario" onclick="mostrarFormulario()">
+                          <input class="form-check-input" type="checkbox" role="switch" 
+                          name="trans" id="flexSwitchCheckChecked"  checked
+                          name="activarFormulario" onclick="mostrarFormulario()">
                         </div>
                       </div>
                     </div>
@@ -228,6 +234,10 @@
                   <label for="inputCity" class="form-label">Nombre:</label>
                   <input type="text" class="form-control" id="nombreCate" name="nombreCate">
                 </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Vida Util:</label>
+                  <input type="number" class="form-control" id="vidaUtil" name="vidaUtil">
+                  </div>
               </div>
               <div class="modal-footer">
                 <button type="submit" id="GuardaCategoria" class="btn btn-primary">Guardar</button>
