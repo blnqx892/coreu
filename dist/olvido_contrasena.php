@@ -57,6 +57,7 @@
                                         </span>
                                         <input class="form-control" type="email" placeholder="Correo Electrónico" name="email"
                                             id="email">
+                                        <span id="email-error" style="color: red;"></span>
                                     </div>
                                     <div class="row">
                                         <div class="col-6">
@@ -78,3 +79,4 @@
 </body>
 
 </html>
+
