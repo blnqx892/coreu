@@ -247,7 +247,7 @@
                   <div class="invalid-feedback">Please select a valid state.</div>
               </div>
           </div>
-            <!----------------------------------------------------------->
+ <!-------------------------------------------------------------------------------------------->
 
             <div class="row my-4" id="ocultar" style="display:none">
               <div class="col-md-4">

@@ -87,7 +87,7 @@
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
                       <label for="inputCity" class="form-label">Descripción del bien:</label>
-                      <input type="text" class="form-control" id="nombreC" name="nombreC">
+                      <input type="text" class="form-control mi-validate-1" id="nombreC" name="nombreC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Serie:</label>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Marca:</label>
-                      <input type="text" class="form-control" id="marcaC" name="marcaC">
+                      <input type="text" class="form-control mi-validate-1" id="marcaC" name="marcaC">
                     </div>
                   </div>
                   <!--FIN SECCION TRES-->
@@ -107,11 +107,11 @@
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Color:</label>
-                      <input type="text" class="form-control" id="colorC" name="colorC">
+                      <input type="text" class="form-control mi-validate-1" id="colorC" name="colorC">
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Tipo de Cargo: </label>
-                      <select class="form-select" required="" id="cargoC" name="cargoC">
+                      <select class="form-select mi-validate-1" required="" id="cargoC" name="cargoC">
                         <option selected="" disabled="" value="">Elegir Tipo</option>
                         <option value="Comprado">Comprado</option>
                         <option value="Donado">Donado</option>
@@ -150,7 +150,7 @@
                         <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                         <div class="form-check form-switch">
                           <input class="form-check-input" type="checkbox" role="switch" 
-                          name="trans" id="flexSwitchCheckChecked"  checked
+                          name="trans" id="flexSwitchCheckChecked"  
                           name="activarFormulario" onclick="mostrarFormulario()">
                         </div>
                       </div>

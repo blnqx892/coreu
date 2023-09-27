@@ -26,9 +26,9 @@ $(document).ready(function () {
       var numerop = $("#placaC").val();
       var capaci = $("#capacidadC").val();
       if($("#flexSwitchCheckChecked").val()=="on"){
-        var bandera=1;
-      }else{
         var bandera=0;
+      }else{
+        var bandera=1;
       }
 
       // if ( $("#fechaC").val() == "" || $("#facturaC").val() == "" || $("#costoC").val() == "" ||
