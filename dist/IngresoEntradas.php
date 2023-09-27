@@ -117,13 +117,10 @@
                         <option value="Donado">Donado</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
-                    </div>                 
+                    </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="row my-4">
-                       <div class="col-md-4">
-                        <label for="inputZip" class="form-label">Valor Rescate:</label>
-                        <input type="number" class="form-control" id="vidaC" name="vidaC">
-                    </div>
+
                       <div class="col-md-4">
                         <label class="form-label" for="validationCustom04">Categoria</label>
                         <select class="form-select" required id="categoria_id" name="cateC">
@@ -142,6 +139,11 @@
                         <input type="number" class="form-control" id="vidaAnio" name="vidaAnio"
                         disabled>
                         </div>
+
+                        <div class="col-md-3" style="display:none">
+                        <label for="inputZip" class="form-label">Valor Rescate:</label>
+                        <input type="number" class="form-control" id="vidaC" name="vidaC">
+                    </div>
                       </div>
                       <!--INICIO SECCION CINCO-->
                     </div>
@@ -296,7 +298,7 @@
           $("#chasisC").removeClass('mi-validate-1');
           $("#placaC").removeClass('mi-validate-1');
           $("#capacidadC").removeClass('mi-validate-1');
-         
+
         }
       }
 
