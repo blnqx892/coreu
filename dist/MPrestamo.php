@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
-<?php include("head/head.php"); ?>
+<?php include("head/head.php"); 
+  
+?>
 <!-- ////////////////////////-->
 
 
@@ -42,16 +44,21 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <input type="hidden" id="categoria" name="categoria" type="text">
-              <input type="hidden" id="encargado" name="encargado" type="text">
-              <input type="hidden" id="id_jefe" name="id_jefe" type="text">
-              <input type="hidden" id="ingreso_entrada_id" name="ingreso_entrada_id" type="text">
+             
             <div class="card-header"><strong>Traslado de Bienes Muebles</strong></div>
               <div class="card-body">
 <!--------------------------INICIO FORM--------------------------------------------------->
-                <form id="formM" class="g-3 needs-validation" action="" method="POST"
-                  autocomplete="off">
-                  <input type="hidden" value="Guardar" name="bandera">
+                <form id="formM" class="g-3 needs-validation" 
+                action="AsignaciondeActivo.php" 
+                method="POST" 
+                autocomplete="off"> 
+                <input type="hidden" id="categoria" name="categoria" type="text">
+                <input type="hidden" id="encargado" name="encargado" type="text">
+                <input type="hidden" id="id_jefe" name="id_jefe" type="text">
+                <input type="hidden" id="codigo_id_id" name="codigo_id_id" type="text">
+                <input type="hidden" id="codigo_id_txt" name="codigo_id_txt" type="text">
+                <input type="hidden" id="ingreso_entrada_id" name="ingreso_entrada_id" type="text">
+                <input type="hidden" value="Guardar" name="bandera">
                 <h4>Generalidades</h4>
                   <div class="row my-4">
                     <div class="col-md-3">
@@ -68,7 +75,7 @@
                       <label class="form-label" for="validationCustom02">Procedencia:</label>
                       <input class="form-control" id="nombre_unidad" type="text" required="" disabled>
                    </div>
-                   <div class="col-md-3">
+                   <div class="col-md-3" id="div-destino">
                       <label class="form-label" for="validationCustom02">Destino:</label>
                       <select class="form-select" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad" disabled> </select>
                       <div class="invalid-feedback">Please select a valid state.

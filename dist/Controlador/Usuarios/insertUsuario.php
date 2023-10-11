@@ -13,8 +13,8 @@ $conexion = con();
 
     
 
-    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,rol,permisos,fk_unidades) VALUES
-     ('$nombre', '$apellido','$usuario','$email',md5('$contra'),'$rol','$per','$uni')";
+    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,permisos,fk_unidades,fk_rol) VALUES
+     ('$nombre','$apellido','$usuario','$email',md5('$contra'),'$per','$uni','$rol')";
 
     // Ejecutar la consulta SQL
     
@@ -32,7 +32,7 @@ $conexion = con();
     } else {
         $json[] = array(
             'title' => "Error",
-            'mensaje'=>"Algo salió mal, no se pudo guardar: "
+            'mensaje'=> mysqli_error($conexion)
             );
     }
     

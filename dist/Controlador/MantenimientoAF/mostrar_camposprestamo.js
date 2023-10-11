@@ -79,30 +79,39 @@ $(document).ready(function () {
     
       if(!(_codigo ?? false) ||!(_id ?? false) || !(_traslado ?? false) || _traslado !=='Traslado Definitivo')
       {
-        console.log('Error en :codigo o traslado o id')
+        if(_traslado ==='Prestamo')
+          $('#div-destino').show(1000);
+        else {
+          $('#div-destino').hide(1000);
+          $('#unidad_id').val(null);
+        }
+        console.log('Error en :codigo o traslado o id')//poner una alerta de error
         return;
       }
 
-      _codigo = _codigo.replaceAll('-', '');
+      //_codigo = _codigo;
+      $("#codigo_id_id").val($("#codigo_id :selected").val());
+      $("#codigo_id_txt").val(($("#codigo_id :selected").text()??'').replaceAll('-', ''));
+      $("#formM").submit();
       //Abrir nuevo tab
+      // const datos = '/coreu/dist/AsignaciondeActivo.php?'
+      // +'a='+($("#ingreso_entrada_id").val()?? ' ')
+      // +'&id_asignacion_activos='+_id
+      // +'&codigo='+_codigo
+      // +'&traslado='+_traslado
+      // +'&descripcion='+($("#nombre_adquisicion").val()?? ' ')
+      // +'&marca='+($("#marca").val()?? ' ')
+      // +'&color='+($("#color").val()?? ' ')
+      // +'&serie='+($("#serie_adquisicion").val()?? ' ')
+      // +'&categoria='+($("#categoria").val()?? ' ')
+      // +'&modelo='+($("#modelo").val() ?? ' ')
+      // +'&encargado='+($("#encargado").val()?? ' ')
+      // +'&id_jefe='+($("#id_jefe").val()?? ' ');
 
-      const datos = '/coreu/dist/AsignaciondeActivo.php?'
-      +'a='+($("#ingreso_entrada_id").val()?? ' ')
-      +'&id_asignacion_activos='+_id
-      +'&codigo='+_codigo
-      +'&traslado='+_traslado
-      +'&descripcion='+($("#nombre_adquisicion").val()?? ' ')
-      +'&marca='+($("#marca").val()?? ' ')
-      +'&color='+($("#color").val()?? ' ')
-      +'&serie='+($("#serie_adquisicion").val()?? ' ')
-      +'&categoria='+($("#categoria").val()?? ' ')
-      +'&modelo='+($("#modelo").val() ?? ' ')
-      +'&encargado='+($("#encargado").val()?? ' ')
-      +'&id_jefe='+($("#id_jefe").val()?? ' ');
+      //const win = window.open(datos);
+      //Cambiar el foco al nuevo tab (punto opcional)
+      //win.focus();
 
-      const win = window.open(datos);
-    //Cambiar el foco al nuevo tab (punto opcional)
-      win.focus();
     } catch (error) {
       cosole.log(error)
     }

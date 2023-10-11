@@ -6,7 +6,10 @@ $con = con();
 
 $id = $_POST['id'];
 
-$sql="SELECT *, usuarios.id as id_usuario FROM usuarios INNER JOIN unidades on unidades.id = usuarios.fk_unidades WHERE usuarios.id='$id'";
+$sql="SELECT *, usuarios.id as id_usuario FROM usuarios 
+INNER JOIN unidades on unidades.id = usuarios.fk_unidades 
+INNER JOIN roles ON roles.id = usuarios.fk_rol
+WHERE usuarios.id='$id'";
 
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
  //$sql="SELECT us.id as id_usuario, usuario, 
@@ -32,7 +35,7 @@ $sql="SELECT *, usuarios.id as id_usuario FROM usuarios INNER JOIN unidades on u
       'ape'=> $row['apellido'],
       'usu'=> $row['usuario'],
       'email'=> $row['email'],
-      'rol'=> $row['rol'],
+      'rol'=> $row['fk_rol'],
       'per'=> $row['permisos'],
       'unid'=> $row['nombre_unidad'],
       'unidd'=> $row['fk_unidades'],

@@ -43,14 +43,15 @@
               <div class="card-header"><strong>Actualización Movimientos</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                <table id="moviactivo" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
                       <th style="text-align:center;">N°</th>
                       <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Codigo del Bien</th>
                       <th style="text-align:center;">Descripción del bien</th>
                       <th style="text-align:center;">Tipo de Movimiento</th>
-                      <th style="text-align:center;">Procedencia</th>                 
+                      <th style="text-align:center;">Tipo de Registro</th>                 
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
@@ -60,9 +61,10 @@
                     <tr>
                     <th style="text-align:center;">N°</th>
                     <th style="text-align:center;">Fecha</th>
+                    <th style="text-align:center;">Codigo del Bien</th>
                     <th style="text-align:center;">Descripción del bien</th>
                     <th style="text-align:center;">Tipo de Movimiento</th>
-                    <th style="text-align:center;">Procedencia</th>
+                    <th style="text-align:center;">Tipo de Registro</th>
                     <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
@@ -76,6 +78,7 @@
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
+    <script src="./Controlador/MantenimientoAF/mostrartablamovimientos.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->

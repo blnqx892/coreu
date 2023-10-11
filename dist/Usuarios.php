@@ -51,19 +51,19 @@
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-3">
                       <label for="inputAddress2" class="form-label">Nombre:</label>
-                      <input type="text" class="form-control" id="nombreC" placeholder="" name="nombreC" >
+                      <input type="text" class="form-control tres-validate-1" id="nombreC" placeholder="" name="nombreC" >
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Apellido:</label>
-                      <input type="text" class="form-control" id="apellidoC" name="apellidoC">
+                      <input type="text" class="form-control tres-validate-1" id="apellidoC" name="apellidoC">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Usuario:</label>
-                      <input type="text" class="form-control" id="usuarioC" name="usuarioC">
+                      <input type="text" class="form-control tres-validate-1" id="usuarioC" name="usuarioC">
                     </div>
                     <div class="col-md-3">
                         <label for="inputCity" class="form-label">Email:</label>
-                        <input type="e-mail" class="form-control" id="emailC" name="emailC">
+                        <input type="e-mail" class="form-control tres-validate-1" id="emailC" name="emailC">
                       </div>
                      </div>
                     <!--FIN SECCION TRES-->
@@ -71,15 +71,16 @@
                       <!--INICIO SECCION CUATRO-->
                       <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Rol</label>
-                      <select class="form-select" id="rolC" name="rolC" data-placeholder="Seleccione el Rol">
-                        <option  value="Administrador">Administrador</option>
-                        <option  value="Jefe">Jefe</option>
+                      <select class="form-select tres-validate-1" id="rolC" name="rolCU" 
+                      data-placeholder="Seleccione El Rol">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                      </div>
                      <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Permisos</label>
-                      <select class="form-select" id="perC" name="perC" data-placeholder="Seleccione Producto">
+                      <select class="form-select tres-validate-1" id="perC"
+                          name="perC" >
+                        <option selected="" disabled="" value="">Elegir Permiso</option>
                         <option  value="Almacen">Almacen</option>
                         <option  value="Activo Fijo">Activo Fijo</option>
                         <option  value="UACI">UACI</option>
@@ -88,20 +89,20 @@
                      </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Unidad:</label>
-                      <select class="form-select" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad">
+                      <select class="form-select tres-validate-1" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                      </div> 
                    <div class="col-md-3">
                         <label for="inputZip" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control" id="contraC" name="contraC">
+                        <input type="password" class="form-control tres-validate-1" id="contraC" name="contraC">
                         <div id="error1"></div>
                       </div>
                     </div>
                     <div class="row my-3">
                     <div class="col-md-3">
                         <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                        <input type="password" class="form-control" id="contraC1" name="contraC1">
+                        <input type="password" class="form-control tres-validate-1" id="contraC1" name="contraC1">
                         <div id="error2"></div>
                       </div>
                     </div>      
@@ -122,13 +123,28 @@
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
     <script src="./Controlador/Usuarios/usuario.js"></script>
+    <script src="./Controlador/Usuarios/mostrarroles.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js"></script>
+    
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-  </div>
+     <!-- para que muestre la alerta -->
+     <div class="toast-container position-fixed end-0 p-3">
+      <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+        <div class="rounded me-2"></div>
+          <strong class="me-auto" id="toast_title">Acción exitosa</strong>
+          <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast_body">
+        Registro guardado
+        </div>
+      </div>
+    </div>
+    <!-- fin de  que muestre la alerta -->
 
   <!-- SCRIPT QUE VALIDA SI LAS CONTRASEÑAS SON IGUALES-->
   <script>
