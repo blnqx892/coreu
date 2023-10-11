@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v4.2.2
-* @link https://coreui.io
-* Copyright (c) 2022 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://coreui.io/license)
--->
 <html lang="en">
 
 <head>
@@ -39,23 +32,7 @@
     <link rel="stylesheet" href="css/vendors/simplebar.css">
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
-    <!-- We use those styles to show code examples, you should remove them in your application.-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-    <link href="css/examples.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics-->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    // Shared ID
-    gtag('config', 'UA-118965717-3');
-    // Bootstrap ID
-    gtag('config', 'UA-118965717-5');
-    </script>
 </head>
 
 <body>
@@ -67,39 +44,31 @@
                         <div class="card col-md-7 p-4 mb-0">
                             <div class="card-body">
                                 <center>
-                                    <h1>BIENVENIDO A SICAFI</h1>
+                                    <h1>RECUPERAR CONTRASEÑA</h1>
                                 </center>
-                                <p class="text-medium-emphasis">Inicie Sesión</p>
-                                <form action="autenticar.php" method="post">
+                                <p class="text-medium-emphasis">Correo Electrónico</p>
+                                <form action="recuperar_contrasena.php" method="post">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">
                                             <svg class="icon">
-                                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                                            </svg>
-                                        </span>
-                                        <input class="form-control" type="text" placeholder="Username" name="username"
-                                            id="username">
-                                    </div>
-                                    <div class="input-group mb-4">
-                                        <span class="input-group-text">
-                                            <svg class="icon">
-                                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked">
+                                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open">
                                                 </use>
                                             </svg>
                                         </span>
-                                        <input class="form-control" type="password" placeholder="Password"
-                                            name="password" id="password">
+                                        <input class="form-control" type="email" placeholder="Correo Electrónico" name="email"
+                                            id="email">
+                                        <span id="email-error" style="color: red;"></span>
                                     </div>
                                     <div class="row">
                                         <div class="col-6">
-                                            <button class="btn btn-primary px-4" type="submit">Acceder</button>
+                                            <button class="btn btn-primary px-4" type="submit">Enviar</button>
                                         </div>
                                         <div class="col-6 text-end">
-                                        <a href="olvido_contrasena.php" class="btn btn-link px-0">¿Olvidó contraseña?</a>
+                                            <a href="#" class="btn btn-link px-0"
+                                                onclick="mostrarFormulario()">Volver</a>
                                         </div>
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                     </div>
@@ -107,12 +76,7 @@
             </div>
         </div>
     </div>
-    <!-- CoreUI and necessary plugins-->
-    <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-    <script src="vendors/simplebar/js/simplebar.min.js"></script>
-    <script>
-    </script>
-
 </body>
 
 </html>
+

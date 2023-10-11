@@ -92,7 +92,7 @@
                       <select class="form-select tres-validate-1" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
-                     </div> 
+                     </div>
                    <div class="col-md-3">
                         <label for="inputZip" class="form-label">Contraseña:</label>
                         <input type="password" class="form-control tres-validate-1" id="contraC" name="contraC">
@@ -105,7 +105,7 @@
                         <input type="password" class="form-control tres-validate-1" id="contraC1" name="contraC1">
                         <div id="error2"></div>
                       </div>
-                    </div>      
+                    </div>
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />
