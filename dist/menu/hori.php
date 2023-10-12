@@ -123,17 +123,17 @@
       </a>
       <div class="dropdown-menu dropdown-menu-end pt-0">
         <div class="dropdown-header bg-light py-2">
-          <div class="fw-semibold">Ajustes</div>
+          <div class="fw-semibold">BIENVENIDO</div>
         </div><a class="dropdown-item" href="#">
           <svg class="icon me-2">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-          </svg> Perfil</a><a class="dropdown-item" href="#">
+          </svg><?php echo $_SESSION['username'];?></a><a class="dropdown-item" href="#">
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="">
           <svg class="icon me-2">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
           </svg> Bloquear</a>
-          <a class="dropdown-item" href="Acceso.php">
+          <a class="dropdown-item" href="cerrar.php">
           <svg class="icon me-2">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
           </svg> Cerrar Sesión</a>
