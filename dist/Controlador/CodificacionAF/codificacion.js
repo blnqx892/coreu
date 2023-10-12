@@ -34,7 +34,6 @@ $(document).ready(function () {
         formData.append("id_asignacion",id_asignacion);
         formData.append("nombreC",usuariosA);
 
-  
         $.ajax({
           url: "Controlador/CodificacionAF/insertCOA.php",
           type: "post",
@@ -50,11 +49,8 @@ $(document).ready(function () {
                 title: data.title,
                 text: data.mensaje,
               });
-               
-             
-               $("#form")[0].reset();
-              
-  
+              $("input").val(null);
+              $("select").val('Elegir Jefe');
             } else {
               //alert("Formato de imagen incorrecto.");
             }

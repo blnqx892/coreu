@@ -14,7 +14,6 @@
       <?php include("menu/hori.php");?>
       <!-- ////////////////////////-->
       <div class="header-divider"></div>
-      
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
@@ -41,7 +40,7 @@
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-                <input type="hidden" id="jefe_id" name="jefe_id" value="<?php echo $_GET['id_jefe'] ?? ''; ?>" >
+                <input type="hidden" id="jefe_id" name="jefe_id" value="<?php echo $_POST['id_jefe'] ?? ''; ?>" >
               <div class="card-header"><strong>Asignación de Activo</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
@@ -56,33 +55,34 @@
                   <!--FIN-->
                   <div class="row  my-4">
                     <div class="col-md-4">
-                    <input type="hidden" value="<?php echo $_GET['codigo'] ?? ''; ?>" id="codigo_institucional">
-                     <input type="hidden" class="form-control" id="_id" value="<?php echo $_GET['a']??'';?>">
-                     <input type="hidden" class="form-control" id="id_asignacion" value="<?php echo $_GET['id_asignacion_activos']??'';?>">
+                      
+                    <input type="hidden" value="<?php echo $_POST['codigo_id_txt'] ?? ''; ?>" id="codigo_institucional">
+                     <input type="hidden" class="form-control" id="_id" value="<?php echo ($_POST['ingreso_entrada_id']?? FALSE) ? $_POST['ingreso_entrada_id'] :  $_GET['a'];?>">
+                     <input type="hidden" class="form-control" id="id_asignacion" value="<?php echo $_POST['codigo_id_id']??'';?>">
                       <label class="form-label" for="validationCustom02">Descripción del bien:</label>
-                      <input class="form-control" id="nombreA" type="text" required=""  value="<?php echo $_GET['descripcion'] ?? '';?>"  disabled>
+                      <input class="form-control" id="nombreA" type="text" required=""  value="<?php echo $_POST['nombre_adquisicion'] ?? '';?>"  disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Marca:</label>
-                      <input type="text" class="form-control" id="marcaA" value="<?php echo $_GET['marca'] ?? '';?>" name="marcaC" required="" disabled>
+                      <input type="text" class="form-control" id="marcaA" value="<?php echo $_POST['marca'] ?? '';?>" name="marcaC" required="" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Color:</label>
-                      <input type="text" class="form-control" id="colorA" value="<?php echo $_GET['color'] ?? '';?>" name="colorC" required="" disabled>
+                      <input type="text" class="form-control" id="colorA" value="<?php echo $_POST['color'] ?? '';?>" name="colorC" required="" disabled>
                     </div>
                   </div>
                   <div class="row  my-4">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Serie:</label>
-                      <input type="text" class="form-control" id="serieA" name="serieC" required="" value="<?php echo $_GET['serie'] ?? '';?>" disabled>
+                      <input type="text" class="form-control" id="serieA" name="serieC" required="" value="<?php echo $_POST['serie'] ?? '';?>" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Categoria: </label>
-                      <input type="text" class="form-control" id="categoriaC" name="categoriaC" required="" value="<?php echo $_GET['categoria'] ?? '';?>" disabled>
+                      <input type="text" class="form-control" id="categoriaC" name="categoriaC" required="" value="<?php echo $_POST['categoria'] ?? '';?>" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom05">Modelo</label>
-                      <input class="form-control" id="modeloA" name="modeloA" type="text" required="" value="<?php echo $_GET['modelo'] ?? '';?>" disabled>
+                      <input class="form-control" id="modeloA" name="modeloA" type="text" required="" value="<?php echo $_POST['modelo'] ?? '';?>" disabled>
                       
                     </div>
                   </div>
@@ -104,15 +104,15 @@
                       <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Codigo:</label>
                         <div class="input-group mb-2">
-                          <input id="codigoB-1" type="text text-right" class="form-control" placeholder="00" aria-label="Username">
-                          <input id="codigoB-2" type="text" class="form-control" placeholder="-000-00-00-" <?php echo (!($_GET['a'] ?? false) && 'disabled');?> aria-label="Username">
-                          <input id="codigoB-3" type="text" class="form-control" placeholder="00" aria-label="Server">
+                          <input id="codigoB-1" type="text text-right" class="form-control" max="2" placeholder="00" aria-label="Username">
+                          <input id="codigoB-2" type="text" class="form-control" max="11" placeholder="-000-00-00-" <?php echo ($_POST['ingreso_entrada_id']??FALSE) ? 'disabled': '';?> aria-label="Username">
+                          <input id="codigoB-3" type="text" class="form-control" max="3" placeholder="000" aria-label="Server">
                         </div>
                       </div>
                     <div class="row  my-4">
                       <div class="col-md-4">
                         <label class="form-label" for="validationCustom02">Encargado del Bien:</label>
-                        <input class="form-control" id="encargadoA" type="text" required=""  value="<?php echo $_GET['encargado'] ?? '';?>" >
+                        <input class="form-control" id="encargadoA" type="text" required=""  value="<?php echo $_POST['encargado'] ?? '';?>" >
                       </div>
                     </div>
                   </div>
@@ -158,6 +158,7 @@
           $("#codigoB-3").mask('000').val(codigo[9]+codigo[10]+codigo[11]);
         }
       
+      //  function validarUndefined()
       });
    
     </script>

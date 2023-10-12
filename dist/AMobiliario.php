@@ -43,13 +43,13 @@
               <div class="card-header"><strong>Ingreso de Mobiliarios</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form id="formmo" class="g-3 needs-validation" role="form" action="" method="POST" autocomplete="off">
+                <form id="formmo" class="g-3 needs-validation"  action="" method="POST" autocomplete="off">
                   <input type="hidden" value="Guardar" name="bandera">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom01">Fecha:</label>
-                      <input class="form-control"  id="fecham" type="date" required="">
+                      <input class="form-control dos-validate-1 "  id="fecham" type="date" required="">
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
@@ -57,32 +57,34 @@
                   <div class="row  my-4">
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Nombre del Bien:</label>
-                      <input type="text" class="form-control" id="nomm" placeholder="">
+                      <input type="text" class="form-control dos-validate-1" id="nomm" placeholder="">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Modelo:</label>
-                      <input type="text" class="form-control" id="modelm" placeholder="">
+                      <input type="text" class="form-control dos-validate-1" id="modelm" placeholder="">
                     </div>
                     <div class="col-md-4">
                       <label for="inputZip" class="form-label">Valor de Adquisición:</label>
-                      <input type="number" class="form-control" id="valom">
+                      <input type="number" class="form-control dos-validate-1" id="valom">
                     </div>
                   </div>
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
                     <div class="col-md-6">
                       <label for="inputZip" class="form-label">Descripción:</label>
-                      <textarea class="form-control" id="descrim" required="" row="3">
+                      <textarea class="form-control dos-validate-1" id="descrim"  row="3">
                       </textarea>
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
                   <div class="col-15" align="right">
                     <hr style="color: black; background-color: black; width:100%;" />
-                    <button class="btn btn-success" type="submit" id="GuardaMobiliario" name="btnGuardar">Guardar <i
+                    <button class="btn btn-success" type="submit" id="GuardaMobiliario" 
+                         name="btnGuardar">Guardar <i
                         class='far fa-check-square'></i>
                     </button>
-                    <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i>
+                    <button class="btn btn-secondary" type="reset">Cancelar <i 
+                            class='far fa-times-circle'></i>
                     </button>
                   </div>
                 </form>
@@ -103,6 +105,20 @@
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+<!-- para que muestre la alerta -->
+       <div class="toast-container position-fixed end-0 p-3">
+            <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <div class="rounded me-2"></div>
+                    <strong class="me-auto" id="toast_title">Acción exitosa</strong>
+                    <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body" id="toast_body">
+                    Registro guardado
+                </div>
+            </div>
+        </div>
+<!-- fin de que muestre la alerta -->
   </div>
 </body>
 

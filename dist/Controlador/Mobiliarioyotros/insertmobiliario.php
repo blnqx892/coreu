@@ -10,10 +10,11 @@ $conexion = con();
     
 
     $sql = "INSERT INTO mobiliario_otros (fecha,nombre,modelo,valor,descripcion) VALUES 
-    ('$fechaM''$nombreM','$modeloM','$valorM','$descriM')";
+    ('$fechaM','$nombreM','$modeloM','$valorM','$descriM')";
 
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
+    //var_dump(mysqli_query($conexion, $sql));
     //echo "Los datos se han insertado correctamente";
     $json = array();
             if ($resultado) {
@@ -26,7 +27,7 @@ $conexion = con();
             } else {
                 $json[] = array(
                     'title' => "Error",
-                    'mensaje'=>"Surgió un error!"
+                    'mensaje'=> mysqli_error($conexion)
                   );
             }
            $jsonstring = json_encode($json[0]);

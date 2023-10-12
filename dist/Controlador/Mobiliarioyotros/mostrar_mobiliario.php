@@ -18,9 +18,12 @@ $con = con();
 
   while($row = mysqli_fetch_array($result)) {
     $i++;
+    $fechaMySQL = $row['fecha'];
+    $timestamp = strtotime($fechaMySQL);
+    $fechaFormateada = date("d-m-Y", $timestamp);
     $json[] = array(
       'id'    => $row['id'],
-      'fecha' => $row['fecha'],
+      'fecha' => $fechaFormateada,
       'nombre'=> $row['nombre'],
       'modelo'=> $row['modelo'],
       'valor' => $row['valor'],

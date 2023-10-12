@@ -52,10 +52,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg> Depreciación</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="DepreciacionActivo.php"><span class="nav-icon"></span> Pagina
-            1</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina
-            2</a></li>
+        <li class="nav-item"><a class="nav-link" href="DepreciacionActivo.php"><span class="nav-icon"></span>Depreciación fija</a></li>
       </ul>
     </li>
     <!--
@@ -112,8 +109,8 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg> Unidad y Restricción</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="ACredenciales.php"><span class="nav-icon"></span> Credenciales</a></li>
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Restricciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="ACredenciales.php"><span class="nav-icon"></span> Unidades </a></li>
+
       </ul>
     </li>
     <!--
