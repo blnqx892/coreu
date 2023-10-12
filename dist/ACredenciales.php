@@ -54,7 +54,7 @@
                   <thead>
                     <tr>
                       <th style="text-align:center;">N°</th>
-                      <th style="text-align:center;">Unidad</th>
+                      <th style="text-align:center;">Nombre Unidad</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
@@ -63,7 +63,7 @@
                   <tfoot>
                     <tr>
                        <th style="text-align:center;">N°</th>
-                      <th style="text-align:center;">Unidad</th>
+                      <th style="text-align:center;">Nombre Unidad</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>

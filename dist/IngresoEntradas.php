@@ -48,7 +48,7 @@
                                     <input type="hidden" value="Guardar" name="bandera">
                                     <!--INICIO SECCION FECHA-->
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <?php
                        $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
                       ?>
@@ -133,11 +133,11 @@
                                                 <input type="number" class="form-control" id="vidaAnio" name="vidaAnio"
                                                     disabled>
                                             </div>
-                                            <div class="col-md-4" style="display:">
+                                            <div class="col-md-4" style="display:none">
                                                 <label for="inputZip" class="form-label">Valor Rescate:</label>
                                                 <input type="number" class="form-control" id="vidaC" name="vidaC">
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <label class="form-label" for="validationCustom04">Categoria</label>
                                                 <select class="form-select mi-validate-1" required id="categoria_id"
                                                     name="cateC">
@@ -221,7 +221,7 @@
                             <div class="modal-body">
                                 <div class="col-md-6">
                                     <label for="inputCity" class="form-label">Nombre:</label>
-                                    <input type="text" class="form-control mi-validate-2" id="nombreProv"
+                                    <input type="text" class="form-control cuatro-validate-1" id="nombreProv"
                                         name="nombreProv">
                                 </div>
                             </div>
@@ -248,6 +248,7 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
+                             <div class="row my-4">
                                 <div class="col-md-6">
                                     <label for="inputCity" class="form-label">Nombre:</label>
                                     <input type="text" class="form-control" id="nombreCate" name="nombreCate">
@@ -255,6 +256,7 @@
                                 <div class="col-md-6">
                                     <label for="inputCity" class="form-label">Vida Util:</label>
                                     <input type="number" class="form-control" id="vidaUtil" name="vidaUtil">
+                                </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
