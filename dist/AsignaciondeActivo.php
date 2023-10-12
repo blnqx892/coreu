@@ -1,3 +1,7 @@
+<?php // Iniciamos la sesión
+session_start();
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
@@ -55,7 +59,7 @@
                   <!--FIN-->
                   <div class="row  my-4">
                     <div class="col-md-4">
-                      
+
                     <input type="hidden" value="<?php echo $_POST['codigo_id_txt'] ?? ''; ?>" id="codigo_institucional">
                      <input type="hidden" class="form-control" id="_id" value="<?php echo ($_POST['ingreso_entrada_id']?? FALSE) ? $_POST['ingreso_entrada_id'] :  $_GET['a'];?>">
                      <input type="hidden" class="form-control" id="id_asignacion" value="<?php echo $_POST['codigo_id_id']??'';?>">
@@ -83,7 +87,7 @@
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom05">Modelo</label>
                       <input class="form-control" id="modeloA" name="modeloA" type="text" required="" value="<?php echo $_POST['modelo'] ?? '';?>" disabled>
-                      
+
                     </div>
                   </div>
                   <hr style="color: black; background-color: black; width:100%;" />
@@ -144,23 +148,23 @@
     <script>
       $(document).ready(function () {
         // $(":input").inputmask();
-        
-        
+
+
         const codigo = $("#codigo_institucional").val()
         $("#codigoA").mask('00-000-00-00-000');
         $("#codigoB-1").mask('00');
         $("#codigoB-2").mask('-000-00-00-');
         $("#codigoB-3").mask('000');
-        
+
         if((codigo ?? false) && codigo.trim()!==''){
           $("#codigoB-1").mask('00').val(codigo[0]+codigo[1]);
           $("#codigoB-2").mask('-000-00-00-').val('-'+codigo[2]+codigo[3]+codigo[4]+'-'+codigo[5]+codigo[6]+'-'+codigo[7]+codigo[8]+'-');
           $("#codigoB-3").mask('000').val(codigo[9]+codigo[10]+codigo[11]);
         }
-      
+
       //  function validarUndefined()
       });
-   
+
     </script>
 
     <!-- IMPORTAR ARCHIVO FOOTER-->
@@ -171,3 +175,21 @@
 </body>
 
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>

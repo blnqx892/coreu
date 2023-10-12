@@ -1,3 +1,7 @@
+<?php // Iniciamos la sesión
+session_start();
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
@@ -56,13 +60,13 @@
                       <td>Tiger Nixon</td>
                       <td>12:00 / 2011-04-25</td>
                       <td>Edinburgh</td>
-                      
+
                     </tr>
                     <tr>
                       <td>Garrett Winters</td>
                       <td>16:20 / 2011-07-25</td>
                       <td>Accountant</td>
-                      
+
                     </tr>
                   </tbody>
                   <tfoot>
@@ -91,3 +95,21 @@
 </body>
 
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>

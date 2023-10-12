@@ -1,3 +1,7 @@
+<?php // Iniciamos la sesión
+session_start();
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
@@ -71,7 +75,7 @@
                       <!--INICIO SECCION CUATRO-->
                       <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Rol</label>
-                      <select class="form-select tres-validate-1" id="rolC" name="rolCU" 
+                      <select class="form-select tres-validate-1" id="rolC" name="rolCU"
                       data-placeholder="Seleccione El Rol">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
@@ -125,7 +129,7 @@
     <script src="./Controlador/Usuarios/usuario.js"></script>
     <script src="./Controlador/Usuarios/mostrarroles.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js"></script>
-    
+
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
@@ -161,3 +165,21 @@
 </body>
 
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>

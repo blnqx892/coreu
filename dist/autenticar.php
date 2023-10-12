@@ -1,40 +1,38 @@
 <?php
-// Verifica si se han enviado datos de inicio de sesión
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Conexión a la base de datos
-    $conexion =mysqli_connect("localhost", "root", "", "sicafi");
+include("Confi/conexion.php");
 
-    if (!$conexion) {
-        die("Error de conexión: " . mysqli_connect_error());
+$conexion = con();
+session_start();
+
+$usuario = (isset($_POST['username'])) ? $_POST['username'] : '';
+$contra = (isset($_POST['password'])) ? $_POST['password'] : '';
+
+$sql="SELECT * FROM usuarios WHERE usuario='$usuario'";
+$consulta=mysqli_query($conexion,$sql) or die ("ERROR AL CONECTAR CON LA BASE DE DATOS ".mysqli_connect_error());
+if ($row=mysqli_fetch_assoc($consulta)) {
+    $md5=$row['contrasena'];
+    if (password_verify($contra,$md5)) {
+        $_SESSION['usuarioActivo']=$row;
+        echo"
+        <script language='javascript'>
+        alert('BIENVENIDO')
+        type: 'danger'
+        window.location='index.php'
+        </script>";
+    }else {
+        echo"
+        <script language='javascript'>
+        alert('USUARIO O CONTRASEÑA INCORRECTA, VUELVE A INTENTARLO')
+        type: 'danger'
+        window.location='Acceso.php'
+        </script>"; 
     }
-
-    // Obtener los valores del formulario
-    $usuario = $_POST['username'];
-    $contrasena = $_POST['password'];
-
-    // Consulta SQL para verificar las credenciales
-    $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND contrasena = '$contrasena'";
-    $resultado = mysqli_query($conexion, $sql);
-
-    if ($resultado) {
-      
-        // Verificar si se encontró una coincidencia
-        if (mysqli_num_rows($resultado) == 1) {
-            // Las credenciales son correctas, permitir el acceso
-            session_start();
-            $_SESSION['username'] = $usuario; // Iniciar sesión con el nombre de usuario
-            header("Location: index.php"); // Redirigir al panel de control
-            exit();
-        } else {
-            // Las credenciales son incorrectas, mostrar un mensaje de error
-            echo "Nombre de usuario o contraseña incorrectos.";
-        }
-    } else {
-        // Error en la consulta SQL
-        echo "Error en la consulta: " . mysqli_error($conexion);
-    }
-
-    // Cerrar la conexión a la base de datos
-    mysqli_close($conexion);
+}else {
+    echo"
+    <script language='javascript'>
+    alert('EL USUARIO NO ESTA REGISTRADO')
+    type: 'danger'
+    window.location='Acceso.php'
+    </script>";
 }
 ?>

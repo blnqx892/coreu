@@ -69,9 +69,9 @@
                                 <center>
                                     <h1>BIENVENIDO A SICAFI</h1>
                                 </center>
-                                <p class="text-medium-emphasis">Inicie Sesión</p>
+                                <p class="text-medium-emphasis">Iniciar Sesión</p>
                                 <form action="autenticar.php" method="post">
-                                    <div class="input-group mb-3">
+                                    <div class="input-group mb-4">
                                         <span class="input-group-text">
                                             <svg class="icon">
                                                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
@@ -99,7 +99,6 @@
                                         </div>
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                     </div>

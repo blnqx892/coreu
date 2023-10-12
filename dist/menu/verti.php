@@ -5,6 +5,7 @@
   </div>
   <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
     <!--separador-->
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-title">ACTIVO FIJO</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
@@ -65,6 +66,8 @@
       </ul>
     </li>-->
     <!--separador-->
+    <?php } ?>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-title">ALMACÉN</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
@@ -123,6 +126,8 @@
       </ul>
     </li>-->
     <!--separador-->
+    <?php } ?>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-title">REQUISICIÓN</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
@@ -141,7 +146,9 @@
       </ul>
     </li>
     <!--separador-->
-    <li class="nav-title">AUCI</li>
+    <?php } ?>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
+    <li class="nav-title">UNIDAD DE COMPRAS</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
@@ -159,6 +166,8 @@
       </ul>
     </li>
     <!--separador-->
+    <?php } ?>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 6 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-title">SEGURIDAD</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
@@ -202,6 +211,7 @@
         <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 1</a></li>
       </ul>
     </li>
+    <?php } ?>
   </ul>
   <button class="sidebar-toggler" type="button" ></button>
 </div>

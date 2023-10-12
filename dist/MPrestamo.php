@@ -1,12 +1,12 @@
+<?php // Iniciamos la sesión
+session_start(); 
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
-<?php include("head/head.php"); 
-  
-?>
+<?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
-
-
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
   <?php include("menu/verti.php"); ?>
@@ -176,3 +176,21 @@
   </div>
 </body>
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>
