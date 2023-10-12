@@ -148,7 +148,7 @@
     <!--separador-->
     <?php } ?>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
-    <li class="nav-title">AUCI</li>
+    <li class="nav-title">UNIDAD DE COMPRAS</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
