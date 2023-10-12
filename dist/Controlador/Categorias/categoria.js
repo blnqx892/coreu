@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+  const toast = new coreui.Toast(document.getElementById('liveToast'));
     combo();
 
     function combo() {

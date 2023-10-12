@@ -58,7 +58,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <thead>
                     <tr>
                       <th style="text-align:center;">N°</th>
-                      <th style="text-align:center;">Unidad</th>
+                      <th style="text-align:center;">Nombre Unidad</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
@@ -67,7 +67,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <tfoot>
                     <tr>
                        <th style="text-align:center;">N°</th>
-                      <th style="text-align:center;">Unidad</th>
+                      <th style="text-align:center;">Nombre Unidad</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>

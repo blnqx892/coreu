@@ -12,10 +12,7 @@ $(document).ready(function () {
       let modeloM = $("#modelm").val();
       let valorM = $("#valom").val();
       let descriM = $("#descrim").val();
-     
-      
-    
-  
+
      // if ( $("#fecham").val() == "" || $("#nomm").val() == "" || $("#modelm").val() == "" ||
      //   $("#valom").val() == "" ||$("#descrim").val() == "") {
      //     Swal.fire({
@@ -76,7 +73,7 @@ if (validation(1)) {
 // Validación de requeridos
    $(".dos-validate-" + index).each(function (k, v) {
     console.log(v);
-    if ($(v).val() != null && $(v).val() !== undefined && $(v).val() !== '') {
+    if ($(v).val().length == 0 && $(v).val != null && $(v).val() !== undefined && $(v).val() !== '') {
       $(v).removeClass('is-invalid').addClass('is-valid');
       $(v).parent().find('.msg-error').remove();
     } else {
