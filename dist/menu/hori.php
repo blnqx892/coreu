@@ -10,6 +10,7 @@
     </svg></a>
   <!-- Lógica para notificaciones -->
   <?php
+  $usuario = $_SESSION['usuarioActivo'];
     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
     $sql_suministros = "select * from ingreso_suministros";
     $suministros = mysqli_query($conexion, $sql_suministros);
@@ -127,7 +128,7 @@
         </div><a class="dropdown-item" href="#">
           <svg class="icon me-2">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-          </svg><?php echo $_SESSION['username'];?></a><a class="dropdown-item" href="#">
+          </svg><?php echo $usuario['nombre'] . ' ' . $usuario['apellido'];;?></a><a class="dropdown-item" href="#">
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="">
           <svg class="icon me-2">

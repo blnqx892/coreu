@@ -1,3 +1,7 @@
+<?php // Iniciamos la sesión
+session_start();
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
@@ -42,7 +46,7 @@
             <div class="card mb-4">
               <div class="card-header"><strong>Actualizacion Usuarios</strong></div>
               <div class="card-body">
-                
+
                 <!-- dataTable-->
                 <table id="miTablaUsuarios" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
@@ -56,7 +60,7 @@
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
-                    
+
 <!--MODAL VER USUARIO ------------------------------------------------------------------------>
  <!-- Modal -->
 <div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -214,3 +218,21 @@
 </body>
 
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>

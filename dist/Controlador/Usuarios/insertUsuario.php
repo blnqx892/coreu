@@ -9,12 +9,11 @@ $conexion = con();
     $per = $_POST["per"];
     $uni = $_POST["unid"];
     $email = $_POST["email"];
-    $contra= $_POST["contra"];
-
-    
+    ///ALGORITMO DE ENCRIPTACION BLOWFISH, METODO PASSWORD_HASH
+    $contra=password_hash($_POST["contra"],PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,permisos,fk_unidades,fk_rol) VALUES
-     ('$nombre','$apellido','$usuario','$email',md5('$contra'),'$per','$uni','$rol')";
+     ('$nombre','$apellido','$usuario','$email','$contra','$per','$uni','$rol')";
 
     // Ejecutar la consulta SQL
     

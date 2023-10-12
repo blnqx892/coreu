@@ -1,3 +1,7 @@
+<?php // Iniciamos la sesión
+session_start();
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
@@ -101,7 +105,7 @@
                       <svg id="barcode" width="100%"></svg>
                     </div>
                   </div>
-                 
+
                   <div class="row  my-4">
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label"></label>
@@ -140,11 +144,11 @@
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
-                  
+
                   <div class="col-15" align="right">
                     <hr style="color: black; background-color: black; width:100%;" />
                     <a class="btn btn-secondary" href="TablaSumi.php">Cancelar <i class='far fa-times-circle'></i></a>
-                    <button class="btn btn-success " type="button" id="save_record">Guardar <i class='far fa-check-square'></i></button>            
+                    <button class="btn btn-success " type="button" id="save_record">Guardar <i class='far fa-check-square'></i></button>
                   </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
@@ -241,3 +245,21 @@
 </body>
 
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>

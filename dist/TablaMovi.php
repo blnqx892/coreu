@@ -1,3 +1,7 @@
+<?php // Iniciamos la sesión
+session_start(); 
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
@@ -17,7 +21,7 @@
       <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
-          <li class="breadcrumb-item">
+            <li class="breadcrumb-item">
               <a href="index.php"><svg class="icon me-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home">
                   </use>
@@ -51,7 +55,7 @@
                       <th style="text-align:center;">Codigo del Bien</th>
                       <th style="text-align:center;">Descripción del bien</th>
                       <th style="text-align:center;">Tipo de Movimiento</th>
-                      <th style="text-align:center;">Tipo de Registro</th>                 
+                      <th style="text-align:center;">Tipo de Registro</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
@@ -59,13 +63,13 @@
                   </tbody>
                   <tfoot>
                     <tr>
-                    <th style="text-align:center;">N°</th>
-                    <th style="text-align:center;">Fecha</th>
-                    <th style="text-align:center;">Codigo del Bien</th>
-                    <th style="text-align:center;">Descripción del bien</th>
-                    <th style="text-align:center;">Tipo de Movimiento</th>
-                    <th style="text-align:center;">Tipo de Registro</th>
-                    <th style="text-align:center;">Acción</th>
+                      <th style="text-align:center;">N°</th>
+                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;">Codigo del Bien</th>
+                      <th style="text-align:center;">Descripción del bien</th>
+                      <th style="text-align:center;">Tipo de Movimiento</th>
+                      <th style="text-align:center;">Tipo de Registro</th>
+                      <th style="text-align:center;">Acción</th>
                     </tr>
                   </tfoot>
                 </table>
@@ -88,3 +92,21 @@
 </body>
 
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>

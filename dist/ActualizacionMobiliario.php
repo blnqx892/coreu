@@ -1,3 +1,7 @@
+<?php // Iniciamos la sesión
+session_start();
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
@@ -67,7 +71,7 @@
                       <th style="text-align:center;">Estado</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
-                  </tfoot>  
+                  </tfoot>
                 </table>
                 <!-- //dataTable-->
               </div>
@@ -93,7 +97,7 @@
               <input type="text" class="form-control" id="fecham" disabled>
             </div>
             <div class="col-md-4">
-         
+
               <label for="inputZip" class="form-label">Nombre del Bien:</label>
               <input type="text" class="form-control" id="nombrem" disabled>
             </div>
@@ -170,7 +174,7 @@
     </div>
   </div>
 </div>
-      
+
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
     <script src="./Controlador/Mobiliarioyotros/mostrarmobi.js"></script>
@@ -184,3 +188,21 @@
 </body>
 
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>

@@ -1,3 +1,7 @@
+<?php // Iniciamos la sesión
+session_start();
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
@@ -94,11 +98,11 @@
                   <label for="inputZip" class="form-label">Nombre Unidad:</label>
                   <input type="text" class="form-control" id="nombreUnid">
                 </div>
-          </div>               
+          </div>
           <div class="modal-footer">
            <button type="submit" id="GuardaUnidades" class="btn btn-primary">Guardar</button>
             <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
-            
+
           </div>
         </div>
       </form>
@@ -123,10 +127,10 @@
                   <label for="inputZip" class="form-label">Nombre Unidad:</label>
                   <input type="text" class="form-control" id="nombreveruni" disabled>
                 </div>
-          </div>               
+          </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
-            
+
           </div>
         </div>
       </form>
@@ -152,11 +156,11 @@
                   <label for="inputZip" class="form-label">Nombre Unidad:</label>
                   <input type="text" class="form-control" id="nombreediuni" >
                 </div>
-          </div>               
+          </div>
           <div class="modal-footer">
           <button class="btn btn-success" type="submit" id="editunid" name="btnGuardar" >Guardar</button>
             <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
-            
+
           </div>
         </div>
       </form>
@@ -176,3 +180,21 @@
 </body>
 
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>
