@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <title>Reporte de ventas</title>
+  <title>Reportes Unidad de Activo</title>
 </head>
 <body>
-  <header>
-    <h1>Reporte de ventas</h1>
-    <p>Fecha de creación: 2023-08-02</p>
-    <p>Empresa: Mi empresa</p>
-  </header>
-  <body>
-    <table>
-      <thead>
-        <tr>
-          <th>Producto</th>
-          <th>Cantidad</th>
-          <th>Precio</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Producto 1</td>
-          <td>10</td>
-          <td>$100</td>
-          <td>$1000</td>
-        </tr>
-        <tr>
-          <td>Producto 2</td>
-          <td>20</td>
-          <td>$200</td>
-          <td>$4000</td>
-        </tr>
-      </tbody>
-    </table>
+  <body><br><br>
+  <table border="0" align="center">
+  <thead>
+    <tr>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody style="color:#00000;font-size:135%;">
+    <tr>
+      <td><b>Codigo:</b></td>
+      <td>023984949593</td>
+    </tr>
+    <tr>
+      <td><b>Descripción: </b></td>
+      <td>es un bien</td>
+    </tr>
+    <tr>
+      <td><b>Marca: </b></td>
+      <td>hola</td>
+      <td><b>Modelo: </b></td>
+      <td>modelo uno</td>
+    </tr>
+    <tr>
+      <td><b>Serie: </b></td>
+      <td>se123</td>
+      <td><b>Color: </b></td>
+      <td>verde</td>
+    </tr>
+    <tr>
+      <td><b>Proveedor: </b></td>
+      <td>un fulano</td>
+    </tr>
+    <tr>
+      <td><b>No. Factura: </b></td>
+      <td>factu4567</td>
+    </tr>
+    <tr>
+      <td><b>Ubicación: </b></td>
+      <td>en algun lugar</td>
+    </tr>
+    <tr>
+      <td><b>Jefe Responsable: </b></td>
+      <td>nombre jefe</td>
+    </tr>
+    <tr>
+      <td><b>Fecha Adquisición: </b></td>
+      <td>12/12/2023</td>
+    </tr>
+    <tr>
+      <td><b>Costos Adquisición: </b></td>
+      <td>$1000</td>
+    </tr>
+  </tbody>
+</table>
+
   </body>
-  <footer>
+  <footer align="right">
     <p>Número de páginas: 1</p>
-    <p>Contacto: info@miempresa.com</p>
   </footer>
 </body>
 </html>
