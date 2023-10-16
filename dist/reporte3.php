@@ -3,20 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-
-  <script language="javascript">
-    function imprimir() {
-      if (!window.print) {
-        alert("El navegador no permite la impresion..");
-        return;
-      } else {
-        document.frmTesis.IM.style.visibility = "hidden";
-        window.print();
-        document.frmTesis.IM.style.visibility = "visible";
-      }
-    }
-
-  </script>
+  <link rel="stylesheet" href="css/reportesRetiroInsumos.css" />
 </head>
 
 <body>
@@ -50,8 +37,8 @@
       </tr>
     </tbody>
   </table><br>
-
-  <table border="1" align="center" width="950">
+<div class="position_table">
+  <table border="1" class="table_informacion">
     <thead>
       <tr>
         <th>NÚMERO</th>
@@ -77,6 +64,7 @@
     </tr>
     </tbody>
   </table>
+  </div>
   <table frame="box" align="center" width="950">
     <thead>
       <tr>
@@ -122,3 +110,17 @@
 </body>
 
 </html>
+
+<script language="javascript">
+    function imprimir() {
+      if (!window.print) {
+        alert("El navegador no permite la impresion..");
+        return;
+      } else {
+        document.frmTesis.IM.style.visibility = "hidden";
+        window.print();
+        document.frmTesis.IM.style.visibility = "visible";
+      }
+    }
+
+  </script>

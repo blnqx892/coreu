@@ -1,0 +1,9 @@
+.position_table{
+  display: flex;
+  justify-content: center;
+}
+.table_informacion{
+  width: 950px;
+  border-collapse: collapse;
+  text-align: center;
+}
