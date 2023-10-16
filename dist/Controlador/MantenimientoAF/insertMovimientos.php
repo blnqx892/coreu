@@ -3,30 +3,25 @@ include("../../Confi/conexion.php");
 $conexion = con();
 
    $fechaM               = $_POST["fechaMovimiento"];
-   $observacionM         = $_POST["observa"];
-   $tipoM                = $_POST["tipomovi"];
-   $fk_asignacion_activo = $_POST["_id_asigna"];
-   $fk_unidades          = $_POST["nombre_u"];
+   $observacionM         = $_POST["observa"] ;
+   $tipoMovimiento       = $_POST["tipomovi"] ;
+   $fk_asignacion_activo = $_POST["_id_asigna"] ?? 'null';
+   $fk_unidades          = $_POST["nombre_u"] ?? 'null';
 
-
+   $tipoRegistro         = $_POST["tiporegis"] ?? null;
    
-   $sql = "INSERT INTO mantenimiento_activos (
-    fecha_movimiento,
-    observaciones,
-    tipo_movimiento,
-    tipo_registro,
-    fk_asignacion_activo,
-    fk_unidades) VALUES  (
+   $sql = "call INSERT_MANTENIMIENTO_DESCARGO(
     '$fechaM',
     '$observacionM',
-    '$tipoM',
-    'mantenimiento',
-    '$fk_asignacion_activo',
-    '$fk_unidades'
-    )";
-  
+    '$tipoMovimiento',
+    '$tipoRegistro',
+    $fk_asignacion_activo,
+    $fk_unidades
+   );";
+echo $sql;
     // Ejecutar la consulta SQL
-    $resultado    = mysqli_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
+    
     //echo "Los datos se han insertado correctamente";
     $json = array();
             if ($resultado) {

@@ -146,7 +146,7 @@
       </ul>
     </li>
     <!--separador-->
-    <?php } ?>
+    <?php } ?> 
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-title">UNIDAD DE COMPRAS</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">

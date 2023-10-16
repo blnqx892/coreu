@@ -5,7 +5,7 @@ include("../../Confi/conexion.php");
 $con = con();
 
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
- $sql=;
+
 
 
   $result = mysqli_query($conexion, $sql);
