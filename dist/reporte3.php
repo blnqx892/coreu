@@ -52,121 +52,18 @@
                 </tr>
             </thead>
             <tbody style="color:#00000;font-size:135%;">
-                <!-- JavaScript para iterar y crear filas de la tabla -->
-                <script>
-                let suministros = [{
-                        "id": 1,
-                        "código": "PS1001",
-                        "unidad_medida": "Unidad",
-                        "descripción_material_insumo": "Lápices HB",
-                        "cantidad_solicitada": 100,
-                        "cantidad_despachada": 100,
-                        "precio_unitario": 0.50,
-                        "costo_total": 50.00
-                    },
-                    {
-                        "id": 2,
-                        "código": "ES2002",
-                        "unidad_medida": "Caja",
-                        "descripción_material_insumo": "Resmas de papel A4",
-                        "cantidad_solicitada": 20,
-                        "cantidad_despachada": 20,
-                        "precio_unitario": 5.00,
-                        "costo_total": 100.00
-                    },
-                    {
-                        "id": 3,
-                        "código": "MG3003",
-                        "unidad_medida": "Unidad",
-                        "descripción_material_insumo": "Bolígrafos negros",
-                        "cantidad_solicitada": 50,
-                        "cantidad_despachada": 50,
-                        "precio_unitario": 0.75,
-                        "costo_total": 37.50
-                    },
-                    {
-                        "id": 4,
-                        "código": "NC4004",
-                        "unidad_medida": "Caja",
-                        "descripción_material_insumo": "Cuadernos",
-                        "cantidad_solicitada": 10,
-                        "cantidad_despachada": 10,
-                        "precio_unitario": 4.50,
-                        "costo_total": 45.00
-                    },
-                    {
-                        "id": 5,
-                        "código": "TP5005",
-                        "unidad_medida": "Unidad",
-                        "descripción_material_insumo": "Tijeras de oficina",
-                        "cantidad_solicitada": 30,
-                        "cantidad_despachada": 30,
-                        "precio_unitario": 1.25,
-                        "costo_total": 37.50
-                    },
-                    {
-                        "id": 6,
-                        "código": "RG6006",
-                        "unidad_medida": "Caja",
-                        "descripción_material_insumo": "Reglas de plástico",
-                        "cantidad_solicitada": 25,
-                        "cantidad_despachada": 25,
-                        "precio_unitario": 2.00,
-                        "costo_total": 50.00
-                    },
-                    {
-                        "id": 7,
-                        "código": "PA7007",
-                        "unidad_medida": "Unidad",
-                        "descripción_material_insumo": "Papel adhesivo",
-                        "cantidad_solicitada": 40,
-                        "cantidad_despachada": 40,
-                        "precio_unitario": 0.80,
-                        "costo_total": 32.00
-                    },
-                    {
-                        "id": 8,
-                        "código": "LC8008",
-                        "unidad_medida": "Caja",
-                        "descripción_material_insumo": "Lápices de colores",
-                        "cantidad_solicitada": 15,
-                        "cantidad_despachada": 15,
-                        "precio_unitario": 3.00,
-                        "costo_total": 45.00
-                    },
-                    {
-                        "id": 9,
-                        "código": "GC9009",
-                        "unidad_medida": "Unidad",
-                        "descripción_material_insumo": "Gomas de borrar",
-                        "cantidad_solicitada": 60,
-                        "cantidad_despachada": 60,
-                        "precio_unitario": 0.25,
-                        "costo_total": 15.00
-                    },
-                    {
-                        "id": 10,
-                        "código": "MA1010",
-                        "unidad_medida": "Caja",
-                        "descripción_material_insumo": "Marcadores de pizarra",
-                        "cantidad_solicitada": 5,
-                        "cantidad_despachada": 5,
-                        "precio_unitario": 8.00,
-                        "costo_total": 40.00
-                    }
-                ];
-                for (var i = 0; i < suministros.length; i++) {
-                    document.write("<tr>");
-                    document.write("<td>" + suministros[i].código + "</td>");
-                    document.write("<td>" + suministros[i].unidad_medida + "</td>");
-                    document.write("<td>" + suministros[i].descripción_material_insumo + "</td>");
-                    document.write("<td>" + suministros[i].cantidad_solicitada + "</td>");
-                    document.write("<td>" + suministros[i].cantidad_despachada + "</td>");
-                    document.write("<td>" + '$ ' + suministros[i].precio_unitario + "</td>");
-                    document.write("<td>" + '$ ' + suministros[i].costo_total + "</td>");
-                    document.write("</tr>");
-                }
-                </script>
+                <template id="fila-template">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                </template>
             </tbody>
         </table>
     </div>
@@ -227,4 +124,124 @@ function imprimir() {
         document.frmTesis.IM.style.visibility = "visible";
     }
 }
+
+
+let suministros = [{
+        "id": 1,
+        "código": "PS1001",
+        "unidad_medida": "Unidad",
+        "descripción_material_insumo": "Lápices HB",
+        "cantidad_solicitada": 100,
+        "cantidad_despachada": 100,
+        "precio_unitario": 0.50,
+        "costo_total": 50.00
+    },
+    {
+        "id": 2,
+        "código": "ES2002",
+        "unidad_medida": "Caja",
+        "descripción_material_insumo": "Resmas de papel A4",
+        "cantidad_solicitada": 20,
+        "cantidad_despachada": 20,
+        "precio_unitario": 5.00,
+        "costo_total": 100.00
+    },
+    {
+        "id": 3,
+        "código": "MG3003",
+        "unidad_medida": "Unidad",
+        "descripción_material_insumo": "Bolígrafos negros",
+        "cantidad_solicitada": 50,
+        "cantidad_despachada": 50,
+        "precio_unitario": 0.75,
+        "costo_total": 37.50
+    },
+    {
+        "id": 4,
+        "código": "NC4004",
+        "unidad_medida": "Caja",
+        "descripción_material_insumo": "Cuadernos",
+        "cantidad_solicitada": 10,
+        "cantidad_despachada": 10,
+        "precio_unitario": 4.50,
+        "costo_total": 45.00
+    },
+    {
+        "id": 5,
+        "código": "TP5005",
+        "unidad_medida": "Unidad",
+        "descripción_material_insumo": "Tijeras de oficina",
+        "cantidad_solicitada": 30,
+        "cantidad_despachada": 30,
+        "precio_unitario": 1.25,
+        "costo_total": 37.50
+    },
+    {
+        "id": 6,
+        "código": "RG6006",
+        "unidad_medida": "Caja",
+        "descripción_material_insumo": "Reglas de plástico",
+        "cantidad_solicitada": 25,
+        "cantidad_despachada": 25,
+        "precio_unitario": 2.00,
+        "costo_total": 50.00
+    },
+    {
+        "id": 7,
+        "código": "PA7007",
+        "unidad_medida": "Unidad",
+        "descripción_material_insumo": "Papel adhesivo",
+        "cantidad_solicitada": 40,
+        "cantidad_despachada": 40,
+        "precio_unitario": 0.80,
+        "costo_total": 32.00
+    },
+    {
+        "id": 8,
+        "código": "LC8008",
+        "unidad_medida": "Caja",
+        "descripción_material_insumo": "Lápices de colores",
+        "cantidad_solicitada": 15,
+        "cantidad_despachada": 15,
+        "precio_unitario": 3.00,
+        "costo_total": 45.00
+    },
+    {
+        "id": 9,
+        "código": "GC9009",
+        "unidad_medida": "Unidad",
+        "descripción_material_insumo": "Gomas de borrar",
+        "cantidad_solicitada": 60,
+        "cantidad_despachada": 60,
+        "precio_unitario": 0.25,
+        "costo_total": 15.00
+    },
+    {
+        "id": 10,
+        "código": "MA1010",
+        "unidad_medida": "Caja",
+        "descripción_material_insumo": "Marcadores de pizarra",
+        "cantidad_solicitada": 5,
+        "cantidad_despachada": 5,
+        "precio_unitario": 8.00,
+        "costo_total": 40.00
+    }
+];
+
+let template = document.getElementById('fila-template');
+let tbody = document.querySelector('.table_informacion tbody');
+
+suministros.forEach(function(suministro) {
+    let contenidoTabla = document.importNode(template.content, true);
+    let cols = contenidoTabla.querySelectorAll('td');
+
+    cols[0].textContent = suministro.código;
+    cols[1].textContent = suministro.unidad_medida;
+    cols[2].textContent = suministro.descripción_material_insumo;
+    cols[3].textContent = suministro.cantidad_solicitada;
+    cols[4].textContent = suministro.cantidad_despachada;
+    cols[5].textContent = '$ ' + suministro.precio_unitario.toFixed(2);
+    cols[6].textContent = '$ ' + suministro.costo_total.toFixed(2);
+    tbody.appendChild(contenidoTabla);
+});
 </script>
