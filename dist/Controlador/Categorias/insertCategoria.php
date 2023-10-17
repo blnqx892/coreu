@@ -19,7 +19,7 @@ if ($resultado) {
 } else {
     $json[] = array(
         'title' => "Error",
-        'mensaje'=> mysqli_error($conexion)
+        'mensaje'=>"Surgió un error!"
     );
 }
 

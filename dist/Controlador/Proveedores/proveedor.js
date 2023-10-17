@@ -31,15 +31,7 @@ $(document).ready(function () {
     var formData = new FormData();
     var nombreProv = $("#nombreProv").val();
 
-   // if (
-    //  $("#nombreProv").val() == ""
-   // ) {
-   //   Swal.fire({
-    //    icon: "error",
-    //    title: "error",
-    //    text: "Campos Vacios",
-   //   });
-   // } else {
+  
     if (validation(1)) {
        formData.append("nombreProv", nombreProv);
 

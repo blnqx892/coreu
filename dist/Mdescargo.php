@@ -47,7 +47,7 @@ if (isset($_SESSION['usuarioActivo'])) {
               <div class="card-header"><strong>Descargo de Bienes Muebles</strong></div>
               <div class="card-body">
                 <!--INICIO FORM--------------------------------------------->
-                <form class="g-3 needs-validation" novalidate="">
+                <form  id="formD" class="g-3 needs-validation" novalidate="">
                   <h4>Generalidades</h4>
                   <div class="row my-4">
                     <div class="col-md-3">
@@ -58,7 +58,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom01">Fecha:</label>
-                      <input class="form-control" id="fecha_a" type="date" required="">
+                      <input class="form-control" id="fecha_movimientodescargo" type="date" required="">
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Procedencia:</label>
@@ -80,7 +80,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row my-4">
                     <div class="col-md-6">
                       <label class="form-label" for="validationCustom02">Observaciones:</label>
-                      <textarea class="form-control" id="validationCustom02" required="" rows="2"></textarea>
+                      <textarea class="form-control" id="observaciondescargo" required="" rows="2"></textarea>
                     </div>
                   </div>
                   <!------------------------------------FIN----------------------------------------------------->
@@ -126,7 +126,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <!--------------------------------------------FIN-------------------------------------------------------------------->
                   <div class="col-15" align="right">
                     <hr style="color: black; background-color: black; width:100%;" />
-                    <button class="btn btn-success" type="submit">Guardar <i class='far fa-check-square'></i></button>
+                    <button class="btn btn-success" type="button" id="GuardaDescargo" name="btnGuardar">Guardar<i class='far fa-check-square'></i></button>
                     <button class="btn btn-secondary" type="submit">Cancelar <i
                         class='far fa-times-circle'></i></button>
                   </div>
@@ -141,6 +141,7 @@ if (isset($_SESSION['usuarioActivo'])) {
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
     <script src="./Controlador/MantenimientoAF/mostrar_camposdescargo.js"></script>
+    <script src="./Controlador/MantenimientoAF/descargo_guarda.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
