@@ -28,6 +28,10 @@ p{
   font-size: 18px;
   font-family: var(--font-family);
 }
+.titulo{
+  font-size: 14px;
+  font-family: var(--font-family);
+}
 .logoNacional{
   width: 100px;
   height: 100px;
@@ -63,4 +67,10 @@ p{
 .infoTitulosVehiculo{
   color:var(--color-black);
   font-size:125%;
+}
+th,td {
+  padding: 5px;
+}
+table th {
+  text-align: center;
 }
