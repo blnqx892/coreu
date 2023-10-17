@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/reportesRetiroInsumos.css" />
+  <link rel="stylesheet" href="../css/reportesRetiroInsumos.css" />
 </head>
 
 <body style="margin: 30px 30px 20px 20px;">
   <table width="1000" border="0" align="center">
     <tr>
-      <td><img src="img/iconsv.jpg" width="120" height="120"></td>
+      <td><img src="../img/iconsv.jpg" width="120" height="120"></td>
       <td align="center"><span class="titulos">
           <p style="font-size: 18px; font-family: sans-serif">ALCALDIA MUNICIPAL DE SAN VICENTE<br>
             HOJA DE REQUISICIÓN PARA ENTREGA Y RETIRO DE INSUMOS O MATERIALES</p>
       </td>
-      <td><img src="img/iconelsv.png" width="100" height="100"></td>
+      <td><img src="../img/iconelsv.png" width="100" height="100"></td>
     </tr>
   </table>
   <table width="950" align="center">

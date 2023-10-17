@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <!-- LLamo al css de reportes donde esta el estilo para el reporte -->
-  <link rel="stylesheet" href="css/reportesBienesMuebles.css" />
+  <link rel="stylesheet" href="../css/reportesBienesMuebles.css" />
 </head>
 
 <body>
   <table class="membrete">
     <tr>
-      <td><img src="img/iconsv.jpg" class="logoAlcaldia"></td>
+      <td><img src="../img/iconsv.jpg" class="logoAlcaldia"></td>
       <td>
         <span class="titulos">
           <div class="textoMembrete">
@@ -20,7 +20,7 @@
           </div>
 
       </td>
-      <td><img src="img/iconelsv.png" class="logoNacional"></td>
+      <td><img src="../img/iconelsv.png" class="logoNacional"></td>
     </tr>
     </tr>
     <tr>
