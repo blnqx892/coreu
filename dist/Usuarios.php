@@ -80,36 +80,23 @@ if (isset($_SESSION['usuarioActivo'])) {
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                      </div>
-                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom04">Permisos</label>
-                      <select class="form-select tres-validate-1" id="perC"
-                          name="perC" >
-                        <option selected="" disabled="" value="">Elegir Permiso</option>
-                        <option  value="Almacen">Almacen</option>
-                        <option  value="Activo Fijo">Activo Fijo</option>
-                        <option  value="UACI">UACI</option>
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
-                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Unidad:</label>
                       <select class="form-select tres-validate-1" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                      </div>
-                   <div class="col-md-3">
+                     <div class="col-md-3">
                         <label for="inputZip" class="form-label">Contraseña:</label>
                         <input type="password" class="form-control tres-validate-1" id="contraC" name="contraC">
                         <div id="error1"></div>
                       </div>
-                    </div>
-                    <div class="row my-3">
-                    <div class="col-md-3">
+                      <div class="col-md-3">
                         <label for="inputZip" class="form-label">Repetir Contraseña:</label>
                         <input type="password" class="form-control tres-validate-1" id="contraC1" name="contraC1">
                         <div id="error2"></div>
                       </div>
-                    </div>
+                    </div>  
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />

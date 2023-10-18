@@ -89,11 +89,7 @@ if (isset($_SESSION['usuarioActivo'])) {
           <div class="row my-4">
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Rol:</label>
-              <input type="text" class="form-control" id="rolv" disabled>
-            </div>
-            <div class="col-md-4">
-              <label for="inputZip" class="form-label">Permisos:</label>
-              <input type="text" class="form-control" id="perv" disabled>
+              <input type="text" class="form-control" id="rolC" disabled>
             </div>
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Unidad:</label>
@@ -144,18 +140,7 @@ if (isset($_SESSION['usuarioActivo'])) {
           <div class="row my-4">
             <div class="col-md-4">
               <label class="form-label" for="validationCustom04">Rol</label>
-              <select class="form-select" id="rolC" name="rolC" data-placeholder="Seleccione Producto">
-                <option value="Administrador">Administrador</option>
-                <option value="Jefe">Jefe</option>
-              </select>
-              <div class="invalid-feedback">Please select a valid state.</div>
-            </div>
-            <div class="col-md-4">
-              <label class="form-label" for="validationCustom04">Permisos</label>
-              <select class="form-select" id="perC" name="perC" data-placeholder="Seleccione Producto">
-                <option value="Almacen">Almacen</option>
-                <option value="Activo Fijo">Activo Fijo</option>
-                <option value="UACI">UACI</option>
+              <select class="form-select" id="rolC" name="rolC" data-placeholder="Seleccione un Rol">
               </select>
               <div class="invalid-feedback">Please select a valid state.</div>
             </div>
@@ -207,6 +192,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     </div>
     <script src="./Controlador/Usuarios/mostrarusu.js"></script>
     <script src="./Controlador/Usuarios/usuario.js"></script>
+    <script src="./Controlador/Usuarios/mostrarroles.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js"></script>
       <!-- IMPORTAR ARCHIVO FOOTER-->
       <?php include("foot/foot.php"); ?>

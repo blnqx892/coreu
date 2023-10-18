@@ -11,7 +11,6 @@ $(document).ready(function () {
       var apellidoC = $("#apellidoC").val();
       var usuario = $("#usuarioC").val();
       var rolC = $("#rolC").val();
-      var perC = $("#perC").val();
       var uni= $("#unidad_id").val();
       var emailC = $("#emailC").val();
       var contraC = $("#contraC").val();
@@ -35,7 +34,6 @@ $(document).ready(function () {
         formData.append("ape",apellidoC);
         formData.append("usu",usuario);
         formData.append("rol",rolC);
-        formData.append("per",perC);
         formData.append("unid",uni);
         formData.append("email",emailC);
         formData.append("contra",contraC)

@@ -6,14 +6,13 @@ $conexion = con();
     $apellido = $_POST["ape"];
     $usuario = $_POST["usu"];
     $rol = $_POST["rol"];
-    $per = $_POST["per"];
     $uni = $_POST["unid"];
     $email = $_POST["email"];
     ///ALGORITMO DE ENCRIPTACION BLOWFISH, METODO PASSWORD_HASH
     $contra=password_hash($_POST["contra"],PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,permisos,fk_unidades,fk_rol) VALUES
-     ('$nombre','$apellido','$usuario','$email','$contra','$per','$uni','$rol')";
+    $sql = "INSERT INTO usuarios (nombre,apellido,usuario,email,contrasena,fk_unidades,fk_rol) VALUES
+     ('$nombre','$apellido','$usuario','$email','$contra','$uni','$rol')";
 
     // Ejecutar la consulta SQL
     
