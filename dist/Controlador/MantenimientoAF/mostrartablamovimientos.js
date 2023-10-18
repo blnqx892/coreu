@@ -47,11 +47,11 @@ $(document).ready(function () {
             },
             columns: [
               { data: "i" },
-              { data: "fecha" },
-              { data: "codigo del bien" },
-              { data: "descripcion del bien" },
-              { data: "Tipo de Movimiento" }, 
-              { data: "Tipo de Registro" }, 
+              { data: "fech" },
+              { data: "codi" },
+              { data: "describien" },
+              { data: "tipomo" }, 
+              { data: "tipore" }, 
               { data: "botones" }
              
       

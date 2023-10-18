@@ -114,6 +114,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                             <label for="inputZip" class="form-label">Serie:</label>
                             <input type="text" class="form-control" id="serie" disabled>
                         </div>
+                    </div>
+                    <div class="row my-4">
                         <div class="col-md-4">
                             <label for="inputZip" class="form-label">Marca:</label>
                             <input type="text" class="form-control" id="marca" disabled>
@@ -132,10 +134,10 @@ if (isset($_SESSION['usuarioActivo'])) {
                             <label for="inputZip" class="form-label">Tipo Cargo:</label>
                             <input type="text" class="form-control" id="cargo" disabled>
                         </div>
-                        <div class="col-md-4">
+                        <!--<div class="col-md-4">
                             <label for="inputZip" class="form-label">Vida Util:</label>
                             <input type="text" class="form-control" id="vida" disabled>
-                        </div>
+                        </div>-->
                         <div class="col-md-4">
                             <label for="inputZip" class="form-label">Categoria:</label>
                             <input type="text" class="form-control" id="id_categoria" disabled>
@@ -240,10 +242,10 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </select>
                   <div class="invalid-feedback">Please select a valid state.</div>
               </div>
-              <div class="col-md-4">
+              <!--<div class="col-md-4">
                   <label for="inputZip" class="form-label">Vida Util:</label>
                   <input type="text" class="form-control" id="vidae">
-              </div>
+              </div>-->
               <div class="col-md-4">
                   <label class="form-label" for="validationCustom04">Categoria</label>
                   <select class="form-select" required id="categoria_id" name="cateC">
