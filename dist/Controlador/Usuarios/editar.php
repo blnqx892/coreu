@@ -8,14 +8,15 @@ $conexion = con();
     $rol = $_POST["rol"];
     $uni  = $_POST["unid"];
     $email = $_POST["email"];
-    $contra= $_POST["contra"];
+   // $contra= $_POST["contra"];
     $id    = $_POST["_id"];
     
 
 
-    $sql= " UPDATE usuarios SET nombre='$nombre',apellido='$apellido',usuario='$usuario',rol='$rol',email='$email',
-    contrasena='$contra',fk_unidades='$uni' WHERE id = '$id'";
-      //var_dump($sql); /*para que proves porq el error */
+    $sql= " UPDATE usuarios SET nombre='$nombre',apellido='$apellido',usuario='$usuario', fk_rol='$rol',email='$email',
+     fk_unidades='$uni' WHERE id = '$id'";
+    var_dump($sql); /*para que proves porq el error */
+    //contrasena='$contra',
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
   

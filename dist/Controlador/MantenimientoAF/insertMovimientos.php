@@ -7,7 +7,6 @@ $conexion = con();
    $tipoMovimiento       = $_POST["tipomovi"] ;
    $fk_asignacion_activo = $_POST["_id_asigna"] ?? 'null';
    $fk_unidades          = $_POST["nombre_u"] ?? 'null';
-
    $tipoRegistro         = $_POST["tiporegis"] ?? null;
    
    $sql = "call INSERT_MANTENIMIENTO_DESCARGO(

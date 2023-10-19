@@ -89,7 +89,7 @@ if (isset($_SESSION['usuarioActivo'])) {
           <div class="row my-4">
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Rol:</label>
-              <input type="text" class="form-control" id="rolC" disabled>
+              <input type="text" class="form-control" id="id_rol" disabled>
             </div>
             <div class="col-md-4">
               <label for="inputZip" class="form-label">Unidad:</label>

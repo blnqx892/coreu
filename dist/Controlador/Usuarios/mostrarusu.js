@@ -131,7 +131,7 @@ $(document).ready(function () {
           $("#nombrev").val(data.nom);
           $("#apellidov").val(data.ape);
           $("#unidadd_id").val(data.unid);
-          $("#rolC").val(data.rolver);
+          $("#id_rol").val(data.rolver);
           $("#usuariov").val(data.usu);
           $("#emailv").val(data.email);
          
@@ -151,10 +151,10 @@ $(document).ready(function () {
        var nombreC = $("#nombre").val(); //capturar los datos
        var apellidoC = $("#apellido").val();
        var usuario = $("#usuario").val();
-       var rol = $("#rolC").val();    
+       var rol = $("#rolC").val();     
        var unidd = $("#unidad_id").val();    
        var emailC = $("#email").val();
-       var contraC = $("#con").val();
+     //  var contraC = $("#con").val();
        var id      = $("#_id").val(); //aqui capturas
         
       if ( $("#nombreC").val() == "" || $("#apellidoC").val() == "" || $("#usuario").val() == "" ||
@@ -175,8 +175,8 @@ $(document).ready(function () {
           formData.append("rol",rol);
           formData.append("unid",unidd);
           formData.append("email",emailC);
-          formData.append("contra",contraC);
-          formData.append("contra",contraC);
+      //    formData.append("contra",contraC);
+       //   formData.append("contra",contraC);
           formData.append("_id",id ); 
         //para que no te perdas lo deje comentado
           
@@ -237,13 +237,13 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
       //console.log(data);
       $("#_id").val(data.id);
       $("#nombre").val(data.nom);
-      $("#rolC").val(data.rolver); 
+      $("#id_rol").val(data.rolver); 
       $("#unidadd_id").val(data.unid);
       $("#apellido").val(data.ape);
       $("#usuario").val(data.usu);
       $("#email").val(data.email);
-      $("#con").val(data.contra);
-      $("#contra1").val(data.contra);
+    //  $("#con").val(data.contra);
+     // $("#contra1").val(data.contra);
       
       
       Swal.fire({
@@ -382,7 +382,7 @@ $("#edit").on("click", function () {
   var rol = $("#rolC").val();
   var uni = $("#unidadd_id").val();
   var emailC = $("#email").val();
-  var contraC = $("#con").val();
+ // var contraC = $("#con").val();
   var id      = $("#_id").val(); //aqui capturas
                   
                        
@@ -405,8 +405,8 @@ $("#edit").on("click", function () {
       formData.append("rol",rol);
       formData.append("unid",uni);
       formData.append("email",emailC);
-      formData.append("contra",contraC);
-      formData.append("contra",contraC);
+   //   formData.append("contra",contraC);
+    //  formData.append("contra",contraC);
       formData.append("_id",id ); 
               //para que no te perdas lo deje comentado
         
