@@ -3,34 +3,37 @@ $(document).ready(function () {
   
   
     //********************guardar  */
+    const toast = new coreui.Toast(document.getElementById('liveToast'));
   
     $("#GuardaDescargo").on("click", function () {
-
+     
+      validation();
       let fechaMovimiento = $("#fecha_movimientodescargo").val();
       let tipomovi        = $("#descargoM").val();
       let observa         = $("#observaciondescargo").val();
       let _id_asigna      = $("#codigo_id :selected").val();
 
-      if ( 
-        $("#descriC").val() == "") {
-          Swal.fire({
-            icon: "error",
-            title: "error",
-            text: "Campos Vacios",
-          });
+     // if ( 
+      //  $("#descriC").val() == "") {
+      //    Swal.fire({
+      //      icon: "error",
+      //      title: "error",
+      //      text: "Campos Vacios",
+      //    });
       
-        }else if(
-          $("#flexSwitchCheckChecked").val()=="on" &&
-          ($("#motorC").val() == "" || $("#chasisC").val() == "" || $("#placaC").val() == "" ||  
-          $("#capacidadC").val() == "")
-        ){
+       // }else if(
+        //  $("#flexSwitchCheckChecked").val()=="on" &&
+       //   ($("#motorC").val() == "" || $("#chasisC").val() == "" || $("#placaC").val() == "" ||  
+       //   $("#capacidadC").val() == "")
+       // ){
       
-        Swal.fire({
-          icon: "error",
-          title: "error",
-          text: "Campos Vacios",
-        });
-      } else {
+      //  Swal.fire({
+      //    icon: "error",
+      //    title: "error",
+      //    text: "Campos Vacios",
+     //   });
+    //  } else {
+      if (validation(1)) {
 
 
         var formData = new FormData(); //permite recoger la data para enviarla al controlador
@@ -51,13 +54,53 @@ $(document).ready(function () {
           success: function (response) {
             $("#codigo_id").select2().text();
             $('#formD').get(0).reset();
+            limpiar(1);      
           },
         });
-       
+      } else {
+        show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
       }
       return false;
+     
     });
-    //*************************** */
+    //****************************************** */
+    function validation(index) {
+    let validate = true;
+
+    
+    // Validación de requeridos
+    $(".nueve-validate-" + index).each(function (k, v) {
+      console.log(v);
+      if ($(v).val() != null && $(v).val() !== undefined && $(v).val() !== '') {
+        $(v).removeClass('is-invalid').addClass('is-valid');
+        $(v).parent().find('.msg-error').remove();
+      } else {
+        $(v).removeClass('is-valid').addClass('is-invalid');
+        const html = '<small class="text-danger msg-error">El campo es requerido</small>';
+        $(v).parent().find('.msg-error').remove();
+        $(v).parent().append(html);
+        validate = false;
+      }
+    });
+    return validate;
+  }
+
+  function limpiar(index) {
+    $(".nueve-validate-" + index).each(function (k, v) {
+
+      $(v).removeClass('is-valid');
+
+
+    });
+
+  }
+/********************fin funcion validar ************************/
+function show_toast(severity, title, body) {
+  $("#liveToast").removeClass('text-bg-success text-bg-danger').addClass('text-bg-' + severity);
+  $("#toast_title").html(title);
+  $("#toast_body").html(body);
+  toast.show();
+}
 
   
   });

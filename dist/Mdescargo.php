@@ -52,25 +52,26 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row my-4">
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
-                      <select class="form-control js-example-basic-single" required id="codigo_id" name="codigo_id">
+                      <select class="form-control js-example-basic-single nueve-validate-1" required id="codigo_id" name="codigo_id">
                         <option value=""></option>
                       </select>
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom01">Fecha:</label>
-                      <input class="form-control" id="fecha_movimientodescargo" type="date" required="">
+                      <input class="form-control nueve-validate-1" id="fecha_movimientodescargo" type="date" required="">
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Procedencia:</label>
-                      <input class="form-control" id="nombre_unidad" type="text" required="">
+                      <input class="form-control" id="nombre_unidad" type="text" required="" disabled>
                     </div>
-                    <div class="col-md-3">
+                  <div class="col-md-3">
                       <label class="form-label" for="validationCustom04">Tipo Movimiento</label>
-                      <select class="form-select" id="descargoM" name="descargoM"
-                        data-placeholder="Seleccione tipo de Moviemiento">
-                        <option value="Inservible">Inservible</option>
-                        <option value="Robo y/o Hurto">Robo y/o Hurto</option>
-                        <option value="Obsoleto">Obsoleto</option>
+                      <select class="form-select nueve-validate-1" id="descargoM" 
+                          name="descargoM">   
+                          <option selected="" disabled="" value="">Elegir Tipo Movimiento</option>                                       
+                          <option value="Inservible">Inservible</option>
+                          <option value="Robo y/o Hurto">Robo y/o Hurto</option>
+                          <option value="Obsoleto">Obsoleto</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
@@ -147,6 +148,20 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+<!-- para que muestre la alerta --------------------------------->
+<div class="toast-container position-fixed end-0 p-3">
+            <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <div class="rounded me-2"></div>
+                    <strong class="me-auto" id="toast_title">Acción exitosa</strong>
+                    <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body" id="toast_body">
+                    Registro guardado
+                </div>
+            </div>
+        </div>
+<!-- fin de que muestre la alerta ---------------------------------->
 </body>
 
 </html>

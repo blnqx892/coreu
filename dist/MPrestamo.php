@@ -63,13 +63,13 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row my-4">
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
-                      <select class="form-control js-example-basic-single" required id="codigo_id" name="codigo_id">
+                      <select class="form-control js-example-basic-single  once-validate-1" required id="codigo_id" name="codigo_id">
                         <option value=""></option>
                       </select> 
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom01">Fecha:</label>
-                      <input class="form-control" id="fecha_movimiento" type="date" required="" disabled>
+                      <input class="form-control once-validate-1" id="fecha_movimiento" type="date" required="" disabled>
                    </div>
                    <div class="col-md-3">
                       <label class="form-label" for="validationCustom02">Procedencia:</label>
@@ -77,7 +77,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                    </div>
                    <div class="col-md-3" id="div-destino">
                       <label class="form-label" for="validationCustom02">Destino:</label>
-                      <select class="form-select" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad" disabled> </select>
+                      <select class="form-select once-validate-1" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad" disabled> </select>
                       <div class="invalid-feedback">Please select a valid state.
                    </div>
                   </div>
@@ -88,7 +88,9 @@ if (isset($_SESSION['usuarioActivo'])) {
    
     <div class="col-md-3">
       <label class="form-label" for="validationCustom04">Tipo de Movimiento:</label>
-      <select class="form-select" id="perC" name="perC" data-placeholder="Seleccione un Movimiento" disabled>
+      <select class="form-select once-validate-1" id="perC" 
+      name="perC" data-placeholder="Seleccione un Movimiento" disabled>
+      <option selected="" disabled="" value="">Elegir Tipo Movimiento</option>
         <option  value="Prestamo"> Prestamo</option>
         <option  value="Traslado Definitivo">Traslado Definitivo</option>
         <option  value="Reparación">Reparación</option>
@@ -168,12 +170,23 @@ if (isset($_SESSION['usuarioActivo'])) {
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     
-    <?php include("foot/script.php"); ?>
-
-   
-    
+    <?php include("foot/script.php"); ?>   
     <!-- ////////////////////////-->
-  </div>
+    <!-- para que muestre la alerta --------------------------------->
+<div class="toast-container position-fixed end-0 p-3">
+            <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <div class="rounded me-2"></div>
+                    <strong class="me-auto" id="toast_title">Acción exitosa</strong>
+                    <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body" id="toast_body">
+                    Registro guardado
+                </div>
+            </div>
+        </div>
+<!-- fin de que muestre la alerta ---------------------------------->
+  
 </body>
 </html>
 <?php
