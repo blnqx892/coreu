@@ -39,6 +39,7 @@ $(document).ready(function () {
         formData.append("fechaMovimiento", fechaMovimiento);//anadir la data al objeto para seer enviadad
         formData.append("observa",observa);
         formData.append("tipomovi",tipomovi);
+        formData.append("tiporegis",'Mantenimiento');
         formData.append("_id_asigna",_id_asigna)       
         formData.append("nombre_u",nombre_u)
   

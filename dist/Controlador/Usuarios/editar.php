@@ -15,7 +15,7 @@ $conexion = con();
 
     $sql= " UPDATE usuarios SET nombre='$nombre',apellido='$apellido',usuario='$usuario', fk_rol='$rol',email='$email',
      fk_unidades='$uni' WHERE id = '$id'";
-    var_dump($sql); /*para que proves porq el error */
+    //var_dump($sql); /*para que proves porq el error */
     //contrasena='$contra',
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);

@@ -5,8 +5,8 @@ $conexion = con();
    $fechaM               = $_POST["fechaMovimiento"];
    $observacionM         = $_POST["observa"] ;
    $tipoMovimiento       = $_POST["tipomovi"] ;
-   $fk_asignacion_activo = $_POST["_id_asigna"] ?? 'null';
-   $fk_unidades          = $_POST["nombre_u"] ?? 'null';
+   $fk_asignacion_activo = $_POST["_id_asigna"] ?? '';
+   $fk_unidades          = $_POST["nombre_u"] ?? '';
    $tipoRegistro         = $_POST["tiporegis"] ?? null;
    
    $sql = "call INSERT_MANTENIMIENTO_DESCARGO(
@@ -14,8 +14,8 @@ $conexion = con();
     '$observacionM',
     '$tipoMovimiento',
     '$tipoRegistro',
-    $fk_asignacion_activo,
-    $fk_unidades
+    '$fk_asignacion_activo',
+    '$fk_unidades'
    );";
 echo $sql;
     // Ejecutar la consulta SQL
