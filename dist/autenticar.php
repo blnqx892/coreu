@@ -7,7 +7,7 @@ session_start();
 $usuario = (isset($_POST['username'])) ? $_POST['username'] : '';
 $contra = (isset($_POST['password'])) ? $_POST['password'] : '';
 
-$sql="SELECT * FROM usuarios WHERE usuario='$usuario'";
+$sql="SELECT u.*, r.rol FROM usuarios u inner join roles r on u.fk_rol = r.id WHERE usuario='$usuario'";
 $consulta=mysqli_query($conexion,$sql) or die ("ERROR AL CONECTAR CON LA BASE DE DATOS ".mysqli_connect_error());
 if ($row=mysqli_fetch_assoc($consulta)) {
     $md5=$row['contrasena'];
@@ -25,7 +25,7 @@ if ($row=mysqli_fetch_assoc($consulta)) {
         alert('USUARIO O CONTRASEÑA INCORRECTA, VUELVE A INTENTARLO')
         type: 'danger'
         window.location='Acceso.php'
-        </script>"; 
+        </script>";
     }
 }else {
     echo"

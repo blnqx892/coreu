@@ -89,8 +89,8 @@ $(document).ready(function() {
       nombre_suministro: $("#nombre_suministro").val(),
       presentacion: $("#presentacion").val(),
       unidad_medida: $("#unidad_medida").val(),
-      existencia_minima: parseInt($("#existencia_minima").val(), 10),
-      existencia_maxima: parseInt($("#existencia_maxima").val(), 10),
+      existencia_minima: parseFloat($("#existencia_minima").val()),
+      existencia_maxima: parseFloat($("#existencia_maxima").val()),
       almacen: $("#almacen").val(),
       estante: $("#estante").val(),
       entrepano: $("#entrepano").val(),
@@ -158,7 +158,7 @@ $(document).ready(function() {
 
     if (all_ok) {
       // Evaluar que no puedan salir más elementos que los que se encuentran disponibles en saldo
-      if (data.tipo_movimiento === "salida" ? parseInt(data.cantidad, 10) <= saldo : true) {
+      if (data.tipo_movimiento === "salida" ? parseFloat(data.cantidad) <= saldo : true) {
         const url = host + '/Coreu/dist/Controlador/Kardex/create.php?suministro=' + id;
         fetch(url, {
           method: 'POST',
@@ -212,7 +212,7 @@ $(document).ready(function() {
           let html = '';
           saldo = 0;
           response2.forEach((v, k) => {
-            saldo = parseInt(saldo, 10) + parseInt(v.tipo_movimiento === "entrada" ? v.cantidad : (v.cantidad * -1), 10);
+            saldo = parseFloat(saldo) + parseFloat(v.tipo_movimiento === "entrada" ? v.cantidad : (v.cantidad * -1));
             html += '<tr>';
             html += '<td>' + moment(v.fecha).format('DD/MM/YYYY') +'</td>';
             html += '<td>' + v.concepto +'</td>';
@@ -260,12 +260,12 @@ $(document).ready(function() {
 
     // Validación de valores mínimos
     $(".v-min-" + index).each(function (k, v) {
-      const min = parseInt($(v).data('min'), 10)
+      const min = parseFloat($(v).data('min'))
       const minThan = $(v).data('minthan');
 
-      const minThanVal = minThan !== undefined ? parseInt($("#" + minThan).val(), 10) : null;
+      const minThanVal = minThan !== undefined ? parseFloat($("#" + minThan).val()) : null;
 
-      if (parseInt($(v).val(), 10) >= min && (minThan !== undefined ? parseInt($(v).val(), 10) >= minThanVal : true)) {
+      if (parseFloat($(v).val()) >= min && (minThan !== undefined ? parseFloat($(v).val()) >= minThanVal : true)) {
         $(v).removeClass('is-invalid').addClass('is-valid');
         $(v).parent().find('.msg-error').remove();
       } else {

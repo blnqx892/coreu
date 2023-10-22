@@ -84,11 +84,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Existencia Mínima:</label>
-                      <input type="number" min="0" step="1" class="form-control v-required-1 v-min-1" id="existencia_minima" data-min="0">
+                      <input type="number" min="0" step="0.01" class="form-control v-required-1 v-min-1" id="existencia_minima" data-min="0">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Existencia Máxima:</label>
-                      <input type="number" min="0" step="1" class="form-control v-required-1 v-min-1" id="existencia_maxima" data-min="0" data-minthan="existencia_minima">
+                      <input type="number" min="0" step="0.01" class="form-control v-required-1 v-min-1" id="existencia_maxima" data-min="0" data-minthan="existencia_minima">
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Categoria:</label>
@@ -202,11 +202,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </div>
                     <div class="col-md-3">
                       <label for="inputCity" class="form-label">Cantidad:</label>
-                      <input type="number" min="1" step="1"  class="form-control v-required-2 v-min-2" id="cantidad" name="nombreProv" data-min="1">
+                      <input type="number" min="1" step="0.01"  class="form-control v-required-2 v-min-2" id="cantidad" name="nombreProv" data-min="1">
                     </div>
                     <div class="col-md-3">
                       <label for="inputCity" class="form-label">Precio:</label>
-                      <input type="number" min="0" step="1"  class="form-control v-required-2 v-min-2" id="precio" name="nombreProv" data-min="0">
+                      <input type="number" min="0" step="0.01"  class="form-control v-required-2 v-min-2" id="precio" name="nombreProv" data-min="0">
                     </div>
                   </div>
                 </div>

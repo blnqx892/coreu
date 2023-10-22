@@ -42,8 +42,17 @@ if (isset($_SESSION['usuarioActivo'])) {
   <!-- CONTENEDOR-->
   <div class="body flex-grow-1 px-3">
     <?php
+    $usuario = $_SESSION['usuarioActivo'];
     $conexion = mysqli_connect('localhost', 'root', '', 'sicafi');
-    $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id";
+    if ($usuario['rol'] == 'UACI') {
+      $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where r.unidad_id =".$usuario['fk_unidades'].' or e.codigo = "pendiente.aprobacion"';
+    } else if ($usuario['rol'] == 'Almacen') {
+      $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where r.unidad_id =".$usuario['fk_unidades'].' or e.codigo = "pendiente.despacho"';
+    } else if ($usuario['rol'] == 'Unidad'){
+      $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where r.unidad_id =".$usuario['fk_unidades'];
+    } else {
+      die("No posee permisos para esta pantalla");
+    }
     $requisiciones = mysqli_query($conexion, $sql_requision) or die("No se puede ejecutar la consulta");
     ?>
     <div class="container-lg">
@@ -83,16 +92,17 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <td><?php echo $requisicion["nombre_unidad"]?></td>
                   <td><?php echo $requisicion["nombre_estado"]?></td>
                   <td>
-                    <button class="btn btn-sm btn-primary" type="button">
-                      <i class="far fa-eye"></i>
+                    <button class="btn btn-sm btn-primary" type="button" data-coreui-toggle="modal"
+                            data-coreui-target="#modalAgg" onclick="show_n(<?php echo $requisicion['id']?>, '<?php echo $requisicion['codigo_estado']?>')">
+                      <i class="fas fa-eye"></i>
                     </button>
-                    <?php if($requisicion['codigo_estado'] == 'pendiente.aprobacion'):?>
+                    <?php if($requisicion['codigo_estado'] == 'pendiente.aprobacion' && $usuario['rol'] == 'UACI'):?>
                       <button class="btn btn-sm btn-warning" type="button" data-coreui-toggle="modal"
                               data-coreui-target="#modalAgg" onclick="approve_n(<?php echo $requisicion['id']?>)">
                         <i class="fas fa-check"></i>
                       </button>
                     <?php endif;?>
-                    <?php if($requisicion['codigo_estado'] == 'pendiente.despacho'):?>
+                    <?php if($requisicion['codigo_estado'] == 'pendiente.despacho' && $usuario['rol'] == 'Almacen'):?>
                       <button class="btn btn-sm btn-success text-light" type="button" data-coreui-toggle="modal"
                               data-coreui-target="#modalAgg" onclick="service_n(<?php echo $requisicion['id']?>)">
                         <i class="fas fa-check"></i>
@@ -137,10 +147,13 @@ if (isset($_SESSION['usuarioActivo'])) {
                 $unidades = mysqli_query($conexion, $sql_unidades);
                 ?>
                 <label class="form-label" for="validationCustom04">Unidad: </label>
-                <select class="form-select v-required-2" required="" id="unidad" name="unidad">
-                  <option selected="" disabled="" value="-1">Seleccionar unidad</option>
+                <select class="form-select v-required-2" required="" id="unidad" name="unidad" disabled="disabled">
                   <?php while ($unidad = mysqli_fetch_array($unidades)):?>
-                    <option value="<?php echo $unidad['id']?>"><?php echo $unidad['nombre_unidad']?></option>
+                    <?php if ($unidad['id'] == $usuario['fk_unidades']):?>
+                      <option value="<?php echo $unidad['id']?>" selected="selected"><?php echo $unidad['nombre_unidad']?></option>
+                    <?php else:?>
+                      <option value="<?php echo $unidad['id']?>"><?php echo $unidad['nombre_unidad']?></option>
+                    <?php endif;?>
                   <?php endwhile;?>
                 </select>
               </div>

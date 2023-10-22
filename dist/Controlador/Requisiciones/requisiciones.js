@@ -222,7 +222,7 @@ function disponibilidad(index, suministro_id = null, existencia = null) {
         $(badge).removeClass('border-secondary text-secondary bg-success bg-danger').addClass('border-secondary text-secondary');
         $(badge).text(stock);
       } else {
-        if (parseInt(stock, 10) < parseInt(cantidad, 10)) {
+        if (parseFloat(stock) < parseFloat(cantidad)) {
           it.allOk = false;
           $(badge).removeClass('border-secondary text-secondary bg-success bg-danger').addClass('bg-danger');
           $(badge).text(stock);
@@ -279,7 +279,7 @@ function create_n() {
   $("#req_service").hide();
 
   document.getElementById('fechaP').valueAsDate = new Date();
-  $("#unidad").val('-1');
+  $("#unidad").attr('disabled', 'disabled');
 
   validate();
 }
@@ -293,6 +293,7 @@ function approve_n(id) {
   $("#add_sumi").hide();
   $("#req").hide();
   $("#req_service").hide();
+  $("save_req").show();
   $("#body_req_approve").empty();
   $("#req_approve").show();
 
@@ -337,6 +338,64 @@ function approve_n(id) {
     });
 }
 
+function show_n(id, estado) {
+  identify = id;
+  kind_save = 'none';
+  all_items_ok = [];
+  $("#fechaP").attr('disabled', 'disabled');
+  $("#unidad").attr('disabled', 'disabled');
+  $("#add_sumi").hide();
+  $("#req").hide();
+  $("#req_service").hide();
+  $("save_req").hide();
+  $("#body_req_approve").empty();
+  $("#req_approve").show();
+
+  const url = host + '/Coreu/dist/Controlador/Requisiciones/find.php?id=' + id;
+
+  fetch(url).then(
+    res => res.json()
+  )
+    .catch(error => console.error('Error:', error))
+    .then(response => {
+      if (response != null) {
+        document.getElementById('fechaP').valueAsDate = new Date(response.fecha_requisicion);
+        $("#unidad").val(response.unidad_id);
+        response.suministros.forEach((detalle) => {
+          let html = '<div class="row" id="r' + detalle.id + '">';
+          // Suministros
+          html += '<div class="col-6 mb-4">'
+          html += '<span>' + detalle.nombre_suministro + '</span>';
+          html += '</div>';
+          // Cantidad solicitada
+          html += '<div class="col-2">'
+          html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_solicitada + '</span>';
+          html += '</div>';
+          // Cantidad aprobada
+          html += '<div class="col-2">'
+          if (estado == 'pendiente.aprobacion') {
+            html += '<span class="badge border border-secondary text-secondary py-2 col-12">Pendiente</span>';
+          } else {
+            html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_aprobada + '</span>';
+          }
+          html += '</div>'
+          // Disponibilidad
+          html += '<div class="col-2">'
+          html += '<span class="badge border border-secondary text-secondary bdg-amount py-2 col-12">Sin selección</span>'
+          html += '</div>';
+          html += '</div>';
+          $("#body_req_approve").append(html);
+          all_items_ok.push({
+            id: detalle.suministro_id,
+            index: detalle.id,
+            allOk: true
+          });
+          disponibilidad(detalle.id, detalle.suministro_id, detalle.stock);
+        });
+      }
+    });
+}
+
 function service_n(id) {
   identify = id;
   kind_save = 'service';
@@ -346,6 +405,7 @@ function service_n(id) {
   $("#add_sumi").hide();
   $("#req").hide();
   $("#req_approve").hide();
+  $("save_req").show();
   $("#body_req_service").empty();
   $("#req_service").show();
 
