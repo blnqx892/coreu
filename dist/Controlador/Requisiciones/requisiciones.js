@@ -17,11 +17,17 @@ $(document).ready(function() {
 
   // Obtener variable local para ver si anteriormente habiamos guardado un registro
   const is_save = localStorage.getItem('is_save');
+  const is_remove = localStorage.getItem('is_remove');
 
   // Mostrar mensaje de elementos guardados
   if (is_save !== null) {
     show_toast('success', 'Registro guardado', 'Acción exitosa');
     localStorage.removeItem('is_save');
+  }
+
+  if (is_remove !== null) {
+    show_toast('success', 'Registro eliminado', 'Acción exitosa');
+    localStorage.removeItem('is_remove');
   }
 
   // Eventos
@@ -454,6 +460,37 @@ function service_n(id) {
           });
           disponibilidad(detalle.id, detalle.suministro_id, detalle.stock);
         });
+      }
+    });
+}
+
+function remove(id) {
+  swal({
+    title: "Eliminar la requisición",
+    text: "¿Está seguro que desea eliminar la requisición?",
+    icon: "warning",
+    buttons: ["No", "Si"],
+    dangerMode: true,
+  })
+    .then((willDelete) => {
+      if (willDelete) {
+        const host = window.location.origin;    // Dirección url actual
+        const url = host + '/Coreu/dist/Controlador/Requisiciones/delete.php';
+        fetch(url, {
+          method: 'POST',
+          body: JSON.stringify({id})
+        }).then(
+          res => res.json()
+        )
+          .catch(error => console.error('Error:', error))
+          .then(response => {
+            if (response.statusCode === 200) {
+              localStorage.setItem('is_remove', true);
+              window.location.reload();
+            } else {
+              show_toast('danger', 'Error', response.message);
+            }
+          });
       }
     });
 }
