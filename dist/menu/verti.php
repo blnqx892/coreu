@@ -103,7 +103,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
         </svg> Requisición</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="ADespachar.php"> Remitir Requisición</a></li>
+        <li class="nav-item"><a class="nav-link" href="RequisicionSuministro.php"> Remitir Requisición</a></li>
         <li class="nav-item"><a class="nav-link" href="HistorialDespacho.php"> Historial</a></li>
       </ul>
     </li>
@@ -154,7 +154,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
         </svg> Control de Aprobación</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="AprobacionUaci.php"><span class="nav-icon"></span> Aprobaciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="RequisicionSuministro.php"><span class="nav-icon"></span> Aprobaciones</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
