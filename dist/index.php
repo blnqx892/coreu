@@ -36,7 +36,7 @@ if (isset($_SESSION['usuarioActivo'])) {
         <div class="tab-content rounded-bottom" class="div-centrado">
           <div class="tab-pane p-2 active" role="tabpanel" id="preview-1179">
             <div class="row">
-              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
+
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -45,17 +45,19 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                       </svg>
                     </div>
+                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
                     <div>
                       <div class="fs-6 fw-semibold text-primary">9</div>
                       <div class="text-medium-emphasis text-uppercase fw-semibold small">Requisiciones por Despachar
                       </div>
                     </div>
+                    <?php } ?>
                   </div>
                 </div>
               </div>
-              <?php } ?>
+
               <!-- /.col-->
-              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
+
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -64,16 +66,18 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-laptop"></use>
                       </svg>
                     </div>
+                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
                     <div>
                       <div class="fs-6 fw-semibold text-info">3</div>
                       <div class="text-medium-emphasis text-uppercase fw-semibold small">Solicitudes por Aprobar</div>
                     </div>
+                    <?php } ?>
                   </div>
                 </div>
               </div>
-              <?php } ?>
+
               <!-- /.col-->
-              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
+
               <!-- Lógica para Stock bajo -->
               <?php
                 $conexion=mysqli_connect('localhost','root', '', 'sicafi');
@@ -114,6 +118,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-moon"></use>
                       </svg>
                     </div>
+                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
                     <div>
                       <div class="fs-6 fw-semibold text-warning">
                         <?php echo $total_stock;?>
@@ -122,10 +127,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                         Suministros al minimo
                       </div>
                     </div>
+                    <?php } ?>
                   </div>
                 </div>
               </div>
-              <?php } ?>
+
               <!-- /.col-->
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
