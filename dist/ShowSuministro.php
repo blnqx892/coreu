@@ -127,19 +127,9 @@ if (isset($_SESSION['usuarioActivo'])) {
                 </div>
 
                   <div class="row mt-3">
+
                     <div class="col-3">
-                      <div class="row">
-                        <div class="col-12">
-                          Unidad de medida
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                        <span class="fw-bold">
-                          <?php echo $mostrar['unidad_medida'] ?>
-                        </span>
-                        </div>
-                      </div>
+                      <svg id="barcode" width="100%"></svg>
                     </div>
 
                     <div class="col-3">
@@ -170,72 +160,6 @@ if (isset($_SESSION['usuarioActivo'])) {
                         </span>
                         </div>
                       </div>
-                    </div>
-
-                    <div class="col-3">
-                      <div class="row">
-                        <div class="col-12">
-                          Almacen
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                        <span class="fw-bold">
-                          <?php echo $mostrar['almacen'] ?>
-                        </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row mt-3">
-                    <div class="col-3">
-                      <div class="row">
-                        <div class="col-12">
-                          Estante
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                        <span class="fw-bold">
-                          <?php echo $mostrar['estante'] ?>
-                        </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-3">
-                      <div class="row">
-                        <div class="col-12">
-                          Entrepaño
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                        <span class="fw-bold">
-                          <?php echo $mostrar['entrepaño'] ?>
-                        </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-3">
-                      <div class="row">
-                        <div class="col-12">
-                          Casilla
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                        <span class="fw-bold">
-                          <?php echo $mostrar['casilla'] ?>
-                        </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-3">
-                      <svg id="barcode" width="100%"></svg>
                     </div>
 
                   </div>

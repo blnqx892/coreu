@@ -65,8 +65,6 @@ if (isset($_SESSION['usuarioActivo'])) {
 
     $count = 0;
 
-    echo $usuario['fk_unidades'];
-
     while ($item = mysqli_fetch_array($total_requisiciones)) {
       $count++;
     }

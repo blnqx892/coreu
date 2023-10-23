@@ -33,6 +33,9 @@ if (isset($_SESSION['usuarioActivo'])) {
     <div class="body flex-grow-1 px-4">
       <!-- WIGET-->
       <div class="contenedor">
+        <?php
+          $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+        ?>
         <div class="tab-content rounded-bottom" class="div-centrado">
           <div class="tab-pane p-2 active" role="tabpanel" id="preview-1179">
             <div class="row">
@@ -46,7 +49,19 @@ if (isset($_SESSION['usuarioActivo'])) {
                       </svg>
                     </div>
                     <div>
-                      <div class="fs-6 fw-semibold text-primary">9</div>
+                      <?php
+                        // Lógica para solicitudes por aprobar
+                        $sql_despachar = "select r.* from requisicion_suministro as r inner join estado_requisicion as e on e.id = r.estado_id where  e.codigo = 'pendiente.despacho'";
+                        $por_despachar = 0;
+                        $requisiciones_pd = mysqli_query($conexion, $sql_despachar);
+
+                        while ($item = mysqli_fetch_array($requisiciones_pd)) {
+                          $por_despachar++;
+                        }
+                      ?>
+                      <div class="fs-6 fw-semibold text-primary">
+                        <?php echo $por_despachar;?>
+                      </div>
                       <div class="text-medium-emphasis text-uppercase fw-semibold small">Requisiciones por Despachar
                       </div>
                     </div>
@@ -65,7 +80,19 @@ if (isset($_SESSION['usuarioActivo'])) {
                       </svg>
                     </div>
                     <div>
-                      <div class="fs-6 fw-semibold text-info">3</div>
+                      <?php
+                        // Lógica para solicitudes por aprobar
+                        $sql_aprobar = "select r.* from requisicion_suministro as r inner join estado_requisicion as e on e.id = r.estado_id where  e.codigo = 'pendiente.aprobacion'";
+                        $por_aproabar = 0;
+                        $requisiciones_pa = mysqli_query($conexion, $sql_aprobar);
+
+                        while ($item = mysqli_fetch_array($requisiciones_pa)) {
+                          $por_aproabar++;
+                        }
+                      ?>
+                      <div class="fs-6 fw-semibold text-info">
+                        <?php echo $por_aproabar;?>
+                      </div>
                       <div class="text-medium-emphasis text-uppercase fw-semibold small">Solicitudes por Aprobar</div>
                     </div>
                   </div>
@@ -76,7 +103,6 @@ if (isset($_SESSION['usuarioActivo'])) {
               <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
               <!-- Lógica para Stock bajo -->
               <?php
-                $conexion=mysqli_connect('localhost','root', '', 'sicafi');
                 $sql_suministros = "select * from ingreso_suministros";
                 $suministros = mysqli_query($conexion, $sql_suministros);
 
