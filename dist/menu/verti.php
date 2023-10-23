@@ -51,7 +51,7 @@
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-        </svg> Depreciación</a>
+        </svg>Depreciación</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="DepreciacionActivo.php"><span class="nav-icon"></span>Depreciación fija</a></li>
       </ul>
@@ -146,7 +146,7 @@
       </ul>
     </li>
     <!--separador-->
-    <?php } ?> 
+    <?php } ?>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-title">UNIDAD DE COMPRAS PÚBLICAS</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -194,24 +194,17 @@
         <li class="nav-item"><a class="nav-link" href="bitacora.php"> Bitacora</a></li>
       </ul>
     </li>
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-        <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
-        </svg> Ayuda del Sistema</a>
-      <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""> Pagina 1</a></li>
-        <li class="nav-item"><a class="nav-link" href=""> Pagina 2</a></li>
-      </ul>
-    </li>
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-        <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-        </svg> Acerca de</a>
-      <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 1</a></li>
-      </ul>
-    </li>
     <?php } ?>
+    <li class="nav-title">SISTEMA</li>
+    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+        </svg> Sistema</a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="Usuarios.php"><span class="nav-icon"></span> Ayuda del Sistema</a></li>
+        <li class="nav-item"><a class="nav-link" href="TablaUsu.php"><span class="nav-icon"></span>Acerca de</a></li>
+      </ul>
+    </li>
   </ul>
   <button class="sidebar-toggler" type="button" ></button>
 </div>

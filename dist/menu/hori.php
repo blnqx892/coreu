@@ -51,6 +51,7 @@
     $total_stock = count($out_stock);
   ?>
   <!-- Notificaciones -->
+  <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
   <ul class="header-nav ms-auto">
     <li class="nav-item dropdown d-md-down-none position-relative">
       <a class="nav-link" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -116,6 +117,7 @@
       </div>
     </li>
   </ul>
+  <?php } ?>
 
   <ul class="header-nav ms-3">
     <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button"

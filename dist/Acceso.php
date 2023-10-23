@@ -10,23 +10,23 @@
     <div class="bg-light min-vh-100 d-flex flex-row align-items-center">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-4">
                     <div class="card-group d-block d-md-flex row">
-                        <div class="card col-md-7 p-4 mb-0">
+                        <div class="card col-md-4 p-4 mb-0">
                             <div class="card-body">
                                 <center>
-                                    <h1>BIENVENIDO A SICAFI</h1>
+                                    <h1>BIENVENIDO <br>A SICAFI</h1>
                                 </center>
                                 <p class="text-medium-emphasis">Iniciar Sesión</p>
-                                <form action="autenticar.php" method="post">
+                                <form action="autenticar.php" method="post" autocomplete="off">
                                     <div class="input-group mb-4">
                                         <span class="input-group-text">
                                             <svg class="icon">
                                                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
                                             </svg>
                                         </span>
-                                        <input class="form-control" type="text" placeholder="Username" name="username"
-                                            id="username">
+                                        <input class="form-control" type="text" placeholder="Usuario" name="username"
+                                            id="username" >
                                     </div>
                                     <div class="input-group mb-4">
                                         <span class="input-group-text">
@@ -35,7 +35,7 @@
                                                 </use>
                                             </svg>
                                         </span>
-                                        <input class="form-control" type="password" placeholder="Password"
+                                        <input class="form-control" type="password" placeholder="Contraseña"
                                             name="password" id="password">
                                     </div>
                                     <div class="row">
