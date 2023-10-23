@@ -54,6 +54,22 @@ if (isset($_SESSION['usuarioActivo'])) {
       die("No posee permisos para esta pantalla");
     }
     $requisiciones = mysqli_query($conexion, $sql_requision) or die("No se puede ejecutar la consulta");
+
+    // Evaluar si es posible realizar una nueva requisición
+    $dia_actual = date('d');
+    $mes_actual = date('m');
+    $anio_actual = date('Y');
+
+    $sql_total_requisiciones = "select * from requisicion_suministro r where month(r.fecha_requisicion) = ".$mes_actual.' and year(r.fecha_requisicion) = '.$anio_actual.' and r.unidad_id = '.$usuario['fk_unidades'];
+    $total_requisiciones = mysqli_query($conexion, $sql_total_requisiciones);
+
+    $count = 0;
+
+    echo $usuario['fk_unidades'];
+
+    while ($item = mysqli_fetch_array($total_requisiciones)) {
+      $count++;
+    }
     ?>
     <div class="container-lg">
       <div class="row">
@@ -65,8 +81,16 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <strong>Requisiciones de suministros</strong>
                 </div>
                 <div>
-                  <button class="btn btn-primary" type="button" id="new_req" data-coreui-toggle="modal"
-                          data-coreui-target="#modalAgg" onclick="create_n()">Nuevo <i class='far fa-plus'></i></button>
+                  <?php if ($dia_actual < 15):?>
+                    <?php if ($count < 1):?>
+                      <button class="btn btn-primary" type="button" id="new_req" data-coreui-toggle="modal"
+                              data-coreui-target="#modalAgg" onclick="create_n()">Nuevo <i class='far fa-plus'></i></button>
+                    <?php else:?>
+                      <span>Ya realizó el pedido correspondiente a este mes</span>
+                    <?php endif;?>
+                  <?php else:?>
+                    <span>Solo puede realizar pedidos entre el 1 y 15 de cada mes</span>
+                  <?php endif;?>
                 </div>
               </div>
             </div>

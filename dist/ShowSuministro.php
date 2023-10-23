@@ -55,9 +55,6 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="my-auto">
                     <strong>Suministro</strong>
                   </div>
-                  <div>
-                    <a class="btn btn-warning" href="<?php echo 'AIngresoSuministros.php?id='.$id?>">Editar <i class='far fa-edit'></i></a>
-                  </div>
                 </div>
               </div>
 
