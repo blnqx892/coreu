@@ -108,9 +108,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <i class="fas fa-check"></i>
                       </button>
                     <?php endif;?>
-                    <button class="btn btn-sm btn-danger text-light" type="button">
-                      <i class="fas fa-times"></i>
-                    </button>
+                    <?php if($requisicion['unidad_id'] == $usuario['fk_unidades'] && $requisicion['codigo_estado'] != 'finalizado'):?>
+                      <button class="btn btn-sm btn-danger text-light" type="button" onclick="remove(<?php echo $requisicion['id']?>)">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    <?php endif;?>
                   </td>
                 </tr>
                 <?php $correlativo++;?>
@@ -285,6 +287,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 <?php include("foot/script.php"); ?>
 <!-- ////////////////////////-->
 <script src="Controlador/Requisiciones/requisiciones.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
 <?php
