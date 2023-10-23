@@ -68,7 +68,8 @@
           <strong>Suministros fuera de stock</strong>
         </div>
         <?php if($total_stock > 0): ?>
-          <?php for ($i = 0; $i < 4; $i++):?>
+          <?php $limit_record = $total_stock > 3 ? 4 : $total_stock;?>
+          <?php for ($i = 0; $i < $limit_record; $i++):?>
             <a class="dropdown-item" href="<?php echo 'ShowSuministro.php?id='.$out_stock[$i]["id"]?>">
               <div class="message">
                 <div>
@@ -94,7 +95,7 @@
               <div class="message">
                 <div class="font-weight-bold">
                   <i>
-                    Otros <?php echo ($total_stock - 4);?> elemento(s)
+                    Otros <?php echo ($total_stock - $limit_record);?> elemento(s)
                   </i>
                 </div>
               </div>
