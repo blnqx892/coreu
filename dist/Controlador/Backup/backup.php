@@ -1,8 +1,8 @@
 <?php
 $host="localhost";
-$username=$_POST["root"];
+$username="root";
 $password="";
-$database_name=$_POST["sicafi"];
+$database_name="sicafi";
 
 $conn=mysqli_connect($host,$username,$password,$database_name);
 
@@ -51,9 +51,16 @@ $backupSQL.="SET FOREIGN_KEY_CHECKS=1;"."\n\n";
 
 
 if(!empty($backupSQL)){
-$backup_file_name=$database_name.date("_Y-m-d").'.sql';
+  $ruta="db/";
+$backup_file_name=$ruta.$database_name.date("_Y-m-d").'.sql';
 $fileHandler=fopen($backup_file_name,'w+');
 $number_of_lines=fwrite($fileHandler,$backupSQL);
 fclose($fileHandler);
 }
+echo"
+    <script language='javascript'>
+    alert('Se genero un respaldo con exito')
+    type: 'danger'
+    window.location='../../Back.php'
+    </script>";
 ?>

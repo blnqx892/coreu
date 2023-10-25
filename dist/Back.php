@@ -56,9 +56,10 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </thead>
                   <tbody style="text-align:center;">
                     <tr>
-                      <td>1</td>
-                      <td><button href="../Controlador/Backup/backup.php" class="btn btn-info rounded-pill" title="Exportar"><i
-                            class='fas fa-download'></i></button></td>
+                      <td><a href="" class="btn btn-info rounded-pill" title="Importar"><i
+                            class='fas fa-upload'></i></a></td>
+                      <td><a href="Controlador/Backup/backup.php" class="btn btn-info rounded-pill" title="Exportar"><i
+                            class='fas fa-download'></i></a></td>
                     </tr>
                   </tbody>
                   <tfoot>
