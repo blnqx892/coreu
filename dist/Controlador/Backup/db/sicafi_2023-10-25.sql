@@ -36,11 +36,13 @@ CREATE TABLE `bitacora` (
   `usuario` varchar(20) NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO bitacora VALUES("1","Inicio Sesión","Pedro Mora","2023-10-25 11:00:56");
 INSERT INTO bitacora VALUES("2","Cerro Sesión","Pedro Mora","2023-10-25 11:01:02");
 INSERT INTO bitacora VALUES("3","Inicio Sesión","Blanqui Melara","2023-10-25 11:01:07");
+INSERT INTO bitacora VALUES("4","Cerro Sesión","Blanqui Melara","2023-10-25 14:44:26");
+INSERT INTO bitacora VALUES("5","Inicio Sesión","Blanqui Melara","2023-10-25 14:44:34");
 
 
 DROP TABLE IF EXISTS categorias CASCADE;
