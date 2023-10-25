@@ -28,19 +28,15 @@ if (isset($_SESSION['usuarioActivo'])) {
                 </svg></a>
             </li>
             <li class="breadcrumb-item">
-              <span>Control de Usuarios</span>
+              <span>Control de Respaldo</span>
             </li>
             <li class="breadcrumb-item active">
-              <span>Bitacora</span>
+              <span>Respaldo</span>
             </li>
           </ol>
         </nav>
       </div>
     </header>
-    <?php
-        $conexion=mysqli_connect('localhost','root', '', 'sicafi');
-        $sql="SELECT * from bitacora order by id DESC";
-        $bitacoras= mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); ?>
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
@@ -48,36 +44,27 @@ if (isset($_SESSION['usuarioActivo'])) {
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Bitacora</strong></div>
+              <div class="card-header"><strong>Importar/Exportar</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
                 <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                      <th style="text-align:center;">Usuario</th>
-                      <th style="text-align:center;">Fecha</th>
-                      <th style="text-align:center;">Hora</th>
-                      <th style="text-align:center;">Actividad</th>
+                      <th style="text-align:center;">Importar</th>
+                      <th style="text-align:center;">Exportar</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
-                  <?php While ($bitacora = mysqli_fetch_assoc($bitacoras)) {
-                         date_default_timezone_set('America/El_Salvador');
-                  ?>
                     <tr>
-                      <td><?php echo $bitacora['usuario'] ?></td>
-                      <td><?php echo date('d/m/Y',strtotime($bitacora['fecha_creacion'])) ?></td>
-                      <td><?php echo date('H:i:s A',strtotime($bitacora['fecha_creacion'])) ?></td>
-                      <td><?php echo $bitacora['evento'] ?></td>
+                      <td>1</td>
+                      <td><button href="../Controlador/Backup/backup.php" class="btn btn-info rounded-pill" title="Exportar"><i
+                            class='fas fa-download'></i></button></td>
                     </tr>
-                    <?php } ?>
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th style="text-align:center;">Usuario</th>
-                      <th style="text-align:center;">Fecha</th>
-                      <th style="text-align:center;">Hora</th>
-                      <th style="text-align:center;">Actividad</th>
+                    <th style="text-align:center;">Importar</th>
+                      <th style="text-align:center;">Exportar</th>
                     </tr>
                   </tfoot>
                 </table>

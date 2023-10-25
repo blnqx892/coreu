@@ -183,7 +183,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Control de Respaldo</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="Back.php"><span class="nav-icon"></span> Backup</a></li>
       </ul>
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
@@ -191,7 +191,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
         </svg> Bitacora</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="bitacora.php"> Bitacora</a></li>
+        <li class="nav-item"><a class="nav-link" href="Bitacora.php"> Bitacora</a></li>
       </ul>
     </li>
     <?php } ?>

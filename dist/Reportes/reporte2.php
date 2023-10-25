@@ -107,17 +107,17 @@
       <tbody class="infoTitulosVehiculo">
         <tr>
           <td><b>No. Motor:</b></td>
-          <td></td>
+          <td>123456</td>
         </tr>
         <tr>
           <td><b>No. Chasis: </b></td>
-          <td></td>
+          <td>56789098</td>
         </tr>
         <tr>
           <td><b>Capacidad: </b></td>
-          <td></td>
+          <td>4</td>
           <td><b>Placa: </b></td>
-          <td></td>
+          <td>bga 67-989</td>
         </tr>
       </tbody>
     </table><br>

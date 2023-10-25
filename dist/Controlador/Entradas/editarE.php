@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../../Confi/conexion.php");
 $conexion = con();
 
@@ -20,21 +21,21 @@ $numerocha = $_POST["numerochasis"];
 $numerop = $_POST["numeropla"];
 $capaci = $_POST["capa"];
 $id    = $_POST["_id"];
-    
 
-    $sql= " UPDATE ingreso_entradas SET fecha_adquisicion='$fecha', numero_factura='$factura',costo_adquisicion='$costo',fk_proveedores='$prov' 
+
+    $sql= " UPDATE ingreso_entradas SET fecha_adquisicion='$fecha', numero_factura='$factura',costo_adquisicion='$costo',fk_proveedores='$prov'
     ,nombre_adquisicion='$nombre',serie_adquisicion='$serie',marca='$marca',modelo='$modelo', color='$color',cargo='$cargo',vida_util='$vida',
     fk_categoria='$cate',descripcion_adquisicion='$descrip',numero_motor='$numerom',numero_chasis='$numerocha',numero_placa='$numerop',capacidad='$capaci'
      WHERE id = '$id'";
 
-   
+
 //
-// 
+//
 
       //var_dump($sql); /*para que proves porq el error */
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
-  
+
     //echo "Los datos se han insertado correctamente";
     $json = array();
             if ($resultado) {
@@ -52,4 +53,11 @@ $id    = $_POST["_id"];
             }
            $jsonstring = json_encode($json[0]);
            echo $jsonstring;
+
+                     //////////CAPTURA DATOS PARA BITACORA
+$usuari=$_SESSION['usuarioActivo'];
+$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Edito los datos de un bien','$nom',now())";
+mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+///////////////////////////////////////////////
 ?>
