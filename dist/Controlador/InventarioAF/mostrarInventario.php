@@ -6,14 +6,18 @@ $con = con();
 
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
  $sql="SELECT asignacion_activo.id AS id_asignacion,ingreso_entradas.nombre_adquisicion,categorias.categoria,
-  asignacion_activo.fecha_asignacion,asignacion_activo.codigo_institucional,asignacion_activo.estado_bien,unidades.nombre_unidad
-  FROM asignacion_activo 
-  INNER JOIN ingreso_entradas on ingreso_entradas.id = asignacion_activo.fk_ingreso_entradas 
-  INNER JOIN usuarios ON usuarios.id = asignacion_activo.fk_usuarios 
-  INNER JOIN unidades ON unidades.id = usuarios.fk_unidades 
-  INNER JOIN categorias on categorias.id = ingreso_entradas.fk_categoria 
-  ORDER BY ingreso_entradas.nombre_adquisicion ASC";
-
+ asignacion_activo.fecha_asignacion,asignacion_activo.codigo_institucional,asignacion_activo.estado_bien,unidades.nombre_unidad
+ FROM asignacion_activo
+ INNER JOIN ingreso_entradas on ingreso_entradas.id = asignacion_activo.fk_ingreso_entradas
+ INNER JOIN usuarios ON usuarios.id = asignacion_activo.fk_usuarios
+ INNER JOIN unidades ON unidades.id = usuarios.fk_unidades
+ INNER JOIN categorias on categorias.id = ingreso_entradas.fk_categoria
+ where asignacion_activo.id not in (SELECT
+ aa.id
+ from mantenimiento_activos ma
+ inner join asignacion_activo aa on ma.fk_asignacion_activo = aa.id
+ where ma.tipo_registro like 'Descargo')
+ ORDER BY ingreso_entradas.nombre_adquisicion ASC";
 
 
   $result = mysqli_query($conexion, $sql);
@@ -29,8 +33,6 @@ $con = con();
 $fechaMySQL = $row['fecha_asignacion'];
 $timestamp = strtotime($fechaMySQL);
 $fechaFormateada = date("d-m-Y", $timestamp);
-
-
 
     $json[] = array(
       'id'    => $row['id_asignacion'],

@@ -77,7 +77,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                    </div>
                    <div class="col-md-3" id="div-destino">
                       <label class="form-label" for="validationCustom02">Destino:</label>
-                      <select class="form-select once-validate-1" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad" disabled> </select>
+                      <select class="form-select " id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad" disabled> </select>
                       <div class="invalid-feedback">Please select a valid state.
                    </div>
                   </div>

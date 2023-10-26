@@ -13,26 +13,6 @@ $(document).ready(function () {
       let observa         = $("#observaciondescargo").val();
       let _id_asigna      = $("#codigo_id :selected").val();
 
-     // if ( 
-      //  $("#descriC").val() == "") {
-      //    Swal.fire({
-      //      icon: "error",
-      //      title: "error",
-      //      text: "Campos Vacios",
-      //    });
-      
-       // }else if(
-        //  $("#flexSwitchCheckChecked").val()=="on" &&
-       //   ($("#motorC").val() == "" || $("#chasisC").val() == "" || $("#placaC").val() == "" ||  
-       //   $("#capacidadC").val() == "")
-       // ){
-      
-      //  Swal.fire({
-      //    icon: "error",
-      //    title: "error",
-      //    text: "Campos Vacios",
-     //   });
-    //  } else {
       if (validation(1)) {
 
 

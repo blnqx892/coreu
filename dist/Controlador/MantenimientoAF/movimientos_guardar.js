@@ -2,6 +2,7 @@ $(document).ready(function () {
      
     //********************guardar  */
     const toast = new coreui.Toast(document.getElementById('liveToast'));
+
     $("#GuardaMovimientos").on("click", function () {
       validation();
       let fechaMovimiento = $("#fecha_movimiento").val();
@@ -9,6 +10,7 @@ $(document).ready(function () {
       let tipomovi        = $("#perC").val();
       let observa         = $("#observacion").val();
       let _id_asigna      = $("#codigo_id :selected").val();
+     
       if (validation(1)) {
         var formData = new FormData(); //permite recoger la data para enviarla al controlador
        
