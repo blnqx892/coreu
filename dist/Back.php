@@ -47,7 +47,7 @@ if (isset($_SESSION['usuarioActivo'])) {
               <div class="card-header"><strong>Importar/Exportar</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
-                <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                <table id="" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
                       <th style="text-align:center;">Importar</th>
