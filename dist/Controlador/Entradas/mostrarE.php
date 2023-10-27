@@ -32,13 +32,13 @@ $con = con();
       'marca'=> $row['marca'],
       'cate'=> $row['categoria'],
       'botones'=>'<td>
-            <button type="button" id="ver" class="btn btn-info  vere-item" id-item-vere="'.$row['principal'].'" title="Ver"><i 
-            class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVer"></i></button>    
-            <button type="button" id="edit" class="btn btn-warning  edite-item" id-item-e="'.$row['principal'].'" title="Editar">
+            <button type="button" id="ver" class="btn btn-outline-info  vere-item" id-item-vere="'.$row['principal'].'" title="Ver"><i
+            class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVer"></i></button>
+            <button type="button" id="edit" class="btn btn-outline-warning  edite-item" id-item-e="'.$row['principal'].'" title="Editar">
             <i class="far fa-edit"></i></button>
             <a  href="../dist/AsignaciondeActivo.php?a='.$row['principal'].'">
-            <button type="button"  class="btn btn-success  alta-item"  title="Codificar"><i
-            class="	fas fa-barcode"></i></button></a>   
+            <button type="button"  class="btn btn-outline-success  alta-item"  title="Codificar"><i
+            class="	fas fa-barcode"></i></button></a>
       </td>',
       'i'=>$i
     );

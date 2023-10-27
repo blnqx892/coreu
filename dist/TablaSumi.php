@@ -80,11 +80,12 @@ if (isset($_SESSION['usuarioActivo'])) {
               <div class="card-body">
                 <div class="row">
                   <div class="d-flex w-100 justify-content-center">
+                    <!--
                     <label for="cats" class="me-2">Categorias</label>
                     <div class="input-group mb-3">
                       <select name="cats" id="cats_s" class="form-select-sm">
                         <option value="">Todas</option>
-                        <?php while($cat = mysqli_fetch_assoc($categorias)) {?>
+                          <?php while($cat = mysqli_fetch_assoc($categorias)) {?>
                           <?php if ($cat["categoria_id"] == $categoria):?>
                             <option value="<?php echo $cat["categoria_id"]?>" selected="selected"><?php echo $cat["nomb_categoria"]?></option>
                           <?php else:?>
@@ -94,7 +95,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                       </select>
                       <button type="button" class="btn btn-sm btn-primary" id="cats_b">Filtrar</button>
                     </div>
-
+                  -->
                   </div>
                 </div>
                 <!-- dataTable-->
@@ -158,11 +159,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <?php endif;?>
                       </td>
                       <td>
-                        <a href="<?php echo 'ShowSuministro.php?id='.$mostrar['id']?>" class="btn btn-info rounded-pill" title="Ver"><i
+                        <a href="<?php echo 'ShowSuministro.php?id='.$mostrar['id']?>" class="btn btn-outline-info rounded-pill" title="Ver"><i
                             class='far fa-eye'></i></a>
-                        <a href="<?php echo 'AIngresoSuministros.php?id='.$mostrar['id']?>" class="btn btn-warning rounded-pill" title="Editar"><i
+                        <a href="<?php echo 'AIngresoSuministros.php?id='.$mostrar['id']?>" class="btn btn-outline-warning rounded-pill" title="Editar"><i
                             class="far fa-edit"></i></a>
-                        <button type="button" class="btn btn-danger rounded-pill" onclick="remove(<?php echo $mostrar['id'] ?>)" title="Baja"><i
+                        <button type="button" class="btn btn-outline-danger rounded-pill" onclick="remove(<?php echo $mostrar['id'] ?>)" title="Baja"><i
                             class="fa-solid fa-arrow-down-long"></i></i></button>
                       </td>
                     </tr>
