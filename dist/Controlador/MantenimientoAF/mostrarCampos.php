@@ -10,7 +10,7 @@ $sql="
   SELECT ingreso_entradas.nombre_adquisicion,
   ingreso_entradas.id as ingreso_entrada_id,
   ingreso_entradas.costo_adquisicion,
-  ingreso_entradas.vida_util,
+  categorias.vida_util,
   ingreso_entradas.color,
   ingreso_entradas.modelo,
   ingreso_entradas.serie_adquisicion,

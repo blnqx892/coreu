@@ -1,7 +1,7 @@
 $(document).ready(function () {
   
   const toast = new coreui.Toast(document.getElementById('liveToast'));
-    //**************************************guardar  */
+    // *********  guardar  ******************************
   
     $("#GuardaMobiliario").on("click", function () {
 
@@ -72,13 +72,19 @@ if (validation(1)) {
 
 // Validación de requeridos
    $(".dos-validate-" + index).each(function (k, v) {
-    console.log(v);
-    if ($(v).val().length == 0 && $(v).val != null && $(v).val() !== undefined && $(v).val() !== '') {
+    console.log($(v).val());
+    // Evaluo el valor en el campo y determino que no sea un valor nulo, indefinido, vacio, o con longitud menor a 1
+    if ($(v).val() != null && typeof $(v).val() !== 'undefined' && $(v).val().trim() !== '') {
+      // Si la condicion se cumple quitare la clase 'is-invalid' y agregare la clase 'is-valid'
       $(v).removeClass('is-invalid').addClass('is-valid');
+      // Busco en el padre la clase msg-error y la elimino de mi componente html
       $(v).parent().find('.msg-error').remove();
     } else {
+      // Remuevo la clase 'is-valid' y agrego la clase 'is-invalid'
       $(v).removeClass('is-valid').addClass('is-invalid');
+      // Creamos un component small y lo agregamos a nuestra variables html
       const html = '<small class="text-danger msg-error">El campo es requerido</small>';
+      // Buscamos en nuestro componente padre la clase 'msg-error' y la removemos
       $(v).parent().find('.msg-error').remove();
       $(v).parent().append(html);
       validate = false;
@@ -90,13 +96,10 @@ if (validation(1)) {
 
   function limpiar(index) {
     $(".dos-validate-" + index).each(function (k, v) {
-
       $(v).removeClass('is-valid');
-
-
     });
-
   }
+
   /********************fin funcion validar */
   function show_toast(severity, title, body) {
     $("#liveToast").removeClass('text-bg-success text-bg-danger').addClass('text-bg-' + severity);

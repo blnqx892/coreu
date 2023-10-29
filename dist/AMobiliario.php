@@ -53,7 +53,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row">
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom01">Fecha:</label>
-                      <input class="form-control dos-validate-1 " id="fecham" type="date" required="">
+                      <input class="form-control dos-validate-1 " id="fecham" type="date" required="true">
                     </div>
                   </div>
                   <!--FIN SECCION FECHA-->
@@ -76,8 +76,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row  my-4">
                     <div class="col-md-6">
                       <label for="inputZip" class="form-label">Descripción:</label>
-                      <textarea class="form-control dos-validate-1" id="descrim" row="3">
-                      </textarea>
+                      <textarea class="form-control dos-validate-1" id="descrim" row="3"></textarea>
                     </div>
                   </div>
                   <!--FIN SECCION CUATRO-->
