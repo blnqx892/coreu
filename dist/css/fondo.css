@@ -29,7 +29,7 @@ body {
 
 #hea {
   position: absolute;
-  color: #2b1bed;
+  color: #046db1;
   font-size: 4rem;
   top: 8rem;
   left: 54%;
@@ -67,7 +67,7 @@ form {
 
 #uname,
 #password {
-  margin-top: 15px;
+  margin-top: 0px;
   margin-bottom: 15px;
 }
 
@@ -180,7 +180,7 @@ form {
 }
 
 .len {
-  background-color: #f4f1ed;
+  background-color: #E3F7FC;
   color: rgb(34, 125, 178);
   border-color: rgb(155, 211, 247);
   border: 50px groove (internal value);
