@@ -20,7 +20,7 @@
           <input class="input-field" type="text" id="username" name="username" required size="10" style="font-family: Arial; font-size: 16pt;"><br>
 
           <label for="psw">Contraseña</label><br>
-          <input class="input-field" type="password" id="password" name="password" required><br><br>
+          <input class="input-field" type="password" id="password" name="password" required size="10" style="font-family: Arial; font-size: 16pt;"><br><br>
         </fieldset><br><br>
         <center>
           <button type="submit" class="btns btn-info">Iniciar Sesión</button>
