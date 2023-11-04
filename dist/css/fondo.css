@@ -62,7 +62,7 @@ form {
 }
 
 .input-field:focus {
-  border: 2px solid #7a71f4;
+  border: 2px solid #696866;
 }
 
 #uname,
@@ -188,6 +188,6 @@ form {
   width: 400px
 }
 .len2{
-  color: rgb(52, 52, 95);
+  color: #046db1;
 font-weight: bold
 }

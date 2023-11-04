@@ -13,7 +13,7 @@
       <h1 id="hea">S I C A F I</h1>
       <p id="subheadlin">Bienvenido</p><br>
     </div>
-    <div class="field-contai">
+    <div class="field-contai" style="font-family: Arial; font-size: 15pt;">
       <form action="autenticar.php" method="post" autocomplete="off">
         <fieldset class="len">
           <legend class="len2">Acceder</legend><br>
