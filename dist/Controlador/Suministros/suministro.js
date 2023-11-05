@@ -14,6 +14,31 @@ $(document).ready(function() {
       height: 50,
       fontSize: 12
     });
+    JsBarcode("#barcode_print", valor, {
+      width: 1,
+      height: 50,
+      fontSize: 12
+    });
+    if (valor.length > 0) {
+      $("#print_bc").show();
+    } else {
+      $("#print_bc").hide();
+    }
+  });
+
+  $("#print_bc").click(function(e) {
+    e.preventDefault();
+    if (!window.print) {
+      alert("El navegador no permite la impresion..");
+      return;
+    } else {
+      $("#bbody").hide();
+      $("#bbc").show();
+      window.print();
+      $("#bbody").show();
+      $("#bbc").hide();
+    }
+
   });
 
   // Variables globales
@@ -73,6 +98,12 @@ $(document).ready(function() {
             height: 50,
             fontSize: 12
           });
+          JsBarcode("#barcode_print", response.codigo_barra, {
+            width: 1,
+            height: 50,
+            fontSize: 12
+          });
+          $("#print_bc").show();
         } else {
           nuevo = true;
         }

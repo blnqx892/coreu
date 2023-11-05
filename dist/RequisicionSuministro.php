@@ -279,7 +279,7 @@ if (isset($_SESSION['usuarioActivo'])) {
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" id="save_req" class="btn btn-primary">Guardar</button>
+            <button type="button" id="save_req" class="btn btn-primary" data-usuario="<?php echo $usuario['id']?>">Guardar</button>
             <button type="reset" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
           </div>
         </div>

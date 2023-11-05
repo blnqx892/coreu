@@ -15,15 +15,17 @@ while ($e = mysqli_fetch_array($r_estado)) {
   $estado = $e["id"];
 }
 
+$fechaId = new DateTime();
+$fecha = $fechaId->format('Y-m-d H:i:s');
 // Actualizar requisición
-$q_req = "update requisicion_suministro set estado_id = ".$estado." where id = ".$id;
+$q_req = "update requisicion_suministro set estado_id = ".$estado.", despachado_por = ".$body->usuario.", fecha_despacho = '".$fecha."' where id = ".$id;
 
 mysqli_query($conexion, $q_req);
 
 $q_suministro = "";
 // Guardar los suministros
 $is_ok = true;
-foreach ($body as $suministro) {
+foreach ($body->suministros as $suministro) {
   $q_suministro = "update detalle_requisicion set cantidad_despachada = ".$suministro->cantidad." where id = ".$suministro->detalle_id;
 
   if (!mysqli_query($conexion, $q_suministro)) {

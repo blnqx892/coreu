@@ -31,7 +31,7 @@ $q_req = "insert into requisicion_suministro (
           ".$body->unidad.",
           '".$body->fechaPedido."',
           '".$fechaCreacion."',
-          'Usuario',
+          ".$body->usuario.",
           ".$estado."
 )";
 

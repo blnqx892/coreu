@@ -4,7 +4,7 @@ $conexion = con();
 
 $suministro = $_GET["suministro"];
 
-$query = "select * from kardex where fk_ingreso_suministros = ".$suministro;
+$query = "select * from kardex where fk_ingreso_suministros = ".$suministro." order by fecha_creacion";
 
 $result = mysqli_query($conexion, $query);
 

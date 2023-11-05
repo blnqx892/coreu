@@ -14,6 +14,12 @@ if (isset($_SESSION['usuarioActivo'])) {
 <!-- ////////////////////////-->
 
 <body>
+<div class="row" id="bbc" style="display:none;">
+  <div class="col-md-3">
+    <svg id="barcode_print" width="100%"></svg>
+  </div>
+</div>
+<div id="bbody">
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
   <?php include("menu/verti.php"); ?>
   <!-- ////////////////////////-->
@@ -102,7 +108,16 @@ if (isset($_SESSION['usuarioActivo'])) {
    <!--FIN ----------------->
                   <div class="row">
                     <div class="col-md-3">
-                      <svg id="barcode" width="100%"></svg>
+                      <div class="row">
+                        <div class="col-12">
+                          <svg id="barcode" width="100%"></svg>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <button class="btn btn-sm col-12 btn-outline-info" id="print_bc" type="button" style="display: none">Imprimir</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -202,11 +217,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </div>
                     <div class="col-md-3">
                       <label for="inputCity" class="form-label">Cantidad:</label>
-                      <input type="number" min="1" step="0.01"  class="form-control v-required-2 v-min-2" id="cantidad" name="nombreProv" data-min="1">
+                      <input type="number" min="1.00" step="0.01"  class="form-control v-required-2 v-min-2" id="cantidad" name="nombreProv" data-min="1.00">
                     </div>
                     <div class="col-md-3">
                       <label for="inputCity" class="form-label">Precio:</label>
-                      <input type="number" min="0" step="0.01"  class="form-control v-required-2 v-min-2" id="precio" name="nombreProv" data-min="0">
+                      <input type="number" min="0.00" step="0.01"  class="form-control v-required-2 v-min-2" id="precio" name="nombreProv" data-min="0.00">
                     </div>
                   </div>
                 </div>
@@ -242,6 +257,7 @@ if (isset($_SESSION['usuarioActivo'])) {
         </div>
       </div>
     </div>
+</div>
 </body>
 
 </html>

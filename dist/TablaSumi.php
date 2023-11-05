@@ -106,7 +106,6 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <th style="text-align:center;">Codigo de barra</th>
                       <th style="text-align:center;">Nombre de Suministro</th>
                       <th style="text-align:center;">Presentación</th>
-                      <th style="text-align:center;">Ubicación</th>
                       <th style="text-align:center;">Categoría</th>
                       <th style="text-align:center;">Stock</th>
                       <th style="text-align:center;">Acción</th>
@@ -132,7 +131,6 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <td><?php echo $mostrar['codigo_barra'] ?></td>
                       <td><?php echo $mostrar['nombre_suministro'] ?></td>
                       <td><?php echo $mostrar['presentacion'] ?></td>
-                      <td><?php echo $mostrar['estante'].'-'.$mostrar['entrepaño'].'-'.$mostrar['casilla'] ?></td>
                       <td><?php echo $mostrar['nomb_categoria'] ?></td>
                       <td>
                         <?php if($mostrar["existencia_maxima"] < $stock):?>

@@ -7,6 +7,32 @@
 </head>
 
 <body style="margin: 30px 30px 20px 20px;">
+  <?php
+    $id = $_GET["id"];
+    $conexion = mysqli_connect('localhost', 'root', '', 'sicafi');
+    $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad, ";
+    $sql_requision .= "concat(u1.nombre, ' ', u1.apellido) u_creado, concat(u2.nombre, ' ', u2.apellido) u_aprobado, concat(u3.nombre, ' ', u3.apellido) u_despachado ";
+    $sql_requision .= "from requisicion_suministro as r ";
+    $sql_requision .= "inner join unidades as u on u.id = r.unidad_id ";
+    $sql_requision .= "inner join estado_requisicion as e on e.id = r.estado_id ";
+    $sql_requision .= "inner join usuarios u1 on u1.id = r.creado_por ";
+    $sql_requision .= "left join usuarios u2 on u2.id = r.aprobado_por ";
+    $sql_requision .= "left join usuarios u3 on u3.id = r.despachado_por ";
+    $sql_requision .= " where r.id = ".$id;
+
+    $requisiciones = mysqli_query($conexion, $sql_requision) or die("No se puede ejecutar la consulta");
+
+    $requisicion = null;
+    while ($e = mysqli_fetch_array($requisiciones)){
+      $requisicion = $e;
+    }
+
+    $f_creacion = strtotime($requisicion['fecha_creacion']);
+    $fecha_creacion = date('d/m/Y', $f_creacion);
+
+    $f_despacho = strtotime($requisicion['fecha_despacho']);
+    $fecha_despacho = date('d/m/Y', $f_despacho);
+  ?>
   <table width="1000" border="0" align="center">
     <tr>
       <td><img src="../img/iconsv.jpg" width="120" height="120"></td>
@@ -26,13 +52,13 @@
     <tbody style="color:#00000;font-size:125%;">
       <tr>
         <td><b>FECHA DE SOLICITUD:</b></td>
-        <td> 13/10/2023 </td>
+        <td> <?php echo $fecha_creacion; ?> </td>
         <td><b>FECHA DE DESPACHO: </b></td>
-        <td> <?php echo date("d/m/Y"); ?> </td>
+        <td> <?php echo $fecha_despacho; ?> </td>
       </tr>
       <tr>
         <td><b>UNIDAD SOLICITADA: </b></td>
-        <td>UNIDAD DE CARNET DE MINORIDAD</td>
+        <td><?php echo $requisicion['nombre_unidad']?></td>
       </tr>
     </tbody>
   </table><br>
@@ -51,17 +77,39 @@
         </tr>
       </thead>
       <tbody style="color:#00000;font-size:100%;">
-        <template id="fila-template">
+      <?php
+        $sql_detalle = 'select dr.*, s.nombre_suministro, s.codigo_barra, s.presentacion ';
+        $sql_detalle .= 'from detalle_requisicion dr ';
+        $sql_detalle .= 'join ingreso_suministros s on s.id = dr.suministro_id ';
+        $sql_detalle .= 'where dr.requisicion_id = '.$id;
+
+        $detalles = mysqli_query($conexion, $sql_detalle);
+      ?>
+        <?php while($detalle = mysqli_fetch_array($detalles)):?>
+          <?php
+            $sql_costos = 'select * from kardex where fk_ingreso_suministros = '.$detalle['suministro_id'].' and cantidad_entrada != 0';
+            $costos = mysqli_query($conexion, $sql_costos);
+
+            $precio = 0;
+            $count = 0;
+            $total = 0;
+            while ($costo = mysqli_fetch_array($costos)) {
+              $precio += $costo['cantidad_entrada'] * $costo['precio_entrada'];
+              $count += $costo['cantidad_entrada'];
+            }
+            $precio /= $count;
+            $total = $precio * $detalle['cantidad_despachada'];
+          ?>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><?php echo $detalle['codigo_barra']?></td>
+            <td><?php echo $detalle['presentacion']?></td>
+            <td><?php echo $detalle['nombre_suministro']?></td>
+            <td><?php echo $detalle['cantidad_solicitada']?></td>
+            <td><?php echo $detalle['cantidad_despachada']?></td>
+            <td><?php echo round($precio,2)?></td>
+            <td><?php echo round($total, 2)?></td>
           </tr>
-        </template>
+        <?php endwhile;?>
       </tbody>
     </table>
   </div><br>
@@ -74,7 +122,9 @@
       </thead>
       <tbody>
         <tr>
-          <td colspan="4">Ahi van unas observaciones</td>
+          <td colspan="4">
+            <br>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -91,10 +141,10 @@
       </thead>
       <tbody>
         <tr align="center">
-          <td>Pancracio Joaquin Barraza Perez </td>
-          <td>Antonieta de las Nieves</td>
-          <td>Wisin y Yandel los Extraterrestres </td>
-          <td>El Chapulin Colorado</td>
+          <td><?php echo $requisicion['u_creado']?></td>
+          <td><?php echo $requisicion['u_aprobado']?></td>
+          <td> </td>
+          <td><?php echo $requisicion['u_despachado']?></td>
         </tr>
         <tr align="center">
           <td><b>NOMBRE QUIEN SOLICITA</b></td>
@@ -125,125 +175,4 @@
       document.frmTesis.IM.style.visibility = "visible";
     }
   }
-
-
-  let suministros = [{
-      "id": 1,
-      "código": "PS1001",
-      "unidad_medida": "Unidad",
-      "descripción_material_insumo": "Lápices HB",
-      "cantidad_solicitada": 100,
-      "cantidad_despachada": 100,
-      "precio_unitario": 0.50,
-      "costo_total": 50.00
-    },
-    {
-      "id": 2,
-      "código": "ES2002",
-      "unidad_medida": "Caja",
-      "descripción_material_insumo": "Resmas de papel A4",
-      "cantidad_solicitada": 20,
-      "cantidad_despachada": 20,
-      "precio_unitario": 5.00,
-      "costo_total": 100.00
-    },
-    {
-      "id": 3,
-      "código": "MG3003",
-      "unidad_medida": "Unidad",
-      "descripción_material_insumo": "Bolígrafos negros",
-      "cantidad_solicitada": 50,
-      "cantidad_despachada": 50,
-      "precio_unitario": 0.75,
-      "costo_total": 37.50
-    },
-    {
-      "id": 4,
-      "código": "NC4004",
-      "unidad_medida": "Caja",
-      "descripción_material_insumo": "Cuadernos",
-      "cantidad_solicitada": 10,
-      "cantidad_despachada": 10,
-      "precio_unitario": 4.50,
-      "costo_total": 45.00
-    },
-    {
-      "id": 5,
-      "código": "TP5005",
-      "unidad_medida": "Unidad",
-      "descripción_material_insumo": "Tijeras de oficina",
-      "cantidad_solicitada": 30,
-      "cantidad_despachada": 30,
-      "precio_unitario": 1.25,
-      "costo_total": 37.50
-    },
-    {
-      "id": 6,
-      "código": "RG6006",
-      "unidad_medida": "Caja",
-      "descripción_material_insumo": "Reglas de plástico",
-      "cantidad_solicitada": 25,
-      "cantidad_despachada": 25,
-      "precio_unitario": 2.00,
-      "costo_total": 50.00
-    },
-    {
-      "id": 7,
-      "código": "PA7007",
-      "unidad_medida": "Unidad",
-      "descripción_material_insumo": "Papel adhesivo",
-      "cantidad_solicitada": 40,
-      "cantidad_despachada": 40,
-      "precio_unitario": 0.80,
-      "costo_total": 32.00
-    },
-    {
-      "id": 8,
-      "código": "LC8008",
-      "unidad_medida": "Caja",
-      "descripción_material_insumo": "Lápices de colores",
-      "cantidad_solicitada": 15,
-      "cantidad_despachada": 15,
-      "precio_unitario": 3.00,
-      "costo_total": 45.00
-    },
-    {
-      "id": 9,
-      "código": "GC9009",
-      "unidad_medida": "Unidad",
-      "descripción_material_insumo": "Gomas de borrar",
-      "cantidad_solicitada": 60,
-      "cantidad_despachada": 60,
-      "precio_unitario": 0.25,
-      "costo_total": 15.00
-    },
-    {
-      "id": 10,
-      "código": "MA1010",
-      "unidad_medida": "Caja",
-      "descripción_material_insumo": "Marcadores de pizarra",
-      "cantidad_solicitada": 5,
-      "cantidad_despachada": 5,
-      "precio_unitario": 8.00,
-      "costo_total": 40.00
-    }
-  ];
-
-  let template = document.getElementById('fila-template');
-  let tbody = document.querySelector('.table_informacion tbody');
-
-  suministros.forEach(function (suministro) {
-    let contenidoTabla = document.importNode(template.content, true);
-    let cols = contenidoTabla.querySelectorAll('td');
-
-    cols[0].textContent = suministro.código;
-    cols[1].textContent = suministro.unidad_medida;
-    cols[2].textContent = suministro.descripción_material_insumo;
-    cols[3].textContent = suministro.cantidad_solicitada;
-    cols[4].textContent = suministro.cantidad_despachada;
-    cols[5].textContent = '$ ' + suministro.precio_unitario.toFixed(2);
-    cols[6].textContent = '$ ' + suministro.costo_total.toFixed(2);
-    tbody.appendChild(contenidoTabla);
-  });
-
 </script>

@@ -72,11 +72,12 @@ $(document).ready(function() {
 
   $("#save_req").click(function (e) {
     e.preventDefault();
+    const usuario = $("#save_req").data('usuario');
 
     switch (kind_save) {
-      case 'create': save_f(); break;
-      case 'approve': approve_f(); break;
-      case 'service': service_f(); break;
+      case 'create': save_f(usuario); break;
+      case 'approve': approve_f(usuario); break;
+      case 'service': service_f(usuario); break;
       default: break;
     }
   });
@@ -112,11 +113,12 @@ $(document).ready(function() {
     toast.show();
   }
 
-  function save_f() {
+  function save_f(usuario) {
     // Construir la estructura para guardar
     data = {
       fechaPedido: $("#fechaP").val(),
       unidad: $("#unidad").val(),
+      usuario: usuario,
       suministros: []
     };
 
@@ -147,7 +149,7 @@ $(document).ready(function() {
       });
   }
 
-  function approve_f() {
+  function approve_f(usuario) {
     const data = [];
     // Agregar los suministros
     all_items_ok.forEach((item) => {
@@ -158,12 +160,16 @@ $(document).ready(function() {
       });
     });
 
+    const body = {
+      usuario: usuario,
+      suministros: data
+    }
     // Almacenar la información
     const url = host + '/Coreu/dist/Controlador/Requisiciones/approve.php?id=' + identify;
 
     fetch(url, {
       method: 'POST',
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     }).then(
       res => res.json()
     )
@@ -176,7 +182,7 @@ $(document).ready(function() {
       });
   }
 
-  function service_f() {
+  function service_f(usuario) {
     const data = [];
     // Agregar los suministros
     all_items_ok.forEach((item) => {
@@ -188,12 +194,16 @@ $(document).ready(function() {
       });
     });
 
+    const body = {
+      usuario: usuario,
+      suministros: data
+    }
     // Almacenar la información
     const url = host + '/Coreu/dist/Controlador/Requisiciones/service.php?id=' + identify;
 
     fetch(url, {
       method: 'POST',
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     }).then(
       res => res.json()
     )
@@ -201,7 +211,8 @@ $(document).ready(function() {
       .then(response => {
         if (response.statusCode === 200) {
           localStorage.setItem('is_save', true);
-          window.location.href = window.location.origin + window.location.pathname + '?id=' + response.data;
+          window.open(window.location.origin + '/coreu/dist/Reportes/reporte3.php?id=' + identify, '_blank');
+          location.reload();
         }
       });
   }
