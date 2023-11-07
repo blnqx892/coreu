@@ -1,4 +1,6 @@
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8ttSjyyV6t+scXiKV8eY5NMpJWZG3HY4+" crossorigin="anonymous">
   <base href="./">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,6 +78,6 @@
 
   <!-- As A jQuery Plugin -->
   <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.js'></script>
- 
+
 
 </head>

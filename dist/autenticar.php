@@ -1,6 +1,6 @@
 <?php
 include("Confi/conexion.php");
-
+require_once('alertas.php');
 $conexion = con();
 session_start();
 
@@ -13,27 +13,27 @@ if ($row=mysqli_fetch_assoc($consulta)) {
     $md5=$row['contrasena'];
     if (password_verify($contra,$md5)) {
         $_SESSION['usuarioActivo']=$row;
-        echo"
-        <script language='javascript'>
-        alert('BIENVENIDO')
-        type: 'danger'
-        window.location='index.php'
-        </script>";
-    }else {
-        echo"
-        <script language='javascript'>
-        alert('USUARIO O CONTRASEÑA INCORRECTA, VUELVE A INTENTARLO')
-        type: 'danger'
-        window.location='Acceso.php'
-        </script>";
+
+        // Mostrar la alerta de éxito
+        $alerta = new Alerta('success', '¡Bienvenido!', 'Has iniciado sesión correctamente.');
+        $alerta->mostrar();
+        // Redireccionar a la página
+        header("Location: index.php");
+    } else {
+        // Mostrar la alerta de error
+        $alerta = new Alerta('danger', '¡Error de inicio de sesión!', 'El usuario o la contraseña no son correctos.');
+        $alerta->mostrar();
+
+        // Redireccionar a la página
+        header("Location: Acceso.php");
     }
-}else {
-    echo"
-    <script language='javascript'>
-    alert('EL USUARIO NO ESTA REGISTRADO')
-    type: 'danger'
-    window.location='Acceso.php'
-    </script>";
+} else {
+    // Mostrar la alerta de error
+    $alerta = new Alerta('danger', '¡Usuario no existe!', 'El usuario no existe en la base de datos.');
+    $alerta->mostrar();
+
+    // Redireccionar a la página
+    header("Location: Acceso.php");
 }
 
           //////////CAPTURA DATOS PARA BITACORA
@@ -42,4 +42,6 @@ if ($row=mysqli_fetch_assoc($consulta)) {
           $sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Inicio Sesión','$nom',now())";
           mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
           ///////////////////////////////////////////////
+
+
 ?>

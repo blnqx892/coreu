@@ -1,6 +1,7 @@
 <?php // Iniciamos la sesión
 session_start();
 if (isset($_SESSION['usuarioActivo'])) {
+  require_once('alertas.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
