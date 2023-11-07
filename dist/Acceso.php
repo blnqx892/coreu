@@ -4,6 +4,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/fondo.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+
+
+
 </head>
 
 <body>
@@ -26,7 +31,7 @@
             style="font-family: Arial; font-size: 16pt;width : 380px; heigth : 1px"><br><br>
         </fieldset><br><br>
         <center>
-          <button type="submit" class="btns btn-info" style="color: white;">Iniciar Sesión</button>
+        <button type="submit" class="btns btn-info" style="color: white;" id="btn-inicioSesion">Iniciar Sesión</button>
           <button type="submit" class="btns btn-danger" style="color: white;">Cancelar</button><br><br><br>
           <a href="olvido_contrasena.php">¿Has olvidado tu contraseña?</a>
         </center>
@@ -36,4 +41,19 @@
 
 </body>
 
+
+<script>
+  $(document).ready(function() {
+    $("#btn-inicioSesion").click(function() {
+      // Mostrar una SweetAlert2 personalizada
+      Swal.fire({
+        title: "Iniciar sesión correcto",
+        text: "Sesión iniciada correctamente",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+        timer: 6000 // Tiempo en milisegundos (en este caso, 6 segundos)
+      });
+    });
+  });
+</script>
 </html>
