@@ -46,14 +46,22 @@ if (isset($_SESSION['usuarioActivo'])) {
             <div class="card mb-4">
               <div class="card-header"><strong>Inventario General</strong></div>
               <div class="card-body">
-              <div class="row my-10">
-                <div class="col-md-3">
-                  <label class="form-label" for="validationCustom04" align="right">Inventario por Categoria:</label>
-                  <select class="form-select" required id="cate_id" name="cateI" align="right">
-                  </select>
-                  <div class="invalid-feedback">Please select a valid state.</div>
-                </div>
-              </div><br><br>
+              <div class="d-flex row">
+                  <div class="align-self-end col-md-2 my-2">
+                     <label class="form-label" for="validationCustom04">Cantidad</label>
+                    <select class="form-select  mi-validate-1" required id="select-costo-adquisicion"
+                    name="cateC">
+                    <option selected="" disabled="" value="">Elegir Cantidad</option>
+                        <option value="Mayor a 20,000">Mayor a 20,000</option>
+                        <option value="Mayor a 900">Mayor a 900 </option>
+                        <option value="Menor a 900">Menor a 900</option>
+                        <option value="Mayor a 600">Mayor a 600</option>
+                        <option value="Menor a 600">Menor a 600</option>
+                        
+                    </select>
+                    <div class="invalid-feedback">Please select a valid state.</div>
+                  </div>              
+               </div>
                 <!-- dataTable-->
                 <table id="inven" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>

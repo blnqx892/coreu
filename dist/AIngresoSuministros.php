@@ -202,7 +202,9 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <label class="form-label" for="validationCustom04">Fondo Procedencia: </label>
                       <select class="form-select v-required-2" required="" id="fondo_procedencia" name="cargoC">
                         <option selected="" disabled="" value="-1">Elegir Fondo</option>
-                        <option value="0">Fondo de prueba</option>
+                        <option value="1">Fondos Propios</option>
+                        <option value="2">Fondos Fodes</option>
+                        <option value="3">Donativos</option>
                       </select>
                     </div>
                   </div>

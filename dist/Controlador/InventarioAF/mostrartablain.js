@@ -61,11 +61,15 @@ $(document).ready(function () {
         tabla.ajax.url("Controlador/InventarioAF/mostrarInventario.php").load();
       }
  //------------------------edit mostrar--------------------------------------------------
-      
+ $('#select-costo-adquisicion').change(function() {
+  var $select = $('#select-costo-adquisicion').val() || '';
+  tabla.ajax.url("Controlador/InventarioAF/mostrarInventario.php?datos="+$select).load();
+});
+
  $("#inven").on("click", ".editein-item", function () {
   let id = $(this).attr("id-item-ei");
    //$("#_id_inventario").val(id);
-   console.log('Primary key: '+id)
+
    $("#modaleinven").modal("show");
     var formData = new FormData();
 
