@@ -36,7 +36,8 @@
   <!-- We use those styles to show code examples, you should remove them in your application.-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
   <link href="css/examples.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
   <!-- Global site tag (gtag.js) - Google Analytics-->
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
 
@@ -76,5 +77,5 @@
 
   <!-- As A jQuery Plugin -->
   <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.js'></script>
-
+  <link rel="stylesheet" href="css/sicafi.css">
 </head>

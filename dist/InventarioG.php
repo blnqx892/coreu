@@ -92,7 +92,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </tfoot>
                 </table>
                 <!--------------------------- //dataTable-------------------------------------------------------------------->
-                <!--MODAL VER  -->
+ <!--MODAL VER  -->
                 <div class="modal fade" id="modalVerainven" tabindex="-1" aria-labelledby="exampleModalLabel"
                   aria-hidden="true">
                   <div class="modal-dialog modal-lg" role="document">

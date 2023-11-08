@@ -38,7 +38,7 @@ $(document).ready(function () {
       autoWidth: true,
       deferRender: true,
       ajax: {
-        url: "Controlador/InventarioAF/mostrarInventario.php",
+        url: "Controlador/InventarioAF/mostrarInventarioDepre.php",
         method: "GET",
         dataSrc: function (json) {
           return json;
@@ -58,7 +58,7 @@ $(document).ready(function () {
   }
 
   function refrescarTable() {//para editar o otras acciones
-    tabla.ajax.url("Controlador/InventarioAF/mostrarInventario.php").load();
+    tabla.ajax.url("Controlador/InventarioAF/mostrarInventarioDepre.php").load();
   }
 
   //----------------------------- mostrar-------------------------------------------------

@@ -72,14 +72,14 @@ $(document).ready(function () {
     let id = $(this).attr("id-item-vermo");
     $("#_id").val(id);
    
-     $("#modalVermo").modal("show");
+     $("#modalVermovimientos").modal("show");
     var formData = new FormData();
 
     formData.append("id", id);
   
     //otro ajax
      $.ajax({
-      url: "Controlador/Mobiliarioyotros/mostrarmodal_mobiliario.php",
+      url: "Controlador/MantenimientoAF/mostrarmodalmovimientos.php",
       type: "post",
       data: formData,
       contentType: false,
@@ -88,13 +88,25 @@ $(document).ready(function () {
         console.log(JSON.parse(response));
         data = JSON.parse(response);
 
-        //console.log(data);
-        $("#_id").val(data.id);
-        $("#fecham").val(data.fecha);
-        $("#nombrem").val(data.nombre);
-        $("#modelom").val(data.modelo);
-        $("#valorm").val(data.valor);
-        $("#descrim").val(data.descrim);
+        $("#descridbienmovi").val(data.descrinombre);
+        $("#colorvermovi").val(data.color);
+        $("#modeloinmovi").val(data.modelo);      
+        $("#serieinmovi").val(data.serie);
+        $("#marcainmovi").val(data.marca);
+        $("#fechainmovi").val(data.fechamovim);
+        $("#codigoinmovi").val(data.codigo_insti);    
+        $("#valorinmovi").val(data.costo);       
+        $("#id_proveedor").val(data.prove);      
+        $("#estadoinmovi").val(data.estadoi); 
+        $("#tiporemo").val(data.registro);
+        $("#jefeinvenmovi").val(data.jefe);        
+        $("#id_categoria").val(data.cate);
+        $("#fechamovii").val(data.fechaasigna);
+        $("#id_categoria").val(data.cate);
+        $("#motorimovi").val(data.numeromo);
+        $("#placaimovi").val(data.numeropla);
+        $("#chasisimovi").val(data.numerochasis);
+        $("#capaimovi").val(data.capa);
         edit = true;
       },
     });

@@ -31,9 +31,7 @@ $fechaMySQL = $row['fecha_movimiento'];
 $timestamp = strtotime($fechaMySQL);
 $fechaFormateada = date("d-m-Y", $timestamp);
 
-
-
-    $json[] = array(
+      $json[] = array(
       'id'    => $row['id_movimiento'],
       'fech' => $fechaFormateada,
       'codi'=> $row['codigo_institucional'],
@@ -41,8 +39,8 @@ $fechaFormateada = date("d-m-Y", $timestamp);
       'tipomo'=> $row['tipo_movimiento'],
       'tipore'=> $row['tipo_registro'],
       'botones'=>'<td>
-            <button type="button" id="ver" class="btn btn-info  verai-item" id-item-verai="'.$row['id_movimiento'].'  " title="Ver"><i 
-            class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVerainven"></i></button>
+            <button type="button" id="ver" class="btn btn-info  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i 
+            class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos"></i></button>
       </td>',
       'i'=>$i
     );

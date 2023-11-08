@@ -76,7 +76,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                 </table>
  <!--------------------------- //dataTable-------------------------------------------------------------------->
  <!--MODAL VER USUARIO -->
-<div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -134,15 +134,14 @@ if (isset($_SESSION['usuarioActivo'])) {
                             <label for="inputZip" class="form-label">Tipo Cargo:</label>
                             <input type="text" class="form-control" id="cargo" disabled>
                         </div>
-                        <!--<div class="col-md-4">
+                        <div class="col-md-4">
                             <label for="inputZip" class="form-label">Vida Util:</label>
                             <input type="text" class="form-control" id="vida" disabled>
-                        </div>-->
+                        </div>
                         <div class="col-md-4">
                             <label for="inputZip" class="form-label">Categoria:</label>
                             <input type="text" class="form-control" id="id_categoria" disabled>
                         </div>
-                       
                     </div>
                     <div class="row my-4" id="ocultarver" style="display:none">
                         <div class="col-md-4">
@@ -161,11 +160,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                             <label for="inputZip" class="form-label">Capacidad:</label>
                             <input type="text" class="form-control" id="capa" disabled>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
-                        </div>
+                        
                     </div>
-
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
+                    </div>
                 </form>
             </div>
         </div>
