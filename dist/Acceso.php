@@ -31,7 +31,7 @@
             style="font-family: Arial; font-size: 16pt;width : 380px; heigth : 1px"><br><br>
         </fieldset><br><br>
         <center>
-        <button type="submit" class="btns btn-info" style="color: white;" id="btn-inicioSesion">Iniciar Sesión</button>
+        <button type="submit" class="btns btn-info" style="color: white;" id="">Iniciar Sesión</button>
           <button type="submit" class="btns btn-danger" style="color: white;">Cancelar</button><br><br><br>
           <a href="olvido_contrasena.php">¿Has olvidado tu contraseña?</a>
         </center>
@@ -40,20 +40,4 @@
   </div>
 
 </body>
-
-
-<script>
-  $(document).ready(function() {
-    $("#btn-inicioSesion").click(function() {
-      // Mostrar una SweetAlert2 personalizada
-      Swal.fire({
-        title: "Iniciar sesión correcto",
-        text: "Sesión iniciada correctamente",
-        icon: "success",
-        confirmButtonText: "Aceptar",
-        timer: 6000 // Tiempo en milisegundos (en este caso, 6 segundos)
-      });
-    });
-  });
-</script>
 </html>

@@ -9,6 +9,7 @@
   <meta name="author" content="Łukasz Holeczek">
   <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
   <title>S I C A F I</title>
+
   <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
@@ -55,9 +56,6 @@
   <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
 
   <script src="https://kit.fontawesome.com/be2284e4f3.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- dataTable-->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
@@ -78,6 +76,5 @@
 
   <!-- As A jQuery Plugin -->
   <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.js'></script>
-
 
 </head>
