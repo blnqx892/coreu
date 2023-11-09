@@ -46,8 +46,12 @@ if (isset($_SESSION['usuarioActivo'])) {
       $conexion = mysqli_connect('localhost', 'root', '', 'sicafi');
       if ($usuario['rol'] == 'UACI') {
         $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where e.codigo != 'pendiente.aprobacion'";
-      } else {
+      } else if ($usuario['rol'] == 'Almacen') {
         $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where e.codigo = 'finalizado'";
+      } else if ($usuario['rol'] == 'Unidad'){
+        $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where r.unidad_id =".$usuario['fk_unidades'];
+      } else {
+        die("No posee permisos para esta pantalla");
       }
       $requisiciones = mysqli_query($conexion, $sql_requision) or die("No se puede ejecutar la consulta");
 
