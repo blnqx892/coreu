@@ -74,6 +74,112 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </tfoot>
                 </table>
                 <!-- //dataTable-->
+<!-----------------------------------------MODAL VER  --------------------------------------------------------->
+        <div class="modal fade" id="modalVermovimientos" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN  MOVIMIENTO DE ACTIVOS</h5>
+                        <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="row my-4">
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Decripción del bien:</label>
+                              <input type="text" class="form-control" id="descridbienmovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">color:</label>
+                              <input type="text" class="form-control" id="colorvermovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Modelo:</label>
+                              <input type="text" class="form-control" id="modeloinmovi" disabled>
+                            </div>
+                          </div>
+                          <div class="row my-4">
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">serie:</label>
+                              <input type="text" class="form-control" id="serieinmovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Marca:</label>
+                              <input type="text" class="form-control" id="marcainmovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Fecha Adquisición:</label>
+                              <input type="text" class="form-control" id="fechainmovi" disabled>
+                            </div>
+                          </div>
+                          <div class="row my-4">
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+                              <input type="text" class="form-control" id="valorinmovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Proveedor:</label>
+                              <input type="text" class="form-control" id="id_proveedor" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Código:</label>
+                              <input type="text" class="form-control" id="codigoinmovi" disabled>
+                            </div>
+                          </div>
+                          <div class="row my-4">
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Estado del Bien:</label>
+                              <input type="text" class="form-control" id="estadoinmovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Jefe Responsable:</label>
+                              <input type="text" class="form-control" id="jefeinvenmovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Categoria:</label>
+                              <input type="text" class="form-control" id="id_categoria" disabled>
+                            </div>
+                          </div>
+                          <div class="row my-4">
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Tipo Registro:</label>
+                              <input type="text" class="form-control" id="tiporemo" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Fecha Movimiento:</label>
+                              <input type="text" class="form-control" id="fechamovii" disabled>
+                            </div>
+                          </div>
+                          <!----------------------------------este es el div de lo de vehiculo  ----------------------------------------->
+                          <div class="row my-4" id="ocultarverdatosi" style="display:none">
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">No. Motor:</label>
+                              <input type="text" class="form-control" id="motorimovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">No. Placa:</label>
+                              <input type="text" class="form-control" id="placaimovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">No. Chasis:</label>
+                              <input type="text" class="form-control" id="chasisimovi" disabled>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputZip" class="form-label">Capacidad:</label>
+                              <input type="text" class="form-control" id="capaimovi" disabled>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
+                          </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+<!--///////////////TERMINA MODAL VER ///////////////////////////////////////////////////////////////-->
+                
               </div>
             </div>
           </div>

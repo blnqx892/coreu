@@ -15,7 +15,8 @@ if ($row=mysqli_fetch_assoc($consulta)) {
     $md5=$row['contrasena'];
     if (password_verify($contra,$md5)) {
         $_SESSION['usuarioActivo']=$row;
-        echo "<script language='javascript'>
+        echo 
+        "<script language='javascript'>
             $(document).ready(function () {
                 setTimeout(function () {
                     Swal.fire({
@@ -23,15 +24,14 @@ if ($row=mysqli_fetch_assoc($consulta)) {
                         text: 'Haz iniciado sesión correctamente',
                         icon: 'success',
                         confirmButtonText: 'Aceptar'
-                      }).then((result) => {
+                    }).then((result) => {
                         if (result.value) {
                             window.location='index.php';
                         }
-                      })
+                    })
                 }, 1000);
             });
-
-            </script>";
+        </script>";
     } else {
         // Mostrar la alerta de error
         $alerta = new Alerta('danger', '¡Error de inicio de sesión!', 'El usuario o la contraseña no son correctos.');

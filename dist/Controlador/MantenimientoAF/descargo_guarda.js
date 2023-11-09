@@ -34,6 +34,7 @@ $(document).ready(function () {
           success: function (response) {
             $("#codigo_id").select2().text();
             $('#formD').get(0).reset();
+            show_toast('success', 'Registro guardado', 'Acción exitosa');
             limpiar(1);      
           },
         });

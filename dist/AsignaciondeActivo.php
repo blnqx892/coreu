@@ -53,7 +53,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
-                      <input class="form-control" id="fechaA" type="date" required="" >
+                      <input class="form-control codasig-validate-1" id="fechaA" type="date" required="" >
                     </div>
                   </div>
                   <!--FIN-->
@@ -96,7 +96,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <div class="col-md-4">
                       <!--combo qque vas a ir a guardar en fk_usuarios de ahi solo vas a guardar los campos que estas complentando-->
                       <label class="form-label" for="validationCustom02">Jefe Responsable:</label>
-                      <select class="form-select" id="nombreC" name="rolCU" data-placeholder="Seleccione la Unidad">
+                      <select class="form-select codasig-validate-1" id="nombreC" name="rolCU" data-placeholder="Seleccione la Unidad">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
@@ -116,7 +116,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <div class="row  my-4">
                       <div class="col-md-4">
                         <label class="form-label" for="validationCustom02">Encargado del Bien:</label>
-                        <input class="form-control" id="encargadoA" type="text" required=""  value="<?php echo $_POST['encargado'] ?? '';?>" >
+                        <input class="form-control codasig-validate-1" id="encargadoA" type="text" required=""  value="<?php echo $_POST['encargado'] ?? '';?>" >
                       </div>
                     </div>
                   </div>
@@ -171,7 +171,22 @@ if (isset($_SESSION['usuarioActivo'])) {
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
-    <!-- ////////////////////////-->
+<!-- ////////////////////////-->
+    <!-- para que muestre la alerta -->
+    <div class="toast-container position-fixed end-0 p-3">
+      <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <div class="rounded me-2"></div>
+          <strong class="me-auto" id="toast_title">Acción exitosa</strong>
+          <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast_body">
+          Registro guardado
+        </div>
+      </div>
+    </div>
+    <!-- fin de que muestre la alerta -->
+  </div>
 </body>
 
 </html>
