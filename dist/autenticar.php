@@ -15,7 +15,7 @@ if ($row=mysqli_fetch_assoc($consulta)) {
     $md5=$row['contrasena'];
     if (password_verify($contra,$md5)) {
         $_SESSION['usuarioActivo']=$row;
-        echo 
+        echo
         "<script language='javascript'>
             $(document).ready(function () {
                 setTimeout(function () {
@@ -32,29 +32,48 @@ if ($row=mysqli_fetch_assoc($consulta)) {
                 }, 1000);
             });
         </script>";
+         //////////CAPTURA DATOS PARA BITACORA
+         $usuari=$_SESSION['usuarioActivo'];
+         $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+         $sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Inicio Sesión','$nom',now())";
+         mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+         ///////////////////////////////////////////////
     } else {
-        // Mostrar la alerta de error
-        $alerta = new Alerta('danger', '¡Error de inicio de sesión!', 'El usuario o la contraseña no son correctos.');
-        $alerta->mostrar();
-
-        // Redireccionar a la página
-        header("Location: Acceso.php");
+      echo
+      "<script language='javascript'>
+          $(document).ready(function () {
+              setTimeout(function () {
+                  Swal.fire({
+                      title: 'Advertencia',
+                      text: 'Usuario o contraseña son incorrectos',
+                      icon: 'warning',
+                      confirmButtonText: 'Aceptar'
+                  }).then((result) => {
+                      if (result.value) {
+                          window.location='Acceso.php';
+                      }
+                  })
+              }, 1000);
+          });
+      </script>";
     }
 } else {
-    // Mostrar la alerta de error
-    $alerta = new Alerta('danger', '¡Usuario no existe!', 'El usuario no existe en la base de datos.');
-    $alerta->mostrar();
-
-    // Redireccionar a la página
-    header("Location: Acceso.php");
+  echo
+  "<script language='javascript'>
+      $(document).ready(function () {
+          setTimeout(function () {
+              Swal.fire({
+                  title: 'Error',
+                  text: 'El usuario no existe',
+                  icon: 'error',
+                  confirmButtonText: 'Aceptar'
+              }).then((result) => {
+                  if (result.value) {
+                      window.location='Acceso.php';
+                  }
+              })
+          }, 1000);
+      });
+  </script>";
 }
-
-          //////////CAPTURA DATOS PARA BITACORA
-          $usuari=$_SESSION['usuarioActivo'];
-          $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-          $sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Inicio Sesión','$nom',now())";
-          mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-          ///////////////////////////////////////////////
-
-
 ?>

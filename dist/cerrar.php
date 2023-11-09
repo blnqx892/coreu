@@ -1,7 +1,9 @@
 <?php
 include("Confi/conexion.php");
 $conexion = con();
-
+echo '
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
+echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
     session_start(); //Iniciar una nueva sesión o reanudar la existente
 
     //////////CAPTURA DATOS PARA BITACORA
@@ -11,5 +13,21 @@ $conexion = con();
     mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
     ///////////////////////////////////////////////
     session_destroy(); //Destruye la sesión
-    header('location: /coreu/dist/Acceso.php'); //Redirecciona la inicio
+    echo
+        "<script language='javascript'>
+            $(document).ready(function () {
+                setTimeout(function () {
+                    Swal.fire({
+                        title: '¡Hasta Pronto!',
+                        text: 'Cerrando Sesión',
+                        icon: 'success',
+                        confirmButtonText: 'Aceptar'
+                    }).then((result) => {
+                        if (result.value) {
+                            window.location='Acceso.php';
+                        }
+                    })
+                }, 1000);
+            });
+        </script>";
 ?>

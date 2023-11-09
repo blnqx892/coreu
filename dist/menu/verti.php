@@ -5,8 +5,17 @@
   </div>
   <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
     <!--separador-->
-    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
+
     <li class="nav-title">ACTIVO FIJO</li>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 4
+    || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
+      <li class="nav-group"><a class="nav-link ">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+        </svg> No Disponible</a>
+    </li>
+    <?php } ?>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
@@ -18,16 +27,6 @@
             Actualización de Adquisición</a></li>
       </ul>
     </li>
-    <!--<li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-        <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
-        </svg> Codificación de Activo</a>
-      <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="AsignaciondeActivo.php"><span class="nav-icon"></span> Asignación
-            de activo</a></li>
-        <li class="nav-item"><a class="nav-link" href="Actualizacion.php"><span class="nav-icon"></span>
-            Actualización</a></li>
-      </ul> -->
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
@@ -56,19 +55,18 @@
         <li class="nav-item"><a class="nav-link" href="DepreciacionActivo.php"><span class="nav-icon"></span>Depreciación fija</a></li>
       </ul>
     </li>
-    <!--
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+    <?php } ?>
+<!--separador-->
+    <li class="nav-title">ALMACÉN</li>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 4
+    || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
+      <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
-        </svg> Reportes y Consultas</a>
-      <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""> Pagina 1</a></li>
-      </ul>
-    </li>-->
-    <!--separador-->
-    <?php } ?>
+        </svg> No Disponible</a>
+    </li>
+   <?php }?>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
-    <li class="nav-title">ALMACÉN</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
@@ -80,15 +78,6 @@
             Catalogo de Suministros</a></li>
       </ul>
     </li>
-    <!--
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-        <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
-        </svg> Kardex</a>
-      <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="Kardex.php"><span class="nav-icon"></span> Consultar</a></li>
-      </ul>
-    </li>-->
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
@@ -116,19 +105,18 @@
 
       </ul>
     </li>
-    <!--
-    <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+    <?php } ?>
+    <!--separador-->
+    <li class="nav-title">REQUISICIÓN</li>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 3
+    || $_SESSION['usuarioActivo']['fk_rol'] == 4){?>
+      <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
-        </svg> Reportes y Consultas</a>
-      <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""> Pagina 1</a></li>
-      </ul>
-    </li>-->
-    <!--separador-->
-    <?php } ?>
+        </svg> No Disponible</a>
+    </li>
+   <?php }?>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
-    <li class="nav-title">REQUISICIÓN</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
@@ -145,10 +133,18 @@
         <li class="nav-item"><a class="nav-link" href="HistorialDespacho.php"><span class="nav-icon"></span> Requisiciones</a></li>
       </ul>
     </li>
+    <?php } ?>
     <!--separador-->
+    <li class="nav-title">UNIDAD DE COMPRAS PÚBLICAS</li>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 3
+    || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
+      <li class="nav-group"><a class="nav-link ">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+        </svg> No Disponible</a>
+    </li>
     <?php } ?>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
-    <li class="nav-title">UNIDAD DE COMPRAS PÚBLICAS</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
@@ -165,10 +161,18 @@
         <li class="nav-item"><a class="nav-link" href="HistorialDespacho.php"><span class="nav-icon"></span> Requisiciones</a></li>
       </ul>
     </li>
+    <?php } ?>
     <!--separador-->
+    <li class="nav-title">SEGURIDAD</li>
+    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 3
+    || $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
+      <li class="nav-group"><a class="nav-link ">
+        <svg class="nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+        </svg> No Disponible</a>
+    </li>
     <?php } ?>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 6 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
-    <li class="nav-title">SEGURIDAD</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>

@@ -40,7 +40,8 @@ if (isset($_SESSION['usuarioActivo'])) {
         <div class="tab-content rounded-bottom" class="div-centrado">
           <div class="tab-pane p-2 active" role="tabpanel" id="preview-1179">
             <div class="row">
-
+            <!-- col-->
+            <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3){?>
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -49,7 +50,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                       </svg>
                     </div>
-                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
+
                     <div>
                       <?php
                         // Lógica para solicitudes por aprobar
@@ -67,13 +68,34 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <div class="text-medium-emphasis text-uppercase fw-semibold small">Requisiciones por Despachar
                       </div>
                     </div>
-                    <?php } ?>
+
                   </div>
                 </div>
               </div>
+              <?php } ?>
 
+              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 1
+              || $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 4){?>
+              <div class="col-6 col-lg-3">
+                <div class="card overflow-hidden">
+                  <div class="card-body p-0 d-flex align-items-center">
+                    <div class="bg-primary text-white p-4 me-3">
+                      <svg class="icon icon-xl">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
+                      </svg>
+                    </div>
+
+                    <div>
+                      <div class="fs-6 fw-semibold text-primary">
+                      </div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">NO DISPONIBLE </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <?php } ?>
               <!-- /.col-->
-              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
+              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4){?>
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -105,7 +127,8 @@ if (isset($_SESSION['usuarioActivo'])) {
               </div>
               <?php } ?>
               <!-- /.col-->
-              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 3){?>
+              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 2
+              || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -129,6 +152,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
 
               <!-- Lógica para Stock bajo -->
+              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3){?>
               <?php
                 $sql_suministros = "select * from ingreso_suministros";
                 $suministros = mysqli_query($conexion, $sql_suministros);
@@ -159,6 +183,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
                 $total_stock = count($out_stock);
               ?>
+
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -167,7 +192,6 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-moon"></use>
                       </svg>
                     </div>
-                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
                     <div>
                       <div class="fs-6 fw-semibold text-warning">
                         <?php echo $total_stock;?>
@@ -176,11 +200,34 @@ if (isset($_SESSION['usuarioActivo'])) {
                         Suministros al minimo
                       </div>
                     </div>
-                    <?php } ?>
+
                   </div>
                 </div>
               </div>
+              <?php } ?>
 
+              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 1
+              || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 4 ){?>
+              <div class="col-6 col-lg-3">
+                <div class="card overflow-hidden">
+                  <div class="card-body p-0 d-flex align-items-center">
+                    <div class="bg-warning text-white p-4 me-3">
+                      <svg class="icon icon-xl">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-moon"></use>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="fs-6 fw-semibold text-warning">
+                      </div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">
+                        NO DISPONIBLE
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <?php } ?>
               <!-- /.col-->
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
