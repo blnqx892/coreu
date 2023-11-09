@@ -73,7 +73,7 @@ if (isset($_SESSION['usuarioActivo'])) {
               </div>
 
               <!-- /.col-->
-
+              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -82,7 +82,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-laptop"></use>
                       </svg>
                     </div>
-                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
+
                     <div>
                       <?php
                         // Lógica para solicitudes por aprobar
@@ -99,12 +99,34 @@ if (isset($_SESSION['usuarioActivo'])) {
                       </div>
                       <div class="text-medium-emphasis text-uppercase fw-semibold small">Solicitudes por Aprobar</div>
                     </div>
-                    <?php } ?>
+
                   </div>
                 </div>
               </div>
-
+              <?php } ?>
               <!-- /.col-->
+              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 3){?>
+              <div class="col-6 col-lg-3">
+                <div class="card overflow-hidden">
+                  <div class="card-body p-0 d-flex align-items-center">
+                    <div class="bg-info text-white p-4 me-3">
+                      <svg class="icon icon-xl">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-laptop"></use>
+                      </svg>
+                    </div>
+
+                    <div>
+                      <div class="fs-6 fw-semibold text-info">
+                      </div>
+                      <div class="text-medium-emphasis text-uppercase fw-semibold small">No disponible</div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <?php } ?>
+
+
 
               <!-- Lógica para Stock bajo -->
               <?php
