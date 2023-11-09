@@ -142,7 +142,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Historial</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="HistorialDespacho.php"><span class="nav-icon"></span> Requisiciones</a></li>
       </ul>
     </li>
     <!--separador-->
@@ -162,7 +162,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Historial</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href=""><span class="nav-icon"></span> Pagina 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="HistorialDespacho.php"><span class="nav-icon"></span> Requisiciones</a></li>
       </ul>
     </li>
     <!--separador-->

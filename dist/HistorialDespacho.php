@@ -44,7 +44,11 @@ if (isset($_SESSION['usuarioActivo'])) {
       <?php
       $usuario = $_SESSION['usuarioActivo'];
       $conexion = mysqli_connect('localhost', 'root', '', 'sicafi');
-      $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where e.codigo = 'finalizado'";
+      if ($usuario['rol'] == 'UACI') {
+        $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where e.codigo != 'pendiente.aprobacion'";
+      } else {
+        $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where e.codigo = 'finalizado'";
+      }
       $requisiciones = mysqli_query($conexion, $sql_requision) or die("No se puede ejecutar la consulta");
 
       // Evaluar si es posible realizar una nueva requisición
@@ -98,23 +102,6 @@ if (isset($_SESSION['usuarioActivo'])) {
                                 data-coreui-target="#modalAgg" onclick="show_n(<?php echo $requisicion['id']?>, '<?php echo $requisicion['codigo_estado']?>')">
                           <i class="fas fa-eye"></i>
                         </button>
-                        <?php if($requisicion['codigo_estado'] == 'pendiente.aprobacion' && $usuario['rol'] == 'UACI'):?>
-                          <button class="btn btn-sm btn-warning" type="button" data-coreui-toggle="modal"
-                                  data-coreui-target="#modalAgg" onclick="approve_n(<?php echo $requisicion['id']?>)">
-                            <i class="fas fa-check"></i>
-                          </button>
-                        <?php endif;?>
-                        <?php if($requisicion['codigo_estado'] == 'pendiente.despacho' && $usuario['rol'] == 'Almacen'):?>
-                          <button class="btn btn-sm btn-success text-light" type="button" data-coreui-toggle="modal"
-                                  data-coreui-target="#modalAgg" onclick="service_n(<?php echo $requisicion['id']?>)">
-                            <i class="fas fa-check"></i>
-                          </button>
-                        <?php endif;?>
-                        <?php if($requisicion['unidad_id'] == $usuario['fk_unidades'] && $requisicion['codigo_estado'] != 'finalizado'):?>
-                          <button class="btn btn-sm btn-danger text-light" type="button" onclick="remove(<?php echo $requisicion['id']?>)">
-                            <i class="fas fa-times"></i>
-                          </button>
-                        <?php endif;?>
                         <a class="btn btn-primary btn-sm" href="Reportes/reporte3.php?id=<?php echo $requisicion['id']?>" target="_blank"><i class='fa fa-file'></i></a>
                       </td>
                     </tr>

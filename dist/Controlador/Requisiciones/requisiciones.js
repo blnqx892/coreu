@@ -392,7 +392,9 @@ function show_n(id, estado) {
           html += '<div class="col-2">'
           if (estado == 'pendiente.aprobacion') {
             html += '<span class="badge border border-secondary text-secondary py-2 col-12">Pendiente</span>';
-          } else {
+          } else if (estado == 'finalizado') {
+            html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_despachada + '</span>';
+          }else {
             html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_aprobada + '</span>';
           }
           html += '</div>'
