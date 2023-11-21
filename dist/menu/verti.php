@@ -11,7 +11,7 @@
     || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
       <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-link-broken"></use>
         </svg> No Disponible</a>
     </li>
     <?php } ?>
@@ -62,7 +62,7 @@
     || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
       <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-link-broken"></use>
         </svg> No Disponible</a>
     </li>
    <?php }?>
@@ -112,7 +112,7 @@
     || $_SESSION['usuarioActivo']['fk_rol'] == 4){?>
       <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-link-broken"></use>
         </svg> No Disponible</a>
     </li>
    <?php }?>
@@ -140,7 +140,7 @@
     || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
       <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-link-broken"></use>
         </svg> No Disponible</a>
     </li>
     <?php } ?>
@@ -168,7 +168,7 @@
     || $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
       <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-link-broken"></use>
         </svg> No Disponible</a>
     </li>
     <?php } ?>
@@ -202,7 +202,7 @@
     <li class="nav-title">SISTEMA</li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-screen-desktop"></use>
         </svg> Sistema</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="Usuarios.php"><span class="nav-icon"></span> Ayuda del Sistema</a></li>

@@ -33,7 +33,7 @@
         <center>
         <button type="submit" class="btns btn-info" style="color: white;" id="">Iniciar Sesión</button>
           <button type="submit" class="btns btn-danger" style="color: white;">Cancelar</button><br><br><br>
-          <a href="olvido_contrasena.php">¿Has olvidado tu contraseña?</a>
+          <a href="RecuperarContra.php">¿Has olvidado tu contraseña?</a>
         </center>
       </form>
     </div>

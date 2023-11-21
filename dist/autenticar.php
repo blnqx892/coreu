@@ -24,7 +24,7 @@ if ($row=mysqli_fetch_assoc($consulta)) {
                         text: 'Haz iniciado sesión correctamente',
                         icon: 'success',
                         confirmButtonText: 'Aceptar'
-                    }).then((result) => {
+                   }).then((result) => {
                         if (result.value) {
                             window.location='index.php';
                         }
