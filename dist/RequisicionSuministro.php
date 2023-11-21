@@ -114,24 +114,24 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <td><?php echo $requisicion["nombre_unidad"]?></td>
                   <td><?php echo $requisicion["nombre_estado"]?></td>
                   <td>
-                    <button class="btn btn-sm btn-primary" type="button" data-coreui-toggle="modal"
+                    <button class="btn btn-outline-info rounded-pill" type="button" data-coreui-toggle="modal"
                             data-coreui-target="#modalAgg" onclick="show_n(<?php echo $requisicion['id']?>, '<?php echo $requisicion['codigo_estado']?>')">
-                      <i class="fas fa-eye"></i>
+                      <i class="far fa-eye"></i>
                     </button>
                     <?php if($requisicion['codigo_estado'] == 'pendiente.aprobacion' && $usuario['rol'] == 'UACI'):?>
-                      <button class="btn btn-sm btn-warning" type="button" data-coreui-toggle="modal"
+                      <button class="btn btn-outline-success rounded-pill" type="button" data-coreui-toggle="modal"
                               data-coreui-target="#modalAgg" onclick="approve_n(<?php echo $requisicion['id']?>)">
-                        <i class="fas fa-check"></i>
+                       <i class="fas fa-check"></i>
                       </button>
                     <?php endif;?>
                     <?php if($requisicion['codigo_estado'] == 'pendiente.despacho' && $usuario['rol'] == 'Almacen'):?>
-                      <button class="btn btn-sm btn-success text-light" type="button" data-coreui-toggle="modal"
+                      <button class="btn btn-outline-success rounded-pill" type="button" data-coreui-toggle="modal"
                               data-coreui-target="#modalAgg" onclick="service_n(<?php echo $requisicion['id']?>)">
-                        <i class="fas fa-check"></i>
+                              <i class="fas fa-check"></i>
                       </button>
                     <?php endif;?>
                     <?php if($requisicion['unidad_id'] == $usuario['fk_unidades'] && $requisicion['codigo_estado'] != 'finalizado'):?>
-                      <button class="btn btn-sm btn-danger text-light" type="button" onclick="remove(<?php echo $requisicion['id']?>)">
+                      <button class="btn btn-danger text-light" type="button" onclick="remove(<?php echo $requisicion['id']?>)">
                         <i class="fas fa-times"></i>
                       </button>
                     <?php endif;?>
@@ -279,7 +279,7 @@ if (isset($_SESSION['usuarioActivo'])) {
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" id="save_req" class="btn btn-primary" data-usuario="<?php echo $usuario['id']?>">Guardar</button>
+            <button type="button" id="save_req" class="btn btn-success" data-usuario="<?php echo $usuario['id']?>">Guardar</button>
             <button type="reset" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
           </div>
         </div>

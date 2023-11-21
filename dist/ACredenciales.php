@@ -96,7 +96,7 @@ if (isset($_SESSION['usuarioActivo'])) {
           <div class="modal-body">
                 <div class="col-md-6">
                   <label for="inputZip" class="form-label">Nombre Unidad:</label>
-                  <input type="text" class="form-control" id="nombreUnid">
+                  <input type="text" class="form-control unidad-validate-1" id="nombreUnid">
                 </div>
           </div>
           <div class="modal-footer">
@@ -176,6 +176,20 @@ if (isset($_SESSION['usuarioActivo'])) {
   <!-- IMPORTAR ARCHIVO SCRIPT-->
   <?php include("foot/script.php"); ?>
   <!-- ////////////////////////-->
+  <!-- para que muestre la alerta -->
+  <div class="toast-container position-fixed end-0 p-3">
+            <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <div class="rounded me-2"></div>
+                    <strong class="me-auto" id="toast_title">Acción exitosa</strong>
+                    <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body" id="toast_body">
+                    Registro guardado
+                </div>
+            </div>
+        </div>
+        <!-- fin de que muestre la alerta -->
   </div>
 </body>
 
