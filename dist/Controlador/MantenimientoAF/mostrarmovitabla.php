@@ -39,7 +39,7 @@ $fechaFormateada = date("d-m-Y", $timestamp);
       'tipomo'=> $row['tipo_movimiento'],
       'tipore'=> $row['tipo_registro'],
       'botones'=>'<td>
-            <button type="button" id="ver" class="btn btn-info  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i 
+            <button type="button" id="ver" class="btn btn-outline-info rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i 
             class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos"></i></button>
       </td>',
       'i'=>$i

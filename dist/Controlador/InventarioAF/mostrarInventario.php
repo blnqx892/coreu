@@ -55,9 +55,9 @@ $fechaFormateada = date("d-m-Y", $timestamp);
       'ubi'=> $row['nombre_unidad'],
       'estbien'=> $row['estado_bien'],
       'botones'=>'<td>
-            <button type="button" id="ver" class="btn btn-outline-info  verai-item" id-item-verai="'.$row['id_asignacion'].'  " title="Ver"><i
+            <button type="button" id="ver" class="btn btn-outline-info rounded-pill verai-item" id-item-verai="'.$row['id_asignacion'].'  " title="Ver"><i
             class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVerainven"></i></button>
-            <button type="button" id="edit" class="btn btn-outline-warning  editein-item" id-item-ei="'.$row['id_asignacion'].'" title="Editar">
+            <button type="button" id="edit" class="btn btn-outline-warning rounded-pill  editein-item" id-item-ei="'.$row['id_asignacion'].'" title="Editar">
             <i class="far fa-edit"></i></button>
       </td>',
       'i'=>$i

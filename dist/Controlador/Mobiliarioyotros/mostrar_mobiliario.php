@@ -29,9 +29,9 @@ $con = con();
       'valor' => $row['valor'],
       'estado'=> $row['estado_mobi'],
       'botones'=>'<td>
-            <button type="button" id="ver" class="btn btn-outline-info  vermo-item" id-item-vermo="'.$row['id'].'  " title="Ver"><i
+            <button type="button" id="ver" class="btn btn-outline-info rounded-pill vermo-item" id-item-vermo="'.$row['id'].'  " title="Ver"><i
             class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermo"></i></button>
-            <button type="button" id="edit" class="btn btn-outline-warning  editmo-item" id-item-mo="'.$row['id'].'" title="Editar">
+            <button type="button" id="edit" class="btn btn-outline-warning rounded-pill editmo-item" id-item-mo="'.$row['id'].'" title="Editar">
             <i class="far fa-edit"></i>
             </button>
       </td>',

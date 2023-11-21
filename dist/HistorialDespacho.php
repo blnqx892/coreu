@@ -102,12 +102,13 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <td><?php echo $requisicion["nombre_unidad"]?></td>
                       <td><?php echo $requisicion["nombre_estado"]?></td>
                       <td>
-                        <button class="btn btn-sm btn-primary" type="button" data-coreui-toggle="modal"
+                        <button class=" btn btn-outline-info rounded-pill" type="button" data-coreui-toggle="modal"
                                 data-coreui-target="#modalAgg" onclick="show_n(<?php echo $requisicion['id']?>, '<?php echo $requisicion['codigo_estado']?>')">
-                          <i class="fas fa-eye"></i>
+                          <i class="far fa-eye"></i>
                         </button>
-                        <a class="btn btn-primary btn-sm" href="Reportes/reporte3.php?id=<?php echo $requisicion['id']?>" target="_blank"><i class='fa fa-file'></i></a>
+                        <a class=" btn btn-outline-primary rounded-pill " href="Reportes/reporte3.php?id=<?php echo $requisicion['id']?>" target="_blank"><i class='far fa-file'></i></a>
                       </td>
+                     
                     </tr>
                     <?php $correlativo++;?>
                   <?php endwhile;?>

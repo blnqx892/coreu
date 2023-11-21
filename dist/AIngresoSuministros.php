@@ -162,8 +162,9 @@ if (isset($_SESSION['usuarioActivo'])) {
 
                   <div class="col-15" align="right">
                     <hr style="color: black; background-color: black; width:100%;" />
-                    <a class="btn btn-secondary" href="TablaSumi.php">Cancelar <i class='far fa-times-circle'></i></a>
                     <button class="btn btn-success " type="button" id="save_record">Guardar <i class='far fa-check-square'></i></button>
+                    <a class="btn btn-secondary" href="TablaSumi.php">Cancelar <i class='far fa-times-circle'></i></a>
+                   
                   </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
