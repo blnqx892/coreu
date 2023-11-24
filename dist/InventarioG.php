@@ -44,12 +44,19 @@ if (isset($_SESSION['usuarioActivo'])) {
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Inventario General</strong></div>
-              <div class="card-body">
-              <div class="card-body">
-                <button type="button" class="btn btn-light" title="Reporte" style="float: right;">PDF</button>
+              <div class="card-header">
+                <div class="d-flex justify-content-between">
+                  <div class="my-auto">
+                    <strong>Inventario General</strong>
+                  </div>
+                  <div>
+                  <button type="button" class="btn btn-light" title="Reporte" style="float: right;"><i
+                      class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+                </div>
+                </div>
               </div>
-              <div class="d-flex row col-md-40">
+              <div class="card-body">
+                <div class="d-flex row col-md-40">
                   <div class="align-self-end col-md-2 my-3">
                     <label class="form-label" for="validationCustom04">Cantidad</label>
                     <select class="form-select  mi-validate-1" required id="select-costo-adquisicion" name="cateC">
@@ -93,7 +100,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </tfoot>
                 </table>
                 <!--------------------------- //dataTable-------------------------------------------------------------------->
- <!--MODAL VER  -->
+                <!--MODAL VER  -->
                 <div class="modal fade" id="modalVerainven" tabindex="-1" aria-labelledby="exampleModalLabel"
                   aria-hidden="true">
                   <div class="modal-dialog modal-lg" role="document">

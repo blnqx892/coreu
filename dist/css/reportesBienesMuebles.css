@@ -74,3 +74,23 @@ th,td {
 table th {
   text-align: center;
 }
+.tituloG{
+  width: 60%;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+.posicionTC{
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.tablaC{
+  border: 1px solid var(--color-blue);
+  border-radius: 8px
+}
+.bor{
+  border: 1px solid;
+  border: 1px solid var(--color-blue);
+  border-radius: 8px;
+}

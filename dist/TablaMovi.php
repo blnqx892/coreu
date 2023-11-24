@@ -1,5 +1,5 @@
 <?php // Iniciamos la sesión
-session_start(); 
+session_start();
 if (isset($_SESSION['usuarioActivo'])) {
 ?>
 <!DOCTYPE html>
@@ -46,6 +46,7 @@ if (isset($_SESSION['usuarioActivo'])) {
             <div class="card mb-4">
               <div class="card-header"><strong>Actualización Movimientos</strong></div>
               <div class="card-body">
+                <button type="button" class="btn btn-light" title="Reporte" style="float: right;"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></button><br><br>
                 <!-- dataTable-->
                 <table id="moviactivo" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
@@ -179,7 +180,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </div>
                 </div>
 <!--///////////////TERMINA MODAL VER ///////////////////////////////////////////////////////////////-->
-                
+
               </div>
             </div>
           </div>

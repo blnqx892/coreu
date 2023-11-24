@@ -38,7 +38,7 @@
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-casino"></use>
         </svg> Control Mantenimiento</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="Mprestamo.php"> Movimientos</a></li>
@@ -49,7 +49,7 @@
 
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart"></use>
         </svg>Depreciación</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="DepreciacionActivo.php"><span class="nav-icon"></span>Depreciación fija</a></li>
@@ -89,7 +89,7 @@
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-inbox"></use>
         </svg> Requisición</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="RequisicionSuministro.php"> Remitir Requisición</a></li>
@@ -119,7 +119,7 @@
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-send"></use>
         </svg> Requisición</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="RequisicionSuministro.php"><span class="nav-icon"></span> Solicitud</a></li>
@@ -127,7 +127,7 @@
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-sync"></use>
         </svg> Historial</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="HistorialDespacho.php"><span class="nav-icon"></span> Requisiciones</a></li>
@@ -147,7 +147,7 @@
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-check"></use>
         </svg> Control de Aprobación</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="RequisicionSuministro.php"><span class="nav-icon"></span> Aprobaciones</a></li>
@@ -155,7 +155,7 @@
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-sync"></use>
         </svg> Historial</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="HistorialDespacho.php"><span class="nav-icon"></span> Requisiciones</a></li>
@@ -175,7 +175,7 @@
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 6 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-people"></use>
         </svg> Control de Usuarios</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="Usuarios.php"><span class="nav-icon"></span> Usuarios</a></li>
@@ -184,7 +184,7 @@
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-storage"></use>
         </svg> Control de Respaldo</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="Back.php"><span class="nav-icon"></span> Backup</a></li>
@@ -192,7 +192,7 @@
     </li>
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-folder"></use>
         </svg> Bitacora</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="Bitacora.php"> Bitacora</a></li>

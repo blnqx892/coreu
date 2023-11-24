@@ -215,7 +215,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <?php } ?>
 
                 <div class="d-flex justify-content-end">
-                  <a class="btn btn-secondary" href="TablaSumi.php">Volver <i class='fa fa-arrow-left'></i></a>
+                  <a class="btn btn-secondary" href="TablaSumi.php" title="Atrás"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                 </div>
               </div>
             </div>
