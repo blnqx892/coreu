@@ -51,7 +51,7 @@ foreach ($body->suministros as $suministro) {
   $precio /= $count;
   $total = $precio * $suministro->cantidad;
 
-  $q_kardex = "insert into kardex (id, fecha, concepto, movimiento, cantidad_entrada, precio_entrada, cantidad_salida, precio_salida, saldo_articulos, fondos_procedencia, fk_ingreso_suministros, fecha_creacion) values (".$id2.", '".$fecha."', 'Salida de requisicion: ".$id."', 0, 0, 0, ".$suministro->cantidad.", ".$total.", 0, 0, ".$suministro->suministro_id.", '".$fechaCreacion."')";
+  $q_kardex = "insert into kardex (id, fecha, concepto, movimiento, cantidad_entrada, precio_entrada, cantidad_salida, precio_salida, saldo_articulos, fondos_procedencia, fk_ingreso_suministros, fecha_creacion) values (".$id2.", '".$fecha."', 'Salida de requisicion: ".$id."', 0, 0, 0, ".$suministro->cantidad.", ".$total.", 0, ".$suministro->fondos_procedencia.", ".$suministro->suministro_id.", '".$fechaCreacion."')";
 
   if (!mysqli_query($conexion, $q_kardex)) {
     $is_ok = false;

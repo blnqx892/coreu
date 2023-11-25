@@ -79,8 +79,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <strong>Requisiciones de suministros</strong>
                 </div>
                 <div>
-                  <?php if ($dia_actual < 15):?>
-                    <?php if ($count < 1):?>
+                  <?php if ($dia_actual < 31):?>
+                    <?php if ($count < 10):?>
                       <button class="btn btn-primary" type="button" id="new_req" data-coreui-toggle="modal"
                               data-coreui-target="#modalAgg" onclick="create_n()">Nuevo <i class='far fa-plus'></i></button>
                     <?php else:?>
@@ -149,7 +149,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
     <!-- Modal -->
     <div class="modal fade" id="modalAgg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog modal-lg" id="div_modal">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Nueva requisición de suministros</h5>
@@ -242,10 +242,10 @@ if (isset($_SESSION['usuarioActivo'])) {
               </div>
               <div class="col-12" id="req_service" style="display: none">
                 <div class="row">
-                  <div class="col-5 text-center">
+                  <div class="col-4 text-center">
                     <strong>Suministro</strong>
                   </div>
-                  <div class="col-5">
+                  <div class="col-4">
                     <div class="row">
                       <div class="col-12 text-center">
                         <strong>Cantidad</strong>
@@ -268,6 +268,9 @@ if (isset($_SESSION['usuarioActivo'])) {
                         </strong>
                       </div>
                     </div>
+                  </div>
+                  <div class="col-2">
+                    <strong>Fondo de procedencia</strong>
                   </div>
                   <div class="col-2">
                     <strong>Disponibilidad</strong>
