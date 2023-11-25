@@ -79,8 +79,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <strong>Requisiciones de suministros</strong>
                 </div>
                 <div>
-                  <?php if ($dia_actual < 31):?>
-                    <?php if ($count < 10):?>
+                  <?php if ($dia_actual < 15):?>
+                    <?php if ($count < 1):?>
                       <button class="btn btn-primary" type="button" id="new_req" data-coreui-toggle="modal"
                               data-coreui-target="#modalAgg" onclick="create_n()">Nuevo <i class='far fa-plus'></i></button>
                     <?php else:?>
