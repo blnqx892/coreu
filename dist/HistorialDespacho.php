@@ -108,7 +108,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                         </button>
                         <a class=" btn btn-outline-primary rounded-pill " href="Reportes/reporte3.php?id=<?php echo $requisicion['id']?>" target="_blank"><i class='far fa-file'></i></a>
                       </td>
-                     
+
                     </tr>
                     <?php $correlativo++;?>
                   <?php endwhile;?>
@@ -164,30 +164,12 @@ if (isset($_SESSION['usuarioActivo'])) {
               </div>
               <hr class="my2">
               <div class="row">
-                <div class="col-12" id="req" style="display: none">
+                <div class="col-12" id="req_show" style="display: none">
                   <div class="row">
                     <div class="col-6 text-center">
                       <strong>Suministro</strong>
                     </div>
-                    <div class="col-2 text-center">
-                      <strong>Cantidad</strong>
-                    </div>
-                    <div class="col-2 text-center">
-                      <strong>Disponibilidad</strong>
-                    </div>
-                    <div class="col-2 text-center">
-                      <strong>Acciones</strong>
-                    </div>
-                  </div>
-                  <hr class="my-2">
-                  <div id="body_req"></div>
-                </div>
-                <div class="col-12" id="req_approve" style="display: none">
-                  <div class="row">
-                    <div class="col-6 text-center">
-                      <strong>Suministro</strong>
-                    </div>
-                    <div class="col-4">
+                    <div class="col-6">
                       <div class="row">
                         <div class="col-12 text-center">
                           <strong>Cantidad</strong>
@@ -206,49 +188,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                         </div>
                       </div>
                     </div>
-                    <div class="col-2">
-                      <strong>Disponibilidad</strong>
-                    </div>
                   </div>
                   <hr class="my-2">
-                  <div id="body_req_approve"></div>
+                  <div id="body_req_show"></div>
                 </div>
-                <div class="col-12" id="req_service" style="display: none">
-                  <div class="row">
-                    <div class="col-5 text-center">
-                      <strong>Suministro</strong>
-                    </div>
-                    <div class="col-5">
-                      <div class="row">
-                        <div class="col-12 text-center">
-                          <strong>Cantidad</strong>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-4 text-center">
-                          <strong>
-                            Solicitada
-                          </strong>
-                        </div>
-                        <div class="col-4 text-center">
-                          <strong>
-                            Aprobada
-                          </strong>
-                        </div>
-                        <div class="col-4 text-center">
-                          <strong>
-                            Despachada
-                          </strong>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-2">
-                      <strong>Disponibilidad</strong>
-                    </div>
-                  </div>
-                  <hr class="my-2">
-                  <div id="body_req_service"></div>
-                </div>
+
               </div>
             </div>
             <div class="modal-footer">
