@@ -253,7 +253,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                       </div>
                       <div class="col-4 text-center">
                         <strong>
-                          Aprobada
+                          Aprobada por UCP
                         </strong>
                       </div>
                       <div class="col-4 text-center">
