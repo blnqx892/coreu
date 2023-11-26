@@ -40,20 +40,16 @@ $(document).ready(function() {
     html += '<select class="js2 form-select form-select-sm" name="suministros" onchange="disponibilidad(' + items + ')">';
     html += '<option value="-1">Seleccione un suministro</option>';
     listado_suministros.forEach(function(suministro) {
-      html += '<option value="' + suministro.id +'">' + suministro.nombre_suministro + ' (' + suministro.stock + ')' +'</option>';
+      html += '<option value="' + suministro.id +'">' + suministro.nombre_suministro +'</option>';
     });
     html += '</select>';
     html += '</div>';
     // Cantidades
-    html += '<div class="col-2">'
+    html += '<div class="col-3">'
     html += '<input type="number" min="0" placeholder="Cantidad" step="1" name="cantidades" class="form-control form-control-sm" oninput="disponibilidad(' + items + ')">';
     html += '</div>';
-    // Disponibilidad
-    html += '<div class="col-2">'
-    html += '<span class="badge border border-secondary text-secondary bdg-amount py-2 col-12">Sin selección</span>';
-    html += '</div>'
     // Acciones
-    html += '<div class="col-2">'
+    html += '<div class="col-3">'
     html += '<button class="btn btn-sm btn-danger text-light" type="button" onclick="remove_item(' + items + ')"><i class="fas fa-times"></i></button>'
     html += '</div>';
     html += '</div>';
@@ -241,7 +237,7 @@ function disponibilidad(index, suministro_id = null, existencia = null) {
         $(badge).text(kind_save === 'service' ? stock : 'Sin seleccionar');
       } else {
         if (parseFloat(stock) < parseFloat(cantidad)) {
-          it.allOk = false;
+          it.allOk = kind_save !== 'service';
           $(badge).removeClass('border-secondary text-secondary bg-secondary text-dark bg-danger').addClass('bg-danger');
           $(badge).text(kind_save === 'service' ? stock : 'No disponible');
         } else {
@@ -335,17 +331,14 @@ function approve_n(id) {
           html += '<span>' + detalle.nombre_suministro + '</span>';
           html += '</div>';
           // Cantidad solicitada
-          html += '<div class="col-2">'
+          html += '<div class="col-3">'
           html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_solicitada + '</span>';
           html += '</div>';
           // Cantidad aprobada
-          html += '<div class="col-2">'
+          html += '<div class="col-3">'
           html += '<input type="number" min="0" placeholder="Cantidad" step="1" name="cantidades_aprobadas" class="form-control form-control-sm" oninput="disponibilidad(' + detalle.id + ', ' + detalle.suministro_id + ',' + detalle.stock +')" value="' + detalle.cantidad_solicitada + '">';
           html += '</div>'
           // Disponibilidad
-          html += '<div class="col-2">'
-          html += '<span class="badge border border-secondary text-secondary bdg-amount py-2 col-12">Sin selección</span>'
-          html += '</div>';
           html += '</div>';
           $("#body_req_approve").append(html);
           all_items_ok.push({
