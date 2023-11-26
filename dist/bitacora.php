@@ -48,7 +48,18 @@ if (isset($_SESSION['usuarioActivo'])) {
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Bitacora</strong></div>
+              <div class="card-header">
+                <div class="d-flex justify-content-between">
+                  <div class="my-auto">
+                    <strong>Bitacora</strong>
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-light" title="Reporte" data-coreui-toggle="modal"
+                      data-coreui-target="#modalRe" data-coreui-whatever="@mdo" style="float: right;"><i
+                        class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
               <div class="card-body">
                 <!-- dataTable-->
                 <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
@@ -61,7 +72,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
-                  <?php While ($bitacora = mysqli_fetch_assoc($bitacoras)) {
+                    <?php While ($bitacora = mysqli_fetch_assoc($bitacoras)) {
                          date_default_timezone_set('America/El_Salvador');
                   ?>
                     <tr>
@@ -90,6 +101,50 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
+    <!-- MODAL REPORTE -->
+    <div class="modal fade" id="modalRe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
+          <input type="hidden" value="Guardar1" name="bandera">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">REPORTE DE BITACORA</h5>
+              <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-6">
+                  <label class="form-label" for="validationCustom04">Usuario: </label>
+                  <select class="form-select" required id="usuario_id" name="UsuarioB">
+                  </select>
+                  <div class="invalid-feedback">Please select a valid state.</div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-4">
+                      <?php
+                       $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
+                      ?>
+                      <label for="inputEmail4" class="form-label">Desde:</label>
+                      <input type="date" class="form-control mi-validate-1" value="<?php echo $fecha_actual; ?>" id="fechaC" name="fechaC">
+                    </div>
+                    <div class="col-md-4">
+                      <?php
+                       $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
+                      ?>
+                      <label for="inputEmail4" class="form-label">Hasta:</label>
+                      <input type="date" class="form-control mi-validate-1" value="<?php echo $fecha_actual; ?>" id="fechaC" name="fechaC">
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" id="GuardaUnidades" class="btn btn-primary">Generar</button>
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--///////////////////////////////////////////////////////////////////////////////////////////-->
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->

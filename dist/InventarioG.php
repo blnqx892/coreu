@@ -50,9 +50,9 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <strong>Inventario General</strong>
                   </div>
                   <div>
-                  <button type="button" class="btn btn-light" title="Reporte" style="float: right;"><i
-                      class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
-                </div>
+                    <button type="button" class="btn btn-light" title="Reporte" style="float: right;"><i
+                        class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+                  </div>
                 </div>
               </div>
               <div class="card-body">
