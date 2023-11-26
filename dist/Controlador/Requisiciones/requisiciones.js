@@ -190,7 +190,8 @@ $(document).ready(function() {
       data.push({
         detalle_id: item.index,
         suministro_id: item.id,
-        cantidad: row.find('input').val()
+        cantidad: row.find('input').val(),
+        fondos_procedencia: row.find('select').val()
       });
     });
 
@@ -236,23 +237,23 @@ function disponibilidad(index, suministro_id = null, existencia = null) {
       // Medir las cantidades
       if (cantidad === '') {
         it.allOk = false;
-        $(badge).removeClass('border-secondary text-secondary bg-success bg-danger').addClass('border-secondary text-secondary');
-        $(badge).text(stock);
+        $(badge).removeClass('border-secondary text-secondary bg-secondary text-dark bg-danger').addClass('border-secondary text-secondary');
+        $(badge).text(kind_save === 'service' ? stock : 'Sin seleccionar');
       } else {
         if (parseFloat(stock) < parseFloat(cantidad)) {
           it.allOk = false;
-          $(badge).removeClass('border-secondary text-secondary bg-success bg-danger').addClass('bg-danger');
-          $(badge).text(stock);
+          $(badge).removeClass('border-secondary text-secondary bg-secondary text-dark bg-danger').addClass('bg-danger');
+          $(badge).text(kind_save === 'service' ? stock : 'No disponible');
         } else {
           it.allOk = true;
-          $(badge).removeClass('border-secondary text-secondary bg-success bg-danger').addClass('bg-success');
-          $(badge).text(stock);
+          $(badge).removeClass('border-secondary text-secondary bg-secondary text-dark bg-danger').addClass('bg-secondary text-dark');
+          $(badge).text(kind_save === 'service' ? stock : 'Disponible');
         }
       }
     } else {
       // Colocar sin seleccionar
       it.allOk = false;
-      $(badge).removeClass('border-secondary text-secondary bg-success bg-danger').addClass('border-secondary text-secondary');
+      $(badge).removeClass('border-secondary text-secondary bg-secondary text-dark bg-danger').addClass('border-secondary text-secondary');
       $(badge).text('Sin seleccionar');
     }
   } else {
@@ -294,6 +295,7 @@ function create_n() {
   $("#req").show();
   $("#req_approve").hide();
   $("#req_service").hide();
+  $("#req_show").hide();
 
   document.getElementById('fechaP').valueAsDate = new Date();
   $("#unidad").attr('disabled', 'disabled');
@@ -310,9 +312,11 @@ function approve_n(id) {
   $("#add_sumi").hide();
   $("#req").hide();
   $("#req_service").hide();
+  $("#req_show").hide();
   $("save_req").show();
   $("#body_req_approve").empty();
   $("#req_approve").show();
+  $("#div_modal").removeClass('modal-xl').addClass('modal-lg');
 
   const url = host + '/Coreu/dist/Controlador/Requisiciones/find.php?id=' + id;
 
@@ -365,8 +369,10 @@ function show_n(id, estado) {
   $("#req").hide();
   $("#req_service").hide();
   $("save_req").hide();
-  $("#body_req_approve").empty();
-  $("#req_approve").show();
+  $("#body_req_show").empty();
+  $("#req_approve").hide();
+  $("#req_show").show();
+  $("#div_modal").removeClass('modal-xl').addClass('modal-lg');
 
   const url = host + '/Coreu/dist/Controlador/Requisiciones/find.php?id=' + id;
 
@@ -385,11 +391,11 @@ function show_n(id, estado) {
           html += '<span>' + detalle.nombre_suministro + '</span>';
           html += '</div>';
           // Cantidad solicitada
-          html += '<div class="col-2">'
+          html += '<div class="col-3">'
           html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_solicitada + '</span>';
           html += '</div>';
           // Cantidad aprobada
-          html += '<div class="col-2">'
+          html += '<div class="col-3">'
           if (estado == 'pendiente.aprobacion') {
             html += '<span class="badge border border-secondary text-secondary py-2 col-12">Pendiente</span>';
           } else if (estado == 'finalizado') {
@@ -398,12 +404,8 @@ function show_n(id, estado) {
             html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_aprobada + '</span>';
           }
           html += '</div>'
-          // Disponibilidad
-          html += '<div class="col-2">'
-          html += '<span class="badge border border-secondary text-secondary bdg-amount py-2 col-12">Sin selección</span>'
           html += '</div>';
-          html += '</div>';
-          $("#body_req_approve").append(html);
+          $("#body_req_show").append(html);
           all_items_ok.push({
             id: detalle.suministro_id,
             index: detalle.id,
@@ -424,9 +426,11 @@ function service_n(id) {
   $("#add_sumi").hide();
   $("#req").hide();
   $("#req_approve").hide();
+  $("#req_show").hide();
   $("save_req").show();
   $("#body_req_service").empty();
   $("#req_service").show();
+  $("#div_modal").removeClass('modal-lg').addClass('modal-xl');
 
   const url = host + '/Coreu/dist/Controlador/Requisiciones/find.php?id=' + id;
 
@@ -441,11 +445,11 @@ function service_n(id) {
         response.suministros.forEach((detalle) => {
           let html = '<div class="row" id="r' + detalle.id + '">';
           // Suministros
-          html += '<div class="col-5 mb-4">'
+          html += '<div class="col-4 mb-4">'
           html += '<span>' + detalle.nombre_suministro + '</span>';
           html += '</div>';
           // Cantidad solicitada
-          html += '<div class="col-5">';
+          html += '<div class="col-4">';
           html += '<div class="row">';
           html += '<div class="col-4">'
           html += '<span class="badge border border-secondary text-secondary py-2 col-12">' + detalle.cantidad_solicitada + '</span>';
@@ -459,6 +463,14 @@ function service_n(id) {
           html += '<input type="number" min="0" placeholder="Cantidad" step="1" name="cantidades_despachadas" class="form-control form-control-sm" oninput="disponibilidad(' + detalle.id + ', ' + detalle.suministro_id + ',' + detalle.stock +')" value="' + detalle.cantidad_aprobada + '">';
           html += '</div>';
           html += '</div>';
+          html += '</div>';
+          // Fondos de procedencia
+          html += '<div class="col-2">'
+          html += '<select class="form-select-sm form-select" name="fondos_despachados">'
+          html += '<option value="1">Fondos Propios</option>'
+          html += '<option value="2">Fondos FODES</option>'
+          html += '<option value="3">Fondos Donativos</option>'
+          html += '</select>'
           html += '</div>';
           // Disponibilidad
           html += '<div class="col-2">'

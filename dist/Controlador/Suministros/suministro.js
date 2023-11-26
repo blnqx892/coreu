@@ -247,11 +247,11 @@ $(document).ready(function() {
             html += '<tr>';
             html += '<td>' + moment(v.fecha).format('DD/MM/YYYY') +'</td>';
             html += '<td>' + v.concepto +'</td>';
-            html += '<td>' + v.fondos_procedencia +'</td>';
+            html += '<td>' + (v.fondos_procedencia === '1' ? 'Fondos propios' : v.fondos_procedencia === '2' ? 'Fondos FODES' : v.fondos_procedencia === '3' ? 'Donativos' : v.fondos_procedencia) +'</td>';
             html += '<td>' + v.cantidad_entrada +'</td>';
             html += '<td>' + v.cantidad_salida +'</td>';
-            html += '<td>' + v.precio_entrada +'</td>';
-            html += '<td>' + v.precio_salida +'</td>';
+            html += '<td>' + (Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(v.precio_entrada)) +'</td>';
+            html += '<td>' + (Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(v.precio_salida)) +'</td>';
             html += '<td>' + saldo +'</td>';
             html += '</tr>';
           });
