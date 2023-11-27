@@ -153,7 +153,6 @@
         <td><b></b></td>
         <td></td>
         <td><b></b></td>
-        <td>Jefe de Almacen</td>
       </tr>
     </tbody>
   </table>

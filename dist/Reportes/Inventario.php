@@ -14,24 +14,23 @@
           <p style="font-size: 18px; font-family: sans-serif">ALCALDIA MUNICIPAL DE SAN VICENTE<br>
             UNIDAD DE ACTIVO FIJO <br> CONTROL DE BIENES MUEBLES MUNICIPALES</p>
       </td>
-      <td><img src="../img/iconelsv.png" width="100" height="100"></td>
+      <td><img src="../img/iconelsv.png" width="100" height="120"></td>
     </tr>
   </table>
   <table width="950" align="center">
     <thead>
       <tr>
-        <th colspan="4">INVENTARIO FISICO DE BIENES MUEBLES < NOMBRE DEL INVENTARIO ></th>
+        <th colspan="4">INVENTARIO FISICO DE BIENES MUEBLES MENORES A $600.00</th>
       </tr>
     </thead>
-    <tbody style="color:#00000;font-size:120%;">
+    <tbody style="color:#00000;font-size:100%;">
       <tr>
-        <td><b>DEPARTAMENTO:</b></td>
-        <td>RRHH</td>
-        <td WIDTH="540"></td>
+        <td WIDTH="186"><b>DEPARTAMENTO:</b></td>
+        <td>RECURSOS HUMANOS</td>
       </tr>
       <tr>
         <td><b>RESPONSABLE: </b></td>
-        <td>Natalia</td>
+        <td>JUAN AGUSTIN SANCHEZ</td>
       </tr>
       <tr  style="text-align: left;">
         <td><b>PRACTICADO EN FECHA DE: </b></td>
@@ -67,8 +66,19 @@
             <td>Buen estado</td>
           </tr>
           <tr>
+            <td>1</td>
+            <td>Archivero Vertical</td>
+            <td>95090000022</td>
+            <td>Keter234</td>
+            <td>Keter</td>
+            <td>10/12/2022</td>
+            <td>500.00</td>
+            <td>98-09-234-456-00-25</td>
+            <td>Buen estado</td>
+          </tr>
+          <tr>
             <td colspan="6" style="text-align: center;"><b>SUB-TOTAL</b></td>
-            <td><b>450.00</b></td>
+            <td><b>950.00</b></td>
           </tr>
       </tbody>
     </table>

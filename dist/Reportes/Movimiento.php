@@ -35,7 +35,7 @@
         <tr>
           <td><b>Procedencia:</b></td>
           <td>RRHH</td>
-          <td><b>Fecha: </b></td>
+          <td width="186"><b>Fecha: </b></td>
           <td><?php echo date("d/m/Y"); ?></td>
         </tr>
         <tr>
@@ -108,7 +108,10 @@
       </thead>
       <tbody>
         <tr>
-        <th colspan="4" align="left">Jefe de Activo Fijo</th>
+        <th colspan="4" align="left">&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;Jefe de Activo Fijo</th>
         </tr>
       </tbody>
     </table>

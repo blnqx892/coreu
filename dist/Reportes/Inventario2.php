@@ -14,7 +14,7 @@
           <p style="font-size: 18px; font-family: sans-serif">ALCALDIA MUNICIPAL DE SAN VICENTE<br>
             UNIDAD DE ACTIVO FIJO <br> CONTROL DE BIENES MUEBLES MUNICIPALES</p>
       </td>
-      <td><img src="../img/iconelsv.png" width="100" height="100"></td>
+      <td><img src="../img/iconelsv.png" width="100" height="120"></td>
     </tr>
   </table>
   <table width="950" align="center">
@@ -23,15 +23,14 @@
         <th colspan="4">INVENTARIO FISICO DE BIENES MUEBLES GENERAL</th>
       </tr>
     </thead>
-    <tbody style="color:#00000;font-size:120%;">
+    <tbody style="color:#00000;font-size:100%;">
       <tr>
-        <td><b>DEPARTAMENTO:</b></td>
-        <td>RRHH</td>
-        <td WIDTH="540"></td>
+        <td  WIDTH="186"><b>DEPARTAMENTO:</b></td>
+        <td>MEDIO AMBIENTE</td>
       </tr>
       <tr>
         <td><b>RESPONSABLE: </b></td>
-        <td>Natalia</td>
+        <td>VERONICA GUADALUPE MONTENEGRO</td>
       </tr>
       <tr  style="text-align: left;">
         <td><b>PRACTICADO EN FECHA DE: </b></td>
@@ -55,21 +54,36 @@
         </tr>
       </thead>
       <tbody style="color:#00000;font-size:100%;">
-          <tr>
+          <tr align="center">
             <td>1</td>
             <td>Escritorio negro</td>
             <td>Imperial</td>
             <td>imp1234</td>
             <td>Luxur</td>
-            <td>12/08/2022</td>
-            <td>450.00</td>
+            <td width="100">12/08/2022</td>
+            <td width="100">450.00</td>
             <td>98-09-234-456-00-23</td>
             <td>Buen estado</td>
           </tr>
-          <tr>
-            <td colspan="6" style="text-align: center;"><b>SUB-TOTAL</b></td>
-            <td><b>450.00</b></td>
+          <tr align="center">
+            <td>1</td>
+            <td>Computadora de escritorio</td>
+            <td>All in One</td>
+            <td>24CR0008LA</td>
+            <td>HP</td>
+            <td width="100">24/06/2022</td>
+            <td width="100">750.00</td>
+            <td>98-09-234-456-00-11</td>
+            <td>Buen estado</td>
           </tr>
+      </tbody>
+    </table>
+    <table width="300" class="element" >
+      <tbody>
+        <tr>
+          <th width="633" align="center">SUB-TOTAL</th>
+          <td>1,200.00</td>
+        </tr>
       </tbody>
     </table>
   </div><br>

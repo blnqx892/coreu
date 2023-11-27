@@ -33,13 +33,13 @@
     <table class="tablaCargoBienes">
       <tbody style="color:#00000;font-size:125%;">
         <tr>
-          <td><b>Unidad de Descargo:</b></td>
+          <td><b>Procedencia:</b></td>
           <td>RRHH</td>
         </tr>
         <tr>
           <td><b>Fecha: </b></td>
           <td><?php echo date("d/m/Y"); ?></td>
-          <td><b>Tipo de Movimiento: </b></td>
+          <td width="186"><b>Tipo de Movimiento: </b></td>
           <td>Inservible</td>
         </tr>
         <tr>
@@ -107,7 +107,10 @@
       </thead>
       <tbody>
         <tr>
-          <th colspan="4" align="left">Jefe de Activo Fijo</th>
+          <th colspan="4" align="left">&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;Jefe de Activo Fijo</th>
         </tr>
       </tbody>
     </table>
