@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
   combo();
 
   function combo() {
@@ -19,5 +17,5 @@ $(document).ready(function () {
         $("#movimiento1").html(template);
       },
     });
-  } 
+  } //fin de mostrar en el combo
 });

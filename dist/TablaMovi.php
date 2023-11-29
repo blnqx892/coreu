@@ -246,7 +246,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                             </div><br>
                             <div class="col-md-6">
                                 <label class="form-label" for="validationCustom04">Código: </label>
-                                <select class="form-select" required id="usuario_id" name="UsuarioB">
+                                <select class="form-select" required id="codigoTipoMovimiento" name="codigoTipoMovimiento">
                                 </select>
                                 <div class="invalid-feedback">Please select a valid state.</div>
                             </div>
