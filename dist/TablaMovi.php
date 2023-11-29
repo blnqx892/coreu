@@ -44,9 +44,19 @@ if (isset($_SESSION['usuarioActivo'])) {
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Actualización Movimientos</strong></div>
+              <div class="card-header">
+                <div class="d-flex justify-content-between">
+                  <div class="my-auto">
+                    <strong>Actualización de Movimientos</strong>
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-light" title="Reporte" data-coreui-toggle="modal"
+                      data-coreui-target="#modalRe" data-coreui-whatever="@mdo" style="float: right;"><i
+                        class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
               <div class="card-body">
-                <button type="button" class="btn btn-light" title="Reporte" style="float: right;"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></button><br><br>
                 <!-- dataTable-->
                 <table id="moviactivo" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
@@ -75,13 +85,13 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </tfoot>
                 </table>
                 <!-- //dataTable-->
-<!-----------------------------------------MODAL VER  --------------------------------------------------------->
-        <div class="modal fade" id="modalVermovimientos" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <!-----------------------------------------MODAL VER  --------------------------------------------------------->
+                <div class="modal fade" id="modalVermovimientos" tabindex="-1" aria-labelledby="exampleModalLabel"
                   aria-hidden="true">
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN  MOVIMIENTO DE ACTIVOS</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN MOVIMIENTO DE ACTIVOS</h5>
                         <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
@@ -179,8 +189,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </div>
                   </div>
                 </div>
-<!--///////////////TERMINA MODAL VER ///////////////////////////////////////////////////////////////-->
-
+                <!--///////////////TERMINA MODAL VER ///////////////////////////////////////////////////////////////-->
               </div>
             </div>
           </div>
@@ -189,6 +198,40 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
+    <!-- MODAL REPORTE -->
+    <div class="modal fade" id="modalRe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">REPORTE DE MOVIMIENTOS</h5>
+            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <center>
+            <div class="modal-body">
+              <div class="col-md-6">
+                <label class="form-label" for="validationCustom04">Tipo de Movimiento: </label>
+                <select class="form-select" required id="usuario_id" name="UsuarioB">
+                </select>
+                <div class="invalid-feedback">Please select a valid state.</div>
+              </div><br>
+              <div class="col-md-6">
+                <label class="form-label" for="validationCustom04">Código: </label>
+                <select class="form-select" required id="usuario_id" name="UsuarioB">
+                </select>
+                <div class="invalid-feedback">Please select a valid state.</div>
+              </div>
+            </div>
+          </center>
+          <div class="modal-footer">
+            <button type="submit" onclick="" id="GuardaUnidades" class="btn btn-primary">Generar</button>
+            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- ////////////////////////////////////////7MODAL REPORTE -->
     <script src="./Controlador/MantenimientoAF/mostrartablamovimientos.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
