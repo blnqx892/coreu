@@ -34,9 +34,10 @@ $(document).ready(function () {
           contentType: false,
           processData: false,
           success: function (response) {
-           console.log(JSON.parse(response));
             data = JSON.parse(response);
-            if (data.success == 1) {
+            if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+              toastBoostrap(data.toast, data.mensaje)
+            }else if (data.success == 1) {
               
               successToast('Registro guardado con éxito'); 
 
@@ -77,9 +78,6 @@ function validation(index) {
 
 return validate;
 }
-
-
-
 
 //*************************** */
     function limpiar(index) {

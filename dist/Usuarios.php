@@ -114,16 +114,17 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-    <script src="./Controlador/Usuarios/usuario.js"></script>
+  
     <script src="./Controlador/Usuarios/mostrarroles.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js"></script>
-
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
     <script src="./Controlador/Usuarios/usuario.js"></script>
+    <script src="./Controlador/Usuarios/mostrarroles.js"></script>
+    <script src="./Controlador/CredencialesA/credenciales.js"></script>
    
 
   <!-- SCRIPT QUE VALIDA SI LAS CONTRASEÑAS SON IGUALES-->

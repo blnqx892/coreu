@@ -1,6 +1,6 @@
 $(document).ready(function () {
   
-const toast = new coreui.Toast(document.getElementById('liveToast'));
+
     //**************************************guardar  */
   
     $("#GuardaCodificacion").on("click", function () {
@@ -15,15 +15,6 @@ const toast = new coreui.Toast(document.getElementById('liveToast'));
       let usuariosA = $("#nombreC").val();
 
       
-  
-      //if ( fechaA == "" || codigoA == "" || encargadoA == "" 
-      //|| ingresosA == ""|| usuariosA == "") {
-      //  Swal.fire({
-      //    icon: "error",
-      //    title: "error",
-      //    text: "Campos Vacios",
-     //   });
-     // } else {
       if (validation(1)) {  
         var formData = new FormData(); //permite recoger la data para enviarla al controlador
 
@@ -45,16 +36,12 @@ const toast = new coreui.Toast(document.getElementById('liveToast'));
             if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
               toastBoostrap(data.toast, data.mensaje)
             }else if (data.success == 1) {
-              //Swal.fire({
-             ////   icon: "success",
-             //   title: data.title,
-             //   text: data.mensaje,
-            //  });
+        
             successToast('Registro guardado');
-
+              limpiar(1);
               $("input").val(null);
               $("select").val('Elegir Jefe');
-              limpiar(1);
+              
             } else {
               //alert("Formato de imagen incorrecto.");
             }
