@@ -39,7 +39,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     </header>
     <?php
         $conexion=mysqli_connect('localhost','root', '', 'sicafi');
-        $sql="SELECT * from bitacora order by id DESC";
+        $sql="SELECT * from bitacora order by id ASC";
         $bitacoras= mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta"); ?>
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
@@ -102,41 +102,51 @@ if (isset($_SESSION['usuarioActivo'])) {
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
     <!-- MODAL REPORTE -->
+    <?php
+     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+        $sql="SELECT * from usuarios where estado = 'Activo' order by nombre ASC";
+        $usuarios = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
+    ?>
     <div class="modal fade" id="modalRe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
-          <input type="hidden" value="Guardar1" name="bandera">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">REPORTE DE BITACORA</h5>
               <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="col-md-6">
-                  <label class="form-label" for="validationCustom04">Usuario: </label>
-                  <select class="form-select" required id="usuario_id" name="UsuarioB">
-                  </select>
-                  <div class="invalid-feedback">Please select a valid state.</div>
-                </div><br>
-                <div class="row">
-                    <div class="col-md-4">
-                      <?php
+              <div class="col-md-6">
+                <label class="form-label" for="validationCustom04">Usuario: </label>
+                <select class="form-select" required id="usuario_id" name="UsuarioB">
+                  <?php
+                                   While($usuario=mysqli_fetch_array($usuarios)){
+                                     echo '<option value="'.$usuario['id'].'">'.$usuario['nombre'].'</option>';
+                                     }?>
+                </select>
+                <div class="invalid-feedback">Please select a valid state.</div>
+              </div><br>
+              <div class="row">
+                <div class="col-md-4">
+                  <?php
                        $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
                       ?>
-                      <label for="inputEmail4" class="form-label">Desde:</label>
-                      <input type="date" class="form-control mi-validate-1" value="<?php echo $fecha_actual; ?>" id="fechaC" name="fechaC">
-                    </div>
-                    <div class="col-md-4">
-                      <?php
+                  <label for="inputEmail4" class="form-label">Desde:</label>
+                  <input type="date" class="form-control mi-validate-1" value="<?php echo $fecha_actual; ?>" id="fecha1"
+                    name="fecha1">
+                </div>
+                <input type="hidden" id="tiporeporte" value="Activo" />
+                <div class="col-md-4">
+                  <?php
                        $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
                       ?>
-                      <label for="inputEmail4" class="form-label">Hasta:</label>
-                      <input type="date" class="form-control mi-validate-1" value="<?php echo $fecha_actual; ?>" id="fechaC" name="fechaC">
-                    </div>
-                  </div>
+                  <label for="inputEmail4" class="form-label">Hasta:</label>
+                  <input type="date" class="form-control mi-validate-1" value="<?php echo $fecha_actual; ?>" id="fecha2"
+                    name="fecha2">
+                </div>
+              </div>
             </div>
             <div class="modal-footer">
-              <button type="submit" id="GuardaUnidades" class="btn btn-primary">Generar</button>
+              <button type="submit" onclick="reporte()" id="GuardaUnidades" class="btn btn-primary">Generar</button>
               <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
 
             </div>
@@ -144,6 +154,33 @@ if (isset($_SESSION['usuarioActivo'])) {
         </form>
       </div>
     </div>
+
+    <script type="text/javascript">
+    //REPORTE------------------------------------------------------
+    function reporte() {
+      desde = $('#fecha1').val();
+      hasta = $('#fecha2').val();
+
+      idusuario = $('#usuario_id').val();
+      tipor = $('#tiporeporte').val();
+
+      desde = desde.split('/').reverse().join('-');
+      hasta = hasta.split('/').reverse().join('-');
+
+      if (tipor == 'Activo' && idusuario == "") {
+        alert("Debe seleccionar una opción");
+
+      } else if (desde > hasta) {
+        alert("Verifique las fecha");
+      } else {
+        var dominio = window.location.host;
+        window.open('http://' + dominio + '/coreu/dist/Reportes/BitacoraR.php?desde=' + desde +
+          '&hasta=' +
+          hasta + '&idusuario=' + idusuario + '&tipor=' + tipor, '_blank');
+      }
+
+    }
+  </script>
     <!--///////////////////////////////////////////////////////////////////////////////////////////-->
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
