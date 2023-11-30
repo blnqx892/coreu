@@ -1,8 +1,16 @@
 <?php
 session_start();
-include("../../Confi/conexion.php");
-$conexion = con();
+ // Incluir el archivo que contiene la configuración de la conexión a la base de datos
+ include("../../Confi/conexion.php");
 
+ // Incluir el archivo que contiene funciones de validación (por ejemplo, funciones como dangerJSON, successJSON, warningJSON)
+ include("../../Confi/validacion.php");
+
+ // Establecer conexión a la base de datos
+ $conexion = con();
+
+ 
+    // Obtener valores del formulario
     $fecha = $_POST["fecha"];
     $factura = $_POST["factura"];
     $costo = $_POST["costo"];
@@ -22,34 +30,35 @@ $conexion = con();
     $capaci = intval($_POST["capa"]);
     $x       =$_POST["bandera"]; //fk_ingreso_entrada 1
 
+    if (validacionSql("SELECT VALIDAR('VALIDAR_NUMERO_FACTURA', '$factura') AS resultado")) {
+        // Mostrar mensaje de advertencia si el código ya existe
+        warningJSON('El Número de factura ya existe.');
+        return;
+    }
+
+     // Establecer una nueva conexión para el procedimiento almacenado
+     $conexion = con();
+
    $sql = "INSERT INTO ingreso_entradas (fecha_adquisicion,numero_factura,costo_adquisicion,nombre_adquisicion,
     serie_adquisicion,marca,modelo,color,descripcion_adquisicion,cargo,valor_rescate,fk_categoria,fk_proveedores,numero_motor,
     numero_chasis,numero_placa,capacidad,boolean_transporte) VALUES
     ('$fecha','$factura', '$costo','$nombre','$serie','$marca','$modelo','$color','$descrip','$cargo',
     '$vida','$cate','$prov','$numerom','$numerocha','$numerop','$capaci','$x')";
 
-    // Ejecutar la consulta SQL
-    $resultado    = mysqli_query($conexion, $sql);
-    //echo "Los datos se han insertado correctamente";
-    $json = array();
-            if ($resultado) {
-                $json[] = array(
-                    'success'=>1,
-                    'title' => 'Exito',
-                    'mensaje'=>'Registro Guardado con exito!'
-                  );
-                 // echo 1;
-            } else {
-              $json[] = array(
-                  'title' => "Error",
-                  'mensaje'=> mysqli_error($conexion)
-              );
-          }
+    try {
+        // Ejecutar el procedimiento almacenado
+        $resultado = mysqli_query($conexion, $sql);
+        // Mostrar mensaje de éxito
+        successJSON('Registro guardado con éxito.');
+    } catch (Exception $e) {
+        // Manejar excepciones durante la ejecución del procedimiento almacenado
+        dangerJSON($e);
+    } finally {
+        // Cerrar la conexión después de ejecutar el procedimiento almacenado
+        mysqli_close($conexion);
+    }
 
-          $jsonstring = json_encode($json[0]);
-          echo $jsonstring;
-
-          //////////CAPTURA DATOS PARA BITACORA
+//////////CAPTURA DATOS PARA BITACORA
 $usuari=$_SESSION['usuarioActivo'];
 $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
 $sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Registró un nuevo bien','$nom',now())";

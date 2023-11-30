@@ -37,7 +37,7 @@ $(document).ready(function () {
               toastBoostrap(data.toast, data.mensaje)
             }else if (data.success == 1) {
         
-            successToast('Registro guardado');
+              successToast('Registro guardado');
               limpiar(1);
               $("input").val(null);
               $("select").val('Elegir Jefe');
