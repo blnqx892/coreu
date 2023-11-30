@@ -41,15 +41,16 @@ const toast = new coreui.Toast(document.getElementById('liveToast'));
           contentType: false,
           processData: false,
           success: function (response) {
-            console.log(JSON.parse(response));
             data = JSON.parse(response);
-            if (data.success == 1) {
+            if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+              toastBoostrap(data.toast, data.mensaje)
+            }else if (data.success == 1) {
               //Swal.fire({
              ////   icon: "success",
              //   title: data.title,
              //   text: data.mensaje,
             //  });
-            show_toast('success', 'Registro guardado', 'Acción exitosa');
+            successToast('Registro guardado');
 
               $("input").val(null);
               $("select").val('Elegir Jefe');
@@ -60,7 +61,7 @@ const toast = new coreui.Toast(document.getElementById('liveToast'));
           },
         });
       } else {
-        show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+        //show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
         return false;
       }
     });

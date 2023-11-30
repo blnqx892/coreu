@@ -3,9 +3,9 @@ $(document).ready(function () {
   
   
     //********************guardar  */
-    const toast = new coreui.Toast(document.getElementById('liveToast'));
+    
   
-    $("#GuardaDescargo").on("click", function () {
+ $("#GuardaDescargo").on("click", function () {
      
       validation();
       let fechaMovimiento = $("#fecha_movimientodescargo").val();
@@ -16,7 +16,7 @@ $(document).ready(function () {
       if (validation(1)) {
 
 
-        var formData = new FormData(); //permite recoger la data para enviarla al controlador
+        let formData = new FormData(); //permite recoger la data para enviarla al controlador
        
         formData.append("fechaMovimiento", fechaMovimiento);//anadir la data al objeto para seer enviadad
         formData.append("observa",observa);
@@ -32,14 +32,22 @@ $(document).ready(function () {
           contentType: false,
           processData: false,
           success: function (response) {
+            console.log(JSON.parse(response));
+            data = JSON.parse(response);
+            if (data.success == 1) {
+                 
+            successToast('Registro guardado con éxito');
+            limpiar(1); 
             $("#codigo_id").select2().text();
             $('#formD').get(0).reset();
-            show_toast('success', 'Registro guardado', 'Acción exitosa');
-            limpiar(1);      
-          },
+             
+          } else {
+            //alert("Formato de imagen incorrecto.");
+          }
+        },
         });
       } else {
-        show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+       // show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
       }
       return false;
      
@@ -83,5 +91,4 @@ function show_toast(severity, title, body) {
   toast.show();
 }
 
-  
   });

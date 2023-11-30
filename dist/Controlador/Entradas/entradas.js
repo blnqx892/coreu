@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-  const toast = new coreui.Toast(document.getElementById('liveToast'));
-
 
   //********************guardar  */
 
@@ -42,29 +40,7 @@ $(document).ready(function () {
       var bandera = 1;
     }
 
-    // if ( $("#fechaC").val() == "" || $("#facturaC").val() == "" || $("#costoC").val() == "" ||
-    //   $("#proveedor_id").val() == "" ||  $("#nombreC").val() == "" || $("#colorC").val() == "" ||
-    //   $("#cargoC").val() == "" || $("#categoria_id").val() == "" ||
-    //   $("#descriC").val() == "") {
-    //     Swal.fire({
-    //       icon: "error",
-    //       title: "error",
-    //       text: "Campos Vacios",
-    //     });
-
-    //   }else if($("#flexSwitchCheckChecked").val()=="on" &&($("#motorC").val() == "" ||
-    //   $("#chasisC").val() == "" || $("#placaC").val() == "" ||  $("#capacidadC").val() == "")){
-
-    //   Swal.fire({
-    //     icon: "error",
-    //     title: "error",
-    //     text: "Campos Vacios",
-    //   });
-    // } else {
     if (validation(1)) {
-
-
-
 
       let formData = new FormData(); //permite recoger la data para enviarla al controlador
 
@@ -99,13 +75,8 @@ $(document).ready(function () {
           console.log(JSON.parse(response));
           data = JSON.parse(response);
           if (data.success == 1) {
-            // Swal.fire({
-            //   icon: "success",
-            //   title: data.title,
-            //   text: data.mensaje,
-            // });
-            show_toast('success', 'Registro guardado', 'Acción exitosa');
-
+            
+            successToast('Registro guardado con éxito');
 
             $("#formE")[0].reset();
             limpiar(1);
@@ -119,7 +90,7 @@ $(document).ready(function () {
       });
 
     } else {
-      show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+      //show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
     }
     return false;
   });

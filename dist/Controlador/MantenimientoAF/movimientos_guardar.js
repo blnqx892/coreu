@@ -4,6 +4,7 @@ $(document).ready(function () {
     const toast = new coreui.Toast(document.getElementById('liveToast'));
 
     $("#GuardaMovimientos").on("click", function () {
+
       validation();
       let fechaMovimiento   = $("#fecha_movimiento").val();
       let nombre_u          = $("#unidad_id").val();
@@ -12,7 +13,7 @@ $(document).ready(function () {
       let _id_asigna        = $("#codigo_id :selected").val();
      
       if (validation(1)) {
-        var formData = new FormData(); //permite recoger la data para enviarla al controlador
+         let formData = new FormData(); //permite recoger la data para enviarla al controlador
        
         formData.append("fechaMovimiento", fechaMovimiento); //anadir la data al objeto para seer enviadad
         formData.append("observa",observa);
@@ -28,14 +29,23 @@ $(document).ready(function () {
           contentType: false,
           processData: false,
           success: function (response) {
+            console.log(JSON.parse(response));
+            data = JSON.parse(response);
+            if (data.success == 1) {
+              successToast('Registro guardado con éxito');
+
             $("#codigo_id").select2().text();
             $('#formM').get(0).reset();
             limpiar(1);
-            show_toast('success', 'Registro guardado', 'Acción exitosa');
-          },
+
+          } else {
+            //alert("Formato de imagen incorrecto.");
+            
+          }
+        },
         });
       } else {
-        show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+       // show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
       }
       return false;
     });

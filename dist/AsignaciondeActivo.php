@@ -40,6 +40,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR---------------------------------------------------->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
+      <?php include("toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -137,7 +138,7 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-    <script src="./Controlador/codificacionAF/codificacion.js"></script>
+    
     <script src="./Controlador/CredencialesA/credenciales.js" type="text/javascript"></script>
     <script src="./Controlador/Categorias/categoria.js" type="text/javascript"></script>
     <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
@@ -171,21 +172,9 @@ if (isset($_SESSION['usuarioActivo'])) {
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
-<!-- ////////////////////////-->
-    <!-- para que muestre la alerta -->
-    <div class="toast-container position-fixed end-0 p-3">
-      <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-          <div class="rounded me-2"></div>
-          <strong class="me-auto" id="toast_title">Acción exitosa</strong>
-          <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body" id="toast_body">
-          Registro guardado
-        </div>
-      </div>
-    </div>
-    <!-- fin de que muestre la alerta -->
+    <!-- ////////////////////////-->
+    <script src="./Controlador/codificacionAF/codificacion.js"></script>
+    
   </div>
 </body>
 

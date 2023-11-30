@@ -61,50 +61,6 @@ $(document).ready(function () {
         tabla.ajax.url("Controlador/Usuarios/mostarU.php").load();
       }
 
- //------------------------edit mostrar-----------------------------------------------
-      
-  $("#miTablaUsuarios").on("click", ".edit-item", function () {
-    let id = $(this).attr("id-item");
-   // $("#_id").val('');
-    $("#_id").val(id);
-   
-     $("#modalEditar").modal("show");
-    var formData = new FormData();
-
-    formData.append("id", id);
-  
-    //otro ajax
-     $.ajax({
-      url: "Controlador/Usuarios/mostrar_modal.php",
-      type: "post",
-      data: formData,
-      contentType: false,
-      processData: false,
-      success: function (response) {
-        console.log(JSON.parse(response));
-        data = JSON.parse(response);
-        //console.log(data);
-        $("#_id").val(data.id);
-        $("#nombre").val(data.nom);
-        $("#rolC").val(data.rol);
-        $("#unidad_id").val(data.unidd);    
-        $("#apellido").val(data.ape);
-        $("#usuario").val(data.usu);
-        $("#email").val(data.email);
-       
-        
-        Swal.fire({
-          icon: "info",
-          title: "Datos Cargados Correctamente!",
-          text: "Información lista para ser modificada",
-        });
-
-        edit = true;
-      },
-    });
-  });
-      //------------------------- fin edit mostrar-------------------------------------
-
     //----------------------------- mostrar------------------------------------------
       
     $("#miTablaUsuarios").on("click", ".ver-item", function () {
@@ -140,11 +96,9 @@ $(document).ready(function () {
         },
       });
     });
-        //------------------------- fin  mostrar--------------------------------------------
+//------------------------- fin  mostrar--------------------------------------------
 
-
-
-  //*lo movi para aqui para poder acceder al metodo que recarga la tabla
+//*lo movi para aqui para poder acceder al metodo que recarga la tabla
 
     $("#edit").on("click", function () {
         
@@ -154,18 +108,28 @@ $(document).ready(function () {
        var rol = $("#rolC").val();     
        var unidd = $("#unidad_id").val();    
        var emailC = $("#email").val();
-     //  var contraC = $("#con").val();
+     
        var id      = $("#_id").val(); //aqui capturas
         
-      if ( $("#nombreC").val() == "" || $("#apellidoC").val() == "" || $("#usuario").val() == "" ||
-           $("#rolC").val() == "" || $("#unidad_id").val() == "" || $("#emailC").val() == "") {
+      if ( 
+        $("#nombreC").val()    === "" ||  $("#nombreC").val()    === null ||
+        $("#apellidoC").val()  === "" ||  $("#apellidoC").val()  === null ||
+        $("#usuario").val()    === "" ||  $("#usuario").val()    === null ||
+        $("#rolC").val()       === "" ||  $("#rolC").val()       === null ||
+        $("#unidad_id").val()  === "" ||  $("#unidad_id").val()  === null ||
+        $("#emailC").val()     === "" ||  $("#emailC").val()     === null 
+        ) {
         
-                Swal.fire({
-                  icon: "error",
-                  title: "error",
-                  text: "Campos Vacios",
-                });
-              } else {
+          if($("#_id").val() ===null || $("#_id").val()==='')
+          {
+            dangerToast('El siguiente registro no contiene un identificar valido.');
+            return;
+          }
+    
+          warningToast('Por favor, completa todos los campo.');
+          return;
+          
+      } else {
                 
       var formData = new FormData(); //permite recoger la data para enviarla al controlador
         
@@ -175,9 +139,8 @@ $(document).ready(function () {
           formData.append("rol",rol);
           formData.append("unid",unidd);
           formData.append("email",emailC);
-      //    formData.append("contra",contraC);
-       //   formData.append("contra",contraC);
           formData.append("_id",id ); 
+
         //para que no te perdas lo deje comentado
           
                 $.ajax({
@@ -190,31 +153,23 @@ $(document).ready(function () {
                     console.log(JSON.parse(response));
                     data = JSON.parse(response);
                     if (data.success == 1) {
-                      Swal.fire({
-                        icon: "success",
-                        title: data.title,
-                        text: data.mensaje,
-                      });
-                       
-                     
+                
+   
                      // $("#form")[0].reset();
                       $("#modalEditar").modal("hide");
-                      refrescarTable();//recarga la tabla en el momento
-                       
-                      
-          
+                      refrescarTable();//recarga la tabla en el momento  
                     } else {
-
+                      dangerToast('No se realizó la modificación.')
                     }
                   },
                 });
                 return false;
               }
             });
-            //*************************** */
+  //************************************************************* */
 
 
-//-------------------------------EDITARRRRR
+//-------------------------------EDITARRRRR--------------------------------
 $("#miTablaUsuarios").on("click", ".edit-item", function () {
   let id = $(this).attr("id-item");
   $("#_id").val(id);
@@ -242,21 +197,14 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
       $("#apellido").val(data.ape);
       $("#usuario").val(data.usu);
       $("#email").val(data.email);
-    //  $("#con").val(data.contra);
-     // $("#contra1").val(data.contra);
-      
-      
-      Swal.fire({
-        icon: "info",
-        title: "Datos Cargados Correctamente!",
-        text: "Información lista para ser modificada",
-      });
+    
+      infoToast('Datos Cargados Correctamente')
 
       edit = true;
     },
   });
 });
-//------------------------- fin edit mostrar
+//------------------------- fin edit mostrar---------------------------------------
 
 //-----------DAR DE BAJA---------------------------------------------------- 
     $("#miTablaUsuarios").on("click", ".baja-item", function () {
@@ -312,7 +260,7 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
       
     });
     
- //----------------FIN DAR DE BAJA 
+ //----------------FIN DAR DE BAJA ----------------------------------------
 
  //-----------DAR DE ALTA-------------------------------------------------
     $("#miTablaUsuarios").on("click", ".alta-item", function () {
@@ -371,78 +319,5 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
     
 //----------------FIN DAR DE ALTA
 
-          
-//*lo movi para aqui para poder acceder al metodo que recarga la tabla
-
-$("#edit").on("click", function () {
-                 
-  var nombreC = $("#nombre").val(); //capturar los datos
-  var apellidoC = $("#apellido").val();
-  var usuario = $("#usuario").val();
-  var rol = $("#rolC").val();
-  var uni = $("#unidadd_id").val();
-  var emailC = $("#email").val();
- // var contraC = $("#con").val();
-  var id      = $("#_id").val(); //aqui capturas
-                  
-                       
-                      
-                                
-    if ( $("#nombreC").val() == "" || $("#apellidoC").val() == "" || $("#usuario").val() == "" ||
-      $("#rolC").val() == ""  ||$("#unidadd_id").val() == ""  ||  $("#emailC").val() == "" ||   $("#contraC").val() == "" ) {
-                              
-              Swal.fire({
-                icon: "error",
-                title: "error",
-                text: "Campos Vacios",
-              });
-            } else {
-      var formData = new FormData(); //permite recoger la data para enviarla al controlador
-      
-      formData.append("nombreC", nombreC);//anadir la data al objeto para seer enviadad
-      formData.append("ape",apellidoC);
-      formData.append("usu",usuario);
-      formData.append("rol",rol);
-      formData.append("unid",uni);
-      formData.append("email",emailC);
-   //   formData.append("contra",contraC);
-    //  formData.append("contra",contraC);
-      formData.append("_id",id ); 
-              //para que no te perdas lo deje comentado
-        
-              $.ajax({
-                url: "Controlador/Usuarios/editar.php",
-                type: "post",
-                data: formData,
-                contentType: false,
-                processData: false,
-                success: function (response) {
-                  console.log(JSON.parse(response));
-                  data = JSON.parse(response);
-                  if (data.success == 1) {
-                    Swal.fire({
-                      icon: "success",
-                      title: data.title,
-                      text: data.mensaje,
-                    });
-                    
-                  
-                    //$("#form")[0].reset();
-                    $("#modalEditar").modal("hide");
-                    refrescarTable();//recarga la tabla en el momento
-                    //proba
-                    
-        
-                  } else {
-                    //alert("Formato de imagen incorrecto.");
-                  }
-                },
-              });
-              return false;
-            }
-                      });
-  //*************************** */
-    
-  
   });
   

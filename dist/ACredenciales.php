@@ -40,6 +40,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
+      <?php include("toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -96,7 +97,7 @@ if (isset($_SESSION['usuarioActivo'])) {
           <div class="modal-body">
                 <div class="col-md-6">
                   <label for="inputZip" class="form-label">Nombre Unidad:</label>
-                  <input type="text" class="form-control unidad-validate-1" id="nombreUnid">
+                  <input type="text" class="form-control unidades-validate-1" id="nombreUnid">
                 </div>
           </div>
           <div class="modal-footer">
@@ -158,7 +159,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                 </div>
           </div>
           <div class="modal-footer">
-          <button class="btn btn-success" type="submit" id="editunid" name="btnGuardar" >Guardar</button>
+          <button class="btn btn-success" type="button" id="editunid" name="btnGuardar" >Guardar</button>
             <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
 
           </div>
@@ -168,28 +169,16 @@ if (isset($_SESSION['usuarioActivo'])) {
     </div>
 <!--///////////////////FIN MODAL EDITAR UNIDADES/////////////////////-->
   </div>
-  <script src="./Controlador/CredencialesA/mostrarUni.js"></script>
-  <script src="./Controlador/CredencialesA/credenciales.js"></script>
+  
   <!-- IMPORTAR ARCHIVO FOOTER-->
   <?php include("foot/foot.php"); ?>
   <!-- ////////////////////////-->
   <!-- IMPORTAR ARCHIVO SCRIPT-->
   <?php include("foot/script.php"); ?>
   <!-- ////////////////////////-->
-  <!-- para que muestre la alerta -->
-  <div class="toast-container position-fixed end-0 p-3">
-            <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                    <div class="rounded me-2"></div>
-                    <strong class="me-auto" id="toast_title">Acción exitosa</strong>
-                    <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body" id="toast_body">
-                    Registro guardado
-                </div>
-            </div>
-        </div>
-        <!-- fin de que muestre la alerta -->
+  <script src="./Controlador/CredencialesA/mostrarUni.js"></script>
+  <script src="./Controlador/CredencialesA/credenciales.js"></script>
+ 
   </div>
 </body>
 

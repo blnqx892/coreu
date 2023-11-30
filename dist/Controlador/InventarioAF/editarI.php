@@ -38,7 +38,8 @@ WHERE asignacion_activo.id='$id'";
       //var_dump($sql); /*para que proves porq el error */
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
-  
+   // Cerrar la conexión
+   mysqli_close($conexion);
     //echo "Los datos se han insertado correctamente";
     $json = array();
             if ($resultado) {
@@ -58,9 +59,9 @@ WHERE asignacion_activo.id='$id'";
            echo $jsonstring;
 
 //////////CAPTURA DATOS PARA BITACORA
-$usuari=$_SESSION['usuarioActivo'];
-$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se edito los datos de un bien en inventario','$nom',now())";
-mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+//$usuari=$_SESSION['usuarioActivo'];
+//$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+//$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se edito los datos de un bien en inventario','$nom',now())";
+//mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
 ///////////////////////////////////////////////
 ?>

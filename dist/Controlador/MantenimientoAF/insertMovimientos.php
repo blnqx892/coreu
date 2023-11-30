@@ -17,7 +17,7 @@ $conexion = con();
     '$fk_asignacion_activo',
     '$fk_unidades'
    );";
-echo $sql;
+
     // Ejecutar la consulta SQL
     $resultado = mysqli_query($conexion, $sql);
     
@@ -37,5 +37,5 @@ echo $sql;
                   );
             }
            $jsonstring = json_encode($json[0]);
-           echo $jsonstring;
+    echo $jsonstring;
 ?>

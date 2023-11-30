@@ -1,6 +1,6 @@
 $(document).ready(function () {
   
-  const toast = new coreui.Toast(document.getElementById('liveToast'));
+  
     //**************************************guardar  */
   
     $("#GuardaUsuarios").on("click", function () {
@@ -15,20 +15,9 @@ $(document).ready(function () {
       var emailC = $("#emailC").val();
       var contraC = $("#contraC").val();
     
-  
-      //if ( $("#nombreC").val() == "" || $("#apellidoC").val() == "" || $("#usuario").val() == "" ||
-      //  $("#rolC").val() == "" ||$("#unidad_id").val() == "" ||
-      //  $("#emailC").val() == "" ||
-      //  $("#contraC").val() == "" ) {
-      // Swal.fire({
-      // icon: "error",
-      //title: "error",
-     //text: "Campos Vacios",
-    //});
-    // } else {
 
         if (validation(1)) {
-          let  formData = new FormData(); //permite recoger la data para enviarla al controlador
+        let  formData = new FormData(); //permite recoger la data para enviarla al controlador
 
         formData.append("nombreC", nombreC);//anadir la data al objeto para seer enviadad
         formData.append("ape",apellidoC);
@@ -45,16 +34,11 @@ $(document).ready(function () {
           contentType: false,
           processData: false,
           success: function (response) {
-            console.log(JSON.parse(response));
+           console.log(JSON.parse(response));
             data = JSON.parse(response);
             if (data.success == 1) {
-              //Swal.fire({
-              //icon: "success",
-              //title: data.title,
-              //text: data.mensaje,
-              //});
-               
-              show_toast('success', 'Registro guardado', 'Acción exitosa');
+              
+              successToast('Registro guardado con éxito'); 
 
                $("#form")[0].reset();
                limpiar(1);
@@ -67,7 +51,7 @@ $(document).ready(function () {
         });
 
       } else {
-        show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+        //show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
       }
         return false;     
     });

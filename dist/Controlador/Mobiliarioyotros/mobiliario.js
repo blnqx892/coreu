@@ -1,9 +1,8 @@
 $(document).ready(function () {
+
+  // *********  guardar  ******************************
   
-  const toast = new coreui.Toast(document.getElementById('liveToast'));
-    // *********  guardar  ******************************
-  
-    $("#GuardaMobiliario").on("click", function () {
+ $("#GuardaMobiliario").on("click", function () {
 
      
       validation();
@@ -13,14 +12,7 @@ $(document).ready(function () {
       let valorM = $("#valom").val();
       let descriM = $("#descrim").val();
 
-     // if ( $("#fecham").val() == "" || $("#nomm").val() == "" || $("#modelm").val() == "" ||
-     //   $("#valom").val() == "" ||$("#descrim").val() == "") {
-     //     Swal.fire({
-    //       icon: "error",
-    //         title: "error",
-   //         text: "Campos Vacios",
-  //      });
-  //   } else {
+     
 if (validation(1)) {
 
         let formData = new FormData(); //permite recoger la data para enviarla al controlador
@@ -42,13 +34,8 @@ if (validation(1)) {
             console.log(JSON.parse(response));
             data = JSON.parse(response);
             if (data.success == 1) {
-              // Swal.fire({
-             //  icon: "success",
-             //   title: data.title,
-             //   text: data.mensaje,
-             // });
-               
-             show_toast('success', 'Registro guardado', 'Acción exitosa');
+                 
+             successToast('Registro guardado con éxito');
 
                $("#formmo")[0].reset();
                limpiar(1);
@@ -59,7 +46,7 @@ if (validation(1)) {
           },
         });
       } else {
-        show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+       // show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
       }
         return false;
     });

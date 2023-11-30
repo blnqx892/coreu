@@ -41,7 +41,6 @@ $(document).ready(function () {
               url: "Controlador/Mobiliarioyotros/mostrar_mobiliario.php",
               method: "GET",
               dataSrc: function (json) {
-                console.log(json);
                 return json;
               },
             },
@@ -62,52 +61,6 @@ $(document).ready(function () {
         function refrescarTable() {//para editar o otras acciones
           tabla.ajax.url("Controlador/Mobiliarioyotros/mostrar_mobiliario.php").load();
         }
-
-        
- //------------------------edit mostrar-----------------------------------------------
-      
-  $("#mobiliario").on("click", ".editmo-item", function () {
-    let id = $(this).attr("id-item-mo");
-   // $("#_id").val('');
-    $("#_id").val(id);
-   
-     $("#modalEditarmo").modal("show");
-    var formData = new FormData();
-
-    formData.append("id", id);
-  
-    //otro ajax
-     $.ajax({
-      url: "Controlador/Mobiliarioyotros/mostrarmodal_mobiliario.php",
-      type: "post",
-      data: formData,
-      contentType: false,
-      processData: false,
-      success: function (response) {
-        console.log(JSON.parse(response));
-        data = JSON.parse(response);
-        //console.log(data);
-        $("#_id").val(data.id);
-        $("#fechame").val(data.fecha);
-        $("#nombreme").val(data.nombre);
-        $("#modelome").val(data.modelo);
-        $("#valorme").val(data.valor);
-        $("#descrime").val(data.descrim);
-        edit = true;
-       
-        
-        Swal.fire({
-          icon: "info",
-          title: "Datos Cargados Correctamente!",
-          text: "Información lista para ser modificada",
-        });
-
-        edit = true;
-      },
-    });
-  });
-  //------------------------- fin edit mostrar-------------------------------------
-
   
   //----------------------------- mostrar-------------------------------------------------
       
@@ -156,15 +109,24 @@ $("#editmobi").on("click", function () {
   var valorM   =$("#valorme").val();
   var descriM =$("#descrime").val();
    
-  if ( $("#fechame").val() == "" || $("#nombreme").val() == "" || $("#modelom").val() == "" ||
-  $("#valorme").val() == "" ||$("#descrime").val() == "") {
+  if ( 
+      $("#fechame").val()   === "" || $("#fechame").val()  === null ||
+      $("#nombreme").val()  === "" || $("#nombreme").val() === null ||
+      $("#modelome").val()  === "" || $("#modelome").val() === null || 
+      $("#valorme").val()   === "" || $("#valorme").val()  === null ||
+      $("#descrime").val()  === "" || $("#descrime").val() === null
+    ) {
    
-           Swal.fire({
-             icon: "error",
-             title: "error",
-             text: "Campos Vacios",
-           });
-         } else {
+      if($("#_id").val() ===null || $("#_id").val()==='')
+      {
+        dangerToast('El siguiente registro no contiene un identificar valido.');
+        return;
+      }
+
+      warningToast('Por favor, completa todos los campo.');
+      return;
+      
+  } else {
            
  var formData = new FormData(); //permite recoger la data para enviarla al controlador
     
@@ -187,21 +149,13 @@ $.ajax({
     console.log(JSON.parse(response));
     data = JSON.parse(response);
     if (data.success == 1) {
-      Swal.fire({
-        icon: "success",
-        title: data.title,
-        text: data.mensaje,
-      });
-       
-     
-     // $("#form")[0].reset();
+      successToast(data.mensaje)
+
+      //$("form")[0].reset();
       $("#modalEditarmo").modal("hide");
       refrescarTable();//recarga la tabla en el momento
-       
-      
-
     } else {
-
+      dangerToast('No se realizó la modificación.')
     }
   },
 });
@@ -211,8 +165,8 @@ return false;
 //*********************************************************** */
 //-------------------------------EDITARRRRR
 $("#mobiliario").on("click", ".editmo-item", function () {
-  let id = $(this).attr("id-item-mo");
-  $("#_id").val(id);
+   let id = $(this).attr("id-item-mo");
+     $("#_id").val(id);
 
     $("#modalEditarmo").modal("show");
     var formData = new FormData();
@@ -236,12 +190,8 @@ $("#mobiliario").on("click", ".editmo-item", function () {
       $("#modelome").val(data.modelo);
       $("#valorme").val(data.valor);
       $("#descrime").val(data.descrim);
-    
-      Swal.fire({
-        icon: "info",
-        title: "Datos Cargados Correctamente!",
-        text: "Información lista para ser modificada",
-      });
+      
+      infoToast('Datos Cargados Correctamente')
 
       edit = true;
     },
@@ -249,71 +199,4 @@ $("#mobiliario").on("click", ".editmo-item", function () {
 });
 //------------------------- fin edit mostrar--------------------------------------------
           
-//*lo movi para aqui para poder acceder al metodo que recarga la tabla
-  
-$("#editmobi").on("click", function () {
-               
-   var id      = $("#_id").val(); 
-  var fechaM   =$("#fechame").val();
-  var nombreM  =$("#nombreme").val();
-  var modeloM  =$("#modelome").val();
-  var valorM   =$("#valorme").val();
-  var descriM =$("#descrime").val(); //aqui capturas
-                
-                     
-                    
-                              
-if ( $("#fechame").val() == "" || $("#nombreme").val() == "" || $("#modelome").val() == "" ||
-$("#valorme").val() == "" ||$("#descrime").val() == "") {
-                            
-            Swal.fire({
-              icon: "error",
-              title: "error",
-              text: "Campos Vacios",
-            });
-          } else {
-    var formData = new FormData(); //permite recoger la data para enviarla al controlador
-    
-    formData.append("fecham", fechaM);//anadir la data al objeto para seer enviadad
-    formData.append("nombrem", nombreM);
-    formData.append("modelom", modeloM);
-    formData.append("valorm", valorM);
-    formData.append("descrim", descriM);
-    formData.append("_id",id ); //anadir la data al objeto para seer enviadad
-  
-      
-            $.ajax({
-              url: "Controlador/Mobiliarioyotros/editarmobiliario.php",
-              type: "post",
-              data: formData,
-              contentType: false,
-              processData: false,
-              success: function (response) {
-                console.log(JSON.parse(response));
-                data = JSON.parse(response);
-                if (data.success == 1) {
-                  Swal.fire({
-                    icon: "success",
-                    title: data.title,
-                    text: data.mensaje,
-                  });
-                  
-                
-                  //$("#modalEditarUni")[0].reset();
-                  $("#modalEditarmo").modal("hide");
-                  refrescarTable();//recarga la tabla en el momento
-                  //proba
-                  
-      
-                } else {
-                  //alert("Formato de imagen incorrecto.");
-                }
-              },
-            });
-            return false;
-          }
-                    });
-//*************************** */  
-  
-
 });

@@ -40,6 +40,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
+      <?php include("toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -165,7 +166,7 @@ if (isset($_SESSION['usuarioActivo'])) {
           </div>
           <div class="row my-4">
             <div class="modal-footer">
-              <button class="btn btn-success" type="submit" id="editmobi" name="btnGuardar">Guardar</button>
+              <button class="btn btn-success" type="button" id="editmobi" name="btnGuardar">Guardar</button>
               <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
             </div>
           </div>
@@ -177,13 +178,14 @@ if (isset($_SESSION['usuarioActivo'])) {
 
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-    <script src="./Controlador/Mobiliarioyotros/mostrarmobi.js"></script>
+   
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+    <script src="./Controlador/Mobiliarioyotros/mostrarmobi.js"></script>
   </div>
 </body>
 

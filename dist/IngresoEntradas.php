@@ -40,6 +40,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
+      <?php include("toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -65,7 +66,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <!--INICIO SECCION DOS-->
                     <div class="col-md-4">
                       <label for="inputEmail4" class="form-label">N° de Factura:</label>
-                      <input type="text" class="form-control" id="facturaC" name="facturaC" required="">
+                      <input type="text" class="form-control " id="facturaC" name="facturaC" >
                     </div>
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Valor de Adquisición:</label>
@@ -256,7 +257,7 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
       <!--////////////////////////////////////////-->
     </div>
-    <script src="./Controlador/Entradas/entradas.js"></script>
+    
     <script src="./Controlador/Proveedores/proveedor.js"></script>
     <script src="./Controlador/Categorias/categoria.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
@@ -265,20 +266,8 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-    <!-- para que muestre la alerta -->
-    <div class="toast-container position-fixed end-0 p-3">
-      <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-          <div class="rounded me-2"></div>
-          <strong class="me-auto" id="toast_title">Acción exitosa</strong>
-          <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body" id="toast_body">
-          Registro guardado
-        </div>
-      </div>
-    </div>
-    <!-- fin de que muestre la alerta -->
+    <script src="./Controlador/Entradas/entradas.js"></script>
+    
     <script>
       function mostrarFormulario() {
         var formulario = document.getElementById("formulario");

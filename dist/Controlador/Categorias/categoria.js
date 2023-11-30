@@ -54,8 +54,6 @@ $(document).ready(function () {
         
                combo();
                show_toast('success', 'Registro guardado', 'Acción exitosa');
-
-
                $('#nombreCate').val('');
                $('#vidaUtil').val('');
                limpiar(1);

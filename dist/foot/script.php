@@ -15,7 +15,7 @@
 <script>
     $(document).ready(function () {
     $('#example').DataTable();
-    
 });
 </script>
+<script src="./toast/toast.js"></script>
 <!-- //// dataTable-->

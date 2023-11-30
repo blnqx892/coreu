@@ -56,42 +56,6 @@ $(document).ready(function () {
           tabla.ajax.url("Controlador/CredencialesA/mostrartablaunid.php").load();
         }
   
-   //------------------------edit mostrar------------------------------------------------
-        
-    $("#unidades").on("click", ".editu-item", function () {
-      let id = $(this).attr("id-item-u");
-      $("#_id").val(id);
-     
-           $("#modalEditarUni").modal("show");
-           var formData = new FormData();
-  
-           formData.append("id", id);
-    
-      //otro ajax
-       $.ajax({
-        url: "Controlador/CredencialesA/mostrar_modalUni.php",
-        type: "post",
-        data: formData,
-        contentType: false,
-        processData: false,
-        success: function (response) {
-          console.log(JSON.parse(response));
-          data = JSON.parse(response);
-          //console.log(data);
-          $("#_id").val(data.id);
-          $("#nombreediuni").val(data.nomb);
-          
-          Swal.fire({
-            icon: "info",
-            title: "Datos Cargados Correctamente!",
-            text: "Información lista para ser modificada",
-          });
-  
-          edit = true;
-        },
-      });
-    });
-        //------------------------- fin edit mostrar------------------------------------------
   
       //----------------------------- mostrar-------------------------------------------------
         
@@ -122,78 +86,29 @@ $(document).ready(function () {
         });
       });
 //------------------------- fin  mostrar---------------------------------------------------
-  
-  //guaradr---------------------------------------
 
-  $("#GuardaUnidades").on("click", function () {
-    var formData = new FormData();
-    var nombreUnid = $("#nombreUnid").val();
-
-    if (
-      $("#nombreUnid").val() == "") {
-      Swal.fire({
-        icon: "error",
-        title: "error",
-        text: "Campos Vacios",
-      });
-    } else {
-      formData.append("nombreUnid", nombreUnid);
-
-      $.ajax({
-        url: "Controlador/CredencialesA/insertCredenciales.php",
-        type: "post",
-        data: formData,
-        contentType: false,
-        processData: false,
-        success: function (response) {
-          console.log(JSON.parse(response));
-          data = JSON.parse(response);
-          if (data.success == 1) {
-            Swal.fire({
-              icon: "success",
-              title: data.title,
-              text: data.mensaje,
-            });
-
-            //$("#modalUni")[0].reset();
-            //$("#modalUni").modal("hide");
-            
-            $('#nombreUnid').val('');
-            refrescarTable();
-
-          } else {
-            //alert("Formato de imagen incorrecto.");
-          }
-        },
-      });
-      return false;
-    }
-  });
-  //*************************** */
-
-
-
-
-
-
-
-  
-    //*lo movi para aqui para poder acceder al metodo que recarga la tabla
+//*lo movi para aqui para poder acceder al metodo que recarga la tabla
   
       $("#editunid").on("click", function () {
       
          var nombreUnid = $("#nombreediuni").val(); //capturar los datos
          var id      = $("#_id").val(); //aqui capturas
           
-        if ( $("#nombreediuni").val() == "") {
+        if ( 
           
-                  Swal.fire({
-                    icon: "error",
-                    title: "error",
-                    text: "Campos Vacios",
-                  });
-                } else {
-                  
+          $("#nombreediuni").val() === ""|| $("#nombreediuni").val() === null
+          ) {
+          
+            if($("#_id").val() ===null || $("#_id").val()==='')
+      {
+        dangerToast('El siguiente registro no contiene un identificar valido.');
+        return;
+      }
+
+      warningToast('Por favor, completa todos los campo.');
+      return;
+      
+  } else {       
         var formData = new FormData(); //permite recoger la data para enviarla al controlador
            
             formData.append("nombreUnid", nombreUnid);//anadir la data al objeto para seer enviadad
@@ -211,21 +126,14 @@ $(document).ready(function () {
                       console.log(JSON.parse(response));
                       data = JSON.parse(response);
                       if (data.success == 1) {
-                        Swal.fire({
-                          icon: "success",
-                          title: data.title,
-                          text: data.mensaje,
-                        });
-                         
-                       
+                        successToast(data.mensaje)
+
                        // $("#form")[0].reset();
                       $("#modalEditarUni").modal("hide");
                       refrescarTable();//recarga la tabla en el momento
-                         
-                        
-            
+                                               
                       } else {
-  
+                        dangerToast('No se realizó la modificación.')
                       }
                     },
                   });
@@ -259,77 +167,17 @@ $(document).ready(function () {
         $("#_id").val(data.id);
         $("#nombreediuni").val(data.nomb);
         
-        Swal.fire({
-          icon: "info",
-          title: "Datos Cargados Correctamente!",
-          text: "Información lista para ser modificada",
-        });
-  
+        infoToast('Datos Cargados Correctamente')
         edit = true;
       },
     });
   });
   //------------------------- fin edit mostrar
-  
-  
-            
-  //*lo movi para aqui para poder acceder al metodo que recarga la tabla
-    
-$("#editunid").on("click", function () {
-                 
-  var nombreUnid = $("#nombreediuni").val(); //capturar los datos
-  var id      = $("#_id").val(); //aqui capturas
-                  
-                       
-                      
-                                
-    if ( $("#nombreediuni").val() == "") {
-                              
-              Swal.fire({
-                icon: "error",
-                title: "error",
-                text: "Campos Vacios",
-              });
-            } else {
-      var formData = new FormData(); //permite recoger la data para enviarla al controlador
-      
-      formData.append("_id",id ); 
-      formData.append("nombreUnid", nombreUnid);//anadir la data al objeto para seer enviadad
-    
-//para que no te perdas lo deje comentado
-        
-              $.ajax({
-                url: "Controlador/CredencialesA/editarUni.php",
-                type: "post",
-                data: formData,
-                contentType: false,
-                processData: false,
-                success: function (response) {
-                  console.log(JSON.parse(response));
-                  data = JSON.parse(response);
-                  if (data.success == 1) {
-                    Swal.fire({
-                      icon: "success",
-                      title: data.title,
-                      text: data.mensaje,
-                    });
-                    
-                  
-                    //$("#modalEditarUni")[0].reset();
-                    $("#modalEditarUni").modal("hide");
-                    refrescarTable();//recarga la tabla en el momento
-                    //proba
-                    
-        
-                  } else {
-                    //alert("Formato de imagen incorrecto.");
-                  }
-                },
-              });
-              return false;
-            }
-                      });
-  //*************************** */  
-    
+
+/// ----------------------------GUARDA UNIDADESS---------------------------
+
+
+
+///-------------------------FIN GUARDA -------------------------------------
     });
     

@@ -167,7 +167,7 @@ $(document).ready(function() {
           });
       }
     } else {
-      show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+     // show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
     }
 
   });
@@ -212,7 +212,7 @@ $(document).ready(function() {
       }
 
     } else {
-      show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+      //show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
     }
   });
 

@@ -144,10 +144,8 @@ $(document).ready(function () {
           return matches ? parseFloat(matches[0]) : 0;
         });
 
-        if (myChart !== null) {
-          myChart.destroy(); // Destruye la instancia anterior del gráfico
-        }
-
+        myChart !== null && myChart.destroy(); // Destruye la instancia anterior del gráfico
+        
         // Configurar el gráfico
         const ctx = document.getElementById("depreciacionChart").getContext("2d");
         myChart = new Chart(ctx, {

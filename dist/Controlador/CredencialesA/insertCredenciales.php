@@ -9,6 +9,8 @@ $conexion = con();
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
     //echo "Los datos se han insertado correctamente";
+    // Cerrar la conexión
+    mysqli_close($conexion);
     $json = array();
             if ($resultado) {
                 $json[] = array(

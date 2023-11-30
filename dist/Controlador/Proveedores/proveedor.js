@@ -28,6 +28,7 @@ $(document).ready(function () {
   //**************************************guardar  */
   const toast = new coreui.Toast(document.getElementById('liveToast'));
   $("#GuardaProveedor").on("click", function () {
+
     var formData = new FormData();
     var nombreProv = $("#nombreProv").val();
 
@@ -45,11 +46,7 @@ $(document).ready(function () {
           console.log(JSON.parse(response));
           data = JSON.parse(response);
           if (data.success == 1) {
-            //Swal.fire({
-            //  icon: "success",
-           //   title: data.title,
-           //   text: data.mensaje,
-           // });
+            
             combo();
             show_toast('success', 'Registro guardado', 'Acción exitosa');
 
@@ -57,7 +54,7 @@ $(document).ready(function () {
            
              $('#nombreProv').val('');
              limpiar(1);
-            //$('#modalProv').hide();
+           
 
           } else {
             //alert("Formato de imagen incorrecto.");

@@ -40,6 +40,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
+      <?php include("toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -201,7 +202,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </div>
                 </div>
                 <!--///////////////TERMINA MODAL VER ///////////////////////////////////////////////////////////////-->
-                <!-------------------MODAL EDITAR ENTRADAS ----------------------------------------------------------->
+<!-------------------MODAL EDITAR ENTRADAS ----------------------------------------------------------->
                 <!-- Modal -->
                 <div class="modal fade" id="modaleinven" tabindex="-1" aria-labelledby="exampleModalLabel"
                   aria-hidden="true">
@@ -304,7 +305,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                           </div>
                           <div class="row my-4">
                             <div class="modal-footer">
-                              <button class="btn btn-success" type="submit" id="editein"
+                              <button class="btn btn-success" type="button" id="editein"
                                 name="btnGuardar">Guardar</button>
                               <button type="button" class="btn btn-secondary"
                                 data-coreui-dismiss="modal">Cerrar</button>
@@ -316,7 +317,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </div>
                 </div>
 
-                <!--//////////////////TERMINA MODAL EDITAR///////////////////////////////////////////////-->
+<!--//////////////////TERMINA MODAL EDITAR///////////////////////////////////////////////-->
                 <!--//////////////////APARTE////////////////////////////////////////////////////////////-->
               </div>
             </div>
@@ -327,7 +328,7 @@ if (isset($_SESSION['usuarioActivo'])) {
         <!-- ///////FIN CONTENEDOR/////////////-->
       </div>
     </div>
-    <script src="./Controlador/InventarioAF/mostrartablain.js"></script>
+   
     <script src="./Controlador/Proveedores/proveedor.js"></script>
     <script src="./Controlador/Categorias/categoria.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
@@ -335,6 +336,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
+    <script src="./Controlador/InventarioAF/mostrartablain.js"></script>
   </div>
 </body>
 

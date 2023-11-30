@@ -113,13 +113,7 @@ $(document).ready(function () {
       $("#capaein").val(data.capa);
      
       
-      Swal.fire({
-        icon: "info",
-        title: "Datos Cargados Correctamente!",
-        text: "Información lista para ser modificada",
-      });
-
-      edit = true;
+      
     },
   });
 });
@@ -196,16 +190,25 @@ $("#editein").on("click", function () {
   var capaci= $("#capaein").val();
   var id  = $("#_id_inventario").val(); //aqui capturas
    
- if ( $("#proveedor_id").val() == "" || $("#descridbiene").val() == "" || $("#coloried").val() == "" ||
-      $("#serieine").val() == "" || $("#marcaine").val() == "" || $("#modeloine").val() == "" 
+ if ( 
+      $("#proveedor_id").val() === "" || $("#proveedor_id").val()  === null ||
+      $("#descridbiene").val() === "" || $("#descridbiene").val()  === null ||
+      $("#coloried").val()     === "" || $("#coloried").val()      === null ||
+      $("#serieine").val()     === "" || $("#serieine").val()      === null ||
+      $("#marcaine").val()     === "" || $("#marcaine").val()      === null ||
+      $("#modeloine").val()    === "" || $("#modeloine").val()     === null 
    ) {
    
-           Swal.fire({
-             icon: "error",
-             title: "error",
-             text: "Campos Vacios",
-           });
-         } else {
+    if($("#_id_inventario").val() ===null || $("#_id_inventario").val()==='')
+    {
+      dangerToast('El siguiente registro no contiene un identificar valido.');
+      return;
+    }
+
+    warningToast('Por favor, completa todos los campo.');
+    return;
+    
+} else {   
            
  var formData = new FormData(); //permite recoger la data para enviarla al controlador
    
@@ -222,8 +225,7 @@ $("#editein").on("click", function () {
  formData.append("capa",capaci)
  formData.append("_id_inventario",id ); 
  //el campo booleano? eso era mi duda que te dije que si tenia que ir aunque no se editara o se iba a editar elestdo
- //pera error mio
-   //para que no te perdas lo deje comentado
+ //para que no te perdas lo deje comentado
      
            $.ajax({
              url: "Controlador/InventarioAF/editarI.php",
@@ -235,21 +237,14 @@ $("#editein").on("click", function () {
                console.log(JSON.parse(response));
                data = JSON.parse(response);
                if (data.success == 1) {
-                 Swal.fire({
-                   icon: "success",
-                   title: data.title,
-                   text: data.mensaje,
-                 });
-                  
+                successToast(data.mensaje)
                 
                  //$("#form")[0].reset();
                  $("#modaleinven").modal("hide");
                  refrescarTable();//recarga la tabla en el momento
-                  
                  
-     
                } else {
-
+                dangerToast('No se realizó la modificación.')
                }
              },
            });
@@ -262,7 +257,7 @@ $("#inven").on("click", ".editein-item", function () {
   let id = $(this).attr("id-item-ei");
   $("#_id_inventario").val(id);
 
-    $("#modaleinven").modal("show");
+  $("#modaleinven").modal("show");
   var formData = new FormData();
 
   formData.append("id", id);
@@ -290,11 +285,7 @@ $("#inven").on("click", ".editein-item", function () {
       $("#chasisein").val(data.numerochasis);
       $("#capaein").val(data.capa);
   
-      Swal.fire({
-        icon: "info",
-        title: "Datos Cargados Correctamente!",
-        text: "Información lista para ser modificada",
-      });
+      infoToast('Datos Cargados Correctamente')
 
       edit = true;
     },
@@ -302,85 +293,6 @@ $("#inven").on("click", ".editein-item", function () {
 });
 //------------------------- fin edit mostrar--------------------------------------------
 
-          
-//*lo movi para aqui para poder acceder al metodo que recarga la tabla
-$("#editein").on("click", function () {
-                 
- 
 
-//capturar los datos
-  var prov = $("#proveedor_id").val();
-  var nombre = $("#descridbiene").val();
-  var serie = $("#serieine").val();
-  var marca = $("#marcaine").val();
-  var modelo = $("#modeloine").val();
-  var color =  $("#coloried").val();
-  var numerom = $("#motorein").val();
-  var numerop = $("#placaein").val();
-  var numerocha = $("#chasisein").val();
-  var capaci = $("#capaein").val();
-  var id      = $("#_id_inventario").val(); //aqui capturas
-   
-  if ( $("#proveedor_id").val() == "" || $("#descridbiene").val() == "" || $("#coloried").val() == "" ||
-  $("#serieine").val() == "" || $("#marcaine").val() == "" || $("#modeloine").val() == "" 
-  
-) {
-
-       Swal.fire({
-         icon: "error",
-         title: "error",
-         text: "Campos Vacios",
-       });
-     } else {
-
-var formData = new FormData(); //permite recoger la data para enviarla al controlador
-      
-//anadir la data al objeto para seer enviadad
-formData.append("prove",prov);
- formData.append("nombreC",nombre)
- formData.append("serie",serie)
- formData.append("marca",marca);
- formData.append("modelo",modelo);
- formData.append("color",color);
- formData.append("numeromo",numerom);
- formData.append("numerochasis",numerocha);
- formData.append("numeropla",numerop);
- formData.append("capa",capaci)
- formData.append("_id_inventario",id ); 
-      
-  //para que no te perdas lo deje comentado
-        
-              $.ajax({
-                url: "Controlador/InventarioAF/editarI.php",
-                type: "post",
-                data: formData,
-                contentType: false,
-                processData: false,
-                success: function (response) {
-                  console.log(JSON.parse(response));
-                  data = JSON.parse(response);
-                  if (data.success == 1) {
-                    Swal.fire({
-                      icon: "success",
-                      title: data.title,
-                      text: data.mensaje,
-                    });
-                    
-                  
-                   // $("#form")[0].reset();
-                    $("#modaleinven").modal("hide");
-                    refrescarTable();//recarga la tabla en el momento
-                    //proba
-                    
-        
-                  } else {
-                    //alert("Formato de imagen incorrecto.");
-                  }
-                },
-              });
-              return false;
-            }
-                      });
-  //*************************** */
   });
   
