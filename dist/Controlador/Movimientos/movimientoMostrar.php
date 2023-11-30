@@ -2,6 +2,7 @@
 include("../../Confi/conexion.php");
 $con = con();
 
+
 $sql = "SELECT DISTINCT tipo_registro
         FROM mantenimiento_activos
         ORDER BY tipo_registro ASC";

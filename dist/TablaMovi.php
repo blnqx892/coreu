@@ -262,6 +262,8 @@ if (isset($_SESSION['usuarioActivo'])) {
             </div>
         </div>
         <!-- ////////////////////////////////////////7MODAL REPORTE -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
         <script src="./Controlador/MantenimientoAF/mostrartablamovimientos.js"></script>
         <script src="./Controlador/Movimientos/movimiento.js"></script>
 
