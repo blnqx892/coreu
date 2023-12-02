@@ -49,6 +49,13 @@ p{
   border: 1px solid var(--color-blue);
   border-radius: 8px
 }
+.tablaDescargo{
+  width: 800px;
+  display: flex;
+  justify-content: left;
+  border: 1px solid var(--color-blue);
+  border-radius: 8px
+}
 .tituloVehiculo{
   width: 100%;
     display: flex;
