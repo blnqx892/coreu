@@ -1,5 +1,8 @@
 <!doctype html>
 <html>
+<?php
+include("../Confi/conexion.php");
+$id = $_GET["id"]; ?>
 
 <head>
   <meta charset="utf-8">
@@ -28,32 +31,57 @@
       <td><strong class="titulos">HOJA DE MOVIMIENTOS DE BIENES MUEBLES</strong></td>
     </tr>
   </table>
+  <?php
+     $sql="SELECT mantenimiento_activos.id AS id_movimientos,
+     ingreso_entradas.nombre_adquisicion,
+     ingreso_entradas.color,
+     ingreso_entradas.modelo,
+     ingreso_entradas.serie_adquisicion,
+     ingreso_entradas.marca,
+     asignacion_activo.codigo_institucional,
+     mantenimiento_activos.tipo_movimiento,
+     mantenimiento_activos.tipo_registro,
+     unidades.nombre_unidad,
+     mantenimiento_activos.fecha_movimiento,
+     mantenimiento_activos.observaciones
+    FROM mantenimiento_activos
+    INNER JOIN asignacion_activo ON asignacion_activo.id = mantenimiento_activos.fk_asignacion_activo
+    INNER JOIN ingreso_entradas on ingreso_entradas.id = asignacion_activo.fk_ingreso_entradas
+    INNER JOIN usuarios ON usuarios.id = asignacion_activo.fk_usuarios
+    INNER JOIN unidades ON unidades.id = usuarios.fk_unidades
+    WHERE mantenimiento_activos.id =$id";
+
+$result = mysqli_query($conexion, $sql);
+
+while($row = mysqli_fetch_array($result)) {
+  ?>
   <strong class="tituloG titulos">Generalidades</strong>
   <div class="posiciontabla">
-    <table class="tablaCargoBienes">
+    <table class="tablaDescargo">
       <tbody style="color:#00000;font-size:125%;">
         <tr>
           <td><b>Procedencia:</b></td>
-          <td>RRHH</td>
-          <td width="186"><b>Fecha: </b></td>
-          <td><?php echo date("d/m/Y"); ?></td>
+          <td width="280"><?php echo $row["nombre_unidad"];?></td>
+          <td width="184"><b>Fecha: </b></td>
+          <td><?php $timestamp = strtotime($row["fecha_movimiento"]);
+                echo strftime('%d/%m/%Y', $timestamp);?></td>
         </tr>
         <tr>
           <td><b>Destino: </b></td>
-          <td>Informatica</td>
-          <td><b>Tipo de Movimiento: </b></td>
-          <td>Traslado</td>
+          <td><?php echo $row["nombre_unidad"];?></td>
+          <td ><b>Tipo de Movimiento: </b></td>
+          <td><?php echo $row["tipo_movimiento"];?></td>
         </tr>
         <tr>
           <td><b>Observaciones: </b></td>
-          <td colspan="3">esto es una prueba de observaciones otro ejemplo mas otro ejemplo mas otro ejemplo mas</td>
+          <td colspan="3"><?php echo $row["observaciones"];?></td>
         </tr>
       </tbody>
     </table>
   </div><br>
   <strong class="tituloG titulos">Caracteristicas</strong>
   <div class="posicionTC">
-    <table class="bor" width="800" style="color:#00000;font-size:125%;">
+    <table class="bor" width="800" style="color:#00000;font-size:120%;">
       <tr>
         <th>Descripción del Bien</th>
         <th>Modelo</th>
@@ -62,16 +90,16 @@
         <th>Código</th>
       </tr>
       <tr>
-        <td>Escritorio</td>
-        <td>Imperial</td>
-        <td>sadsfds</td>
-        <td>Luxur</td>
-        <td>0909-89-768-98-09</td>
+        <td align="center"><?php echo $row["nombre_adquisicion"].' '.$row["color"]?></td>
+        <td align="center"><?php echo $row["modelo"]?></td>
+        <td align="center"><?php echo $row["serie_adquisicion"]?></td>
+        <td align="center"><?php echo $row["marca"]?></td>
+        <td align="center"><?php echo $row["codigo_institucional"]?></td>
       </tr>
     </table>
   </div><br><br><br>
   <div>
-    <table align="center" text-aign="left" width="800">
+    <table align="center" text-aign="left" width="700">
       <thead>
         <tr>
           <th colspan="2">PERSONA QUE AUTORIZA EL TRASLADO</th>
@@ -79,6 +107,9 @@
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td colspan="2"></td>
+        </tr>
         <tr>
           <td><b>Nombre:</b></td>
           <td width="60%">_____________________________</td>
@@ -100,18 +131,20 @@
         <tr>
         </tr>
       </tbody>
+      <?php  } ?>
     </table><br><br>
     <table align="center" text-aign="left" width="800">
-      <thead><tr>
-      <th colspan="4" align="center" padding-top: 3rem;>Es conforme, Firma: _____________________________</th>
-      </tr>
+      <thead>
+        <tr>
+          <th colspan="4" align="center" padding-top: 3rem;>Es conforme, Firma: _____________________________</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
-        <th colspan="4" align="left">&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;Jefe de Activo Fijo</th>
+          <th colspan="4" align="left">&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;Jefe de Activo Fijo</th>
         </tr>
       </tbody>
     </table>

@@ -5,7 +5,7 @@ include("../../Confi/conexion.php");
 $con = con();
 
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
-$sql= "SELECT 
+$sql= "SELECT
 ma.id as id_movimiento,
 ma.fecha_movimiento as fecha_movimiento,
 aa.codigo_institucional as codigo_institucional,
@@ -30,6 +30,33 @@ order by fecha_movimiento desc";
 $fechaMySQL = $row['fecha_movimiento'];
 $timestamp = strtotime($fechaMySQL);
 $fechaFormateada = date("d-m-Y", $timestamp);
+$x='';
+
+
+if($row['tipo_registro'] == "Descargo"){
+
+  $x= '<td>
+  <button type="button" id="ver" class="btn btn-outline-info rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i
+  class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos"></i></button>
+  <a href="./Reportes/Descargo.php?id='.$row['id_movimiento'].'" target="_blank">
+  <button type="button"  class="btn btn-light" title="Reporte Descargo"
+                                  data-coreui-whatever="@mdo" style="float: right;"><i
+                                      class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+  </a>
+</td>';
+
+}else{
+  $x= '<td>
+  <button type="button" id="ver" class="btn btn-outline-info rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i
+  class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos"></i></button>
+  <a href="./Reportes/Movimiento.php?id='.$row['id_movimiento'].'" target="_blank">
+  <button type="button" class="btn btn-light" title="Reporte Movimiento"
+                                  data-coreui-whatever="@mdo" style="float: right;"><i
+                                      class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+                                      </a>
+</td>';
+
+}
 
       $json[] = array(
       'id'    => $row['id_movimiento'],
@@ -38,10 +65,7 @@ $fechaFormateada = date("d-m-Y", $timestamp);
       'describien'=> $row['nombre_adquisicion'],
       'tipomo'=> $row['tipo_movimiento'],
       'tipore'=> $row['tipo_registro'],
-      'botones'=>'<td>
-            <button type="button" id="ver" class="btn btn-outline-info rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i 
-            class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos"></i></button>
-      </td>',
+      'botones'=> $x,
       'i'=>$i
     );
   }

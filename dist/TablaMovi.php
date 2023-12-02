@@ -51,10 +51,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                         <strong>Actualización de Movimientos</strong>
                                     </div>
                                     <div>
-                                        <button type="button" class="btn btn-light" title="Reporte"
-                                            data-coreui-toggle="modal" data-coreui-target="#modalRe"
-                                            data-coreui-whatever="@mdo" style="float: right;"><i
-                                                class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +262,7 @@ if (isset($_SESSION['usuarioActivo'])) {
         <!-- ////////////////////////////////////////7MODAL REPORTE -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-      
+
         <script src="./Controlador/Movimientos/movimiento.js"></script>
 
         <!-- IMPORTAR ARCHIVO FOOTER-->

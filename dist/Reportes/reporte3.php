@@ -43,18 +43,13 @@
       <td><img src="../img/iconelsv.png" width="100" height="100"></td>
     </tr>
   </table>
-  <table width="950" align="center">
-    <thead>
-      <tr>
-        <th colspan="4"></th>
-      </tr>
-    </thead>
+  <table width="950" align="center" >
     <tbody style="color:#00000;font-size:125%;">
       <tr>
-        <td><b>FECHA DE SOLICITUD:</b></td>
-        <td> <?php echo $fecha_creacion; ?> </td>
-        <td><b>FECHA DE DESPACHO: </b></td>
-        <td> <?php echo $fecha_despacho; ?> </td>
+        <td width="8%"><b>FECHA DE SOLICITUD:</b></td>
+        <td width="10%"> <?php echo $fecha_creacion; ?> </td>
+        <td width="9%"><b>FECHA DE DESPACHO: </b></td>
+        <td width="10%"> <?php echo $fecha_despacho; ?> </td>
       </tr>
       <tr>
         <td><b>UNIDAD SOLICITADA: </b></td>
