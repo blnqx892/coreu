@@ -12,6 +12,19 @@ function toastBoostrap(type, cadena) {
 }
 
 // Función para mostrar un toast de éxito con un mensaje específico
+function questionToast(cadena, callback) { 
+    toastBoostrap('question', cadena);
+
+    // Asigna la función al evento de clic en el botón
+    $('#toast-question-aceptar').off('click').on('click', function() {
+
+        // Ejecuta la función proporcionada como callback
+        if (typeof callback === 'function') {
+            callback();
+        }
+    });
+}
+// Función para mostrar un toast de éxito con un mensaje específico
 function successToast(cadena) { 
     toastBoostrap('success', cadena);
 }
@@ -30,3 +43,13 @@ function dangerToast(cadena) {
 function infoToast(cadena) { 
     toastBoostrap('info', cadena);
 }
+
+$('.close').on('click', function(event) {
+    // Obtiene el ID del elemento padre en el que se hizo clic
+    var idDelElementoPadre = $(event.currentTarget).parent().parent().attr('id');
+    $('#'+idDelElementoPadre).toast('hide');
+});
+
+$('.close-question ').on('click', function() {
+    $('#toast-question').toast('hide');
+});

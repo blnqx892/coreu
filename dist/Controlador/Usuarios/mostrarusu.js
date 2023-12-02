@@ -207,33 +207,16 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
 //------------------------- fin edit mostrar---------------------------------------
 
 //-----------DAR DE BAJA---------------------------------------------------- 
-    $("#miTablaUsuarios").on("click", ".baja-item", function () {
-      let id = $(this).attr("id-item-baja");
-      $("#_id").val(id);
+  $("#miTablaUsuarios").on("click", ".baja-item", function () {
+    let id = $(this).attr("id-item-baja");
+    $("#_id").val(id);
+    questionToast('Se dara de baja al usuario, ¿Desea continuar con el proceso?', function(){
+      //si presiona el boton de si se ejecuta el ajax
+      var formData = new FormData();
+      formData.append("id", $("#_id").val());
 
-      /*alerta*/
-      Swal.fire({
-        title: "Dara de baja al usuario!",
-        text: "¿Desea continuar con el proceso?",
-        icon: 'warning',
-        showCancelButton: true,
-        allowOutsideClick: false,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'SI',
-        cancelButtonText: 'NO'
-        }).then((result) => {
-        if (result.isConfirmed) {
-
-          //si presiona el boton de si se ejecuta el ajax
-  
-
-  var formData = new FormData();
-
-  formData.append("id", id);
-    
       //otro ajax
-       $.ajax({
+      $.ajax({
         url: "Controlador/Usuarios/baja_usuario.php",
         type: "post",
         data: formData,
@@ -241,54 +224,24 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
         processData: false,
         success: function (response) {
           refrescarTable();//recarga la tabla en el momento
-            Swal.fire({
-            icon: "success",
-            title: "Has dado de baja al usuario!",
-            text: "Usuario dado de baja",
-          });
-
+          successToast('Has dado de baja al usuario')
+          $('#toast-question').toast('hide');
         },
       });//fin ajax
-
-          //*fin
-           
-        } 
-        });
-
-      /**fin alerta */   
-    
-      
-    });
+    })
+  });
     
  //----------------FIN DAR DE BAJA ----------------------------------------
 
- //-----------DAR DE ALTA-------------------------------------------------
+ //-----------DAR DE ALTA--------------------------------------------------
     $("#miTablaUsuarios").on("click", ".alta-item", function () {
       let id = $(this).attr("id-item-alta");
-      
       $("#_id").val(id);
-
-      /*alerta*/
-      Swal.fire({
-        title: "Dara de alta al usuario!",
-        text: "¿Desea continuar con el proceso?",
-        icon: 'warning',
-        showCancelButton: true,
-        allowOutsideClick: false,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'SI',
-        cancelButtonText: 'NO'
-        }).then((result) => {
-        if (result.isConfirmed) {
-
-          //si presiona el boton de si se ejecuta el ajax
-          //aras un archivo php baja.php donde solo vas actualizar el estado
-
+      questionToast('Se dara de alta al usuario, ¿Desea continuar con el proceso?', function(){
+      //si presiona el boton de si se ejecuta el ajax
       var formData = new FormData();
-  
-      formData.append("id", id);
-    
+      formData.append("id", $("#_id").val());
+
       //otro ajax
        $.ajax({
         url: "Controlador/Usuarios/alta_usuario.php",
@@ -298,23 +251,11 @@ $("#miTablaUsuarios").on("click", ".edit-item", function () {
         processData: false,
         success: function (response) {
           refrescarTable();//recarga la tabla en el momento 
-          Swal.fire({
-            icon: "success",
-            title: "Has dado de alta al usuario!",
-            text: "Usuario dado de alta",
-          });
-
+          successToast('Has dado de alta al usuario')
+          $('#toast-question').toast('hide');
         },
       });//fin ajax
-
-          //*fin
-           
-        } 
-        });
-
-      /**fin alerta */   
-    
-      
+    })    
     });
     
 //----------------FIN DAR DE ALTA
