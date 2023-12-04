@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../../Confi/conexion.php");
 $conexion = con();
 
@@ -9,6 +10,14 @@ $sql = "UPDATE unidades SET nombre_unidad='$nombreUnid' WHERE id = '$id'";
 //var_dump($sql); /* para que pruebes por qué el error */
 // Ejecutar la consulta SQL
 $resultado = mysqli_query($conexion, $sql);
+
+//////////CAPTURA DATOS PARA BITACORA
+$usuari=$_SESSION['usuarioActivo'];
+$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se modifico la información de unidad','$nom',now())";
+mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+///////////////////////////////////////////////
+
 // Cerrar la conexión
 mysqli_close($conexion);
 

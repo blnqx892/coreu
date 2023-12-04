@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../../Confi/conexion.php");
 $conexion = con();
 
@@ -14,7 +15,7 @@ $numerocha = $_POST["numerochasis"];
 $numerop = $_POST["numeropla"];
 $capaci = $_POST["capa"];
 $id    = $_POST["_id_inventario"];
-    
+
 
 $sql= "UPDATE asignacion_activo
 INNER JOIN ingreso_entradas on ingreso_entradas.id = asignacion_activo.fk_ingreso_entradas
@@ -31,9 +32,12 @@ SET
   color='$color'
 WHERE asignacion_activo.id='$id'";
 
-   
-//
-// 
+      //////////CAPTURA DATOS PARA BITACORA
+      $usuari=$_SESSION['usuarioActivo'];
+      $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+      $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se edito un registro de inventario','$nom',now())";
+      mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+      ///////////////////////////////////////////
 
       //var_dump($sql); /*para que proves porq el error */
     // Ejecutar la consulta SQL
@@ -46,7 +50,7 @@ WHERE asignacion_activo.id='$id'";
                 $json[] = array(
                     'success'=>1,
                     'title' => 'Exito',
-                    'mensaje'=>'Registro Guardado con exito!'
+                    'mensaje'=>'Registro editado con exito!'
                   );
                  // echo 1;
             } else {
@@ -57,11 +61,4 @@ WHERE asignacion_activo.id='$id'";
             }
            $jsonstring = json_encode($json[0]);
            echo $jsonstring;
-
-//////////CAPTURA DATOS PARA BITACORA
-//$usuari=$_SESSION['usuarioActivo'];
-//$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-//$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se edito los datos de un bien en inventario','$nom',now())";
-//mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-///////////////////////////////////////////////
 ?>
