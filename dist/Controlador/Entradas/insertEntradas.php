@@ -45,13 +45,6 @@ session_start();
     ('$fecha','$factura', '$costo','$nombre','$serie','$marca','$modelo','$color','$descrip','$cargo',
     '$vida','$cate','$prov','$numerom','$numerocha','$numerop','$capaci', $x)";
 
-    //////////CAPTURA DATOS PARA BITACORA
-    $usuari=$_SESSION['usuarioActivo'];
-    $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-    $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Registró un nuevo bien','$nom',now())";
-    mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-    ///////////////////////////////////////////
-
     //echo $sql;
     try {
         // Ejecutar el procedimiento almacenado
