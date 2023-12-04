@@ -90,8 +90,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                     <div
                                                         style="display: flex; justify-content: space-between; margin-top: 10px;">
                                                         <div style="width: 30%;">Estante:
-                                                        <span class="fw-bold">
-                                                        <?php
+                                                            <span class="fw-bold">
+                                                                <?php
                                                         // Obtener el valor de $mostrar['estante']
                                                         $estante = $mostrar['estante'];
 
@@ -105,8 +105,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                         ?>
                                                         </div>
                                                         <div style="width: 30%;">Entrepaño:
-                                                        <span class="fw-bold">
-                                                        <?php
+                                                            <span class="fw-bold">
+                                                                <?php
                                                         // Obtener el valor de $mostrar['entrepaño']
                                                         $entrepano = $mostrar['entrepaño'];
 
@@ -118,11 +118,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                             echo $entrepano;
                                                         }
                                                         ?>
-                                                    </span>
+                                                            </span>
                                                         </div>
                                                         <div style="width: 30%;">Casilla:
-                                                        <span class="fw-bold">
-                                                            <?php
+                                                            <span class="fw-bold">
+                                                                <?php
                                                             // Obtener el valor de $mostrar['casilla']
                                                             $casilla = $mostrar['casilla'];
 
@@ -134,7 +134,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                                 echo $casilla;
                                                             }
                                                             ?>
-                                                        </span>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -219,9 +219,61 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                     </div>
                                                 </td>
                                             </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="tableKardex">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Fecha</th>
+                                                <th scope="col">Concepto</th>
+                                                <th scope="col">Fondos Procedencia</th>
+                                                <th scope="col">Entradas
+                                                    <div
+                                                        style="display: flex; justify-content: space-between; margin-top: 10px;">
+                                                        <div style="width: 50%;">Cantidad:
+                                                        </div>
+                                                        <div style="width: 50%;">Precio:
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th scope="col">Salidas
+                                                    <div
+                                                        style="display: flex; justify-content: space-between; margin-top: 10px;">
+                                                        <div style="width: 50%;">Cantidad:
+                                                        </div>
+                                                        <div style="width: 50%;">Precio:
+                                                        </div>
+                                                    </div>
 
-
-
+                                                </th>
+                                                <th scope="col">Saldos Articulos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Dato 1</td>
+                                                <td>Dato 2</td>
+                                                <td>Dato 3</td>
+                                                <td>
+                                                    <div
+                                                        style="display: flex; justify-content: space-between; margin-top: 1px;">
+                                                        <div style="width: 50%;">1
+                                                        </div>
+                                                        <div style="width: 50%;">2
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        style="display: flex; justify-content: space-between; margin-top: 1px;">
+                                                        <div style="width: 50%;">1
+                                                        </div>
+                                                        <div style="width: 50%;">2
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Dato 6</td>
+                                            </tr>
                                         </tbody>
                                     </table>
 
