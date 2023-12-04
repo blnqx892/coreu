@@ -157,6 +157,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                             <label for="inputZip" class="form-label">No. Chasis:</label>
                             <input type="text" class="form-control" id="chasis" disabled>
                         </div>
+                    </div>
+                    <div class="row my-4">
                         <div class="col-md-4">
                             <label for="inputZip" class="form-label">Capacidad:</label>
                             <input type="text" class="form-control" id="capa" disabled>

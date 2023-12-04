@@ -34,12 +34,8 @@ $(document).ready(function () {
     // Muestra el rescate en el elemento con el ID "vidaC"
     $("#vidaC").val(rescate);
 
-    if ($("#flexSwitchCheckChecked").val() == "on") {
-      var bandera = 1;
-    } else {
-      var bandera = 0;
-    }
-
+    var bandera = $("#flexSwitchCheckChecked").val() == "on";
+    
     if (validation(1)) {
 
       let formData = new FormData(); //permite recoger la data para enviarla al controlador
