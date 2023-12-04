@@ -189,11 +189,13 @@ if (isset($_SESSION['usuarioActivo'])) {
                               <label for="inputZip" class="form-label">No. Chasis:</label>
                               <input type="text" class="form-control" id="chasisi" disabled>
                             </div>
-                            <div class="col-md-4">
+                          </div>
+                          <div class="row my-4">
+                              <div class="col-md-4">
                               <label for="inputZip" class="form-label">Capacidad:</label>
                               <input type="text" class="form-control" id="capai" disabled>
-                            </div>
-                          </div>
+                             </div>
+                            </div> 
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
                           </div>
@@ -298,7 +300,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                               <label for="inputZip" class="form-label">No. Chasis:</label>
                               <input type="text" class="form-control" id="chasisein">
                             </div>
-
+                            </div>
+                            <div class="row my-4">
                             <div class="col-md-4">
                               <label for="inputZip" class="form-label">Capacidad:</label>
                               <input type="text" class="form-control" id="capaein">

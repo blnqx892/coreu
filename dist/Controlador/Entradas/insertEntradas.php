@@ -28,7 +28,7 @@
     $numerocha = $_POST["numerochasis"];
     $numerop = $_POST["numeropla"];
     $capaci = intval($_POST["capa"]);
-    $x       =$_POST["bandera"]; //fk_ingreso_entrada 1
+    $x = $_POST["bandera"]; //fk_ingreso_entrada 1
 
     if (validacionSql("SELECT VALIDAR('VALIDAR_NUMERO_FACTURA', '$factura') AS resultado")) {
         // Mostrar mensaje de advertencia si el código ya existe
@@ -43,8 +43,9 @@
     serie_adquisicion,marca,modelo,color,descripcion_adquisicion,cargo,valor_rescate,fk_categoria,fk_proveedores,numero_motor,
     numero_chasis,numero_placa,capacidad,boolean_transporte) VALUES
     ('$fecha','$factura', '$costo','$nombre','$serie','$marca','$modelo','$color','$descrip','$cargo',
-    '$vida','$cate','$prov','$numerom','$numerocha','$numerop','$capaci','$x')";
+    '$vida','$cate','$prov','$numerom','$numerocha','$numerop','$capaci', $x)";
 
+    //echo $sql;
     try {
         // Ejecutar el procedimiento almacenado
         $resultado = mysqli_query($conexion, $sql);

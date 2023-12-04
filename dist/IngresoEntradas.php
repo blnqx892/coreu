@@ -154,7 +154,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <div class="col-md-1">
                       <label class="form-check-label" for="flexSwitchCheckChecked">Transporte</label>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" name="trans"
+                        <input value="off" class="form-check-input" type="checkbox" role="switch" name="trans"
                           id="flexSwitchCheckChecked" name="activarFormulario" onclick="mostrarFormulario()">
                       </div>
                     </div>
