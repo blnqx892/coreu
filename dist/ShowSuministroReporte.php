@@ -80,13 +80,65 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                         </span>
                                                     </div>
                                                 </td>
-                                                <td rowspan="4" style="width: 34%; text-align: center; vertical-align: middle;">
+                                                <td rowspan="4"
+                                                    style="width: 34%; text-align: center; vertical-align: middle;">
                                                     <div class="membrete" id="">
                                                         <div>ALCALDÍA MUNICIPAL DE SAN VICENTE</div>
                                                         <div>CONTROL DE EXISTENCIA
                                                             DE SUMINISTROS</div>
                                                     </div>
+                                                    <div
+                                                        style="display: flex; justify-content: space-between; margin-top: 10px;">
+                                                        <div style="width: 30%;">Estante:
+                                                        <span class="fw-bold">
+                                                        <?php
+                                                        // Obtener el valor de $mostrar['estante']
+                                                        $estante = $mostrar['estante'];
+
+                                                        // Validar si $estante es nulo o vacío
+                                                        if (empty($estante)) {
+                                                            echo 'No definido';
+                                                        } else {
+                                                            // Si $estante no es nulo ni vacío, mostrar su valor
+                                                            echo $estante;
+                                                        }
+                                                        ?>
+                                                        </div>
+                                                        <div style="width: 30%;">Entrepaño:
+                                                        <span class="fw-bold">
+                                                        <?php
+                                                        // Obtener el valor de $mostrar['entrepaño']
+                                                        $entrepano = $mostrar['entrepaño'];
+
+                                                        // Validar si $entrepano es nulo o vacío
+                                                        if (empty($entrepano)) {
+                                                            echo 'No definido';
+                                                        } else {
+                                                            // Si $entrepano no es nulo ni vacío, mostrar su valor
+                                                            echo $entrepano;
+                                                        }
+                                                        ?>
+                                                    </span>
+                                                        </div>
+                                                        <div style="width: 30%;">Casilla:
+                                                        <span class="fw-bold">
+                                                            <?php
+                                                            // Obtener el valor de $mostrar['casilla']
+                                                            $casilla = $mostrar['casilla'];
+
+                                                            // Validar si $casilla es nulo o vacío
+                                                            if (empty($casilla)) {
+                                                                echo 'No definido';
+                                                            } else {
+                                                                // Si $casilla no es nulo ni vacío, mostrar su valor
+                                                                echo $casilla;
+                                                            }
+                                                            ?>
+                                                        </span>
+                                                        </div>
+                                                    </div>
                                                 </td>
+
                                                 <td>
                                                     <div>Tarjeta numero:
                                                         <span class="fw-bold">
@@ -132,8 +184,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                     </div>
 
                                                     <div style="padding-top: 0.3rem;">Unidad de Medida:
-                                                       <span class="fw-bold">
-                                                        <?php
+                                                        <span class="fw-bold">
+                                                            <?php
                                                         // Obtener el valor de $mostrar['unidad_medida']
                                                         $unidad_medida = $mostrar['unidad_medida'];
 
@@ -145,24 +197,24 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                             echo '<span class="fw-bold">' . $unidad_medida . '</span>';
                                                         }
                                                         ?>
-                                                      </span>
+                                                        </span>
                                                     </div>
                                                 </td>
 
                                                 <td>
                                                     <div>Existencias
-                                                      <div style="display:flex; gap: 1rem;">
-                                                      <div>Minima:
-                                                            <span class="fw-bold">
-                                                                <?php echo $mostrar['existencia_minima'] ?>
-                                                            </span>
+                                                        <div style="display:flex; gap: 1rem;">
+                                                            <div>Minima:
+                                                                <span class="fw-bold">
+                                                                    <?php echo $mostrar['existencia_minima'] ?>
+                                                                </span>
+                                                            </div>
+                                                            <div>Maxima:
+                                                                <span class="fw-bold">
+                                                                    <?php echo $mostrar['existencia_maxima'] ?>
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                        <div>Maxima:
-                                                            <span class="fw-bold">
-                                                                <?php echo $mostrar['existencia_maxima'] ?>
-                                                            </span>
-                                                        </div>
-                                                      </div>
 
                                                     </div>
                                                 </td>
