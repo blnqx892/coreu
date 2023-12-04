@@ -1,6 +1,12 @@
+<?php // Iniciamos la sesión
+session_start();
+if (isset($_SESSION['usuarioActivo'])) {
+?>
 <!doctype html>
 <html>
-
+<?php
+  $id = $_GET["id"];
+?>
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/reportesRetiroInsumos.css" />
@@ -16,7 +22,7 @@
       <td width=100>Tarjeta No.: <b>12</b></td>
     </tr>
     <tr>
-      <td>Nombre del Articulo: <b>Lapiceros Bic</b></td>
+      <td>Nombre del Articulo: <?php echo $result["nombre_suministro"];?><b>Lapiceros Bic</b></td>
       <td>Almacen: <b>3</b></td>
     </tr>
     <tr>
@@ -111,6 +117,24 @@
   <p>&nbsp;</p>
 </body>
 </html>
+<?php
+}else{
+    ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+</head>
+
+<body>
+</body>
+
+</html>
+<?php
+}
+?>
 
 <script language="javascript">
   function imprimir() {

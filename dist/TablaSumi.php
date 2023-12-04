@@ -31,6 +31,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     $sql_categorias = "select * from categorias_suministros order by nomb_categoria";
     $categorias = mysqli_query($conexion, $sql_categorias);
 ?>
+
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
   <?php include("menu/verti.php"); ?>
@@ -112,10 +113,10 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
-                  <?php $correlativo = 1?>
+                    <?php $correlativo = 1?>
                     <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
 
-                      <?php
+                    <?php
                         $sql_kardex = "select * from kardex where fk_ingreso_suministros = ".$mostrar["id"];
                         $kardex = mysqli_query($conexion, $sql_kardex);
 
@@ -134,38 +135,52 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <td><?php echo $mostrar['nomb_categoria'] ?></td>
                       <td>
                         <?php if($mostrar["existencia_maxima"] < $stock):?>
-                          <span class="badge bg-warning text-dark">
-                            <?php echo $stock ?>
-                            <svg class="icon icon-sm">
-                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-arrow-top"></use>
-                            </svg>
-                          </span>
+                        <span class="badge bg-warning text-dark">
+                          <?php echo $stock ?>
+                          <svg class="icon icon-sm">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-arrow-top"></use>
+                          </svg>
+                        </span>
                         <?php elseif ($mostrar["existencia_minima"] > $stock):?>
-                          <span class="badge bg-danger">
-                            <?php echo $stock ?>
-                            <svg class="icon icon-sm">
-                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-arrow-bottom"></use>
-                            </svg>
-                          </span>
+                        <span class="badge bg-danger">
+                          <?php echo $stock ?>
+                          <svg class="icon icon-sm">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-arrow-bottom"></use>
+                          </svg>
+                        </span>
                         <?php else:?>
-                          <span class="badge bg-success">
-                            <?php echo $stock ?>
-                            <svg class="icon icon-sm">
-                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-check-alt"></use>
-                            </svg>
-                          </span>
+                        <span class="badge bg-success">
+                          <?php echo $stock ?>
+                          <svg class="icon icon-sm">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-check-alt"></use>
+                          </svg>
+                        </span>
                         <?php endif;?>
                       </td>
                       <td>
-                        <a href="<?php echo 'ShowSuministro.php?id='.$mostrar['id']?>" class="btn btn-outline-info rounded-pill" title="Ver"><i
-                            class='far fa-eye'></i></a>
-                        <a href="<?php echo 'AIngresoSuministros.php?id='.$mostrar['id']?>" class="btn btn-outline-warning rounded-pill" title="Editar"><i
-                            class="far fa-edit"></i></a>
-                        <button type="button" class="btn btn-outline-danger rounded-pill" onclick="remove(<?php echo $mostrar['id'] ?>)" title="Baja"><i
+                        <a href="<?php echo 'ShowSuministro.php?id='.$mostrar['id']?>"
+                          class="btn btn-outline-info rounded-pill" title="Ver"><i class='far fa-eye'></i></a>
+                        <a href="<?php echo 'AIngresoSuministros.php?id='.$mostrar['id']?>"
+                          class="btn btn-outline-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></a>
+                        <button type="button" class="btn btn-outline-danger rounded-pill"
+                          onclick="remove(<?php echo $mostrar['id'] ?>)" title="Baja"><i
                             class="fa-solid fa-arrow-down-long"></i></i></button>
+                        <a target="_blank"><button onclick="reporte()" type="button" class="btn btn-light"
+                          title="Reporte Descargo" style="float: right;"><i class="fa fa-file-pdf-o"
+                            aria-hidden="true"></i></button></a>
+                            <input type="hidden" id="idk" name="idk">
+                        <script type="text/javascript">
+                          //REPORTE------------------------------------------------------
+                          function reporte() {
+                            idk = $('#idk').val();
+                            var dominio = window.location.host;
+                            window.open('http://' + dominio +
+                              '/coreu/dist/Reportes/Kardex.php?id='+idk,'_blank');
+                          }
+                        </script>
                       </td>
                     </tr>
-                        <?php $correlativo++?>
+                    <?php $correlativo++?>
                     <?php } }?>
                   </tbody>
                 </table>
@@ -191,7 +206,6 @@ if (isset($_SESSION['usuarioActivo'])) {
         </div>
       </div>
     </div>
-
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
