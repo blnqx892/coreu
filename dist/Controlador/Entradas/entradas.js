@@ -74,12 +74,35 @@ $(document).ready(function () {
         success: function (response) {
         data = JSON.parse(response);
         if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+        
           $("#formE")[0].reset();
           toastBoostrap(data.toast, data.mensaje)
         }else if (data.success == 1) {
-                  
+             $("#fechaC").val("");
+             $("#facturaC").val("");
+             $("#costoC").val("");
+             $("#proveedor_id").val("");
+             $("#nombreC").val("");
+             $("#serieC").val("");
+             $("#marcaC").val("");
+             $("#modeloC").val("");
+             $("#colorC").val("");
+             $("#cargoC").val("");
+             $("#vidaC").val();
+             $("#categoria_id").val("");
+             $("#descriC").val("");
+             $("#motorC").val("");
+             $("#chasisC").val("");
+             $("#placaC").val("");
+             $("#capacidadC").val("");
+             $("#vidaAnio").val("");
+             alert("hola");
+          limpiar(1);
+          $("#formE").reset();
             successToast('Registro guardado con éxito');
-            limpiar(1); 
+             
+            
+           
           } else {
             //alert("Formato de imagen incorrecto.");
           }
@@ -91,7 +114,7 @@ $(document).ready(function () {
     }
     return false;
   });
- 
+  //*************************** */
   /******inicio funcion validar */
   function validation(index) {
     let validate = true;
