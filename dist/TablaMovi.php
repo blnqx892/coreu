@@ -184,6 +184,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                             <input type="text" class="form-control" id="fechamovii"
                                                                 disabled>
                                                         </div>
+                                                        <div class="col-md-4">
+                                                            <label for="inputZip" class="form-label">Unidad Movimiento:</label>
+                                                            <input type="text" class="form-control" id="unimovii"
+                                                                disabled>
+                                                        </div>
                                                     </div>
                                                     <!----------------------------------este es el div de lo de vehiculo  ----------------------------------------->
                                                     <div class="row my-4" id="ocultarverdatosi" style="display:none">

@@ -179,7 +179,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <thead>
                     <tr>
                       <th>#</th>
-                      <th style="text-align:center;">Fecha</th>
+                      <th style="text-align:center;" width="90">Fecha</th>
                       <th style="text-align:center;">Concepto</th>
                       <th style="text-align:center;">Fondos procedencia</th>
                       <th style="text-align:center;">Cantidad entrada</th>
@@ -194,12 +194,17 @@ if (isset($_SESSION['usuarioActivo'])) {
                         $correlativo = 1;
                         $saldo = 0;
                         setlocale(LC_MONETARY, 'en_US.UTF-8');
+                       
                       ?>
                       <?php While($mostrar=mysqli_fetch_assoc($kardex)){?>
                       <?php $saldo = $saldo + $mostrar['cantidad_entrada'] - $mostrar['cantidad_salida'];?>
                         <tr>
+                        <?php
+                        $fechaMySQL = $mostrar['fecha'];
+                        $timestamp = strtotime($fechaMySQL);
+                        $fechaFormateada = date("d-m-Y", $timestamp);?>
                           <td><?php echo $correlativo?></td>
-                          <td><?php echo $mostrar['fecha'] ?></td>
+                          <td><?php echo  $fechaFormateada ?></td>
                           <td><?php echo $mostrar['concepto'] ?></td>
                           <td><?php echo ($mostrar['fondos_procedencia'] == 1 ? 'Fondos propios' : ($mostrar['fondos_procedencia'] == 2 ? 'Fondos FODES' : ($mostrar['fondos_procedencia'] == 3 ? 'Donativos' : $mostrar['fondos_procedencia']))) ?></td>
                           <td><?php echo $mostrar['cantidad_entrada'] ?></td>

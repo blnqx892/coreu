@@ -2,6 +2,9 @@
 <html>
 <?php
 include("../Confi/conexion.php");
+
+$conexion = con();
+
 $id = $_GET["id"]; ?>
 
 <head>
@@ -32,43 +35,54 @@ $id = $_GET["id"]; ?>
     </tr>
   </table>
   <?php
-     $sql="SELECT mantenimiento_activos.id AS id_movimientos,
+
+     $sql="SELECT m.id AS id_movimientos,
      ingreso_entradas.nombre_adquisicion,
      ingreso_entradas.color,
      ingreso_entradas.modelo,
      ingreso_entradas.serie_adquisicion,
      ingreso_entradas.marca,
      asignacion_activo.codigo_institucional,
-     mantenimiento_activos.tipo_movimiento,
-     mantenimiento_activos.tipo_registro,
+     m.tipo_movimiento,
+     m.tipo_registro,
      unidades.nombre_unidad,
-     mantenimiento_activos.fecha_movimiento,
-     mantenimiento_activos.observaciones
-    FROM mantenimiento_activos
-    INNER JOIN asignacion_activo ON asignacion_activo.id = mantenimiento_activos.fk_asignacion_activo
+     m.fecha_movimiento,
+     m.observaciones,
+     uni_manteni.nombre_unidad as 'unidad_mantenimiento'
+    FROM mantenimiento_activos m
+    INNER JOIN asignacion_activo ON asignacion_activo.id = m.fk_asignacion_activo
     INNER JOIN ingreso_entradas on ingreso_entradas.id = asignacion_activo.fk_ingreso_entradas
     INNER JOIN usuarios ON usuarios.id = asignacion_activo.fk_usuarios
     INNER JOIN unidades ON unidades.id = usuarios.fk_unidades
-    WHERE mantenimiento_activos.id =$id";
+    LEFT JOIN  unidades uni_manteni ON uni_manteni.id = m.fk_unidades
+    WHERE m.id =$id";
+
 
 $result = mysqli_query($conexion, $sql);
+
+if ($result === false) {
+  die("Error en la consulta: " . mysqli_error($conexion));
+}
+
 
 while($row = mysqli_fetch_array($result)) {
   ?>
   <strong class="tituloG titulos">Generalidades</strong>
   <div class="posiciontabla">
-    <table class="tablaDescargo">
+    <table class="tablaDescargo" >
       <tbody style="color:#00000;font-size:125%;">
         <tr>
           <td><b>Procedencia:</b></td>
           <td width="280"><?php echo $row["nombre_unidad"];?></td>
-          <td width="184"><b>Fecha: </b></td>
-          <td><?php $timestamp = strtotime($row["fecha_movimiento"]);
-                echo strftime('%d/%m/%Y', $timestamp);?></td>
+          <td width="184"><b>Fecha: </b>
+          <?php $timestamp = strtotime($row["fecha_movimiento"]);
+                echo strftime('%d/%m/%Y', $timestamp);?>
+          </td>
+          <td></td>
         </tr>
         <tr>
           <td><b>Destino: </b></td>
-          <td><?php echo $row["nombre_unidad"];?></td>
+          <td><?php echo $row["unidad_mantenimiento"];?></td>
           <td ><b>Tipo de Movimiento: </b></td>
           <td><?php echo $row["tipo_movimiento"];?></td>
         </tr>
@@ -102,8 +116,8 @@ while($row = mysqli_fetch_array($result)) {
     <table align="center" text-aign="left" width="700">
       <thead>
         <tr>
-          <th colspan="2">PERSONA QUE AUTORIZA EL TRASLADO</th>
-          <th colspan="2">PERSONA QUE RECIBE EL BIEN</th>
+          <th colspan="2">AUTORIZA EL TRASLADO</th>
+          <th colspan="2">PERSONA QUE REALIZA EL TRASLADO</th>
         </tr>
       </thead>
       <tbody>

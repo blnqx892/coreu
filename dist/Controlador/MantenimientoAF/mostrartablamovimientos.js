@@ -102,6 +102,7 @@ $(document).ready(function () {
         $("#jefeinvenmovi").val(data.jefe);        
         $("#id_categoria").val(data.cate);
         $("#fechamovii").val(data.fechaasigna);
+        $("#unimovii").val(data.unidad_mantenimiento);
         $("#id_categoria").val(data.cate);
         $("#motorimovi").val(data.numeromo);
         $("#placaimovi").val(data.numeropla);

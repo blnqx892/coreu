@@ -49,7 +49,7 @@ if (isset($_SESSION['usuarioActivo'])) {
               <div class="card-header"><strong>Asignación de Activo</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form id="form" class="g-3 needs-validation" role="form" action="" method="POST" autocomplete="off">
+                <form id="formasigna" class="g-3 needs-validation" role="form" action="" method="POST" autocomplete="off">
                   <!----------------------------------------------INICIO----------------------------------------------------------->
                   <div class="row">
                     <div class="col-md-4">
@@ -124,7 +124,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <hr style="color: black; background-color: black; width:100%;" />
                   <!--FIN-->
                   <div class="col-12" align="right">
-                    <button class="btn btn-success" type="button" id="GuardaCodificacion" name="btnGuardar">Guardar <i
+                    <button class="btn btn-success" type="submit" id="GuardaCodificacion" name="btnGuardar">Guardar <i
                         class='far fa-check-square'></i></button>
                     <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i></button>
                   </div>

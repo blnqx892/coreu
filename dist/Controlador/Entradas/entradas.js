@@ -35,9 +35,9 @@ $(document).ready(function () {
     $("#vidaC").val(rescate);
 
     if ($("#flexSwitchCheckChecked").val() == "on") {
-      var bandera = 0;
-    } else {
       var bandera = 1;
+    } else {
+      var bandera = 0;
     }
 
     if (validation(1)) {
@@ -76,10 +76,10 @@ $(document).ready(function () {
         if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
           toastBoostrap(data.toast, data.mensaje)
         }else if (data.success == 1) {
-            
+          limpiar(1);
             successToast('Registro guardado con éxito');
             $("#formE")[0].reset();
-            limpiar(1);
+           
           } else {
             //alert("Formato de imagen incorrecto.");
           }
@@ -117,10 +117,7 @@ $(document).ready(function () {
 
   function limpiar(index) {
     $(".mi-validate-" + index).each(function (k, v) {
-
       $(v).removeClass('is-valid');
-
-
     });
 
   }

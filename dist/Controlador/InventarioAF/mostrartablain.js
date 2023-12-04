@@ -86,12 +86,7 @@ $(document).ready(function () {
       console.log(JSON.parse(response));
       data = JSON.parse(response);
 
-      if(data.mostrar_campos ==1){
-          $("#ocultarii").show();
-      }else{
-        $("#ocultarii").hide();
-
-      }
+      parseInt(data.mostrar_campos ?? 0) ? $("#ocultarii").show() : $("#ocultarii").hide();
      
       //console.log(data);
       $("#fechaine").val(data.fechaC);
@@ -140,12 +135,8 @@ $(document).ready(function () {
         success: function (response) {
           console.log(JSON.parse(response));
           data = JSON.parse(response);
-          if(data.mostrar_campos ==1){
-            $("#ocultarverdatosi").show();
-        }else{
-          $("#ocultarverdatosi").hide();
-  
-        }  
+
+          parseInt(data.mostrar_campos ?? 0) ? $("#ocultarverdatosi").show() : $("#ocultarverdatosi").hide();
           //console.log(data);
           
           $("#fechain").val(data.fechaC);

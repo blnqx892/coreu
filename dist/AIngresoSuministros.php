@@ -67,12 +67,12 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <form class="g-3 needs-validation" action="Controlador/IngresoSuministrosC.php" method="POST"
                   autocomplete="off">
                   <!--INICIO SECCION FECHA-->
-                  <div class="row">
-                    <div class="col-md-3">
+                  <!--<div class="col-md-3">
                       <label for="inputZip" class="form-label">Codigo (ID):</label>
                       <input type="text" class="form-control" id="id" name="codigo" disabled placeholder="Se genera automáticamente">
-                    </div>
-                    <div class="col-md-3">
+                    </div>-->
+                  <div class="row">
+                      <div class="col-md-3">
                       <label for="inputZip" class="form-label">Codigo de Barra:</label>
                       <input type="text" class="form-control v-required-1" id="codigo_barra" name="codigob">
                     </div>
@@ -115,7 +115,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                       </div>
                       <div class="row">
                         <div class="col-12">
-                          <button class="btn btn-sm col-12 btn-outline-info" id="print_bc" type="button" style="display: none">Imprimir</button>
+                          <button class="btn btn-sm col-8 btn-outline-info" id="print_bc" type="button" style="display: none">Imprimir</button>
                         </div>
                       </div>
                     </div>

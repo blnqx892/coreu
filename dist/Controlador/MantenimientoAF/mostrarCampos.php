@@ -30,10 +30,6 @@ WHERE asignacion_activo.id ='$codigo'";
 
  
   $result = mysqli_query($conexion, $sql);
- // var_dump(mysqli_query($conexion, $sql));
-  //var_dump($sql);//ver consulta
-
-
   $json = array();
   $i=0;
 
