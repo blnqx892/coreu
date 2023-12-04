@@ -1,0 +1,15 @@
+/* Estilos para pantalla */
+body {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilos específicos para impresión */
+@media print {
+  body {
+      font-size: 12pt;
+      color: #000;
+  }
+
+  /* Agrega más estilos específicos para impresión según sea necesario */
+}
