@@ -69,50 +69,109 @@ if (isset($_SESSION['usuarioActivo'])) {
                                 <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
 
                                 <div class="row mt-3" style="padding: 0rem 2rem;">
-                                    <div class="membrete" id="">
-                                        <div>ALCALDÍA MUNICIPAL DE SAN VICENTE</div>
-                                        <div>CONTROL DE EXISTENCIA
-                                            DE SUMINISTROS</div>
-                                    </div>
 
-                                    <div class="codigo-tarjeta">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div>Codigo:
+                                                        <span class="fw-bold">
+                                                            <?php echo $mostrar['codigo_barra'] ?>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td rowspan="4" style="width: 34%; text-align: center; vertical-align: middle;">
+                                                    <div class="membrete" id="">
+                                                        <div>ALCALDÍA MUNICIPAL DE SAN VICENTE</div>
+                                                        <div>CONTROL DE EXISTENCIA
+                                                            DE SUMINISTROS</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>Tarjeta numero:
+                                                        <span class="fw-bold">
+                                                            <?php echo $mostrar['numero_tarjeta'] ?>
+                                                        </span>
+                                                    </div>
+                                                </td>
 
-                                        <div>Codigo:
-                                            <span class="fw-bold">
-                                                <?php echo $mostrar['codigo_barra'] ?>
-                                            </span>
-                                        </div>
-                                        <div>Tarjeta numero:
-                                            <span class="fw-bold">
-                                                <?php echo $mostrar['numero_tarjeta'] ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="codigo-tarjeta">
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>Nombre del Articulo:
+                                                        <span class="fw-bold">
+                                                            <?php echo $mostrar['nombre_suministro'] ?>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>Almacen:
+                                                        <span class="fw-bold">
+                                                            <?php
+                                                            // Obtener el valor de $mostrar['almacen']
+                                                            $almacen = $mostrar['almacen'];
 
-                                        <div>Nombre del Articulo:
-                                            <span class="fw-bold">
-                                                <?php echo $mostrar['nombre_suministro'] ?>
-                                            </span>
-                                        </div>
-                                        <div>Almacen:
-                                            <span class="fw-bold">
-                                                <?php
-                                                // Obtener el valor de $mostrar['almacen']
-                                                $almacen = $mostrar['almacen'];
+                                                            // Validar si $almacen es nulo o vacío
+                                                            if (empty($almacen)) {
+                                                                echo 'El almacen no ha sido asignado';
+                                                            } else {
+                                                                // Si $almacen no es nulo ni vacío, mostrar su valor
+                                                                echo '<span class="fw-bold">' . $almacen . '</span>';
+                                                            }
+                                                            ?>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>Presentación:
+                                                        <span class="fw-bold">
+                                                            <?php echo $mostrar['presentacion'] ?>
+                                                        </span>
+                                                    </div>
 
-                                                // Validar si $almacen es nulo o vacío
-                                                if (empty($almacen)) {
-                                                    echo 'El almacen no ha sido asignado';
-                                                } else {
-                                                    // Si $almacen no es nulo ni vacío, mostrar su valor
-                                                    echo '<span class="fw-bold">' . $almacen . '</span>';
-                                                }
-                                                ?>
-                                            </span>
-                                        </div>
-                                    </div>
+                                                    <div style="padding-top: 0.3rem;">Unidad de Medida:
+                                                       <span class="fw-bold">
+                                                        <?php
+                                                        // Obtener el valor de $mostrar['unidad_medida']
+                                                        $unidad_medida = $mostrar['unidad_medida'];
 
+                                                        // Validar si $unidad_medida es nulo o vacío
+                                                        if (empty($unidad_medida)) {
+                                                            echo 'Unidad de medida no definida';
+                                                        } else {
+                                                            // Si $unidad_medida no es nulo ni vacío, mostrar su valor
+                                                            echo '<span class="fw-bold">' . $unidad_medida . '</span>';
+                                                        }
+                                                        ?>
+                                                      </span>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div>Existencias
+                                                      <div style="display:flex; gap: 1rem;">
+                                                      <div>Minima:
+                                                            <span class="fw-bold">
+                                                                <?php echo $mostrar['existencia_minima'] ?>
+                                                            </span>
+                                                        </div>
+                                                        <div>Maxima:
+                                                            <span class="fw-bold">
+                                                                <?php echo $mostrar['existencia_maxima'] ?>
+                                                            </span>
+                                                        </div>
+                                                      </div>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+
+                                        </tbody>
+                                    </table>
 
                                     <div class="row mt-3">
                                     </div>

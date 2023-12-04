@@ -3,6 +3,13 @@ body {
   font-size: 14px;
   color: #333;
 }
+table td{
+  width: 33%;
+}
+.formato-membrete{
+  display: flex;
+  justify-content: space-between;
+}
 .membrete{
   display: flex;  flex-direction: column; align-items: center;
   text-align: center;
