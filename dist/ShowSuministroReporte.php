@@ -61,193 +61,93 @@ if (isset($_SESSION['usuarioActivo'])) {
                                 </div>
                             </div>
 
+
                             <div class="card-body">
                                 <div class="row">
                                     <h3>Información de Kardex</h3>
                                 </div>
                                 <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
-                                <div class="row mt-3">
-                                    <div class="col-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                Id
-                                            </div>
+
+                                <div class="row mt-3" style="padding: 0rem 2rem;">
+                                    <div class="membrete" id="">
+                                        <div>ALCALDÍA MUNICIPAL DE SAN VICENTE</div>
+                                        <div>CONTROL DE EXISTENCIA
+                                            DE SUMINISTROS</div>
+                                    </div>
+
+                                    <div class="codigo-tarjeta">
+
+                                        <div>Codigo:
+                                            <span class="fw-bold">
+                                                <?php echo $mostrar['codigo_barra'] ?>
+                                            </span>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="fw-bold">
-                                                    <?php echo $mostrar['id'] ?>
-                                                </span>
-                                            </div>
+                                        <div>Tarjeta numero:
+                                            <span class="fw-bold">
+                                                <?php echo $mostrar['numero_tarjeta'] ?>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="codigo-tarjeta">
+
+                                        <div>Nombre del Articulo:
+                                            <span class="fw-bold">
+                                                <?php echo $mostrar['nombre_suministro'] ?>
+                                            </span>
+                                        </div>
+                                        <div>Almacen:
+                                            <span class="fw-bold">
+                                                <?php
+                                                // Obtener el valor de $mostrar['almacen']
+                                                $almacen = $mostrar['almacen'];
+
+                                                // Validar si $almacen es nulo o vacío
+                                                if (empty($almacen)) {
+                                                    echo 'El almacen no ha sido asignado';
+                                                } else {
+                                                    // Si $almacen no es nulo ni vacío, mostrar su valor
+                                                    echo '<span class="fw-bold">' . $almacen . '</span>';
+                                                }
+                                                ?>
+                                            </span>
                                         </div>
                                     </div>
 
-                                    <div class="col-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                Código de barras
-                                            </div>
+
+                                    <div class="row mt-3">
+                                    </div>
+                                    <?php } ?>
+                                    <div class="css-buttons">
+                                        <div>
+                                            <button class="btn btn-success" id="btnImprimir"
+                                                onclick="printDiv('contenidoImprimir')">Imprimir Contenido</button>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="fw-bold">
-                                                    <?php echo $mostrar['codigo_barra'] ?>
-                                                    <input type="hidden" id="ibarcode"
-                                                        value="<?php echo $mostrar['codigo_barra'] ?>">
-                                                </span>
-                                            </div>
+                                        <div>
+                                            <a class="btn btn-secondary" href="TablaSumi.php" title="Atrás"><i
+                                                    class="fa fa-arrow-left" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
 
-                                    <div class="col-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                Nombre de suministro
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="fw-bold">
-                                                    <?php echo $mostrar['nombre_suministro'] ?>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                Presentación
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="fw-bold">
-                                                    <?php echo $mostrar['presentacion'] ?>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="row mt-3">
-
-                                    <div class="col-3">
-                                        <svg id="barcode" width="100%"></svg>
-                                    </div>
-
-                                    <div class="col-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                Existencias mínimas
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="fw-bold">
-                                                    <?php echo $mostrar['existencia_minima'] ?>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                Existencias máximas
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="fw-bold">
-                                                    <?php echo $mostrar['existencia_maxima'] ?>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <hr>
-
-                                <!-- <div class="row">
-                    <h3>Movimientos</h3>
-                  </div>
-
-                  <?php
-                    $sql2="select * from kardex where fk_ingreso_suministros = ".$id." order by fecha_creacion";
-                    $kardex = mysqli_query($conexion, $sql2);
-                  ?> -->
-
-                                <!-- dataTable-->
-                                <!-- <table id="miTabla" class="display" style="width:100%" cellpadding="0" cellspacing="0">
-                    <thead>
-                    <tr>
-                      <th>#</th>
-                      <th style="text-align:center;" width="90">Fecha</th>
-                      <th style="text-align:center;">Concepto</th>
-                      <th style="text-align:center;">Fondos procedencia</th>
-                      <th style="text-align:center;">Cantidad entrada</th>
-                      <th style="text-align:center;">Precio entrada</th>
-                      <th style="text-align:center;">Cantidad salida</th>
-                      <th style="text-align:center;">Precio salida</th>
-                      <th style="text-align:center;">Saldo</th>
-                    </tr>
-                    </thead>
-                    <tbody style="text-align:center;">
-                      <?php
-                        $correlativo = 1;
-                        $saldo = 0;
-                        setlocale(LC_MONETARY, 'en_US.UTF-8');
-
-                      ?>
-                      <?php While($mostrar=mysqli_fetch_assoc($kardex)){?>
-                      <?php $saldo = $saldo + $mostrar['cantidad_entrada'] - $mostrar['cantidad_salida'];?>
-                        <tr>
-                        <?php
-                        $fechaMySQL = $mostrar['fecha'];
-                        $timestamp = strtotime($fechaMySQL);
-                        $fechaFormateada = date("d-m-Y", $timestamp);?>
-                          <td><?php echo $correlativo?></td>
-                          <td><?php echo  $fechaFormateada ?></td>
-                          <td><?php echo $mostrar['concepto'] ?></td>
-                          <td><?php echo ($mostrar['fondos_procedencia'] == 1 ? 'Fondos propios' : ($mostrar['fondos_procedencia'] == 2 ? 'Fondos FODES' : ($mostrar['fondos_procedencia'] == 3 ? 'Donativos' : $mostrar['fondos_procedencia']))) ?></td>
-                          <td><?php echo $mostrar['cantidad_entrada'] ?></td>
-                          <td><?php echo '$' . number_format($mostrar['precio_entrada'], 2) ?></td>
-                          <td><?php echo $mostrar['cantidad_salida'] ?></td>
-                          <td><?php echo '$' . number_format($mostrar['precio_salida'], 2) ?></td>
-                          <td><?php echo $saldo ?></td>
-                        </tr>
-                        <?php $correlativo++?>
-                      <?php } ?>
-                    </tbody>
-                  </table> -->
-                                <!-- //dataTable-->
-                                <?php } ?>
-                                <button class="btn btn-success" id="btnImprimir"
-                                    onclick="printDiv('contenidoImprimir')">Imprimir Contenido</button>
-
-                                <div class="d-flex justify-content-end">
-                                    <a class="btn btn-secondary" href="TablaSumi.php" title="Atrás"><i
-                                            class="fa fa-arrow-left" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
+                        <!-- /.row-->
                     </div>
-                    <!-- /.row-->
                 </div>
+                <!-- ///////FIN CONTENEDOR/////////////-->
             </div>
-            <!-- ///////FIN CONTENEDOR/////////////-->
-        </div>
 
 
-        <!-- IMPORTAR ARCHIVO FOOTER-->
-        <?php include("foot/foot.php"); ?>
-        <!-- ////////////////////////-->
-        <!-- IMPORTAR ARCHIVO SCRIPT-->
-        <?php include("foot/script.php"); ?>
-        <!-- ////////////////////////-->
-        <script src="js/utils.js"></script>
-        <script src="Controlador/Suministros/imprimir.js"></script>
+            <!-- IMPORTAR ARCHIVO FOOTER-->
+            <?php include("foot/foot.php"); ?>
+            <!-- ////////////////////////-->
+            <!-- IMPORTAR ARCHIVO SCRIPT-->
+            <?php include("foot/script.php"); ?>
+            <!-- ////////////////////////-->
+            <script src="js/utils.js"></script>
+            <script src="Controlador/Suministros/imprimir.js"></script>
 
 
 </body>
