@@ -19,9 +19,12 @@ $id = $_POST['id'] ?? NULL;
 
   while($row = mysqli_fetch_array($result)) {
     $i++;
+    $fechaMySQL = $row['fecha_adquisicion'];
+    $timestamp = strtotime($fechaMySQL);
+     $fechaFormateada = date("d-m-Y", $timestamp);
     $json[] = array(
       'id'    => $row['id_entradas'],
-      'fechaC' => $row['fecha_adquisicion'],
+      'fechaC' => $fechaFormateada,
       'facturaC'=> $row['numero_factura'],
       'costo'=> $row['costo_adquisicion'],
       'prove'=> $row['proveedor'],
