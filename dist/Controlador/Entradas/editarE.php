@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 include("../../Confi/conexion.php");
 $conexion = con();
 
@@ -28,7 +28,13 @@ $id    = $_POST["_id"];
     fk_categoria='$cate',descripcion_adquisicion='$descrip',numero_motor='$numerom',numero_chasis='$numerocha',numero_placa='$numerop',capacidad='$capaci'
      WHERE id = '$id'";
 
-  
+      //////////CAPTURA DATOS PARA BITACORA
+      $usuari=$_SESSION['usuarioActivo'];
+      $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+      $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se editaron los datos de un ingreso','$nom',now())";
+      mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+      ///////////////////////////////////////////
+
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
    // Cerrar la conexión
@@ -39,7 +45,7 @@ $id    = $_POST["_id"];
                 $json[] = array(
                     'success'=>1,
                     'title' => 'Exito',
-                    'mensaje'=>'Registro Guardado con exito!'
+                    'mensaje'=>'Registro editado con exito!'
                   );
                  // echo 1;
             } else {
@@ -50,12 +56,4 @@ $id    = $_POST["_id"];
             }
            $jsonstring = json_encode($json[0]);
            echo $jsonstring;
-
-
-           //////////CAPTURA DATOS PARA BITACORA
-//$usuari=$_SESSION['usuarioActivo'];
-//$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-//$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Edito los datos de un bien','$nom',now())";
-//mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-/////////////////////////////////////////////////
 ?>
