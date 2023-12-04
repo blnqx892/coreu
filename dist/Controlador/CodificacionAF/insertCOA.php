@@ -1,4 +1,5 @@
 <?php
+session_start();
     // Incluir el archivo que contiene la configuración de la conexión a la base de datos
     include("../../Confi/conexion.php");
 
@@ -17,7 +18,7 @@
     $fk_ingreso_entradas    = $_POST["_id"];
     $fk_usuarios            = $_POST["nombreC"];
 
-    
+
     if (validacionSql("SELECT VALIDAR('VALIDAR_CODIGO_ACTIVO', '$codigo_institucional') AS resultado")) {
         // Mostrar mensaje de advertencia si el código ya existe
         warningJSON('El código de institucional de activo fijo ya existe.');
@@ -37,6 +38,13 @@
         $fk_usuarios
     )";
 
+        //////////CAPTURA DATOS PARA BITACORA
+        $usuari=$_SESSION['usuarioActivo'];
+        $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+        $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se codifico un nuevo bien','$nom',now())";
+        mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+        ///////////////////////////////////////////
+
     try {
         // Ejecutar el procedimiento almacenado
         $resultado = mysqli_query($conexion, $sql);
@@ -49,6 +57,5 @@
         // Cerrar la conexión después de ejecutar el procedimiento almacenado
         mysqli_close($conexion);
     }
- 
-?>
 
+?>

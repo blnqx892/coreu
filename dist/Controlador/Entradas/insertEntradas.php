@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
  // Incluir el archivo que contiene la configuración de la conexión a la base de datos
  include("../../Confi/conexion.php");
 
@@ -9,7 +9,7 @@
  // Establecer conexión a la base de datos
  $conexion = con();
 
- 
+
     // Obtener valores del formulario
     $fecha = $_POST["fecha"];
     $factura = $_POST["factura"];
@@ -45,6 +45,13 @@
     ('$fecha','$factura', '$costo','$nombre','$serie','$marca','$modelo','$color','$descrip','$cargo',
     '$vida','$cate','$prov','$numerom','$numerocha','$numerop','$capaci', $x)";
 
+    //////////CAPTURA DATOS PARA BITACORA
+    $usuari=$_SESSION['usuarioActivo'];
+    $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+    $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Registró un nuevo bien','$nom',now())";
+    mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+    ///////////////////////////////////////////
+
     //echo $sql;
     try {
         // Ejecutar el procedimiento almacenado
@@ -59,10 +66,5 @@
         mysqli_close($conexion);
     }
 
-//////////CAPTURA DATOS PARA BITACORA
-//$usuari=$_SESSION['usuarioActivo'];
-//$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-//$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Registró un nuevo bien','$nom',now())";
-//mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-///////////////////////////////////////////////
+
 ?>
