@@ -1,37 +1,46 @@
 <?php // Iniciamos la sesión
 session_start();
 if (isset($_SESSION['usuarioActivo'])) {
+  include("../Confi/conexion.php");
+  $conexion = con();
+  $id = $_GET["id"];
 ?>
 <!doctype html>
 <html>
-<?php
-  $id = $_GET["id"];
-?>
+
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/reportesRetiroInsumos.css" />
 </head>
 
 <body style="margin: 30px 30px 20px 20px;">
+<?php
+$sql="SELECT * FROM `ingreso_suministros` WHERE id=$id";
+$result = mysqli_query($conexion, $sql);
+if ($result === false) {
+  die("Error en la consulta: " . mysqli_error($conexion));
+}
+while($row = mysqli_fetch_array($result)) {
+?>
   <table width="1000" align="center" border="1" class="table_informacion">
     <tr>
-      <td width=90>Codigo: <b>12345678</b></td>
+      <td width=90>Codigo: <b><?php echo $row["codigo_barra"];?></b></td>
       <td rowspan="4" width=70 align="center"><br><br><b>ALCALDÍA MUNICIPAL DE SAN VICENTE <br><br>
-        CONTROL DE EXISTENCIA <br>DE SUMINISTROS</b><br><br></td>
+          CONTROL DE EXISTENCIA <br>DE SUMINISTROS</b><br><br></td>
 
       <td width=100>Tarjeta No.: <b>12</b></td>
     </tr>
     <tr>
-      <td>Nombre del Articulo: <?php echo $result["nombre_suministro"];?><b>Lapiceros Bic</b></td>
-      <td>Almacen: <b>3</b></td>
+      <td>Nombre del Articulo: <b><?php echo $row["nombre_suministro"];?></b></td>
+      <td>Almacen: <b></b></td>
     </tr>
     <tr>
-      <td>Presentación: <b>Caja</b></td>
-      <td>Existencias: <b>22</b></td>
+      <td>Presentación: <b><?php echo $row["presentacion"];?></b></td>
+      <td>Existencias: <b></b></td>
     </tr>
     <tr>
-      <td>Unidad de Medida: <b>Caja</b></td>
-      <td colspan="2">Max: <b>50</b> ||    Min: <b>10</b></td>
+      <td>Unidad de Medida: <b><?php echo $row["unidad_medida"];?></b></td>
+      <td colspan="2">Max: <b><?php echo $row["existencia_maxima"];?></b> || Min: <b><?php echo $row["existencia_minima"];?></b></td>
     </tr>
     <tr>
       <td colspan="">Estante: </td>
@@ -68,34 +77,16 @@ if (isset($_SESSION['usuarioActivo'])) {
           <td>0</td>
           <td>30</td>
         </tr>
-        <tr>
-        <td>15/11/2023</td>
-          <td>Salida de requisición: 1699303736</td>
-          <td>1</td>
-          <td>0</td>
-          <td>0</td>
-          <td>5</td>
-          <td>2.50</td>
-          <td>25</td>
-        </tr>
-        <td>16/11/2023</td>
-          <td>Salida de requisición: 1699308978</td>
-          <td>1</td>
-          <td>0</td>
-          <td>0</td>
-          <td>3</td>
-          <td>2.50</td>
-          <td>22</td>
-        </tr>
       </tbody>
     </table>
+    <?php  } ?>
   </div><br>
   <div>
-    <table width="200" align="center"border="1" class="table_inf">
+    <table width="200" align="center" border="1" class="table_inf">
       <tr>
-        <td colspan="3" align="center" ><b>FUENTE DE FINANCIAMIENTO</b></td>
+        <td colspan="3" align="center"><b>FUENTE DE FINANCIAMIENTO</b></td>
       </tr>
-      <tr >
+      <tr>
         <td>FONDOS PROPIOS: </td>
         <td align="center">1</td>
       </tr>
@@ -116,6 +107,7 @@ if (isset($_SESSION['usuarioActivo'])) {
   </form>
   <p>&nbsp;</p>
 </body>
+
 </html>
 <?php
 }else{
