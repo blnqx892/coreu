@@ -51,7 +51,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <strong>Inventario General</strong>
                   </div>
                   <div>
-                    <button type="button" class="btn btn-light" title="Reporte" style="float: right;"><i
+                    <button type="button" class="btn btn-light" title="Reporte" data-coreui-toggle="modal"
+                      data-coreui-target="#modalRe" data-coreui-whatever="@mdo" style="float: right;"><i
                         class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
                   </div>
                 </div>
@@ -328,7 +329,42 @@ if (isset($_SESSION['usuarioActivo'])) {
         <!-- ///////FIN CONTENEDOR/////////////-->
       </div>
     </div>
-   
+
+<!-- MODAL REPORTE -->
+    <div class="modal fade" id="modalRe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">REPORTE DE INVENTARIO</h5>
+              <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-6">
+                <label class="form-label" for="validationCustom04">Categoria: </label>
+                <select class="form-select" required id="categoria_id" name="categoria">
+                </select>
+                <div class="invalid-feedback">Please select a valid state.</div>
+              </div><br>
+              <div class="row">
+              <div class="col-md-6">
+                <label class="form-label" for="validationCustom04">Unidad: </label>
+                <select class="form-select" required id="unidad_id" name="unidad">
+                </select>
+                <div class="invalid-feedback">Please select a valid state.</div>
+              </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" onclick="reporte()" id="GuardaUnidades" class="btn btn-primary">Generar</button>
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+
     <script src="./Controlador/Proveedores/proveedor.js"></script>
     <script src="./Controlador/Categorias/categoria.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
