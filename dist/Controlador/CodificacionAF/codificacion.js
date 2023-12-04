@@ -36,7 +36,6 @@ $(document).ready(function () {
             if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
               toastBoostrap(data.toast, data.mensaje)
             }else if (data.success == 1) {
-        
               successToast('Registro guardado');
               limpiar(1);
               $("input").val(null);

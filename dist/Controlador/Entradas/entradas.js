@@ -74,27 +74,7 @@ $(document).ready(function () {
           $("#formE")[0].reset();
           toastBoostrap(data.toast, data.mensaje)
         }else if (data.success == 1) {
-             $("#fechaC").val("");
-             $("#facturaC").val("");
-             $("#costoC").val("");
-             $("#proveedor_id").val("");
-             $("#nombreC").val("");
-             $("#serieC").val("");
-             $("#marcaC").val("");
-             $("#modeloC").val("");
-             $("#colorC").val("");
-             $("#cargoC").val("");
-             $("#vidaC").val();
-             $("#categoria_id").val("");
-             $("#descriC").val("");
-             $("#motorC").val("");
-             $("#chasisC").val("");
-             $("#placaC").val("");
-             $("#capacidadC").val("");
-             $("#vidaAnio").val("");
-             alert("hola");
-          limpiar(1);
-          $("#formE").reset();
+            limpiar(1);
             successToast('Registro guardado con éxito');
              
             

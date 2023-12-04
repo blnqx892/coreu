@@ -107,10 +107,10 @@ if (isset($_SESSION['usuarioActivo'])) {
                   aria-hidden="true">
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
-                      <div class="modal-header">
+                       <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN DE ACTIVOS</h5>
                         <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
-                      </div>
+                       </div>
                       <div class="modal-body">
                         <form>
                           <div class="row my-4">
@@ -188,12 +188,14 @@ if (isset($_SESSION['usuarioActivo'])) {
                             <div class="col-md-4">
                               <label for="inputZip" class="form-label">No. Chasis:</label>
                               <input type="text" class="form-control" id="chasisi" disabled>
-                             </div>
-                            <div class="col-md-4">
+                            </div>
+                          </div>
+                          
+                              <div class="col-md-4">
                               <label for="inputZip" class="form-label">Capacidad:</label>
                               <input type="text" class="form-control" id="capai" disabled>
                              </div>
-                          </div> 
+                            </div> 
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
                           </div>

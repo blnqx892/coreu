@@ -124,7 +124,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <hr style="color: black; background-color: black; width:100%;" />
                   <!--FIN-->
                   <div class="col-12" align="right">
-                    <button class="btn btn-success" type="submit" id="GuardaCodificacion" name="btnGuardar">Guardar <i
+                    <button class="btn btn-success" type="button" id="GuardaCodificacion" name="btnGuardar">Guardar <i
                         class='far fa-check-square'></i></button>
                     <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i></button>
                   </div>
