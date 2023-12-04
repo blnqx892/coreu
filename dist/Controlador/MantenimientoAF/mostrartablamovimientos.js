@@ -51,7 +51,8 @@ $(document).ready(function () {
               { data: "codi" },
               { data: "describien" },
               { data: "tipomo" }, 
-              { data: "tipore" }, 
+              { data: "tipore" },
+              { data: "unidest" }, 
               { data: "botones" }
              
       

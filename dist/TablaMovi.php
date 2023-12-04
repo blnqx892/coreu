@@ -67,6 +67,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                             <th style="text-align:center;">Descripción del bien</th>
                                             <th style="text-align:center;">Tipo de Movimiento</th>
                                             <th style="text-align:center;">Tipo de Registro</th>
+                                            <th style="text-align:center;">Unidad Destino</th>
                                             <th style="text-align:center;">Acción</th>
                                         </tr>
                                     </thead>
@@ -80,6 +81,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                             <th style="text-align:center;">Descripción del bien</th>
                                             <th style="text-align:center;">Tipo de Movimiento</th>
                                             <th style="text-align:center;">Tipo de Registro</th>
+                                            <th style="text-align:center;">Unidad Destino</th>
                                             <th style="text-align:center;">Acción</th>
                                         </tr>
                                     </tfoot>

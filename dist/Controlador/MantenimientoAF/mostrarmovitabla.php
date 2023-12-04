@@ -11,11 +11,14 @@ ma.fecha_movimiento as fecha_movimiento,
 aa.codigo_institucional as codigo_institucional,
 ie.nombre_adquisicion as nombre_adquisicion,
 ma.tipo_registro as tipo_registro,
-ma.tipo_movimiento as tipo_movimiento
+ma.tipo_movimiento as tipo_movimiento,
+uni_manteni.nombre_unidad as 'unidad_mantenimiento'
 from mantenimiento_activos ma
 inner join asignacion_activo aa on ma.fk_asignacion_activo = aa.id
+LEFT JOIN  unidades uni_manteni ON uni_manteni.id = ma.fk_unidades
 inner join ingreso_entradas ie on aa.fk_ingreso_entradas = ie.id
 order by fecha_movimiento desc";
+
 
   $result = mysqli_query($conexion, $sql);
   //var_dump( $sql);
@@ -65,6 +68,7 @@ if($row['tipo_registro'] == "Descargo"){
       'describien'=> $row['nombre_adquisicion'],
       'tipomo'=> $row['tipo_movimiento'],
       'tipore'=> $row['tipo_registro'],
+      'unidest'=> $row['unidad_mantenimiento'],
       'botones'=> $x,
       'i'=>$i
     );
