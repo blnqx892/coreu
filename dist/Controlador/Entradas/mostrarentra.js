@@ -85,12 +85,8 @@ $(document).ready(function () {
           console.log(JSON.parse(response));
           data = JSON.parse(response);
 
-          if(data.mostrar_campos ==1){
-            $("#ocultarver").show();
-        }else{
-          $("#ocultarver").hide();
-  
-        }  
+          parseInt(data.mostrar_campos ?? 0) ? $("#ocultarver").show() : $("#ocultarver").hide();
+          
          //console.log(data);
           $("#_id").val(data.id);
           $("#fechae").val(data.fechaC);

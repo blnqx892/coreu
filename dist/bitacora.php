@@ -56,7 +56,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div>
                     <button type="button" class="btn btn-light" title="Reporte" data-coreui-toggle="modal"
                       data-coreui-target="#modalRe" data-coreui-whatever="@mdo" style="float: right;"><i
-                        class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+                        class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                    </button>
                   </div>
                 </div>
               </div>

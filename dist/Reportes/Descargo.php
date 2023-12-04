@@ -32,7 +32,7 @@ $id = $_GET["id"]; ?>
     </tr>
   </table>
   <?php
-     $sql="SELECT mantenimiento_activos.id AS id_movimientos,
+     $sql="SELECT mantenimiento_activos.id AS id_descargo,
      ingreso_entradas.nombre_adquisicion,
      ingreso_entradas.color,
      ingreso_entradas.modelo,
@@ -51,13 +51,17 @@ $id = $_GET["id"]; ?>
     INNER JOIN unidades ON unidades.id = usuarios.fk_unidades
     WHERE mantenimiento_activos.id =$id";
 
+
 $result = mysqli_query($conexion, $sql);
+if ($result === false) {
+  die("Error en la consulta: " . mysqli_error($conexion));
+}
 
 while($row = mysqli_fetch_array($result)) {
   ?>
   <strong class="tituloG titulos">Generalidades</strong>
   <div class="posiciontabla">
-    <table class="tablaDescargo" border="1">
+    <table class="tablaDescargo" >
       <tbody style="color:#00000;font-size:125%;">
         <tr>
           <td><b>Procedencia:</b></td>
@@ -100,8 +104,8 @@ while($row = mysqli_fetch_array($result)) {
     <table align="center" text-aign="left" width="700">
       <thead>
         <tr>
-          <th colspan="2">PERSONA QUE AUTORIZA EL DESCARGO</th>
-          <th colspan="2">PERSONA QUE RECIBE EL BIEN</th>
+          <th colspan="2">AUTORIZA EL DESCARGO</th>
+          <th colspan="2">PERSONA QUE REALIZA EL DESCARGO</th>
         </tr>
       </thead>
       <tbody>

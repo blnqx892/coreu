@@ -9,7 +9,9 @@ $con = con();
  $sql="SELECT usuarios.id as id_usuario,
     unidades.nombre_unidad, usuarios.nombre, usuarios.apellido
  from usuarios 
- INNER JOIN unidades on unidades.id = usuarios.fk_unidades where order by nombre ASC";
+ INNER JOIN unidades on unidades.id = usuarios.fk_unidades  
+ where  usuarios.estado ='Activo'
+ Order by nombre ASC";
 
   $result = mysqli_query($conexion, $sql);
  // var_dump(mysqli_query($conexion, $sql));

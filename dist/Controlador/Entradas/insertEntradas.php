@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
  // Incluir el archivo que contiene la configuración de la conexión a la base de datos
  include("../../Confi/conexion.php");
 
@@ -59,9 +59,9 @@ session_start();
     }
 
 //////////CAPTURA DATOS PARA BITACORA
-$usuari=$_SESSION['usuarioActivo'];
-$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Registró un nuevo bien','$nom',now())";
-mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+//$usuari=$_SESSION['usuarioActivo'];
+//$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+//$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Registró un nuevo bien','$nom',now())";
+//mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
 ///////////////////////////////////////////////
 ?>
