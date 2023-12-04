@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../../Confi/conexion.php";
 $conexion = con();
 
@@ -22,6 +23,13 @@ if ($suministros > 0) {
 } else {
   $sql2 = "delete from kardex where fk_ingreso_suministros = ".$body->id;
   $sql3 = "delete from ingreso_suministros where id = ".$body->id;
+
+//////////CAPTURA DATOS PARA BITACORA
+$usuari=$_SESSION['usuarioActivo'];
+$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se elimino un suministro','$nom',now())";
+mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+///////////////////////////////////////////////
 
   $response["statusCode"] = 500;
   $response["message"] = "Algo salió mal, no se pudo guardar";

@@ -138,7 +138,7 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-    
+
     <script src="./Controlador/CredencialesA/credenciales.js" type="text/javascript"></script>
     <script src="./Controlador/Categorias/categoria.js" type="text/javascript"></script>
     <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
@@ -174,7 +174,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
     <script src="./Controlador/codificacionAF/codificacion.js"></script>
-    
+
   </div>
 </body>
 

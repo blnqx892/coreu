@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("../../Confi/conexion.php");
 $conexion = con();
 
@@ -19,6 +20,13 @@ $query = "update ingreso_suministros set
                                casilla = '".$body->casilla."',
                                categoria_id = '".$body->categoria_id."'
  where id = ".$id;
+
+//////////CAPTURA DATOS PARA BITACORA
+$usuari=$_SESSION['usuarioActivo'];
+$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se modifico la información de un suministro','$nom',now())";
+mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+///////////////////////////////////////////////
 
 $response["statusCode"] = 500;
 $response["message"] = "Algo salió mal, no se pudo editar";

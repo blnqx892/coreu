@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../../Confi/conexion.php");
   $conexion = con();
 
@@ -11,18 +12,27 @@ include("../../Confi/conexion.php");
 
     $sql= " UPDATE mobiliario_otros SET fecha='$fechaM',nombre='$nombreM',modelo='$modeloM',
     valor='$valorM',descripcion='$descriM' WHERE id = $id";
-    
+
     // Ejecutar la consulta SQL
     $resultado  = mysqli_query($conexion, $sql);
+
+   //////////CAPTURA DATOS PARA BITACORA
+   $usuari=$_SESSION['usuarioActivo'];
+   $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+   $sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se modifico la información de un inmueble','$nom',now())";
+   mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+   ///////////////////////////////////////////////
+
     // Cerrar la conexión
     mysqli_close($conexion);
+
     //echo "Los datos se han insertado correctamente";
     $json = array();
             if ($resultado) {
                 $json[] = array(
                     'success'=>1,
                     'title' => 'Exito',
-                    'mensaje'=>'Registro Guardado con exito!'
+                    'mensaje'=>'Registro modificado con exito!'
                   );
                  // echo 1;
             } else {

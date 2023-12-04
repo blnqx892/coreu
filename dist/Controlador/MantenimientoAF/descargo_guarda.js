@@ -1,12 +1,12 @@
 $(document).ready(function () {
-  
-  
-  
+
+
+
     //********************guardar  */
-    
-  
+
+
  $("#GuardaDescargo").on("click", function () {
-     
+
       validation();
       let fechaMovimiento = $("#fecha_movimientodescargo").val();
       let tipomovi        = $("#descargoM").val();
@@ -17,14 +17,14 @@ $(document).ready(function () {
 
 
         let formData = new FormData(); //permite recoger la data para enviarla al controlador
-       
+
         formData.append("fechaMovimiento", fechaMovimiento);//anadir la data al objeto para seer enviadad
         formData.append("observa",observa);
         formData.append("tipomovi",tipomovi);
         formData.append("tiporegis",'Descargo');
-        formData.append("_id_asigna",_id_asigna)       
-        
-  
+        formData.append("_id_asigna",_id_asigna)
+
+
         $.ajax({
           url: "Controlador/MantenimientoAF/insertMovimientos.php",
           type: "post",
@@ -35,12 +35,12 @@ $(document).ready(function () {
             console.log(JSON.parse(response));
             data = JSON.parse(response);
             if (data.success == 1) {
-                 
-            successToast('Registro guardado con éxito');
-            limpiar(1); 
+
+            successToast('Registro descargado con éxito');
+            limpiar(1);
             $("#codigo_id").select2().text();
             $('#formD').get(0).reset();
-             
+
           } else {
             //alert("Formato de imagen incorrecto.");
           }
@@ -50,13 +50,13 @@ $(document).ready(function () {
        // show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
       }
       return false;
-     
+
     });
     //****************************************** */
     function validation(index) {
     let validate = true;
 
-    
+
     // Validación de requeridos
     $(".nueve-validate-" + index).each(function (k, v) {
       console.log(v);

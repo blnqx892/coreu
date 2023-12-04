@@ -1,10 +1,10 @@
 <?php
+session_start();
 include("Confi/conexion.php");
 $conexion = con();
 echo '
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
 echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
-    session_start(); //Iniciar una nueva sesión o reanudar la existente
 
     //////////CAPTURA DATOS PARA BITACORA
     $usuari=$_SESSION['usuarioActivo'];
