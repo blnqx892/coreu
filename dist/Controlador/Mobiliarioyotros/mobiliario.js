@@ -50,8 +50,7 @@ if (validation(1)) {
       }
         return false;
     });
-    //*************************** */
-    //*************************** */
+
   /******inicio funcion validar */
 
   function validation(index) {

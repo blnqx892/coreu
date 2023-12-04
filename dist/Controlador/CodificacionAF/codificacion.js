@@ -16,7 +16,7 @@ $(document).ready(function () {
 
       
       if (validation(1)) {  
-        var formData = new FormData(); //permite recoger la data para enviarla al controlador
+        let formData = new FormData(); //permite recoger la data para enviarla al controlador
 
         formData.append("fechaA", fechaA);//anadir la data al objeto para seer enviadad
         formData.append("cod",codigoA);
@@ -37,9 +37,9 @@ $(document).ready(function () {
               toastBoostrap(data.toast, data.mensaje)
             }else if (data.success == 1) {
         
-              successToast('Registro guardado');
+              successToast('Registro guardado con éxito');
               limpiar(1);
-              $("input").val(null);
+              //$("input").val(null);
               $("select").val('Elegir Jefe');
               
             } else {
@@ -53,7 +53,7 @@ $(document).ready(function () {
       }
     });
     //*************************** */
- //*************************** */
+ 
   /******inicio funcion validar */
 
   function validation(index) {
