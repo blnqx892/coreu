@@ -6,6 +6,57 @@
   <link rel="stylesheet" href="../css/reportesRetiroInsumos.css" />
 </head>
 
+<?php
+  $valor = $_POST["valor"];
+  $unidad = $_POST["unidad"];
+  $categoria = $_POST["categoria"];
+
+  $conexion = mysqli_connect('localhost', 'root', '', 'sicafi');
+
+  $sql = 'select
+    ie.nombre_adquisicion,
+    ie.modelo,
+    ie.serie_adquisicion,
+    ie.marca,
+    ie.fecha_adquisicion,
+    ie.costo_adquisicion,
+    aa.codigo_institucional,
+    aa.estado_bien
+from ingreso_entradas ie
+inner join asignacion_activo aa on aa.fk_ingreso_entradas = ie.id
+inner join usuarios u on u.id = aa.fk_usuarios
+where ie.fk_categoria = '.$categoria. ' and u.fk_unidades = '.$unidad;
+  if ($valor == "Mayor a 20,000") {
+    $sql .= ' and costo_adquisicion >= 20000';
+  } else if ($valor == 'Mayor a 900') {
+    $sql .= ' and costo_adquisicion >= 900';
+  } else if ($valor == 'Menor a 900') {
+    $sql .= ' and costo_adquisicion < 900';
+  } else if ($valor == 'Mayor a 600') {
+    $sql .= ' and costo_adquisicion >= 600';
+  } else if ($valor == 'Menor a 600') {
+    $sql .= ' and costo_adquisicion < 600';
+  }
+
+  $inventario = mysqli_query($conexion, $sql) or die("No se puede ejecutar la consulta");
+
+  $sql_unidad = "select * from unidades where id=".$unidad;
+  $dato_unidad = mysqli_query($conexion, $sql_unidad) or die("No se puede ejecutar la consulta");
+
+  $nombre_unidad = '';
+  while ($u = mysqli_fetch_array($dato_unidad)) {
+    $nombre_unidad = $u['nombre_unidad'];
+  }
+
+  $sql_categoria = "select * from categorias where id=".$categoria;
+  $dato_categoria = mysqli_query($conexion, $sql_categoria) or die("No se puede ejecutar la consulta");
+
+  $nombre_categoria = '';
+  while ($c = mysqli_fetch_array($dato_categoria)) {
+    $nombre_categoria = $c['categoria'];
+  }
+?>
+
 <body style="margin: 30px 30px 20px 20px;">
   <table width="1000" border="0" align="center">
     <tr>
@@ -20,17 +71,21 @@
   <table width="950" align="center">
     <thead>
       <tr>
-        <th colspan="4">INVENTARIO FISICO DE BIENES MUEBLES MENORES A $600.00</th>
+        <th colspan="4">
+          <span class="text-uppercase">
+            INVENTARIO FISICO DE <?php echo strtoupper($nombre_categoria)?> <?php echo strtoupper($valor)?>
+          </span>
+        </th>
       </tr>
     </thead>
     <tbody style="color:#00000;font-size:100%;">
       <tr>
         <td WIDTH="186"><b>DEPARTAMENTO:</b></td>
-        <td>RECURSOS HUMANOS</td>
+        <td><?php echo strtoupper($nombre_unidad)?></td>
       </tr>
       <tr>
         <td><b>RESPONSABLE: </b></td>
-        <td>JUAN AGUSTIN SANCHEZ</td>
+        <td></td>
       </tr>
       <tr  style="text-align: left;">
         <td><b>PRACTICADO EN FECHA DE: </b></td>
@@ -54,32 +109,31 @@
         </tr>
       </thead>
       <tbody style="color:#00000;font-size:100%;">
+        <?php $correlativo = 1;?>
+        <?php $subtotal = 0;?>
+        <?php while ($item = mysqli_fetch_array($inventario)):?>
           <tr>
-            <td>1</td>
-            <td>Escritorio negro</td>
-            <td>Imperial</td>
-            <td>imp1234</td>
-            <td>Luxur</td>
-            <td>12/08/2022</td>
-            <td>450.00</td>
-            <td>98-09-234-456-00-23</td>
-            <td>Buen estado</td>
+            <?php
+              $f_adquisicion = strtotime($item['fecha_adquisicion']);
+              $fecha_adquisicion = date('d/m/Y', $f_adquisicion);
+              $subtotal += $item['costo_adquisicion'];
+            ?>
+            <td><?php echo $correlativo;?></td>
+            <td><?php echo $item['nombre_adquisicion'];?></td>
+            <td><?php echo $item['modelo'];?></td>
+            <td><?php echo $item['serie_adquisicion'];?></td>
+            <td><?php echo $item['marca'];?></td>
+            <td><?php echo $fecha_adquisicion;?></td>
+            <?php echo '<td style="text-align: end">$' . number_format($item['costo_adquisicion'], 2) . '</td>' ?>
+            <td><?php echo $item['codigo_institucional'];?></td>
+            <td><?php echo $item['estado_bien'];?></td>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>Archivero Vertical</td>
-            <td>95090000022</td>
-            <td>Keter234</td>
-            <td>Keter</td>
-            <td>10/12/2022</td>
-            <td>500.00</td>
-            <td>98-09-234-456-00-25</td>
-            <td>Buen estado</td>
-          </tr>
-          <tr>
-            <td colspan="6" style="text-align: center;"><b>SUB-TOTAL</b></td>
-            <td><b>950.00</b></td>
-          </tr>
+        <?php $correlativo++;?>
+        <?php endwhile;?>
+        <tr>
+          <td colspan="6" style="text-align: center;"><b>SUB-TOTAL</b></td>
+          <?php echo '<td style="text-align: end">$' . number_format($subtotal, 2) . '</td>' ?>
+        </tr>
       </tbody>
     </table>
   </div><br>
