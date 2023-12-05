@@ -35,6 +35,7 @@ $(document).ready(function () {
             data = JSON.parse(response);
             if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
               toastBoostrap(data.toast, data.mensaje)
+              $("#formasigna")[0].reset();
             }else if (data.success == 1) {
               successToast('Registro guardado');
               limpiar(1);

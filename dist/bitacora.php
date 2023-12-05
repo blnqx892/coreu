@@ -149,7 +149,6 @@ if (isset($_SESSION['usuarioActivo'])) {
             <div class="modal-footer">
               <button type="submit" onclick="reporte()" id="GuardaUnidades" class="btn btn-primary">Generar</button>
               <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
-
             </div>
           </div>
         </form>

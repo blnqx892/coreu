@@ -330,33 +330,59 @@ if (isset($_SESSION['usuarioActivo'])) {
     </div>
 
 <!-- MODAL REPORTE -->
-    <div class="modal fade" id="modalRe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <?php
+     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+        $sql="SELECT * from categorias order by categoria ASC";
+        $categ = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
+        $sql2="SELECT * from unidades order by nombre_unidad ASC";
+        $unidad = mysqli_query($conexion, $sql2) or die("No se puedo ejecutar la consulta");
+    ?>
+     <div class="modal fade" id="modalRe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header">
+          <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">REPORTE DE INVENTARIO</h5>
               <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <div class="col-md-6">
+               <div class="col-md-6">
                 <label class="form-label" for="validationCustom04">Categoria: </label>
                 <select class="form-select" required id="categoria_id" name="categoria">
+                <?php
+                                   While($cat=mysqli_fetch_array($categ)){
+                                     echo '<option value="'.$cat['id'].'">'.$cat['categoria'].'</option>';
+                                  }?>
+                 </select>
+                <div class="invalid-feedback">Please select a valid state.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="validationCustom04">Valor: </label>
+                <select class="form-select" required id="valor_id" name="valor">
+                <option selected="" disabled="" value="">Elegir Cantidad</option>
+                      <option value="Mayor a 20,000">Mayor a 20,000</option>
+                      <option value="Mayor a 900">Mayor a 900 </option>
+                      <option value="Menor a 900">Menor a 900</option>
+                      <option value="Mayor a 600">Mayor a 600</option>
+                      <option value="Menor a 600">Menor a 600</option>
                 </select>
                 <div class="invalid-feedback">Please select a valid state.</div>
               </div><br>
-              <div class="row">
+
               <div class="col-md-6">
                 <label class="form-label" for="validationCustom04">Unidad: </label>
                 <select class="form-select" required id="unidad_id" name="unidad">
+                                  <?php
+                                   While($uni=mysqli_fetch_array($unidad)){
+                                     echo '<option value="'.$uni['id'].'">'.$uni['nombre_unidad'].'</option>';
+                                  }?>
                 </select>
                 <div class="invalid-feedback">Please select a valid state.</div>
+                </div>
               </div>
-              </div>
-            </div>
+            
             <div class="modal-footer">
               <button type="submit" onclick="reporte()" id="GuardaUnidades" class="btn btn-primary">Generar</button>
               <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
-
             </div>
           </div>
         </form>
