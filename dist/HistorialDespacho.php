@@ -94,11 +94,17 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </thead>
                   <tbody>
                   <?php $correlativo = 1;?>
-                  <?php while ($requisicion = mysqli_fetch_array($requisiciones)):?>
+                  <?php while ($requisicion = mysqli_fetch_array($requisiciones)):
+                    //FORMATO FECHA
+                        $fechaMySQL = $requisicion['fecha_requisicion'];
+                        $timestamp = strtotime($fechaMySQL);
+                        $fechaFormateada = date("d-m-Y", $timestamp);
+                    ?>
+                    
                     <tr>
                       <td><?php echo $correlativo?></td>
                       <td><?php echo $requisicion["id"]?></td>
-                      <td><?php echo $requisicion["fecha_requisicion"]?></td>
+                      <td><?php echo $fechaFormateada ?></td>
                       <td><?php echo $requisicion["nombre_unidad"]?></td>
                       <td><?php echo $requisicion["nombre_estado"]?></td>
                       <td>

@@ -41,6 +41,7 @@ if (isset($_SESSION['usuarioActivo'])) {
   </header>
   <!-- CONTENEDOR-->
   <div class="body flex-grow-1 px-3">
+  <?php include("toast/toast.php"); ?>
     <?php
     $usuario = $_SESSION['usuarioActivo'];
     $conexion = mysqli_connect('localhost', 'root', '', 'sicafi');
@@ -314,7 +315,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- ///////FIN CONTENEDOR/////////////-->
   </div>
 
-  <div class="toast-container position-fixed end-0 p-3">
+   <!--<div class="toast-container position-fixed end-0 p-3">
     <div id="liveToast" class="toast text-bg-success " role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
         <div class="rounded me-2"></div>
@@ -325,7 +326,7 @@ if (isset($_SESSION['usuarioActivo'])) {
         Registro guardado
       </div>
     </div>
-  </div>
+  </div>-->
 </div>
 
 <!-- IMPORTAR ARCHIVO FOOTER-->

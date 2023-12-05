@@ -208,7 +208,8 @@ $(document).ready(function() {
           });
       } else {
         validation_each('#cantidad', 'El valor mínimo de salida es: ' + saldo);
-        show_toast('danger', 'Error de validación', 'No pueden salir más suministros de los disponibles');
+        dangerToast('Error de validación, No pueden salir más suministros de los disponibles')
+      //show_toast('danger', 'Error de validación', 'No pueden salir más suministros de los disponibles');
       }
 
     } else {

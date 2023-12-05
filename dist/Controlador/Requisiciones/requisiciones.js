@@ -21,12 +21,14 @@ $(document).ready(function() {
 
   // Mostrar mensaje de elementos guardados
   if (is_save !== null) {
-    show_toast('success', 'Registro guardado', 'Acción exitosa');
+
+    successToast('Registro guardado con éxito');
     localStorage.removeItem('is_save');
   }
 
   if (is_remove !== null) {
-    show_toast('success', 'Registro eliminado', 'Acción exitosa');
+    dangerToast('Registro eliminado, Acción exitosa')
+    //show_toast('success', 'Registro eliminado', 'Acción exitosa');
     localStorage.removeItem('is_remove');
   }
 
