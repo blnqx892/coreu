@@ -101,7 +101,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <!--FIN SECCION CUATRO-->
                     <div class="col-15" align="right">
                       <hr style="color: black; background-color: black; width:100%;" />
-                      <button class="btn btn-success" type="button" id="GuardaUsuarios" name="btnGuardar">Guardar <i class='far fa-check-square'></i></button>
+                      <button class="btn btn-success" type="submit" id="GuardaUsuarios" name="btnGuardar">Guardar <i class='far fa-check-square'></i></button>
                       <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i></button>
                     </div>
                 </form>

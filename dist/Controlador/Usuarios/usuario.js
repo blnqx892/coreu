@@ -36,12 +36,14 @@ $(document).ready(function () {
           success: function (response) {
             data = JSON.parse(response);
             if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+              $("#form")[0].reset();
+              limpiar(1);
               toastBoostrap(data.toast, data.mensaje)
             }else if (data.success == 1) {
               
               successToast('Registro guardado con éxito'); 
 
-               $("#form")[0].reset();
+              
                limpiar(1);
               
   
