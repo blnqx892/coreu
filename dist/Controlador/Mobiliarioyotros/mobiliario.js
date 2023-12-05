@@ -3,7 +3,6 @@ $(document).ready(function () {
   // *********  guardar  ******************************
   
  $("#GuardaMobiliario").on("click", function () {
-
      
       validation();
       let fechaM = $("#fecham").val(); //capturar los datos
@@ -11,8 +10,7 @@ $(document).ready(function () {
       let modeloM = $("#modelm").val();
       let valorM = $("#valom").val();
       let descriM = $("#descrim").val();
-
-     
+   
 if (validation(1)) {
 
         let formData = new FormData(); //permite recoger la data para enviarla al controlador

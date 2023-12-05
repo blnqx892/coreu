@@ -99,7 +99,7 @@
     <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-        </svg> Unidad y Restricción</a>
+        </svg> Unidades</a>
       <ul class="nav-group-items">
         <li class="nav-item"><a class="nav-link" href="ACredenciales.php"><span class="nav-icon"></span> Unidades </a></li>
 

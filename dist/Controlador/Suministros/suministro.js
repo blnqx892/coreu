@@ -59,7 +59,7 @@ $(document).ready(function() {
 
   // Mostrar mensaje de elementos guardados
   if (is_save !== null) {
-    show_toast('success', 'Registro guardado', 'Acción exitosa');
+    successToast('Registro guardado con éxito');
     localStorage.removeItem('is_save');
   }
 
@@ -201,7 +201,7 @@ $(document).ready(function() {
           .then(response => {
             if (response.statusCode === 200) {
               $("#modalAgg").modal('toggle');
-              show_toast('success', 'Registro guardado', 'Acción exitosa');
+              successToast('Registro guardado con éxito');
               load_kardex();
               clear_kardex();
             }
