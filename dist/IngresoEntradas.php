@@ -40,7 +40,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
-      <?php include("toast/toast.php"); ?>
+      <?php include("./toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -258,8 +258,8 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
       <!--////////////////////////////////////////-->
     </div>
-    
-   
+
+
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
@@ -269,7 +269,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <script src="./Controlador/Entradas/entradas.js"></script>
     <script src="./Controlador/Proveedores/proveedor.js"></script>
     <script src="./Controlador/Categorias/categoria.js"></script>
-    
+
     <script>
       function mostrarFormulario() {
         var formulario = document.getElementById("formulario");
@@ -311,7 +311,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+  <meta http-equiv="refresh" content="0;URL=/coreu/index.php">
 </head>
 
 <body>
