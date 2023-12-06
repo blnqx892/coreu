@@ -401,7 +401,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-    <script src="../..Controlador/InventarioAF/mostrartablain.js"></script>
+    <script src="../../Controlador/InventarioAF/mostrartablain.js"></script>
   </div>
 </body>
 
