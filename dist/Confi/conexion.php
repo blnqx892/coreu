@@ -1,6 +1,4 @@
 <?php
-
-
  function con(){
      $server = "sicafi-ues.com";
      $user = "f296809_blanca";
