@@ -21,7 +21,8 @@
     ie.fecha_adquisicion,
     ie.costo_adquisicion,
     aa.codigo_institucional,
-    aa.estado_bien
+    aa.estado_bien,
+    concat(u.nombre, " ", u.apellido) responsable
 from ingreso_entradas ie
 inner join asignacion_activo aa on aa.fk_ingreso_entradas = ie.id
 inner join usuarios u on u.id = aa.fk_usuarios
@@ -55,6 +56,19 @@ where ie.fk_categoria = '.$categoria. ' and u.fk_unidades = '.$unidad;
   while ($c = mysqli_fetch_array($dato_categoria)) {
     $nombre_categoria = $c['categoria'];
   }
+
+  $sql_responsable = "select 
+  concat(u.nombre, ' ', u.apellido) responsable
+  from ingreso_entradas ie
+  inner join asignacion_activo aa on aa.fk_ingreso_entradas = ie.id
+  inner join usuarios u on u.id = aa.fk_usuarios
+  where ie.fk_categoria = ".$categoria." and u.fk_unidades = ".$unidad;
+  
+  $dato_responsable  = mysqli_query($conexion, $sql_responsable) or die("No se puede ejecutar la consulta");
+  $responsable = '';
+  while ($r = mysqli_fetch_array($dato_responsable)) {
+    $responsable = $r['responsable'];
+  }
 ?>
 
 <body style="margin: 30px 30px 20px 20px;">
@@ -85,7 +99,7 @@ where ie.fk_categoria = '.$categoria. ' and u.fk_unidades = '.$unidad;
       </tr>
       <tr>
         <td><b>RESPONSABLE: </b></td>
-        <td></td>
+        <td><?php echo strtoupper($responsable ?? '');?></td>
       </tr>
       <tr  style="text-align: left;">
         <td><b>PRACTICADO EN FECHA DE: </b></td>
