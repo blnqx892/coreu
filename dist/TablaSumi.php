@@ -76,7 +76,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                                     <div>
                                         <a class="btn btn-primary" href="AIngresoSuministros.php">Nuevo <i
                                                 class='far fa-plus'></i></a>
-                                                <a href="" class="btn btn-outline-info rounded-pill" title="Reporte"><i
+                                                <a href="" class="btn btn-outline-info rounded-pill" title="Reporte" data-coreui-toggle="modal"
+                      data-coreui-target="#modalRe" data-coreui-whatever="@mdo" style="float: right;"><i
                                         class='fas fa-file-pdf'></i></a>
                                     </div>
                                 </div>
@@ -195,6 +196,45 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <!-- /.row-->
                 </div>
             </div>
+
+            <!-- MODAL REPORTE -->
+   <?php
+     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+        $sql="SELECT * from categorias_suministros order by nomb_categoria ASC";
+        $categ = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
+    ?>
+     <div class="modal fade" id="modalRe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <form action="reportes/inventario.php" method="post" target="_blank">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">REPORTE DE INVENTARIO</h5>
+                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="col-md-6">
+                    <label class="form-label" for="validationCustom04">Categoria: </label>
+                    <select class="form-select" required id="categoria_id" name="categoria">
+                      <?php
+                      While($cat=mysqli_fetch_array($categ)){
+                        echo '<option value="'.$cat['categoria_id'].'">'.$cat['nomb_categoria'].'</option>';
+                      }?>
+                    </select>
+                    <div class="invalid-feedback">Please select a valid state.</div>
+                  </div>
+                  
+              </div>
+
+              <div class="modal-footer">
+                <button type="submit" id="GuardaUnidades" class="btn btn-primary">Generar</button>
+                <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--///////////////////////////////////////////////////////////////////////////////////////////-->
             <!-- ///////FIN CONTENEDOR/////////////-->
         </div>
 
