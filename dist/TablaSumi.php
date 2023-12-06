@@ -64,6 +64,7 @@ if (isset($_SESSION['usuarioActivo'])) {
         <!-- CONTENEDOR-->
         <div class="body flex-grow-1 px-3">
             <div class="container-lg">
+            <?php include("toast/toast.php"); ?>
                 <!-- row-->
                 <div class="row">
                     <div class="col-12">
@@ -174,13 +175,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                 <a href="<?php echo 'AIngresoSuministros.php?id='.$mostrar['id']?>"
                                                     class="btn btn-outline-warning rounded-pill" title="Editar"><i
                                                         class="far fa-edit"></i></a>
-                                                <button type="button" class="btn btn-outline-danger rounded-pill"
-                                                    onclick="remove(<?php echo $mostrar['id'] ?>)" title="Baja"><i
-                                                        class="fa-solid fa-arrow-down-long"></i></i></button>
-                                                    <!--    <a href="<?php // echo 'ShowSuministroReporte.php?id='.$mostrar['id']?>"
-                                                    class="btn btn-outline-info rounded-pill" title="Ver"><i
-                                                        class='fas fa-file-pdf'></i></a> -->
-                                                        <a href="<?php echo './Reportes/Kardex.php?id='.$mostrar['id']?>"
+                                                 <a href="<?php echo './Reportes/Kardex.php?id='.$mostrar['id']?>"
                                                     class="btn btn-outline-info rounded-pill" title="Reporte Kardex"><i
                                                         class='fas fa-file-pdf'></i></a>
                                             </td>
