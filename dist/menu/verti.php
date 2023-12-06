@@ -41,7 +41,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-casino"></use>
         </svg> Control Mantenimiento</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="Mprestamo.php"> Movimientos</a></li>
+        <li class="nav-item"><a class="nav-link" href="MPrestamo.php"> Movimientos</a></li>
         <li class="nav-item"><a class="nav-link" href="Mdescargo.php"> Descargo</a></li>
         <li class="nav-item"><a class="nav-link" href="TablaMovi.php">Actualización</a></li>
       </ul>
@@ -195,7 +195,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-folder"></use>
         </svg> Bitacora</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="Bitacora.php"> Bitacora</a></li>
+        <li class="nav-item"><a class="nav-link" href="bitacora.php"> Bitacora</a></li>
       </ul>
     </li>
     <?php } ?>
