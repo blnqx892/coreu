@@ -76,6 +76,8 @@ if (isset($_SESSION['usuarioActivo'])) {
                                     <div>
                                         <a class="btn btn-primary" href="AIngresoSuministros.php">Nuevo <i
                                                 class='far fa-plus'></i></a>
+                                                <a href="" class="btn btn-outline-info rounded-pill" title="Reporte"><i
+                                        class='fas fa-file-pdf'></i></a>
                                     </div>
                                 </div>
                             </div>
