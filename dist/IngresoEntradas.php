@@ -267,7 +267,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
     <script src="/Controlador/Entradas/entradas.js"></script>
-    <script src="/Controlador/Proveedores/proveedor.js"></script>
+    <script src="./Controlador/Proveedores/proveedor.js"></script>
     <script src="./Controlador/Categorias/categoria.js"></script>
 
     <script>
