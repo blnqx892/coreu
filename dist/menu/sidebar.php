@@ -49,7 +49,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg>Control Mantenimiento</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="Mprestamo.php"><span class="nav-icon"></span>
+        <li class="nav-item"><a class="nav-link" href="MPrestamo.php"><span class="nav-icon"></span>
             Mantenimiento</a></li>
         <li class="nav-item"><a class="nav-link" href="Mdescargo.php"><span class="nav-icon"></span>
             Descargo</a></li>
