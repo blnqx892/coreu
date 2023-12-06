@@ -331,7 +331,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
 <!-- MODAL REPORTE -->
    <?php
-     $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+     $conexion=mysqli_connect("sicafi-ues.com", "f296809_blanca", "@*eIv6G(w)Hn", "f296809_sicafi");
         $sql="SELECT * from categorias order by categoria ASC";
         $categ = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
         $sql2="SELECT * from unidades order by nombre_unidad ASC";
@@ -394,14 +394,14 @@ if (isset($_SESSION['usuarioActivo'])) {
     </div>
     <!--///////////////////////////////////////////////////////////////////////////////////////////-->
 
-    <script src="./Controlador/Proveedores/proveedor.js"></script>
-    <script src="./Controlador/Categorias/categoria.js"></script>
+    <script src="../..Controlador/Proveedores/proveedor.js"></script>
+    <script src="../../Controlador/Categorias/categoria.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-    <script src="./Controlador/InventarioAF/mostrartablain.js"></script>
+    <script src="../..Controlador/InventarioAF/mostrartablain.js"></script>
   </div>
 </body>
 
@@ -414,7 +414,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+  <meta http-equiv="refresh" content="0;URL=/coreu/index.php">
 </head>
 
 <body>
