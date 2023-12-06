@@ -201,7 +201,7 @@ if (isset($_SESSION['usuarioActivo'])) {
      <div class="modal fade" id="modalRe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
           <div class="modal-content">
-            <form action="reportes/inventario.php" method="post" target="_blank">
+            <form action="reportes/KCategoria.php" method="post" target="_blank">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">REPORTE DE INVENTARIO</h5>
                 <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
@@ -217,7 +217,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </select>
                     <div class="invalid-feedback">Please select a valid state.</div>
                   </div>
-                  
+
               </div>
 
               <div class="modal-footer">
