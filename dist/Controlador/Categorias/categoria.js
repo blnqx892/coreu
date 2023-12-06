@@ -53,10 +53,11 @@ $(document).ready(function () {
             if (data.success == 1) {
         
                combo();
-               show_toast('success', 'Registro guardado', 'Acción exitosa');
                $('#nombreCate').val('');
                $('#vidaUtil').val('');
                limpiar(1);
+               successToast('Registro guardado con éxito');
+              
 
             } else {
               //alert("Formato de imagen incorrecto.");
@@ -64,7 +65,7 @@ $(document).ready(function () {
           },
         });
       } else {
-        show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+        //show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
       }
         return false;
       

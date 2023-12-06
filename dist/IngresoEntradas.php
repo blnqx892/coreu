@@ -99,7 +99,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </div>
                     <div class="col-md-3">
                       <label for="inputZip" class="form-label">Marca:</label>
-                      <input type="text" class="form-control mi-validate-1" id="marcaC" name="marcaC">
+                      <input type="text" class="form-control " id="marcaC" name="marcaC">
                     </div>
                   </div>
                   <!--FIN SECCION TRES-->
@@ -119,6 +119,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <option selected="" disabled="" value="">Elegir Tipo</option>
                         <option value="Comprado">Comprado</option>
                         <option value="Donado">Donado</option>
+                        <option value="Otros">Otros</option>
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
@@ -258,8 +259,7 @@ if (isset($_SESSION['usuarioActivo'])) {
       <!--////////////////////////////////////////-->
     </div>
     
-    <script src="./Controlador/Proveedores/proveedor.js"></script>
-    <script src="./Controlador/Categorias/categoria.js"></script>
+   
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
@@ -267,6 +267,8 @@ if (isset($_SESSION['usuarioActivo'])) {
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
     <script src="./Controlador/Entradas/entradas.js"></script>
+    <script src="./Controlador/Proveedores/proveedor.js"></script>
+    <script src="./Controlador/Categorias/categoria.js"></script>
     
     <script>
       function mostrarFormulario() {

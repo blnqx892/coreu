@@ -18,7 +18,7 @@ $(document).ready(function () {
     let cargo = $("#cargoC").val();
     let vida = $("#vidaC").val();
     let cate = $("#categoria_id").val();
-    let descrip = $("#descriC").val();
+    let descrip = $("#descri").val();
     let numerom = $("#motorC").val();
     let numerocha = $("#chasisC").val();
     let numerop = $("#placaC").val();
@@ -69,16 +69,13 @@ $(document).ready(function () {
         processData: false,
         success: function (response) {
         data = JSON.parse(response);
-        if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
-        
-          $("#formE")[0].reset();
+        if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){       
+          $("#formE")[0].reset();       
           toastBoostrap(data.toast, data.mensaje)
-        }else if (data.success == 1) {
-            limpiar(1);
+        }else if (data.success == 1) { 
+             limpiar(1);        
             successToast('Registro guardado con éxito');
-             
-            
-           
+            limpiar(1);
           } else {
             //alert("Formato de imagen incorrecto.");
           }

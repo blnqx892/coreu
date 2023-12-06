@@ -48,10 +48,7 @@ $(document).ready(function () {
           if (data.success == 1) {
             
             combo();
-            show_toast('success', 'Registro guardado', 'Acción exitosa');
-
-           
-           
+            successToast('Registro guardado con éxito');
              $('#nombreProv').val('');
              limpiar(1);
            
@@ -62,7 +59,7 @@ $(document).ready(function () {
         },
       });
     } else {
-      show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
+      //show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
     }
       return false;
   });
