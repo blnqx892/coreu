@@ -1,10 +1,10 @@
 <?php
-$conexion = mysqli_connect("https://sicafi-ues.com/", "f296809_root", "*W4zm?Y=k,1K", "f296809_sicafi");
+
 
  function con(){
-     $server = "https://sicafi-ues.com/";
-     $user = "f296809_root";
-     $pass = "*W4zm?Y=k,1K";
+     $server = "sicafi-ues.com";
+     $user = "f296809_blanca";
+     $pass = "@*eIv6G(w)Hn";
      $db = "f296809_sicafi";
 
      $con = mysqli_connect($server,$user,$pass) or die ("Error a Conectar en la BD".mysqli_connect_error());
