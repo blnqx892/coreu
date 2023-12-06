@@ -1,5 +1,5 @@
 <?php // Iniciamos la sesión
-session_start(); 
+session_start();
 if (isset($_SESSION['usuarioActivo'])) {
 ?>
 <!DOCTYPE html>
@@ -45,14 +45,14 @@ if (isset($_SESSION['usuarioActivo'])) {
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-             
+
             <div class="card-header"><strong>Traslado de Bienes Muebles</strong></div>
               <div class="card-body">
 <!--------------------------INICIO FORM--------------------------------------------------->
-                <form id="formM" class="g-3 needs-validation" 
-                action="AsignaciondeActivo.php" 
-                method="POST" 
-                autocomplete="off"> 
+                <form id="formM" class="g-3 needs-validation"
+                action="AsignaciondeActivo.php"
+                method="POST"
+                autocomplete="off">
                 <input type="hidden" id="categoria" name="categoria" type="text">
                 <input type="hidden" id="encargado" name="encargado" type="text">
                 <input type="hidden" id="id_jefe" name="id_jefe" type="text">
@@ -66,7 +66,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
                       <select class="form-control js-example-basic-single  once-validate-1" required id="codigo_id" name="codigo_id">
                         <option value=""></option>
-                      </select> 
+                      </select>
                     </div>
                     <div class="col-md-3">
                       <label class="form-label" for="validationCustom01">Fecha:</label>
@@ -84,12 +84,12 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </div>
                   </div>
                   <hr style="color: black; background-color: black; width:100%;" />
- <!--FIN BUSCADOR------------------------------------------------------------------------------> 
- <div class="row my-4">   
-   
+ <!--FIN BUSCADOR------------------------------------------------------------------------------>
+ <div class="row my-4">
+
     <div class="col-md-3">
       <label class="form-label" for="validationCustom04">Tipo de Movimiento:</label>
-      <select class="form-select once-validate-1" id="perC" 
+      <select class="form-select once-validate-1" id="perC"
       name="perC" data-placeholder="Seleccione un Movimiento" disabled>
       <option selected="" disabled="" value="">Elegir Tipo Movimiento</option>
         <option  value="Prestamo"> Prestamo</option>
@@ -126,7 +126,7 @@ if (isset($_SESSION['usuarioActivo'])) {
         <input class="form-control" id="color" type="text" required="" disabled>
     </div>
 </div>
-<div class="row my-4">                 
+<div class="row my-4">
     <div class="col-md-3">
         <label class="form-label" for="validationCustom02">Modelo:</label>
         <input class="form-control" id="modelo" type="text" required="" disabled>
@@ -162,18 +162,18 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
 <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-   
+
 
     <script src="./Controlador/CredencialesA/credenciales.js"></script>
-   
+
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
-    <!-- IMPORTAR ARCHIVO SCRIPT-->    
-    <?php include("foot/script.php"); ?>   
+    <!-- IMPORTAR ARCHIVO SCRIPT-->
+    <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
     <script src="./Controlador/MantenimientoAF/mostrar_camposprestamo.js"></script>
     <script src="./Controlador/MantenimientoAF/movimientos_guardar.js"></script>
-  
+
 </body>
 </html>
 <?php
@@ -184,7 +184,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+  <meta http-equiv="refresh" content="0;URL=/coreu/index.php">
 </head>
 
 <body>
