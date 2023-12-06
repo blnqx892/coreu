@@ -6,17 +6,17 @@ if (isset($_SESSION['usuarioActivo'])) {
 <!DOCTYPE html>
 <html lang="en">
 <!-- IMPORTAR ARCHIVO CABECERA-->
-<?php include("/head/head.php"); ?>
+<?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
 
 <body>
   <!-- IMPORTAR ARCHIVO MENU VERTICAL-->
-  <?php include("/menu/verti.php"); ?>
+  <?php include("menu/verti.php"); ?>
   <!-- ////////////////////////-->
   <div class="wrapper d-flex flex-column min-vh-100 bg-light">
     <header class="header header-sticky mb-4">
       <!-- IMPORTAR ARCHIVO MENU HORIZONTAL-->
-      <?php include("/menu/hori.php");?>
+      <?php include("menu/hori.php");?>
       <!-- ////////////////////////-->
       <div class="header-divider"></div>
       <!--separador-->
