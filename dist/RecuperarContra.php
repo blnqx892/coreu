@@ -43,7 +43,7 @@
                         confirmButtonText: 'Aceptar'
                     }).then((result) => {
                         if (result.value) {
-                            window.location='Acceso.php';
+                            window.location='../index.php';
                         }
                     })
                 }, 1000);
@@ -62,7 +62,7 @@
                         confirmButtonText: 'Aceptar'
                     }).then((result) => {
                         if (result.value) {
-                            window.location='Acceso.php';
+                            window.location='../index.php';
                         }
                     })
                 }, 1000);
@@ -137,7 +137,7 @@
                       <button class="btn btn-primary px-4" type="submit">Enviar</button>
                     </div>
                     <div class="col-6 text-end">
-                      <a href="#" class="btn btn-link px-0" onclick="mostrarFormulario()">Volver</a>
+                      <a href="../index.php" class="btn btn-link px-0" >Volver</a>
                     </div>
                   </div>
                 </form>

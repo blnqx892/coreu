@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/fondo.css" rel="stylesheet">
+  <link href="dist/css/fondo.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
 
@@ -13,13 +13,13 @@
 
 <body>
   <div class="contai">
-    <img class="img_illus" src="img/dis.gif" alt="This is background">
+    <img class="img_illus" src="dist/img/dis.gif" alt="This is background">
     <div class="content-contai">
       <h1 id="hea">S I C A F I</h1>
       <p id="subheadlin">Bienvenido</p><br>
     </div>
     <div class="field-contai" style="font-family: Arial; font-size: 15pt;">
-      <form action="autenticar.php" method="post" autocomplete="off">
+      <form action="dist/autenticar.php" method="post" autocomplete="off">
         <fieldset class="len">
           <legend class="len2">Acceder</legend><br>
           <label for="uname">Usuario </label><br>
@@ -33,7 +33,7 @@
         <center>
         <button type="submit" class="btns btn-info" style="color: white;" id="">Iniciar Sesión</button>
           <button type="submit" class="btns btn-danger" style="color: white;">Cancelar</button><br><br><br>
-          <a href="RecuperarContra.php">¿Has olvidado tu contraseña?</a>
+          <a href="dist/RecuperarContra.php">¿Has olvidado tu contraseña?</a>
         </center>
       </form>
     </div>

@@ -24,7 +24,7 @@ echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
                         confirmButtonText: 'Aceptar'
                     }).then((result) => {
                         if (result.value) {
-                            window.location='Acceso.php';
+                            window.location='../index.php';
                         }
                     })
                 }, 1000);

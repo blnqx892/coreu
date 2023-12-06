@@ -26,7 +26,7 @@ if ($row=mysqli_fetch_assoc($consulta)) {
                         confirmButtonText: 'Aceptar'
                    }).then((result) => {
                         if (result.value) {
-                            window.location='index.php';
+                            window.location='../index.php';
                         }
                     })
                 }, 1000);
@@ -50,7 +50,7 @@ if ($row=mysqli_fetch_assoc($consulta)) {
                       confirmButtonText: 'Aceptar'
                   }).then((result) => {
                       if (result.value) {
-                          window.location='Acceso.php';
+                          window.location='../index.php';
                       }
                   })
               }, 1000);
@@ -69,7 +69,7 @@ if ($row=mysqli_fetch_assoc($consulta)) {
                   confirmButtonText: 'Aceptar'
               }).then((result) => {
                   if (result.value) {
-                      window.location='Acceso.php';
+                      window.location='../index.php';
                   }
               })
           }, 1000);
