@@ -35,7 +35,7 @@ $(document).ready(function () {
     $("#vidaC").val(rescate);
 
     var bandera = $("#flexSwitchCheckChecked").val() == "on";
-    
+
     if (validation(1)) {
 
       let formData = new FormData(); //permite recoger la data para enviarla al controlador
@@ -62,18 +62,18 @@ $(document).ready(function () {
 
 
       $.ajax({
-        url: "Controlador/Entradas/insertEntradas.php",
+        url: "./Controlador/Entradas/insertEntradas.php",
         type: "post",
         data: formData,
         contentType: false,
         processData: false,
         success: function (response) {
         data = JSON.parse(response);
-        if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){       
-          $("#formE")[0].reset();       
+        if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+          $("#formE")[0].reset();
           toastBoostrap(data.toast, data.mensaje)
-        }else if (data.success == 1) { 
-             limpiar(1);        
+        }else if (data.success == 1) {
+             limpiar(1);
             successToast('Registro guardado con éxito');
             limpiar(1);
           } else {
