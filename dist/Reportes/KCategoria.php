@@ -14,7 +14,7 @@ $categoria = $_POST["categoria"];
 
 $conexion = mysqli_connect('localhost', 'root', '', 'sicafi');
 
-$sql = 'select id, codigo_barra, presentacion, nombre_suministro as nombre from ingreso_suministros where categoria_id = '.$categoria;
+$sql = 'select id, codigo_barra, presentacion, nombre_suministro as nombre from ingreso_suministros where categoria_id = '.$categoria.' order by nombre_suministro';
 
 $suministros = mysqli_query($conexion, $sql) or die("No se puede ejecutar la consulta");
 
