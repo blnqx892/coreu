@@ -2,16 +2,16 @@
   <button class="header-toggler px-md-0 me-md-3" type="button"
     onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
     <svg class="icon icon-lg">
-      <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+      <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
     </svg>
   </button><a class="header-brand d-md-none" href="#">
     <svg width="118" height="46" alt="CoreUI Logo">
-      <use xlink:href="/assets/brand/coreui.svg#full"></use>
+      <use xlink:href="assets/brand/coreui.svg#full"></use>
     </svg></a>
   <!-- Lógica para notificaciones -->
   <?php
   $usuario = $_SESSION['usuarioActivo'];
-    $conexion=mysqli_connect('localhost','root', '', 'sicafi');
+    $conexion=mysqli_connect("sicafi-ues.com", "f296809_blanca", "@*eIv6G(w)Hn", "f296809_sicafi");
     $sql_suministros = "select * from ingreso_suministros";
     $suministros = mysqli_query($conexion, $sql_suministros);
 
@@ -56,7 +56,7 @@
     <li class="nav-item dropdown d-md-down-none position-relative">
       <a class="nav-link" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
         <svg class="icon icon-lg my-1 mx-2">
-          <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
         </svg>
         <?php if($total_stock > 0): ?>
           <span class="badge rounded-pill position-absolute top-0 end-0 bg-danger">
@@ -122,7 +122,7 @@
   <ul class="header-nav ms-3">
     <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button"
         aria-haspopup="true" aria-expanded="false">
-        <div class="avatar avatar-md"><img class="avatar-img" src="/img/usua.png" alt="user@email.com">
+        <div class="avatar avatar-md"><img class="avatar-img" src="img/usua.png" alt="user@email.com">
         </div>
       </a>
       <div class="dropdown-menu dropdown-menu-end pt-0">
@@ -130,12 +130,12 @@
           <div class="fw-semibold">Usuario</div>
         </div><a class="dropdown-item" href="#">
           <svg class="icon me-2">
-            <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
           </svg><?php echo $usuario['nombre'] . ' ' . $usuario['apellido'];;?></a><a class="dropdown-item" href="#">
         <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="cerrar.php">
           <svg class="icon me-2">
-            <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
           </svg> Cerrar Sesión</a>
       </div>
     </li>
