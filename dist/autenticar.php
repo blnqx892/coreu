@@ -26,7 +26,7 @@ if ($row=mysqli_fetch_assoc($consulta)) {
                         confirmButtonText: 'Aceptar'
                    }).then((result) => {
                         if (result.value) {
-                            window.location='inicio.php';
+                            window.location='index.php';
                         }
                     })
                 }, 1000);
