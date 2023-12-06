@@ -266,7 +266,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-    <script src="Controlador/Entradas/entradas.js"></script>
+    <script src="/Controlador/Entradas/entradas.js"></script>
     <script src="./Controlador/Proveedores/proveedor.js"></script>
     <script src="./Controlador/Categorias/categoria.js"></script>
 
