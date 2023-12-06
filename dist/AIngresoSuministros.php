@@ -9,7 +9,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
-<script src="Controlador/Suministros/suministro.js"></script>
+<script src="./Controlador/Suministros/suministro.js"></script>
 <?php include("head/head.php"); ?>
 <!-- ////////////////////////-->
 
@@ -165,7 +165,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <hr style="color: black; background-color: black; width:100%;" />
                     <button class="btn btn-success " type="button" id="save_record">Guardar <i class='far fa-check-square'></i></button>
                     <a class="btn btn-secondary" href="TablaSumi.php">Cancelar <i class='far fa-times-circle'></i></a>
-                   
+
                   </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
@@ -272,7 +272,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="refresh" content="0;URL=/coreu/dist/Acceso.php">
+  <meta http-equiv="refresh" content="0;URL=/coreu/index.php">
 </head>
 
 <body>

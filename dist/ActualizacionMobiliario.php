@@ -40,7 +40,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
-      <?php include("toast/toast.php"); ?>
+      <?php include("./toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -178,7 +178,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-   
+
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->

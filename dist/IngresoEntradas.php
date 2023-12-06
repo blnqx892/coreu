@@ -40,7 +40,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
-      <?php include("toast/toast.php"); ?>
+        <?php include("toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -66,7 +66,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <!--INICIO SECCION DOS-->
                     <div class="col-md-4">
                       <label for="inputEmail4" class="form-label">N° de Factura:</label>
-                      <input type="text" class="form-control " id="facturaC" name="facturaC" >
+                      <input type="text" class="form-control " id="facturaC" name="facturaC">
                     </div>
                     <div class="col-md-4">
                       <label for="inputAddress2" class="form-label">Valor de Adquisición:</label>
@@ -266,10 +266,6 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-    <script src="./Controlador/Entradas/entradas.js"></script>
-    <script src="./Controlador/Proveedores/proveedor.js"></script>
-    <script src="./Controlador/Categorias/categoria.js"></script>
-
     <script>
       function mostrarFormulario() {
         var formulario = document.getElementById("formulario");
@@ -297,8 +293,11 @@ if (isset($_SESSION['usuarioActivo'])) {
 
         }
       }
-
     </script>
+
+    <script src="./Controlador/Entradas/entradas.js"></script>
+    <script src="./Controlador/Proveedores/proveedor.js"></script>
+    <script src="./Controlador/Categorias/categoria.js"></script>
   </div>
 </body>
 
