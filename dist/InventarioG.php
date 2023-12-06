@@ -394,14 +394,14 @@ if (isset($_SESSION['usuarioActivo'])) {
     </div>
     <!--///////////////////////////////////////////////////////////////////////////////////////////-->
 
-    <script src="../..Controlador/Proveedores/proveedor.js"></script>
-    <script src="../../Controlador/Categorias/categoria.js"></script>
+    <script src="./Controlador/Proveedores/proveedor.js"></script>
+    <script src="./Controlador/Categorias/categoria.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-    <script src="../../Controlador/InventarioAF/mostrartablain.js"></script>
+    <script src="./Controlador/InventarioAF/mostrartablain.js"></script>
   </div>
 </body>
 
