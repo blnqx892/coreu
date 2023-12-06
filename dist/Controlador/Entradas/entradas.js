@@ -62,7 +62,7 @@ $(document).ready(function () {
 
 
       $.ajax({
-        url: "Controlador/Entradas/insertEntradas.php",
+        url: "insertEntradas.php",
         type: "post",
         data: formData,
         contentType: false,
