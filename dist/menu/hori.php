@@ -10,8 +10,9 @@
     </svg></a>
   <!-- Lógica para notificaciones -->
   <?php
+  include_once("Confi/conexion.php");
   $usuario = $_SESSION['usuarioActivo'];
-  $conexion=mysqli_connect("sicafi-ues.com", "f296809_blanca", "@*eIv6G(w)Hn", "f296809_sicafi");
+  $conexion = con();
 
     $sql_suministros = "select * from ingreso_suministros";
     $suministros = mysqli_query($conexion, $sql_suministros);
