@@ -34,9 +34,9 @@ if (isset($_SESSION['usuarioActivo'])) {
     <div class="body flex-grow-1 px-4">
       <!-- WIGET-->
       <div class="contenedor">
-        <?php
+      <?php
           $conexion=mysqli_connect("sicafi-ues.com", "f296809_blanca", "@*eIv6G(w)Hn", "f296809_sicafi");;
-        ?>
+        ?>
         <div class="tab-content rounded-bottom" class="div-centrado">
           <div class="tab-pane p-2 active" role="tabpanel" id="preview-1179">
             <div class="row">

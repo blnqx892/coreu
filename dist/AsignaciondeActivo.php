@@ -173,7 +173,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
-    <script src="./Controlador/codificacionAF/codificacion.js"></script>
+    <script src="./Controlador/CodificacionAF/codificacion.js"></script>
 
   </div>
 </body>

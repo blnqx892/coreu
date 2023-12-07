@@ -22,11 +22,12 @@ $(document).ready(function () {
   } 
   //fin de mostrar en el combo
 
-  
+  const toast = new coreui.Toast(document.getElementById('liveToast'));
 
   $("#GuardaUnidades").on("click", function () {
   
-     validation();
+    // validation();
+    var formData = new FormData();
      let nombreUnid = $("#nombreUnid").val();
   
   
@@ -44,9 +45,8 @@ $(document).ready(function () {
           console.log(JSON.parse(response));
           data = JSON.parse(response);
           if (data.success == 1) {
-            
-            successToast('Registro guardado con éxito');
             combo();
+            successToast('Registro guardado con éxito');     
              $('#nombreUnid').val('');
              limpiar(1);
    

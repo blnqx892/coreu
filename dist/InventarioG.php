@@ -331,7 +331,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
 <!-- MODAL REPORTE -->
    <?php
-     $conexion=mysqli_connect("sicafi-ues.com", "f296809_blanca", "@*eIv6G(w)Hn", "f296809_sicafi");
+     $conexion=mysqli_connect("localhost", "root", "", "sicafi");
         $sql="SELECT * from categorias order by categoria ASC";
         $categ = mysqli_query($conexion, $sql) or die("No se puedo ejecutar la consulta");
         $sql2="SELECT * from unidades order by nombre_unidad ASC";

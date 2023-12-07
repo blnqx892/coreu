@@ -13,6 +13,7 @@ $sql="SELECT u.*, r.rol FROM usuarios u inner join roles r on u.fk_rol = r.id WH
 $consulta=mysqli_query($conexion,$sql) or die ("ERROR AL CONECTAR CON LA BASE DE DATOS ".mysqli_connect_error());
 
 
+
 if ($row=mysqli_fetch_assoc($consulta)) {
     $md5=$row['contrasena'];
     if (password_verify($contra, $md5)) {
