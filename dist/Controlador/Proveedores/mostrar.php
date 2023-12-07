@@ -1,10 +1,10 @@
 <?php
 
 //include_once './dist/Confi/conexion.php';
-include("../../Confi/conexion.php");
-$con = con();
+include_once("../../Confi/conexion.php");
+$conexion = con();
 
- //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
+
  $sql="SELECT * from proveedores order by proveedor ASC";
 
 

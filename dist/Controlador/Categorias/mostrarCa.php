@@ -2,7 +2,7 @@
 
 //include_once './dist/Confi/conexion.php';
 include("../../Confi/conexion.php");
-$con = con();
+$conexion = con();
 
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
  $sql="SELECT * from categorias order by categoria ASC";
