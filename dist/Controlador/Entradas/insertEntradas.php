@@ -30,11 +30,11 @@ session_start();
     $capaci = intval($_POST["capa"]);
     $x = $_POST["bandera"]; //fk_ingreso_entrada 1
 
-    if (validacionSql("SELECT VALIDAR('VALIDAR_NUMERO_FACTURA', '$factura') AS resultado")) {
-        // Mostrar mensaje de advertencia si el código ya existe
-        warningJSON('El Número de factura ya existe.');
-        return;
-    }
+    //if (validacionSql("SELECT VALIDAR('VALIDAR_NUMERO_FACTURA', '$factura') AS resultado")) {
+    //    // Mostrar mensaje de advertencia si el código ya existe
+    //    warningJSON('El Número de factura ya existe.');
+    //    return;
+    //}
     
     // Establecer una nueva conexión para el procedimiento almacenado
     $conexion = con();
