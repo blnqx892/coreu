@@ -6,7 +6,7 @@ function con(){
    //$pass = "";
    //$db = "sicafi";
 
-$server = "sicafi-ues.com";
+$server = "localhost";
 $user = "f296809_blanca";
 $pass = "@*eIv6G(w)Hn";
 $db = "f296809_sicafi";

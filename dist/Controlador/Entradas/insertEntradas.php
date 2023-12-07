@@ -35,9 +35,9 @@ session_start();
         warningJSON('El Número de factura ya existe.');
         return;
     }
-
-     // Establecer una nueva conexión para el procedimiento almacenado
-     $conexion = con();
+    
+    // Establecer una nueva conexión para el procedimiento almacenado
+    $conexion = con();
 
    $sql = "INSERT INTO ingreso_entradas (fecha_adquisicion,numero_factura,costo_adquisicion,nombre_adquisicion,
     serie_adquisicion,marca,modelo,color,descripcion_adquisicion,cargo,valor_rescate,fk_categoria,fk_proveedores,numero_motor,
