@@ -7,8 +7,8 @@ function con(){
    //$db = "sicafi";
 
 $server = "localhost";
-$user = "f296809_blanca";
-$pass = "@*eIv6G(w)Hn";
+$user = "f296809_usuario";
+$pass = "ixd5EDM&z8UN";
 $db = "f296809_sicafi";
 
    $con = mysqli_connect($server, $user, $pass) or die ("Error a Conectar en la BD".mysqli_connect_error());

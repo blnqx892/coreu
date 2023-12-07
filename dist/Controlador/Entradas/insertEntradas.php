@@ -1,14 +1,13 @@
 <?php
-session_start();
- // Incluir el archivo que contiene la configuración de la conexión a la base de datos
- include("../../Confi/conexion.php");
+    session_start();
+    // Incluir el archivo que contiene la configuración de la conexión a la base de datos
+    include("../../Confi/conexion.php");
 
- // Incluir el archivo que contiene funciones de validación (por ejemplo, funciones como dangerJSON, successJSON, warningJSON)
- include("../../Confi/validacion.php");
+    // Incluir el archivo que contiene funciones de validación (por ejemplo, funciones como dangerJSON, successJSON, warningJSON)
+    include("../../Confi/validacion.php");
 
- // Establecer conexión a la base de datos
- $conexion = con();
-
+    // Establecer conexión a la base de datos
+    $conexion = con();
 
     // Obtener valores del formulario
     $fecha = $_POST["fecha"];
@@ -49,6 +48,8 @@ session_start();
     try {
         // Ejecutar el procedimiento almacenado
         $resultado = mysqli_query($conexion, $sql);
+        echo $sql;
+        echo $resultado;
         // Mostrar mensaje de éxito
         successJSON('Registro guardado con éxito.');
     } catch (Exception $e) {
