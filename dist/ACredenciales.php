@@ -28,10 +28,10 @@ if (isset($_SESSION['usuarioActivo'])) {
                 </svg></a>
             </li>
             <li class="breadcrumb-item">
-              <span>Unidad y Restricción</span>
+              <span>Unidades</span>
             </li>
             <li class="breadcrumb-item active">
-              <span>Credenciales</span>
+              <span>Unnidades</span>
             </li>
           </ol>
         </nav>
@@ -40,41 +40,33 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
-      <?php include("toast/toast.php"); ?>
+        <?php include("toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Credenciales Unidades</strong></div>
+              <div class="card-header"><strong>Unidades</strong></div>
               <div class="card-body">
                 <div class="col-md-14" align="right">
                   <label for="inputCity" class="form-label">Nueva Unidad</label>
                   <button type="button" title="Nueva Unidad" class="btn btn-primary" data-coreui-toggle="modal"
-                    data-coreui-target="#modalUni" data-coreui-whatever="@mdo">Ir
-                  </button>
+                    data-coreui-target="#modalUni" data-coreui-whatever="@mdo">+</button>
                 </div>
                 <div class="row  my-4">
                   <!-- dataTable-->
-                <table id="unidades" class="display" style="width:100%" cellpadding="0" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th style="text-align:center;">N°</th>
-                      <th style="text-align:center;">Nombre Unidad</th>
-                      <th style="text-align:center;">Acción</th>
-                    </tr>
-                  </thead>
-                  <tbody style="text-align:center;">
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                       <th style="text-align:center;">N°</th>
-                      <th style="text-align:center;">Nombre Unidad</th>
-                      <th style="text-align:center;">Acción</th>
-                    </tr>
-                  </tfoot>
-                </table>
-                <!-- //dataTable-->
-                <!-- aparte sección ----->
+                  <table id="unidades" class="display" style="width:100%" cellpadding="0" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center;">#</th>
+                        <th style="text-align:center;">Nombre Unidad</th>
+                        <th style="text-align:center;">Acción</th>
+                      </tr>
+                    </thead>
+                    <tbody style="text-align:center;">
+                    </tbody>
+                  </table>
+                  <!-- //dataTable-->
+                  <!-- aparte sección ----->
                 </div>
               </div>
             </div>
@@ -84,92 +76,96 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
     </div>
     <!-- ///////FIN CONTENEDOR/////////////-->
-<!-- MODAL AGREGAR UNIDAD Scrollable modal -->
+    <!-- MODAL AGREGAR UNIDAD Scrollable modal -->
     <div class="modal fade" id="modalUni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
-            <input type="hidden" value="Guardar1" name="bandera">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Registro de Unidad</h5>
-            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-                <div class="col-md-6">
-                  <label for="inputZip" class="form-label">Nombre Unidad:</label>
-                  <input type="text" class="form-control unidades-validate-1" id="nombreUnid">
-                </div>
-          </div>
-          <div class="modal-footer">
-           <button type="submit" id="GuardaUnidades" class="btn btn-primary">Guardar</button>
-            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+      <div class="modal-dialog">
+        <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
+          <input type="hidden" value="Guardar1" name="bandera">
 
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Registro de Unidad</h5>
+              <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="col-15" align="right">
+            <label style="text-align: right;">(*) Campos Obligatorios</label>
           </div>
-        </div>
-      </form>
+            <div class="modal-body">
+              <div class="col-md-6">
+                <label for="inputZip" class="form-label">(*) Nombre Unidad:</label>
+                <input type="text" class="form-control unidades-validate-1" id="nombreUnid">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" id="GuardaUnidades" class="btn btn-success">Guardar</button>
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-<!--///////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--///////////////////////////////////////////////////////////////////////////////////////////-->
 
-   <!-- ///////MODAL VER UNIDADES/////////////-->
+    <!-- ///////MODAL VER UNIDADES/////////////-->
     <!-- Scrollable modal -->
     <div class="modal fade" id="modalVerU" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
-            <input type="hidden" value="Guardar1" name="bandera">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
-                    DE UNIDADES</h5>
-            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-                <div class="col-md-6">
-                  <label for="inputZip" class="form-label">Nombre Unidad:</label>
-                  <input type="text" class="form-control" id="nombreveruni" disabled>
-                </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+      <div class="modal-dialog">
+        <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
+          <input type="hidden" value="Guardar1" name="bandera">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
+                DE UNIDADES</h5>
+              <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-6">
+                <label for="inputZip" class="form-label">Nombre Unidad:</label>
+                <input type="text" class="form-control" id="nombreveruni" disabled>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
 
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
       </div>
     </div>
-<!--///////////////////FIN MODAL VER UNIDADES/////////////////////-->
+    <!--///////////////////FIN MODAL VER UNIDADES/////////////////////-->
 
- <!-- ///////MODAL EDITAR UNIDADES/////////////-->
+    <!-- ///////MODAL EDITAR UNIDADES/////////////-->
     <!-- Scrollable modal -->
     <div class="modal fade" id="modalEditarUni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
-            <input type="hidden" value="Guardar1" name="bandera">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
-                    DE UNIDADES</h5>
-            <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-                <div class="col-md-6">
-                  <input type="hidden" class="form-control" id="_id">
-                  <label for="inputZip" class="form-label">Nombre Unidad:</label>
-                  <input type="text" class="form-control" id="nombreediuni" >
-                </div>
-          </div>
-          <div class="modal-footer">
-          <button class="btn btn-success" type="button" id="editunid" name="btnGuardar" >Guardar</button>
-            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
+      <div class="modal-dialog">
+        <form class="g-3 needs-validation" action="" method="POST" autocomplete="off">
+          <input type="hidden" value="Guardar1" name="bandera">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
+                DE UNIDADES</h5>
+              <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-6">
+                <input type="hidden" class="form-control" id="_id">
+                <label for="inputZip" class="form-label">Nombre Unidad:</label>
+                <input type="text" class="form-control" id="nombreediuni">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-success" type="button" id="editunid" name="btnGuardar">Guardar</button>
+              <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cancelar</button>
 
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
       </div>
     </div>
-<!--///////////////////FIN MODAL EDITAR UNIDADES/////////////////////-->
+    <!--///////////////////FIN MODAL EDITAR UNIDADES/////////////////////-->
   </div>
-  
+
   <!-- IMPORTAR ARCHIVO FOOTER-->
   <?php include("foot/foot.php"); ?>
   <!-- ////////////////////////-->
@@ -178,7 +174,7 @@ if (isset($_SESSION['usuarioActivo'])) {
   <!-- ////////////////////////-->
   <script src="./Controlador/CredencialesA/mostrarUni.js"></script>
   <script src="./Controlador/CredencialesA/credenciales.js"></script>
- 
+
   </div>
 </body>
 

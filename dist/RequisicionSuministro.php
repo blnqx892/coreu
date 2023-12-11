@@ -99,7 +99,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <tr>
                   <th>#</th>
                   <th>Código</th>
-                  <th>Fecha de pedido</th>
+                  <th>Fecha de Pedido</th>
                   <th>Unidad</th>
                   <th>Estado</th>
                   <th>Acciones</th>
