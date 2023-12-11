@@ -24,7 +24,7 @@
         <li class="nav-item"><a class="nav-link" href="IngresoEntradas.php"><span class="nav-icon"></span> Ingreso de
             Entradas</a></li>
         <li class="nav-item"><a class="nav-link" href="CatalogoAdquisicion.php"><span class="nav-icon"></span>
-            Actualización de Adquisición</a></li>
+            Actualización de Entradas</a></li>
       </ul>
     </li>
     </li>

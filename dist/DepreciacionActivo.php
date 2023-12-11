@@ -28,7 +28,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                 </svg></a>
                         </li>
                         <li class="breadcrumb-item">
-                            <span>Depreciación por Activo</span>
+                            <span>Depreciación</span>
                         </li>
                         <li class="breadcrumb-item active">
                             <span>Depreciación</span>
@@ -44,17 +44,17 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <div class="row">
                     <div class="col-12">
                         <div class="card mb-4">
-                            <div class="card-header"><strong>Activos</strong></div>
+                            <div class="card-header"><strong>Bienes Muebles</strong></div>
                             <div class="card-body">
                                 <!-- dataTable-->
                                 <table id="inven" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th style="text-align:center;">N°</th>
+                                            <th style="text-align:center;">No.</th>
                                             <th style="text-align:center;">Fecha</th>
                                             <!-- <th style="text-align:center;">Codigo</th> -->
-                                            <th style="text-align:center;">Nombre</th>
-                                            <th style="text-align:center;">Categoria</th>
+                                            <th style="text-align:center;">Descripción del Bien</th>
+                                            <th style="text-align:center;">Categoría</th>
                                             <!-- <th style="text-align:center;">Ubicación</th> -->
                                             <!-- <th style="text-align:center;">Estado Bien</th> -->
                                             <th style="text-align:center;">Acción</th>
@@ -64,11 +64,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th style="text-align:center;">N°</th>
+                                            <th style="text-align:center;">No.</th>
                                             <th style="text-align:center;">Fecha</th>
                                             <!-- <th style="text-align:center;">Codigo</th> -->
-                                            <th style="text-align:center;">Nombre</th>
-                                            <th style="text-align:center;">Categoria</th>
+                                            <th style="text-align:center;">Descripción del Bien</th>
+                                            <th style="text-align:center;">Categoría</th>
                                             <!-- <th style="text-align:center;">Ubicación</th> -->
                                             <!-- <th style="text-align:center;">Estado Bien</th> -->
                                             <th style="text-align:center;">Acción</th>
@@ -82,8 +82,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                     <div class="modal-dialog modal-lg" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN DE ACTIVOS
-                                                    DEPRECIACIÓN
+                                                <h5 class="modal-title" id="exampleModalLabel">Depreciación de Bien Mueble
                                                 </h5>
                                                 <button type="button" class="btn-close" data-coreui-dismiss="modal"
                                                     aria-label="Close"></button>
@@ -93,12 +92,12 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                     <div class="row my-4">
                                                         <div class="col-md-4">
                                                             <label for="inputZip" class="form-label">Decripción del
-                                                                bien:</label>
+                                                                Bien:</label>
                                                             <input type="text" class="form-control" id="descridbien"
                                                                 disabled>
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">color:</label>
+                                                            <label for="inputZip" class="form-label">Color:</label>
                                                             <input type="text" class="form-control" id="colorver"
                                                                 disabled>
                                                         </div>
@@ -110,7 +109,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                     </div>
                                                     <div class="row my-4">
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">serie:</label>
+                                                            <label for="inputZip" class="form-label">Serie:</label>
                                                             <input type="text" class="form-control" id="seriein"
                                                                 disabled>
                                                         </div>
@@ -121,15 +120,14 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                         </div>
                                                         <div class="col-md-4">
                                                             <label for="inputZip" class="form-label">Fecha
-                                                                Adquisición:</label>
+                                                                de Adquisición:</label>
                                                             <input type="text" class="form-control" id="fechain"
                                                                 disabled>
                                                         </div>
                                                     </div>
                                                     <div class="row my-4">
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Valor de
-                                                                Adquisición:</label>
+                                                            <label for="inputZip" class="form-label">$ Valor Adquisición:</label>
                                                             <input type="text" class="form-control" id="valorin"
                                                                 disabled>
                                                         </div>
@@ -165,18 +163,18 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                     </div>
                                                     <div class="row my-4">
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Categoria:</label>
+                                                            <label for="inputZip" class="form-label">Categoría:</label>
                                                             <input type="text" class="form-control" id="id_categoria"
                                                                 disabled>
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Vida util:</label>
+                                                            <label for="inputZip" class="form-label">Vida Util (en años):</label>
                                                             <input type="text" class="form-control" id="vidai" disabled>
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Valor Rescate:</label>
+                                                            <label for="inputZip" class="form-label">$ Valor Rescate:</label>
                                                             <input type="text" class="form-control" id="vrescate" disabled>
                                                         </div>
                                                     </div>

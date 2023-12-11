@@ -1,5 +1,5 @@
 <?php // Iniciamos la sesión
-session_start(); 
+session_start();
 if (isset($_SESSION['usuarioActivo'])) {
 ?>
 <!DOCTYPE html>
@@ -49,27 +49,31 @@ if (isset($_SESSION['usuarioActivo'])) {
               <div class="card-body">
                 <!--INICIO FORM--------------------------------------------->
                 <form  id="formD" class="g-3 needs-validation" novalidate="">
+                <div class="row">
+                    <label style="text-align: right;">(*) Campos Requeridos</label>
+                  </div>
                   <h4>Generalidades</h4>
+                  <hr style="color: black; background-color: black; width:100%;" />
                   <div class="row my-4">
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Buscar por Codigo:</label>
+                      <label class="form-label" for="validationCustom02">(*) Buscar por Código:</label>
                       <select class="form-control js-example-basic-single nueve-validate-1" required id="codigo_id" name="codigo_id">
                         <option value=""></option>
                       </select>
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom01">Fecha:</label>
+                      <label class="form-label" for="validationCustom01">(*) Fecha:</label>
                       <input class="form-control nueve-validate-1" id="fecha_movimientodescargo" type="date" required="">
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Procedencia:</label>
+                      <label class="form-label" for="validationCustom02">(*) Procedencia:</label>
                       <input class="form-control" id="nombre_unidad" type="text" required="" disabled>
                     </div>
                   <div class="col-md-3">
-                      <label class="form-label" for="validationCustom04">Tipo Movimiento</label>
-                      <select class="form-select nueve-validate-1" id="descargoM" 
-                          name="descargoM">   
-                          <option selected="" disabled="" value="">Elegir Tipo Movimiento</option>                                       
+                      <label class="form-label" for="validationCustom04">(*) Tipo Movimiento</label>
+                      <select class="form-select nueve-validate-1" id="descargoM"
+                          name="descargoM">
+                          <option selected="" disabled="" value="">Elegir Tipo Movimiento</option>
                           <option value="Inservible">Inservible</option>
                           <option value="Robo y/o Hurto">Robo y/o Hurto</option>
                           <option value="Obsoleto">Obsoleto</option>
@@ -78,27 +82,27 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </div>
                   </div>
                   <!-----------------------------------INICIO SECCION ----------------------------------------->
-                  <hr style="color: black; background-color: black; width:100%;" />
                   <div class="row my-4">
                     <div class="col-md-6">
-                      <label class="form-label" for="validationCustom02">Observaciones:</label>
+                      <label class="form-label" for="validationCustom02">(*) Observaciones:</label>
                       <textarea class="form-control" id="observaciondescargo" required="" rows="2"></textarea>
                     </div>
                   </div>
                   <!------------------------------------FIN----------------------------------------------------->
+                  <br><br>
+                  <h4>Características</h4>
                   <hr style="color: black; background-color: black; width:100%;" />
-                  <h4>Caracteristicas</h4>
                   <div class="row my-4">
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Descripción del bien:</label>
+                      <label class="form-label" for="validationCustom02">Descripción del Bien:</label>
                       <input class="form-control" id="nombre_adquisicion" type="text" required="" disabled>
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Valor de adquisición:</label>
-                      <input class="form-control" id="costo_adquisicion" type="text" required="" disabled>
+                      <label class="form-label" for="validationCustom02">$ Valor de Adquisición:</label>
+                      <input class="form-control" id="costo_adquisicion" type="text" required="" disabled placeholder="$ 00.00">
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Vida Util:</label>
+                      <label class="form-label" for="validationCustom02">Vida Util (en años):</label>
                       <input class="form-control" id="vida_util" type="text" required="" disabled>
                     </div>
                     <div class="col-md-3">
@@ -120,7 +124,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <input class="form-control" id="marca" type="text" required="" disabled>
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">Codigo:</label>
+                      <label class="form-label" for="validationCustom02">Código:</label>
                       <input class="form-control" id="codigo_institucional" type="text" required="" disabled>
                     </div>
                   </div>

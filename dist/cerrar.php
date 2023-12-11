@@ -23,8 +23,10 @@ echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
                 }, 1000);
             });
         </script>";
+        mysqli_close($conexion);
 
-        //////////CAPTURA DATOS PARA BITACORA
+        $conexion = con();
+    //////////CAPTURA DATOS PARA BITACORA
     $usuari=$_SESSION['usuarioActivo'];
     $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
     $sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Cerro Sesión','$nom',now())";

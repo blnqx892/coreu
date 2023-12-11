@@ -61,10 +61,10 @@ if (isset($_SESSION['usuarioActivo'])) {
                                     cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th style="text-align:center;">N°</th>
+                                            <th style="text-align:center;">#</th>
                                             <th style="text-align:center;">Fecha</th>
-                                            <th style="text-align:center;">Codigo del Bien</th>
-                                            <th style="text-align:center;">Descripción del bien</th>
+                                            <th style="text-align:center;">Código</th>
+                                            <th style="text-align:center;">Descripción del Bien</th>
                                             <th style="text-align:center;">Tipo de Movimiento</th>
                                             <th style="text-align:center;">Tipo de Registro</th>
                                             <th style="text-align:center;">Unidad Destino</th>
@@ -73,18 +73,6 @@ if (isset($_SESSION['usuarioActivo'])) {
                                     </thead>
                                     <tbody style="text-align:center;">
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th style="text-align:center;">N°</th>
-                                            <th style="text-align:center;">Fecha</th>
-                                            <th style="text-align:center;">Codigo del Bien</th>
-                                            <th style="text-align:center;">Descripción del bien</th>
-                                            <th style="text-align:center;">Tipo de Movimiento</th>
-                                            <th style="text-align:center;">Tipo de Registro</th>
-                                            <th style="text-align:center;">Unidad Destino</th>
-                                            <th style="text-align:center;">Acción</th>
-                                        </tr>
-                                    </tfoot>
                                 </table>
                                 <!-- //dataTable-->
                                 <!-----------------------------------------MODAL VER  --------------------------------------------------------->

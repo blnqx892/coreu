@@ -60,7 +60,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
               <div class="card-body">
                 <div class="row">
-                  <h3>Información del suministro</h3>
+                  <h3>Información del Suministro</h3>
                 </div>
                 <?php While($mostrar=mysqli_fetch_assoc($nombre)){?>
                 <div class="row mt-3">
@@ -98,7 +98,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="col-3">
                     <div class="row">
                       <div class="col-12">
-                        Nombre de suministro
+                        Nombre del Suministro
                       </div>
                     </div>
                     <div class="row">
@@ -135,7 +135,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <div class="col-3">
                       <div class="row">
                         <div class="col-12">
-                          Existencias mínimas
+                          Existencias Mínimas
                         </div>
                       </div>
                       <div class="row">
@@ -150,7 +150,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <div class="col-3">
                       <div class="row">
                         <div class="col-12">
-                          Existencias máximas
+                          Existencias Máximas
                         </div>
                       </div>
                       <div class="row">
@@ -163,11 +163,10 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </div>
 
                   </div>
-                  <hr>
-
+                  <hr><br>
                   <div class="row">
-                    <h3>Movimientos</h3>
-                  </div>
+                    <h3>Kardex</h3>
+                  </div><br>
 
                   <?php
                     $sql2="select * from kardex where fk_ingreso_suministros = ".$id." order by fecha_creacion";
@@ -181,12 +180,12 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <th>#</th>
                       <th style="text-align:center;" width="90">Fecha</th>
                       <th style="text-align:center;">Concepto</th>
-                      <th style="text-align:center;">Fondos procedencia</th>
-                      <th style="text-align:center;">Cantidad entrada</th>
-                      <th style="text-align:center;">Precio entrada</th>
-                      <th style="text-align:center;">Cantidad salida</th>
-                      <th style="text-align:center;">Precio salida</th>
-                      <th style="text-align:center;">Saldo</th>
+                      <th style="text-align:center;">Fondos Procedencia</th>
+                      <th style="text-align:center;">Cantidad Entrada</th>
+                      <th style="text-align:center;">Precio Entrada</th>
+                      <th style="text-align:center;">Cantidad Salida</th>
+                      <th style="text-align:center;">Precio Salida</th>
+                      <th style="text-align:center;">Existencias</th>
                     </tr>
                     </thead>
                     <tbody style="text-align:center;">
@@ -194,7 +193,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                         $correlativo = 1;
                         $saldo = 0;
                         setlocale(LC_MONETARY, 'en_US.UTF-8');
-                       
+
                       ?>
                       <?php While($mostrar=mysqli_fetch_assoc($kardex)){?>
                       <?php $saldo = $saldo + $mostrar['cantidad_entrada'] - $mostrar['cantidad_salida'];?>
