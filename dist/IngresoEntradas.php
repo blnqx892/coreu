@@ -52,7 +52,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <input type="hidden" value="Guardar" name="bandera">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
-                    <label style="text-align: right;">(*) Campos Requeridos</label>
+                    <label style="text-align: right;">(*) Campos Obligatorios</label>
                     <div class="col-md-4">
                       <?php
                        $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores

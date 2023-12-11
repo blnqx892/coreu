@@ -50,10 +50,13 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <!--INICIO FORM-->
                 <form id="formmo" class="g-3 needs-validation" action="" method="POST" autocomplete="off">
                   <input type="hidden" value="Guardar" name="bandera">
+                  <div class="row">
+                    <label style="text-align: right;">(*) Campos Obligatorios</label>
+                    </div>
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom01">Fecha:</label>
+                      <label class="form-label" for="validationCustom01">(*) Fecha:</label>
                       <input class="form-control dos-validate-1 " id="fecham" type="date" required="true">
                     </div>
                   </div>
@@ -61,22 +64,22 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <!--SECCION DOS-->
                   <div class="row  my-4">
                     <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">Nombre del Bien:</label>
+                      <label for="inputAddress2" class="form-label">(*) Descripción del Bien:</label>
                       <input type="text" class="form-control dos-validate-1" id="nomm" placeholder="">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Modelo:</label>
+                      <label for="inputZip" class="form-label">(*) Modelo:</label>
                       <input type="text" class="form-control dos-validate-1" id="modelm" placeholder="">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">Valor de Adquisición:</label>
-                      <input type="number" class="form-control dos-validate-1" id="valom">
+                      <label for="inputZip" class="form-label">(*) $ Valor Adquisición:</label>
+                      <input type="number" class="form-control dos-validate-1" id="valom" placeholder="$ 00.00">
                     </div>
                   </div>
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
                     <div class="col-md-6">
-                      <label for="inputZip" class="form-label">Descripción:</label>
+                      <label for="inputZip" class="form-label">(*) Observaciones:</label>
                       <textarea class="form-control dos-validate-1" id="descrim" row="3"></textarea>
                     </div>
                   </div>
@@ -100,7 +103,7 @@ if (isset($_SESSION['usuarioActivo'])) {
       <!------------------------------------- ///////FIN CONTENEDOR/////////////-->
 
     </div>
-   
+
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->

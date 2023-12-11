@@ -45,34 +45,23 @@ if (isset($_SESSION['usuarioActivo'])) {
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-              <div class="card-header"><strong>Tabla de Mobiliario y Otros</strong></div>
+              <div class="card-header"><strong>Mobiliario y Otros</strong></div>
               <div class="card-body">
                 <!-- dataTable-->
                 <table id="mobiliario" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                   <thead>
                     <tr>
-                      <th style="text-align:center;">N°</th>
+                      <th style="text-align:center;">#</th>
                       <th style="text-align:center;">Fecha</th>
-                      <th style="text-align:center;">Nombre</th>
+                      <th style="text-align:center;">Descripción del Bien</th>
                       <th style="text-align:center;">Modelo</th>
-                      <th style="text-align:center;">Valor </th>
+                      <th style="text-align:center;">Valor Adquisición </th>
                       <th style="text-align:center;">Estado</th>
                       <th style="text-align:center;">Acción</th>
                     </tr>
                   </thead>
                   <tbody style="text-align:center;">
                   </tbody>
-                  <tfoot>
-                  <tr>
-                      <th style="text-align:center;">N°</th>
-                      <th style="text-align:center;">Fecha</th>
-                      <th style="text-align:center;">Nombre</th>
-                      <th style="text-align:center;">Modelo</th>
-                      <th style="text-align:center;">Valor </th>
-                      <th style="text-align:center;">Estado</th>
-                      <th style="text-align:center;">Acción</th>
-                    </tr>
-                  </tfoot>
                 </table>
                 <!-- //dataTable-->
               </div>
@@ -87,7 +76,7 @@ if (isset($_SESSION['usuarioActivo'])) {
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN DE USUARIOS</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Información de Mobiliario</h5>
         <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -99,7 +88,7 @@ if (isset($_SESSION['usuarioActivo'])) {
             </div>
             <div class="col-md-4">
 
-              <label for="inputZip" class="form-label">Nombre del Bien:</label>
+              <label for="inputZip" class="form-label">Descripción del Bien:</label>
               <input type="text" class="form-control" id="nombrem" disabled>
             </div>
             <div class="col-md-4">
@@ -109,11 +98,11 @@ if (isset($_SESSION['usuarioActivo'])) {
           </div>
           <div class="row my-4">
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+              <label for="inputZip" class="form-label">$ Valor Adquisición:</label>
               <input type="text" class="form-control" id="valorm" disabled>
             </div>
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Descripción:</label>
+              <label for="inputZip" class="form-label">Observaciones:</label>
               <input type="text" class="form-control" id="descrim" disabled>
             </div>
           </div>
@@ -146,7 +135,7 @@ if (isset($_SESSION['usuarioActivo'])) {
             </div>
             <div class="col-md-4">
               <input type="hidden" class="form-control" id="_id">
-              <label for="inputZip" class="form-label">Nombre del Bien:</label>
+              <label for="inputZip" class="form-label">Descripción del Bien:</label>
               <input type="text" class="form-control" id="nombreme" >
             </div>
             <div class="col-md-4">
@@ -156,11 +145,11 @@ if (isset($_SESSION['usuarioActivo'])) {
           </div>
           <div class="row my-4">
           <div class="col-md-4">
-              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+              <label for="inputZip" class="form-label">$ Valor Adquisición:</label>
               <input type="text" class="form-control" id="valorme" >
             </div>
             <div class="col-md-4">
-              <label for="inputZip" class="form-label">Descripción:</label>
+              <label for="inputZip" class="form-label">Observaciones:</label>
               <input type="text" class="form-control" id="descrime" >
             </div>
           </div>
