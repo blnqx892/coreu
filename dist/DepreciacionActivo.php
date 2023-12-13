@@ -50,7 +50,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                 <table id="inven" class="display" style="width:100%" cellpadding="0" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th style="text-align:center;">No.</th>
+                                            <th style="text-align:center;">#</th>
                                             <th style="text-align:center;">Fecha</th>
                                             <!-- <th style="text-align:center;">Codigo</th> -->
                                             <th style="text-align:center;">Descripción del Bien</th>
@@ -62,18 +62,6 @@ if (isset($_SESSION['usuarioActivo'])) {
                                     </thead>
                                     <tbody style="text-align:center;">
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th style="text-align:center;">No.</th>
-                                            <th style="text-align:center;">Fecha</th>
-                                            <!-- <th style="text-align:center;">Codigo</th> -->
-                                            <th style="text-align:center;">Descripción del Bien</th>
-                                            <th style="text-align:center;">Categoría</th>
-                                            <!-- <th style="text-align:center;">Ubicación</th> -->
-                                            <!-- <th style="text-align:center;">Estado Bien</th> -->
-                                            <th style="text-align:center;">Acción</th>
-                                        </tr>
-                                    </tfoot>
                                 </table>
                                 <!--------------------------- //dataTable-------------------------------------------------------------------->
                                 <!--MODAL VER  -->

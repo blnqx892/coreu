@@ -11,7 +11,7 @@ $con = con();
   else if($datos == 'Menor a 900'   )     $sql_condicional = 'AND ingreso_entradas.costo_adquisicion < 900 ';
   else if($datos == 'Mayor a 600'   )     $sql_condicional = 'AND ingreso_entradas.costo_adquisicion > 600 ';
   else if($datos == 'Menor a 600'   )     $sql_condicional = 'AND ingreso_entradas.costo_adquisicion < 600 ';
-  
+
  //$conexion=mysqli_connect('localhost','root', '', 'sicafi');
  $sql="SELECT asignacion_activo.id AS id_asignacion,
  ingreso_entradas.nombre_adquisicion,
@@ -57,7 +57,7 @@ $fechaFormateada = date("d-m-Y", $timestamp);
       'botones'=>'<td>
             <button type="button" id="ver" class="btn btn-outline-info rounded-pill verai-item" id-item-verai="'.$row['id_asignacion'].'  " title="Ver"><i
             class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVerainven"></i></button>
-            <button type="button" id="edit" class="btn btn-outline-warning rounded-pill  editein-item" id-item-ei="'.$row['id_asignacion'].'" title="Editar">
+            <button type="button" id="edit" class="btn btn-outline-warning rounded-pill  editein-item" id-item-ei="'.$row['id_asignacion'].'" title="Modificar">
             <i class="far fa-edit"></i></button>
       </td>',
       'i'=>$i

@@ -42,7 +42,7 @@ if($row['tipo_registro'] == "Descargo"){
   <button type="button" id="ver" class="btn btn-outline-info rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i
   class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos"></i></button>
   <a href="./Reportes/Descargo.php?id='.$row['id_movimiento'].'" target="_blank">
-  <button type="button"  class="btn btn-light" title="Reporte Descargo"
+  <button type="button"  class="btn btn-light rounded-pill" title="Reporte"
                                   data-coreui-whatever="@mdo" style="float: right;"><i
                                       class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
   </a>
@@ -53,7 +53,7 @@ if($row['tipo_registro'] == "Descargo"){
   <button type="button" id="ver" class="btn btn-outline-info rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i
   class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos"></i></button>
   <a href="./Reportes/Movimiento.php?id='.$row['id_movimiento'].'" target="_blank">
-  <button type="button" class="btn btn-light" title="Reporte Movimiento"
+  <button type="button" class="btn btn-light rounded-pill" title="Reporte"
                                   data-coreui-whatever="@mdo" style="float: right;"><i
                                       class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
                                       </a>
