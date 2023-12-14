@@ -26,6 +26,8 @@ $(document).ready(function() {
     }
   });
 
+
+
   $("#print_bc").click(function(e) {
     e.preventDefault();
     if (!window.print) {
@@ -40,6 +42,8 @@ $(document).ready(function() {
     }
 
   });
+
+
 
   // Variables globales
   const host = window.location.origin;    // Dirección url actual
@@ -62,6 +66,7 @@ $(document).ready(function() {
     successToast('Registro guardado con éxito');
     localStorage.removeItem('is_save');
   }
+
 
   // Nos encontramos en el modo edición debe llenar el formulario
   if (id != null) {
@@ -110,6 +115,9 @@ $(document).ready(function() {
       });
   }
 
+
+
+  
   // Botón guardar suministro
   $("#save_record").click(function(e) {
     e.preventDefault();
