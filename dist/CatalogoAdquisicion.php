@@ -71,8 +71,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
-                          INGRESO DE ACTIVOS</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Información de Bien Mueble</h5>
                         <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
@@ -169,8 +168,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
-                          INGRESO DE ACTIVOS</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar Datos de un Bien Mueble</h5>
                         <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">

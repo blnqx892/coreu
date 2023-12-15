@@ -39,8 +39,8 @@ if (isset($_SESSION['usuarioActivo'])) {
         <div class="tab-content rounded-bottom" class="div-centrado">
           <div class="tab-pane p-2 active" role="tabpanel" id="preview-1179">
             <div class="row">
-            <!-- col-->
-            <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3){?>
+              <!-- col-->
+              <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3){?>
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -49,7 +49,6 @@ if (isset($_SESSION['usuarioActivo'])) {
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                       </svg>
                     </div>
-
                     <div>
                       <?php
                         // Lógica para solicitudes por aprobar
@@ -296,7 +295,11 @@ if (isset($_SESSION['usuarioActivo'])) {
               <div class="row  my-4">
                 <!--INICIO SECCION DOS-->
                 <div class="">
-                  <center><img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" />
+                  <center>
+                  <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3){?>
+                    <h1>SISTEMA PARA EL CONTROL DE ALMACEN - AMSV</h1><br><br>
+                    <?php }?>
+                    <img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" />
                     <h1 style="font-family:copperplate,monospace,cursiva; font-size:20px;text-decoration:none">
                       <b>S I C A F I</b></h1>
                   </center>

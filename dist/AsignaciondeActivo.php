@@ -40,54 +40,67 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR---------------------------------------------------->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
-      <?php include("toast/toast.php"); ?>
+        <?php include("toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
             <div class="card mb-4">
-                <input type="hidden" id="jefe_id" name="jefe_id" value="<?php echo $_POST['id_jefe'] ?? ''; ?>" >
+              <input type="hidden" id="jefe_id" name="jefe_id" value="<?php echo $_POST['id_jefe'] ?? ''; ?>">
               <div class="card-header"><strong>Asignación de Activo</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form id="formasigna" class="g-3 needs-validation" role="form" action="" method="POST" autocomplete="off">
+                <form id="formasigna" class="g-3 needs-validation" role="form" action="" method="POST"
+                  autocomplete="off">
+                  <div class="row">
+                    <label style="text-align: right;">(*) Campos Obligatorios</label>
+                  </div><br>
                   <!----------------------------------------------INICIO----------------------------------------------------------->
                   <div class="row">
                     <div class="col-md-4">
-                      <label class="form-label" for="validationCustom01">Fecha Asignación:</label>
-                      <input class="form-control codasig-validate-1" id="fechaA" type="date" required="" >
+                      <label class="form-label" for="validationCustom01">* Fecha Asignación:</label>
+                      <input class="form-control codasig-validate-1" id="fechaA" type="date" required="">
                     </div>
                   </div>
                   <!--FIN-->
                   <div class="row  my-4">
                     <div class="col-md-4">
 
-                    <input type="hidden" value="<?php echo $_POST['codigo_id_txt'] ?? ''; ?>" id="codigo_institucional">
-                     <input type="hidden" class="form-control" id="_id" value="<?php echo ($_POST['ingreso_entrada_id']?? FALSE) ? $_POST['ingreso_entrada_id'] :  $_GET['a'];?>">
-                     <input type="hidden" class="form-control" id="id_asignacion" value="<?php echo $_POST['codigo_id_id']??'';?>">
-                      <label class="form-label" for="validationCustom02">Descripción del bien:</label>
-                      <input class="form-control" id="nombreA" type="text" required=""  value="<?php echo $_POST['nombre_adquisicion'] ?? '';?>"  disabled>
+                      <input type="hidden" value="<?php echo $_POST['codigo_id_txt'] ?? ''; ?>"
+                        id="codigo_institucional">
+                      <input type="hidden" class="form-control" id="_id"
+                        value="<?php echo ($_POST['ingreso_entrada_id']?? FALSE) ? $_POST['ingreso_entrada_id'] :  $_GET['a'];?>">
+                      <input type="hidden" class="form-control" id="id_asignacion"
+                        value="<?php echo $_POST['codigo_id_id']??'';?>">
+                      <label class="form-label" for="validationCustom02">Descripción del Bien:</label>
+                      <input class="form-control" id="nombreA" type="text" required=""
+                        value="<?php echo $_POST['nombre_adquisicion'] ?? '';?>" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Marca:</label>
-                      <input type="text" class="form-control" id="marcaA" value="<?php echo $_POST['marca'] ?? '';?>" name="marcaC" required="" disabled>
+                      <input type="text" class="form-control" id="marcaA" value="<?php echo $_POST['marca'] ?? '';?>"
+                        name="marcaC" required="" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Color:</label>
-                      <input type="text" class="form-control" id="colorA" value="<?php echo $_POST['color'] ?? '';?>" name="colorC" required="" disabled>
+                      <input type="text" class="form-control" id="colorA" value="<?php echo $_POST['color'] ?? '';?>"
+                        name="colorC" required="" disabled>
                     </div>
                   </div>
                   <div class="row  my-4">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">Serie:</label>
-                      <input type="text" class="form-control" id="serieA" name="serieC" required="" value="<?php echo $_POST['serie'] ?? '';?>" disabled>
+                      <input type="text" class="form-control" id="serieA" name="serieC" required=""
+                        value="<?php echo $_POST['serie'] ?? '';?>" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom04">Categoria: </label>
-                      <input type="text" class="form-control" id="categoriaC" name="categoriaC" required="" value="<?php echo $_POST['categoria'] ?? '';?>" disabled>
+                      <input type="text" class="form-control" id="categoriaC" name="categoriaC" required=""
+                        value="<?php echo $_POST['categoria'] ?? '';?>" disabled>
                     </div>
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom05">Modelo</label>
-                      <input class="form-control" id="modeloA" name="modeloA" type="text" required="" value="<?php echo $_POST['modelo'] ?? '';?>" disabled>
+                      <input class="form-control" id="modeloA" name="modeloA" type="text" required=""
+                        value="<?php echo $_POST['modelo'] ?? '';?>" disabled>
 
                     </div>
                   </div>
@@ -96,28 +109,33 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row  my-4">
                     <div class="col-md-4">
                       <!--combo qque vas a ir a guardar en fk_usuarios de ahi solo vas a guardar los campos que estas complentando-->
-                      <label class="form-label" for="validationCustom02">Jefe Responsable:</label>
-                      <select class="form-select codasig-validate-1" id="nombreC" name="rolCU" data-placeholder="Seleccione la Unidad">
+                      <label class="form-label" for="validationCustom02">*Jefe Responsable:</label>
+                      <select class="form-select codasig-validate-1" id="nombreC" name="rolCU"
+                        data-placeholder="Seleccione la Unidad">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                     <div class="col-md-4">
-                      <label class="form-label" id="ubicacion">Ubicación:</label>
+                      <label class="form-label" id="ubicacion">* Ubicación:</label>
                       <input for="#ubicacion" id="ubicacion_value" name="ubicacion_value" class="form-control"
                         disabled></input>
                     </div>
-                      <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Codigo:</label>
-                        <div class="input-group mb-2">
-                          <input id="codigoB-1" type="text text-right" class="form-control" max="2" placeholder="00" aria-label="Username">
-                          <input id="codigoB-2" type="text" class="form-control" max="11" placeholder="-000-00-00-" <?php echo ($_POST['ingreso_entrada_id']??FALSE) ? 'disabled': '';?> aria-label="Username">
-                          <input id="codigoB-3" type="text" class="form-control" max="3" placeholder="000" aria-label="Server">
-                        </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="validationCustom02">* Codigo:</label>
+                      <div class="input-group mb-2">
+                        <input id="codigoB-1" type="text text-right" class="form-control" max="2" placeholder="00"
+                          aria-label="Username">
+                        <input id="codigoB-2" type="text" class="form-control" max="11" placeholder="-000-00-00-"
+                          <?php echo ($_POST['ingreso_entrada_id']??FALSE) ? 'disabled': '';?> aria-label="Username">
+                        <input id="codigoB-3" type="text" class="form-control" max="3" placeholder="000"
+                          aria-label="Server">
                       </div>
+                    </div>
                     <div class="row  my-4">
                       <div class="col-md-4">
-                        <label class="form-label" for="validationCustom02">Encargado del Bien:</label>
-                        <input class="form-control codasig-validate-1" id="encargadoA" type="text" required=""  value="<?php echo $_POST['encargado'] ?? '';?>" >
+                        <label class="form-label" for="validationCustom02">* Encargado del Bien:</label>
+                        <input class="form-control codasig-validate-1" id="encargadoA" type="text" required=""
+                          value="<?php echo $_POST['encargado'] ?? '';?>">
                       </div>
                     </div>
                   </div>
@@ -144,8 +162,9 @@ if (isset($_SESSION['usuarioActivo'])) {
     <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-       var id = $("#_id").val();
-      </script>
+      var id = $("#_id").val();
+
+    </script>
     <script>
       $(document).ready(function () {
         // $(":input").inputmask();
@@ -157,13 +176,14 @@ if (isset($_SESSION['usuarioActivo'])) {
         $("#codigoB-2").mask('-000-00-00-');
         $("#codigoB-3").mask('000');
 
-        if((codigo ?? false) && codigo.trim()!==''){
-          $("#codigoB-1").mask('00').val(codigo[0]+codigo[1]);
-          $("#codigoB-2").mask('-000-00-00-').val('-'+codigo[2]+codigo[3]+codigo[4]+'-'+codigo[5]+codigo[6]+'-'+codigo[7]+codigo[8]+'-');
-          $("#codigoB-3").mask('000').val(codigo[9]+codigo[10]+codigo[11]);
+        if ((codigo ? ? false) && codigo.trim() !== '') {
+          $("#codigoB-1").mask('00').val(codigo[0] + codigo[1]);
+          $("#codigoB-2").mask('-000-00-00-').val('-' + codigo[2] + codigo[3] + codigo[4] + '-' + codigo[5] +
+            codigo[6] + '-' + codigo[7] + codigo[8] + '-');
+          $("#codigoB-3").mask('000').val(codigo[9] + codigo[10] + codigo[11]);
         }
 
-      //  function validarUndefined()
+        //  function validarUndefined()
       });
 
     </script>

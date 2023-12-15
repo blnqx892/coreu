@@ -15,10 +15,10 @@ while ($row = mysqli_fetch_array($result)) {
         'id' => $row['idpr'],
         'nomb' => $row['nombre_unidad'],
         'botones' => '<td>
-            <button type="button" id="ver" class="btn btn-outline-info rounded-pill verun-item" id-item-verun="'.$row['idpr'].'" title="Ver">
-            <i class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVerU"></i></button>
-            <button type="button" id="edit" class="btn btn-outline-warning rounded-pill editu-item" id-item-u="'.$row['idpr'].'" title="Editar">
-            <i class="far fa-edit"></i>
+            <button type="button" id="ver" class="btn btn-light rounded-pill verun-item" id-item-verun="'.$row['idpr'].'" title="Ver">
+            <i class="fas fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVerU" style="color:#2E96B0"></i></button>
+            <button type="button" id="edit" class="btn btn-light rounded-pill editu-item" id-item-u="'.$row['idpr'].'" title="Modificar">
+            <i class="fas fa-edit" style="color:#2E96B0"></i>
             </button>
         </td>',
         'i' => $i

@@ -20,7 +20,7 @@
           </div>
 
       </td>
-      <td><img src="../img/iconelsv.png" class="logoNacional"></td>
+      <td><img src="../img/iconesv.png" class="logoNacional"></td>
     </tr>
     </tr>
     <tr>

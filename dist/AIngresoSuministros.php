@@ -70,6 +70,9 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <!--INICIO FORM-->
                   <form class="g-3 needs-validation" action="Controlador/IngresoSuministrosC.php" method="POST"
                     autocomplete="off">
+                    <div class="row">
+                      <label style="text-align: right;">(*) Campos Obligatorios</label>
+                    </div><br><br>
                     <!--INICIO SECCION FECHA-->
                     <!--<div class="col-md-3">
                       <label for="inputZip" class="form-label">Codigo (ID):</label>
@@ -77,19 +80,19 @@ if (isset($_SESSION['usuarioActivo'])) {
                     </div>-->
                     <div class="row">
                       <div class="col-md-3">
-                        <label for="inputZip" class="form-label">Código de Barra:</label>
+                        <label for="inputZip" class="form-label">* Código de Barra:</label>
                         <input type="text" class="form-control v-required-1" id="codigo_barra" name="codigob">
                       </div>
                       <div class="col-md-3">
-                        <label for="inputZip" class="form-label">Nombre del Suministro:</label>
+                        <label for="inputZip" class="form-label">* Nombre del Suministro:</label>
                         <input type="text" class="form-control v-required-1" id="nombre_suministro" name="tarjeta">
                       </div>
                       <div class="col-md-3">
-                        <label for="inputZip" class="form-label">Presentación:</label>
+                        <label for="inputZip" class="form-label">* Presentación:</label>
                         <input type="text" class="form-control v-required-1" id="presentacion">
                       </div>
                       <div class="col-md-3">
-                        <label for="inputZip" class="form-label">Categoría:</label>
+                        <label for="inputZip" class="form-label">* Categoría:</label>
                         <select name="cats" id="categorias" class="form-select">
                           <?php while($cat = mysqli_fetch_assoc($categorias)) {?>
                           <option value="<?php echo $cat["categoria_id"]?>"><?php echo $cat["nomb_categoria"]?></option>
@@ -101,12 +104,12 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <div class="row  my-4">
                       <!--INICIO SECCION TRES-->
                       <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Existencias Mínimas:</label>
+                        <label for="inputZip" class="form-label">* Existencias Mínimas:</label>
                         <input type="number" min="0" step="0.01" class="form-control v-required-1 v-min-1"
                           id="existencia_minima" data-min="0">
                       </div>
                       <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Existencias Máximas:</label>
+                        <label for="inputZip" class="form-label">* Existencias Máximas:</label>
                         <input type="number" min="0" step="0.01" class="form-control v-required-1 v-min-1"
                           id="existencia_maxima" data-min="0" data-minthan="existencia_minima">
                       </div>
@@ -158,12 +161,12 @@ if (isset($_SESSION['usuarioActivo'])) {
                         </table>
                       </div>
                       <div class="col-15" align="right">
-                      <div class="col-md-3">
-                        <label for="inputZip" class="form-label"></label>
-                        <button class="btn btn-primary" type="button" data-coreui-toggle="modal"
-                          data-coreui-target="#modalAgg" id="add_kardex" title="Cargar Stock">+</button>
+                        <div class="col-md-3">
+                          <label for="inputZip" class="form-label"></label>
+                          <button class="btn btn-primary" type="button" data-coreui-toggle="modal"
+                            data-coreui-target="#modalAgg" id="add_kardex" title="Cargar Stock">+</button>
+                        </div>
                       </div>
-                    </div>
                     </div>
                     <!--FIN SECCION CUATRO-->
 

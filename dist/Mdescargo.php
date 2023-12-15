@@ -50,27 +50,27 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <!--INICIO FORM--------------------------------------------->
                 <form  id="formD" class="g-3 needs-validation" novalidate="">
                 <div class="row">
-                    <label style="text-align: right;">(*) Campos Requeridos</label>
+                    <label style="text-align: right;">(*) Campos Obligatorios</label>
                   </div>
                   <h4>Generalidades</h4>
                   <hr style="color: black; background-color: black; width:100%;" />
                   <div class="row my-4">
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">(*) Buscar por Código:</label>
+                      <label class="form-label" for="validationCustom02">* Buscar por Código:</label>
                       <select class="form-control js-example-basic-single nueve-validate-1" required id="codigo_id" name="codigo_id">
                         <option value=""></option>
                       </select>
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom01">(*) Fecha:</label>
+                      <label class="form-label" for="validationCustom01">* Fecha:</label>
                       <input class="form-control nueve-validate-1" id="fecha_movimientodescargo" type="date" required="">
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">(*) Procedencia:</label>
+                      <label class="form-label" for="validationCustom02">* Procedencia:</label>
                       <input class="form-control" id="nombre_unidad" type="text" required="" disabled>
                     </div>
                   <div class="col-md-3">
-                      <label class="form-label" for="validationCustom04">(*) Tipo Movimiento</label>
+                      <label class="form-label" for="validationCustom04">* Tipo Movimiento</label>
                       <select class="form-select nueve-validate-1" id="descargoM"
                           name="descargoM">
                           <option selected="" disabled="" value="">Elegir Tipo Movimiento</option>
@@ -84,7 +84,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <!-----------------------------------INICIO SECCION ----------------------------------------->
                   <div class="row my-4">
                     <div class="col-md-6">
-                      <label class="form-label" for="validationCustom02">(*) Observaciones:</label>
+                      <label class="form-label" for="validationCustom02">* Observaciones:</label>
                       <textarea class="form-control" id="observaciondescargo" required="" rows="2"></textarea>
                     </div>
                   </div>

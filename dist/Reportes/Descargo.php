@@ -13,7 +13,7 @@ $id = $_GET["id"]; ?>
 <body>
   <table class="membrete">
     <tr>
-      <td><img src="../img/iconsv.jpg" class="logoAlcaldia"></td>
+      <td><img src="../img/iconamsv.png" width="110" height="110"></td>
       <td>
         <span class="titulos">
           <div class="textoMembrete">
@@ -23,7 +23,7 @@ $id = $_GET["id"]; ?>
           </div>
 
       </td>
-      <td><img src="../img/iconelsv.png" class="logoNacional"></td>
+      <td><img src="../img/iconesv.png" class="logoNacional"></td>
     </tr>
     </tr>
     <tr>

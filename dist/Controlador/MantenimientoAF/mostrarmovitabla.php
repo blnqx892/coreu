@@ -39,23 +39,23 @@ $x='';
 if($row['tipo_registro'] == "Descargo"){
 
   $x= '<td>
-  <button type="button" id="ver" class="btn btn-outline-info rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i
-  class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos"></i></button>
+  <button type="button" id="ver" class="btn btn-light rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i
+  class="fas fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos" style="color:#2E96B0"></i></button>
   <a href="./Reportes/Descargo.php?id='.$row['id_movimiento'].'" target="_blank">
   <button type="button"  class="btn btn-light rounded-pill" title="Reporte"
                                   data-coreui-whatever="@mdo" style="float: right;"><i
-                                      class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+                                      class="fas fa-file-pdf" aria-hidden="true" style="color:#2E96B0"></i></button>
   </a>
 </td>';
 
 }else{
   $x= '<td>
-  <button type="button" id="ver" class="btn btn-outline-info rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i
-  class="far fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos"></i></button>
+  <button type="button" id="ver" class="btn btn-light rounded-pill  vermo-item" id-item-vermo="'.$row['id_movimiento'].'  " title="Ver"><i
+  class="fas fa-eye" data-coreui-toggle="modal" data-coreui-target="#modalVermovimientos" style="color:#2E96B0"></i></button>
   <a href="./Reportes/Movimiento.php?id='.$row['id_movimiento'].'" target="_blank">
   <button type="button" class="btn btn-light rounded-pill" title="Reporte"
                                   data-coreui-whatever="@mdo" style="float: right;"><i
-                                      class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+                                      class="fas fa-file-pdf" aria-hidden="true" style="color:#2E96B0"></i></button>
                                       </a>
 </td>';
 

@@ -70,7 +70,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                     <div class="modal-dialog modal-lg" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Depreciación de Bien Mueble
+                                                <h5 class="modal-title" id="exampleModalLabel">Depreciación de Bien Mueble Activo
                                                 </h5>
                                                 <button type="button" class="btn-close" data-coreui-dismiss="modal"
                                                     aria-label="Close"></button>

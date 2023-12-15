@@ -75,10 +75,10 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <strong>Suministros</strong>
                   </div>
                   <div>
-                    <a class="btn btn-primary" href="AIngresoSuministros.php">Nuevo <i class='far fa-plus'></i></a>
+                  <!--  <a class="btn btn-primary" href="AIngresoSuministros.php">Nuevo <i class='far fa-plus'></i></a> -->
                     <a href="" class="btn btn-light rounded-pill" title="Reporte" data-coreui-toggle="modal"
                       data-coreui-target="#modalRe" data-coreui-whatever="@mdo" style="float: right;"><i
-                        class='fas fa-file-pdf'></i></a>
+                        class='fas fa-file-pdf' style="color:#2E96B0"></i></a>
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th style="text-align:center;">Codigo de Barra</th>
+                      <th style="text-align:center;">Código de Barra</th>
                       <th style="text-align:center;">Nombre del Suministro</th>
                       <th style="text-align:center;">Presentación</th>
                       <th style="text-align:center;">Categoría</th>
@@ -166,11 +166,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                       </td>
                       <td>
                         <a href="<?php echo 'ShowSuministro.php?id='.$mostrar['id']?>"
-                          class="btn btn-outline-info rounded-pill" title="Ver"><i class='fas fa-eye'></i></a>
+                          class="btn btn-light rounded-pill" title="Ver"><i class='fas fa-eye' style="color:#2E96B0"></i></a>
                         <a href="<?php echo 'AIngresoSuministros.php?id='.$mostrar['id']?>"
-                          class="btn btn-outline-warning rounded-pill" title="Editar"><i class="far fa-edit"></i></a>
+                          class="btn btn-light rounded-pill" title="Modificar"><i class="fa-solid fa-pen-to-square" style="color:#2E96B0"></i></i></a>
                         <a href="<?php echo './Reportes/Kardex.php?id='.$mostrar['id']?>"
-                          class="btn btn-light rounded-pill" title="Reporte Kardex"><i class='fas fa-file-pdf'></i></a>
+                          class="btn btn-light rounded-pill" title="Reporte Kardex"><i class='fas fa-file-pdf' style="color:#2E96B0"></i></a>
                       </td>
                     </tr>
                     <?php $correlativo++?>

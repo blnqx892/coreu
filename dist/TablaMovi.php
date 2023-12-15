@@ -81,8 +81,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                     <div class="modal-dialog modal-lg" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN MOVIMIENTO DE
-                                                    ACTIVOS</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">Información de Movimiento de Bien Mueble Activo</h5>
                                                 <button type="button" class="btn-close" data-coreui-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
@@ -91,12 +90,12 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                     <div class="row my-4">
                                                         <div class="col-md-4">
                                                             <label for="inputZip" class="form-label">Decripción del
-                                                                bien:</label>
+                                                                Bien:</label>
                                                             <input type="text" class="form-control" id="descridbienmovi"
                                                                 disabled>
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">color:</label>
+                                                            <label for="inputZip" class="form-label">Color:</label>
                                                             <input type="text" class="form-control" id="colorvermovi"
                                                                 disabled>
                                                         </div>
@@ -108,7 +107,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                     </div>
                                                     <div class="row my-4">
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">serie:</label>
+                                                            <label for="inputZip" class="form-label">Serie:</label>
                                                             <input type="text" class="form-control" id="serieinmovi"
                                                                 disabled>
                                                         </div>
@@ -126,8 +125,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                     </div>
                                                     <div class="row my-4">
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Valor de
-                                                                Adquisición:</label>
+                                                            <label for="inputZip" class="form-label">$ Valor Adquisición:</label>
                                                             <input type="text" class="form-control" id="valorinmovi"
                                                                 disabled>
                                                         </div>
@@ -156,7 +154,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                                                                 disabled>
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <label for="inputZip" class="form-label">Categoria:</label>
+                                                            <label for="inputZip" class="form-label">Categoría:</label>
                                                             <input type="text" class="form-control" id="id_categoria"
                                                                 disabled>
                                                         </div>

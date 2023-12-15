@@ -40,7 +40,7 @@
           <p style="font-size: 18px; font-family: sans-serif">ALCALDIA MUNICIPAL DE SAN VICENTE<br>
             HOJA DE REQUISICIÓN PARA ENTREGA Y RETIRO DE INSUMOS O MATERIALES</p>
       </td>
-      <td><img src="../img/iconelsv.png" width="100" height="100"></td>
+      <td><img src="../img/iconesv.png" width="110" height="110"></td>
     </tr>
   </table>
   <table width="950" align="center" >
@@ -112,7 +112,7 @@
     <table class="element" class="titulo" >
       <thead>
         <tr>
-          <td colspan="4"><b>OBSERVACIONES:</b></td>
+          <td colspan="4"><b>OBSERVACIONES:</b><br><br><br><br></td>
         </tr>
       </thead>
       <tbody>

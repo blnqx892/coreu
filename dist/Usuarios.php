@@ -40,7 +40,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <!-- CONTENEDOR-->
     <div class="body flex-grow-1 px-3">
       <div class="container-lg">
-      <?php include("toast/toast.php"); ?>
+        <?php include("toast/toast.php"); ?>
         <!-- row-->
         <div class="row">
           <div class="col-12">
@@ -48,62 +48,67 @@ if (isset($_SESSION['usuarioActivo'])) {
               <div class="card-header"><strong>Ingreso de Datos</strong></div>
               <div class="card-body">
                 <!--INICIO FORM-->
-                <form id="form" class="g-3 needs-validation" role="form" action="" method="POST"
-                  autocomplete="off">
+                <form id="form" class="g-3 needs-validation" role="form" action="" method="POST" autocomplete="off">
+                  <div class="row">
+                    <label style="text-align: right;">(*) Campos Obligatorios</label>
+                  </div><br>
                   <input type="hidden" value="Guardar" name="bandera">
                   <!--FIN SECCION DOS-->
                   <div class="row  my-3">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-3">
-                      <label for="inputAddress2" class="form-label">Nombre:</label>
-                      <input type="text" class="form-control tres-validate-1" id="nombreC" placeholder="" name="nombreC" >
+                      <label for="inputAddress2" class="form-label">* Nombre:</label>
+                      <input type="text" class="form-control tres-validate-1" id="nombreC" placeholder=""
+                        name="nombreC">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Apellido:</label>
+                      <label for="inputZip" class="form-label">* Apellido:</label>
                       <input type="text" class="form-control tres-validate-1" id="apellidoC" name="apellidoC">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">Usuario:</label>
+                      <label for="inputZip" class="form-label">* Usuario:</label>
                       <input type="text" class="form-control tres-validate-1" id="usuarioC" name="usuarioC">
                     </div>
                     <div class="col-md-3">
-                        <label for="inputCity" class="form-label">Email:</label>
-                        <input type="e-mail" class="form-control tres-validate-1" id="emailC" name="emailC">
-                      </div>
-                     </div>
-                    <!--FIN SECCION TRES-->
-                    <div class="row  my-3">
-                      <!--INICIO SECCION CUATRO-->
-                      <div class="col-md-3">
-                      <label class="form-label" for="validationCustom04">Rol</label>
-                      <select class="form-select tres-validate-1" id="rolC" name="rolCU"
-                      data-placeholder="Seleccione El Rol">
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
-                     </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="validationCustom04">Unidad:</label>
-                      <select class="form-select tres-validate-1" id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad">
-                      </select>
-                      <div class="invalid-feedback">Please select a valid state.</div>
-                     </div>
-                     <div class="col-md-3">
-                        <label for="inputZip" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control tres-validate-1" id="contraC" name="contraC">
-                        <div id="error1"></div>
-                      </div>
-                      <div class="col-md-3">
-                        <label for="inputZip" class="form-label">Repetir Contraseña:</label>
-                        <input type="password" class="form-control tres-validate-1" id="contraC1" name="contraC1">
-                        <div id="error2"></div>
-                      </div>
-                    </div>  
-                    <!--FIN SECCION CUATRO-->
-                    <div class="col-15" align="right">
-                      <hr style="color: black; background-color: black; width:100%;" />
-                      <button class="btn btn-success" type="submit" id="GuardaUsuarios" name="btnGuardar">Guardar <i class='far fa-check-square'></i></button>
-                      <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i></button>
+                      <label for="inputCity" class="form-label">* Email:</label>
+                      <input type="e-mail" class="form-control tres-validate-1" id="emailC" name="emailC">
                     </div>
+                  </div>
+                  <!--FIN SECCION TRES-->
+                  <div class="row  my-3">
+                    <!--INICIO SECCION CUATRO-->
+                    <div class="col-md-3">
+                      <label class="form-label" for="validationCustom04">* Rol</label>
+                      <select class="form-select tres-validate-1" id="rolC" name="rolCU"
+                        data-placeholder="Seleccione El Rol">
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label" for="validationCustom04">* Unidad:</label>
+                      <select class="form-select tres-validate-1" id="unidad_id" name="rolCU"
+                        data-placeholder="Seleccione la Unidad">
+                      </select>
+                      <div class="invalid-feedback">Please select a valid state.</div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">* Contraseña:</label>
+                      <input type="password" class="form-control tres-validate-1" id="contraC" name="contraC">
+                      <div id="error1"></div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">* Repetir Contraseña:</label>
+                      <input type="password" class="form-control tres-validate-1" id="contraC1" name="contraC1">
+                      <div id="error2"></div>
+                    </div>
+                  </div>
+                  <!--FIN SECCION CUATRO-->
+                  <div class="col-15" align="right">
+                    <hr style="color: black; background-color: black; width:100%;" />
+                    <button class="btn btn-success" type="submit" id="GuardaUsuarios" name="btnGuardar">Guardar <i
+                        class='far fa-check-square'></i></button>
+                    <button class="btn btn-secondary" type="reset">Cancelar <i class='far fa-times-circle'></i></button>
+                  </div>
                 </form>
                 <!--/// FIN FORM ////////////////-->
               </div>
@@ -114,7 +119,7 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-  
+
     <script src="./Controlador/Usuarios/mostrarroles.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js"></script>
     <!-- IMPORTAR ARCHIVO FOOTER-->
@@ -125,19 +130,20 @@ if (isset($_SESSION['usuarioActivo'])) {
     <script src="./Controlador/Usuarios/usuario.js"></script>
     <script src="./Controlador/Usuarios/mostrarroles.js"></script>
     <script src="./Controlador/CredencialesA/credenciales.js"></script>
-   
 
-  <!-- SCRIPT QUE VALIDA SI LAS CONTRASEÑAS SON IGUALES-->
-  <script>
-      $(document).ready(function(){
-            $("#contraC1").on("keyup",function(){
-                if($("#contraC1").val() == $("#contraC").val()){
-                    $("#contraC1").addClass("border border-success").removeClass("border border-danger");
-                }else{
-                    $("#contraC1").addClass("border border-danger").removeClass("border border-success");
-                }
-            })
+
+    <!-- SCRIPT QUE VALIDA SI LAS CONTRASEÑAS SON IGUALES-->
+    <script>
+      $(document).ready(function () {
+        $("#contraC1").on("keyup", function () {
+          if ($("#contraC1").val() == $("#contraC").val()) {
+            $("#contraC1").addClass("border border-success").removeClass("border border-danger");
+          } else {
+            $("#contraC1").addClass("border border-danger").removeClass("border border-success");
+          }
         })
+      })
+
     </script>
 </body>
 

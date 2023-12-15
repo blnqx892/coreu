@@ -53,7 +53,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div>
                     <button type="button" class="btn btn-light rounded-pill" title="Reporte" data-coreui-toggle="modal"
                       data-coreui-target="#modalRe" data-coreui-whatever="@mdo" style="float: right;"><i
-                        class="fa fa-file-pdf-o" aria-hidden="true"></i></button>
+                        class="fas fa-file-pdf" aria-hidden="true" style="color:#2E96B0"></i></button>
                   </div>
                 </div>
               </div>
@@ -96,18 +96,18 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN DE ACTIVOS</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Información de Bien Mueble Activo</h5>
                         <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
                         <form>
                           <div class="row my-4">
                             <div class="col-md-4">
-                              <label for="inputZip" class="form-label">Decripción del bien:</label>
+                              <label for="inputZip" class="form-label">Decripción del Bien:</label>
                               <input type="text" class="form-control" id="descridbien" disabled>
                             </div>
                             <div class="col-md-4">
-                              <label for="inputZip" class="form-label">color:</label>
+                              <label for="inputZip" class="form-label">Color:</label>
                               <input type="text" class="form-control" id="colorver" disabled>
                             </div>
                             <div class="col-md-4">
@@ -117,7 +117,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                           </div>
                           <div class="row my-4">
                             <div class="col-md-4">
-                              <label for="inputZip" class="form-label">serie:</label>
+                              <label for="inputZip" class="form-label">Serie:</label>
                               <input type="text" class="form-control" id="seriein" disabled>
                             </div>
                             <div class="col-md-4">
@@ -131,7 +131,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                           </div>
                           <div class="row my-4">
                             <div class="col-md-4">
-                              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+                              <label for="inputZip" class="form-label">$ Valor Adquisición:</label>
                               <input type="text" class="form-control" id="valorin" disabled>
                             </div>
                             <div class="col-md-4">
@@ -159,7 +159,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                           </div>
                           <div class="row my-4">
                             <div class="col-md-4">
-                              <label for="inputZip" class="form-label">Categoria:</label>
+                              <label for="inputZip" class="form-label">Categoría:</label>
                               <input type="text" class="form-control" id="id_categoria" disabled>
                             </div>
                           </div>
@@ -198,8 +198,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
-                          DE ACTIVOS</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar Datos de un Bien Mueble Activo</h5>
                         <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
@@ -207,11 +206,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                           <div class="row my-4">
                             <div class="col-md-4">
                               <input type="hidden" class="form-control" id="_id_inventario">
-                              <label for="inputZip" class="form-label">Decripción del bien:</label>
+                              <label for="inputZip" class="form-label">Decripción del Bien:</label>
                               <input type="text" class="form-control" id="descridbiene">
                             </div>
                             <div class="col-md-4">
-                              <label for="inputZip" class="form-label">color:</label>
+                              <label for="inputZip" class="form-label">Color:</label>
                               <input type="text" class="form-control" id="coloried">
                             </div>
                             <div class="col-md-4">
@@ -222,7 +221,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
                           <div class="row my-4">
                             <div class="col-md-4">
-                              <label for="inputZip" class="form-label">serie:</label>
+                              <label for="inputZip" class="form-label">Serie:</label>
                               <input type="text" class="form-control" id="serieine">
                             </div>
                             <div class="col-md-4">
@@ -237,7 +236,7 @@ if (isset($_SESSION['usuarioActivo'])) {
 
                           <div class="row my-4">
                             <div class="col-md-4">
-                              <label for="inputZip" class="form-label">Valor de Adquisición:</label>
+                              <label for="inputZip" class="form-label">$ Valor Adquisición:</label>
                               <input type="text" class="form-control" id="valorine" disabled>
                             </div>
                             <div class="col-md-4">
@@ -255,7 +254,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                           <!----------------------------este es el div de lo de vehiculo  --------------------------------->
                           <div class="row my-4">
                             <div class="col-md-4">
-                              <label for="inputZip" class="form-label">Vida Util:</label>
+                              <label for="inputZip" class="form-label">Vida Util (en años):</label>
                               <input type="text" class="form-control" id="vidaie" disabled>
                             </div>
                             <div class="col-md-4">
@@ -263,7 +262,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                               <input type="text" class="form-control" id="ubicacionie" disabled>
                             </div>
                             <div class="col-md-4">
-                              <label class="form-label" for="validationCustom04">Categoria</label>
+                              <label class="form-label" for="validationCustom04">Categoría</label>
                               <select class="form-select" required id="categoria_id" name="cateC" disabled>
                               </select>
                               <div class="invalid-feedback">Please select a valid state.</div>

@@ -28,7 +28,7 @@ if($hasta != ""){
 <body>
   <table class="membrete">
     <tr>
-      <td><img src="../img/iconsv.jpg" class="logoAlcaldia"></td>
+      <td><img src="../img/iconsv.jpg" width="110" height="110"></td>
       <td>
         <span class="titulos">
           <div class="textoMembrete">
@@ -36,7 +36,7 @@ if($hasta != ""){
           </div>
 
       </td>
-      <td><img src="../img/iconelsv.png" class="logoNacional"></td>
+      <td><img src="../img/iconesv.png" width="110" height="110"></td>
     </tr>
     </tr>
     <tr>

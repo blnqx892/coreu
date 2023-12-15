@@ -57,13 +57,13 @@ where ie.fk_categoria = '.$categoria. ' and u.fk_unidades = '.$unidad;
     $nombre_categoria = $c['categoria'];
   }
 
-  $sql_responsable = "select 
+  $sql_responsable = "select
   concat(u.nombre, ' ', u.apellido) responsable
   from ingreso_entradas ie
   inner join asignacion_activo aa on aa.fk_ingreso_entradas = ie.id
   inner join usuarios u on u.id = aa.fk_usuarios
   where ie.fk_categoria = ".$categoria." and u.fk_unidades = ".$unidad;
-  
+
   $dato_responsable  = mysqli_query($conexion, $sql_responsable) or die("No se puede ejecutar la consulta");
   $responsable = '';
   while ($r = mysqli_fetch_array($dato_responsable)) {
@@ -79,7 +79,7 @@ where ie.fk_categoria = '.$categoria. ' and u.fk_unidades = '.$unidad;
           <p style="font-size: 18px; font-family: sans-serif">ALCALDIA MUNICIPAL DE SAN VICENTE<br>
             UNIDAD DE ACTIVO FIJO <br> CONTROL DE BIENES MUEBLES MUNICIPALES</p>
       </td>
-      <td><img src="../img/iconelsv.png" width="100" height="120"></td>
+      <td><img src="../img/iconesv.png" width="110" height="110"></td>
     </tr>
   </table>
   <table width="950" align="center">

@@ -31,7 +31,7 @@ if (isset($_SESSION['usuarioActivo'])) {
               <span>Unidades</span>
             </li>
             <li class="breadcrumb-item active">
-              <span>Unnidades</span>
+              <span>Unidades</span>
             </li>
           </ol>
         </nav>
@@ -92,7 +92,7 @@ if (isset($_SESSION['usuarioActivo'])) {
           </div>
             <div class="modal-body">
               <div class="col-md-6">
-                <label for="inputZip" class="form-label">(*) Nombre Unidad:</label>
+                <label for="inputZip" class="form-label">* Nombre Unidad:</label>
                 <input type="text" class="form-control unidades-validate-1" id="nombreUnid">
               </div>
             </div>
@@ -115,8 +115,7 @@ if (isset($_SESSION['usuarioActivo'])) {
           <input type="hidden" value="Guardar1" name="bandera">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
-                DE UNIDADES</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Información de Unidad</h5>
               <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -143,8 +142,7 @@ if (isset($_SESSION['usuarioActivo'])) {
           <input type="hidden" value="Guardar1" name="bandera">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">INFORMACIÓN
-                DE UNIDADES</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Modificar Datos de Unidad</h5>
               <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

@@ -14,7 +14,7 @@
           <p style="font-size: 18px; font-family: sans-serif">ALCALDIA MUNICIPAL DE SAN VICENTE<br>
             UNIDAD DE ACTIVO FIJO <br> CONTROL DE BIENES MUEBLES MUNICIPALES</p>
       </td>
-      <td><img src="../img/iconelsv.png" width="100" height="120"></td>
+      <td><img src="../img/iconesv.png" width="110" height="110"></td>
     </tr>
   </table>
   <table width="950" align="center">
