@@ -31,7 +31,7 @@ $(document).ready(function () {
 
   var formData = new FormData();
 
-  formData.append("id", id);
+  formData.append("id", $("#_id").val());
 
    $.ajax({
     url: "Controlador/Entradas/mostrar_modalE.php",

@@ -70,70 +70,60 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <!--INICIO FORM-->
                   <form class="g-3 needs-validation" action="Controlador/IngresoSuministrosC.php" method="POST"
                     autocomplete="off">
-                    <div class="row">
-                      <label style="text-align: right;">(*) Campos Obligatorios</label>
-                    </div><br><br>
+                    <div class="row mb-5">
+                      <label style="text-align: right;"><code>(*) Campos Obligatorios</code></label>
+                    </div>
                     <!--INICIO SECCION FECHA-->
                     <!--<div class="col-md-3">
                       <label for="inputZip" class="form-label">Codigo (ID):</label>
                       <input type="text" class="form-control" id="id" name="codigo" disabled placeholder="Se genera automáticamente">
                     </div>-->
                     <div class="row">
-                      <div class="col-md-3">
-                        <label for="inputZip" class="form-label">* Código de Barra:</label>
+                      <div class="col-md-4 mt-2">
+                        <label for="inputZip" class="form-label"><code>*</code> Código de Barra:</label>
                         <input type="text" class="form-control v-required-1" id="codigo_barra" name="codigob">
                       </div>
-                      <div class="col-md-3">
-                        <label for="inputZip" class="form-label">* Nombre del Suministro:</label>
+                      <div class="col-md-4 mt-2">
+                        <label for="inputZip" class="form-label"><code>*</code> Nombre del Suministro:</label>
                         <input type="text" class="form-control v-required-1" id="nombre_suministro" name="tarjeta">
                       </div>
-                      <div class="col-md-3">
-                        <label for="inputZip" class="form-label">* Presentación:</label>
+                      <div class="col-md-4 mt-2">
+                        <label for="inputZip" class="form-label"><code>*</code> Presentación:</label>
                         <input type="text" class="form-control v-required-1" id="presentacion">
                       </div>
-                      <div class="col-md-3">
-                        <label for="inputZip" class="form-label">* Categoría:</label>
+                      <div class="col-md-4 mt-2">
+                        <label for="inputZip" class="form-label"><code>*</code> Categoría:</label>
                         <select name="cats" id="categorias" class="form-select">
                           <?php while($cat = mysqli_fetch_assoc($categorias)) {?>
                           <option value="<?php echo $cat["categoria_id"]?>"><?php echo $cat["nomb_categoria"]?></option>
                           <?php }?>
                         </select>
                       </div>
-                    </div>
-                    <!--FIN SECCION DOS-->
-                    <div class="row  my-4">
-                      <!--INICIO SECCION TRES-->
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">* Existencias Mínimas:</label>
+                      <div class="col-md-4 mt-2">
+                        <label for="inputZip" class="form-label"><code>*</code> Existencias Mínimas:</label>
                         <input type="number" min="0" step="0.01" class="form-control v-required-1 v-min-1"
                           id="existencia_minima" data-min="0">
                       </div>
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">* Existencias Máximas:</label>
+                      <div class="col-md-4 mt-2">
+                        <label for="inputZip" class="form-label"><code>*</code> Existencias Máximas:</label>
                         <input type="number" min="0" step="0.01" class="form-control v-required-1 v-min-1"
                           id="existencia_maxima" data-min="0" data-minthan="existencia_minima">
                       </div>
-                      <div class="col-md-2">
-
+                    </div>
+                    <!--FIN SECCION DOS-->
+                    <div class="row  my-5 border border-black mx-2">
+                      <!--INICIO SECCION TRES-->
+                      <div class="col-md-12 text-center">
+                        <strong>Codigo Barra</strong>
                       </div>
-                      <div class="col-md-3">
-                        <div class="row">
-                          <div class="col-12">
-                            <svg id="barcode" width="100%"></svg>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-12">
-                            <button class="btn btn-sm col-4 btn-outline-info" id="print_bc" type="button"
-                              style="display: none">Imprimir</button>
-                          </div>
-                        </div>
+                      <div class="col-md-12 text-center">
+                        <svg id="barcode" width="100%"></svg>
                       </div>
-                    </div><br><br>
+                    </div>
                     <!--FIN ----------------->
-                    <div class="row  my-4">
+                    <div class="row  my-4 ">
                       <div>
-                        <table class="table" style="text-align:center;" id="kardex_tabla">
+                        <table class="table border border-black" style="text-align:center;" id="kardex_tabla">
                           <thead class="table-dark">
                             <tr>
                               <th>Fecha</th>

@@ -16,7 +16,7 @@ $(document).ready(function () {
     let modelo = $("#modeloC").val();
     let color = $("#colorC").val();
     let cargo = $("#cargoC").val();
-    let vida = $("#vidaC").val();
+    //let vida = $("#vidaC").val();
     let cate = $("#categoria_id").val();
     let descrip = $("#descri").val();
     let numerom = $("#motorC").val();
@@ -59,8 +59,6 @@ $(document).ready(function () {
       formData.append("capa", capaci)
       formData.append("bandera", bandera)
 
-
-
       $.ajax({
         url: "Controlador/Entradas/insertEntradas.php",
         type: "post",
@@ -68,13 +66,10 @@ $(document).ready(function () {
         contentType: false,
         processData: false,
         success: function (response) {
-        data = JSON.parse(response);
-        if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
-          $("#formE")[0].reset();
-          toastBoostrap(data.toast, data.mensaje)
-        }else if (data.success == 1) {
-             limpiar(1);
-            successToast('Registro guardado con éxito');
+          data = JSON.parse(response);
+          if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+            toastBoostrap(data.toast, data.mensaje)
+            $("#formE")[0].reset();
             limpiar(1);
           } else {
             //alert("Formato de imagen incorrecto.");

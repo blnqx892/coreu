@@ -91,26 +91,8 @@ $(document).ready(function () {
 
       //_codigo = _codigo;
       $("#codigo_id_id").val($("#codigo_id :selected").val());
-      $("#codigo_id_txt").val(($("#codigo_id :selected").text()??'').replaceAll('-', ''));
+      $("#codigo_id_txt").val(($("#codigo_id :selected").text()??''));
       $("#formM").submit();
-      //Abrir nuevo tab
-      // const datos = '/coreu/dist/AsignaciondeActivo.php?'
-      // +'a='+($("#ingreso_entrada_id").val()?? ' ')
-      // +'&id_asignacion_activos='+_id
-      // +'&codigo='+_codigo
-      // +'&traslado='+_traslado
-      // +'&descripcion='+($("#nombre_adquisicion").val()?? ' ')
-      // +'&marca='+($("#marca").val()?? ' ')
-      // +'&color='+($("#color").val()?? ' ')
-      // +'&serie='+($("#serie_adquisicion").val()?? ' ')
-      // +'&categoria='+($("#categoria").val()?? ' ')
-      // +'&modelo='+($("#modelo").val() ?? ' ')
-      // +'&encargado='+($("#encargado").val()?? ' ')
-      // +'&id_jefe='+($("#id_jefe").val()?? ' ');
-
-      //const win = window.open(datos);
-      //Cambiar el foco al nuevo tab (punto opcional)
-      //win.focus();
 
     } catch (error) {
       cosole.log(error)

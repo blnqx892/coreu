@@ -58,7 +58,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row">
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom01">* Fecha Asignación:</label>
-                      <input class="form-control codasig-validate-1" id="fechaA" type="date" required="">
+                      <input class="form-control codasig-validate" id="fechaA" type="date" required="">
                     </div>
                   </div>
                   <!--FIN-->
@@ -88,18 +88,18 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </div>
                   <div class="row  my-4">
                     <div class="col-md-4">
-                      <label class="form-label" for="validationCustom02">Serie:</label>
+                      <label class="form-label" for="serieA">Serie:</label>
                       <input type="text" class="form-control" id="serieA" name="serieC" required=""
                         value="<?php echo $_POST['serie'] ?? '';?>" disabled>
                     </div>
                     <div class="col-md-4">
-                      <label class="form-label" for="validationCustom04">Categoria: </label>
+                      <label class="form-label" for="categoriaC">Categoria: </label>
                       <input type="text" class="form-control" id="categoriaC" name="categoriaC" required=""
                         value="<?php echo $_POST['categoria'] ?? '';?>" disabled>
                     </div>
                     <div class="col-md-4">
-                      <label class="form-label" for="validationCustom05">Modelo</label>
-                      <input class="form-control" id="modeloA" name="modeloA" type="text" required=""
+                      <label class="form-label" for="modeloA">Modelo:</label>
+                      <input type="text" class="form-control" id="modeloA" name="modeloA" required=""
                         value="<?php echo $_POST['modelo'] ?? '';?>" disabled>
 
                     </div>
@@ -110,7 +110,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <div class="col-md-4">
                       <!--combo qque vas a ir a guardar en fk_usuarios de ahi solo vas a guardar los campos que estas complentando-->
                       <label class="form-label" for="validationCustom02">*Jefe Responsable:</label>
-                      <select class="form-select codasig-validate-1" id="nombreC" name="rolCU"
+                      <select class="form-select codasig-validate" id="nombreC" name="rolCU"
                         data-placeholder="Seleccione la Unidad">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
@@ -120,21 +120,40 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <input for="#ubicacion" id="ubicacion_value" name="ubicacion_value" class="form-control"
                         disabled></input>
                     </div>
+
+
+
                     <div class="col-md-4">
                       <label class="form-label" for="validationCustom02">* Codigo:</label>
-                      <div class="input-group mb-2">
-                        <input id="codigoB-1" type="text text-right" class="form-control" max="2" placeholder="00"
-                          aria-label="Username">
-                        <input id="codigoB-2" type="text" class="form-control" max="11" placeholder="-000-00-00-"
-                          <?php echo ($_POST['ingreso_entrada_id']??FALSE) ? 'disabled': '';?> aria-label="Username">
-                        <input id="codigoB-3" type="text" class="form-control" max="3" placeholder="000"
-                          aria-label="Server">
+                      <div class="input-group mb-3">
+                        <?php 
+                          $codigo_id_txt = $_POST['codigo_id_txt'] ?? ''; 
+                          $par_digitos = null;
+                          $resto_digito = null;
+
+                          if($codigo_id_txt!==''){
+                            $par_digitos = substr($codigo_id_txt, 0, 2);
+                            $resto_digito = substr($codigo_id_txt, 2);
+                          }
+
+                          $html =  $codigo_id_txt !== '' ? 
+                            '<label id="label-codigo-institucional" type="text" class="form-control">'.$resto_digito.'</label>':
+                            '<div class="input-group-prepend">
+                              <span class="input-group-text">12 Dígitos
+                                <input type="checkbox" id="codigo-checked" class="mx-2 form-check-input" aria-label="Checkbox for following text input">
+                              </span>
+                            </div>';
+                        ?>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="input-codigo-institucional" placeholder="?" value='<?php echo $par_digitos ?? null;?>'>
+                        <?php echo $html;?>
                       </div>
                     </div>
+
+
                     <div class="row  my-4">
                       <div class="col-md-4">
                         <label class="form-label" for="validationCustom02">* Encargado del Bien:</label>
-                        <input class="form-control codasig-validate-1" id="encargadoA" type="text" required=""
+                        <input class="form-control codasig-validate" id="encargadoA" type="text" required=""
                           value="<?php echo $_POST['encargado'] ?? '';?>">
                       </div>
                     </div>
@@ -156,44 +175,15 @@ if (isset($_SESSION['usuarioActivo'])) {
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
     </div>
-
-    <script src="./Controlador/CredencialesA/credenciales.js" type="text/javascript"></script>
-    <script src="./Controlador/Categorias/categoria.js" type="text/javascript"></script>
-    <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-      var id = $("#_id").val();
-
-    </script>
-    <script>
-      $(document).ready(function () {
-        // $(":input").inputmask();
-
-
-        const codigo = $("#codigo_institucional").val()
-        $("#codigoA").mask('00-000-00-00-000');
-        $("#codigoB-1").mask('00');
-        $("#codigoB-2").mask('-000-00-00-');
-        $("#codigoB-3").mask('000');
-
-        if ((codigo ? ? false) && codigo.trim() !== '') {
-          $("#codigoB-1").mask('00').val(codigo[0] + codigo[1]);
-          $("#codigoB-2").mask('-000-00-00-').val('-' + codigo[2] + codigo[3] + codigo[4] + '-' + codigo[5] +
-            codigo[6] + '-' + codigo[7] + codigo[8] + '-');
-          $("#codigoB-3").mask('000').val(codigo[9] + codigo[10] + codigo[11]);
-        }
-
-        //  function validarUndefined()
-      });
-
-    </script>
-
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- IMPORTAR ARCHIVO SCRIPT-->
     <?php include("foot/script.php"); ?>
     <!-- ////////////////////////-->
     <script src="./Controlador/CodificacionAF/codificacion.js"></script>
+    <script src="./Controlador/CredencialesA/credenciales.js" type="text/javascript"></script>
+    <script src="./Controlador/Categorias/categoria.js" type="text/javascript"></script>
+    <script src="./Controlador/CodificacionAF/mostrar_camposformulario.js" type="text/javascript"></script>
 
   </div>
 </body>

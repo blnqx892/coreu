@@ -78,5 +78,6 @@
 
   <!-- As A jQuery Plugin -->
   <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.js'></script>
-  <link rel="stylesheet" href="css/sicafi.css">
+  <link rel="stylesheet" href="css/sicafi.css">  
+  <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.min.js"></script>
 </head>

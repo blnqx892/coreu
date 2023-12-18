@@ -29,24 +29,20 @@ $(document).ready(function () {
           contentType: false,
           processData: false,
           success: function (response) {
-            console.log(JSON.parse(response));
             data = JSON.parse(response);
-            if (data.success == 1) {
-              successToast('Registro guardado con éxito');
-
-            $("#codigo_id").select2().text();
-            $('#formM').get(0).reset();
-            limpiar(1);
-
+            if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+              toastBoostrap(data.toast, data.mensaje)
+              $("#codigo_id").select2().text();
+              $('#formM').get(0).reset();
+              limpiar(1);
           } else {
-            //alert("Formato de imagen incorrecto.");
-            
-          }
-        },
+            //alert("Formato de imagen incorrecto.");         
+           }
+          },
         });
       } else {
        // show_toast('danger', 'Error de validación', 'Debe llenar todos los campos requeridos');
-      }
+      }    
       return false;
     });
     //*************************** */
@@ -74,6 +70,7 @@ function validation(index) {
     });
     return validate;
   }
+
 
   function limpiar(index) {
     $(".once-validate-" + index).each(function (k, v) {

@@ -44,12 +44,10 @@
             ('$fecha','$factura', '$costo','$nombre','$serie','$marca','$modelo','$color','$descrip','$cargo',
             '$vida','$cate','$prov','$numerom','$numerocha','$numerop','$capaci', $x)";
 
-        //echo $sql;
         try {
             // Ejecutar el procedimiento almacenado
             $resultado = mysqli_query($conexion, $sql);
-            echo $sql;
-            echo $resultado;
+
             // Mostrar mensaje de éxito
             successJSON('Registro guardado con éxito.');
         } catch (Exception $e) {
