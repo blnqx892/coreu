@@ -12,6 +12,7 @@
 
 	$user_id = $mysqli->real_escape_string($_GET['user_id']);
 	$token = $mysqli->real_escape_string($_GET['token']);
+  
 
 	if(!verificaTokenPass($user_id, $token))
 	{

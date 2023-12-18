@@ -16,11 +16,12 @@
 		if(emailExiste($email))
 		{
 			$user_id = getValor('id', 'email', $email);
-			$nombre = getValor('nombre', 'email', $email);;
-      $apellido = getValor('apellido', 'email', $email);;
+			$nombre = getValor('nombre', 'email', $email);
+      $apellido = getValor('apellido', 'email', $email);
 
-
+    
 			$token = generaTokenPass($user_id);
+
 
 			$url = 'http://'.$_SERVER["SERVER_NAME"].'/coreu/dist/Recuperar/cambia.php?user_id='.$user_id.'&token='.$token;
 
@@ -30,7 +31,7 @@
 			<br/> Si ud no lo ha solicitado, por favor, ignore este mensaje. Caducara en 2 horas.
 			<br/><p>Para reestablecer tu contraseña, por favor visite la siguiente URL: <br/> <a href='$url'>$url</a>
 			<br/><br/> Atentamente: <br/> El equipo de SICAFI";
-
+      //var_dump(enviarEmail($email, $nombre, $asunto, $cuerpo));
 			if(enviarEmail($email, $nombre, $asunto, $cuerpo)){
         echo
         "<script language='javascript'>

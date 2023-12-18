@@ -120,7 +120,7 @@
 		$mail->Port = 587; //Modificar
 
 		$mail->Username = 'sicafinoreply@gmail.com'; //Modificar
-		$mail->Password = 'eksl onsj mpxg zczi'; //Modificar
+		$mail->Password = 'fyfc ybwu umrv odic'; //Modificar
 
 		$mail->setFrom('noreply@sicafi', 'SICAFI'); //Modificar
 		$mail->addAddress($email, $nombre);
@@ -315,25 +315,26 @@
 	function verificaTokenPass($user_id, $token){
 
 		global $mysqli;
-
+		///$token=9;
 		$stmt = $mysqli->prepare("SELECT activacion FROM usuarios WHERE id = ? AND token_password = ? AND password_request = 1 LIMIT 1");
 		$stmt->bind_param('is', $user_id, $token);
 		$stmt->execute();
+
 		$stmt->store_result();
 		$num = $stmt->num_rows;
-
+		
 		if ($num > 0)
 		{
-			$stmt->bind_result($activacion);
-			$stmt->fetch();
-			if($activacion == 1)
-			{
+			//$stmt->bind_result($activacion);
+			////$stmt->fetch();
+			////if($activacion == 1)
+			////{
 				return true;
-			}
-			else
-			{
-				return false;
-			}
+			/////}
+			////else
+			//{
+			//	return false;
+			//}
 		}
 		else
 		{
