@@ -39,7 +39,7 @@ function dangerToast(cadena) {
     toastBoostrap('danger', cadena);
 }
 
-// Función para mostrar un toast de peligro (danger)
+// Función para mostrar un toast de informacion (danger)
 function infoToast(cadena) { 
     toastBoostrap('info', cadena);
 }
