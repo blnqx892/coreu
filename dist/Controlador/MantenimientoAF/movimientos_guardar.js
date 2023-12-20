@@ -1,8 +1,9 @@
 $(document).ready(function () {
      
-    //********************guardar  */
+    
     const toast = new coreui.Toast(document.getElementById('liveToast'));
-
+    
+//********************guardar  */
     $("#GuardaMovimientos").on("click", function () {
 
       validation();

@@ -1,10 +1,6 @@
 $(document).ready(function () {
 
-
-
-    //********************guardar  */
-
-
+//********************guardar  */
  $("#GuardaDescargo").on("click", function () {
 
       validation();
@@ -32,18 +28,14 @@ $(document).ready(function () {
           contentType: false,
           processData: false,
           success: function (response) {
-            console.log(JSON.parse(response));
-            data = JSON.parse(response);
-            if (data.success == 1) {
-
+            data = JSON.parse(response);    
             successToast('Registro descargado con éxito');
-            limpiar(1);
-            $("#codigo_id").select2().text();
-            $('#formD').get(0).reset();
-
-          } else {
+              $("#codigo_id").select2().text();
+              $('#formD').get(0).reset();
+              limpiar(1);
+         
             //alert("Formato de imagen incorrecto.");
-          }
+          
         },
         });
       } else {
