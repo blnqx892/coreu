@@ -73,7 +73,8 @@ if (isset($_SESSION['usuarioActivo'])) {
               <?php } ?>
 
               <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 1
-              || $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 4){?>
+              || $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 5
+              || $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 6){?>
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -126,7 +127,7 @@ if (isset($_SESSION['usuarioActivo'])) {
               <?php } ?>
               <!-- /.col-->
               <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 2
-              || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 1){?>
+              || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 1 || $_SESSION['usuarioActivo']['fk_rol'] == 6){?>
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -205,7 +206,8 @@ if (isset($_SESSION['usuarioActivo'])) {
               <?php } ?>
 
               <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 1
-              || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 4 ){?>
+              || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 4
+              || $_SESSION['usuarioActivo']['fk_rol'] == 6){?>
               <div class="col-6 col-lg-3">
                 <div class="card overflow-hidden">
                   <div class="card-body p-0 d-flex align-items-center">
@@ -297,7 +299,19 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <div class="">
                   <center>
                   <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3){?>
-                    <h1>SISTEMA PARA EL CONTROL DE ALMACEN - AMSV</h1><br><br>
+                    <h1 style="font-family: cambria;">SISTEMA DE ALMACÉN GENERAL DE LA UCP</h1><br><br>
+                    <?php }?>
+                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 6){?>
+                    <h1 style="font-family: cambria;">CONTROL SEGURIDAD</h1><br><br>
+                    <?php }?>
+                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 4){?>
+                    <h1 style="font-family: cambria;">UNIDAD DE COMPRAS PÚBLICAS</h1><br><br>
+                    <?php }?>
+                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2){?>
+                    <h1 style="font-family: cambria;">UNIDAD DE ACTIVO FIJO</h1><br><br>
+                    <?php }?>
+                    <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
+                    <h1 style="font-family: cambria;">REQUISICIÓN DE SUMINISTROS</h1><br><br>
                     <?php }?>
                     <img src="img/cuboo2.png" alt="SICAFI" width="250" height="250" />
                     <h1 style="font-family:copperplate,monospace,cursiva; font-size:20px;text-decoration:none">

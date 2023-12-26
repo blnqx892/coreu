@@ -8,7 +8,7 @@
 
     <li class="nav-title">ACTIVO FIJO</li>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 3 || $_SESSION['usuarioActivo']['fk_rol'] == 4
-    || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
+    || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 6){?>
       <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-link-broken"></use>
@@ -52,14 +52,14 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart"></use>
         </svg>Depreciación</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="DepreciacionActivo.php"><span class="nav-icon"></span>Depreciación fija</a></li>
+        <li class="nav-item"><a class="nav-link" href="DepreciacionActivo.php"><span class="nav-icon"></span>Depreciación de Activo</a></li>
       </ul>
     </li>
     <?php } ?>
 <!--separador-->
     <li class="nav-title">ALMACÉN</li>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 4
-    || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
+    || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 6){?>
       <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-link-broken"></use>
@@ -109,7 +109,7 @@
     <!--separador-->
     <li class="nav-title">REQUISICIÓN</li>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 3
-    || $_SESSION['usuarioActivo']['fk_rol'] == 4){?>
+    || $_SESSION['usuarioActivo']['fk_rol'] == 4 || $_SESSION['usuarioActivo']['fk_rol'] == 6){?>
       <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-link-broken"></use>
@@ -137,7 +137,7 @@
     <!--separador-->
     <li class="nav-title">UNIDAD DE COMPRAS PÚBLICAS</li>
     <?php if( $_SESSION['usuarioActivo']['fk_rol'] == 2 || $_SESSION['usuarioActivo']['fk_rol'] == 3
-    || $_SESSION['usuarioActivo']['fk_rol'] == 5){?>
+    || $_SESSION['usuarioActivo']['fk_rol'] == 5 || $_SESSION['usuarioActivo']['fk_rol'] == 6){?>
       <li class="nav-group"><a class="nav-link ">
         <svg class="nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-link-broken"></use>

@@ -45,7 +45,7 @@ if (isset($_SESSION['usuarioActivo'])) {
     <?php
     $usuario = $_SESSION['usuarioActivo'];
     $conexion = mysqli_connect('localhost', 'root', '', 'sicafi');
-    if ($usuario['rol'] == 'UACI') {
+    if ($usuario['rol'] == 'UCP') {
       $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where r.unidad_id =".$usuario['fk_unidades'].' or e.codigo = "pendiente.aprobacion"';
     } else if ($usuario['rol'] == 'Almacen') {
       $sql_requision = "select r.*, e.nombre_estado, e.codigo as codigo_estado, u.nombre_unidad from requisicion_suministro as r inner join unidades as u on u.id = r.unidad_id inner join estado_requisicion as e on e.id = r.estado_id where r.unidad_id =".$usuario['fk_unidades'].' or e.codigo = "pendiente.despacho"';
@@ -119,7 +119,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                             data-coreui-target="#modalAgg" title="Ver" onclick="show_n(<?php echo $requisicion['id']?>, '<?php echo $requisicion['codigo_estado']?>')">
                       <i class="fas fa-eye" style="color:#2E96B0"></i>
                     </button>
-                    <?php if($requisicion['codigo_estado'] == 'pendiente.aprobacion' && $usuario['rol'] == 'UACI'):?>
+                    <?php if($requisicion['codigo_estado'] == 'pendiente.aprobacion' && $usuario['rol'] == 'UCP'):?>
                       <button class="btn btn-light rounded-pill" type="button" data-coreui-toggle="modal"
                               data-coreui-target="#modalAgg" title="Aprobar" onclick="approve_n(<?php echo $requisicion['id']?>)">
                        <i class="fas fa-check" style="color:#2E96B0"></i>
