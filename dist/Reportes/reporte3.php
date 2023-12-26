@@ -35,33 +35,30 @@
   ?>
   <table width="1000" border="0" align="center">
     <tr>
-      <td><img src="../img/iconsv.jpg" width="120" height="120"></td>
-      <td align="center"><span class="titulos">
-          <p style="font-size: 18px; font-family: sans-serif">ALCALDIA MUNICIPAL DE SAN VICENTE<br>
+      <td><img src="../img/iconsv.jpg" width="80" height="80"></td>
+      <td align="center"><span class="titulos" style="color:#00000;font-size:80%;">
+          <p style="font-family: sans-serif">ALCALDÍA MUNICIPAL DE SAN VICENTE<br>
             HOJA DE REQUISICIÓN PARA ENTREGA Y RETIRO DE INSUMOS O MATERIALES</p>
       </td>
-      <td><img src="../img/iconesv.png" width="110" height="110"></td>
+      <td><img src="../img/iconesv.png" width="80" height="80"></td>
     </tr>
   </table>
   <table width="950" align="center" >
-    <tbody style="color:#00000;font-size:125%;">
+    <tbody style="color:#00000;font-size:80%;">
       <tr>
-        <td width="8%"><b>FECHA DE SOLICITUD:</b></td>
-        <td width="10%"> <?php echo $fecha_creacion; ?> </td>
-        <td width="9%"><b>FECHA DE DESPACHO: </b></td>
-        <td width="10%"> <?php echo $fecha_despacho; ?> </td>
+        <td><b>FECHA DE SOLICITUD: </b><?php echo $fecha_creacion; ?></td>
+        <td><b>FECHA DE DESPACHO: </b><?php echo $fecha_despacho; ?></td>
       </tr>
       <tr>
-        <td><b>UNIDAD SOLICITADA: </b></td>
-        <td><?php echo $requisicion['nombre_unidad']?></td>
+        <td><b>UNIDAD SOLICITADA: </b><?php echo $requisicion['nombre_unidad']?></td>
+        <td></td>
       </tr>
     </tbody>
   </table><br>
   <div class="">
-    <table border="1" class="table_informacion">
+    <table border="1" class="table_informacion" style="color:#00000;font-size:80%;">
       <thead>
         <tr>
-
           <th>CÓDIGO</th>
           <th>U/MEDIDA</th>
           <th>DESCRIPCIÓN DE MATERIAL O INSUMO</th>
@@ -71,7 +68,7 @@
           <th>COSTO TOTAL</th>
         </tr>
       </thead>
-      <tbody style="color:#00000;font-size:100%;">
+      <tbody style="color:#00000;font-size:80%;">
       <?php
         $sql_detalle = 'select dr.*, s.nombre_suministro, s.codigo_barra, s.presentacion ';
         $sql_detalle .= 'from detalle_requisicion dr ';
@@ -109,7 +106,7 @@
     </table>
   </div><br>
   <div>
-    <table class="element" class="titulo" >
+    <table class="element" class="titulo" style="color:#00000;font-size:80%;">
       <thead>
         <tr>
           <td colspan="4"><b>OBSERVACIONES:</b><br><br><br><br></td>
@@ -125,7 +122,7 @@
     </table>
   </div><br><br><br><br>
   <div>
-    <table align="center" width="1000" class="titulo">
+    <table align="center" width="1000" class="titulo" style="color:#00000;font-size:80%;">
       <thead>
         <tr>
           <td>F: </td>
@@ -134,7 +131,7 @@
           <td>F: </td>
         </tr>
       </thead>
-      <tbody>
+      <tbody >
         <tr align="center">
           <td><?php echo $requisicion['u_creado']?></td>
           <td><?php echo $requisicion['u_aprobado']?></td>

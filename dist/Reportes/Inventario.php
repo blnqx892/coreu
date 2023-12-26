@@ -72,57 +72,54 @@ where ie.fk_categoria = '.$categoria. ' and u.fk_unidades = '.$unidad;
 ?>
 
 <body style="margin: 30px 30px 20px 20px;">
-  <table width="1000" border="0" align="center">
+  <table width="650" border="0" align="center">
     <tr>
-      <td><img src="../img/iconsv.jpg" width="120" height="120"></td>
+      <td><img src="../img/iconsv.jpg" width="90" height="90"></td>
       <td align="center"><span class="titulos">
-          <p style="font-size: 18px; font-family: sans-serif">ALCALDIA MUNICIPAL DE SAN VICENTE<br>
+          <p style="font-size: 12px; font-family: sans-serif">ALCALDÍA MUNICIPAL DE SAN VICENTE<br>
             UNIDAD DE ACTIVO FIJO <br> CONTROL DE BIENES MUEBLES MUNICIPALES</p>
       </td>
-      <td><img src="../img/iconesv.png" width="110" height="110"></td>
+      <td><img src="../img/iconesv.png" width="90" height="90"></td>
     </tr>
   </table>
   <table width="950" align="center">
     <thead>
       <tr>
-        <th colspan="4">
+        <th colspan="4" style="color:#00000;font-size:75%;">
           <span class="text-uppercase">
             INVENTARIO FISICO DE <?php echo strtoupper($nombre_categoria)?> <?php echo strtoupper($valor)?>
           </span>
         </th>
       </tr>
     </thead>
-    <tbody style="color:#00000;font-size:100%;">
+    <tbody style="color:#00000;font-size:75%;">
       <tr>
-        <td WIDTH="186"><b>DEPARTAMENTO:</b></td>
-        <td><?php echo strtoupper($nombre_unidad)?></td>
+        <td WIDTH="400"><b>DEPARTAMENTO: </b><?php echo strtoupper($nombre_unidad)?></td>
       </tr>
       <tr>
-        <td><b>RESPONSABLE: </b></td>
-        <td><?php echo strtoupper($responsable ?? '');?></td>
+        <td><b>RESPONSABLE: </b><?php echo strtoupper($responsable ?? '');?></td>
       </tr>
       <tr  style="text-align: left;">
-        <td><b>PRACTICADO EN FECHA DE: </b></td>
-        <td ><?php echo date("d/m/Y"); ?></td>
+        <td><b>PRACTICADO EN FECHA DE: </b><?php echo date("d/m/Y"); ?></td>
       </tr>
     </tbody>
   </table><br>
   <div class="">
-    <table border="1" class="table_informacion">
+    <table border="1" class="table_informacion" style="color:#00000;font-size:75%;">
       <thead>
         <tr >
-          <th>CORREL</th>
+          <th WIDTH="60">CORREL</th>
           <th>DESCRIPCIÓN DEL BIEN</th>
           <th>MODELO</th>
           <th>SERIE</th>
           <th>MARCA</th>
-          <th>FECHA DE ADQUISICIÓN</th>
-          <th>VALOR DE ADQUISICIÓN</th>
-          <th>CÓDIGO DEL BIEN</th>
-          <th>ESTADO DEL BIEN</th>
+          <th WIDTH="90">FECHA DE ADQUISICIÓN</th>
+          <th WIDTH="90">VALOR DE ADQUISICIÓN</th>
+          <th WIDTH="110">CÓDIGO DEL BIEN</th>
+          <th WIDTH="90">ESTADO DEL BIEN</th>
         </tr>
       </thead>
-      <tbody style="color:#00000;font-size:100%;">
+      <tbody style="text-align: center;">
         <?php $correlativo = 1;?>
         <?php $subtotal = 0;?>
         <?php while ($item = mysqli_fetch_array($inventario)):?>
@@ -155,7 +152,7 @@ where ie.fk_categoria = '.$categoria. ' and u.fk_unidades = '.$unidad;
     <table class="element" class="titulo" >
       <thead>
         <tr>
-          <td colspan="4" HEIGHT="50"><b>NOTA:</b></td>
+          <td colspan="4" HEIGHT="50" style="color:#00000;font-size:90%;"><b>NOTA:</b></td>
         </tr>
       </thead>
       <tbody>

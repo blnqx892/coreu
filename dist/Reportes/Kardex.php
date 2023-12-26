@@ -22,7 +22,7 @@ if ($result === false) {
 }
 while($row = mysqli_fetch_array($result)) {
 ?>
-  <table width="1000" align="center" border="1" class="table_informacion">
+  <table width="1000" align="center" border="1" class="table_informacion" style="color:#00000;font-size:70%;">
     <tr>
       <td width=90>Codigo: <b><?php echo $row["codigo_barra"];?></b></td>
       <td rowspan="4" width=70 align="center"><br><br><b>ALCALDÍA MUNICIPAL DE SAN VICENTE <br><br>
@@ -49,7 +49,7 @@ while($row = mysqli_fetch_array($result)) {
     </tr>
   </table><br>
   <div class="">
-    <table border="1" class="table_informacion">
+    <table border="1" class="table_informacion" style="color:#00000;font-size:70%;">
     <!--CONSULTA QUE MOSTRARA LA INFORMACION EN REPORTE KARDEX -->
       <thead>
         <tr>
@@ -75,7 +75,7 @@ while($row = mysqli_fetch_array($result)) {
       die("Error en la consulta: " . mysqli_error($conexion));
     }
     $saldo = 0;
-    setlocale(LC_MONETARY, 'en_US.UTF-8');   
+    setlocale(LC_MONETARY, 'en_US.UTF-8');
 
     while($kar = mysqli_fetch_array($kardex)) {
 
@@ -106,7 +106,7 @@ while($row = mysqli_fetch_array($result)) {
     <?php  } ?>
   </div><br>
   <div>
-    <table width="200" align="center" border="1" class="table_inf">
+    <table width="200" align="center" border="1" class="table_inf" style="color:#00000;font-size:70%;">
       <tr>
         <td colspan="3" align="center"><b>FUENTE DE FINANCIAMIENTO</b></td>
       </tr>

@@ -28,26 +28,26 @@ while ($c = mysqli_fetch_array($dato_categoria)) {
 ?>
   <table class="membrete">
     <tr>
-      <td><img src="../img/iconsv.jpg" class="logoAlcaldia"></td>
+      <td><img src="../img/iconsv.jpg" width="80" height="80"></td>
       <td>
-        <span class="titulos">
+        <span class="titulos" style="color:#00000;font-size:80%;">
           <div class="textoMembrete">
-            <p>ALCALDIA MUNICIPAL DE SAN VICENTE</p>
+            <p>ALCALDíA MUNICIPAL DE SAN VICENTE</p>
             <p>DEPARTAMENTO DE ALMACEN</p>
           </div>
 
       </td>
-      <td><img src="../img/iconesv.png" width="110" height="110"></td>
+      <td><img src="../img/iconesv.png" width="80" height="80"></td>
     </tr>
     </tr>
     <tr>
       <td></td>
-      <td><strong class="titulos">REPORTE DE SUMINISTROS POR CATEGORIA</strong></td>
+      <td><strong class="titulos" style="color:#00000;font-size:80%;">REPORTE DE SUMINISTROS POR CATEGORÍA</strong></td>
     </tr>
   </table>
-  <strong class="tituloG titulos">Categoria: <?php echo $nombre_categoria;?></strong><br>
+  <strong class="tituloG titulos" style="color:#00000;font-size:80%;">Categoria: <?php echo $nombre_categoria;?></strong><br>
   <div class="">
-    <table  class="table_informacion" border="2" style="color:#00000;font-size:100%;" align="center">
+    <table  class="table_informacion" border="2" style="color:#00000;font-size:80%;" align="center">
       <thead>
       <tr>
         <th>CÓDIGO</th>

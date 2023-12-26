@@ -13,9 +13,9 @@ $id = $_GET["id"]; ?>
 <body>
   <table class="membrete">
     <tr>
-      <td><img src="../img/iconamsv.png" width="110" height="110"></td>
+      <td><img src="../img/iconamsv.png" width="80" height="80"></td>
       <td>
-        <span class="titulos">
+        <span class="titulos" style="color:#00000;font-size:80%;">
           <div class="textoMembrete">
             <p>ALCALDIA MUNICIPAL DE SAN VICENTE</p>
             <p>DEPARTAMENTO DE ACTIVO FIJO</p>
@@ -23,12 +23,12 @@ $id = $_GET["id"]; ?>
           </div>
 
       </td>
-      <td><img src="../img/iconesv.png" class="logoNacional"></td>
+      <td><img src="../img/iconesv.png"  width="80" height="80"></td>
     </tr>
     </tr>
     <tr>
       <td></td>
-      <td><strong class="titulos">HOJA DE DESCARGO DE BIENES MUEBLES</strong></td>
+      <td><strong class="titulos" style="color:#00000;font-size:80%;">HOJA DE DESCARGO DE BIENES MUEBLES</strong></td>
     </tr>
   </table>
   <?php
@@ -59,10 +59,10 @@ if ($result === false) {
 
 while($row = mysqli_fetch_array($result)) {
   ?>
-  <strong class="tituloG titulos">Generalidades</strong>
+  <strong class="tituloG titulos" style="color:#00000;font-size:80%;">Generalidades</strong>
   <div class="posiciontabla">
     <table class="tablaDescargo" >
-      <tbody style="color:#00000;font-size:125%;">
+      <tbody style="color:#00000;font-size:80%;">
         <tr>
           <td><b>Procedencia:</b></td>
           <td><?php echo $row["nombre_unidad"];?></td>
@@ -81,9 +81,9 @@ while($row = mysqli_fetch_array($result)) {
       </tbody>
     </table>
   </div><br>
-  <strong class="tituloG titulos">Caracteristicas</strong>
+  <strong class="tituloG titulos" style="color:#00000;font-size:80%;">Características</strong>
   <div class="posicionTC">
-    <table class="bor" width="800" style="color:#00000;font-size:120%;">
+    <table class="bor" width="800" style="color:#00000;font-size:80%;">
       <tr>
         <th>Descripción del Bien</th>
         <th>Modelo</th>
@@ -101,7 +101,7 @@ while($row = mysqli_fetch_array($result)) {
     </table>
   </div><br><br><br>
   <div>
-    <table align="center" text-aign="left" width="700">
+    <table align="center" text-aign="left" width="700" style="color:#00000;font-size:75%;">
       <thead>
         <tr>
           <th colspan="2">AUTORIZA EL DESCARGO</th>
@@ -135,7 +135,7 @@ while($row = mysqli_fetch_array($result)) {
       </tbody>
       <?php  } ?>
     </table><br><br>
-    <table align="center" text-aign="left" width="800">
+    <table align="center" text-aign="left" width="800" style="color:#00000;font-size:80%;">
       <thead>
         <tr>
           <th colspan="4" align="center" padding-top: 3rem;>Es conforme, Firma: _____________________________</th>

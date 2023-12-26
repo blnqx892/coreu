@@ -56,15 +56,15 @@ if (isset($_SESSION['usuarioActivo'])) {
                   </thead>
                   <tbody style="text-align:center;">
                     <tr>
-                      <td><a href="" class="btn btn-info rounded-pill" title="Importar"><i
-                            class='fas fa-upload'></i></a></td>
+                      <td><a href="" class="btn btn-info rounded-pill" data-coreui-toggle="modal"
+                          data-coreui-target="#modalRes" title="Importar"><i class='fas fa-upload'></i></a></td>
                       <td><a href="Controlador/Backup/backup.php" class="btn btn-info rounded-pill" title="Exportar"><i
                             class='fas fa-download'></i></a></td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr>
-                    <th style="text-align:center;">Importar</th>
+                      <th style="text-align:center;">Importar</th>
                       <th style="text-align:center;">Exportar</th>
                     </tr>
                   </tfoot>
@@ -75,9 +75,34 @@ if (isset($_SESSION['usuarioActivo'])) {
           </div>
           <!-- /.row-->
         </div>
+
+
+        <!-- RESPALDO -->
+        <div class="modal fade" id="modalRes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Restaurar Copia de Seguridad</h5>
+                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="Controlador/Backup/restore.php" method="post" enctype="multipart/form-data">
+                  <input type="file" name="archivo" id="archivo" required>
+                  <input type="submit" value="Restaurar"><br><br>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Cerrar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--///////////////TERMINA MODAL /////////////////////-->
       </div>
       <!-- ///////FIN CONTENEDOR/////////////-->
+
     </div>
+    <!-- FIN BODY>
     <!-- IMPORTAR ARCHIVO FOOTER-->
     <?php include("foot/foot.php"); ?>
     <!-- ////////////////////////-->
