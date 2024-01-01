@@ -42,11 +42,11 @@ $(document).ready(function () {
         contentType: false,
         processData: false,
         success: function (response) {
-          console.log(JSON.parse(response));
+          //console.log(JSON.parse(response));
           data = JSON.parse(response);
-          if (data.success == 1) {
-            combo();
-            successToast('Registro guardado con éxito');     
+          if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+            toastBoostrap(data.toast, data.mensaje)
+            combo();   
              $('#nombreUnid').val('');
              limpiar(1);
    

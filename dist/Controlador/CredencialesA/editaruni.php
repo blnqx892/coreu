@@ -1,48 +1,40 @@
 <?php
 session_start();
+// Incluir el archivo que contiene la configuración de la conexión a la base de datos
 include("../../Confi/conexion.php");
+
+// Incluir el archivo que contiene funciones de validación (por ejemplo, funciones como dangerJSON, successJSON, warningJSON)
+include("../../Confi/validacion.php"); 
+
+//Incluir el archivo que contine la funcion de bitacora
+include("../../Confi/bitacora.php");
+
+// Establecer conexión a la base de datos
 $conexion = con();
 
 $nombreUnid = $_POST["nombreUnid"];
 $id = $_POST['_id'];
 
 $sql = "UPDATE unidades SET nombre_unidad='$nombreUnid' WHERE id = '$id'";
-//var_dump($sql); /* para que pruebes por qué el error */
-// Ejecutar la consulta SQL
-$resultado = mysqli_query($conexion, $sql);
 
-//////////CAPTURA DATOS PARA BITACORA
-$usuari=$_SESSION['usuarioActivo'];
-$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se modifico la información de unidad','$nom',now())";
-mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-///////////////////////////////////////////////
 
-// Cerrar la conexión
-mysqli_close($conexion);
+try {
+              
+    // Ejecutar el procedimiento almacenado
+    $resultado = mysqli_query($conexion, $sql);
 
-$json = array();
-if ($resultado) {
-    $json[] = array(
-        'success' => 1,
-        'title' => 'Éxito',
-        'mensaje' => '¡Registro guardado con éxito!'
-    );
-} else {
-    $json[] = array(
-        'title' => "Error",
-        'mensaje' => "¡Surgió un error!"
-    );
+    //Regitramos evento en la bitacora
+    bitacora("Se Modificó la unidad $nombreUnid");
+
+    // Mostrar mensaje de éxito
+    successJSON('Registro guardado con éxito.');
+} catch (Exception $e) {
+    // Manejar excepciones durante la ejecución del procedimiento almacenado
+    dangerJSON($e);
+} finally {
+    // Cerrar la conexión después de ejecutar el procedimiento almacenado
+    mysqli_close($conexion);
 }
-$jsonstring = json_encode($json[0]);
-echo $jsonstring;
-
-//////////CAPTURA DATOS PARA BITACORA
-//$usuari=$_SESSION['usuarioActivo'];
-//$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-//$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se edito los datos de una unidad','$nom',now())";
-//mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-///////////////////////////////////////////////
 
 
 ?>

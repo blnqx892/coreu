@@ -147,7 +147,7 @@ if (isset($_SESSION['usuarioActivo'])) {
             </div>
             <div class="col-md-4">
               <label class="form-label" for="validationCustom04">Unidad:</label>
-              <select class="form-select" id="unidad_id" name="rolCU">
+              <select class="form-select" id="unidad_id" name="unidad_id">
               </select>
               <div class="invalid-feedback">Please select a valid state.</div>
             </div>

@@ -7,7 +7,7 @@
     // Incluir el archivo que contiene funciones de validación (por ejemplo, funciones como dangerJSON, successJSON, warningJSON)
     include("../../Confi/validacion.php"); 
     
-    //
+    //Incluir el archivo que contine la funcion de bitacora
     include("../../Confi/bitacora.php");
 
     // Establecer conexión a la base de datos
@@ -42,7 +42,7 @@
         // Establecer una nueva conexión para el procedimiento almacenado
         $conexion = con();
 
-        $sql = "INSERT INTO ingreso_entradas (fecha_adquisicion,numero_factura,costo_adquisicion,nombre_adquisicion,
+        $sql = "INSERT INTO ingreso_entradas (fecha_adquisicion, numero_factura, costo_adquisicion,nombre_adquisicion,
             serie_adquisicion,marca,modelo,color,descripcion_adquisicion,cargo,valor_rescate,fk_categoria,fk_proveedores,numero_motor,
             numero_chasis,numero_placa,capacidad,boolean_transporte) VALUES
             ('$fecha','$factura', '$costo','$nombre','$serie','$marca','$modelo','$color','$descrip','$cargo',

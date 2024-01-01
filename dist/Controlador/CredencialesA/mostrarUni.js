@@ -123,9 +123,9 @@ $(document).ready(function () {
                     contentType: false,
                     processData: false,
                     success: function (response) {
-                      console.log(JSON.parse(response));
+                      //console.log(JSON.parse(response));
                       data = JSON.parse(response);
-                      if (data.success == 1) {
+                      if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
                         successToast(data.mensaje)
 
                        // $("#form")[0].reset();
@@ -197,10 +197,10 @@ $("#GuardaUnidades").on("click", function () {
       success: function (response) {
         console.log(JSON.parse(response));
         data = JSON.parse(response);
-        if (data.success == 1) {
-          combo();
-          successToast('Registro guardado con éxito'); 
+        if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+          toastBoostrap(data.toast, data.mensaje)
           refrescarTable();//recarga la tabla en el momento    
+          combo();                  
            $('#nombreUnid').val('');
            limpiar(1);
  

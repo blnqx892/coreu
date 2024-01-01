@@ -1,5 +1,8 @@
 <?php
+// Incluir el archivo que contiene la configuración de la conexión a la base de datos
 include("../../Confi/conexion.php");
+
+// Establecer conexión a la base de datos
 $conexion = con();
 
     $nombreCate=$_POST["nombreCate"];

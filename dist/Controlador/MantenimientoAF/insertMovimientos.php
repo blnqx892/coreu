@@ -5,6 +5,11 @@
 
     // Incluir el archivo que contiene funciones de validación (por ejemplo, funciones como dangerJSON, successJSON, warningJSON)
     include("../../Confi/validacion.php");
+
+     //Incluir el archivo que contine la funcion de bitacora
+     include("../../Confi/bitacora.php");
+
+     // Establecer conexión a la base de datos
     $conexion = con();
 
     $fechaM               = $_POST["fechaMovimiento"];
@@ -26,6 +31,11 @@
     try {
         // Ejecutar el procedimiento almacenado
         $resultado = mysqli_query($conexion, $sql);
+
+
+        //Regitramos evento en la bitacora
+          bitacora("Se Ejecutó movimiento de  $tipoMovimiento");
+
         // Mostrar mensaje de éxito
         successJSON('Registro guardado con éxito.');
     } catch (Exception $e) {
@@ -36,12 +46,5 @@
         mysqli_close($conexion);
     }
 
-    //////////CAPTURA DATOS PARA BITACORA
-    $conexion = con();
-    $usuari=$_SESSION['usuarioActivo'];
-    $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-    $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se ejecuto un movimiento en Activo Fijo','$nom',now())";
-    mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-    //////////////////////////////////////////
-    mysqli_close($conexion);
+    
 ?>

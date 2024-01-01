@@ -29,12 +29,10 @@ if (validation(1)) {
           contentType: false,
           processData: false,
           success: function (response) {
-            console.log(JSON.parse(response));
             data = JSON.parse(response);
-            if (data.success == 1) {
+            if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+              toastBoostrap(data.toast, data.mensaje)
                  
-             successToast('Registro guardado con éxito');
-
                $("#formmo")[0].reset();
                limpiar(1);
   

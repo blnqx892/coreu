@@ -146,9 +146,9 @@ $.ajax({
   contentType: false,
   processData: false,
   success: function (response) {
-    console.log(JSON.parse(response));
+   // console.log(JSON.parse(response));
     data = JSON.parse(response);
-    if (data.success == 1) {
+    if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
       successToast(data.mensaje)
 
       //$("form")[0].reset();

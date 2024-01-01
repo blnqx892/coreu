@@ -1,7 +1,17 @@
 <?php
 session_start();
+ // Incluir el archivo que contiene la configuración de la conexión a la base de datos
 include("../../Confi/conexion.php");
-$conexion = con();
+
+
+ // Incluir el archivo que contiene funciones de validación (por ejemplo, funciones como dangerJSON, successJSON, warningJSON)
+include("../../Confi/validacion.php"); 
+
+ //Incluir el archivo que contine la funcion de bitacora
+ include("../../Confi/bitacora.php");
+
+ // Establecer conexión a la base de datos
+   $conexion = con();
 
     $fechaM=$_POST["fecha"];
     $nombreM=$_POST["nombre"];
@@ -13,32 +23,22 @@ $conexion = con();
     $sql = "INSERT INTO mobiliario_otros (fecha,nombre,modelo,valor,descripcion) VALUES
     ('$fechaM','$nombreM','$modeloM','$valorM','$descriM')";
 
-    // Ejecutar la consulta SQL
-    $resultado    = mysqli_query($conexion, $sql);
-    //var_dump(mysqli_query($conexion, $sql));
-    //echo "Los datos se han insertado correctamente";
+    try {
+              
+        // Ejecutar el procedimiento almacenado
+        $resultado = mysqli_query($conexion, $sql);
 
-    //////////CAPTURA DATOS PARA BITACORA
-    $usuari=$_SESSION['usuarioActivo'];
-    $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-    $sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se registro un nuevo inmueble','$nom',now())";
-    mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-    ///////////////////////////////////////////////
+        //Regitramos evento en la bitacora
+        bitacora("Se Registró el inmueble $nombreM ");
 
-    $json = array();
-            if ($resultado) {
-                $json[] = array(
-                    'success'=>1,
-                    'title' => 'Exito',
-                    'mensaje'=>'Registro Guardado con exito!'
-                  );
-                 // echo 1;
-            } else {
-                $json[] = array(
-                    'title' => "Error",
-                    'mensaje'=> mysqli_error($conexion)
-                  );
-            }
-           $jsonstring = json_encode($json[0]);
-           echo $jsonstring;
+        // Mostrar mensaje de éxito
+        successJSON('Registro guardado con éxito.');
+    } catch (Exception $e) {
+        // Manejar excepciones durante la ejecución del procedimiento almacenado
+        dangerJSON($e);
+    } finally {
+        // Cerrar la conexión después de ejecutar el procedimiento almacenado
+        mysqli_close($conexion);
+    }
+    
 ?>

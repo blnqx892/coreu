@@ -30,7 +30,6 @@ $(document).ready(function () {
 
     // Realiza la división y almacena el valor de rescate en una variable
     let rescate = costo / vidaAnio;
-    console.log('valor rescate', rescate);
     // Muestra el rescate en el elemento con el ID "vidaC"
     $("#vidaC").val(rescate);
 

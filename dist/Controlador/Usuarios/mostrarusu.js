@@ -152,8 +152,8 @@ $(document).ready(function () {
                   success: function (response) {
                     console.log(JSON.parse(response));
                     data = JSON.parse(response);
-                    if (data.success == 1) {
-                
+                    if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+                      toastBoostrap(data.toast, data.mensaje)             
    
                      // $("#form")[0].reset();
                       $("#modalEditar").modal("hide");

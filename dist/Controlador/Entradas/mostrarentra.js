@@ -183,30 +183,29 @@ $(document).ready(function () {
       formData.append("capa",capaci)
       formData.append("_id",id ); 
       //para que no te perdas lo deje comentado
-          
-                $.ajax({
-                  url: "Controlador/Entradas/editarE.php",
-                  type: "post",
-                  data: formData,
-                  contentType: false,
-                  processData: false,
-                  success: function (response) {
-                    console.log(JSON.parse(response));
-                    data = JSON.parse(response);
-                    if (data.success == 1) {
-                      successToast(data.mensaje)
-
-                      //$("#form")[0].reset();
-                      $("#modale").modal("hide");
-                      refrescarTable();//recarga la tabla en el momento        
-                    } else {
-                      dangerToast('No se realizó la modificación.')
-                    }
-                  },
-                });
-                return false;
-              }
-            });
+     
+     $.ajax({
+       url: "Controlador/Entradas/editarE.php",
+       type: "post",
+       data: formData,
+       contentType: false,
+       processData: false,
+       success: function (response) {
+         //console.log(JSON.parse(response));
+         data = JSON.parse(response);
+         if(typeof data.toast !== 'undefined' && typeof data.mensaje !== 'undefined'){
+           successToast(data.mensaje)
+           //$("#form")[0].reset();
+           $("#modale").modal("hide");
+           refrescarTable();//recarga la tabla en el momento        
+         } else {
+           dangerToast('No se realizó la modificación.')
+         }
+       },
+     });
+      return false;
+    }
+  });
 //************************************************* */
 //-------------------------------EDITARRRRR-------------------------
 $("#entra").on("click", ".edite-item", function () {
