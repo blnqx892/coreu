@@ -34,7 +34,7 @@
         warningJSON('El Número de factura ya existe.');
         return;
     }else{
-    
+
         // Establecer una nueva conexión para el procedimiento almacenado
         $conexion = con();
 
@@ -45,6 +45,13 @@
             '$vida','$cate','$prov','$numerom','$numerocha','$numerop','$capaci', $x)";
 
         try {
+          //////////CAPTURA DATOS PARA BITACORA
+              $usuari=$_SESSION['usuarioActivo'];
+              $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+              $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se registro un nuevo bien','$nom',now())";
+              mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+          ///////////////////////////////////////////
+
             // Ejecutar el procedimiento almacenado
             $resultado = mysqli_query($conexion, $sql);
 

@@ -51,12 +51,12 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <form id="formmo" class="g-3 needs-validation" action="" method="POST" autocomplete="off">
                   <input type="hidden" value="Guardar" name="bandera">
                   <div class="row">
-                    <label style="text-align: right;">(*) Campos Obligatorios</label>
+                    <label style="text-align: right;"><code>(*) Campos Obligatorios</code></label>
                     </div>
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom01">* Fecha:</label>
+                      <label class="form-label" for="validationCustom01"><code>*</code> Fecha:</label>
                       <input class="form-control dos-validate-1 " id="fecham" type="date" required="true">
                     </div>
                   </div>
@@ -64,22 +64,22 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <!--SECCION DOS-->
                   <div class="row  my-4">
                     <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">* Descripción del Bien:</label>
+                      <label for="inputAddress2" class="form-label"><code>*</code> Descripción del Bien:</label>
                       <input type="text" class="form-control dos-validate-1" id="nomm" placeholder="">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">* Modelo:</label>
+                      <label for="inputZip" class="form-label"><code>*</code> Modelo:</label>
                       <input type="text" class="form-control dos-validate-1" id="modelm" placeholder="">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">* $ Valor Adquisición:</label>
+                      <label for="inputZip" class="form-label"><code>*</code> $ Valor Adquisición:</label>
                       <input type="number" class="form-control dos-validate-1" id="valom" placeholder="$ 00.00">
                     </div>
                   </div>
                   <!--FIN SECCION DOS-->
                   <div class="row  my-4">
                     <div class="col-md-6">
-                      <label for="inputZip" class="form-label">* Observaciones:</label>
+                      <label for="inputZip" class="form-label"><code>*</code> Observaciones:</label>
                       <textarea class="form-control dos-validate-1" id="descrim" row="3"></textarea>
                     </div>
                   </div>

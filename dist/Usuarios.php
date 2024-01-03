@@ -50,27 +50,27 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <!--INICIO FORM-->
                 <form id="form" class="g-3 needs-validation" role="form" action="" method="POST" autocomplete="off">
                   <div class="row">
-                    <label style="text-align: right;">(*) Campos Obligatorios</label>
+                    <label style="text-align: right;"><code>(*) Campos Obligatorios</code></label>
                   </div><br>
                   <input type="hidden" value="Guardar" name="bandera">
                   <!--FIN SECCION DOS-->
                   <div class="row  my-3">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-3">
-                      <label for="inputAddress2" class="form-label">* Nombre:</label>
+                      <label for="inputAddress2" class="form-label"><code>*</code> Nombre:</label>
                       <input type="text" class="form-control tres-validate-1" id="nombreC" placeholder=""
                         name="nombreC">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">* Apellido:</label>
+                      <label for="inputZip" class="form-label"><code>*</code> Apellido:</label>
                       <input type="text" class="form-control tres-validate-1" id="apellidoC" name="apellidoC">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">* Usuario:</label>
+                      <label for="inputZip" class="form-label"><code>*</code> Usuario:</label>
                       <input type="text" class="form-control tres-validate-1" id="usuarioC" name="usuarioC">
                     </div>
                     <div class="col-md-3">
-                      <label for="inputCity" class="form-label">* Email:</label>
+                      <label for="inputCity" class="form-label"><code>*</code> Email:</label>
                       <input type="e-mail" class="form-control tres-validate-1" id="emailC" name="emailC">
                     </div>
                   </div>
@@ -78,26 +78,26 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row  my-3">
                     <!--INICIO SECCION CUATRO-->
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom04">* Rol</label>
+                      <label class="form-label" for="validationCustom04"><code>*</code> Rol</label>
                       <select class="form-select tres-validate-1" id="rolC" name="rolCU"
                         data-placeholder="Seleccione El Rol">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom04">* Unidad:</label>
+                      <label class="form-label" for="validationCustom04"><code>*</code> Unidad:</label>
                       <select class="form-select tres-validate-1" id="unidad_id" name="rolCU"
                         data-placeholder="Seleccione la Unidad">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">* Contraseña:</label>
+                      <label for="inputZip" class="form-label"><code>*</code> Contraseña:</label>
                       <input type="password" class="form-control tres-validate-1" id="contraC" name="contraC">
                       <div id="error1"></div>
                     </div>
                     <div class="col-md-3">
-                      <label for="inputZip" class="form-label">* Repetir Contraseña:</label>
+                      <label for="inputZip" class="form-label"><code>*</code> Repetir Contraseña:</label>
                       <input type="password" class="form-control tres-validate-1" id="contraC1" name="contraC1">
                       <div id="error2"></div>
                     </div>

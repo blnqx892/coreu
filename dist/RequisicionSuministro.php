@@ -77,7 +77,7 @@ if (isset($_SESSION['usuarioActivo'])) {
             <div class="card-header">
               <div class="d-flex justify-content-between">
                 <div class="my-auto">
-                  <strong>Requisiciones de suministros</strong>
+                  <strong>Requisiciones de Suministros</strong>
                 </div>
                 <div>
                   <?php if ($dia_actual < 15):?>
@@ -115,25 +115,25 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <td><?php echo $requisicion["nombre_unidad"]?></td>
                   <td><?php echo $requisicion["nombre_estado"]?></td>
                   <td>
-                    <button class="btn btn-outline-info rounded-pill" type="button" data-coreui-toggle="modal"
-                            data-coreui-target="#modalAgg" onclick="show_n(<?php echo $requisicion['id']?>, '<?php echo $requisicion['codigo_estado']?>')">
-                      <i class="far fa-eye"></i>
+                    <button class="btn btn-light rounded-pill" type="button" data-coreui-toggle="modal"
+                            data-coreui-target="#modalAgg" title="Ver" onclick="show_n(<?php echo $requisicion['id']?>, '<?php echo $requisicion['codigo_estado']?>')">
+                      <i class="fas fa-eye" style="color:#2E96B0"></i>
                     </button>
                     <?php if($requisicion['codigo_estado'] == 'pendiente.aprobacion' && $usuario['rol'] == 'UACI'):?>
-                      <button class="btn btn-outline-success rounded-pill" type="button" data-coreui-toggle="modal"
-                              data-coreui-target="#modalAgg" onclick="approve_n(<?php echo $requisicion['id']?>)">
-                       <i class="fas fa-check"></i>
+                      <button class="btn btn-light rounded-pill" type="button" data-coreui-toggle="modal"
+                              data-coreui-target="#modalAgg" title="Aprobar" onclick="approve_n(<?php echo $requisicion['id']?>)">
+                       <i class="fas fa-check" style="color:#2E96B0"></i>
                       </button>
                     <?php endif;?>
                     <?php if($requisicion['codigo_estado'] == 'pendiente.despacho' && $usuario['rol'] == 'Almacen'):?>
-                      <button class="btn btn-outline-success rounded-pill" type="button" data-coreui-toggle="modal"
+                      <button class="btn btn-light rounded-pill" title="Despachar" type="button" data-coreui-toggle="modal"
                               data-coreui-target="#modalAgg" onclick="service_n(<?php echo $requisicion['id']?>)">
-                              <i class="fas fa-check"></i>
+                              <i class="fas fa-check" style="color:#2E96B0"></i>
                       </button>
                     <?php endif;?>
                     <?php if($requisicion['unidad_id'] == $usuario['fk_unidades'] && $requisicion['codigo_estado'] != 'finalizado'):?>
-                      <button class="btn btn-danger text-light" type="button" onclick="remove(<?php echo $requisicion['id']?>)">
-                        <i class="fas fa-times"></i>
+                      <button class="btn btn-light rounded-pill" title="Eliminar" type="button" onclick="remove(<?php echo $requisicion['id']?>)">
+                        <i class="fas fa-times" style="color:#2E96B0"></i>
                       </button>
                     <?php endif;?>
                   </td>
@@ -153,7 +153,7 @@ if (isset($_SESSION['usuarioActivo'])) {
       <div class="modal-dialog modal-lg" id="div_modal">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nueva requisición de suministros</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Nueva Requisición de Suministros</h5>
             <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -162,7 +162,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                 <?php
                 $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
                 ?>
-                <label for="inputEmail4" class="form-label">Fecha de pedido:</label>
+                <label for="inputEmail4" class="form-label">Fecha de Pedido:</label>
                 <input type="date" class="form-control v-required-2" value="<?php echo $fecha_actual; ?>"
                        min="<?php echo $fecha_actual; ?>" id="fechaP" name="fechaP">
               </div>

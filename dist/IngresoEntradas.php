@@ -52,12 +52,12 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <input type="hidden" value="Guardar" name="bandera">
                   <!--INICIO SECCION FECHA-->
                   <div class="row">
-                    <label style="text-align: right;">(*) Campos Obligatorios</label>
+                    <label style="text-align: right;"><code>(*) Campos Obligatorios</code></label>
                     <div class="col-md-4">
                       <?php
                        $fecha_actual = date("Y-m-d"); // fecha actual, value con min el cual evita seleccionar fechas anteriores
                       ?>
-                      <label for="inputEmail4" class="form-label">* Fecha de Adquisición:</label>
+                      <label for="inputEmail4" class="form-label"><code>*</code> Fecha de Adquisición:</label>
                       <input type="date" class="form-control mi-validate-1" value="<?php echo $fecha_actual; ?>"
                         min="<?php echo $fecha_actual; ?>" id="fechaC" name="fechaC">
                     </div>
@@ -70,7 +70,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <input type="text" class="form-control " id="facturaC" name="facturaC">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputAddress2" class="form-label">* $ Valor Adquisición:</label>
+                      <label for="inputAddress2" class="form-label"><code>*</code> $ Valor Adquisición:</label>
                       <input type="text" class="form-control mi-validate-1" id="costoC" name="costoC"
                         placeholder="$ 00.00">
                     </div>
@@ -92,7 +92,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <div class="row  my-4">
                     <!--INICIO SECCION TRES-->
                     <div class="col-md-4">
-                      <label for="inputCity" class="form-label">* Descripción del Bien:</label>
+                      <label for="inputCity" class="form-label"><code>*</code> Descripción del Bien:</label>
                       <input type="text" class="form-control mi-validate-1" id="nombreC" name="nombreC">
                     </div>
                     <div class="col-md-4">
@@ -112,11 +112,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <input type="text" class="form-control" id="modeloC" name="modeloC">
                     </div>
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">* Color:</label>
+                      <label for="inputZip" class="form-label"><code>*</code> Color:</label>
                       <input type="text" class="form-control mi-validate-1" id="colorC" name="colorC">
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom04">* Tipo de Cargo: </label>
+                      <label class="form-label" for="validationCustom04"><code>*</code> Tipo de Cargo: </label>
                       <select class="form-select mi-validate-1" required="" id="cargoC" name="cargoC">
                         <option selected="" disabled="" value="">Elegir Tipo</option>
                         <option value="Comprado">Comprado</option>
@@ -130,7 +130,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <!--INICIO SECCION CINCO-->
                   <div class="row my-4">
                     <div class="col-md-4">
-                      <label for="inputZip" class="form-label">* Vida Util (en años): </label>
+                      <label for="inputZip" class="form-label"><code>*</code> Vida Util (en años): </label>
                       <input type="number" class="form-control" id="vidaAnio" name="vidaAnio" disabled>
                     </div>
                     <div class="col-md-4" style="display:none">
@@ -138,7 +138,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <input type="number" class="form-control" id="vidaC" name="vidaC">
                     </div>
                     <div class="col-md-4">
-                      <label class="form-label" for="validationCustom04">* Categoria</label>
+                      <label class="form-label" for="validationCustom04"><code>*</code> Categoria</label>
                       <select class="form-select mi-validate-1" required id="categoria_id" name="cateC">
                       </select>
                       <div class="invalid-feedback">Please select a valid state.</div>
@@ -166,19 +166,19 @@ if (isset($_SESSION['usuarioActivo'])) {
                     <hr style="color: black; background-color: black; width:100%;" />
                     <div class="row my-1">
                       <div class="col-md-3">
-                        <label for="inputZip" class="form-label">* No. Motor:</label>
+                        <label for="inputZip" class="form-label"><code>*</code> No. Motor:</label>
                         <input type="text" class="form-control" id="motorC" name="motorC">
                       </div>
                       <div class="col-md-3">
-                        <label for="inputZip" class="form-label">* No. Placa:</label>
+                        <label for="inputZip" class="form-label"><code>*</code> No. Placa:</label>
                         <input type="text" class="form-control" id="placaC" name="placaC">
                       </div>
                       <div class="col-md-3">
-                        <label for="inputZip" class="form-label">* No. Chasis:</label>
+                        <label for="inputZip" class="form-label"><code>*</code> No. Chasis:</label>
                         <input type="text" class="form-control" id="chasisC" name="chasisC">
                       </div>
                       <div class="col-md-2">
-                        <label for="inputZip" class="form-label">* Capacidad:</label>
+                        <label for="inputZip" class="form-label"><code>*</code> Capacidad:</label>
                         <input type="number" class="form-control" id="capacidadC" name="capacidadC">
                       </div>
                     </div>

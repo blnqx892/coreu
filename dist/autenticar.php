@@ -24,8 +24,7 @@ if ($row = mysqli_fetch_assoc($consulta)) {
     $nombreCompleto = $nombre . ' ' . $apellido;
 
     // Inserta datos en la bitácora
-    $sql1 = "INSERT INTO bitacora (evento, usuario, fecha_creacion)
-      VALUES ('Inicio Sesión', '$nombreCompleto', now())";
+    $sql1 = "INSERT INTO bitacora (evento, usuario, fecha_creacion) VALUES ('Inicio Sesión', '$nombreCompleto', now())";
     mysqli_query($conexion, $sql1) or die ("Error al guardar bitácora " . mysqli_connect_error());
 
     // Redirecciona al usuario a la página principal

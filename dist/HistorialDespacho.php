@@ -33,7 +33,7 @@ if (isset($_SESSION['usuarioActivo'])) {
               <span>Requisiciones</span>
             </li>
             <li class="breadcrumb-item">
-              <span>Listado</span>
+              <span>Historial</span>
             </li>
           </ol>
         </nav>
@@ -76,7 +76,7 @@ if (isset($_SESSION['usuarioActivo'])) {
               <div class="card-header">
                 <div class="d-flex justify-content-between">
                   <div class="my-auto">
-                    <strong>Historial de despachos</strong>
+                    <strong>Historial de Despachos</strong>
                   </div>
                 </div>
               </div>
@@ -86,7 +86,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <tr>
                     <th>#</th>
                     <th>Código</th>
-                    <th>Fecha de pedido</th>
+                    <th>Fecha de Pedido</th>
                     <th>Unidad</th>
                     <th>Estado</th>
                     <th>Acciones</th>
@@ -100,7 +100,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                         $timestamp = strtotime($fechaMySQL);
                         $fechaFormateada = date("d-m-Y", $timestamp);
                     ?>
-                    
+
                     <tr>
                       <td><?php echo $correlativo?></td>
                       <td><?php echo $requisicion["id"]?></td>
@@ -108,11 +108,11 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <td><?php echo $requisicion["nombre_unidad"]?></td>
                       <td><?php echo $requisicion["nombre_estado"]?></td>
                       <td>
-                        <button class=" btn btn-outline-info rounded-pill" type="button" data-coreui-toggle="modal"
-                                data-coreui-target="#modalAgg" onclick="show_n(<?php echo $requisicion['id']?>, '<?php echo $requisicion['codigo_estado']?>')">
-                          <i class="far fa-eye"></i>
+                        <button class="btn btn-light rounded-pill" type="button" data-coreui-toggle="modal"
+                                data-coreui-target="#modalAgg" title="Ver" onclick="show_n(<?php echo $requisicion['id']?>, '<?php echo $requisicion['codigo_estado']?>')">
+                          <i class="fas fa-eye" style="color:#2E96B0"></i>
                         </button>
-                        <a class=" btn btn-outline-primary rounded-pill " href="Reportes/reporte3.php?id=<?php echo $requisicion['id']?>" target="_blank"><i class='far fa-file'></i></a>
+                        <a class="btn btn-light rounded-pill" title="Reporte" href="Reportes/reporte3.php?id=<?php echo $requisicion['id']?>" target="_blank"><i class='fas fa-file-pdf'  style="color:#2E96B0"></i></a>
                       </td>
 
                     </tr>

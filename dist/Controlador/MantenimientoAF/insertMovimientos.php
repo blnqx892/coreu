@@ -40,7 +40,8 @@
     $conexion = con();
     $usuari=$_SESSION['usuarioActivo'];
     $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-    $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se ejecuto un movimiento en activo fijo','$nom',now())";
+    $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se ejecuto un movimiento en Activo Fijo','$nom',now())";
     mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
     //////////////////////////////////////////
+    mysqli_close($conexion);
 ?>

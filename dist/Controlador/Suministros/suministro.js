@@ -91,7 +91,7 @@ $(document).ready(function() {
           $("#entrepano").val(response.entrepano);
           $("#casilla").val(response.casilla);
           $("#categorias").val(response.categoria_id);
-          $("#save_record").html("Editar <i class=\'far fa-check-square\'>");
+          $("#save_record").html("Guardar <i class=\'far fa-check-square\'>");
 
           $("#kardex_tabla").show();
           $("#add_kardex").show();
@@ -117,7 +117,7 @@ $(document).ready(function() {
 
 
 
-  
+
   // Botón guardar suministro
   $("#save_record").click(function(e) {
     e.preventDefault();

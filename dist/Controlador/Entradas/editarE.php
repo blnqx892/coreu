@@ -31,7 +31,7 @@
   //////////CAPTURA DATOS PARA BITACORA
   $usuari=$_SESSION['usuarioActivo'];
   $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-  $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se editaron los datos de un ingreso','$nom',now())";
+  $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se modificaron los datos de un ingreso','$nom',now())";
   mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
   ///////////////////////////////////////////
 
@@ -39,6 +39,7 @@
   $resultado    = mysqli_query($conexion, $sql);
   // Cerrar la conexión
   mysqli_close($conexion);
+  
   //echo "Los datos se han insertado correctamente";
   $json = array();
   if ($resultado) {

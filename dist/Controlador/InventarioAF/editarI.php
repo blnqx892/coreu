@@ -35,7 +35,7 @@ WHERE asignacion_activo.id='$id'";
       //////////CAPTURA DATOS PARA BITACORA
       $usuari=$_SESSION['usuarioActivo'];
       $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-      $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se edito un registro de inventario','$nom',now())";
+      $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se modifico un activo de inventario','$nom',now())";
       mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
       ///////////////////////////////////////////
 
@@ -50,7 +50,7 @@ WHERE asignacion_activo.id='$id'";
                 $json[] = array(
                     'success'=>1,
                     'title' => 'Exito',
-                    'mensaje'=>'Registro editado con exito!'
+                    'mensaje'=>'Registro modificado con exito!'
                   );
                  // echo 1;
             } else {

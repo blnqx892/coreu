@@ -28,3 +28,5 @@ while ($item = mysqli_fetch_array($result)) {
 }
 
 echo json_encode($response);
+mysqli_close($conexion);
+?>

@@ -1,4 +1,5 @@
 <?php
+session_start();
  // Incluir el archivo que contiene la configuración de la conexión a la base de datos
  include("../../Confi/conexion.php");
 
@@ -34,8 +35,14 @@
      ('$nombre','$apellido','$usuario','$email','$contra','$uni','$rol')";
 
     // Ejecutar la consulta SQL
-    
+
     try {
+      //////////CAPTURA DATOS PARA BITACORA
+      $usuari=$_SESSION['usuarioActivo'];
+      $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+      $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se registro un usuario','$nom',now())";
+      mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+      ///////////////////////////////////////////
         // Ejecutar el procedimiento almacenado
         $resultado = mysqli_query($conexion, $sql);
         // Mostrar mensaje de éxito
@@ -47,6 +54,5 @@
         // Cerrar la conexión después de ejecutar el procedimiento almacenado
         mysqli_close($conexion);
     }
- 
-?>
 
+?>

@@ -59,29 +59,29 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <input type="hidden" id="ingreso_entrada_id" name="ingreso_entrada_id" type="text">
                   <input type="hidden" value="Guardar" name="bandera">
                   <div class="row">
-                    <label style="text-align: right;">(*) Campos Obligatorios</label>
+                    <label style="text-align: right;"><code>(*) Campos Obligatorios</code></label>
                   </div>
                   <h4>Generalidades</h4>
                   <hr style="color: black; background-color: black; width:100%;" />
                   <div class="row my-4">
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">* Buscar por Código:</label>
+                      <label class="form-label" for="validationCustom02"><code>*</code> Buscar por Código:</label>
                       <select class="form-control js-example-basic-single  once-validate-1" required id="codigo_id"
                         name="codigo_id">
                         <option value=""></option>
                       </select>
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom01">* Fecha:</label>
+                      <label class="form-label" for="validationCustom01"><code>*</code> Fecha:</label>
                       <input class="form-control once-validate-1" id="fecha_movimiento" type="date" required=""
                         disabled>
                     </div>
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom02">* Procedencia:</label>
+                      <label class="form-label" for="validationCustom02"><code>*</code> Procedencia:</label>
                       <input class="form-control" id="nombre_unidad" type="text" required="" disabled>
                     </div>
                     <div class="col-md-3" id="div-destino">
-                      <label class="form-label" for="validationCustom02">* Destino:</label>
+                      <label class="form-label" for="validationCustom02"><code>*</code> Destino:</label>
                       <select class="form-select " id="unidad_id" name="rolCU" data-placeholder="Seleccione la Unidad"
                         disabled> </select>
                       <div class="invalid-feedback">Please select a valid state.
@@ -91,7 +91,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                   <!--FIN BUSCADOR------------------------------------------------------------------------------>
                   <div class="row my-4">
                     <div class="col-md-3">
-                      <label class="form-label" for="validationCustom04">* Tipo de Movimiento:</label>
+                      <label class="form-label" for="validationCustom04"><code>*</code> Tipo de Movimiento:</label>
                       <select class="form-select once-validate-1" id="perC" name="perC"
                         data-placeholder="Seleccione un Movimiento" disabled>
                         <option selected="" disabled="" value="">Elegir Tipo Movimiento</option>
@@ -102,7 +102,7 @@ if (isset($_SESSION['usuarioActivo'])) {
                       <div class="invalid-feedback">Please select a valid state.</div>
                     </div>
                     <div class="col-md-6">
-                      <label class="form-label" for="validationCustom02">* Observaciones:</label>
+                      <label class="form-label" for="validationCustom02"><code>*</code> Observaciones:</label>
                       <textarea class="form-control" id="observacion" required="" rows="2" disabled></textarea>
                     </div>
                   </div>

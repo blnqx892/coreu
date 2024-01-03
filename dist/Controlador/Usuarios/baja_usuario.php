@@ -1,16 +1,24 @@
 <?php
+session_start();
 include("../../Confi/conexion.php");
 $conexion = con();
 
     $id    = $_POST["id"];
-    
+
 
 
     $sql= " UPDATE usuarios SET estado='Inactivo' WHERE id = '$id'";
-      //var_dump($sql); /*para que proves porq el error */
+   //var_dump($sql); /*para que proves porq el error */
+    //////////CAPTURA DATOS PARA BITACORA
+    $usuari=$_SESSION['usuarioActivo'];
+    $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+    $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se dio de baja a un usuario','$nom',now())";
+    mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+///////////////////////////////////////////////
+
     // Ejecutar la consulta SQL
     $resultado    = mysqli_query($conexion, $sql);
-  
+
     //echo "Los datos se han insertado correctamente";
     $json = array();
             if ($resultado) {

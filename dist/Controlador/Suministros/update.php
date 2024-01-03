@@ -1,35 +1,37 @@
 <?php
-session_start();
-include ("../../Confi/conexion.php");
-$conexion = con();
+    session_start();
+    include ("../../Confi/conexion.php");
+    $conexion = con();
 
-$body = json_decode(file_get_contents("php://input"));
+    $body = json_decode(file_get_contents("php://input"));
 
-$id = $_GET["id"];
+    $id = $_GET["id"];
 
-$query = "update ingreso_suministros set
-  codigo_barra = '".$body->codigo_barra."',
-  nombre_suministro = '".$body->nombre_suministro."',
-  presentacion = '".$body->presentacion."',
-  existencia_minima = ".$body->existencia_minima.",
-  existencia_maxima = ".$body->existencia_maxima.",
-  categoria_id = '".$body->categoria_id."'
- where id = ".$id;
+    $query = "update ingreso_suministros set
+      codigo_barra = '".$body->codigo_barra."',
+      nombre_suministro = '".$body->nombre_suministro."',
+      presentacion = '".$body->presentacion."',
+      existencia_minima = ".$body->existencia_minima.",
+      existencia_maxima = ".$body->existencia_maxima.",
+      categoria_id = '".$body->categoria_id."'
+    where id = ".$id;
 
-//////////CAPTURA DATOS PARA BITACORA
-$usuari=$_SESSION['usuarioActivo'];
-$nom=$usuari['nombre']. ' ' .$usuari['apellido'];
-$sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se modifico la información de un suministro','$nom',now())";
-mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
-///////////////////////////////////////////////
+    //////////CAPTURA DATOS PARA BITACORA
+    $usuari=$_SESSION['usuarioActivo'];
+    $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+    $sql = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se modifico la información de un suministro','$nom',now())";
+    mysqli_query($conexion,$sql) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+    ///////////////////////////////////////////////
 
-$response["statusCode"] = 500;
-$response["message"] = "Algo salió mal, no se pudo editar";
+    $response["statusCode"] = 500;
+    $response["message"] = "Algo salió mal, no se pudo editar";
 
-if (mysqli_query($conexion, $query)) {
-  $response["statusCode"] = 200;
-  $response["data"] = $id;
-  $response["message"] = "Registro editado";
-}
+    if (mysqli_query($conexion, $query)) {
+      $response["statusCode"] = 200;
+      $response["data"] = $id;
+      $response["message"] = "Registro editado";
+    }
 
-echo json_encode($response);
+  echo json_encode($response);
+  mysqli_close($conexion);
+?>

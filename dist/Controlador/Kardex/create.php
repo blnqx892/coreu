@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("../../Confi/conexion.php");
 $conexion = con();
 
@@ -32,6 +33,14 @@ into kardex (
           ".$suministro."
 )";
 
+ //////////CAPTURA DATOS PARA BITACORA
+ $conexion = con();
+ $usuari=$_SESSION['usuarioActivo'];
+ $nom=$usuari['nombre']. ' ' .$usuari['apellido'];
+ $sql1 = "INSERT INTO bitacora (evento,usuario,fecha_creacion) VALUES ('Se ejecuto movimiento en el stock de Almacén','$nom',now())";
+ mysqli_query($conexion,$sql1) or die ("Error a Conectar en la BD guardo bita".mysqli_connect_error());
+ //////////////////////////////////////////
+
 $response["statusCode"] = 500;
 $response["message"] = "Algo salió mal, no se pudo guardar";
 
@@ -42,3 +51,5 @@ if (mysqli_query($conexion, $query)) {
 }
 
 echo json_encode($response);
+mysqli_close($conexion);
+?>
